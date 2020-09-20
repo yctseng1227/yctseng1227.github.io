@@ -46,21 +46,6 @@
       </categories>
   </entry>
   <entry>
-    <title>【週記】一些日常生活漫談</title>
-    <url>/2019/190122-daily-talk/</url>
-    <content><![CDATA[<p><img src="https://pbs.twimg.com/media/Dw8dzwQUwAA5vZv.jpg:large"></p>
-<p>原定這週應該要發研所推甄心得的…不過出了一些事只能暫緩 QwQ<br>先放張最近19冬的熱門話題角色”三玖”，雖然聽說不少人追完漫畫就倒戈追二乃了www  </p>
-<a id="more"></a>
-<p>我自己只有追完動畫ep1，有點太閒魚了…不過單論人設來看，三玖給我的感覺：耳機、黑絲、歐派、無口(?)屬性加分不少，個性之類的細節等看看有沒有時間追漫畫吧(嘆)。</p>
-<p>咳咳、好像有點太油了。<br>來說說最近的生活吧，目前結束了大四上姑且算是平安活下來了XD<br>不過途中收到某間學校的一通臨時備取通知搞得我人仰馬翻，當時甚至還在FB小小地崩潰一下，事後想想其實也還好，頂多就不去嘛QQ 誰叫我有選擇、性障礙…  咳咳、我是說選擇性、障礙，嗯。<br>只是原本已經放下找教授的這件事，現在不得不又拿出來忙了(跪)。</p>
-<p>也因為這臨時的通知，很多行程都必須配合著提前規劃，導致我回到台北家的時間有點早…<br>嗯、待在家真的反而不太想去動電腦，偏偏剛回家又有點喉嚨發炎，所以都在睡覺 嘖</p>
-<p>下週會去參加台大辦的IOI camp，雖然感覺是去當砲灰der<br>（想想最近打Codeforces的Rating又在綠字 和 灰字之間遊走…有點擔心呢）<br>不過算算能好好玩競程的時間也不多了，希望可以吸收點新知識。<br>然而、第一天要教DP，呃啊真的是硬傷 QQ </p>
-]]></content>
-      <categories>
-        <category>生活札記</category>
-      </categories>
-  </entry>
-  <entry>
     <title>【週記】過新年就是要欠債對唄！</title>
     <url>/2019/190207-new-year-talk/</url>
     <content><![CDATA[<p><img src="https://imgur.com/DbAEQEE.jpg"></p>
@@ -76,6 +61,21 @@
 <li>NUKCPC: 一篇關於高大競程的文章，原定是IOI camp前要丟出來，結果就是因為某研所害我行程全部都卡住 嗚嗚QQ  </li>
 </ol>
 <p>大概就醬。<br>我還在摸索寫文章的風格，畢竟用Facebook久了在段落的排版上還是習慣一句話直接換行，看來要想個方法調整一下~ 努力還債囉ww</p>
+]]></content>
+      <categories>
+        <category>生活札記</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【週記】一些日常生活漫談</title>
+    <url>/2019/190122-daily-talk/</url>
+    <content><![CDATA[<p><img src="https://pbs.twimg.com/media/Dw8dzwQUwAA5vZv.jpg:large"></p>
+<p>原定這週應該要發研所推甄心得的…不過出了一些事只能暫緩 QwQ<br>先放張最近19冬的熱門話題角色”三玖”，雖然聽說不少人追完漫畫就倒戈追二乃了www  </p>
+<a id="more"></a>
+<p>我自己只有追完動畫ep1，有點太閒魚了…不過單論人設來看，三玖給我的感覺：耳機、黑絲、歐派、無口(?)屬性加分不少，個性之類的細節等看看有沒有時間追漫畫吧(嘆)。</p>
+<p>咳咳、好像有點太油了。<br>來說說最近的生活吧，目前結束了大四上姑且算是平安活下來了XD<br>不過途中收到某間學校的一通臨時備取通知搞得我人仰馬翻，當時甚至還在FB小小地崩潰一下，事後想想其實也還好，頂多就不去嘛QQ 誰叫我有選擇、性障礙…  咳咳、我是說選擇性、障礙，嗯。<br>只是原本已經放下找教授的這件事，現在不得不又拿出來忙了(跪)。</p>
+<p>也因為這臨時的通知，很多行程都必須配合著提前規劃，導致我回到台北家的時間有點早…<br>嗯、待在家真的反而不太想去動電腦，偏偏剛回家又有點喉嚨發炎，所以都在睡覺 嘖</p>
+<p>下週會去參加台大辦的IOI camp，雖然感覺是去當砲灰der<br>（想想最近打Codeforces的Rating又在綠字 和 灰字之間遊走…有點擔心呢）<br>不過算算能好好玩競程的時間也不多了，希望可以吸收點新知識。<br>然而、第一天要教DP，呃啊真的是硬傷 QQ </p>
 ]]></content>
       <categories>
         <category>生活札記</category>
@@ -215,95 +215,6 @@
         <tag>Programming Contest</tag>
         <tag>Codeforces</tag>
         <tag>April Fools&#39; Day</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【活動】maimai愚人節解謎 &lt;怒槌～光吉猛修一部謎～&gt;</title>
-    <url>/2019/190402-maimai-april-fools-day/</url>
-    <content><![CDATA[<p><img src="https://i.imgur.com/Q8LRvq8.jpg"></p>
-<p>又到了一年一度的愚人節呢<br>網路上不免俗地充斥著各種假新聞（#<br>而maimai今年也照慣例推出愚人節相關活動，不過！這次多了解謎的彩蛋活動XD</p>
-<p>活動網址 ☛ <a href="https://chunithm.sega.jp/april-fool2019/">https://chunithm.sega.jp/april-fool2019/</a></p>
-<p>為了避免有爆雷捏他嫌疑，我還特地等到4/1過了才發這篇呢www</p>
-<a id="more"></a>
-
-<p>這次SEGA旗下的三款音樂遊戲機台 maimai、CHUNITHM、オンゲキ 都有相對應的愚人節活動。<br>只是無奈台灣只有maimai能玩，其餘兩台都是日本限定，殘念呀QQ</p>
-<p>不過換句話說… 解謎的負擔也相對減輕不少XD<br>畢竟我們不是日本人，這些需要用平仮名、片仮名來組合的謎題真的花了不少時間才搞懂…<br>別看下面解謎看起來很簡單、當初我們可是猜來猜去把兩張B5計算紙都寫滿了呢www</p>
-<p>首先、放上愚人節我們解謎用的youtube外部出力影片，而謎題就在背景動畫中。<br>我想應該是怕太早捏他吧，直到4/2才逐漸有解謎取向的解說影片。</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/51ZLA-yhdWo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p>從上面可以看出，譜面相當… 混亂(?)。<br>也因為很多該點該滑的沒有處理，所以當時解謎真的是用0.25倍重播慢慢看(#</p>
-<p>那麼 下面就來解謎囉!! w</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<hr>
-<center>  ○(￣﹏￣)○ ○(￣﹏￣)○ &nbsp;&nbsp;ネタ（捏他）分隔線&nbsp;&nbsp;○(￣﹏￣)○ ○(￣﹏￣)○ </center>
-
-<center><b>以下圖片來源均參考<a href"https://www.youtube.com/channel/UCT4yIf-FPYWjuhwo1H7zQTw">布魯諾</a>的外部出力、不得不說畫面真的處理得很好!!</b></center>
-
-<hr>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p><strong>第一問、「本物を順番に読め」</strong></p>
-<p>翻成中文大約是「找出本尊並依照順序讀」，如影片所見就是一大堆粉色的tap、hold交雜。<br>有些是真的要按的，但其他的都是背景動畫亂入，實在… 非常討厭 XD</p>
-<p>解謎方式是找出要按出來的 tap（本尊），如下圖所見。</p>
-<p><img src="https://i.imgur.com/A9PB4Sa.png"></p>
-<p>可以看到最後一顆還把周圍的仮名拿走、超壞www</p>
-<p>解出來的答案是「わからない」，捏他自maimai原創曲 <a href="https://www.youtube.com/watch?v=Dmak1NEfhLE">分からない</a></p>
-<p>&nbsp;</p>
-<p><strong>第二問、「正確になぞり出てくる金の文字を読め」</strong></p>
-<p>題意要我們注意的是「正確描繪出來的金色文字」，不得不說這題是我們卡關最久的。</p>
-<p>我們嘗試把背景動畫出現的金色色塊抄起來，但完全沒有任何頭緒…<br>頂多可以猜到是仮名部分偏旁，然後天真地把五十音表拿出來開始各種亂猜XDDDD<br>解不出來就直接跳過了，直到剩下第五問需要這題的答案才又回來看，大概看了半小時、放棄。</p>
-<p>最後看完網路上的題解真的傻眼www<br>原來所謂”金色文字”也包含slide滑完出現的<strong>Perfect</strong>，但我們解謎用的外部出力並沒有滑完(((#<br>剩下的解法就看下圖啦~ 真的各種想不到</p>
-<p><img src="https://i.imgur.com/YBiO7FV.png"></p>
-<p>最後一個字真的很壞<br>在slide的<strong>Perfect</strong>黃條結束才在背景動畫突然插進一個點…（還讓我不得不拆成兩張截圖w</p>
-<p>解出來的答案是「トパゾライト」，捏他自作曲家 t+pazolite<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^^^^^^^^ 這傢伙寫過不少可怕的BOSS曲</p>
-<p>&nbsp;</p>
-<p><strong>第三問、「同じ数字には同じ文字」</strong></p>
-<p>這題應該是我們寫最快的一題吧XDDD<br>題意大約是「把同樣的數字對應同樣的字母，然後把最後一句拼寫出來」。</p>
-<p>要說難點的話… 那就是背景動畫很很很很很很、很晃，布魯諾桑處理出來的影片就清楚很多~</p>
-<p><img src="https://i.imgur.com/8uvtXNR.png"></p>
-<p>把maimai的四種判定文字Perfect、Great、Good、Miss 填入就結束了www<br>解出來的答案是「desperete(デスパレイト)」，捏他自maimai原創曲 <a href="https://www.youtube.com/watch?v=kJF2iJcxeI8">デスパレイト</a></p>
-<p>&nbsp;</p>
-<p><strong>第四問、「囲われた文字を数字の順に読め」</strong></p>
-<p>這題一開始我還看不懂題目（日文苦手），後來才簡單查了一下<br>題意是「把圍起來的文字照數字順序讀」… 簡單XD</p>
-<p><img src="https://i.imgur.com/G7i27I0.png"></p>
-<p>解出來的答案是「せんたくき」，寫成漢字就是「洗濯機」 …應該不用另外解釋了吧www</p>
-<p>&nbsp;</p>
-<p><strong>最終問題、「流れ星を読め」</strong></p>
-<p>一大堆的 tap、slide、break、both，不難看出就是前四題作為題目的符號。<br>題意是「照著流星讀出來」，也不難猜出就是所謂的 slide，剩下…把字對齊就行了~</p>
-<p><img src="https://i.imgur.com/JusiEGk.png"></p>
-<p>由於背景動畫也是各種晃晃晃晃晃、倒帶看了不少次…</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;わから [な] い<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;とぱ [ぞ] らいと<br>ですぱれい [と]<br>&nbsp;&nbsp;&nbsp;&nbsp;せんたく [き]</p>
-<p>解出來的答案是「なぞとき」，寫成漢字為「謎解き」即本次活動主題~<br>當時只剩第二問解不出來還想硬猜這題，結果居然是濁音”ぞ”怎麼猜啦QQQ</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>嗯？你以為結束了嗎… 並沒有！</p>
-<p>當你把上述五問的答案填入網站除了會得到一些頭像/底版/稱號，還會多拿到五張圖片= =</p>
-<p><img src="https://i.imgur.com/wRLqrgW.jpg"></p>
-<p>由左至右分別是第一問至最終問題，好像有種Dejavu(既視感)<br>… 沒錯！正是第一問列出來的八個仮名，把仮名照順序拼出來在網站中找到さらなる謎(MASTER)填入即可。</p>
-<p>解出來的答案是「ながいき」，寫成漢字為「長生き」（長命）<br>雖然是解出來，不過查了很久找不出捏他 QQ</p>
-<p>至此就差不多告一個段落、剩下的因為涉及CHUNITHM、オンゲキ 兩個玩不到的人權，只能放棄(#</p>
-<hr>
-<p>題外話 … 在解謎的過程中，在該網站上意外找到了source code的彩蛋XD</p>
-<p><img src="https://i.imgur.com/qDxZ1sm.png"></p>
-<p>ここにヒントはありませ（這裡沒有任何提示）。</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>笑死 ᕕ ( ᐛ ) ᕗ</p>
-]]></content>
-      <categories>
-        <category>休閒娛樂</category>
-      </categories>
-      <tags>
-        <tag>April Fools&#39; Day</tag>
-        <tag>音Game</tag>
       </tags>
   </entry>
   <entry>
@@ -501,6 +412,95 @@
       </tags>
   </entry>
   <entry>
+    <title>【活動】maimai愚人節解謎 &lt;怒槌～光吉猛修一部謎～&gt;</title>
+    <url>/2019/190402-maimai-april-fools-day/</url>
+    <content><![CDATA[<p><img src="https://i.imgur.com/Q8LRvq8.jpg"></p>
+<p>又到了一年一度的愚人節呢<br>網路上不免俗地充斥著各種假新聞（#<br>而maimai今年也照慣例推出愚人節相關活動，不過！這次多了解謎的彩蛋活動XD</p>
+<p>活動網址 ☛ <a href="https://chunithm.sega.jp/april-fool2019/">https://chunithm.sega.jp/april-fool2019/</a></p>
+<p>為了避免有爆雷捏他嫌疑，我還特地等到4/1過了才發這篇呢www</p>
+<a id="more"></a>
+
+<p>這次SEGA旗下的三款音樂遊戲機台 maimai、CHUNITHM、オンゲキ 都有相對應的愚人節活動。<br>只是無奈台灣只有maimai能玩，其餘兩台都是日本限定，殘念呀QQ</p>
+<p>不過換句話說… 解謎的負擔也相對減輕不少XD<br>畢竟我們不是日本人，這些需要用平仮名、片仮名來組合的謎題真的花了不少時間才搞懂…<br>別看下面解謎看起來很簡單、當初我們可是猜來猜去把兩張B5計算紙都寫滿了呢www</p>
+<p>首先、放上愚人節我們解謎用的youtube外部出力影片，而謎題就在背景動畫中。<br>我想應該是怕太早捏他吧，直到4/2才逐漸有解謎取向的解說影片。</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/51ZLA-yhdWo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>從上面可以看出，譜面相當… 混亂(?)。<br>也因為很多該點該滑的沒有處理，所以當時解謎真的是用0.25倍重播慢慢看(#</p>
+<p>那麼 下面就來解謎囉!! w</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr>
+<center>  ○(￣﹏￣)○ ○(￣﹏￣)○ &nbsp;&nbsp;ネタ（捏他）分隔線&nbsp;&nbsp;○(￣﹏￣)○ ○(￣﹏￣)○ </center>
+
+<center><b>以下圖片來源均參考<a href"https://www.youtube.com/channel/UCT4yIf-FPYWjuhwo1H7zQTw">布魯諾</a>的外部出力、不得不說畫面真的處理得很好!!</b></center>
+
+<hr>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>第一問、「本物を順番に読め」</strong></p>
+<p>翻成中文大約是「找出本尊並依照順序讀」，如影片所見就是一大堆粉色的tap、hold交雜。<br>有些是真的要按的，但其他的都是背景動畫亂入，實在… 非常討厭 XD</p>
+<p>解謎方式是找出要按出來的 tap（本尊），如下圖所見。</p>
+<p><img src="https://i.imgur.com/A9PB4Sa.png"></p>
+<p>可以看到最後一顆還把周圍的仮名拿走、超壞www</p>
+<p>解出來的答案是「わからない」，捏他自maimai原創曲 <a href="https://www.youtube.com/watch?v=Dmak1NEfhLE">分からない</a></p>
+<p>&nbsp;</p>
+<p><strong>第二問、「正確になぞり出てくる金の文字を読め」</strong></p>
+<p>題意要我們注意的是「正確描繪出來的金色文字」，不得不說這題是我們卡關最久的。</p>
+<p>我們嘗試把背景動畫出現的金色色塊抄起來，但完全沒有任何頭緒…<br>頂多可以猜到是仮名部分偏旁，然後天真地把五十音表拿出來開始各種亂猜XDDDD<br>解不出來就直接跳過了，直到剩下第五問需要這題的答案才又回來看，大概看了半小時、放棄。</p>
+<p>最後看完網路上的題解真的傻眼www<br>原來所謂”金色文字”也包含slide滑完出現的<strong>Perfect</strong>，但我們解謎用的外部出力並沒有滑完(((#<br>剩下的解法就看下圖啦~ 真的各種想不到</p>
+<p><img src="https://i.imgur.com/YBiO7FV.png"></p>
+<p>最後一個字真的很壞<br>在slide的<strong>Perfect</strong>黃條結束才在背景動畫突然插進一個點…（還讓我不得不拆成兩張截圖w</p>
+<p>解出來的答案是「トパゾライト」，捏他自作曲家 t+pazolite<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^^^^^^^^ 這傢伙寫過不少可怕的BOSS曲</p>
+<p>&nbsp;</p>
+<p><strong>第三問、「同じ数字には同じ文字」</strong></p>
+<p>這題應該是我們寫最快的一題吧XDDD<br>題意大約是「把同樣的數字對應同樣的字母，然後把最後一句拼寫出來」。</p>
+<p>要說難點的話… 那就是背景動畫很很很很很很、很晃，布魯諾桑處理出來的影片就清楚很多~</p>
+<p><img src="https://i.imgur.com/8uvtXNR.png"></p>
+<p>把maimai的四種判定文字Perfect、Great、Good、Miss 填入就結束了www<br>解出來的答案是「desperete(デスパレイト)」，捏他自maimai原創曲 <a href="https://www.youtube.com/watch?v=kJF2iJcxeI8">デスパレイト</a></p>
+<p>&nbsp;</p>
+<p><strong>第四問、「囲われた文字を数字の順に読め」</strong></p>
+<p>這題一開始我還看不懂題目（日文苦手），後來才簡單查了一下<br>題意是「把圍起來的文字照數字順序讀」… 簡單XD</p>
+<p><img src="https://i.imgur.com/G7i27I0.png"></p>
+<p>解出來的答案是「せんたくき」，寫成漢字就是「洗濯機」 …應該不用另外解釋了吧www</p>
+<p>&nbsp;</p>
+<p><strong>最終問題、「流れ星を読め」</strong></p>
+<p>一大堆的 tap、slide、break、both，不難看出就是前四題作為題目的符號。<br>題意是「照著流星讀出來」，也不難猜出就是所謂的 slide，剩下…把字對齊就行了~</p>
+<p><img src="https://i.imgur.com/JusiEGk.png"></p>
+<p>由於背景動畫也是各種晃晃晃晃晃、倒帶看了不少次…</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;わから [な] い<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;とぱ [ぞ] らいと<br>ですぱれい [と]<br>&nbsp;&nbsp;&nbsp;&nbsp;せんたく [き]</p>
+<p>解出來的答案是「なぞとき」，寫成漢字為「謎解き」即本次活動主題~<br>當時只剩第二問解不出來還想硬猜這題，結果居然是濁音”ぞ”怎麼猜啦QQQ</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>嗯？你以為結束了嗎… 並沒有！</p>
+<p>當你把上述五問的答案填入網站除了會得到一些頭像/底版/稱號，還會多拿到五張圖片= =</p>
+<p><img src="https://i.imgur.com/wRLqrgW.jpg"></p>
+<p>由左至右分別是第一問至最終問題，好像有種Dejavu(既視感)<br>… 沒錯！正是第一問列出來的八個仮名，把仮名照順序拼出來在網站中找到さらなる謎(MASTER)填入即可。</p>
+<p>解出來的答案是「ながいき」，寫成漢字為「長生き」（長命）<br>雖然是解出來，不過查了很久找不出捏他 QQ</p>
+<p>至此就差不多告一個段落、剩下的因為涉及CHUNITHM、オンゲキ 兩個玩不到的人權，只能放棄(#</p>
+<hr>
+<p>題外話 … 在解謎的過程中，在該網站上意外找到了source code的彩蛋XD</p>
+<p><img src="https://i.imgur.com/qDxZ1sm.png"></p>
+<p>ここにヒントはありませ（這裡沒有任何提示）。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>笑死 ᕕ ( ᐛ ) ᕗ</p>
+]]></content>
+      <categories>
+        <category>休閒娛樂</category>
+      </categories>
+      <tags>
+        <tag>音Game</tag>
+        <tag>April Fools&#39; Day</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【閒聊】2019日本行... 難產QQ</title>
     <url>/2019/190519-japan-travel-preface/</url>
     <content><![CDATA[<p>什麼？你又跑去日本了！？</p>
@@ -530,6 +530,64 @@
       </categories>
       <tags>
         <tag>日本行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【活動】畢業典禮兼...橋頭遊記!?</title>
+    <url>/2019/190602-commencement/</url>
+    <content><![CDATA[<p><img src="https://imgur.com/1wvOaDF.jpg"></p>
+<p>不知不覺又到了畢業的時節。</p>
+<p>但看過行程表的我實在不是很想去躺著聽演說，所以… 出去玩啦ヾ(〃^∇^)ﾉ</p>
+<a id="more"></a>
+
+<p>&nbsp;</p>
+<p>事情是這樣的。</p>
+<p>大約在畢業典禮前幾天我才上網看了所謂的<strong>畢業典禮公告</strong>，對於校方（系方？）沒特別宣傳感到擔憂。</p>
+<p>說不定真的有哪位天兵同學沒看到公告就直接錯過畢典 wwwww</p>
+<p>&nbsp;</p>
+<p>我們校總共分三個梯次舉行，而我們CS是在最後一梯，開始時間… 17點，講真的還挺晚的～</p>
+<p>直到當天我都還在猶豫該不該出席畢業典禮，但問題是入場必須穿著畢業袍。</p>
+<p>關於畢業袍這東西… 事前租一年$450、當天租$200（有錯麻煩提醒我）</p>
+<p>總之就是不太親民的價格 QQ</p>
+<p>&nbsp;</p>
+<p>那如果不去畢典的話，翹掉我該在宿舍廢嗎？</p>
+<p>嗯… 所以我就去Google搜尋<strong>「高雄 閒晃」</strong>，找到了橋頭糖廠。</p>
+<p>想想自己待在高雄三年好像都沒機會往北邊探索，所以算了一下公車時間，帶著手機、鑰匙、錢包就出門了！</p>
+<p><img src="https://imgur.com/N5IQU10.jpg"></p>
+<p>時間大約是15點，從高捷**”橋頭糖廠站”**出站隔壁就是園區，交通上蠻方便呢。</p>
+<p>原本想秉持純晃晃的心態不拿手機… 但事實證明很困難，拍照魂總是在這時候特別不受控（笑</p>
+<p><img src="https://imgur.com/b4sw7GI.jpg">10摳的黑糖饅頭，拿來解嘴饞還算是不錯的選項～</p>
+<p>&nbsp;</p>
+<p><img src="https://imgur.com/d34HnN5.jpg">45摳紅豆牛奶冰，配上當時悶熱的天氣吃下去感覺真棒！<br>這張我有放在其他地方打卡，總之就是非常悠閒的… 吃貨之旅（你給我等等</p>
+<p>&nbsp;</p>
+<p>剩下的就是在附近閒晃，然後看到不錯view就停下來拍照#</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/TTmKf9b.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/5v85UO7.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/y0dB5V0.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/CbYwEsb.jpg"></div></div></div></div>
+
+<p>因為本身對糖廠歷史… 並沒有很大興趣w</p>
+<p>所以就真的只是來散步，就這樣一路走到**”橋頭站”**準備搭捷運回家～</p>
+<p>&nbsp;</p>
+<p>回到楠梓加工區的時間大約17:50，看看畢典也差不多要結束了</p>
+<p>… 好像姑且可以到會場去看看情況。</p>
+<p>我就抱著這樣的心態查了公車時間 嗯…沒救</p>
+<p>只好騎City Bike慢慢回學校（15分鐘）wwwww</p>
+<p><img src="https://imgur.com/weq1ALc.jpg"></p>
+<p>到達會場後遇到了也是翹掉畢典的玨兄，稍微聊了一下發現都是因為畢業袍放棄參加（真糟糕</p>
+<p>等到畢典結束、人潮漸漸出現後，上面這面看板根本就是要搶位子拍照wwwww</p>
+<p>混亂中拍了不少張，我甚至還把友人的畢業袍搶過來（抹臉</p>
+<p><img src="https://imgur.com/oSTZmR4.jpg"></p>
+<p>最後拿了一張惡搞性質的當作FB的打卡，感謝友人贊助優秀畢業生獎XD</p>
+<p>證明我並沒有翹掉畢業典禮唷（心虛</p>
+<p>&nbsp;</p>
+<p>晚餐閒聊才知道我們系似乎是出席率最低的，連教授群也只有系主任義務出席，該說很有CS的風格嗎www</p>
+<p>總之這一趟下來我也不後悔自己的決定，算是給自己的一種勉勵吧。</p>
+<p>接下來進入六月才是真正的難關，要期末LAAAAAA</p>
+]]></content>
+      <categories>
+        <category>旅遊日誌</category>
+      </categories>
+      <tags>
+        <tag>畢業典禮</tag>
+        <tag>橋頭</tag>
       </tags>
   </entry>
   <entry>
@@ -666,64 +724,6 @@
       </categories>
       <tags>
         <tag>日本行</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【活動】畢業典禮兼...橋頭遊記!?</title>
-    <url>/2019/190602-commencement/</url>
-    <content><![CDATA[<p><img src="https://imgur.com/1wvOaDF.jpg"></p>
-<p>不知不覺又到了畢業的時節。</p>
-<p>但看過行程表的我實在不是很想去躺著聽演說，所以… 出去玩啦ヾ(〃^∇^)ﾉ</p>
-<a id="more"></a>
-
-<p>&nbsp;</p>
-<p>事情是這樣的。</p>
-<p>大約在畢業典禮前幾天我才上網看了所謂的<strong>畢業典禮公告</strong>，對於校方（系方？）沒特別宣傳感到擔憂。</p>
-<p>說不定真的有哪位天兵同學沒看到公告就直接錯過畢典 wwwww</p>
-<p>&nbsp;</p>
-<p>我們校總共分三個梯次舉行，而我們CS是在最後一梯，開始時間… 17點，講真的還挺晚的～</p>
-<p>直到當天我都還在猶豫該不該出席畢業典禮，但問題是入場必須穿著畢業袍。</p>
-<p>關於畢業袍這東西… 事前租一年$450、當天租$200（有錯麻煩提醒我）</p>
-<p>總之就是不太親民的價格 QQ</p>
-<p>&nbsp;</p>
-<p>那如果不去畢典的話，翹掉我該在宿舍廢嗎？</p>
-<p>嗯… 所以我就去Google搜尋<strong>「高雄 閒晃」</strong>，找到了橋頭糖廠。</p>
-<p>想想自己待在高雄三年好像都沒機會往北邊探索，所以算了一下公車時間，帶著手機、鑰匙、錢包就出門了！</p>
-<p><img src="https://imgur.com/N5IQU10.jpg"></p>
-<p>時間大約是15點，從高捷**”橋頭糖廠站”**出站隔壁就是園區，交通上蠻方便呢。</p>
-<p>原本想秉持純晃晃的心態不拿手機… 但事實證明很困難，拍照魂總是在這時候特別不受控（笑</p>
-<p><img src="https://imgur.com/b4sw7GI.jpg">10摳的黑糖饅頭，拿來解嘴饞還算是不錯的選項～</p>
-<p>&nbsp;</p>
-<p><img src="https://imgur.com/d34HnN5.jpg">45摳紅豆牛奶冰，配上當時悶熱的天氣吃下去感覺真棒！<br>這張我有放在其他地方打卡，總之就是非常悠閒的… 吃貨之旅（你給我等等</p>
-<p>&nbsp;</p>
-<p>剩下的就是在附近閒晃，然後看到不錯view就停下來拍照#</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/TTmKf9b.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/5v85UO7.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/y0dB5V0.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/CbYwEsb.jpg"></div></div></div></div>
-
-<p>因為本身對糖廠歷史… 並沒有很大興趣w</p>
-<p>所以就真的只是來散步，就這樣一路走到**”橋頭站”**準備搭捷運回家～</p>
-<p>&nbsp;</p>
-<p>回到楠梓加工區的時間大約17:50，看看畢典也差不多要結束了</p>
-<p>… 好像姑且可以到會場去看看情況。</p>
-<p>我就抱著這樣的心態查了公車時間 嗯…沒救</p>
-<p>只好騎City Bike慢慢回學校（15分鐘）wwwww</p>
-<p><img src="https://imgur.com/weq1ALc.jpg"></p>
-<p>到達會場後遇到了也是翹掉畢典的玨兄，稍微聊了一下發現都是因為畢業袍放棄參加（真糟糕</p>
-<p>等到畢典結束、人潮漸漸出現後，上面這面看板根本就是要搶位子拍照wwwww</p>
-<p>混亂中拍了不少張，我甚至還把友人的畢業袍搶過來（抹臉</p>
-<p><img src="https://imgur.com/oSTZmR4.jpg"></p>
-<p>最後拿了一張惡搞性質的當作FB的打卡，感謝友人贊助優秀畢業生獎XD</p>
-<p>證明我並沒有翹掉畢業典禮唷（心虛</p>
-<p>&nbsp;</p>
-<p>晚餐閒聊才知道我們系似乎是出席率最低的，連教授群也只有系主任義務出席，該說很有CS的風格嗎www</p>
-<p>總之這一趟下來我也不後悔自己的決定，算是給自己的一種勉勵吧。</p>
-<p>接下來進入六月才是真正的難關，要期末LAAAAAA</p>
-]]></content>
-      <categories>
-        <category>旅遊日誌</category>
-      </categories>
-      <tags>
-        <tag>畢業典禮</tag>
-        <tag>橋頭</tag>
       </tags>
   </entry>
   <entry>
@@ -903,7 +903,10 @@
 <p>放張ライネス鎮樓、在二世事件簿中真的超可愛der  ٩(ˊᗜˋ*)و</p>
 <a id="more"></a>
 
-<p>會寫到這篇的原因是巴哈姆特這篇：<br>**<a href="https://forum.gamer.com.tw/Co.php?bsn=09009&sn=106540&subbsn=0">RE:【問題】請問動畫目前有哪些種類?</a>**</p>
+<p>會寫到這篇的原因是巴哈姆特這篇：</p>
+<blockquote>
+<p><a href="https://forum.gamer.com.tw/Co.php?bsn=09009&sn=106540"><strong>RE:【問題】請問動畫目前有哪些種類?</strong></a></p>
+</blockquote>
 <p>嗯、沒錯，正是小弟不才我的回文。<br>這篇同時也被放在<code>TYPE-MOON巴哈版置頂區</code>的某個角落，看看回文時間2015年轉眼也過了四年。基於巴哈系統會砍古文、加上這四年來Fate系列很多衍生作品動畫化，趁暑假最後還有點空閒把至今為止的動畫整理一下，另外再簡單帶些<strong>TYPE-MOON</strong>（以下簡稱<strong>TM</strong>）的世界觀。</p>
 <p>標題雖然寫著《<strong>Fate系列</strong>》，但其實整個系列是被歸類在<strong>TM</strong>這個社團底下，所以Fate世界中有些橋段多多少少會和其他作品連動，甚至在<strong>TM</strong>十週年的紀念動畫混了Fate系列一大堆角色梗XD</p>
 <hr>
@@ -913,10 +916,10 @@
             <p><strong>若要問動畫該從哪裡開始看呢？</strong></p>
           </div>
 
-<p>原則上《<strong>Fate/Stay Night</strong>》三條世界線劇情互相不衝突，<font color="red">個人建議是照著開播順序慢慢追</font>，一方面是畫風接受度的問題<del>（像我自己已經被ufortable的精美作畫養肥 回不去2006年的F/SN了）</del>，另一方面是有些橋段要先看過F/SN再看F/Z才有辦法瞭解前後的心境轉變，以下<strong>依照開播時間</strong>列出來簡單點評。</p>
+<p>原則上《<strong>Fate/Stay Night</strong>》三條世界線劇情互相不衝突，<font color="red">個人建議是照著開播順序慢慢追</font>，一方面是畫風接受度的問題<del>（像我自己已經被ufortable的精美作畫養壞，回不去2006年的F/SN了）</del>，另一方面是有些橋段要先看過F/SN再看F/Z才有辦法瞭解前後的心境轉變，以下<strong>依照開播時間</strong>列出來簡單點評。</p>
 <p><font color="#5500DD">✿ 以下動畫開播時間以”季”為單位，例如”06冬”=2006年1月～2006年3月，以此類推。</font></p>
 <ul>
-<li><strong>Fate/Stay Night</strong>（Saber線）[ 06冬、06春 ] 共24話<ul>
+<li><strong>Fate/Stay Night</strong>（Saber線）[ 06冬、06春 ] 共 24 話<ul>
 <li>Fate系列首次動畫化的作品</li>
 <li>畫風和現在2019相比之下有相當大的落差，如果能接受的補完吧 : &gt;</li>
 </ul>
@@ -932,7 +935,7 @@
 </li>
 </ul>
 <ul>
-<li><strong>Fate/Zero</strong> [ 11秋、12春 ] 共24話<ul>
+<li><strong>Fate/Zero</strong> [ 11秋、12春 ] 共 24 話<ul>
 <li>所謂《<strong>Fate/Stay Night</strong>》前傳、第四次聖杯戰爭</li>
 <li>Fate衍生作品《<strong>艾梅洛閣下II世事件簿</strong>》以F/Z的其中一名角色<strong>韋伯</strong>作為主角</li>
 <li>基本上F/Z只有一條世界線，<font color="#CC0000">強推！</font></li>
@@ -940,7 +943,7 @@
 </li>
 </ul>
 <ul>
-<li><strong>Fate/Stay Night</strong> （UBW線）[ 14秋、15春 ] 共26話<ul>
+<li><strong>Fate/Stay Night</strong> （UBW線）[ 14秋、15春 ] 共 26 話<ul>
 <li>和2010劇場版是同一條世界線</li>
 <li>壯哉我大ufortable，作畫非常精良，<font color="#CC0000">強推！</font></li>
 </ul>
@@ -951,21 +954,21 @@
 <li><strong>HF</strong> 全名為 Heaven’s Feel</li>
 <li>劇情份量是三條世界線中最多、PC遊戲中也是解謎重點</li>
 <li>劇場版分成三個部分播出<ul>
-<li>《I. presage flower》（台譯: 預示之花）2017/10上映</li>
-<li>《II. lost butterfly》（台譯: 迷途之蝶）2019/1上映</li>
-<li>《III.spring song》預計2020春上映</li>
+<li>《I. presage flower》（台譯: 預示之花）日本 2017/10 上映</li>
+<li>《II. lost butterfly》（台譯: 迷途之蝶）日本 2019/1 上映</li>
+<li>《III. spring song》（台譯: 春櫻之歌）日本 2020/8 上映</li>
 </ul>
 </li>
-<li><del>我還沒開始看</del></li>
+<li><del>我還沒開始看 QQ</del></li>
 </ul>
 </li>
 </ul>
 <ul>
-<li><strong>艾梅洛閣下II世事件簿</strong> [ 19夏 ] <font color="red">現正熱映中</font><ul>
+<li><strong>艾梅洛閣下II世事件簿</strong> [ 19夏 ] 共 13 話 + EP.0<ul>
 <li>副標題為 <strong>-魔眼蒐集列車 Grace note-</strong></li>
 <li>故事背景為第四次聖杯戰爭（F/Z）的十年後，以F/Z角色<strong>韋伯</strong>作為主角</li>
 <li>關於”魔眼”的描述可參考<strong>TM</strong>底下《<strong>空之境界</strong>》、《<strong>月姬</strong>》，或是《<strong>F/SN</strong>》HF線（？</li>
-<li>分類上理應在外傳比較適當，但劇情中多次提及F/Z橋段，所以個人視為本傳延伸</li>
+<li>分類上理應在外傳比較適當，但劇情中多次提及韋伯視角中F/Z橋段，所以個人視為本傳延伸</li>
 </ul>
 </li>
 </ul>
@@ -986,7 +989,7 @@
 </li>
 </ul>
 <ul>
-<li><p><strong>Fate/Apocrypha</strong> [ 17夏、17秋 ] 共25話</p>
+<li><p><strong>Fate/Apocrypha</strong> [ 17夏、17秋 ] 共 25 話</p>
 <ul>
 <li>簡稱F/Ap <del>因為後面那個A很難念</del></li>
 <li>原本是線上遊戲企劃（Fate Online Project）的廢案，後以小說形式出版</li>
@@ -997,32 +1000,35 @@
 </li>
 </ul>
 <ul>
-<li><p>Fate/Grand order</p>
-<ul>
+<li>Fate/Grand order  [ 19秋 ] 共 21 話 + EP.0<ul>
+<li>副標題為 <strong>-絕對魔獸戰線巴比倫尼亞-</strong></li>
 <li>傳說中的手遊FGO、感謝各位乾爹讓我們有動畫可以看 ᕕ ( ᐛ ) ᕗ</li>
-<li><del>我還沒開始看</del></li>
+<li>由玩家票選出來的主線任務改編動畫，不排除未來會有其他系列動畫XD</li>
+<li><del>我還沒看 QQ</del></li>
 </ul>
 </li>
 </ul>
 <ul>
-<li>Fate/EXTRA Last Encore<ul>
-<li><del>我還沒開始看</del></li>
+<li>Fate/EXTRA Last Encore [ 18冬 ] 共 13 話<ul>
+<li><del>我還沒看 QQ</del></li>
 </ul>
 </li>
 </ul>
 <ul>
-<li>衛宮家今天的餐桌風景<ul>
+<li>衛宮家今天的餐桌風景 [ 2018/1 - 2019/1 ] 共 13 話<ul>
+<li>網路動畫，以每個月一話的進度放送</li>
 <li>吃貨番</li>
-<li><del>我還沒開始看</del></li>
+<li><del>我還沒看 QQ</del></li>
 </ul>
 </li>
 </ul>
 <h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
-<li><p><strong>真月譚月姬</strong> [03秋] 共12話</p>
+<li><p><strong>真月譚月姬</strong> [03秋] 共 12 話</p>
 <ul>
 <li>相當早期的動畫，原作的PC遊戲《<strong>月姬</strong>》是在2000年的C59頒布</li>
 <li>動畫版被戲稱《<strong>月姬</strong>》的黑歷史、不存在的動畫</li>
 <li>我自己是在2015年補完動畫覺得還可以，事後也把漫畫版啃完</li>
+<li>\ 愛爾奎特 美如畫/</li>
 </ul>
 </li>
 <li><p><strong>空之境界</strong> [ 劇場版(2007-2011) ] 共 8 部</p>
@@ -1039,7 +1045,7 @@
 <li>終章 《空之境界》        2011年2月上映</li>
 </ul>
 </li>
-<li>劇情有點玄、老實講我當年某幾部看到快睡著。</li>
+<li>劇情有點玄、老實講當年某幾部我還看到快睡著。</li>
 </ul>
 </li>
 <li><p><strong>幻想嘉年華</strong> [ OVA(2011) ] 共12話</p>
@@ -1379,29 +1385,6 @@
       </categories>
   </entry>
   <entry>
-    <title>實驗室日誌 0x03</title>
-    <url>/2020/200413-lab-log-0x03/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-JVQBdT9/0/d70facc6/L/i-JVQBdT9-M.png?70%25"></p>
-<p>剛好看完Pokemon新無印篇ep21，皮卡丘豪可愛哦 &gt;w&lt;</p>
-<p>這張圖不僅適用現在的碩一(看論文)，明年碩二還能再用一次~讚讚（幹</p>
-<a id="more"></a>
-<p>-</p>
-<p>前陣子好不容易花了點時間寫完Pwn1，結果連假完就被抓回去審計畫、看論文了Zzzz<br>看來Pwn2要生出來可能還需要一點時間 嗚嗚</p>
-<p>這篇其實也沒什麼重點，只是最近和學長們聊過後很有感觸。<br>畢竟我在甄試時恰逢蔡總統提出的「資安即國安」，讓資安碩剛成立就很有焦點(?)<br>2019這一年就有四間資安碩成立，分別是中山資工、台大電機、交大資工、中央資工（硬要排序</p>
-<p>但身為第一屆說穿了就跟白老鼠差不多 : (<br>很多全新制度沒有前例可以借鑑，有些資安課程也沒有考古題這種東西能夠參考QwQ<br>再來是咱們老闆剛好也開始忙其他單位無暇顧及我們，以上學期的每週咪挺來說就停了好幾次。</p>
-<p>這學期感覺咪挺有恢復常態(?) 結果反而讓我們措手不及XD<br>停咪停到被養壞的我們，只能說太怠惰了qq<br>從碩二學長的說詞來看我們這屆現在論文報告還沒一輪不是很妙…</p>
-<p>我們實驗室的慣例都是博士班學長帶領碩士生。<br>但現在可以說是<strong>剛過</strong>全盛時期，因為在我們入學的同時走了兩位實驗室台柱。<br>其中一位我在甄試期間時見過，聽聞這兩位博士生都是把論文當雜誌翻的強者wwwww<br>現在雖然博士班學長也會給建議，但可能相比之下沒有之前學長這麼嚴厲，不曉得該不該高興…<br>講這個好像有點不負責任，應該是我們本來就該主動精進自己的才對 ._.</p>
-<p>再來前面提到咱們老闆很忙，所以對於課程上也有些異動。<br>原本這學期由老闆親自授課的課程改為一位印度籍老師上課，我本來的爛英文加上不適應口音，還記得第一堂真的是爆炸www<br>根本不曉得自己聽了三小，第二堂才稍微習慣相對好一些，希望能平安PASS（跪）</p>
-<p>最後就是眾所皆知的「好的 中國武漢肺炎」，雖然臺灣在疫情上控制的不錯，但多少還是會有些影響。<br>像是會議被延期、課程遠距教學 還有… 老師被隔離，嘛 畢竟老師也是出國參加Conference<br>然後回國就被隔離14天關起來也是很無奈，但也因為這樣停了將近一個月的課 ˊ_&gt;ˋ</p>
-<p>只能說我們這一屆實在很不樂觀呀…<br>雖然我很喜歡實驗室的氛圍，但並沒有很想待到延畢，更沒有考慮簽博XD<br>現在看著碩二學長們忙著生論文，想到一年後自己究竟有沒有辦法寫出像樣的東西。</p>
-<br>
-抖了一下、有點害怕面對未來的日子。
-]]></content>
-      <categories>
-        <category>實驗室日誌</category>
-      </categories>
-  </entry>
-  <entry>
     <title>資安社課 Pwn basic(1)</title>
     <url>/2020/200320-nsysuisc-pwn-1/</url>
     <content><![CDATA[<p>經歷大約一學期的CTF洗禮，總算是對這分面稍微有些概念:D<br>原本已經這個部落格的定位應該要是技術向，殊不知都被我拿來發廢文…</p>
@@ -1603,6 +1586,29 @@ Pwn大概就是這麼一回事了~
       <tags>
         <tag>音Game</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>實驗室日誌 0x03</title>
+    <url>/2020/200413-lab-log-0x03/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-JVQBdT9/0/d70facc6/L/i-JVQBdT9-M.png?70%25"></p>
+<p>剛好看完Pokemon新無印篇ep21，皮卡丘豪可愛哦 &gt;w&lt;</p>
+<p>這張圖不僅適用現在的碩一(看論文)，明年碩二還能再用一次~讚讚（幹</p>
+<a id="more"></a>
+<p>-</p>
+<p>前陣子好不容易花了點時間寫完Pwn1，結果連假完就被抓回去審計畫、看論文了Zzzz<br>看來Pwn2要生出來可能還需要一點時間 嗚嗚</p>
+<p>這篇其實也沒什麼重點，只是最近和學長們聊過後很有感觸。<br>畢竟我在甄試時恰逢蔡總統提出的「資安即國安」，讓資安碩剛成立就很有焦點(?)<br>2019這一年就有四間資安碩成立，分別是中山資工、台大電機、交大資工、中央資工（硬要排序</p>
+<p>但身為第一屆說穿了就跟白老鼠差不多 : (<br>很多全新制度沒有前例可以借鑑，有些資安課程也沒有考古題這種東西能夠參考QwQ<br>再來是咱們老闆剛好也開始忙其他單位無暇顧及我們，以上學期的每週咪挺來說就停了好幾次。</p>
+<p>這學期感覺咪挺有恢復常態(?) 結果反而讓我們措手不及XD<br>停咪停到被養壞的我們，只能說太怠惰了qq<br>從碩二學長的說詞來看我們這屆現在論文報告還沒一輪不是很妙…</p>
+<p>我們實驗室的慣例都是博士班學長帶領碩士生。<br>但現在可以說是<strong>剛過</strong>全盛時期，因為在我們入學的同時走了兩位實驗室台柱。<br>其中一位我在甄試期間時見過，聽聞這兩位博士生都是把論文當雜誌翻的強者wwwww<br>現在雖然博士班學長也會給建議，但可能相比之下沒有之前學長這麼嚴厲，不曉得該不該高興…<br>講這個好像有點不負責任，應該是我們本來就該主動精進自己的才對 ._.</p>
+<p>再來前面提到咱們老闆很忙，所以對於課程上也有些異動。<br>原本這學期由老闆親自授課的課程改為一位印度籍老師上課，我本來的爛英文加上不適應口音，還記得第一堂真的是爆炸www<br>根本不曉得自己聽了三小，第二堂才稍微習慣相對好一些，希望能平安PASS（跪）</p>
+<p>最後就是眾所皆知的「好的 中國武漢肺炎」，雖然臺灣在疫情上控制的不錯，但多少還是會有些影響。<br>像是會議被延期、課程遠距教學 還有… 老師被隔離，嘛 畢竟老師也是出國參加Conference<br>然後回國就被隔離14天關起來也是很無奈，但也因為這樣停了將近一個月的課 ˊ_&gt;ˋ</p>
+<p>只能說我們這一屆實在很不樂觀呀…<br>雖然我很喜歡實驗室的氛圍，但並沒有很想待到延畢，更沒有考慮簽博XD<br>現在看著碩二學長們忙著生論文，想到一年後自己究竟有沒有辦法寫出像樣的東西。</p>
+<br>
+抖了一下、有點害怕面對未來的日子。
+]]></content>
+      <categories>
+        <category>實驗室日誌</category>
+      </categories>
   </entry>
   <entry>
     <title>TJCTF 2020 - Weak Password (Web)</title>
