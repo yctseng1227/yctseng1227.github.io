@@ -61,34 +61,6 @@
       </categories>
   </entry>
   <entry>
-    <title>【週記】咦？好像踢到奇怪的盒子...</title>
-    <url>/2019/190311-asus5z-unboxing/</url>
-    <content><![CDATA[<p><img src="https://imgur.com/ODLyNTq.jpg"></p>
-<p>好像很久沒更新部落格www （跪<br>一方面是沒什麼趣事可以分享，另一方面是懶癌發作 XD<br>只好浮上來換口氣說說最近的事囉~</p>
-<p>另外用hexo框架更新網站偶爾會遇到<code>command not found: hexo</code><br>不得不說有點頭痛呢… 最近終於查清是<strong>Node.js</strong>的更新問題。<br>果然對於自己不熟悉的環境要找問題就不太容易呢~</p>
-<p>請容許我把解決方法放在這裡（其實就只是更新node版本<br><code>sudo npm install hexo-cli -g</code></p>
-<a id="more"></a>
-
-<p>首先。</p>
-<p>好像還是不少朋友很關心我未來研究所的去向www<br>但我只能說… 現在手上握著兩間的名額，沒辦法把話說死啊。</p>
-<p>總之，明天(3/11)正好是A研究所的二次報到（第一次是去年剛錄取要報到）。<br>至於B研究所呢～ 嗯看起來已經快被我放生Play呢 QQ</p>
-<hr>
-<p>再來就是！ 我換手機惹（撒花<br>不過換機的理由很薄弱… 就是家母用的Sony Z1(2013)要淘汰了。<br>我就見縫插針跟著提想換手機，現在想想真的是不知道哪來的勇氣www<br>（恰好我玩手遊常常過熱到閃退，當然我沒講出來 XD）</p>
-<p>至於挑手機呢… 嗯 我這人真的是平常不太關心手機動態。<br>等到要換了才開始每天追PTT的MobileComm的推文 (#</p>
-<p>在預算10k~15k(我自己有貼小錢ww) 的情況下。<br>最後是挑了高通845的 <strong>Zenfone 5Z 6G/128G (ZS620KL)</strong><br>個人自認需求不算高，平常也就滑滑fb、line、ptt，甚至連手遊都玩的很休閒www<br>（之前吃晚餐被抓包上次登入遊戲是13hr前，意思是早上滑完就沒開過= =+）</p>
-<p>沒想過身為索粉的我會有脫離SONY的一天 XD<br>畢竟前幾隻手機都是直接從SONY的機種挑… 但這次X1真的好長。<br>甚至還被戲稱遙控器www 真的怕口袋不夠深塞不下（Ｏ</p>
-<p>以往換手機我都還會在巴哈小屋po開箱文<br>至於5Z的開箱嘛，看起來好像沒什麼好開，反倒是Android 9要適應一陣子。<br>（之前的XZ只能更新到Android 8.0.0）</p>
-<p>就醬子吧，雖然很想把研究所心得貼出來。<br>無奈到現在我仍然還在猶豫，很討厭自己選擇障礙的個性QQ<br>可能會拆成兩篇，下週先放個&lt;上篇&gt;好了~~ （希望懶癌不要發作</p>
-]]></content>
-      <categories>
-        <category>敗家開箱</category>
-      </categories>
-      <tags>
-        <tag>手機</tag>
-        <tag>Asus 5Z</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【週記】過新年就是要欠債對唄！</title>
     <url>/2019/190207-new-year-talk/</url>
     <content><![CDATA[<p><img src="https://imgur.com/DbAEQEE.jpg"></p>
@@ -108,84 +80,6 @@
       <categories>
         <category>生活札記</category>
       </categories>
-  </entry>
-  <entry>
-    <title>【週記】ITSA桂冠賽 居...居然收掉了QQQ</title>
-    <url>/2019/190326-itsa-annual-close/</url>
-    <content><![CDATA[<p><img src="https://imgur.com/jk3yUSX.jpg"></p>
-<p>2019 ITSA桂冠賽確定停辦… 事情總是如此地突然QQ<br>我們NUK去年好不容易稍稍帶起了競程風氣 沒想到時隔一年就收掉了<br>更何況是連線上賽都改成兩個月一次= =</p>
-<p>看來下屆社長要推動競程這塊會很辛苦呢 …</p>
-<a id="more"></a>
-
-<p>今年四月底我要飛日本。</p>
-<p>回想起去年訂機票還很怕會卡到ITSA桂冠賽。<br>特地寄信問官方舉辦時間，想當然爾… 沒有消息XD</p>
-<p>結果居然就這樣停辦了 欸…<br>這下子我在大學能參加的現場賽就差不多告個段落了。<br>之後可能找個時間可以開始補這四年的競程心得（前提是懶癌沒發作的話w）</p>
-<p>去年的桂冠賽我們校有20餘位同學出征，可以說是報名相當踴躍。<br>結果停辦後少一場能體驗”現場賽”的機會其實還蠻傷的，算下來大概只剩下NCPC、或是晉級Regional contest，真的蠻可惜的QQ</p>
-<p>話說既然連平常的 ITSA &amp; PTC 月賽都縮減成兩個月一次，自然聯想到的就是經費不足吧，其次就是PTC參與隊伍太少、又或是出題的題庫量不夠，嘛官方沒有講也只能就現況來猜了。</p>
-<p>另外除了一般的競賽，再來就是一年四次的CPE檢定。<br>這次很殘念地差一點拿六題，但值得一提的是曾經出現在PTC的edit distance這回成功寫出來了~<br>大學最後的CPE希望能拼個六題壓壓驚（跪ww</p>
-]]></content>
-      <categories>
-        <category>Algorithm</category>
-      </categories>
-      <tags>
-        <tag>ITSA桂冠賽</tag>
-        <tag>Programming Contest</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【活動】Codeforces April Fools Day Contest 2019</title>
-    <url>/2019/190402-codeforces-april-fools-day/</url>
-    <content><![CDATA[<p>聽說是Codeforces每年都會辦的愚人節活動，今次算是體驗到何謂無厘頭解謎XD</p>
-<p>除了Problem A還算正常，其他都在玩猜猜樂。<br>賽後透過一些線索才把pB, pC, pD搞定，這邊來分享一下~<br>（如果有任何錯誤也歡迎來信指教&gt; &lt;）</p>
-<a id="more"></a>
-
-<p>&nbsp;</p>
-<p><a href="https://codeforces.com/problemset/problem/1145/A">Problem A - Thanos Sort</a></p>
-<p>一種有趣的排序法，透過多次對半刪減直到剩下的序列是OK的才停止。<br>這題看計分板相當和平，我自己也是用遞迴慢慢跑就AC了w</p>
-<p>應該算是出題者給大家牛刀小試用的吧~</p>
-<p>&nbsp;</p>
-<p><a href="https://codeforces.com/problemset/problem/1145/B">Problem B - Kanban Numbers</a></p>
-<p>題目短到可以不用點開連結XD<br>輸入 $a (1≤a≤99)$ ，輸出”Yes” or “No”。</p>
-<p>計分板上各種猜，提交100餘次的不在話下，可惜我看到pD比較多人AC就沒花時間猜這題了。</p>
-<p>而謎底就藏在題目… “kanban”，拿去估狗翻譯會得到”看板”的解釋，但實際上應該要拆成kan、ban…<br>kan本身無意，而ban有禁止的意味，答案就是「禁止kan」。</p>
-<p>嗯？？？你在公三小？</p>
-<p>嗯對、就這樣。 其實在數字的英文拼音中並沒有出現 <strong>k</strong> 或是 <strong>a</strong> 的字母。<br>因此，你只要檢查輸入的數字在拼寫中是否出現 <strong>n</strong> 就行了XD</p>
-<p>真的是不能用正常的思路解謎呢…</p>
-<p>&nbsp;</p>
-<p><a href="https://codeforces.com/problemset/problem/1145/C">Problem C - Mystery Circuit</a></p>
-<p>題目給了很神秘的電路…然後要你輸入 $a (0≤a≤15)$ 、輸出整數，沒了。</p>
-<p>老實說這題摸半天還是沒有頭緒，倒是友人在 <a href="https://algassert.com/quirk">Quirk</a> 把電路拼起來丟0101測一測就發現答案了，莫名其妙XD</p>
-<p>附上code，若非該領域的玩家應該都想不到吧…</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n; <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">int</span> arr[] = &#123;<span class="number">15</span>, <span class="number">14</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>&#125;;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; arr[n] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>&nbsp;</p>
-<p><a href="https://codeforces.com/contest/1145/problem/D">Problem D - Pigeon d’Or</a></p>
-<p>讓我花最久的題目，老實說真的差一步就解出來了QQ</p>
-<p>原本第一眼看題目還真的看不太懂，所以拿去餵狗翻譯… 嗯、還是看不懂呢。<br>甚至還在懷疑是哪一國的語言，但大部分明明就是看得懂的英文啊QQ</p>
-<p>後來從測資開始猜：<br>範測是給了五個數字、得到一個數字，而且輸入數字範圍還在32內，用往年經驗有可能是邏輯運算，而這種題目最常用的就是 <strong>XOR</strong> ，所以就想盡辦法用範測和XOR湊答案，也因此吃了好幾次WA、深信下一次交出去的肯定會AC（並不會好嗎.jpg）</p>
-<p>但到了後來卡關又把題目讀了幾次… 想到會不會是出題者故意寫錯字!?<br>從第一段的 “ftying rats” 感覺就應該是 “flying rats”，所以就想了幾個辦法測錯字。</p>
-<p>最後是用word內建的拼字檢查，還真的不少錯字wwwww</p>
-<p><img src="https://i.imgur.com/1PzScrI.png"></p>
-<p>英文超爛的我就開始慢慢對著把拼錯的字母抓出來… 然後競賽就結束了(幹</p>
-<p>賽後解出來看到神奇的…單字？</p>
-<p><em>twoplusxorofthirdandminelements</em></p>
-<p>簡單分析一下</p>
-<p>Two plus XOR of third and min elements</p>
-<p>咦咦咦 這句子怎麼看起來有點正常ㄚ<br>可雖然好像每個字都看得懂，但合起來又不曉得在工三小www</p>
-<p>最後謎底是…<br>(輸入的第三個數字) XOR (序列中最小值) + 2。</p>
-<p>意外地前面有猜到XOR，只是這解法真的想不到XDDD<br>如果有早點發現題目內的錯字Bug，說不定就有機會即時解出來了qq</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>差不多就這樣、思考的過程真的蠻有趣的<br>畢竟沒給其他線索真的只能無厘頭隨便猜、看到丟100次才AC都不會感到驚訝<br>反而覺得「居然猜到AC實在太神laaaaaaaaa」 www</p>
-]]></content>
-      <categories>
-        <category>Algorithm</category>
-      </categories>
-      <tags>
-        <tag>Programming Contest</tag>
-        <tag>Codeforces</tag>
-        <tag>April Fools&#39; Day</tag>
-      </tags>
   </entry>
   <entry>
     <title>【週記】開學週漫談</title>
@@ -216,6 +110,57 @@
       <categories>
         <category>生活札記</category>
       </categories>
+  </entry>
+  <entry>
+    <title>【週記】咦？好像踢到奇怪的盒子...</title>
+    <url>/2019/190311-asus5z-unboxing/</url>
+    <content><![CDATA[<p><img src="https://imgur.com/ODLyNTq.jpg"></p>
+<p>好像很久沒更新部落格www （跪<br>一方面是沒什麼趣事可以分享，另一方面是懶癌發作 XD<br>只好浮上來換口氣說說最近的事囉~</p>
+<p>另外用hexo框架更新網站偶爾會遇到<code>command not found: hexo</code><br>不得不說有點頭痛呢… 最近終於查清是<strong>Node.js</strong>的更新問題。<br>果然對於自己不熟悉的環境要找問題就不太容易呢~</p>
+<p>請容許我把解決方法放在這裡（其實就只是更新node版本<br><code>sudo npm install hexo-cli -g</code></p>
+<a id="more"></a>
+
+<p>首先。</p>
+<p>好像還是不少朋友很關心我未來研究所的去向www<br>但我只能說… 現在手上握著兩間的名額，沒辦法把話說死啊。</p>
+<p>總之，明天(3/11)正好是A研究所的二次報到（第一次是去年剛錄取要報到）。<br>至於B研究所呢～ 嗯看起來已經快被我放生Play呢 QQ</p>
+<hr>
+<p>再來就是！ 我換手機惹（撒花<br>不過換機的理由很薄弱… 就是家母用的Sony Z1(2013)要淘汰了。<br>我就見縫插針跟著提想換手機，現在想想真的是不知道哪來的勇氣www<br>（恰好我玩手遊常常過熱到閃退，當然我沒講出來 XD）</p>
+<p>至於挑手機呢… 嗯 我這人真的是平常不太關心手機動態。<br>等到要換了才開始每天追PTT的MobileComm的推文 (#</p>
+<p>在預算10k~15k(我自己有貼小錢ww) 的情況下。<br>最後是挑了高通845的 <strong>Zenfone 5Z 6G/128G (ZS620KL)</strong><br>個人自認需求不算高，平常也就滑滑fb、line、ptt，甚至連手遊都玩的很休閒www<br>（之前吃晚餐被抓包上次登入遊戲是13hr前，意思是早上滑完就沒開過= =+）</p>
+<p>沒想過身為索粉的我會有脫離SONY的一天 XD<br>畢竟前幾隻手機都是直接從SONY的機種挑… 但這次X1真的好長。<br>甚至還被戲稱遙控器www 真的怕口袋不夠深塞不下（Ｏ</p>
+<p>以往換手機我都還會在巴哈小屋po開箱文<br>至於5Z的開箱嘛，看起來好像沒什麼好開，反倒是Android 9要適應一陣子。<br>（之前的XZ只能更新到Android 8.0.0）</p>
+<p>就醬子吧，雖然很想把研究所心得貼出來。<br>無奈到現在我仍然還在猶豫，很討厭自己選擇障礙的個性QQ<br>可能會拆成兩篇，下週先放個&lt;上篇&gt;好了~~ （希望懶癌不要發作</p>
+]]></content>
+      <categories>
+        <category>敗家開箱</category>
+      </categories>
+      <tags>
+        <tag>手機</tag>
+        <tag>Asus 5Z</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【週記】ITSA桂冠賽 居...居然收掉了QQQ</title>
+    <url>/2019/190326-itsa-annual-close/</url>
+    <content><![CDATA[<p><img src="https://imgur.com/jk3yUSX.jpg"></p>
+<p>2019 ITSA桂冠賽確定停辦… 事情總是如此地突然QQ<br>我們NUK去年好不容易稍稍帶起了競程風氣 沒想到時隔一年就收掉了<br>更何況是連線上賽都改成兩個月一次= =</p>
+<p>看來下屆社長要推動競程這塊會很辛苦呢 …</p>
+<a id="more"></a>
+
+<p>今年四月底我要飛日本。</p>
+<p>回想起去年訂機票還很怕會卡到ITSA桂冠賽。<br>特地寄信問官方舉辦時間，想當然爾… 沒有消息XD</p>
+<p>結果居然就這樣停辦了 欸…<br>這下子我在大學能參加的現場賽就差不多告個段落了。<br>之後可能找個時間可以開始補這四年的競程心得（前提是懶癌沒發作的話w）</p>
+<p>去年的桂冠賽我們校有20餘位同學出征，可以說是報名相當踴躍。<br>結果停辦後少一場能體驗”現場賽”的機會其實還蠻傷的，算下來大概只剩下NCPC、或是晉級Regional contest，真的蠻可惜的QQ</p>
+<p>話說既然連平常的 ITSA &amp; PTC 月賽都縮減成兩個月一次，自然聯想到的就是經費不足吧，其次就是PTC參與隊伍太少、又或是出題的題庫量不夠，嘛官方沒有講也只能就現況來猜了。</p>
+<p>另外除了一般的競賽，再來就是一年四次的CPE檢定。<br>這次很殘念地差一點拿六題，但值得一提的是曾經出現在PTC的edit distance這回成功寫出來了~<br>大學最後的CPE希望能拼個六題壓壓驚（跪ww</p>
+]]></content>
+      <categories>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>ITSA桂冠賽</tag>
+        <tag>Programming Contest</tag>
+      </tags>
   </entry>
   <entry>
     <title>【活動】maimai愚人節解謎 &lt;怒槌～光吉猛修一部謎～&gt;</title>
@@ -302,8 +247,8 @@
         <category>休閒娛樂</category>
       </categories>
       <tags>
-        <tag>April Fools&#39; Day</tag>
         <tag>音Game</tag>
+        <tag>April Fools&#39; Day</tag>
       </tags>
   </entry>
   <entry>
@@ -330,200 +275,6 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>不過這部落格好像也沒多少人看，慢慢來w（你等等</p>
-]]></content>
-      <categories>
-        <category>旅遊日誌</category>
-      </categories>
-      <tags>
-        <tag>日本行</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【活動】畢業典禮兼...橋頭遊記!?</title>
-    <url>/2019/190602-commencement/</url>
-    <content><![CDATA[<p><img src="https://imgur.com/1wvOaDF.jpg"></p>
-<p>不知不覺又到了畢業的時節。</p>
-<p>但看過行程表的我實在不是很想去躺著聽演說，所以… 出去玩啦ヾ(〃^∇^)ﾉ</p>
-<a id="more"></a>
-
-<p>&nbsp;</p>
-<p>事情是這樣的。</p>
-<p>大約在畢業典禮前幾天我才上網看了所謂的<strong>畢業典禮公告</strong>，對於校方（系方？）沒特別宣傳感到擔憂。</p>
-<p>說不定真的有哪位天兵同學沒看到公告就直接錯過畢典 wwwww</p>
-<p>&nbsp;</p>
-<p>我們校總共分三個梯次舉行，而我們CS是在最後一梯，開始時間… 17點，講真的還挺晚的～</p>
-<p>直到當天我都還在猶豫該不該出席畢業典禮，但問題是入場必須穿著畢業袍。</p>
-<p>關於畢業袍這東西… 事前租一年$450、當天租$200（有錯麻煩提醒我）</p>
-<p>總之就是不太親民的價格 QQ</p>
-<p>&nbsp;</p>
-<p>那如果不去畢典的話，翹掉我該在宿舍廢嗎？</p>
-<p>嗯… 所以我就去Google搜尋<strong>「高雄 閒晃」</strong>，找到了橋頭糖廠。</p>
-<p>想想自己待在高雄三年好像都沒機會往北邊探索，所以算了一下公車時間，帶著手機、鑰匙、錢包就出門了！</p>
-<p><img src="https://imgur.com/N5IQU10.jpg"></p>
-<p>時間大約是15點，從高捷**”橋頭糖廠站”**出站隔壁就是園區，交通上蠻方便呢。</p>
-<p>原本想秉持純晃晃的心態不拿手機… 但事實證明很困難，拍照魂總是在這時候特別不受控（笑</p>
-<p><img src="https://imgur.com/b4sw7GI.jpg">10摳的黑糖饅頭，拿來解嘴饞還算是不錯的選項～</p>
-<p>&nbsp;</p>
-<p><img src="https://imgur.com/d34HnN5.jpg">45摳紅豆牛奶冰，配上當時悶熱的天氣吃下去感覺真棒！<br>這張我有放在其他地方打卡，總之就是非常悠閒的… 吃貨之旅（你給我等等</p>
-<p>&nbsp;</p>
-<p>剩下的就是在附近閒晃，然後看到不錯view就停下來拍照#</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/TTmKf9b.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/5v85UO7.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/y0dB5V0.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/CbYwEsb.jpg"></div></div></div></div>
-
-<p>因為本身對糖廠歷史… 並沒有很大興趣w</p>
-<p>所以就真的只是來散步，就這樣一路走到**”橋頭站”**準備搭捷運回家～</p>
-<p>&nbsp;</p>
-<p>回到楠梓加工區的時間大約17:50，看看畢典也差不多要結束了</p>
-<p>… 好像姑且可以到會場去看看情況。</p>
-<p>我就抱著這樣的心態查了公車時間 嗯…沒救</p>
-<p>只好騎City Bike慢慢回學校（15分鐘）wwwww</p>
-<p><img src="https://imgur.com/weq1ALc.jpg"></p>
-<p>到達會場後遇到了也是翹掉畢典的玨兄，稍微聊了一下發現都是因為畢業袍放棄參加（真糟糕</p>
-<p>等到畢典結束、人潮漸漸出現後，上面這面看板根本就是要搶位子拍照wwwww</p>
-<p>混亂中拍了不少張，我甚至還把友人的畢業袍搶過來（抹臉</p>
-<p><img src="https://imgur.com/oSTZmR4.jpg"></p>
-<p>最後拿了一張惡搞性質的當作FB的打卡，感謝友人贊助優秀畢業生獎XD</p>
-<p>證明我並沒有翹掉畢業典禮唷（心虛</p>
-<p>&nbsp;</p>
-<p>晚餐閒聊才知道我們系似乎是出席率最低的，連教授群也只有系主任義務出席，該說很有CS的風格嗎www</p>
-<p>總之這一趟下來我也不後悔自己的決定，算是給自己的一種勉勵吧。</p>
-<p>接下來進入六月才是真正的難關，要期末LAAAAAA</p>
-]]></content>
-      <categories>
-        <category>旅遊日誌</category>
-      </categories>
-      <tags>
-        <tag>畢業典禮</tag>
-        <tag>橋頭</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【遊記】2019 橫跨平成&amp;令和的日本行（九州篇 上）</title>
-    <url>/2019/190724-japan-travel-kyushu-part1/</url>
-    <content><![CDATA[<p><img src="https://i.imgur.com/INuM3i1.jpg"></p>
-<p>擔心拍不出好照片嗎？ … 那就拍別人的照片啊（喂</p>
-<a id="more"></a>
-
-<p>&nbsp;</p>
-<p>這趟本來應該是畢業旅行 … 結果途中發生各種不可避的意外，到最後七人只剩下兩名倖存者<del>（Fate梗</del><br>不過既然飛機票已經訂了，當然要好好規劃一下難得的旅行!!</p>
-<p>所幸同行友人相當凱瑞，在日文對話方面幾乎沒有障礙，整趟下來我大概只有點頭和搖頭的份，頂多再喊聲ありがとうwwwww，另外加上他的電車迷屬性，交通方面我也沒擔心太多，雖然他本人相當低調<del>(害羞?)</del>，但在這邊還是必須好好感謝他😆</p>
-<p>這次日本行適逢當地的黃金週，所以在機票上只能盡量錯開時間省點摳摳QQ<br>訂回程機票時猜測五月的<strong>ITSA桂冠賽</strong>大概在5/11，所以我們抓前一天(5/11)回國。<br>從4/29出發共12天，但最後一天睡機場搭早班飛機，我通常都回答11天～</p>
-<h3 id="Day-1-啟程｜旅油｜福岡県"><a href="#Day-1-啟程｜旅油｜福岡県" class="headerlink" title="Day 1 - 啟程｜旅油｜福岡県"></a>Day 1 - 啟程｜旅油｜福岡県</h3><p>時間點來到4/29的… 凌晨0點，地點在臺北車站。</p>
-<p>深夜的空氣帶著些許涼意，在稍早和家人互道晚安後，我便拖著行李箱搭上最後一班公車出發。<br>這麼早就和友人約在北車不是沒有道理… 因為我們搭的是6:15 AM的飛機（眼神死<br>想說別把時間壓得這麼緊，所以我們見面後就直接搭上1819客運直奔<strong>桃園機場</strong>。</p>
-<p>到機場後發現現場人還不少 =u=<br>下圖是傳說中的黑松女神，算是PTT日旅版鄉民們的一種默契吧。<br>只要有鄉民回國後網路沒用完就會默默地把SIM留在這裡，結果這一找還真的有www</p>
-<p><img src="https://i.imgur.com/fgDxlbm.jpg"></p>
-<p>等到3:30AM<em>台灣虎航</em> 開櫃，就準備報到出境（畢竟大半夜沒什麼免稅店可以晃）<br>早早就進了大廳… 當然沒人www 爽躺沙發椅～</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/eKMPKTD.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/VeskCgB.jpg"></div></div></div></div>
-
-
-
-<p>雖然說有小睡一會兒，但說實在精神上還是有點倦怠。<br>等到早上五點人潮陸陸續續出現後，我們就準時登機囉～</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<img src="http://cms-bucket.nosdn.127.net/69e62014ead8401894c3d7de2efc114e20180124105900.gif" class="" width="400">
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>從 <strong>桃園機場 → 福岡空港</strong> 約莫兩小時左右<br>除了寫入境卡之外，我自己因為坐飛機中間所以幾乎都在睡（#<br>剛到日本能夠感受到些許涼意，畢竟緯度相對台灣高了一點，遺憾的是這裡同時也在下雨QQ<br>（也因為雨天只好拿Wikipedia的圖來放一下XD）</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/UekrCXB.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/21qngHa.jpg"></div></div></div></div>
-
-<p>&nbsp;</p>
-<p>在福岡空港我們並沒有待很久，只有購入<strong>福岡地鐵一日乘車券</strong>後，就開始了我們第一天的行程…<br>啊 並沒有、咱還是先去<strong>博多車站</strong>找一下飯店放個行李XD</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://subway.city.fukuoka.lg.jp/eki/img/routemap_Symbol.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/tyq75zO.jpg"></div></div></div></div>
-
-
-
-<p>在九州住宿部分我們選的是<strong>東橫INN博多站前2號店</strong>，距離博多車站步行約5分鐘相當便利。<br>（不瞞說為了省旅費，往後的行程幾乎都挑東橫INN系列，但住過之後發現品質真的不差!!）</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/MzqVFMy.png"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/383NJK9.jpg"></div></div></div></div>
-
-
-
-<p>再來就開始跑行程了。<br>說是這麼說啦… 但我們第一天的行程表是空的XD<br>畢竟前一晚沒睡又剛下飛機，所以沒有排特別重要的景點，就單純在福岡市區亂晃！</p>
-<p>因為下雨天的緣故，我們先去博多車站內的購物中心，而作為動漫迷會逛的… 應該不用我多說AwA</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/sSyO85i.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/DveF8mL.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/Tm36kCV.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/0haULCf.jpg"></div></div></div></div>
-
-<p>不得不說日本不愧是動畫產業的把拔，連書店內的擺設都很猛<br>左上圖是2019冬番討論度很高的**”五等份的花嫁”** … 3939得第一!!<br>右上圖是2019春番當前常和**”五等份的花嫁”<strong>拿來比較的</strong>“我們真的學不來”**… 直接放在附近打對臺XDDDD</p>
-<p>左下圖是小說區，自從上了大學後就真的很少在啃輕小說了 = w =<br>左下圖是 … 呃 職業病？畢竟是相關科系還是來看看日文書長怎樣~  <del>C++ 從入門到放棄</del></p>
-<p>&nbsp;</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/bgrG7kr.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/UmElOEm.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/JkTYbw3.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/VB2aZIV.jpg"></div></div></div></div>
-
-<p>再來是娛樂方面，日本的夾娃娃機真的爆幹多，台灣目前也有逐漸飽和的趨勢（嘆<a href="www.google.com" target="_blank" style="text-decoration:none;">😏</a><br>不過我說那個右下角… 連樹莓派(Raspberry Pi)都有實在太潮啦wwwww</p>
-<p>&nbsp;</p>
-<p>之後我們就轉移到<strong>天神車站</strong>、繼續閒晃（超廢<br>值得一提的是<strong>天神地下街</strong>，全長600公尺是那種一不小心就會迷路的大。<br>這邊大多以美食、藥妝、服飾為主，是個避雨逛街的好選擇… 我不這麼認為，因為人潮爆多###</p>
-<p><img src="https://i.imgur.com/QQWbOd0.jpg"></p>
-<p>我們在人潮中穿梭一陣子，繼續找地方油泳 … 第一站<strong>虎之穴</strong> GO!!!</p>
-<p><img src="https://i.imgur.com/e2f27gG.jpg"></p>
-<p>虎之穴主要是以同人誌為中心並售賣漫畫和關連商品的 … 聖地!!<br>比起台北近幾年新開的虎之穴，這裡的規模真的大很多，好孩子沒事千萬別常來(笑)</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/6BCCrNo.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/EN8SwMS.jpg"></div></div></div></div>
-
-<p>還有像這種專區真的看幾次都覺得很狂，圖中分別是<strong>BanG Dream</strong>和<strong>佐賀偶像是傳奇</strong>，真香（吸<br>前者是當前很夯的樂團偶像番(?)，動畫甚至要出第三季了～ 期待!!<br>後者則是佐賀的地區宣傳動畫… 不對、我覺得應該要歸類在吸毒片，原本有打算來個<strong>佐賀唐津</strong>聖地巡禮，可是… 真的太偏僻了QQ 怪不得還要出動畫來宣傳，對佐賀有興趣的不妨可以看看這部（推坑</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/OH2YAQG.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/emcBtL5.jpg"></div></div></div></div>
-
-<p>還有公主連結… 這應該也不用我多說了吧w 香！</p>
-<p>原本逛完已經下樓要準備離開… 結果看到超大橫幅的廣告 ↓</p>
-<p><img src="https://i.imgur.com/Hw6yoC4.jpg"></p>
-<p>居然是三嶋老師的和カントク老師的作品展欸 GOGO~</p>
-<p>第二站 <strong>軸中心派</strong>，電梯到了四樓開門的瞬間滿溢的香味噴鼻而來（幻覺）</p>
-<p><img src="https://i.imgur.com/50n8KEZ.jpg"></p>
-<p>這裡不單純是作品展，包含其他各路大神的作品都有出現，像是珈琲貴族、Karory、てぃんくる、アカバネ…都有。</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/GyCUDD2.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/qw3IQgG.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/Z7wZItb.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/33v8jGJ.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/jHjnHmX.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/Bo26g6j.jpg"></div></div></div></div>
-
-<p>對於常在看油圖的我而言這些作品都不陌生就是了wwwww</p>
-<p>下一站，<strong>Animate</strong>！GO！</p>
-<p><img src="https://i.imgur.com/MQy4YnP.jpg"></p>
-<p>這裡相對於虎之穴的同人本，幾乎都是以官方商品為主。<br>在臺灣有晃過的朋友應該都知道，只不過日本的規模硬是大了許多QQ<br>而這次日本行我們其實路過很多間Animate… 逛爆（抹臉</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/K9Xg4AN.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/40e6e3D.jpg"></div></div></div></div>
-
-<p>圖中呈現各種偶像番的宗教戰爭XDDD 官方真的很喜歡放在一起打對臺wwwww 懂玩#</p>
-<p>&nbsp;</p>
-<p>傍晚我們去一趟天神的唐吉軻德補充零食後，就搭地下鐵準備回博多吃晚餐啦！<br>… 嗯？你問我怎麼好像沒看到午餐文？  因為預算都拿去晚餐吃燒肉了wwwww</p>
-<p><a href="https://apoarea.tw/yakinikunogyutahonjinhakata/">焼肉の牛太 本陣（ヨドバシ博多店）</a><br>這家是特別規劃好的行程，因為每個月29號的ニクの日會折價¥500，吃到<del>爆</del>飽!!!</p>
-<img src="https://i.imgur.com/Z9If4fK.jpg" class="" width="400">
-
-<p>而且他們點餐機制是用平板電腦，還挺方便的~ （還有中文選單）</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 100%;"><img src="https://i.imgur.com/tETZMfs.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/H8WBgII.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/QOQ52st.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/YMFsCex.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/Ef5S5Ci.jpg"></div></div></div></div>
-
-<p>總之，在這裡就是各種吃肉、吃肉、還有吃肉，回飯店的路上真的肚子超撐=w=<br>好在吃下去的這些肉都在之後的大量走路行程中消耗掉了 … 應該吧XD</p>
-<p>&nbsp;</p>
-<h3 id="Day-2-紫藤花｜福岡県"><a href="#Day-2-紫藤花｜福岡県" class="headerlink" title="Day 2 - 紫藤花｜福岡県"></a>Day 2 - 紫藤花｜福岡県</h3><p>東橫INN有提供自助式的早餐吧，基本配置都是兩種飯糰+<a href="https://www.toyoko-inn.com/feature/breakfast.html?lcl_id=zh_TW">其他小菜</a>。<br>雖然個人覺得還不錯吃（尤其是煎蛋），但每天差不多的菜色就… 見仁見智啦XD </p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/xgmRpX1.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/s3zxdWO.jpg"></div></div></div></div>
-
-<p>&nbsp;</p>
-<p><strong>太宰府-柳川</strong>在觀光套票中是綁在一起的行程。<br>在出發前一週我們上網發現紫藤花的花季預估在4/29結束，一度想規劃成日本Day1下飛機就直衝柳川，後來想想這行程真的會出人命，所以就半放棄地排在Day2，結果似乎花況比預期中還要好，因此花季延長啦，賺！</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/DYG2SbH.png"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/Gt0YoCn.jpg"></div></div></div></div>
-
-<p>&nbsp;</p>
-<p>搭西鐵 從<strong>博多→柳川</strong> 大約一小時，比預想還要快一些。<br>另外我也從這天開始利用==Google timeline==紀錄移動路線，雖然在沒有訊號的路線追縱會出問題，像是高速行駛、過山洞、海底隧道(咦?)，然後… 這天依舊是陰雨綿綿的天氣（嘆），一樣借網路圖片放w</p>
-<p><img src="https://i.imgur.com/FMJ3FGc.jpg"></p>
-<p>&nbsp;</p>
-<ul>
-<li>中山大藤（紫藤花✿）</li>
-</ul>
-<p>從柳川車站下車後轉接駁車，大約15分鐘抵達會場。<br>可能是花季延長又下雨的緣故吧，現場人並不算多，不過附近疑似有台灣的旅行團，有種新鮮感（？）</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 100%;"><img src="https://i.imgur.com/tEVrZi5.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/UMbGSqa.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/mtodfyT.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/PFNIwDO.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/VsH2olJ.jpg"></div></div></div></div>
-
-
-
-<ul>
-<li>川下乘船</li>
-</ul>
-<p>拉回柳川車站，這回要用套票中的川下乘船漫遊柳川～<br>沿途風景實在美不勝收，拍了很多張讓我打遊記當下很難挑照片XDDD<br>船夫阿伯會邊划船邊講故事，偶爾哼些日本歌謠，最神奇的是他還會用一點中文和我們介紹。</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/YZsvtqe.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/kcA2b7U.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/HWuBHXm.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/kVoSk11.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/5OcAa96.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/fuFlk7P.jpg"></div></div></div></div>
-
-<p>雖然下了點小雨，但絲毫不影響大家聽故事的興致。<br>另外還有水上攤商，很可惜我們這艘船沒有人要請船夫停下來的意思XD</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/JMxE5DX.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/KQwmP3J.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/J2r8OSU.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/IvOxcVH.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/bMSgqLm.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/z0Jxeth.jpg"></div></div></div></div>
-
-<p>&nbsp;</p>
-<p>下船後就是觀光的土產店可以晃。<br>可以看到對於令和迎新年已經有很多相關的商品～</p>
-<p><img src="https://i.imgur.com/uVaQSjV.jpg"></p>
-<ul>
-<li><p>一蘭拉麵</p>
-<p>雖然說各位對一蘭拉麵應該都不陌生，畢竟在台北也有分店。</p>
-<p>不過太宰府分店的特色就是<strong>五角碗</strong>，在日文有<strong>合格</strong>的雙關意義！</p>
-</li>
-</ul>
-<ul>
-<li>天滿宮</li>
-</ul>
 ]]></content>
       <categories>
         <category>旅遊日誌</category>
@@ -727,6 +478,282 @@
       </tags>
   </entry>
   <entry>
+    <title>【活動】Codeforces April Fools Day Contest 2019</title>
+    <url>/2019/190402-codeforces-april-fools-day/</url>
+    <content><![CDATA[<p>聽說是Codeforces每年都會辦的愚人節活動，今次算是體驗到何謂無厘頭解謎XD</p>
+<p>除了Problem A還算正常，其他都在玩猜猜樂。<br>賽後透過一些線索才把pB, pC, pD搞定，這邊來分享一下~<br>（如果有任何錯誤也歡迎來信指教&gt; &lt;）</p>
+<a id="more"></a>
+
+<p>&nbsp;</p>
+<p><a href="https://codeforces.com/problemset/problem/1145/A">Problem A - Thanos Sort</a></p>
+<p>一種有趣的排序法，透過多次對半刪減直到剩下的序列是OK的才停止。<br>這題看計分板相當和平，我自己也是用遞迴慢慢跑就AC了w</p>
+<p>應該算是出題者給大家牛刀小試用的吧~</p>
+<p>&nbsp;</p>
+<p><a href="https://codeforces.com/problemset/problem/1145/B">Problem B - Kanban Numbers</a></p>
+<p>題目短到可以不用點開連結XD<br>輸入 $a (1≤a≤99)$ ，輸出”Yes” or “No”。</p>
+<p>計分板上各種猜，提交100餘次的不在話下，可惜我看到pD比較多人AC就沒花時間猜這題了。</p>
+<p>而謎底就藏在題目… “kanban”，拿去估狗翻譯會得到”看板”的解釋，但實際上應該要拆成kan、ban…<br>kan本身無意，而ban有禁止的意味，答案就是「禁止kan」。</p>
+<p>嗯？？？你在公三小？</p>
+<p>嗯對、就這樣。 其實在數字的英文拼音中並沒有出現 <strong>k</strong> 或是 <strong>a</strong> 的字母。<br>因此，你只要檢查輸入的數字在拼寫中是否出現 <strong>n</strong> 就行了XD</p>
+<p>真的是不能用正常的思路解謎呢…</p>
+<p>&nbsp;</p>
+<p><a href="https://codeforces.com/problemset/problem/1145/C">Problem C - Mystery Circuit</a></p>
+<p>題目給了很神秘的電路…然後要你輸入 $a (0≤a≤15)$ 、輸出整數，沒了。</p>
+<p>老實說這題摸半天還是沒有頭緒，倒是友人在 <a href="https://algassert.com/quirk">Quirk</a> 把電路拼起來丟0101測一測就發現答案了，莫名其妙XD</p>
+<p>附上code，若非該領域的玩家應該都想不到吧…</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n; <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">int</span> arr[] = &#123;<span class="number">15</span>, <span class="number">14</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>&#125;;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; arr[n] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<p><a href="https://codeforces.com/contest/1145/problem/D">Problem D - Pigeon d’Or</a></p>
+<p>讓我花最久的題目，老實說真的差一步就解出來了QQ</p>
+<p>原本第一眼看題目還真的看不太懂，所以拿去餵狗翻譯… 嗯、還是看不懂呢。<br>甚至還在懷疑是哪一國的語言，但大部分明明就是看得懂的英文啊QQ</p>
+<p>後來從測資開始猜：<br>範測是給了五個數字、得到一個數字，而且輸入數字範圍還在32內，用往年經驗有可能是邏輯運算，而這種題目最常用的就是 <strong>XOR</strong> ，所以就想盡辦法用範測和XOR湊答案，也因此吃了好幾次WA、深信下一次交出去的肯定會AC（並不會好嗎.jpg）</p>
+<p>但到了後來卡關又把題目讀了幾次… 想到會不會是出題者故意寫錯字!?<br>從第一段的 “ftying rats” 感覺就應該是 “flying rats”，所以就想了幾個辦法測錯字。</p>
+<p>最後是用word內建的拼字檢查，還真的不少錯字wwwww</p>
+<p><img src="https://i.imgur.com/1PzScrI.png"></p>
+<p>英文超爛的我就開始慢慢對著把拼錯的字母抓出來… 然後競賽就結束了(幹</p>
+<p>賽後解出來看到神奇的…單字？</p>
+<p><em>twoplusxorofthirdandminelements</em></p>
+<p>簡單分析一下</p>
+<p>Two plus XOR of third and min elements</p>
+<p>咦咦咦 這句子怎麼看起來有點正常ㄚ<br>可雖然好像每個字都看得懂，但合起來又不曉得在工三小www</p>
+<p>最後謎底是…<br>(輸入的第三個數字) XOR (序列中最小值) + 2。</p>
+<p>意外地前面有猜到XOR，只是這解法真的想不到XDDD<br>如果有早點發現題目內的錯字Bug，說不定就有機會即時解出來了qq</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>差不多就這樣、思考的過程真的蠻有趣的<br>畢竟沒給其他線索真的只能無厘頭隨便猜、看到丟100次才AC都不會感到驚訝<br>反而覺得「居然猜到AC實在太神laaaaaaaaa」 www</p>
+]]></content>
+      <categories>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>Programming Contest</tag>
+        <tag>April Fools&#39; Day</tag>
+        <tag>Codeforces</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【活動】畢業典禮兼...橋頭遊記!?</title>
+    <url>/2019/190602-commencement/</url>
+    <content><![CDATA[<p><img src="https://imgur.com/1wvOaDF.jpg"></p>
+<p>不知不覺又到了畢業的時節。</p>
+<p>但看過行程表的我實在不是很想去躺著聽演說，所以… 出去玩啦ヾ(〃^∇^)ﾉ</p>
+<a id="more"></a>
+
+<p>&nbsp;</p>
+<p>事情是這樣的。</p>
+<p>大約在畢業典禮前幾天我才上網看了所謂的<strong>畢業典禮公告</strong>，對於校方（系方？）沒特別宣傳感到擔憂。</p>
+<p>說不定真的有哪位天兵同學沒看到公告就直接錯過畢典 wwwww</p>
+<p>&nbsp;</p>
+<p>我們校總共分三個梯次舉行，而我們CS是在最後一梯，開始時間… 17點，講真的還挺晚的～</p>
+<p>直到當天我都還在猶豫該不該出席畢業典禮，但問題是入場必須穿著畢業袍。</p>
+<p>關於畢業袍這東西… 事前租一年$450、當天租$200（有錯麻煩提醒我）</p>
+<p>總之就是不太親民的價格 QQ</p>
+<p>&nbsp;</p>
+<p>那如果不去畢典的話，翹掉我該在宿舍廢嗎？</p>
+<p>嗯… 所以我就去Google搜尋<strong>「高雄 閒晃」</strong>，找到了橋頭糖廠。</p>
+<p>想想自己待在高雄三年好像都沒機會往北邊探索，所以算了一下公車時間，帶著手機、鑰匙、錢包就出門了！</p>
+<p><img src="https://imgur.com/N5IQU10.jpg"></p>
+<p>時間大約是15點，從高捷**”橋頭糖廠站”**出站隔壁就是園區，交通上蠻方便呢。</p>
+<p>原本想秉持純晃晃的心態不拿手機… 但事實證明很困難，拍照魂總是在這時候特別不受控（笑</p>
+<p><img src="https://imgur.com/b4sw7GI.jpg">10摳的黑糖饅頭，拿來解嘴饞還算是不錯的選項～</p>
+<p>&nbsp;</p>
+<p><img src="https://imgur.com/d34HnN5.jpg">45摳紅豆牛奶冰，配上當時悶熱的天氣吃下去感覺真棒！<br>這張我有放在其他地方打卡，總之就是非常悠閒的… 吃貨之旅（你給我等等</p>
+<p>&nbsp;</p>
+<p>剩下的就是在附近閒晃，然後看到不錯view就停下來拍照#</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/TTmKf9b.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/5v85UO7.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/y0dB5V0.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/CbYwEsb.jpg"></div></div></div></div>
+
+<p>因為本身對糖廠歷史… 並沒有很大興趣w</p>
+<p>所以就真的只是來散步，就這樣一路走到**”橋頭站”**準備搭捷運回家～</p>
+<p>&nbsp;</p>
+<p>回到楠梓加工區的時間大約17:50，看看畢典也差不多要結束了</p>
+<p>… 好像姑且可以到會場去看看情況。</p>
+<p>我就抱著這樣的心態查了公車時間 嗯…沒救</p>
+<p>只好騎City Bike慢慢回學校（15分鐘）wwwww</p>
+<p><img src="https://imgur.com/weq1ALc.jpg"></p>
+<p>到達會場後遇到了也是翹掉畢典的玨兄，稍微聊了一下發現都是因為畢業袍放棄參加（真糟糕</p>
+<p>等到畢典結束、人潮漸漸出現後，上面這面看板根本就是要搶位子拍照wwwww</p>
+<p>混亂中拍了不少張，我甚至還把友人的畢業袍搶過來（抹臉</p>
+<p><img src="https://imgur.com/oSTZmR4.jpg"></p>
+<p>最後拿了一張惡搞性質的當作FB的打卡，感謝友人贊助優秀畢業生獎XD</p>
+<p>證明我並沒有翹掉畢業典禮唷（心虛</p>
+<p>&nbsp;</p>
+<p>晚餐閒聊才知道我們系似乎是出席率最低的，連教授群也只有系主任義務出席，該說很有CS的風格嗎www</p>
+<p>總之這一趟下來我也不後悔自己的決定，算是給自己的一種勉勵吧。</p>
+<p>接下來進入六月才是真正的難關，要期末LAAAAAA</p>
+]]></content>
+      <categories>
+        <category>旅遊日誌</category>
+      </categories>
+      <tags>
+        <tag>畢業典禮</tag>
+        <tag>橋頭</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【遊記】2019 橫跨平成&amp;令和的日本行（九州篇 上）</title>
+    <url>/2019/190724-japan-travel-kyushu-part1/</url>
+    <content><![CDATA[<p><img src="https://i.imgur.com/INuM3i1.jpg"></p>
+<p>擔心拍不出好照片嗎？ … 那就拍別人的照片啊（喂</p>
+<a id="more"></a>
+
+<p>&nbsp;</p>
+<p>這趟本來應該是畢業旅行 … 結果途中發生各種不可避的意外，到最後七人只剩下兩名倖存者<del>（Fate梗</del><br>不過既然飛機票已經訂了，當然要好好規劃一下難得的旅行!!</p>
+<p>所幸同行友人相當凱瑞，在日文對話方面幾乎沒有障礙，整趟下來我大概只有點頭和搖頭的份，頂多再喊聲ありがとうwwwww，另外加上他的電車迷屬性，交通方面我也沒擔心太多，雖然他本人相當低調<del>(害羞?)</del>，但在這邊還是必須好好感謝他😆</p>
+<p>這次日本行適逢當地的黃金週，所以在機票上只能盡量錯開時間省點摳摳QQ<br>訂回程機票時猜測五月的<strong>ITSA桂冠賽</strong>大概在5/11，所以我們抓前一天(5/11)回國。<br>從4/29出發共12天，但最後一天睡機場搭早班飛機，我通常都回答11天～</p>
+<h3 id="Day-1-啟程｜旅油｜福岡県"><a href="#Day-1-啟程｜旅油｜福岡県" class="headerlink" title="Day 1 - 啟程｜旅油｜福岡県"></a>Day 1 - 啟程｜旅油｜福岡県</h3><p>時間點來到4/29的… 凌晨0點，地點在臺北車站。</p>
+<p>深夜的空氣帶著些許涼意，在稍早和家人互道晚安後，我便拖著行李箱搭上最後一班公車出發。<br>這麼早就和友人約在北車不是沒有道理… 因為我們搭的是6:15 AM的飛機（眼神死<br>想說別把時間壓得這麼緊，所以我們見面後就直接搭上1819客運直奔<strong>桃園機場</strong>。</p>
+<p>到機場後發現現場人還不少 =u=<br>下圖是傳說中的黑松女神，算是PTT日旅版鄉民們的一種默契吧。<br>只要有鄉民回國後網路沒用完就會默默地把SIM留在這裡，結果這一找還真的有www</p>
+<p><img src="https://i.imgur.com/fgDxlbm.jpg"></p>
+<p>等到3:30AM<em>台灣虎航</em> 開櫃，就準備報到出境（畢竟大半夜沒什麼免稅店可以晃）<br>早早就進了大廳… 當然沒人www 爽躺沙發椅～</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/eKMPKTD.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/VeskCgB.jpg"></div></div></div></div>
+
+
+
+<p>雖然說有小睡一會兒，但說實在精神上還是有點倦怠。<br>等到早上五點人潮陸陸續續出現後，我們就準時登機囉～</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<img src="http://cms-bucket.nosdn.127.net/69e62014ead8401894c3d7de2efc114e20180124105900.gif" class="" width="400">
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>從 <strong>桃園機場 → 福岡空港</strong> 約莫兩小時左右<br>除了寫入境卡之外，我自己因為坐飛機中間所以幾乎都在睡（#<br>剛到日本能夠感受到些許涼意，畢竟緯度相對台灣高了一點，遺憾的是這裡同時也在下雨QQ<br>（也因為雨天只好拿Wikipedia的圖來放一下XD）</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/UekrCXB.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/21qngHa.jpg"></div></div></div></div>
+
+<p>&nbsp;</p>
+<p>在福岡空港我們並沒有待很久，只有購入<strong>福岡地鐵一日乘車券</strong>後，就開始了我們第一天的行程…<br>啊 並沒有、咱還是先去<strong>博多車站</strong>找一下飯店放個行李XD</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://subway.city.fukuoka.lg.jp/eki/img/routemap_Symbol.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/tyq75zO.jpg"></div></div></div></div>
+
+
+
+<p>在九州住宿部分我們選的是<strong>東橫INN博多站前2號店</strong>，距離博多車站步行約5分鐘相當便利。<br>（不瞞說為了省旅費，往後的行程幾乎都挑東橫INN系列，但住過之後發現品質真的不差!!）</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/MzqVFMy.png"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/383NJK9.jpg"></div></div></div></div>
+
+
+
+<p>再來就開始跑行程了。<br>說是這麼說啦… 但我們第一天的行程表是空的XD<br>畢竟前一晚沒睡又剛下飛機，所以沒有排特別重要的景點，就單純在福岡市區亂晃！</p>
+<p>因為下雨天的緣故，我們先去博多車站內的購物中心，而作為動漫迷會逛的… 應該不用我多說AwA</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/sSyO85i.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/DveF8mL.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/Tm36kCV.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/0haULCf.jpg"></div></div></div></div>
+
+<p>不得不說日本不愧是動畫產業的把拔，連書店內的擺設都很猛<br>左上圖是2019冬番討論度很高的**”五等份的花嫁”** … 3939得第一!!<br>右上圖是2019春番當前常和**”五等份的花嫁”<strong>拿來比較的</strong>“我們真的學不來”**… 直接放在附近打對臺XDDDD</p>
+<p>左下圖是小說區，自從上了大學後就真的很少在啃輕小說了 = w =<br>左下圖是 … 呃 職業病？畢竟是相關科系還是來看看日文書長怎樣~  <del>C++ 從入門到放棄</del></p>
+<p>&nbsp;</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/bgrG7kr.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/UmElOEm.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/JkTYbw3.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/VB2aZIV.jpg"></div></div></div></div>
+
+<p>再來是娛樂方面，日本的夾娃娃機真的爆幹多，台灣目前也有逐漸飽和的趨勢（嘆<a href="www.google.com" target="_blank" style="text-decoration:none;">😏</a><br>不過我說那個右下角… 連樹莓派(Raspberry Pi)都有實在太潮啦wwwww</p>
+<p>&nbsp;</p>
+<p>之後我們就轉移到<strong>天神車站</strong>、繼續閒晃（超廢<br>值得一提的是<strong>天神地下街</strong>，全長600公尺是那種一不小心就會迷路的大。<br>這邊大多以美食、藥妝、服飾為主，是個避雨逛街的好選擇… 我不這麼認為，因為人潮爆多###</p>
+<p><img src="https://i.imgur.com/QQWbOd0.jpg"></p>
+<p>我們在人潮中穿梭一陣子，繼續找地方油泳 … 第一站<strong>虎之穴</strong> GO!!!</p>
+<p><img src="https://i.imgur.com/e2f27gG.jpg"></p>
+<p>虎之穴主要是以同人誌為中心並售賣漫畫和關連商品的 … 聖地!!<br>比起台北近幾年新開的虎之穴，這裡的規模真的大很多，好孩子沒事千萬別常來(笑)</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/6BCCrNo.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/EN8SwMS.jpg"></div></div></div></div>
+
+<p>還有像這種專區真的看幾次都覺得很狂，圖中分別是<strong>BanG Dream</strong>和<strong>佐賀偶像是傳奇</strong>，真香（吸<br>前者是當前很夯的樂團偶像番(?)，動畫甚至要出第三季了～ 期待!!<br>後者則是佐賀的地區宣傳動畫… 不對、我覺得應該要歸類在吸毒片，原本有打算來個<strong>佐賀唐津</strong>聖地巡禮，可是… 真的太偏僻了QQ 怪不得還要出動畫來宣傳，對佐賀有興趣的不妨可以看看這部（推坑</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/OH2YAQG.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/emcBtL5.jpg"></div></div></div></div>
+
+<p>還有公主連結… 這應該也不用我多說了吧w 香！</p>
+<p>原本逛完已經下樓要準備離開… 結果看到超大橫幅的廣告 ↓</p>
+<p><img src="https://i.imgur.com/Hw6yoC4.jpg"></p>
+<p>居然是三嶋老師的和カントク老師的作品展欸 GOGO~</p>
+<p>第二站 <strong>軸中心派</strong>，電梯到了四樓開門的瞬間滿溢的香味噴鼻而來（幻覺）</p>
+<p><img src="https://i.imgur.com/50n8KEZ.jpg"></p>
+<p>這裡不單純是作品展，包含其他各路大神的作品都有出現，像是珈琲貴族、Karory、てぃんくる、アカバネ…都有。</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/GyCUDD2.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/qw3IQgG.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/Z7wZItb.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/33v8jGJ.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/jHjnHmX.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/Bo26g6j.jpg"></div></div></div></div>
+
+<p>對於常在看油圖的我而言這些作品都不陌生就是了wwwww</p>
+<p>下一站，<strong>Animate</strong>！GO！</p>
+<p><img src="https://i.imgur.com/MQy4YnP.jpg"></p>
+<p>這裡相對於虎之穴的同人本，幾乎都是以官方商品為主。<br>在臺灣有晃過的朋友應該都知道，只不過日本的規模硬是大了許多QQ<br>而這次日本行我們其實路過很多間Animate… 逛爆（抹臉</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/K9Xg4AN.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/40e6e3D.jpg"></div></div></div></div>
+
+<p>圖中呈現各種偶像番的宗教戰爭XDDD 官方真的很喜歡放在一起打對臺wwwww 懂玩#</p>
+<p>&nbsp;</p>
+<p>傍晚我們去一趟天神的唐吉軻德補充零食後，就搭地下鐵準備回博多吃晚餐啦！<br>… 嗯？你問我怎麼好像沒看到午餐文？  因為預算都拿去晚餐吃燒肉了wwwww</p>
+<p><a href="https://apoarea.tw/yakinikunogyutahonjinhakata/">焼肉の牛太 本陣（ヨドバシ博多店）</a><br>這家是特別規劃好的行程，因為每個月29號的ニクの日會折價¥500，吃到<del>爆</del>飽!!!</p>
+<img src="https://i.imgur.com/Z9If4fK.jpg" class="" width="400">
+
+<p>而且他們點餐機制是用平板電腦，還挺方便的~ （還有中文選單）</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 100%;"><img src="https://i.imgur.com/tETZMfs.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/H8WBgII.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/QOQ52st.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/YMFsCex.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/Ef5S5Ci.jpg"></div></div></div></div>
+
+<p>總之，在這裡就是各種吃肉、吃肉、還有吃肉，回飯店的路上真的肚子超撐=w=<br>好在吃下去的這些肉都在之後的大量走路行程中消耗掉了 … 應該吧XD</p>
+<p>&nbsp;</p>
+<h3 id="Day-2-紫藤花｜福岡県"><a href="#Day-2-紫藤花｜福岡県" class="headerlink" title="Day 2 - 紫藤花｜福岡県"></a>Day 2 - 紫藤花｜福岡県</h3><p>東橫INN有提供自助式的早餐吧，基本配置都是兩種飯糰+<a href="https://www.toyoko-inn.com/feature/breakfast.html?lcl_id=zh_TW">其他小菜</a>。<br>雖然個人覺得還不錯吃（尤其是煎蛋），但每天差不多的菜色就… 見仁見智啦XD </p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/xgmRpX1.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/s3zxdWO.jpg"></div></div></div></div>
+
+<p>&nbsp;</p>
+<p><strong>太宰府-柳川</strong>在觀光套票中是綁在一起的行程。<br>在出發前一週我們上網發現紫藤花的花季預估在4/29結束，一度想規劃成日本Day1下飛機就直衝柳川，後來想想這行程真的會出人命，所以就半放棄地排在Day2，結果似乎花況比預期中還要好，因此花季延長啦，賺！</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/DYG2SbH.png"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/Gt0YoCn.jpg"></div></div></div></div>
+
+<p>&nbsp;</p>
+<p>搭西鐵 從<strong>博多→柳川</strong> 大約一小時，比預想還要快一些。<br>另外我也從這天開始利用==Google timeline==紀錄移動路線，雖然在沒有訊號的路線追縱會出問題，像是高速行駛、過山洞、海底隧道(咦?)，然後… 這天依舊是陰雨綿綿的天氣（嘆），一樣借網路圖片放w</p>
+<p><img src="https://i.imgur.com/FMJ3FGc.jpg"></p>
+<p>&nbsp;</p>
+<ul>
+<li>中山大藤（紫藤花✿）</li>
+</ul>
+<p>從柳川車站下車後轉接駁車，大約15分鐘抵達會場。<br>可能是花季延長又下雨的緣故吧，現場人並不算多，不過附近疑似有台灣的旅行團，有種新鮮感（？）</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 100%;"><img src="https://i.imgur.com/tEVrZi5.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/UMbGSqa.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/mtodfyT.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/PFNIwDO.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/VsH2olJ.jpg"></div></div></div></div>
+
+
+
+<ul>
+<li>川下乘船</li>
+</ul>
+<p>拉回柳川車站，這回要用套票中的川下乘船漫遊柳川～<br>沿途風景實在美不勝收，拍了很多張讓我打遊記當下很難挑照片XDDD<br>船夫阿伯會邊划船邊講故事，偶爾哼些日本歌謠，最神奇的是他還會用一點中文和我們介紹。</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/YZsvtqe.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/kcA2b7U.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/HWuBHXm.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/kVoSk11.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/5OcAa96.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/fuFlk7P.jpg"></div></div></div></div>
+
+<p>雖然下了點小雨，但絲毫不影響大家聽故事的興致。<br>另外還有水上攤商，很可惜我們這艘船沒有人要請船夫停下來的意思XD</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/JMxE5DX.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/KQwmP3J.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/J2r8OSU.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/IvOxcVH.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/bMSgqLm.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/z0Jxeth.jpg"></div></div></div></div>
+
+<p>&nbsp;</p>
+<p>下船後就是觀光的土產店可以晃。<br>可以看到對於令和迎新年已經有很多相關的商品～</p>
+<p><img src="https://i.imgur.com/uVaQSjV.jpg"></p>
+<ul>
+<li><p>一蘭拉麵</p>
+<p>雖然說各位對一蘭拉麵應該都不陌生，畢竟在台北也有分店。</p>
+<p>不過太宰府分店的特色就是<strong>五角碗</strong>，在日文有<strong>合格</strong>的雙關意義！</p>
+</li>
+</ul>
+<ul>
+<li>天滿宮</li>
+</ul>
+]]></content>
+      <categories>
+        <category>旅遊日誌</category>
+      </categories>
+      <tags>
+        <tag>日本行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【遊記】2019 橫跨平成&amp;令和的日本行（九州篇 下）</title>
+    <url>/2019/190725-japan-travel-kyushu-part2/</url>
+    <content><![CDATA[<p><img src=""></p>
+<a id="more"></a>
+
+
+
+
+
+<h3 id="Day-3-原爆｜長崎県"><a href="#Day-3-原爆｜長崎県" class="headerlink" title="Day 3 - 原爆｜長崎県"></a>Day 3 - 原爆｜長崎県</h3><ul>
+<li>遺址</li>
+</ul>
+<h3 id="Day-4-勘災｜熊本県"><a href="#Day-4-勘災｜熊本県" class="headerlink" title="Day 4 - 勘災｜熊本県"></a>Day 4 - 勘災｜熊本県</h3><ul>
+<li>熊本城</li>
+<li>水前寺公園</li>
+<li>阿蘇火山…山腳</li>
+<li>大分…找晚餐？</li>
+</ul>
+]]></content>
+      <categories>
+        <category>旅遊日誌</category>
+      </categories>
+      <tags>
+        <tag>日本行</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【遊記】2019 橫跨平成&amp;令和的日本行（關西篇）</title>
     <url>/2019/190727-japan-travel-kansai/</url>
     <content><![CDATA[<p><img src=""></p>
@@ -746,41 +773,6 @@
 </ul>
 <h3 id="Day-12-賦歸｜関西空港｜大阪府"><a href="#Day-12-賦歸｜関西空港｜大阪府" class="headerlink" title="Day 12 - 賦歸｜関西空港｜大阪府"></a>Day 12 - 賦歸｜関西空港｜大阪府</h3><ul>
 <li></li>
-</ul>
-]]></content>
-      <categories>
-        <category>旅遊日誌</category>
-      </categories>
-      <tags>
-        <tag>日本行</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【遊記】2019 橫跨平成&amp;令和的日本行（中國篇）</title>
-    <url>/2019/190726-japan-travel-chugoku/</url>
-    <content><![CDATA[<p><img src=""></p>
-<a id="more"></a>
-
-
-
-
-
-<h3 id="Day-5-相望｜山口県"><a href="#Day-5-相望｜山口県" class="headerlink" title="Day 5 - 相望｜山口県"></a>Day 5 - 相望｜山口県</h3><ul>
-<li>小倉</li>
-<li>下關</li>
-<li>廣島</li>
-</ul>
-<h3 id="Day-6-迷鹿｜広島県"><a href="#Day-6-迷鹿｜広島県" class="headerlink" title="Day 6 - 迷鹿｜広島県"></a>Day 6 - 迷鹿｜広島県</h3><ul>
-<li>吳市</li>
-<li>宮島</li>
-</ul>
-<h3 id="Day-7-｜岡山県"><a href="#Day-7-｜岡山県" class="headerlink" title="Day 7 - ｜岡山県"></a>Day 7 - ｜岡山県</h3><ul>
-<li></li>
-<li></li>
-</ul>
-<h3 id="Day-8-丹寧聖地｜香川県"><a href="#Day-8-丹寧聖地｜香川県" class="headerlink" title="Day 8 - 丹寧聖地｜香川県"></a>Day 8 - 丹寧聖地｜香川県</h3><ul>
-<li>兒島（岡山）</li>
-<li>高松</li>
 </ul>
 ]]></content>
       <categories>
@@ -866,6 +858,41 @@
       </categories>
       <tags>
         <tag>音Game</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【遊記】2019 橫跨平成&amp;令和的日本行（中國篇）</title>
+    <url>/2019/190726-japan-travel-chugoku/</url>
+    <content><![CDATA[<p><img src=""></p>
+<a id="more"></a>
+
+
+
+
+
+<h3 id="Day-5-相望｜山口県"><a href="#Day-5-相望｜山口県" class="headerlink" title="Day 5 - 相望｜山口県"></a>Day 5 - 相望｜山口県</h3><ul>
+<li>小倉</li>
+<li>下關</li>
+<li>廣島</li>
+</ul>
+<h3 id="Day-6-迷鹿｜広島県"><a href="#Day-6-迷鹿｜広島県" class="headerlink" title="Day 6 - 迷鹿｜広島県"></a>Day 6 - 迷鹿｜広島県</h3><ul>
+<li>吳市</li>
+<li>宮島</li>
+</ul>
+<h3 id="Day-7-｜岡山県"><a href="#Day-7-｜岡山県" class="headerlink" title="Day 7 - ｜岡山県"></a>Day 7 - ｜岡山県</h3><ul>
+<li></li>
+<li></li>
+</ul>
+<h3 id="Day-8-丹寧聖地｜香川県"><a href="#Day-8-丹寧聖地｜香川県" class="headerlink" title="Day 8 - 丹寧聖地｜香川県"></a>Day 8 - 丹寧聖地｜香川県</h3><ul>
+<li>兒島（岡山）</li>
+<li>高松</li>
+</ul>
+]]></content>
+      <categories>
+        <category>旅遊日誌</category>
+      </categories>
+      <tags>
+        <tag>日本行</tag>
       </tags>
   </entry>
   <entry>
@@ -1035,33 +1062,6 @@
       <tags>
         <tag>ACGN</tag>
         <tag>Fate</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【遊記】2019 橫跨平成&amp;令和的日本行（九州篇 下）</title>
-    <url>/2019/190725-japan-travel-kyushu-part2/</url>
-    <content><![CDATA[<p><img src=""></p>
-<a id="more"></a>
-
-
-
-
-
-<h3 id="Day-3-原爆｜長崎県"><a href="#Day-3-原爆｜長崎県" class="headerlink" title="Day 3 - 原爆｜長崎県"></a>Day 3 - 原爆｜長崎県</h3><ul>
-<li>遺址</li>
-</ul>
-<h3 id="Day-4-勘災｜熊本県"><a href="#Day-4-勘災｜熊本県" class="headerlink" title="Day 4 - 勘災｜熊本県"></a>Day 4 - 勘災｜熊本県</h3><ul>
-<li>熊本城</li>
-<li>水前寺公園</li>
-<li>阿蘇火山…山腳</li>
-<li>大分…找晚餐？</li>
-</ul>
-]]></content>
-      <categories>
-        <category>旅遊日誌</category>
-      </categories>
-      <tags>
-        <tag>日本行</tag>
       </tags>
   </entry>
   <entry>
@@ -1238,105 +1238,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【Project】Voronoi Diagram</title>
-    <url>/2019/191208-voronoi-diagram-project/</url>
-    <content><![CDATA[<p><a href="https://twitter.com/potch/status/1129095107855040513?s=20"><img src="https://pbs.twimg.com/media/D6tZ-v4UIAAMm7t?format=jpg&name=large"></a></p>
-<p>Hmmmmmmm… 上圖是理想中的Voronoi Diagram</p>
-<p>不過很遺憾的是Algorithm這門課我沒成功做出來QQ</p>
-<p>即便如此還是要寫報告：）</p>
-<a id="more"></a>
-
-<p>&nbsp;</p>
-<p>時程規劃</p>
-<ul>
-<li>11/14 初測(基本功能+3點VD)：19.5 / 20</li>
-<li>12/05 完測(完整功能+4點以上VD)：34 / 60</li>
-<li>12/13 報告撰寫：?? / 20</li>
-</ul>
-<p><a href="http://par.cse.nsysu.edu.tw/~cbyang/course/algo/algo_report.htm">實施要點</a>&nbsp;&nbsp;<a href="http://par.cse.nsysu.edu.tw/~cbyang/course/algo/Voronoi_evaluate_first.pdf">初測評分標準</a>&nbsp;&nbsp;<a href="http://par.cse.nsysu.edu.tw/~cbyang/course/algo/Voronoi_evaluate_second.pdf">完測評分標準</a></p>
-<p>Code: <a href="https://github.com/yctseng1227/voronoi_project">https://github.com/yctseng1227/voronoi_project</a></p>
-<p>從<code>commits</code>數量應該不難看出花了不少時間在上面，但效果顯然很糟</p>
-<p>我爛 QQ</p>
-<hr>
-<p>由於這份作業不光是寫出VD演算法，還必須將圖片畫出來！<br>所以在作圖上我選擇Python，想說CTF也會用到就加減練語法M(_ _)M</p>
-<p>使用的環境是Python 3.6，考慮到會用到一些奇怪套件，所以先建立虛擬環境venv等前置作業。</p>
-<p>作圖方面原本採用的是Python開源函式庫-<code>kivy</code>，結果因為助教的作業環境是Windows，所以打包成<code>.exe</code>的過程會發生套件衝突，因此在初測前幾天忍痛搬家到Python內建函式庫-<code>tkinter</code>，這過程大約花了我一天的時間在處理QQ</p>
-<p>先來看看還沒初測就胎死腹中的<code>kivy</code>介面👇👇</p>
-<p><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic05.png?raw=true"></p>
-<p>個人覺得<code>kivy</code>在圖形界面上比較理想，而且<code>.kv</code>在建構上也比較容易整理，臨時搬到<code>tkinter</code>反而code被我寫爛了，雖然是可以勉強執行，但造成後續寫多點VD維護上的困難QQ</p>
-<p>另外在打包<code>.exe</code>方面，由於我的作業環境是UbuntuOS，在該系統的<code>Pyinstaller</code>操作下生成的執行檔並無法在WindowsOS環境下執行，最後折衷和同學借電腦進行打包，也因此沒機會針對<code>.exe</code>作多次檢查，結果就是初測時發生<code>.py</code>和<code>.exe</code>執行同一筆測資出現不同的結果，真的是見鬼了wwww 至今還是沒辦法解釋該情況怎麼會出現…</p>
-<p>而在多點VD的操作上，單純以Divide-and-Conquer演算法來說並不困難，但是在圖形的實現方面需要考量線條的距離繪製，比起消除多餘線條，個人傾向修正線條的起訖。在進行Hyperplane的時候，撞到的VD線不曉得到底該往哪邊進行縮減，導致最後畫出來的結果常常會是相反的方向，這細節大部分的VD的不太會提及，因此debug方面花了相當多的時間去”猜”怎麼畫線，最後還是不如預期地拿了低分（唉</p>
-<p>另外就是step by step，平常少有機會遇到這種操作，我用的是以<code>list</code>形式把每個不同階段的points list和edge list記錄下來，等需要的時候(按button)再逐一從該<code>list</code>取出來繪製，不過在完測時看起來是儲存points list和edge list的時機不對，造成斷點相當明顯稍稍覺得可惜。</p>
-<p>總體來說，花了時間卻拿不到相對的分數，嗚嗚浪費時間QQ</p>
-<p>簡單介紹一下功能：</p>
-<p><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic02.png?raw=true"></p>
-<ul>
-<li>import: 讀檔格式如下</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">P 103 200</span><br><span class="line">P 193 64</span><br><span class="line">P 193 370</span><br><span class="line">P 283 200</span><br><span class="line">E 0 34 193 161</span><br><span class="line">E 0 363 193 261</span><br><span class="line">E 193 161 193 261</span><br><span class="line">E 193 161 437 0</span><br><span class="line">E 193 261 600 476</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>load: 讀檔格式如下</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># comment</span><br><span class="line">6</span><br><span class="line">487 191</span><br><span class="line">417 388</span><br><span class="line">504 349</span><br><span class="line">681 125</span><br><span class="line">589 282</span><br><span class="line">725 279</span><br><span class="line">6</span><br><span class="line">69 304</span><br><span class="line">110 449</span><br><span class="line">174 333</span><br><span class="line">244 280</span><br><span class="line">335 139</span><br><span class="line">355 284</span><br><span class="line">12</span><br><span class="line">69 304</span><br><span class="line">174 333</span><br><span class="line">110 449</span><br><span class="line">335 139</span><br><span class="line">244 280</span><br><span class="line">355 284</span><br><span class="line">487 191</span><br><span class="line">417 388</span><br><span class="line">504 349</span><br><span class="line">681 125</span><br><span class="line">589 282</span><br><span class="line">725 279</span><br><span class="line">0</span><br><span class="line"># any else?</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>random: 隨機生成N個點，預設為6點可重複疊加</li>
-<li>save: 將point, edge存成<code>import</code>格式</li>
-<li>next case: 當讀入的檔有多筆case，依此按鈕進行下一筆testcase</li>
-<li>step by step: 依Divide-and-Conquer逐步執行</li>
-<li>run VD: 畫出Voronoi Diagram結果</li>
-<li>clear：清除畫布</li>
-<li>convex hull: 將所有的Convex Hull畫出，算是拿來dubug用的XD</li>
-</ul>
-<p>環境</p>
-<ul>
-<li>Operating System<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">                         ./+o+-       </span><br><span class="line">                 yyyyy- -yyyyyy+      Username: yctseng</span><br><span class="line">              :<span class="comment">//+//////-yyyyyyo      OS: Ubuntu 18.04 bionic</span></span><br><span class="line">          .++ .:<span class="regexp">/++++++/</span>-.+sss/<span class="string">`      Kernel: x86_64 Linux 5.0.0-36-generic</span></span><br><span class="line"><span class="string">        .:++o:  /++++++++/:--:/-      Uptime: 9d 18h 15m</span></span><br><span class="line"><span class="string">       o:+o+:++.`</span>..<span class="string">``</span><span class="string">`.-/oo+++++/     Packages: 2347</span></span><br><span class="line"><span class="string">      .:+o:+o/.          `</span>+sssoo+/    Shell: bash <span class="number">4.4</span><span class="number">.20</span></span><br><span class="line"> .++<span class="regexp">/+:+oo+o:`             /</span>sssooo.   Resolution: <span class="number">3840</span>x1080</span><br><span class="line">/+++<span class="comment">//+:`oo+o               /::--:.   DE: GNOME </span></span><br><span class="line">\+<span class="regexp">/+o+++`o++o               ++/</span><span class="regexp">//</span><span class="regexp">/.   WM: GNOME Shell</span></span><br><span class="line"><span class="regexp"> .++.o+++oo+:`             /</span>dddhhh.   WM Theme: Adwaita</span><br><span class="line">      .+.o+oo:.          <span class="string">`oddhhhh+    GTK Theme: Ambiance [GTK2/3]</span></span><br><span class="line"><span class="string">       \+.++o+o`</span><span class="string">`-`</span><span class="string">``</span><span class="string">`.:ohdhhhhh+     Icon Theme: ubuntu-mono-dark</span></span><br><span class="line"><span class="string">        `</span>:o+++ <span class="string">`ohhhhhhhhyo++os:      Font: Ubuntu 11</span></span><br><span class="line"><span class="string">          .o:`</span>.syhhhhhhh/.oo++o<span class="string">`      CPU: Intel Core i7-8700 @ 12x 4.6GHz</span></span><br><span class="line"><span class="string">              /osyyyyyyo++ooo+++/     GPU: intel</span></span><br><span class="line"><span class="string">                  `</span><span class="string">``</span><span class="string">``</span> +oo+++o\:     RAM: <span class="number">15831</span>MiB</span><br><span class="line">                         <span class="string">`oo++.</span></span><br></pre></td></tr></table></figure></li>
-<li>Python3.6 (Virtual environment)</li>
-<li>Package version<ul>
-<li>imutils==0.5.3</li>
-<li>Kivy==1.11.1</li>
-<li>numpy==1.13.3</li>
-<li>scipy==0.19.1</li>
-<li>pyinstaller==3.5 (WindowsOS)</li>
-</ul>
-</li>
-</ul>
-<h3 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a><strong>Data Structure</strong></h3><ul>
-<li><strong>Point</strong>:<br>用Python的<code>tuple</code>資料型態以$(x, y)$儲存讀入的points，再放入<code>list</code>當作該testcase的point list。</li>
-<li><strong>Edge</strong><br>從Python環境而言，必須用兩點才能畫成一線，所以在資料結構上以$[(x1, y1), (x2, y2)]$方式儲存。另外一種是進行中垂線繪製時，由於除了該中垂線以原本$[(x3, y3), (x4, y4)]$ 儲存外，還必須記錄該線是以哪一條線作為中線基準，因此儲存方式為$[(x3, y3), (x4, y4), (form_x1, form_y1), (form_x2, form_y2)]$，方便後續進行VD。</li>
-<li><strong>Convex Hull (CH)</strong><br>前置作業為針對$x$座標將point list進行排序，因此CH function的回傳值為CH的描點順序。</li>
-<li><strong>Voronoi Diagram (VD)</strong><br>VD的資料型態為edge list，其中不乏上述Edge data structure的兩種儲存方式。</li>
-</ul>
-<h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a><strong>Algorithm</strong></h3><ul>
-<li><p><strong>Convex Hull (CH)</strong><br>利用排序先找到最外圍的任一point作為起點，窮舉平面上所有的點，利用向量積(cross product)判斷是否在圈內or圈外，順著外圍繞一圈。</p>
-</li>
-<li><p><strong>Voronoi Diagram (VD)</strong><br>3點以內利用外心以及各邊的中點，考慮各種情況下畫出VD。<br>多點情況，利用<code>Divide-and-Conquer</code>進行實作，在遞迴至3點以下時將會直接回傳結果，此外將point set拆成兩邊進行遞迴後再合併，詳見如下(n為points count)。<br>$$ f(point\ set)=\left{<br>\begin{aligned}<br>Do\ nothing &amp;&amp; n = 1 \<br>Return\ Line &amp;&amp; n = 2 \<br>Return\ VD &amp;&amp; n = 3 \<br>Return\ Merge(f(point\ set[0, n/2]),f(point\ set[n/2, n])) &amp;&amp; n &gt; 3 \<br>\end{aligned}<br>\right.<br>$$<br>針對<code>Merge function</code>，其步驟如下:</p>
-</li>
-<li><p>step 0. Hyperplane預設在畫布由上往下描出。</p>
-</li>
-<li><p>step 1. 將兩邊points set各自以y座標進行排序，找出最上面兩點作為參考點。</p>
-</li>
-<li><p>step 2. 利用參考點畫出的中垂線作為Hyperplane，並且和兩邊VD的所有edge set找出最上面的交點，並記錄撞到的edge。</p>
-</li>
-<li><p>step 3. 根據撞到的edge進行參考點移動，並消除多餘的線。</p>
-</li>
-<li><p>step 4. 重複step 2和step 3，直到兩邊point set走到底為止。</p>
-</li>
-</ul>
-<center>(下面兩張圖各6點。<font color="#0000FF">藍線為CH</font>; <font color="#00FF00">綠線為VD</font>; <font color="FF0000">紅線為Hyperplane</font>)</center>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic07.png?raw=true"></div><div class="group-picture-column" style="width: 50%;"><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic06.png?raw=true"></div></div></div></div>
-
-<h3 id="Result"><a href="#Result" class="headerlink" title="Result"></a><strong>Result</strong></h3><p><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic03.png?raw=true"></p>
-]]></content>
-      <categories>
-        <category>Algorithm</category>
-      </categories>
-      <tags>
-        <tag>Voronoi Diagram</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>實驗室日誌 0x02</title>
     <url>/2020/200311-lab-log-0x02/</url>
     <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-hLgVtG8/0/61e17a31/M/i-hLgVtG8-L.png?70%25"><br>先偷渡個咱們MacacaHub隊徽，感謝翔君大力幫忙QwQ</p>
@@ -1509,6 +1410,128 @@ Pwn大概就是這麼一回事了~
       </tags>
   </entry>
   <entry>
+    <title>實驗室日誌 0x03</title>
+    <url>/2020/200413-lab-log-0x03/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-JVQBdT9/0/d70facc6/L/i-JVQBdT9-M.png?70%25"></p>
+<p>剛好看完Pokemon新無印篇ep21，皮卡丘豪可愛哦 &gt;w&lt;</p>
+<p>這張圖不僅適用現在的碩一(看論文)，明年碩二還能再用一次~讚讚（幹</p>
+<a id="more"></a>
+<p>-</p>
+<p>前陣子好不容易花了點時間寫完Pwn1，結果連假完就被抓回去審計畫、看論文了Zzzz<br>看來Pwn2要生出來可能還需要一點時間 嗚嗚</p>
+<p>這篇其實也沒什麼重點，只是最近和學長們聊過後很有感觸。<br>畢竟我在甄試時恰逢蔡總統提出的「資安即國安」，讓資安碩剛成立就很有焦點(?)<br>2019這一年就有四間資安碩成立，分別是中山資工、台大電機、交大資工、中央資工（硬要排序</p>
+<p>但身為第一屆說穿了就跟白老鼠差不多 : (<br>很多全新制度沒有前例可以借鑑，有些資安課程也沒有考古題這種東西能夠參考QwQ<br>再來是咱們老闆剛好也開始忙其他單位無暇顧及我們，以上學期的每週咪挺來說就停了好幾次。</p>
+<p>這學期感覺咪挺有恢復常態(?) 結果反而讓我們措手不及XD<br>停咪停到被養壞的我們，只能說太怠惰了qq<br>從碩二學長的說詞來看我們這屆現在論文報告還沒一輪不是很妙…</p>
+<p>我們實驗室的慣例都是博士班學長帶領碩士生。<br>但現在可以說是<strong>剛過</strong>全盛時期，因為在我們入學的同時走了兩位實驗室台柱。<br>其中一位我在甄試期間時見過，聽聞這兩位博士生都是把論文當雜誌翻的強者wwwww<br>現在雖然博士班學長也會給建議，但可能相比之下沒有之前學長這麼嚴厲，不曉得該不該高興…<br>講這個好像有點不負責任，應該是我們本來就該主動精進自己的才對 ._.</p>
+<p>再來前面提到咱們老闆很忙，所以對於課程上也有些異動。<br>原本這學期由老闆親自授課的課程改為一位印度籍老師上課，我本來的爛英文加上不適應口音，還記得第一堂真的是爆炸www<br>根本不曉得自己聽了三小，第二堂才稍微習慣相對好一些，希望能平安PASS（跪）</p>
+<p>最後就是眾所皆知的「好的 中國武漢肺炎」，雖然臺灣在疫情上控制的不錯，但多少還是會有些影響。<br>像是會議被延期、課程遠距教學 還有… 老師被隔離，嘛 畢竟老師也是出國參加Conference<br>然後回國就被隔離14天關起來也是很無奈，但也因為這樣停了將近一個月的課 ˊ_&gt;ˋ</p>
+<p>只能說我們這一屆實在很不樂觀呀…<br>雖然我很喜歡實驗室的氛圍，但並沒有很想待到延畢，更沒有考慮簽博XD<br>現在看著碩二學長們忙著生論文，想到一年後自己究竟有沒有辦法寫出像樣的東西。</p>
+<br>
+抖了一下、有點害怕面對未來的日子。
+]]></content>
+      <categories>
+        <category>實驗室日誌</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【Project】Voronoi Diagram</title>
+    <url>/2019/191208-voronoi-diagram-project/</url>
+    <content><![CDATA[<p><a href="https://twitter.com/potch/status/1129095107855040513?s=20"><img src="https://pbs.twimg.com/media/D6tZ-v4UIAAMm7t?format=jpg&name=large"></a></p>
+<p>Hmmmmmmm… 上圖是理想中的Voronoi Diagram</p>
+<p>不過很遺憾的是Algorithm這門課我沒成功做出來QQ</p>
+<p>即便如此還是要寫報告：）</p>
+<a id="more"></a>
+
+<p>&nbsp;</p>
+<p>時程規劃</p>
+<ul>
+<li>11/14 初測(基本功能+3點VD)：19.5 / 20</li>
+<li>12/05 完測(完整功能+4點以上VD)：34 / 60</li>
+<li>12/13 報告撰寫：?? / 20</li>
+</ul>
+<p><a href="http://par.cse.nsysu.edu.tw/~cbyang/course/algo/algo_report.htm">實施要點</a>&nbsp;&nbsp;<a href="http://par.cse.nsysu.edu.tw/~cbyang/course/algo/Voronoi_evaluate_first.pdf">初測評分標準</a>&nbsp;&nbsp;<a href="http://par.cse.nsysu.edu.tw/~cbyang/course/algo/Voronoi_evaluate_second.pdf">完測評分標準</a></p>
+<p>Code: <a href="https://github.com/yctseng1227/voronoi_project">https://github.com/yctseng1227/voronoi_project</a></p>
+<p>從<code>commits</code>數量應該不難看出花了不少時間在上面，但效果顯然很糟</p>
+<p>我爛 QQ</p>
+<hr>
+<p>由於這份作業不光是寫出VD演算法，還必須將圖片畫出來！<br>所以在作圖上我選擇Python，想說CTF也會用到就加減練語法M(_ _)M</p>
+<p>使用的環境是Python 3.6，考慮到會用到一些奇怪套件，所以先建立虛擬環境venv等前置作業。</p>
+<p>作圖方面原本採用的是Python開源函式庫-<code>kivy</code>，結果因為助教的作業環境是Windows，所以打包成<code>.exe</code>的過程會發生套件衝突，因此在初測前幾天忍痛搬家到Python內建函式庫-<code>tkinter</code>，這過程大約花了我一天的時間在處理QQ</p>
+<p>先來看看還沒初測就胎死腹中的<code>kivy</code>介面👇👇</p>
+<p><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic05.png?raw=true"></p>
+<p>個人覺得<code>kivy</code>在圖形界面上比較理想，而且<code>.kv</code>在建構上也比較容易整理，臨時搬到<code>tkinter</code>反而code被我寫爛了，雖然是可以勉強執行，但造成後續寫多點VD維護上的困難QQ</p>
+<p>另外在打包<code>.exe</code>方面，由於我的作業環境是UbuntuOS，在該系統的<code>Pyinstaller</code>操作下生成的執行檔並無法在WindowsOS環境下執行，最後折衷和同學借電腦進行打包，也因此沒機會針對<code>.exe</code>作多次檢查，結果就是初測時發生<code>.py</code>和<code>.exe</code>執行同一筆測資出現不同的結果，真的是見鬼了wwww 至今還是沒辦法解釋該情況怎麼會出現…</p>
+<p>而在多點VD的操作上，單純以Divide-and-Conquer演算法來說並不困難，但是在圖形的實現方面需要考量線條的距離繪製，比起消除多餘線條，個人傾向修正線條的起訖。在進行Hyperplane的時候，撞到的VD線不曉得到底該往哪邊進行縮減，導致最後畫出來的結果常常會是相反的方向，這細節大部分的VD的不太會提及，因此debug方面花了相當多的時間去”猜”怎麼畫線，最後還是不如預期地拿了低分（唉</p>
+<p>另外就是step by step，平常少有機會遇到這種操作，我用的是以<code>list</code>形式把每個不同階段的points list和edge list記錄下來，等需要的時候(按button)再逐一從該<code>list</code>取出來繪製，不過在完測時看起來是儲存points list和edge list的時機不對，造成斷點相當明顯稍稍覺得可惜。</p>
+<p>總體來說，花了時間卻拿不到相對的分數，嗚嗚浪費時間QQ</p>
+<p>簡單介紹一下功能：</p>
+<p><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic02.png?raw=true"></p>
+<ul>
+<li>import: 讀檔格式如下</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">P 103 200</span><br><span class="line">P 193 64</span><br><span class="line">P 193 370</span><br><span class="line">P 283 200</span><br><span class="line">E 0 34 193 161</span><br><span class="line">E 0 363 193 261</span><br><span class="line">E 193 161 193 261</span><br><span class="line">E 193 161 437 0</span><br><span class="line">E 193 261 600 476</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>load: 讀檔格式如下</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># comment</span><br><span class="line">6</span><br><span class="line">487 191</span><br><span class="line">417 388</span><br><span class="line">504 349</span><br><span class="line">681 125</span><br><span class="line">589 282</span><br><span class="line">725 279</span><br><span class="line">6</span><br><span class="line">69 304</span><br><span class="line">110 449</span><br><span class="line">174 333</span><br><span class="line">244 280</span><br><span class="line">335 139</span><br><span class="line">355 284</span><br><span class="line">12</span><br><span class="line">69 304</span><br><span class="line">174 333</span><br><span class="line">110 449</span><br><span class="line">335 139</span><br><span class="line">244 280</span><br><span class="line">355 284</span><br><span class="line">487 191</span><br><span class="line">417 388</span><br><span class="line">504 349</span><br><span class="line">681 125</span><br><span class="line">589 282</span><br><span class="line">725 279</span><br><span class="line">0</span><br><span class="line"># any else?</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>random: 隨機生成N個點，預設為6點可重複疊加</li>
+<li>save: 將point, edge存成<code>import</code>格式</li>
+<li>next case: 當讀入的檔有多筆case，依此按鈕進行下一筆testcase</li>
+<li>step by step: 依Divide-and-Conquer逐步執行</li>
+<li>run VD: 畫出Voronoi Diagram結果</li>
+<li>clear：清除畫布</li>
+<li>convex hull: 將所有的Convex Hull畫出，算是拿來dubug用的XD</li>
+</ul>
+<p>環境</p>
+<ul>
+<li>Operating System<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">                         ./+o+-       </span><br><span class="line">                 yyyyy- -yyyyyy+      Username: yctseng</span><br><span class="line">              :<span class="comment">//+//////-yyyyyyo      OS: Ubuntu 18.04 bionic</span></span><br><span class="line">          .++ .:<span class="regexp">/++++++/</span>-.+sss/<span class="string">`      Kernel: x86_64 Linux 5.0.0-36-generic</span></span><br><span class="line"><span class="string">        .:++o:  /++++++++/:--:/-      Uptime: 9d 18h 15m</span></span><br><span class="line"><span class="string">       o:+o+:++.`</span>..<span class="string">``</span><span class="string">`.-/oo+++++/     Packages: 2347</span></span><br><span class="line"><span class="string">      .:+o:+o/.          `</span>+sssoo+/    Shell: bash <span class="number">4.4</span><span class="number">.20</span></span><br><span class="line"> .++<span class="regexp">/+:+oo+o:`             /</span>sssooo.   Resolution: <span class="number">3840</span>x1080</span><br><span class="line">/+++<span class="comment">//+:`oo+o               /::--:.   DE: GNOME </span></span><br><span class="line">\+<span class="regexp">/+o+++`o++o               ++/</span><span class="regexp">//</span><span class="regexp">/.   WM: GNOME Shell</span></span><br><span class="line"><span class="regexp"> .++.o+++oo+:`             /</span>dddhhh.   WM Theme: Adwaita</span><br><span class="line">      .+.o+oo:.          <span class="string">`oddhhhh+    GTK Theme: Ambiance [GTK2/3]</span></span><br><span class="line"><span class="string">       \+.++o+o`</span><span class="string">`-`</span><span class="string">``</span><span class="string">`.:ohdhhhhh+     Icon Theme: ubuntu-mono-dark</span></span><br><span class="line"><span class="string">        `</span>:o+++ <span class="string">`ohhhhhhhhyo++os:      Font: Ubuntu 11</span></span><br><span class="line"><span class="string">          .o:`</span>.syhhhhhhh/.oo++o<span class="string">`      CPU: Intel Core i7-8700 @ 12x 4.6GHz</span></span><br><span class="line"><span class="string">              /osyyyyyyo++ooo+++/     GPU: intel</span></span><br><span class="line"><span class="string">                  `</span><span class="string">``</span><span class="string">``</span> +oo+++o\:     RAM: <span class="number">15831</span>MiB</span><br><span class="line">                         <span class="string">`oo++.</span></span><br></pre></td></tr></table></figure></li>
+<li>Python3.6 (Virtual environment)</li>
+<li>Package version<ul>
+<li>imutils==0.5.3</li>
+<li>Kivy==1.11.1</li>
+<li>numpy==1.13.3</li>
+<li>scipy==0.19.1</li>
+<li>pyinstaller==3.5 (WindowsOS)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a><strong>Data Structure</strong></h3><ul>
+<li><strong>Point</strong>:<br>用Python的<code>tuple</code>資料型態以$(x, y)$儲存讀入的points，再放入<code>list</code>當作該testcase的point list。</li>
+<li><strong>Edge</strong><br>從Python環境而言，必須用兩點才能畫成一線，所以在資料結構上以$[(x1, y1), (x2, y2)]$方式儲存。另外一種是進行中垂線繪製時，由於除了該中垂線以原本$[(x3, y3), (x4, y4)]$ 儲存外，還必須記錄該線是以哪一條線作為中線基準，因此儲存方式為$[(x3, y3), (x4, y4), (form_x1, form_y1), (form_x2, form_y2)]$，方便後續進行VD。</li>
+<li><strong>Convex Hull (CH)</strong><br>前置作業為針對$x$座標將point list進行排序，因此CH function的回傳值為CH的描點順序。</li>
+<li><strong>Voronoi Diagram (VD)</strong><br>VD的資料型態為edge list，其中不乏上述Edge data structure的兩種儲存方式。</li>
+</ul>
+<h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a><strong>Algorithm</strong></h3><ul>
+<li><p><strong>Convex Hull (CH)</strong><br>利用排序先找到最外圍的任一point作為起點，窮舉平面上所有的點，利用向量積(cross product)判斷是否在圈內or圈外，順著外圍繞一圈。</p>
+</li>
+<li><p><strong>Voronoi Diagram (VD)</strong><br>3點以內利用外心以及各邊的中點，考慮各種情況下畫出VD。<br>多點情況，利用<code>Divide-and-Conquer</code>進行實作，在遞迴至3點以下時將會直接回傳結果，此外將point set拆成兩邊進行遞迴後再合併，詳見如下(n為points count)。<br>$$ f(point\ set)=\left{<br>\begin{aligned}<br>Do\ nothing &amp;&amp; n = 1 \<br>Return\ Line &amp;&amp; n = 2 \<br>Return\ VD &amp;&amp; n = 3 \<br>Return\ Merge(f(point\ set[0, n/2]),f(point\ set[n/2, n])) &amp;&amp; n &gt; 3 \<br>\end{aligned}<br>\right.<br>$$<br>針對<code>Merge function</code>，其步驟如下:</p>
+</li>
+<li><p>step 0. Hyperplane預設在畫布由上往下描出。</p>
+</li>
+<li><p>step 1. 將兩邊points set各自以y座標進行排序，找出最上面兩點作為參考點。</p>
+</li>
+<li><p>step 2. 利用參考點畫出的中垂線作為Hyperplane，並且和兩邊VD的所有edge set找出最上面的交點，並記錄撞到的edge。</p>
+</li>
+<li><p>step 3. 根據撞到的edge進行參考點移動，並消除多餘的線。</p>
+</li>
+<li><p>step 4. 重複step 2和step 3，直到兩邊point set走到底為止。</p>
+</li>
+</ul>
+<center>(下面兩張圖各6點。<font color="#0000FF">藍線為CH</font>; <font color="#00FF00">綠線為VD</font>; <font color="FF0000">紅線為Hyperplane</font>)</center>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic07.png?raw=true"></div><div class="group-picture-column" style="width: 50%;"><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic06.png?raw=true"></div></div></div></div>
+
+<h3 id="Result"><a href="#Result" class="headerlink" title="Result"></a><strong>Result</strong></h3><p><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic03.png?raw=true"></p>
+]]></content>
+      <categories>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>Voronoi Diagram</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>さようなら、大江戶。</title>
     <url>/2020/200426-goodbye-dajianhu/</url>
     <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-BLcP568/1/b2866b7d/L/i-BLcP568-L.jpg?70%25"><br>大江戶要消失了了了嗚嗚不要啦啦啦啦啦，這個陪我度過大學時期無數打ㄐ夜晚的家。<br>消息實在是來得突然，前陣子知道美奇萊大概會撐到年底… 結果大江戶過幾天直接公告週末要撤QwQ<br>不過這也讓很多許久不見的老朋友回來踩最後一次ㄋ ~ 宛如一場小型告別式!!</p>
@@ -1634,29 +1657,6 @@ Pwn大概就是這麼一回事了~
         <tag>TJCTF 2020</tag>
         <tag>Web Challenge</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>實驗室日誌 0x03</title>
-    <url>/2020/200413-lab-log-0x03/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-JVQBdT9/0/d70facc6/L/i-JVQBdT9-M.png?70%25"></p>
-<p>剛好看完Pokemon新無印篇ep21，皮卡丘豪可愛哦 &gt;w&lt;</p>
-<p>這張圖不僅適用現在的碩一(看論文)，明年碩二還能再用一次~讚讚（幹</p>
-<a id="more"></a>
-<p>-</p>
-<p>前陣子好不容易花了點時間寫完Pwn1，結果連假完就被抓回去審計畫、看論文了Zzzz<br>看來Pwn2要生出來可能還需要一點時間 嗚嗚</p>
-<p>這篇其實也沒什麼重點，只是最近和學長們聊過後很有感觸。<br>畢竟我在甄試時恰逢蔡總統提出的「資安即國安」，讓資安碩剛成立就很有焦點(?)<br>2019這一年就有四間資安碩成立，分別是中山資工、台大電機、交大資工、中央資工（硬要排序</p>
-<p>但身為第一屆說穿了就跟白老鼠差不多 : (<br>很多全新制度沒有前例可以借鑑，有些資安課程也沒有考古題這種東西能夠參考QwQ<br>再來是咱們老闆剛好也開始忙其他單位無暇顧及我們，以上學期的每週咪挺來說就停了好幾次。</p>
-<p>這學期感覺咪挺有恢復常態(?) 結果反而讓我們措手不及XD<br>停咪停到被養壞的我們，只能說太怠惰了qq<br>從碩二學長的說詞來看我們這屆現在論文報告還沒一輪不是很妙…</p>
-<p>我們實驗室的慣例都是博士班學長帶領碩士生。<br>但現在可以說是<strong>剛過</strong>全盛時期，因為在我們入學的同時走了兩位實驗室台柱。<br>其中一位我在甄試期間時見過，聽聞這兩位博士生都是把論文當雜誌翻的強者wwwww<br>現在雖然博士班學長也會給建議，但可能相比之下沒有之前學長這麼嚴厲，不曉得該不該高興…<br>講這個好像有點不負責任，應該是我們本來就該主動精進自己的才對 ._.</p>
-<p>再來前面提到咱們老闆很忙，所以對於課程上也有些異動。<br>原本這學期由老闆親自授課的課程改為一位印度籍老師上課，我本來的爛英文加上不適應口音，還記得第一堂真的是爆炸www<br>根本不曉得自己聽了三小，第二堂才稍微習慣相對好一些，希望能平安PASS（跪）</p>
-<p>最後就是眾所皆知的「好的 中國武漢肺炎」，雖然臺灣在疫情上控制的不錯，但多少還是會有些影響。<br>像是會議被延期、課程遠距教學 還有… 老師被隔離，嘛 畢竟老師也是出國參加Conference<br>然後回國就被隔離14天關起來也是很無奈，但也因為這樣停了將近一個月的課 ˊ_&gt;ˋ</p>
-<p>只能說我們這一屆實在很不樂觀呀…<br>雖然我很喜歡實驗室的氛圍，但並沒有很想待到延畢，更沒有考慮簽博XD<br>現在看著碩二學長們忙著生論文，想到一年後自己究竟有沒有辦法寫出像樣的東西。</p>
-<br>
-抖了一下、有點害怕面對未來的日子。
-]]></content>
-      <categories>
-        <category>實驗室日誌</category>
-      </categories>
   </entry>
   <entry>
     <title>【分享】IOI Camp 2019 一些O(1)的心得</title>
