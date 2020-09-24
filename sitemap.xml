@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://yctseng1227.github.io/resume.html</loc>
+    <loc>https://yctseng1227.github.io/2019/190826-fate-anime-talk/</loc>
     
-    <lastmod>2020-09-22</lastmod>
+    <lastmod>2020-09-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://yctseng1227.github.io/2019/190826-fate-anime-talk/</loc>
+    <loc>https://yctseng1227.github.io/resume.html</loc>
     
-    <lastmod>2020-09-20</lastmod>
+    <lastmod>2020-09-22</lastmod>
     
   </url>
   
@@ -284,20 +284,6 @@
   </url>
   
   <url>
-    <loc>https://yctseng1227.github.io/tags/%E6%89%8B%E6%A9%9F/</loc>
-    <lastmod>2020-09-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yctseng1227.github.io/tags/Asus-5Z/</loc>
-    <lastmod>2020-09-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yctseng1227.github.io/tags/ITSA%E6%A1%82%E5%86%A0%E8%B3%BD/</loc>
     <lastmod>2020-09-24</lastmod>
     <changefreq>daily</changefreq>
@@ -312,14 +298,21 @@
   </url>
   
   <url>
-    <loc>https://yctseng1227.github.io/tags/April-Fools-Day/</loc>
+    <loc>https://yctseng1227.github.io/tags/%E6%89%8B%E6%A9%9F/</loc>
     <lastmod>2020-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yctseng1227.github.io/tags/%E6%97%A5%E6%9C%AC%E8%A1%8C/</loc>
+    <loc>https://yctseng1227.github.io/tags/Asus-5Z/</loc>
+    <lastmod>2020-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yctseng1227.github.io/tags/April-Fools-Day/</loc>
     <lastmod>2020-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -333,7 +326,7 @@
   </url>
   
   <url>
-    <loc>https://yctseng1227.github.io/tags/Codeforces/</loc>
+    <loc>https://yctseng1227.github.io/tags/%E6%97%A5%E6%9C%AC%E8%A1%8C/</loc>
     <lastmod>2020-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -348,6 +341,13 @@
   
   <url>
     <loc>https://yctseng1227.github.io/tags/%E6%A9%8B%E9%A0%AD/</loc>
+    <lastmod>2020-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yctseng1227.github.io/tags/Codeforces/</loc>
     <lastmod>2020-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -475,14 +475,14 @@
   </url>
   
   <url>
-    <loc>https://yctseng1227.github.io/categories/%E7%94%9F%E6%B4%BB%E6%9C%AD%E8%A8%98/</loc>
+    <loc>https://yctseng1227.github.io/categories/%E4%BC%91%E9%96%92%E5%A8%9B%E6%A8%82/</loc>
     <lastmod>2020-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yctseng1227.github.io/categories/%E4%BC%91%E9%96%92%E5%A8%9B%E6%A8%82/</loc>
+    <loc>https://yctseng1227.github.io/categories/%E7%94%9F%E6%B4%BB%E6%9C%AD%E8%A8%98/</loc>
     <lastmod>2020-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -496,14 +496,14 @@
   </url>
   
   <url>
-    <loc>https://yctseng1227.github.io/categories/%E6%97%85%E9%81%8A%E6%97%A5%E8%AA%8C/</loc>
+    <loc>https://yctseng1227.github.io/categories/%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</loc>
     <lastmod>2020-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yctseng1227.github.io/categories/%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</loc>
+    <loc>https://yctseng1227.github.io/categories/%E6%97%85%E9%81%8A%E6%97%A5%E8%AA%8C/</loc>
     <lastmod>2020-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

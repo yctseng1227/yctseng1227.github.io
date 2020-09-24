@@ -46,21 +46,6 @@
       </categories>
   </entry>
   <entry>
-    <title>【週記】一些日常生活漫談</title>
-    <url>/2019/190122-daily-talk/</url>
-    <content><![CDATA[<p><img src="https://pbs.twimg.com/media/Dw8dzwQUwAA5vZv.jpg:large"></p>
-<p>原定這週應該要發研所推甄心得的…不過出了一些事只能暫緩 QwQ<br>先放張最近19冬的熱門話題角色”三玖”，雖然聽說不少人追完漫畫就倒戈追二乃了www  </p>
-<a id="more"></a>
-<p>我自己只有追完動畫ep1，有點太閒魚了…不過單論人設來看，三玖給我的感覺：耳機、黑絲、歐派、無口(?)屬性加分不少，個性之類的細節等看看有沒有時間追漫畫吧(嘆)。</p>
-<p>咳咳、好像有點太油了。<br>來說說最近的生活吧，目前結束了大四上姑且算是平安活下來了XD<br>不過途中收到某間學校的一通臨時備取通知搞得我人仰馬翻，當時甚至還在FB小小地崩潰一下，事後想想其實也還好，頂多就不去嘛QQ 誰叫我有選擇、性障礙…  咳咳、我是說選擇性、障礙，嗯。<br>只是原本已經放下找教授的這件事，現在不得不又拿出來忙了(跪)。</p>
-<p>也因為這臨時的通知，很多行程都必須配合著提前規劃，導致我回到台北家的時間有點早…<br>嗯、待在家真的反而不太想去動電腦，偏偏剛回家又有點喉嚨發炎，所以都在睡覺 嘖</p>
-<p>下週會去參加台大辦的IOI camp，雖然感覺是去當砲灰der<br>（想想最近打Codeforces的Rating又在綠字 和 灰字之間遊走…有點擔心呢）<br>不過算算能好好玩競程的時間也不多了，希望可以吸收點新知識。<br>然而、第一天要教DP，呃啊真的是硬傷 QQ </p>
-]]></content>
-      <categories>
-        <category>生活札記</category>
-      </categories>
-  </entry>
-  <entry>
     <title>【週記】過新年就是要欠債對唄！</title>
     <url>/2019/190207-new-year-talk/</url>
     <content><![CDATA[<p><img src="https://imgur.com/DbAEQEE.jpg"></p>
@@ -112,6 +97,29 @@
       </categories>
   </entry>
   <entry>
+    <title>【週記】ITSA桂冠賽 居...居然收掉了QQQ</title>
+    <url>/2019/190326-itsa-annual-close/</url>
+    <content><![CDATA[<p><img src="https://imgur.com/jk3yUSX.jpg"></p>
+<p>2019 ITSA桂冠賽確定停辦… 事情總是如此地突然QQ<br>我們NUK去年好不容易稍稍帶起了競程風氣 沒想到時隔一年就收掉了<br>更何況是連線上賽都改成兩個月一次= =</p>
+<p>看來下屆社長要推動競程這塊會很辛苦呢 …</p>
+<a id="more"></a>
+
+<p>今年四月底我要飛日本。</p>
+<p>回想起去年訂機票還很怕會卡到ITSA桂冠賽。<br>特地寄信問官方舉辦時間，想當然爾… 沒有消息XD</p>
+<p>結果居然就這樣停辦了 欸…<br>這下子我在大學能參加的現場賽就差不多告個段落了。<br>之後可能找個時間可以開始補這四年的競程心得（前提是懶癌沒發作的話w）</p>
+<p>去年的桂冠賽我們校有20餘位同學出征，可以說是報名相當踴躍。<br>結果停辦後少一場能體驗”現場賽”的機會其實還蠻傷的，算下來大概只剩下NCPC、或是晉級Regional contest，真的蠻可惜的QQ</p>
+<p>話說既然連平常的 ITSA &amp; PTC 月賽都縮減成兩個月一次，自然聯想到的就是經費不足吧，其次就是PTC參與隊伍太少、又或是出題的題庫量不夠，嘛官方沒有講也只能就現況來猜了。</p>
+<p>另外除了一般的競賽，再來就是一年四次的CPE檢定。<br>這次很殘念地差一點拿六題，但值得一提的是曾經出現在PTC的edit distance這回成功寫出來了~<br>大學最後的CPE希望能拼個六題壓壓驚（跪ww</p>
+]]></content>
+      <categories>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>ITSA桂冠賽</tag>
+        <tag>Programming Contest</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【週記】咦？好像踢到奇怪的盒子...</title>
     <url>/2019/190311-asus5z-unboxing/</url>
     <content><![CDATA[<p><img src="https://imgur.com/ODLyNTq.jpg"></p>
@@ -140,27 +148,19 @@
       </tags>
   </entry>
   <entry>
-    <title>【週記】ITSA桂冠賽 居...居然收掉了QQQ</title>
-    <url>/2019/190326-itsa-annual-close/</url>
-    <content><![CDATA[<p><img src="https://imgur.com/jk3yUSX.jpg"></p>
-<p>2019 ITSA桂冠賽確定停辦… 事情總是如此地突然QQ<br>我們NUK去年好不容易稍稍帶起了競程風氣 沒想到時隔一年就收掉了<br>更何況是連線上賽都改成兩個月一次= =</p>
-<p>看來下屆社長要推動競程這塊會很辛苦呢 …</p>
+    <title>【週記】一些日常生活漫談</title>
+    <url>/2019/190122-daily-talk/</url>
+    <content><![CDATA[<p><img src="https://pbs.twimg.com/media/Dw8dzwQUwAA5vZv.jpg:large"></p>
+<p>原定這週應該要發研所推甄心得的…不過出了一些事只能暫緩 QwQ<br>先放張最近19冬的熱門話題角色”三玖”，雖然聽說不少人追完漫畫就倒戈追二乃了www  </p>
 <a id="more"></a>
-
-<p>今年四月底我要飛日本。</p>
-<p>回想起去年訂機票還很怕會卡到ITSA桂冠賽。<br>特地寄信問官方舉辦時間，想當然爾… 沒有消息XD</p>
-<p>結果居然就這樣停辦了 欸…<br>這下子我在大學能參加的現場賽就差不多告個段落了。<br>之後可能找個時間可以開始補這四年的競程心得（前提是懶癌沒發作的話w）</p>
-<p>去年的桂冠賽我們校有20餘位同學出征，可以說是報名相當踴躍。<br>結果停辦後少一場能體驗”現場賽”的機會其實還蠻傷的，算下來大概只剩下NCPC、或是晉級Regional contest，真的蠻可惜的QQ</p>
-<p>話說既然連平常的 ITSA &amp; PTC 月賽都縮減成兩個月一次，自然聯想到的就是經費不足吧，其次就是PTC參與隊伍太少、又或是出題的題庫量不夠，嘛官方沒有講也只能就現況來猜了。</p>
-<p>另外除了一般的競賽，再來就是一年四次的CPE檢定。<br>這次很殘念地差一點拿六題，但值得一提的是曾經出現在PTC的edit distance這回成功寫出來了~<br>大學最後的CPE希望能拼個六題壓壓驚（跪ww</p>
+<p>我自己只有追完動畫ep1，有點太閒魚了…不過單論人設來看，三玖給我的感覺：耳機、黑絲、歐派、無口(?)屬性加分不少，個性之類的細節等看看有沒有時間追漫畫吧(嘆)。</p>
+<p>咳咳、好像有點太油了。<br>來說說最近的生活吧，目前結束了大四上姑且算是平安活下來了XD<br>不過途中收到某間學校的一通臨時備取通知搞得我人仰馬翻，當時甚至還在FB小小地崩潰一下，事後想想其實也還好，頂多就不去嘛QQ 誰叫我有選擇、性障礙…  咳咳、我是說選擇性、障礙，嗯。<br>只是原本已經放下找教授的這件事，現在不得不又拿出來忙了(跪)。</p>
+<p>也因為這臨時的通知，很多行程都必須配合著提前規劃，導致我回到台北家的時間有點早…<br>嗯、待在家真的反而不太想去動電腦，偏偏剛回家又有點喉嚨發炎，所以都在睡覺 嘖</p>
+<p>下週會去參加台大辦的IOI camp，雖然感覺是去當砲灰der<br>（想想最近打Codeforces的Rating又在綠字 和 灰字之間遊走…有點擔心呢）<br>不過算算能好好玩競程的時間也不多了，希望可以吸收點新知識。<br>然而、第一天要教DP，呃啊真的是硬傷 QQ </p>
 ]]></content>
       <categories>
-        <category>Algorithm</category>
+        <category>生活札記</category>
       </categories>
-      <tags>
-        <tag>ITSA桂冠賽</tag>
-        <tag>Programming Contest</tag>
-      </tags>
   </entry>
   <entry>
     <title>【活動】maimai愚人節解謎 &lt;怒槌～光吉猛修一部謎～&gt;</title>
@@ -249,38 +249,6 @@
       <tags>
         <tag>音Game</tag>
         <tag>April Fools&#39; Day</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【閒聊】2019日本行... 難產QQ</title>
-    <url>/2019/190519-japan-travel-preface/</url>
-    <content><![CDATA[<p>什麼？你又跑去日本了！？</p>
-<p><img src="https://i.imgur.com/7atqCfF.png"></p>
-<p>嗯、對。</p>
-<p>2018年初時有被朋友揪去關西玩，而這回莫名其妙跑得特別遠XD</p>
- <a id="more"></a>
-
-<p>&nbsp;</p>
-<p>說是這樣說啦… 但這一去就將近兩週。</p>
-<p>雖然現在是大四下，但畢竟還是有學分壓力不能輕易鬆懈QQ</p>
-<p>結果，請假的這兩週很多作業… 很多考試… （暈</p>
-<p>&nbsp;</p>
-<p>嘛、既然出國玩就必須付出代價。</p>
-<p>所以回國後過了一週我依然還在還債（默</p>
-<p>&nbsp;</p>
-<p>原以為日本遊記會因為本人的懶癌發作拖很久</p>
-<p>結果反而是考試作業太多補到沒時間碰QQ</p>
-<p>估計下週才能慢慢騰出時間敲敲鍵盤打草稿~</p>
-<p>順帶一提… 這次大約拍了2000多張照片（眼神死</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>不過這部落格好像也沒多少人看，慢慢來w（你等等</p>
-]]></content>
-      <categories>
-        <category>旅遊日誌</category>
-      </categories>
-      <tags>
-        <tag>日本行</tag>
       </tags>
   </entry>
   <entry>
@@ -478,116 +446,35 @@
       </tags>
   </entry>
   <entry>
-    <title>【活動】Codeforces April Fools Day Contest 2019</title>
-    <url>/2019/190402-codeforces-april-fools-day/</url>
-    <content><![CDATA[<p>聽說是Codeforces每年都會辦的愚人節活動，今次算是體驗到何謂無厘頭解謎XD</p>
-<p>除了Problem A還算正常，其他都在玩猜猜樂。<br>賽後透過一些線索才把pB, pC, pD搞定，這邊來分享一下~<br>（如果有任何錯誤也歡迎來信指教&gt; &lt;）</p>
-<a id="more"></a>
+    <title>【閒聊】2019日本行... 難產QQ</title>
+    <url>/2019/190519-japan-travel-preface/</url>
+    <content><![CDATA[<p>什麼？你又跑去日本了！？</p>
+<p><img src="https://i.imgur.com/7atqCfF.png"></p>
+<p>嗯、對。</p>
+<p>2018年初時有被朋友揪去關西玩，而這回莫名其妙跑得特別遠XD</p>
+ <a id="more"></a>
 
 <p>&nbsp;</p>
-<p><a href="https://codeforces.com/problemset/problem/1145/A">Problem A - Thanos Sort</a></p>
-<p>一種有趣的排序法，透過多次對半刪減直到剩下的序列是OK的才停止。<br>這題看計分板相當和平，我自己也是用遞迴慢慢跑就AC了w</p>
-<p>應該算是出題者給大家牛刀小試用的吧~</p>
+<p>說是這樣說啦… 但這一去就將近兩週。</p>
+<p>雖然現在是大四下，但畢竟還是有學分壓力不能輕易鬆懈QQ</p>
+<p>結果，請假的這兩週很多作業… 很多考試… （暈</p>
 <p>&nbsp;</p>
-<p><a href="https://codeforces.com/problemset/problem/1145/B">Problem B - Kanban Numbers</a></p>
-<p>題目短到可以不用點開連結XD<br>輸入 $a (1≤a≤99)$ ，輸出”Yes” or “No”。</p>
-<p>計分板上各種猜，提交100餘次的不在話下，可惜我看到pD比較多人AC就沒花時間猜這題了。</p>
-<p>而謎底就藏在題目… “kanban”，拿去估狗翻譯會得到”看板”的解釋，但實際上應該要拆成kan、ban…<br>kan本身無意，而ban有禁止的意味，答案就是「禁止kan」。</p>
-<p>嗯？？？你在公三小？</p>
-<p>嗯對、就這樣。 其實在數字的英文拼音中並沒有出現 <strong>k</strong> 或是 <strong>a</strong> 的字母。<br>因此，你只要檢查輸入的數字在拼寫中是否出現 <strong>n</strong> 就行了XD</p>
-<p>真的是不能用正常的思路解謎呢…</p>
+<p>嘛、既然出國玩就必須付出代價。</p>
+<p>所以回國後過了一週我依然還在還債（默</p>
 <p>&nbsp;</p>
-<p><a href="https://codeforces.com/problemset/problem/1145/C">Problem C - Mystery Circuit</a></p>
-<p>題目給了很神秘的電路…然後要你輸入 $a (0≤a≤15)$ 、輸出整數，沒了。</p>
-<p>老實說這題摸半天還是沒有頭緒，倒是友人在 <a href="https://algassert.com/quirk">Quirk</a> 把電路拼起來丟0101測一測就發現答案了，莫名其妙XD</p>
-<p>附上code，若非該領域的玩家應該都想不到吧…</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n; <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">int</span> arr[] = &#123;<span class="number">15</span>, <span class="number">14</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>&#125;;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; arr[n] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>&nbsp;</p>
-<p><a href="https://codeforces.com/contest/1145/problem/D">Problem D - Pigeon d’Or</a></p>
-<p>讓我花最久的題目，老實說真的差一步就解出來了QQ</p>
-<p>原本第一眼看題目還真的看不太懂，所以拿去餵狗翻譯… 嗯、還是看不懂呢。<br>甚至還在懷疑是哪一國的語言，但大部分明明就是看得懂的英文啊QQ</p>
-<p>後來從測資開始猜：<br>範測是給了五個數字、得到一個數字，而且輸入數字範圍還在32內，用往年經驗有可能是邏輯運算，而這種題目最常用的就是 <strong>XOR</strong> ，所以就想盡辦法用範測和XOR湊答案，也因此吃了好幾次WA、深信下一次交出去的肯定會AC（並不會好嗎.jpg）</p>
-<p>但到了後來卡關又把題目讀了幾次… 想到會不會是出題者故意寫錯字!?<br>從第一段的 “ftying rats” 感覺就應該是 “flying rats”，所以就想了幾個辦法測錯字。</p>
-<p>最後是用word內建的拼字檢查，還真的不少錯字wwwww</p>
-<p><img src="https://i.imgur.com/1PzScrI.png"></p>
-<p>英文超爛的我就開始慢慢對著把拼錯的字母抓出來… 然後競賽就結束了(幹</p>
-<p>賽後解出來看到神奇的…單字？</p>
-<p><em>twoplusxorofthirdandminelements</em></p>
-<p>簡單分析一下</p>
-<p>Two plus XOR of third and min elements</p>
-<p>咦咦咦 這句子怎麼看起來有點正常ㄚ<br>可雖然好像每個字都看得懂，但合起來又不曉得在工三小www</p>
-<p>最後謎底是…<br>(輸入的第三個數字) XOR (序列中最小值) + 2。</p>
-<p>意外地前面有猜到XOR，只是這解法真的想不到XDDD<br>如果有早點發現題目內的錯字Bug，說不定就有機會即時解出來了qq</p>
+<p>原以為日本遊記會因為本人的懶癌發作拖很久</p>
+<p>結果反而是考試作業太多補到沒時間碰QQ</p>
+<p>估計下週才能慢慢騰出時間敲敲鍵盤打草稿~</p>
+<p>順帶一提… 這次大約拍了2000多張照片（眼神死</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>差不多就這樣、思考的過程真的蠻有趣的<br>畢竟沒給其他線索真的只能無厘頭隨便猜、看到丟100次才AC都不會感到驚訝<br>反而覺得「居然猜到AC實在太神laaaaaaaaa」 www</p>
-]]></content>
-      <categories>
-        <category>Algorithm</category>
-      </categories>
-      <tags>
-        <tag>Programming Contest</tag>
-        <tag>April Fools&#39; Day</tag>
-        <tag>Codeforces</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【活動】畢業典禮兼...橋頭遊記!?</title>
-    <url>/2019/190602-commencement/</url>
-    <content><![CDATA[<p><img src="https://imgur.com/1wvOaDF.jpg"></p>
-<p>不知不覺又到了畢業的時節。</p>
-<p>但看過行程表的我實在不是很想去躺著聽演說，所以… 出去玩啦ヾ(〃^∇^)ﾉ</p>
-<a id="more"></a>
-
-<p>&nbsp;</p>
-<p>事情是這樣的。</p>
-<p>大約在畢業典禮前幾天我才上網看了所謂的<strong>畢業典禮公告</strong>，對於校方（系方？）沒特別宣傳感到擔憂。</p>
-<p>說不定真的有哪位天兵同學沒看到公告就直接錯過畢典 wwwww</p>
-<p>&nbsp;</p>
-<p>我們校總共分三個梯次舉行，而我們CS是在最後一梯，開始時間… 17點，講真的還挺晚的～</p>
-<p>直到當天我都還在猶豫該不該出席畢業典禮，但問題是入場必須穿著畢業袍。</p>
-<p>關於畢業袍這東西… 事前租一年$450、當天租$200（有錯麻煩提醒我）</p>
-<p>總之就是不太親民的價格 QQ</p>
-<p>&nbsp;</p>
-<p>那如果不去畢典的話，翹掉我該在宿舍廢嗎？</p>
-<p>嗯… 所以我就去Google搜尋<strong>「高雄 閒晃」</strong>，找到了橋頭糖廠。</p>
-<p>想想自己待在高雄三年好像都沒機會往北邊探索，所以算了一下公車時間，帶著手機、鑰匙、錢包就出門了！</p>
-<p><img src="https://imgur.com/N5IQU10.jpg"></p>
-<p>時間大約是15點，從高捷**”橋頭糖廠站”**出站隔壁就是園區，交通上蠻方便呢。</p>
-<p>原本想秉持純晃晃的心態不拿手機… 但事實證明很困難，拍照魂總是在這時候特別不受控（笑</p>
-<p><img src="https://imgur.com/b4sw7GI.jpg">10摳的黑糖饅頭，拿來解嘴饞還算是不錯的選項～</p>
-<p>&nbsp;</p>
-<p><img src="https://imgur.com/d34HnN5.jpg">45摳紅豆牛奶冰，配上當時悶熱的天氣吃下去感覺真棒！<br>這張我有放在其他地方打卡，總之就是非常悠閒的… 吃貨之旅（你給我等等</p>
-<p>&nbsp;</p>
-<p>剩下的就是在附近閒晃，然後看到不錯view就停下來拍照#</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/TTmKf9b.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/5v85UO7.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/y0dB5V0.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/CbYwEsb.jpg"></div></div></div></div>
-
-<p>因為本身對糖廠歷史… 並沒有很大興趣w</p>
-<p>所以就真的只是來散步，就這樣一路走到**”橋頭站”**準備搭捷運回家～</p>
-<p>&nbsp;</p>
-<p>回到楠梓加工區的時間大約17:50，看看畢典也差不多要結束了</p>
-<p>… 好像姑且可以到會場去看看情況。</p>
-<p>我就抱著這樣的心態查了公車時間 嗯…沒救</p>
-<p>只好騎City Bike慢慢回學校（15分鐘）wwwww</p>
-<p><img src="https://imgur.com/weq1ALc.jpg"></p>
-<p>到達會場後遇到了也是翹掉畢典的玨兄，稍微聊了一下發現都是因為畢業袍放棄參加（真糟糕</p>
-<p>等到畢典結束、人潮漸漸出現後，上面這面看板根本就是要搶位子拍照wwwww</p>
-<p>混亂中拍了不少張，我甚至還把友人的畢業袍搶過來（抹臉</p>
-<p><img src="https://imgur.com/oSTZmR4.jpg"></p>
-<p>最後拿了一張惡搞性質的當作FB的打卡，感謝友人贊助優秀畢業生獎XD</p>
-<p>證明我並沒有翹掉畢業典禮唷（心虛</p>
-<p>&nbsp;</p>
-<p>晚餐閒聊才知道我們系似乎是出席率最低的，連教授群也只有系主任義務出席，該說很有CS的風格嗎www</p>
-<p>總之這一趟下來我也不後悔自己的決定，算是給自己的一種勉勵吧。</p>
-<p>接下來進入六月才是真正的難關，要期末LAAAAAA</p>
+<p>不過這部落格好像也沒多少人看，慢慢來w（你等等</p>
 ]]></content>
       <categories>
         <category>旅遊日誌</category>
       </categories>
       <tags>
-        <tag>畢業典禮</tag>
-        <tag>橋頭</tag>
+        <tag>日本行</tag>
       </tags>
   </entry>
   <entry>
@@ -727,6 +614,64 @@
       </tags>
   </entry>
   <entry>
+    <title>【活動】畢業典禮兼...橋頭遊記!?</title>
+    <url>/2019/190602-commencement/</url>
+    <content><![CDATA[<p><img src="https://imgur.com/1wvOaDF.jpg"></p>
+<p>不知不覺又到了畢業的時節。</p>
+<p>但看過行程表的我實在不是很想去躺著聽演說，所以… 出去玩啦ヾ(〃^∇^)ﾉ</p>
+<a id="more"></a>
+
+<p>&nbsp;</p>
+<p>事情是這樣的。</p>
+<p>大約在畢業典禮前幾天我才上網看了所謂的<strong>畢業典禮公告</strong>，對於校方（系方？）沒特別宣傳感到擔憂。</p>
+<p>說不定真的有哪位天兵同學沒看到公告就直接錯過畢典 wwwww</p>
+<p>&nbsp;</p>
+<p>我們校總共分三個梯次舉行，而我們CS是在最後一梯，開始時間… 17點，講真的還挺晚的～</p>
+<p>直到當天我都還在猶豫該不該出席畢業典禮，但問題是入場必須穿著畢業袍。</p>
+<p>關於畢業袍這東西… 事前租一年$450、當天租$200（有錯麻煩提醒我）</p>
+<p>總之就是不太親民的價格 QQ</p>
+<p>&nbsp;</p>
+<p>那如果不去畢典的話，翹掉我該在宿舍廢嗎？</p>
+<p>嗯… 所以我就去Google搜尋<strong>「高雄 閒晃」</strong>，找到了橋頭糖廠。</p>
+<p>想想自己待在高雄三年好像都沒機會往北邊探索，所以算了一下公車時間，帶著手機、鑰匙、錢包就出門了！</p>
+<p><img src="https://imgur.com/N5IQU10.jpg"></p>
+<p>時間大約是15點，從高捷**”橋頭糖廠站”**出站隔壁就是園區，交通上蠻方便呢。</p>
+<p>原本想秉持純晃晃的心態不拿手機… 但事實證明很困難，拍照魂總是在這時候特別不受控（笑</p>
+<p><img src="https://imgur.com/b4sw7GI.jpg">10摳的黑糖饅頭，拿來解嘴饞還算是不錯的選項～</p>
+<p>&nbsp;</p>
+<p><img src="https://imgur.com/d34HnN5.jpg">45摳紅豆牛奶冰，配上當時悶熱的天氣吃下去感覺真棒！<br>這張我有放在其他地方打卡，總之就是非常悠閒的… 吃貨之旅（你給我等等</p>
+<p>&nbsp;</p>
+<p>剩下的就是在附近閒晃，然後看到不錯view就停下來拍照#</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/TTmKf9b.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/5v85UO7.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/y0dB5V0.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/CbYwEsb.jpg"></div></div></div></div>
+
+<p>因為本身對糖廠歷史… 並沒有很大興趣w</p>
+<p>所以就真的只是來散步，就這樣一路走到**”橋頭站”**準備搭捷運回家～</p>
+<p>&nbsp;</p>
+<p>回到楠梓加工區的時間大約17:50，看看畢典也差不多要結束了</p>
+<p>… 好像姑且可以到會場去看看情況。</p>
+<p>我就抱著這樣的心態查了公車時間 嗯…沒救</p>
+<p>只好騎City Bike慢慢回學校（15分鐘）wwwww</p>
+<p><img src="https://imgur.com/weq1ALc.jpg"></p>
+<p>到達會場後遇到了也是翹掉畢典的玨兄，稍微聊了一下發現都是因為畢業袍放棄參加（真糟糕</p>
+<p>等到畢典結束、人潮漸漸出現後，上面這面看板根本就是要搶位子拍照wwwww</p>
+<p>混亂中拍了不少張，我甚至還把友人的畢業袍搶過來（抹臉</p>
+<p><img src="https://imgur.com/oSTZmR4.jpg"></p>
+<p>最後拿了一張惡搞性質的當作FB的打卡，感謝友人贊助優秀畢業生獎XD</p>
+<p>證明我並沒有翹掉畢業典禮唷（心虛</p>
+<p>&nbsp;</p>
+<p>晚餐閒聊才知道我們系似乎是出席率最低的，連教授群也只有系主任義務出席，該說很有CS的風格嗎www</p>
+<p>總之這一趟下來我也不後悔自己的決定，算是給自己的一種勉勵吧。</p>
+<p>接下來進入六月才是真正的難關，要期末LAAAAAA</p>
+]]></content>
+      <categories>
+        <category>旅遊日誌</category>
+      </categories>
+      <tags>
+        <tag>畢業典禮</tag>
+        <tag>橋頭</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【遊記】2019 橫跨平成&amp;令和的日本行（九州篇 下）</title>
     <url>/2019/190725-japan-travel-kyushu-part2/</url>
     <content><![CDATA[<p><img src=""></p>
@@ -751,6 +696,96 @@
       </categories>
       <tags>
         <tag>日本行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【遊記】2019 橫跨平成&amp;令和的日本行（中國篇）</title>
+    <url>/2019/190726-japan-travel-chugoku/</url>
+    <content><![CDATA[<p><img src=""></p>
+<a id="more"></a>
+
+
+
+
+
+<h3 id="Day-5-相望｜山口県"><a href="#Day-5-相望｜山口県" class="headerlink" title="Day 5 - 相望｜山口県"></a>Day 5 - 相望｜山口県</h3><ul>
+<li>小倉</li>
+<li>下關</li>
+<li>廣島</li>
+</ul>
+<h3 id="Day-6-迷鹿｜広島県"><a href="#Day-6-迷鹿｜広島県" class="headerlink" title="Day 6 - 迷鹿｜広島県"></a>Day 6 - 迷鹿｜広島県</h3><ul>
+<li>吳市</li>
+<li>宮島</li>
+</ul>
+<h3 id="Day-7-｜岡山県"><a href="#Day-7-｜岡山県" class="headerlink" title="Day 7 - ｜岡山県"></a>Day 7 - ｜岡山県</h3><ul>
+<li></li>
+<li></li>
+</ul>
+<h3 id="Day-8-丹寧聖地｜香川県"><a href="#Day-8-丹寧聖地｜香川県" class="headerlink" title="Day 8 - 丹寧聖地｜香川県"></a>Day 8 - 丹寧聖地｜香川県</h3><ul>
+<li>兒島（岡山）</li>
+<li>高松</li>
+</ul>
+]]></content>
+      <categories>
+        <category>旅遊日誌</category>
+      </categories>
+      <tags>
+        <tag>日本行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【活動】Codeforces April Fools Day Contest 2019</title>
+    <url>/2019/190402-codeforces-april-fools-day/</url>
+    <content><![CDATA[<p>聽說是Codeforces每年都會辦的愚人節活動，今次算是體驗到何謂無厘頭解謎XD</p>
+<p>除了Problem A還算正常，其他都在玩猜猜樂。<br>賽後透過一些線索才把pB, pC, pD搞定，這邊來分享一下~<br>（如果有任何錯誤也歡迎來信指教&gt; &lt;）</p>
+<a id="more"></a>
+
+<p>&nbsp;</p>
+<p><a href="https://codeforces.com/problemset/problem/1145/A">Problem A - Thanos Sort</a></p>
+<p>一種有趣的排序法，透過多次對半刪減直到剩下的序列是OK的才停止。<br>這題看計分板相當和平，我自己也是用遞迴慢慢跑就AC了w</p>
+<p>應該算是出題者給大家牛刀小試用的吧~</p>
+<p>&nbsp;</p>
+<p><a href="https://codeforces.com/problemset/problem/1145/B">Problem B - Kanban Numbers</a></p>
+<p>題目短到可以不用點開連結XD<br>輸入 $a (1≤a≤99)$ ，輸出”Yes” or “No”。</p>
+<p>計分板上各種猜，提交100餘次的不在話下，可惜我看到pD比較多人AC就沒花時間猜這題了。</p>
+<p>而謎底就藏在題目… “kanban”，拿去估狗翻譯會得到”看板”的解釋，但實際上應該要拆成kan、ban…<br>kan本身無意，而ban有禁止的意味，答案就是「禁止kan」。</p>
+<p>嗯？？？你在公三小？</p>
+<p>嗯對、就這樣。 其實在數字的英文拼音中並沒有出現 <strong>k</strong> 或是 <strong>a</strong> 的字母。<br>因此，你只要檢查輸入的數字在拼寫中是否出現 <strong>n</strong> 就行了XD</p>
+<p>真的是不能用正常的思路解謎呢…</p>
+<p>&nbsp;</p>
+<p><a href="https://codeforces.com/problemset/problem/1145/C">Problem C - Mystery Circuit</a></p>
+<p>題目給了很神秘的電路…然後要你輸入 $a (0≤a≤15)$ 、輸出整數，沒了。</p>
+<p>老實說這題摸半天還是沒有頭緒，倒是友人在 <a href="https://algassert.com/quirk">Quirk</a> 把電路拼起來丟0101測一測就發現答案了，莫名其妙XD</p>
+<p>附上code，若非該領域的玩家應該都想不到吧…</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n; <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">int</span> arr[] = &#123;<span class="number">15</span>, <span class="number">14</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>&#125;;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; arr[n] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<p><a href="https://codeforces.com/contest/1145/problem/D">Problem D - Pigeon d’Or</a></p>
+<p>讓我花最久的題目，老實說真的差一步就解出來了QQ</p>
+<p>原本第一眼看題目還真的看不太懂，所以拿去餵狗翻譯… 嗯、還是看不懂呢。<br>甚至還在懷疑是哪一國的語言，但大部分明明就是看得懂的英文啊QQ</p>
+<p>後來從測資開始猜：<br>範測是給了五個數字、得到一個數字，而且輸入數字範圍還在32內，用往年經驗有可能是邏輯運算，而這種題目最常用的就是 <strong>XOR</strong> ，所以就想盡辦法用範測和XOR湊答案，也因此吃了好幾次WA、深信下一次交出去的肯定會AC（並不會好嗎.jpg）</p>
+<p>但到了後來卡關又把題目讀了幾次… 想到會不會是出題者故意寫錯字!?<br>從第一段的 “ftying rats” 感覺就應該是 “flying rats”，所以就想了幾個辦法測錯字。</p>
+<p>最後是用word內建的拼字檢查，還真的不少錯字wwwww</p>
+<p><img src="https://i.imgur.com/1PzScrI.png"></p>
+<p>英文超爛的我就開始慢慢對著把拼錯的字母抓出來… 然後競賽就結束了(幹</p>
+<p>賽後解出來看到神奇的…單字？</p>
+<p><em>twoplusxorofthirdandminelements</em></p>
+<p>簡單分析一下</p>
+<p>Two plus XOR of third and min elements</p>
+<p>咦咦咦 這句子怎麼看起來有點正常ㄚ<br>可雖然好像每個字都看得懂，但合起來又不曉得在工三小www</p>
+<p>最後謎底是…<br>(輸入的第三個數字) XOR (序列中最小值) + 2。</p>
+<p>意外地前面有猜到XOR，只是這解法真的想不到XDDD<br>如果有早點發現題目內的錯字Bug，說不定就有機會即時解出來了qq</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>差不多就這樣、思考的過程真的蠻有趣的<br>畢竟沒給其他線索真的只能無厘頭隨便猜、看到丟100次才AC都不會感到驚訝<br>反而覺得「居然猜到AC實在太神laaaaaaaaa」 www</p>
+]]></content>
+      <categories>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>Programming Contest</tag>
+        <tag>April Fools&#39; Day</tag>
+        <tag>Codeforces</tag>
       </tags>
   </entry>
   <entry>
@@ -861,41 +896,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【遊記】2019 橫跨平成&amp;令和的日本行（中國篇）</title>
-    <url>/2019/190726-japan-travel-chugoku/</url>
-    <content><![CDATA[<p><img src=""></p>
-<a id="more"></a>
-
-
-
-
-
-<h3 id="Day-5-相望｜山口県"><a href="#Day-5-相望｜山口県" class="headerlink" title="Day 5 - 相望｜山口県"></a>Day 5 - 相望｜山口県</h3><ul>
-<li>小倉</li>
-<li>下關</li>
-<li>廣島</li>
-</ul>
-<h3 id="Day-6-迷鹿｜広島県"><a href="#Day-6-迷鹿｜広島県" class="headerlink" title="Day 6 - 迷鹿｜広島県"></a>Day 6 - 迷鹿｜広島県</h3><ul>
-<li>吳市</li>
-<li>宮島</li>
-</ul>
-<h3 id="Day-7-｜岡山県"><a href="#Day-7-｜岡山県" class="headerlink" title="Day 7 - ｜岡山県"></a>Day 7 - ｜岡山県</h3><ul>
-<li></li>
-<li></li>
-</ul>
-<h3 id="Day-8-丹寧聖地｜香川県"><a href="#Day-8-丹寧聖地｜香川県" class="headerlink" title="Day 8 - 丹寧聖地｜香川県"></a>Day 8 - 丹寧聖地｜香川県</h3><ul>
-<li>兒島（岡山）</li>
-<li>高松</li>
-</ul>
-]]></content>
-      <categories>
-        <category>旅遊日誌</category>
-      </categories>
-      <tags>
-        <tag>日本行</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【ACGN】淺談《Fate系列》的世界觀（動畫篇）</title>
     <url>/2019/190826-fate-anime-talk/</url>
     <content><![CDATA[<img width="800px" src="https://i.imgur.com/0JwWkJf.png"/>
@@ -910,27 +910,27 @@
 <p>嗯、沒錯，正是小弟不才我的回文。<br>這篇同時也被放在<code>TYPE-MOON巴哈版置頂區</code>的某個角落，看看回文時間2015年轉眼也過了四年。基於巴哈系統會砍古文、加上這四年來Fate系列很多衍生作品動畫化，趁暑假最後還有點空閒把至今為止的動畫整理一下，另外再簡單帶些<strong>TYPE-MOON</strong>（以下簡稱<strong>TM</strong>）的世界觀。</p>
 <p>標題雖然寫著《<strong>Fate系列</strong>》，但其實整個系列是被歸類在<strong>TM</strong>這個社團底下，所以Fate世界中有些橋段多多少少會和其他作品連動，甚至在<strong>TM</strong>十週年的紀念動畫混了Fate系列一大堆角色梗XD</p>
 <hr>
-<h3 id="本傳"><a href="#本傳" class="headerlink" title="本傳"></a>本傳</h3><p>簡單解釋一下《<strong>Fate</strong>》本傳。<br>最早《<strong>Fate/Stay Night</strong>》是以R18的PC文字冒險遊戲登場，故事根據遊戲選項主要以<strong>三條路線（世界線）</strong>作為結局，分別是<strong>Saber線</strong>（也有人稱<strong>Fate線</strong>）、<strong>UBW線</strong> 以及<strong>HF線</strong>，而動畫就是以這三條分別作為主軸，然後在劇情方面稍做修改。</p>
-<p>上述《<strong>Fate/Stay Night</strong>》的故事背景是在冬木市<strong>第五次聖杯戰爭</strong>，之後出現的《<strong>Fate/Zero</strong>》是<strong>第四次聖杯戰爭</strong>，也就是所謂的前傳。</p>
+<h3 id="本傳"><a href="#本傳" class="headerlink" title="本傳"></a>本傳</h3><p>簡單解釋一下《<strong>Fate</strong>》本傳。<br>最早《<strong>Fate/Stay Night</strong>》是以R18的PC文字冒險遊戲登場，故事根據遊戲選項主要以<strong>三條路線（世界線）</strong>作為結局，分別是<strong>Fate線</strong>（又稱<strong>Saber線</strong>）、<strong>UBW線</strong>（又稱<strong>凜線</strong>） 以及<strong>HF線</strong>（又稱<strong>櫻線</strong>），而動畫就是以這三條分別作為主軸，然後在劇情方面稍做修改。</p>
+<p>上述《<strong>Fate/Stay Night</strong>》的故事背景是在冬木市<strong>第五次聖杯戰爭</strong>。<br>之後出現的《<strong>Fate/Zero</strong>》是<strong>第四次聖杯戰爭</strong>，也就是所謂的前傳！</p>
 <div class="note info">
             <p><strong>若要問動畫該從哪裡開始看呢？</strong></p>
           </div>
 
-<p>原則上《<strong>Fate/Stay Night</strong>》三條世界線劇情互相不衝突，<font color="red">個人建議是照著開播順序慢慢追</font>，一方面是畫風接受度的問題<del>（像我自己已經被ufortable的精美作畫養壞，回不去2006年的F/SN了）</del>，另一方面是有些橋段要先看過F/SN再看F/Z才有辦法瞭解前後的心境轉變，以下<strong>依照開播時間</strong>列出來簡單點評。</p>
+<p>原則上《<strong>Fate/Stay Night</strong>》三條世界線劇情互相不衝突，<font color="red">個人建議是照著開播順序慢慢追</font>，一方面是畫風接受度的問題<del>（像我自己已經被ufotable的精美作畫養壞，回不去2006年的F/SN了）</del>，另一方面是有些橋段要先看過F/SN再看F/Z才有辦法瞭解前後的心境轉變，以下<strong>依照開播時間</strong>列出來簡單點評。</p>
 <p><font color="#5500DD">✿ 以下動畫開播時間以”季”為單位，例如”06冬”=2006年1月～2006年3月，以此類推。</font></p>
 <ul>
-<li><strong>Fate/Stay Night</strong>（Saber線）[ 06冬、06春 ] 共 24 話<ul>
+<li><strong>Fate/Stay Night</strong>（Fate線/Saber線）[ 06冬、06春 ] 共 24 話<ul>
 <li>Fate系列首次動畫化的作品</li>
 <li>畫風和現在2019相比之下有相當大的落差，如果能接受的補完吧 : &gt;</li>
 </ul>
 </li>
 </ul>
 <ul>
-<li><strong>Fate/Stay Night</strong> （UBW線）[ 劇場版(2010) ] 共 1 部<ul>
+<li><strong>Fate/Stay Night</strong> （UBW線/凜線）[ 劇場版(2010) ] 共 1 部<ul>
 <li><strong>UBW</strong> 全名為 Unlimited Blade Works</li>
 <li>由STUDIO DEEN動畫公司製作，所以有些人稱Deen版UBW</li>
 <li>這部在作畫和劇情編排的評價上正反都有，自行斟酌收看</li>
-<li>由於2014年ufortable動畫公司以同樣UBW線製作26話動畫，<font color="#0044BB">基本上這部劇場版可以跳過</font></li>
+<li>由於2014年ufortable動畫公司以同樣UBW線製作26話動畫，<font color="#0044BB">基本上這部劇場版建議可以跳過</font></li>
 </ul>
 </li>
 </ul>
@@ -943,15 +943,15 @@
 </li>
 </ul>
 <ul>
-<li><strong>Fate/Stay Night</strong> （UBW線）[ 14秋、15春 ] 共 26 話<ul>
-<li>和2010劇場版是同一條世界線</li>
-<li>壯哉我大ufortable，作畫非常精良，<font color="#CC0000">強推！</font></li>
+<li><strong>Fate/Stay Night</strong> （UBW線/凜線）[ 14秋、15春 ] 共 26 話<ul>
+<li>和2010劇場版是同一條世界線，但動畫公司不同</li>
+<li>壯哉我大ufotable，作畫非常精良，<font color="#CC0000">強推！</font></li>
 </ul>
 </li>
 </ul>
 <ul>
-<li><strong>Fate/Stay Night</strong>（HF線）[ 劇場版(2017-2020) ] 共 3 部<ul>
-<li><strong>HF</strong> 全名為 Heaven’s Feel</li>
+<li><strong>Fate/Stay Night</strong>（HF線/櫻線）[ 劇場版(2017-2020) ] 共 3 部<ul>
+<li><strong>HF</strong> 全名為 Heaven’s Feel，也翻作「天之杯」</li>
 <li>劇情份量是三條世界線中最多、PC遊戲中也是解謎重點</li>
 <li>劇場版分成三個部分播出<ul>
 <li>《I. presage flower》（台譯: 預示之花）日本 2017/10 上映</li>
@@ -959,7 +959,8 @@
 <li>《III. spring song》（台譯: 春櫻之歌）日本 2020/8 上映</li>
 </ul>
 </li>
-<li><del>我還沒開始看 QQ</del></li>
+<li>劇情前期跳了蠻多細節，建議至少要補上面那個UBW線，頂多再加個Fate/Zero會更瞭解角色之間的關係。</li>
+<li>ufotable品質保證，那個戰鬥畫面配4DX真的讓我一直興奮發抖&gt;&lt;  <font color="#CC0000">強推！</font></li>
 </ul>
 </li>
 </ul>
@@ -967,7 +968,7 @@
 <li><strong>艾梅洛閣下II世事件簿</strong> [ 19夏 ] 共 13 話 + EP.0<ul>
 <li>副標題為 <strong>-魔眼蒐集列車 Grace note-</strong></li>
 <li>故事背景為第四次聖杯戰爭（F/Z）的十年後，以F/Z角色<strong>韋伯</strong>作為主角</li>
-<li>關於”魔眼”的描述可參考<strong>TM</strong>底下《<strong>空之境界</strong>》、《<strong>月姬</strong>》，或是《<strong>F/SN</strong>》HF線（？</li>
+<li>關於”魔眼”的描述可參考<strong>TM</strong>底下《<strong>空之境界</strong>》、《<strong>月姬</strong>》</li>
 <li>分類上理應在外傳比較適當，但劇情中多次提及韋伯視角中F/Z橋段，所以個人視為本傳延伸</li>
 </ul>
 </li>
@@ -999,10 +1000,15 @@
 </li>
 </ul>
 <ul>
-<li>Fate/Grand order  [ 19秋 ] 共 21 話 + EP.0<ul>
-<li>副標題為 <strong>-絕對魔獸戰線巴比倫尼亞-</strong></li>
+<li>Fate/Grand order<ul>
 <li>傳說中的手遊FGO、感謝各位乾爹讓我們有動畫可以看 ᕕ ( ᐛ ) ᕗ</li>
-<li>由玩家票選出來的主線任務改編動畫，不排除未來會有其他系列動畫XD</li>
+<li>目前動畫化的劇情：<ul>
+<li><strong>-First Order-</strong> [ 長篇動畫(2016) ] 共 1 話</li>
+<li><strong>-MOONLIGHT/LOSTROOM-</strong> [ 短篇動畫(2017) ] 共 1 話</li>
+<li><strong>-絕對魔獸戰線巴比倫尼亞-</strong> [ 19秋 ] 共 21 話 + EP.0</li>
+<li><strong>-神聖圓桌領域卡美洛-</strong> [ 劇場版(2020預定) ] 共 2 話</li>
+</ul>
+</li>
 <li><del>我還沒看 QQ</del></li>
 </ul>
 </li>
@@ -1114,41 +1120,6 @@
       </tags>
   </entry>
   <entry>
-    <title>實驗室日誌 0x01</title>
-    <url>/2019/191020-Lab-Log-0x01/</url>
-    <content><![CDATA[<p><img src="https://i.imgur.com/dmo2ZOk.jpg"></p>
-<p>圖片是我在實驗室的個人座位，讚讚！</p>
-<p>我在今年九月正式加入了西子灣大學的資安實驗室，姑且先來篇近況分享一下。</p>
-<p>會有這篇還有個原因… 那就是我的電腦終於可以用啦！雙螢幕初體驗 ヾ(〃^∇^)ﾉ</p>
-<a id="more"></a>
-
-
-
-<p>目前我在實驗室主要的除了基本課業以外，還有一些被指派計畫要協助處理</p>
-<p>再來是每週小咪、大咪，以及兩週一次TWISC開會，真的蠻充實的QQ</p>
-<p>在老闆的支持下這學期成立了資安社，雖然主要面向是大學生，但我跑去當吃瓜助教</p>
-<p>畢竟在資安競賽這方面還是個新手，和競程相比又更多更複雜…</p>
-<p>然後我和實驗室夥伴stavhaygn成立了MacacaHub，暫時應該是拿來當CTF隊名XD</p>
-<hr>
-<p>由於剛進實驗室的時候發生一點小差錯，所以我的電腦要重新採購</p>
-<p>大概從九月中開始算吧，過了半個月後主機才送來了（</p>
-<p>但還是沒有螢幕可用… 因此剛配置完主機只好先借了一台螢幕灌OS</p>
-<p>然後用手邊的筆電連實驗室主機XDDDD 反正現階段也只有找IEEE論文需要用學校IP</p>
-<p><img src="https://i.imgur.com/6cvFjPf.jpg"></p>
-<p>直到最近才終於收到雙螢幕，真的方便許多~</p>
-<p>不過不知道為何用Windows 10沒辦法讓兩邊的螢幕維持相同的解析度…</p>
-<p>雖然是一邊是HDMI、另一邊是D-SUB(VGA)，但無論是更新drivers還是重灌都無解QQ</p>
-<p>最後掙扎了一段時間才決定改灌Ubuntu，反正之後CTF應該也會用到（？</p>
-<p>嗯總而言之 這篇應該就是雙螢幕初體驗 兼開箱文（笑）</p>
-<p>-</p>
-<p>附上剛剛下載的screenfetch，好潮www</p>
-<p><img src="https://i.imgur.com/8eOWjhT.png"></p>
-]]></content>
-      <categories>
-        <category>實驗室日誌</category>
-      </categories>
-  </entry>
-  <entry>
     <title>【CTF】108年金盾獎決賽 麥當勞吃到飽 ฅ&#39;ω&#39;ฅ</title>
     <url>/2019/191116-108-cyber-security-competition/</url>
     <content><![CDATA[<p><img src="https://i.imgur.com/7cuYWZm.jpg"></p>
@@ -1235,6 +1206,140 @@
       <tags>
         <tag>CTF</tag>
         <tag>108金盾獎</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>實驗室日誌 0x01</title>
+    <url>/2019/191020-Lab-Log-0x01/</url>
+    <content><![CDATA[<p><img src="https://i.imgur.com/dmo2ZOk.jpg"></p>
+<p>圖片是我在實驗室的個人座位，讚讚！</p>
+<p>我在今年九月正式加入了西子灣大學的資安實驗室，姑且先來篇近況分享一下。</p>
+<p>會有這篇還有個原因… 那就是我的電腦終於可以用啦！雙螢幕初體驗 ヾ(〃^∇^)ﾉ</p>
+<a id="more"></a>
+
+
+
+<p>目前我在實驗室主要的除了基本課業以外，還有一些被指派計畫要協助處理</p>
+<p>再來是每週小咪、大咪，以及兩週一次TWISC開會，真的蠻充實的QQ</p>
+<p>在老闆的支持下這學期成立了資安社，雖然主要面向是大學生，但我跑去當吃瓜助教</p>
+<p>畢竟在資安競賽這方面還是個新手，和競程相比又更多更複雜…</p>
+<p>然後我和實驗室夥伴stavhaygn成立了MacacaHub，暫時應該是拿來當CTF隊名XD</p>
+<hr>
+<p>由於剛進實驗室的時候發生一點小差錯，所以我的電腦要重新採購</p>
+<p>大概從九月中開始算吧，過了半個月後主機才送來了（</p>
+<p>但還是沒有螢幕可用… 因此剛配置完主機只好先借了一台螢幕灌OS</p>
+<p>然後用手邊的筆電連實驗室主機XDDDD 反正現階段也只有找IEEE論文需要用學校IP</p>
+<p><img src="https://i.imgur.com/6cvFjPf.jpg"></p>
+<p>直到最近才終於收到雙螢幕，真的方便許多~</p>
+<p>不過不知道為何用Windows 10沒辦法讓兩邊的螢幕維持相同的解析度…</p>
+<p>雖然是一邊是HDMI、另一邊是D-SUB(VGA)，但無論是更新drivers還是重灌都無解QQ</p>
+<p>最後掙扎了一段時間才決定改灌Ubuntu，反正之後CTF應該也會用到（？</p>
+<p>嗯總而言之 這篇應該就是雙螢幕初體驗 兼開箱文（笑）</p>
+<p>-</p>
+<p>附上剛剛下載的screenfetch，好潮www</p>
+<p><img src="https://i.imgur.com/8eOWjhT.png"></p>
+]]></content>
+      <categories>
+        <category>實驗室日誌</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【Project】Voronoi Diagram</title>
+    <url>/2019/191208-voronoi-diagram-project/</url>
+    <content><![CDATA[<p><a href="https://twitter.com/potch/status/1129095107855040513?s=20"><img src="https://pbs.twimg.com/media/D6tZ-v4UIAAMm7t?format=jpg&name=large"></a></p>
+<p>Hmmmmmmm… 上圖是理想中的Voronoi Diagram</p>
+<p>不過很遺憾的是Algorithm這門課我沒成功做出來QQ</p>
+<p>即便如此還是要寫報告：）</p>
+<a id="more"></a>
+
+<p>&nbsp;</p>
+<p>時程規劃</p>
+<ul>
+<li>11/14 初測(基本功能+3點VD)：19.5 / 20</li>
+<li>12/05 完測(完整功能+4點以上VD)：34 / 60</li>
+<li>12/13 報告撰寫：?? / 20</li>
+</ul>
+<p><a href="http://par.cse.nsysu.edu.tw/~cbyang/course/algo/algo_report.htm">實施要點</a>&nbsp;&nbsp;<a href="http://par.cse.nsysu.edu.tw/~cbyang/course/algo/Voronoi_evaluate_first.pdf">初測評分標準</a>&nbsp;&nbsp;<a href="http://par.cse.nsysu.edu.tw/~cbyang/course/algo/Voronoi_evaluate_second.pdf">完測評分標準</a></p>
+<p>Code: <a href="https://github.com/yctseng1227/voronoi_project">https://github.com/yctseng1227/voronoi_project</a></p>
+<p>從<code>commits</code>數量應該不難看出花了不少時間在上面，但效果顯然很糟</p>
+<p>我爛 QQ</p>
+<hr>
+<p>由於這份作業不光是寫出VD演算法，還必須將圖片畫出來！<br>所以在作圖上我選擇Python，想說CTF也會用到就加減練語法M(_ _)M</p>
+<p>使用的環境是Python 3.6，考慮到會用到一些奇怪套件，所以先建立虛擬環境venv等前置作業。</p>
+<p>作圖方面原本採用的是Python開源函式庫-<code>kivy</code>，結果因為助教的作業環境是Windows，所以打包成<code>.exe</code>的過程會發生套件衝突，因此在初測前幾天忍痛搬家到Python內建函式庫-<code>tkinter</code>，這過程大約花了我一天的時間在處理QQ</p>
+<p>先來看看還沒初測就胎死腹中的<code>kivy</code>介面👇👇</p>
+<p><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic05.png?raw=true"></p>
+<p>個人覺得<code>kivy</code>在圖形界面上比較理想，而且<code>.kv</code>在建構上也比較容易整理，臨時搬到<code>tkinter</code>反而code被我寫爛了，雖然是可以勉強執行，但造成後續寫多點VD維護上的困難QQ</p>
+<p>另外在打包<code>.exe</code>方面，由於我的作業環境是UbuntuOS，在該系統的<code>Pyinstaller</code>操作下生成的執行檔並無法在WindowsOS環境下執行，最後折衷和同學借電腦進行打包，也因此沒機會針對<code>.exe</code>作多次檢查，結果就是初測時發生<code>.py</code>和<code>.exe</code>執行同一筆測資出現不同的結果，真的是見鬼了wwww 至今還是沒辦法解釋該情況怎麼會出現…</p>
+<p>而在多點VD的操作上，單純以Divide-and-Conquer演算法來說並不困難，但是在圖形的實現方面需要考量線條的距離繪製，比起消除多餘線條，個人傾向修正線條的起訖。在進行Hyperplane的時候，撞到的VD線不曉得到底該往哪邊進行縮減，導致最後畫出來的結果常常會是相反的方向，這細節大部分的VD的不太會提及，因此debug方面花了相當多的時間去”猜”怎麼畫線，最後還是不如預期地拿了低分（唉</p>
+<p>另外就是step by step，平常少有機會遇到這種操作，我用的是以<code>list</code>形式把每個不同階段的points list和edge list記錄下來，等需要的時候(按button)再逐一從該<code>list</code>取出來繪製，不過在完測時看起來是儲存points list和edge list的時機不對，造成斷點相當明顯稍稍覺得可惜。</p>
+<p>總體來說，花了時間卻拿不到相對的分數，嗚嗚浪費時間QQ</p>
+<p>簡單介紹一下功能：</p>
+<p><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic02.png?raw=true"></p>
+<ul>
+<li>import: 讀檔格式如下</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">P 103 200</span><br><span class="line">P 193 64</span><br><span class="line">P 193 370</span><br><span class="line">P 283 200</span><br><span class="line">E 0 34 193 161</span><br><span class="line">E 0 363 193 261</span><br><span class="line">E 193 161 193 261</span><br><span class="line">E 193 161 437 0</span><br><span class="line">E 193 261 600 476</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>load: 讀檔格式如下</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># comment</span><br><span class="line">6</span><br><span class="line">487 191</span><br><span class="line">417 388</span><br><span class="line">504 349</span><br><span class="line">681 125</span><br><span class="line">589 282</span><br><span class="line">725 279</span><br><span class="line">6</span><br><span class="line">69 304</span><br><span class="line">110 449</span><br><span class="line">174 333</span><br><span class="line">244 280</span><br><span class="line">335 139</span><br><span class="line">355 284</span><br><span class="line">12</span><br><span class="line">69 304</span><br><span class="line">174 333</span><br><span class="line">110 449</span><br><span class="line">335 139</span><br><span class="line">244 280</span><br><span class="line">355 284</span><br><span class="line">487 191</span><br><span class="line">417 388</span><br><span class="line">504 349</span><br><span class="line">681 125</span><br><span class="line">589 282</span><br><span class="line">725 279</span><br><span class="line">0</span><br><span class="line"># any else?</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>random: 隨機生成N個點，預設為6點可重複疊加</li>
+<li>save: 將point, edge存成<code>import</code>格式</li>
+<li>next case: 當讀入的檔有多筆case，依此按鈕進行下一筆testcase</li>
+<li>step by step: 依Divide-and-Conquer逐步執行</li>
+<li>run VD: 畫出Voronoi Diagram結果</li>
+<li>clear：清除畫布</li>
+<li>convex hull: 將所有的Convex Hull畫出，算是拿來dubug用的XD</li>
+</ul>
+<p>環境</p>
+<ul>
+<li>Operating System<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">                         ./+o+-       </span><br><span class="line">                 yyyyy- -yyyyyy+      Username: yctseng</span><br><span class="line">              :<span class="comment">//+//////-yyyyyyo      OS: Ubuntu 18.04 bionic</span></span><br><span class="line">          .++ .:<span class="regexp">/++++++/</span>-.+sss/<span class="string">`      Kernel: x86_64 Linux 5.0.0-36-generic</span></span><br><span class="line"><span class="string">        .:++o:  /++++++++/:--:/-      Uptime: 9d 18h 15m</span></span><br><span class="line"><span class="string">       o:+o+:++.`</span>..<span class="string">``</span><span class="string">`.-/oo+++++/     Packages: 2347</span></span><br><span class="line"><span class="string">      .:+o:+o/.          `</span>+sssoo+/    Shell: bash <span class="number">4.4</span><span class="number">.20</span></span><br><span class="line"> .++<span class="regexp">/+:+oo+o:`             /</span>sssooo.   Resolution: <span class="number">3840</span>x1080</span><br><span class="line">/+++<span class="comment">//+:`oo+o               /::--:.   DE: GNOME </span></span><br><span class="line">\+<span class="regexp">/+o+++`o++o               ++/</span><span class="regexp">//</span><span class="regexp">/.   WM: GNOME Shell</span></span><br><span class="line"><span class="regexp"> .++.o+++oo+:`             /</span>dddhhh.   WM Theme: Adwaita</span><br><span class="line">      .+.o+oo:.          <span class="string">`oddhhhh+    GTK Theme: Ambiance [GTK2/3]</span></span><br><span class="line"><span class="string">       \+.++o+o`</span><span class="string">`-`</span><span class="string">``</span><span class="string">`.:ohdhhhhh+     Icon Theme: ubuntu-mono-dark</span></span><br><span class="line"><span class="string">        `</span>:o+++ <span class="string">`ohhhhhhhhyo++os:      Font: Ubuntu 11</span></span><br><span class="line"><span class="string">          .o:`</span>.syhhhhhhh/.oo++o<span class="string">`      CPU: Intel Core i7-8700 @ 12x 4.6GHz</span></span><br><span class="line"><span class="string">              /osyyyyyyo++ooo+++/     GPU: intel</span></span><br><span class="line"><span class="string">                  `</span><span class="string">``</span><span class="string">``</span> +oo+++o\:     RAM: <span class="number">15831</span>MiB</span><br><span class="line">                         <span class="string">`oo++.</span></span><br></pre></td></tr></table></figure></li>
+<li>Python3.6 (Virtual environment)</li>
+<li>Package version<ul>
+<li>imutils==0.5.3</li>
+<li>Kivy==1.11.1</li>
+<li>numpy==1.13.3</li>
+<li>scipy==0.19.1</li>
+<li>pyinstaller==3.5 (WindowsOS)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a><strong>Data Structure</strong></h3><ul>
+<li><strong>Point</strong>:<br>用Python的<code>tuple</code>資料型態以$(x, y)$儲存讀入的points，再放入<code>list</code>當作該testcase的point list。</li>
+<li><strong>Edge</strong><br>從Python環境而言，必須用兩點才能畫成一線，所以在資料結構上以$[(x1, y1), (x2, y2)]$方式儲存。另外一種是進行中垂線繪製時，由於除了該中垂線以原本$[(x3, y3), (x4, y4)]$ 儲存外，還必須記錄該線是以哪一條線作為中線基準，因此儲存方式為$[(x3, y3), (x4, y4), (form_x1, form_y1), (form_x2, form_y2)]$，方便後續進行VD。</li>
+<li><strong>Convex Hull (CH)</strong><br>前置作業為針對$x$座標將point list進行排序，因此CH function的回傳值為CH的描點順序。</li>
+<li><strong>Voronoi Diagram (VD)</strong><br>VD的資料型態為edge list，其中不乏上述Edge data structure的兩種儲存方式。</li>
+</ul>
+<h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a><strong>Algorithm</strong></h3><ul>
+<li><p><strong>Convex Hull (CH)</strong><br>利用排序先找到最外圍的任一point作為起點，窮舉平面上所有的點，利用向量積(cross product)判斷是否在圈內or圈外，順著外圍繞一圈。</p>
+</li>
+<li><p><strong>Voronoi Diagram (VD)</strong><br>3點以內利用外心以及各邊的中點，考慮各種情況下畫出VD。<br>多點情況，利用<code>Divide-and-Conquer</code>進行實作，在遞迴至3點以下時將會直接回傳結果，此外將point set拆成兩邊進行遞迴後再合併，詳見如下(n為points count)。<br>$$ f(point\ set)=\left{<br>\begin{aligned}<br>Do\ nothing &amp;&amp; n = 1 \<br>Return\ Line &amp;&amp; n = 2 \<br>Return\ VD &amp;&amp; n = 3 \<br>Return\ Merge(f(point\ set[0, n/2]),f(point\ set[n/2, n])) &amp;&amp; n &gt; 3 \<br>\end{aligned}<br>\right.<br>$$<br>針對<code>Merge function</code>，其步驟如下:</p>
+</li>
+<li><p>step 0. Hyperplane預設在畫布由上往下描出。</p>
+</li>
+<li><p>step 1. 將兩邊points set各自以y座標進行排序，找出最上面兩點作為參考點。</p>
+</li>
+<li><p>step 2. 利用參考點畫出的中垂線作為Hyperplane，並且和兩邊VD的所有edge set找出最上面的交點，並記錄撞到的edge。</p>
+</li>
+<li><p>step 3. 根據撞到的edge進行參考點移動，並消除多餘的線。</p>
+</li>
+<li><p>step 4. 重複step 2和step 3，直到兩邊point set走到底為止。</p>
+</li>
+</ul>
+<center>(下面兩張圖各6點。<font color="#0000FF">藍線為CH</font>; <font color="#00FF00">綠線為VD</font>; <font color="FF0000">紅線為Hyperplane</font>)</center>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic07.png?raw=true"></div><div class="group-picture-column" style="width: 50%;"><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic06.png?raw=true"></div></div></div></div>
+
+<h3 id="Result"><a href="#Result" class="headerlink" title="Result"></a><strong>Result</strong></h3><p><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic03.png?raw=true"></p>
+]]></content>
+      <categories>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>Voronoi Diagram</tag>
       </tags>
   </entry>
   <entry>
@@ -1431,105 +1536,6 @@ Pwn大概就是這麼一回事了~
       <categories>
         <category>實驗室日誌</category>
       </categories>
-  </entry>
-  <entry>
-    <title>【Project】Voronoi Diagram</title>
-    <url>/2019/191208-voronoi-diagram-project/</url>
-    <content><![CDATA[<p><a href="https://twitter.com/potch/status/1129095107855040513?s=20"><img src="https://pbs.twimg.com/media/D6tZ-v4UIAAMm7t?format=jpg&name=large"></a></p>
-<p>Hmmmmmmm… 上圖是理想中的Voronoi Diagram</p>
-<p>不過很遺憾的是Algorithm這門課我沒成功做出來QQ</p>
-<p>即便如此還是要寫報告：）</p>
-<a id="more"></a>
-
-<p>&nbsp;</p>
-<p>時程規劃</p>
-<ul>
-<li>11/14 初測(基本功能+3點VD)：19.5 / 20</li>
-<li>12/05 完測(完整功能+4點以上VD)：34 / 60</li>
-<li>12/13 報告撰寫：?? / 20</li>
-</ul>
-<p><a href="http://par.cse.nsysu.edu.tw/~cbyang/course/algo/algo_report.htm">實施要點</a>&nbsp;&nbsp;<a href="http://par.cse.nsysu.edu.tw/~cbyang/course/algo/Voronoi_evaluate_first.pdf">初測評分標準</a>&nbsp;&nbsp;<a href="http://par.cse.nsysu.edu.tw/~cbyang/course/algo/Voronoi_evaluate_second.pdf">完測評分標準</a></p>
-<p>Code: <a href="https://github.com/yctseng1227/voronoi_project">https://github.com/yctseng1227/voronoi_project</a></p>
-<p>從<code>commits</code>數量應該不難看出花了不少時間在上面，但效果顯然很糟</p>
-<p>我爛 QQ</p>
-<hr>
-<p>由於這份作業不光是寫出VD演算法，還必須將圖片畫出來！<br>所以在作圖上我選擇Python，想說CTF也會用到就加減練語法M(_ _)M</p>
-<p>使用的環境是Python 3.6，考慮到會用到一些奇怪套件，所以先建立虛擬環境venv等前置作業。</p>
-<p>作圖方面原本採用的是Python開源函式庫-<code>kivy</code>，結果因為助教的作業環境是Windows，所以打包成<code>.exe</code>的過程會發生套件衝突，因此在初測前幾天忍痛搬家到Python內建函式庫-<code>tkinter</code>，這過程大約花了我一天的時間在處理QQ</p>
-<p>先來看看還沒初測就胎死腹中的<code>kivy</code>介面👇👇</p>
-<p><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic05.png?raw=true"></p>
-<p>個人覺得<code>kivy</code>在圖形界面上比較理想，而且<code>.kv</code>在建構上也比較容易整理，臨時搬到<code>tkinter</code>反而code被我寫爛了，雖然是可以勉強執行，但造成後續寫多點VD維護上的困難QQ</p>
-<p>另外在打包<code>.exe</code>方面，由於我的作業環境是UbuntuOS，在該系統的<code>Pyinstaller</code>操作下生成的執行檔並無法在WindowsOS環境下執行，最後折衷和同學借電腦進行打包，也因此沒機會針對<code>.exe</code>作多次檢查，結果就是初測時發生<code>.py</code>和<code>.exe</code>執行同一筆測資出現不同的結果，真的是見鬼了wwww 至今還是沒辦法解釋該情況怎麼會出現…</p>
-<p>而在多點VD的操作上，單純以Divide-and-Conquer演算法來說並不困難，但是在圖形的實現方面需要考量線條的距離繪製，比起消除多餘線條，個人傾向修正線條的起訖。在進行Hyperplane的時候，撞到的VD線不曉得到底該往哪邊進行縮減，導致最後畫出來的結果常常會是相反的方向，這細節大部分的VD的不太會提及，因此debug方面花了相當多的時間去”猜”怎麼畫線，最後還是不如預期地拿了低分（唉</p>
-<p>另外就是step by step，平常少有機會遇到這種操作，我用的是以<code>list</code>形式把每個不同階段的points list和edge list記錄下來，等需要的時候(按button)再逐一從該<code>list</code>取出來繪製，不過在完測時看起來是儲存points list和edge list的時機不對，造成斷點相當明顯稍稍覺得可惜。</p>
-<p>總體來說，花了時間卻拿不到相對的分數，嗚嗚浪費時間QQ</p>
-<p>簡單介紹一下功能：</p>
-<p><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic02.png?raw=true"></p>
-<ul>
-<li>import: 讀檔格式如下</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">P 103 200</span><br><span class="line">P 193 64</span><br><span class="line">P 193 370</span><br><span class="line">P 283 200</span><br><span class="line">E 0 34 193 161</span><br><span class="line">E 0 363 193 261</span><br><span class="line">E 193 161 193 261</span><br><span class="line">E 193 161 437 0</span><br><span class="line">E 193 261 600 476</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>load: 讀檔格式如下</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># comment</span><br><span class="line">6</span><br><span class="line">487 191</span><br><span class="line">417 388</span><br><span class="line">504 349</span><br><span class="line">681 125</span><br><span class="line">589 282</span><br><span class="line">725 279</span><br><span class="line">6</span><br><span class="line">69 304</span><br><span class="line">110 449</span><br><span class="line">174 333</span><br><span class="line">244 280</span><br><span class="line">335 139</span><br><span class="line">355 284</span><br><span class="line">12</span><br><span class="line">69 304</span><br><span class="line">174 333</span><br><span class="line">110 449</span><br><span class="line">335 139</span><br><span class="line">244 280</span><br><span class="line">355 284</span><br><span class="line">487 191</span><br><span class="line">417 388</span><br><span class="line">504 349</span><br><span class="line">681 125</span><br><span class="line">589 282</span><br><span class="line">725 279</span><br><span class="line">0</span><br><span class="line"># any else?</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>random: 隨機生成N個點，預設為6點可重複疊加</li>
-<li>save: 將point, edge存成<code>import</code>格式</li>
-<li>next case: 當讀入的檔有多筆case，依此按鈕進行下一筆testcase</li>
-<li>step by step: 依Divide-and-Conquer逐步執行</li>
-<li>run VD: 畫出Voronoi Diagram結果</li>
-<li>clear：清除畫布</li>
-<li>convex hull: 將所有的Convex Hull畫出，算是拿來dubug用的XD</li>
-</ul>
-<p>環境</p>
-<ul>
-<li>Operating System<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">                         ./+o+-       </span><br><span class="line">                 yyyyy- -yyyyyy+      Username: yctseng</span><br><span class="line">              :<span class="comment">//+//////-yyyyyyo      OS: Ubuntu 18.04 bionic</span></span><br><span class="line">          .++ .:<span class="regexp">/++++++/</span>-.+sss/<span class="string">`      Kernel: x86_64 Linux 5.0.0-36-generic</span></span><br><span class="line"><span class="string">        .:++o:  /++++++++/:--:/-      Uptime: 9d 18h 15m</span></span><br><span class="line"><span class="string">       o:+o+:++.`</span>..<span class="string">``</span><span class="string">`.-/oo+++++/     Packages: 2347</span></span><br><span class="line"><span class="string">      .:+o:+o/.          `</span>+sssoo+/    Shell: bash <span class="number">4.4</span><span class="number">.20</span></span><br><span class="line"> .++<span class="regexp">/+:+oo+o:`             /</span>sssooo.   Resolution: <span class="number">3840</span>x1080</span><br><span class="line">/+++<span class="comment">//+:`oo+o               /::--:.   DE: GNOME </span></span><br><span class="line">\+<span class="regexp">/+o+++`o++o               ++/</span><span class="regexp">//</span><span class="regexp">/.   WM: GNOME Shell</span></span><br><span class="line"><span class="regexp"> .++.o+++oo+:`             /</span>dddhhh.   WM Theme: Adwaita</span><br><span class="line">      .+.o+oo:.          <span class="string">`oddhhhh+    GTK Theme: Ambiance [GTK2/3]</span></span><br><span class="line"><span class="string">       \+.++o+o`</span><span class="string">`-`</span><span class="string">``</span><span class="string">`.:ohdhhhhh+     Icon Theme: ubuntu-mono-dark</span></span><br><span class="line"><span class="string">        `</span>:o+++ <span class="string">`ohhhhhhhhyo++os:      Font: Ubuntu 11</span></span><br><span class="line"><span class="string">          .o:`</span>.syhhhhhhh/.oo++o<span class="string">`      CPU: Intel Core i7-8700 @ 12x 4.6GHz</span></span><br><span class="line"><span class="string">              /osyyyyyyo++ooo+++/     GPU: intel</span></span><br><span class="line"><span class="string">                  `</span><span class="string">``</span><span class="string">``</span> +oo+++o\:     RAM: <span class="number">15831</span>MiB</span><br><span class="line">                         <span class="string">`oo++.</span></span><br></pre></td></tr></table></figure></li>
-<li>Python3.6 (Virtual environment)</li>
-<li>Package version<ul>
-<li>imutils==0.5.3</li>
-<li>Kivy==1.11.1</li>
-<li>numpy==1.13.3</li>
-<li>scipy==0.19.1</li>
-<li>pyinstaller==3.5 (WindowsOS)</li>
-</ul>
-</li>
-</ul>
-<h3 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a><strong>Data Structure</strong></h3><ul>
-<li><strong>Point</strong>:<br>用Python的<code>tuple</code>資料型態以$(x, y)$儲存讀入的points，再放入<code>list</code>當作該testcase的point list。</li>
-<li><strong>Edge</strong><br>從Python環境而言，必須用兩點才能畫成一線，所以在資料結構上以$[(x1, y1), (x2, y2)]$方式儲存。另外一種是進行中垂線繪製時，由於除了該中垂線以原本$[(x3, y3), (x4, y4)]$ 儲存外，還必須記錄該線是以哪一條線作為中線基準，因此儲存方式為$[(x3, y3), (x4, y4), (form_x1, form_y1), (form_x2, form_y2)]$，方便後續進行VD。</li>
-<li><strong>Convex Hull (CH)</strong><br>前置作業為針對$x$座標將point list進行排序，因此CH function的回傳值為CH的描點順序。</li>
-<li><strong>Voronoi Diagram (VD)</strong><br>VD的資料型態為edge list，其中不乏上述Edge data structure的兩種儲存方式。</li>
-</ul>
-<h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a><strong>Algorithm</strong></h3><ul>
-<li><p><strong>Convex Hull (CH)</strong><br>利用排序先找到最外圍的任一point作為起點，窮舉平面上所有的點，利用向量積(cross product)判斷是否在圈內or圈外，順著外圍繞一圈。</p>
-</li>
-<li><p><strong>Voronoi Diagram (VD)</strong><br>3點以內利用外心以及各邊的中點，考慮各種情況下畫出VD。<br>多點情況，利用<code>Divide-and-Conquer</code>進行實作，在遞迴至3點以下時將會直接回傳結果，此外將point set拆成兩邊進行遞迴後再合併，詳見如下(n為points count)。<br>$$ f(point\ set)=\left{<br>\begin{aligned}<br>Do\ nothing &amp;&amp; n = 1 \<br>Return\ Line &amp;&amp; n = 2 \<br>Return\ VD &amp;&amp; n = 3 \<br>Return\ Merge(f(point\ set[0, n/2]),f(point\ set[n/2, n])) &amp;&amp; n &gt; 3 \<br>\end{aligned}<br>\right.<br>$$<br>針對<code>Merge function</code>，其步驟如下:</p>
-</li>
-<li><p>step 0. Hyperplane預設在畫布由上往下描出。</p>
-</li>
-<li><p>step 1. 將兩邊points set各自以y座標進行排序，找出最上面兩點作為參考點。</p>
-</li>
-<li><p>step 2. 利用參考點畫出的中垂線作為Hyperplane，並且和兩邊VD的所有edge set找出最上面的交點，並記錄撞到的edge。</p>
-</li>
-<li><p>step 3. 根據撞到的edge進行參考點移動，並消除多餘的線。</p>
-</li>
-<li><p>step 4. 重複step 2和step 3，直到兩邊point set走到底為止。</p>
-</li>
-</ul>
-<center>(下面兩張圖各6點。<font color="#0000FF">藍線為CH</font>; <font color="#00FF00">綠線為VD</font>; <font color="FF0000">紅線為Hyperplane</font>)</center>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic07.png?raw=true"></div><div class="group-picture-column" style="width: 50%;"><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic06.png?raw=true"></div></div></div></div>
-
-<h3 id="Result"><a href="#Result" class="headerlink" title="Result"></a><strong>Result</strong></h3><p><img src="https://github.com/yctseng1227/voronoi_project/blob/master/pic/pic03.png?raw=true"></p>
-]]></content>
-      <categories>
-        <category>Algorithm</category>
-      </categories>
-      <tags>
-        <tag>Voronoi Diagram</tag>
-      </tags>
   </entry>
   <entry>
     <title>さようなら、大江戶。</title>
