@@ -291,7 +291,14 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/ITSA%E6%A1%82%E5%86%A0%E8%B3%BD/</loc>
+    <loc>blog.eevee.tw/tags/Codeforces/</loc>
+    <lastmod>2020-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>blog.eevee.tw/tags/April-Fools-Day/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -299,6 +306,13 @@
   
   <url>
     <loc>blog.eevee.tw/tags/Programming-Contest/</loc>
+    <lastmod>2020-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>blog.eevee.tw/tags/ITSA%E6%A1%82%E5%86%A0%E8%B3%BD/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -313,20 +327,6 @@
   
   <url>
     <loc>blog.eevee.tw/tags/Asus-5Z/</loc>
-    <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>blog.eevee.tw/tags/Codeforces/</loc>
-    <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>blog.eevee.tw/tags/April-Fools-Day/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -389,14 +389,14 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/108%E9%87%91%E7%9B%BE%E7%8D%8E/</loc>
+    <loc>blog.eevee.tw/tags/Voronoi-Diagram/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/HTCF/</loc>
+    <loc>blog.eevee.tw/tags/108%E9%87%91%E7%9B%BE%E7%8D%8E/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -417,7 +417,7 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/Voronoi-Diagram/</loc>
+    <loc>blog.eevee.tw/tags/HTCF/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
