@@ -333,14 +333,14 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/%E6%97%A5%E6%9C%AC%E8%A1%8C/</loc>
+    <loc>blog.eevee.tw/tags/%E7%A0%94%E7%A9%B6%E6%89%80%E6%8E%A8%E7%94%84/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/%E7%A0%94%E7%A9%B6%E6%89%80%E6%8E%A8%E7%94%84/</loc>
+    <loc>blog.eevee.tw/tags/%E6%97%A5%E6%9C%AC%E8%A1%8C/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -375,13 +375,6 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/108%E9%87%91%E7%9B%BE%E7%8D%8E/</loc>
-    <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>blog.eevee.tw/tags/Pokemon/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
@@ -390,6 +383,13 @@
   
   <url>
     <loc>blog.eevee.tw/tags/MegaHouse-G-E-M-EX-Series/</loc>
+    <lastmod>2020-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>blog.eevee.tw/tags/108%E9%87%91%E7%9B%BE%E7%8D%8E/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -496,6 +496,13 @@
   </url>
   
   <url>
+    <loc>blog.eevee.tw/categories/%E6%95%97%E5%AE%B6%E9%96%8B%E7%AE%B1/</loc>
+    <lastmod>2020-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>blog.eevee.tw/categories/%E4%BC%91%E9%96%92%E5%A8%9B%E6%A8%82/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
@@ -510,13 +517,6 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/categories/%E6%95%97%E5%AE%B6%E9%96%8B%E7%AE%B1/</loc>
-    <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>blog.eevee.tw/categories/Algorithm/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
@@ -524,14 +524,14 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/categories/%E6%97%85%E9%81%8A%E6%97%A5%E8%AA%8C/</loc>
+    <loc>blog.eevee.tw/categories/%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>blog.eevee.tw/categories/%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</loc>
+    <loc>blog.eevee.tw/categories/%E6%97%85%E9%81%8A%E6%97%A5%E8%AA%8C/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
