@@ -291,34 +291,6 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/Codeforces/</loc>
-    <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>blog.eevee.tw/tags/April-Fools-Day/</loc>
-    <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>blog.eevee.tw/tags/Programming-Contest/</loc>
-    <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>blog.eevee.tw/tags/ITSA%E6%A1%82%E5%86%A0%E8%B3%BD/</loc>
-    <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>blog.eevee.tw/tags/%E6%89%8B%E6%A9%9F/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
@@ -333,7 +305,28 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/%E6%97%A5%E6%9C%AC%E8%A1%8C/</loc>
+    <loc>blog.eevee.tw/tags/ITSA%E6%A1%82%E5%86%A0%E8%B3%BD/</loc>
+    <lastmod>2020-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>blog.eevee.tw/tags/Programming-Contest/</loc>
+    <lastmod>2020-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>blog.eevee.tw/tags/Codeforces/</loc>
+    <lastmod>2020-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>blog.eevee.tw/tags/April-Fools-Day/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -341,6 +334,13 @@
   
   <url>
     <loc>blog.eevee.tw/tags/%E7%A0%94%E7%A9%B6%E6%89%80%E6%8E%A8%E7%94%84/</loc>
+    <lastmod>2020-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>blog.eevee.tw/tags/%E6%97%A5%E6%9C%AC%E8%A1%8C/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -368,13 +368,6 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/Fate/</loc>
-    <lastmod>2020-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>blog.eevee.tw/tags/Pokemon/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
@@ -390,6 +383,13 @@
   
   <url>
     <loc>blog.eevee.tw/tags/Voronoi-Diagram/</loc>
+    <lastmod>2020-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>blog.eevee.tw/tags/Fate/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -524,14 +524,14 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/categories/%E6%97%85%E9%81%8A%E6%97%A5%E8%AA%8C/</loc>
+    <loc>blog.eevee.tw/categories/%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>blog.eevee.tw/categories/%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</loc>
+    <loc>blog.eevee.tw/categories/%E6%97%85%E9%81%8A%E6%97%A5%E8%AA%8C/</loc>
     <lastmod>2020-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
