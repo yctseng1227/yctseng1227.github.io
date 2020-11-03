@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://github.com/MacacaHub/CTF-writeups/raw/master/HTCF%20CTF/reverse_shell/pic/07.png">
 <meta property="og:image" content="https://github.com/MacacaHub/CTF-writeups/raw/master/HTCF%20CTF/reverse_shell/pic/08.png">
 <meta property="article:published_time" content="2020-11-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-11-03T07:18:47.421Z">
+<meta property="article:modified_time" content="2020-11-03T07:27:19.018Z">
 <meta property="article:author" content="yctseng">
 <meta property="article:tag" content="HTCF">
 <meta name="twitter:card" content="summary">
@@ -257,7 +257,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>5.4k</span>
+              <span>5.5k</span>
             </span>
 
         </div>
@@ -282,7 +282,7 @@
 <p>Writeups 搬自 <a target="_blank" rel="noopener" href="https://github.com/MacacaHub/CTF-writeups/tree/master/HTCF%20CTF/reverse_shell">MacacaHub HTCF reverse_shell</a></p>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>題目給定一封包檔 <code>.pcap</code> 進行分析，在封包數量不多的前提可以用 <code>Follow &gt; TCP stream</code> 把零碎的封包片段組起來方便查看，可以發現全部 14 筆 TCP stream 大部分都算是可讀資訊，但經過一段 PowerShell script 後，有一整段的封包完全不可讀（如圖）。</p>
 <p><img src="https://github.com/MacacaHub/CTF-writeups/raw/master/HTCF%20CTF/reverse_shell/pic/01.png" alt="wireshark-powershell_script"><br><img src="https://github.com/MacacaHub/CTF-writeups/raw/master/HTCF%20CTF/reverse_shell/pic/02.png" alt="wireshark-encrypt_text"></p>
-<p>從 PowerShell 不難看出有經過 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Base64">Base64</a> 混淆（注意最後的<code>%3D</code>其實就是 URL encode 的<code>=</code>），這題上線的前兩天恰好是中山資安社 講師<a target="_blank" rel="noopener" href="https://stillu.cc/">Still</a> 講過的 PowerShell 奇淫巧技，把 Base64 解開來後就跟社課一樣可以逐步分析。</p>
+<p>從 PowerShell 不難看出有經過 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Base64">Base64</a> 混淆（注意最後的<code>%3D</code>其實就是 URL encode 的<code>=</code>），這題上線的前兩天恰好是中山資安社邀請講師<a target="_blank" rel="noopener" href="https://stillu.cc/">Still</a> 講過的 PowerShell 奇淫巧技，把 Base64 解開來後就跟社課一樣可以逐步分析。</p>
 <p><img src="https://github.com/MacacaHub/CTF-writeups/raw/master/HTCF%20CTF/reverse_shell/pic/03.png" alt="command_line-base64_decode"></p>
 <blockquote>
 <ol>
@@ -309,16 +309,16 @@
 <figure class="highlight python"><figcaption><span>solve.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scapy.all <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">pkts = rdpcap(<span class="string">&#x27;reverse_shell.pcap&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">&#x27;out.raw&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">for</span> p <span class="keyword">in</span> pkts:</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;IP&#x27;</span> <span class="keyword">in</span> p <span class="keyword">and</span> ( p[<span class="string">&#x27;IP&#x27;</span>].src == <span class="string">&#x27;45.79.159.73&#x27;</span> <span class="keyword">or</span> p[<span class="string">&#x27;IP&#x27;</span>].dst == <span class="string">&#x27;45.79.159.73&#x27;</span> ):</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&#x27;Raw&#x27;</span> <span class="keyword">in</span> p <span class="keyword">and</span> ( p[<span class="string">&#x27;TCP&#x27;</span>].sport==<span class="number">39637</span> <span class="keyword">or</span> p[<span class="string">&#x27;TCP&#x27;</span>].dport==<span class="number">39637</span> ):</span><br><span class="line">                <span class="comment">#f.write(p[&#x27;Raw&#x27;].load)</span></span><br><span class="line">                raw = p[<span class="string">&#x27;Raw&#x27;</span>].load</span><br><span class="line">                xor_passwd = <span class="string">&quot;x0R_&quot;</span></span><br><span class="line">                res = <span class="string">&quot;&quot;</span></span><br><span class="line">                <span class="keyword">for</span> idx, word <span class="keyword">in</span> enumerate(raw):</span><br><span class="line">                    res += chr(word ^ ord(xor_passwd[idx%<span class="number">4</span>]))</span><br><span class="line">                <span class="comment">#print(res, end=&quot;&quot;)</span></span><br><span class="line">                f.write(res)</span><br></pre></td></tr></table></figure>
 
 <p>在抓資料的過程順便解密+寫檔，順利的話結果會很<del>漂</del>亮~ <a target="_blank" rel="noopener" href="https://github.com/MacacaHub/CTF-writeups/blob/master/HTCF%20CTF/reverse_shell/result.out">MacacaHub-result.out</a><br>從結果來看可以發現駭客利用受害主機上傳了一份 <code>secret.docx</code> 到 C&amp;C Server，所以下一步我們要把檔案抓出來。</p>
-<p>檔案一樣是藏在題目給的封包檔中，我自己在這個環節卡很久，之後和其他朋友聊才發現大部分都是先把 word 檔 dump 出來XDDD<br>至於 dump 的方式很多種，但我的方式自認蠻哈扣的，如果有更好的方法歡迎找我交流QwQ</p>
-<p>簡單聊一下我當時卡住的點~<br>由於打 CTF 偶爾會遇到 MS word 題，因此我的觀念上其 binary 標頭和壓縮檔一樣都是 “PK”，也就是可以透過 <code>unzip</code> 指令把整個 word 拆成很多個 .xml 以及圖片檔案(如果內文有圖片的話)，因此我在整個 pcap檔 始終挖不到自己想像中的答案 … 。<br>直到我最後自己測試開了一份加密過的 word 才發現完全不是這麼一回事，實際上只要把藏在封包裡的 binary 處理一下就能拿到 word，具體操作如下。</p>
+<p>檔案一樣是藏在題目給的封包檔中，我自己在這個環節卡很久，事後聊才發現大部分朋友都是先把 word 檔撈出來XDDD<br>至於 dump 的方式很多種，但我的方式自認蠻哈扣的，如果有更好的方法歡迎找我交流 QwQ</p>
+<p>簡單提一下我當時卡住的點~<br>由於打 CTF 偶爾會遇到 MS word 題，因此我的觀念上其 binary 標頭和壓縮檔一樣都是<code>PK</code>，也就是可以透過 <code>unzip</code> 指令把整個 word 拆成很多個 .xml 以及圖片檔案(如果內文有圖片的話)，因此我在整個 pcap 檔一直挖不到自己想像中的答案 … 。<br>直到我最後自己測試開了一份加密過的 word 才發現完全不是這麼一回事，實際上只要把藏在封包裡的 binary 處理一下就能拿到 word，具體操作如下。</p>
 <p><img src="https://github.com/MacacaHub/CTF-writeups/raw/master/HTCF%20CTF/reverse_shell/pic/04.png" alt=" wireshark-word_packet"></p>
 <p>同樣用 <code>Follow &gt; TCP stream</code> 觀察，很容易找到這份看起來就是<strong>被</strong>處理過的資料，可以透過 <code>File &gt; Export Objects &gt; HTTP...</code> 把指定的封包 dump 出來。</p>
 <p><img src="https://github.com/MacacaHub/CTF-writeups/raw/master/HTCF%20CTF/reverse_shell/pic/05.png" alt=" wireshark-exports_object_http"> </p>
 <p>這部分可以從檔案類型 “multipart/form-data” 辨別，然後存成 secret.docx 。<br>再來你會發現… 雙擊點開檔案是爛掉ㄉ，這時就可以自己另外開一份加密過的 word，並把這兩份檔案用 十六進制編輯器 打開比較看看。</p>
 <p><img src="https://github.com/MacacaHub/CTF-writeups/raw/master/HTCF%20CTF/reverse_shell/pic/06.png" alt=" MS_word-hex_compare"></p>
-<p>如圖，左半部是我自己產生的加密 .docx，右半部則是從封包 dump 出來的檔案，應該不難看出 secret.docx 的檔頭混了很多額外資訊，但透過比對把 0x<code>D0CF</code> 之前的 hex 拿掉就可以還原成正常的加密 .docx（至於檔尾只會讀到 <code>&lt;/encryption&gt;</code> 所以有沒有改動都不影響）。</p>
+<p>如圖，左半部是我自己產生的加密 .docx，右半部則是從封包 dump 出來的檔案，應該不難看出 secret.docx 的檔頭混了很多額外資訊，可透過比對把 0x<code>D0CF</code> 之前的 hex 拿掉就能還原成正常的加密 .docx（至於檔尾只會讀到 <code>&lt;/encryption&gt;</code> 所以有沒有改動都不影響）。</p>
 <p>啊 .docx 密碼勒？？</p>
-<p>如果有成功把上一段XOR加密的封包還原，.docx 的密碼就藏在裡面自己找 嘻嘻&gt;_&lt;</p>
+<p>如果有成功把上一段XOR加密的封包還原，.docx 的密碼就藏在裡面 … 自己找嘻嘻&gt;_&lt;</p>
 <h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><ol>
 <li>受害主機的外部(實體) IP位址是?<blockquote>
 <p>140.117.169.233</p>
@@ -352,7 +352,7 @@
 </blockquote>
 </li>
 <li>網站產生漏洞原因是? <blockquote>
-<p>於網站中存在含有 RCE(Remote Code Execution) 漏洞，且針對輸入的參數並沒有進行格式檢查，導致駭客可以透過植入C&amp;C惡意程式洩漏資訊。</p>
+<p>於網站中存在含有 RCE(Remote Code Execution) 的 command injection 漏洞，且針對輸入的參數並沒有進行格式檢查，導致駭客可以透過植入 C&amp;C 惡意程式洩漏資訊。</p>
 </blockquote>
 </li>
 <li>上傳洩漏資料的網站所用的port?<blockquote>
