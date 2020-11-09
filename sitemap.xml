@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>blog.eevee.tw/2020/201109-htcf-midterm-writeup/</loc>
+    
+    <lastmod>2020-11-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>blog.eevee.tw/2020/201104-htcf-hw1-writeup/</loc>
     
-    <lastmod>2020-11-08</lastmod>
+    <lastmod>2020-11-09</lastmod>
     
   </url>
   
@@ -284,13 +291,6 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/HTCF/</loc>
-    <lastmod>2020-11-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>blog.eevee.tw/tags/%E9%9F%B3Game/</loc>
     <lastmod>2020-11-09</lastmod>
     <changefreq>daily</changefreq>
@@ -312,14 +312,7 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/Codeforces/</loc>
-    <lastmod>2020-11-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>blog.eevee.tw/tags/April-Fools-Day/</loc>
+    <loc>blog.eevee.tw/tags/ITSA%E6%A1%82%E5%86%A0%E8%B3%BD/</loc>
     <lastmod>2020-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -333,7 +326,14 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/ITSA%E6%A1%82%E5%86%A0%E8%B3%BD/</loc>
+    <loc>blog.eevee.tw/tags/April-Fools-Day/</loc>
+    <lastmod>2020-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>blog.eevee.tw/tags/Codeforces/</loc>
     <lastmod>2020-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -382,13 +382,6 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/108%E9%87%91%E7%9B%BE%E7%8D%8E/</loc>
-    <lastmod>2020-11-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>blog.eevee.tw/tags/Pokemon/</loc>
     <lastmod>2020-11-09</lastmod>
     <changefreq>daily</changefreq>
@@ -397,6 +390,13 @@
   
   <url>
     <loc>blog.eevee.tw/tags/MegaHouse-G-E-M-EX-Series/</loc>
+    <lastmod>2020-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>blog.eevee.tw/tags/108%E9%87%91%E7%9B%BE%E7%8D%8E/</loc>
     <lastmod>2020-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -418,6 +418,13 @@
   
   <url>
     <loc>blog.eevee.tw/tags/Web-Challenge/</loc>
+    <lastmod>2020-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>blog.eevee.tw/tags/HTCF/</loc>
     <lastmod>2020-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
