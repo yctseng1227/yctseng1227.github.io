@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="yctseng&#39;s Blog">
 <meta property="og:description" content="Writeups 搬自 MacacaHub HTCF Midterm writeups Auther: stavhaygnWriteup By: yctseng1227">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://c7f.macacahub.tw/static/monkey_flag.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/monkey_flag.png">
 <meta property="og:image" content="https://photos.smugmug.com/photos/i-TRnZ5Dq/0/8cbf32c9/XL/i-TRnZ5Dq-XL.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/scoreboard.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x1/pic/01.png">
@@ -52,11 +52,11 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/ProFTPD/pic/03.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/ProFTPD/pic/04.png">
 <meta property="article:published_time" content="2020-11-08T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-11-09T14:18:34.036Z">
+<meta property="article:modified_time" content="2020-11-09T14:41:27.825Z">
 <meta property="article:author" content="yctseng">
 <meta property="article:tag" content="HTCF">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://c7f.macacahub.tw/static/monkey_flag.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/monkey_flag.png">
 
 <link rel="canonical" href="blog.eevee.tw/2020/201109-htcf-midterm-writeup/">
 
@@ -285,14 +285,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img src="http://c7f.macacahub.tw/static/monkey_flag.png" alt=" "></p>
-<p>Writeups 搬自 <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/readme.md">MacacaHub HTCF Midterm writeups</a></p>
+        <p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/monkey_flag.png" alt=" "></p>
+<p>Writeups 搬自 <a target="_blank" rel="noopener" href="https://github.com/MacacaHub/CTF-writeups/blob/master/HTCF%20CTF/midterm/readme.md">MacacaHub HTCF Midterm writeups</a></p>
 <p>Auther: <strong>stavhaygn</strong><br>Writeup By: <strong>yctseng1227</strong></p>
 <a id="more"></a>
 
 <br>
 
-<p>這次駭客攻防分成 筆試(1hr) &amp; 上機考(2hr)，根本就是金盾獎2.0，時間分配上要破台不太容易，何況為避免作弊情形還要邊寫題目邊截圖做個簡單報吿（嗚嗚好麻煩），題目難度我個人覺得中間偏易，畢竟 stavhaygn 助教也是根據老師上課所教的方向出題（甚至還有延伸學習），只是似乎對大部分同學來說比較沒有 CTF 經驗稍嫌困難一點，最後被老師建議下次多出一點基礎題 XDDDDDD</p>
+<p>這次駭客攻防分成 筆試(1hr) &amp; 上機考(2hr)，根本就是金盾獎2.0，時間分配上要破台不太容易，何況為避免作弊情形還要邊寫題目邊截圖做個簡單報吿（嗚嗚好麻煩），題目難度我個人覺得中間偏易，畢竟助教也是根據老師上課所教的方向出題（甚至還有延伸學習），只是似乎對大部分同學來說比較沒有 CTF 經驗稍嫌困難一點，最後被老師建議下次多出一點基礎題 XDDDDDD</p>
 <p>老樣子先放上人權圖，被 MacacaHub 學弟搶走第一名好難過嗚嗚嗚<br>（唯一錯的那一次是 Flag 圖片打錯字，嗚嗚人生污點）<br><img src="https://photos.smugmug.com/photos/i-TRnZ5Dq/0/8cbf32c9/XL/i-TRnZ5Dq-XL.png" alt=" "></p>
 <h2 id="Scoreboard"><a href="#Scoreboard" class="headerlink" title="Scoreboard"></a>Scoreboard</h2><p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/scoreboard.png" alt=" "></p>
 <h2 id="Forensics"><a href="#Forensics" class="headerlink" title="Forensics"></a>Forensics</h2><h3 id="images-0x1-100-points-23-solves"><a href="#images-0x1-100-points-23-solves" class="headerlink" title="images 0x1 (100 points, 23 solves)"></a>images 0x1 (100 points, 23 solves)</h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>images~ images~ images~</p>
@@ -306,7 +306,7 @@
 <p>用 wireshark 開啟 .pcap 後，用 <code>Follow &gt; TCP Stream</code>看大概只有 10 包 stream，其中不乏出現 .png 的 header 如圖。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x1/pic/01.png" alt=" "></p>
 <p>這部分可以用 <code>File &gt; Export Objects &gt; HTTP...</code> 把指定的檔案 dump 出來（重點是 multipart/form-data）。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x1/pic/02.png" alt=" "></p>
 <p>可以直接用 save all 把檔案存起來，然後用 hex editor 根據 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a> 的 header 把圖片的修好。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x1/pic/03.png" alt=" "></p>
-<p>圖片修完就看得到 Flag了，全部大概五張我當時隨便戳就剛好是 Flag 了 ㄏㄏ</p>
+<p>圖片修完就看得到 Flag 了，全部大概五張我當時隨便戳就剛好是 Flag 了 ㄏㄏ</p>
 <h3 id="CSS-Keylogger-150-points-8-solves"><a href="#CSS-Keylogger-150-points-8-solves" class="headerlink" title="CSS-Keylogger (150 points, 8 solves)"></a>CSS-Keylogger (150 points, 8 solves)</h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>有趣的CSS Keylogger文章：<br><a target="_blank" rel="noopener" href="https://blog.techbridge.cc/2018/03/02/css-key-logger/">CSS keylogger：攻擊與防禦</a><br><a target="_blank" rel="noopener" href="https://www.mike-gualtieri.com/posts/stealing-data-with-css-attack-and-defense">Stealing Data With CSS: Attack and Defense</a></p>
 <p>嘗試在封包中分析此次的CSS Keylogger攻擊與受害者c7f網站上的信箱與密碼，並且嘗試登入</p>
 <blockquote>

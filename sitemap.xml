@@ -312,14 +312,7 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/ITSA%E6%A1%82%E5%86%A0%E8%B3%BD/</loc>
-    <lastmod>2020-11-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>blog.eevee.tw/tags/Programming-Contest/</loc>
+    <loc>blog.eevee.tw/tags/Codeforces/</loc>
     <lastmod>2020-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -333,7 +326,14 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/Codeforces/</loc>
+    <loc>blog.eevee.tw/tags/Programming-Contest/</loc>
+    <lastmod>2020-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>blog.eevee.tw/tags/ITSA%E6%A1%82%E5%86%A0%E8%B3%BD/</loc>
     <lastmod>2020-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
