@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>blog.eevee.tw/tags/index.html</loc>
+    
+    <lastmod>2020-11-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>blog.eevee.tw/categories/index.html</loc>
+    
+    <lastmod>2020-11-19</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>blog.eevee.tw/2020/201116-lab-log-0x04/</loc>
     
     <lastmod>2020-11-19</lastmod>
@@ -250,20 +264,6 @@
     <loc>blog.eevee.tw/2019/190112-new-year-new-hope/</loc>
     
     <lastmod>2020-03-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>blog.eevee.tw/categories/index.html</loc>
-    
-    <lastmod>2020-03-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>blog.eevee.tw/tags/index.html</loc>
-    
-    <lastmod>2020-03-05</lastmod>
     
   </url>
   
