@@ -163,61 +163,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【活動】Codeforces April Fools Day Contest 2019</title>
-    <url>/2019/190402-codeforces-april-fools-day/</url>
-    <content><![CDATA[<p>聽說是Codeforces每年都會辦的愚人節活動，今次算是體驗到何謂無厘頭解謎XD</p>
-<p>除了Problem A還算正常，其他都在玩猜猜樂。<br>賽後透過一些線索才把pB, pC, pD搞定，這邊來分享一下~<br>（如果有任何錯誤也歡迎來信指教&gt; &lt;）</p>
-<a id="more"></a>
-
-<p>&nbsp;</p>
-<p><a href="https://codeforces.com/problemset/problem/1145/A">Problem A - Thanos Sort</a></p>
-<p>一種有趣的排序法，透過多次對半刪減直到剩下的序列是OK的才停止。<br>這題看計分板相當和平，我自己也是用遞迴慢慢跑就AC了w</p>
-<p>應該算是出題者給大家牛刀小試用的吧~</p>
-<p>&nbsp;</p>
-<p><a href="https://codeforces.com/problemset/problem/1145/B">Problem B - Kanban Numbers</a></p>
-<p>題目短到可以不用點開連結XD<br>輸入 $a (1≤a≤99)$ ，輸出”Yes” or “No”。</p>
-<p>計分板上各種猜，提交100餘次的不在話下，可惜我看到pD比較多人AC就沒花時間猜這題了。</p>
-<p>而謎底就藏在題目… “kanban”，拿去估狗翻譯會得到”看板”的解釋，但實際上應該要拆成kan、ban…<br>kan本身無意，而ban有禁止的意味，答案就是「禁止kan」。</p>
-<p>嗯？？？你在公三小？</p>
-<p>嗯對、就這樣。 其實在數字的英文拼音中並沒有出現 <strong>k</strong> 或是 <strong>a</strong> 的字母。<br>因此，你只要檢查輸入的數字在拼寫中是否出現 <strong>n</strong> 就行了XD</p>
-<p>真的是不能用正常的思路解謎呢…</p>
-<p>&nbsp;</p>
-<p><a href="https://codeforces.com/problemset/problem/1145/C">Problem C - Mystery Circuit</a></p>
-<p>題目給了很神秘的電路…然後要你輸入 $a (0≤a≤15)$ 、輸出整數，沒了。</p>
-<p>老實說這題摸半天還是沒有頭緒，倒是友人在 <a href="https://algassert.com/quirk">Quirk</a> 把電路拼起來丟0101測一測就發現答案了，莫名其妙XD</p>
-<p>附上code，若非該領域的玩家應該都想不到吧…</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n; <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">int</span> arr[] = &#123;<span class="number">15</span>, <span class="number">14</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>&#125;;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; arr[n] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>&nbsp;</p>
-<p><a href="https://codeforces.com/contest/1145/problem/D">Problem D - Pigeon d’Or</a></p>
-<p>讓我花最久的題目，老實說真的差一步就解出來了QQ</p>
-<p>原本第一眼看題目還真的看不太懂，所以拿去餵狗翻譯… 嗯、還是看不懂呢。<br>甚至還在懷疑是哪一國的語言，但大部分明明就是看得懂的英文啊QQ</p>
-<p>後來從測資開始猜：<br>範測是給了五個數字、得到一個數字，而且輸入數字範圍還在32內，用往年經驗有可能是邏輯運算，而這種題目最常用的就是 <strong>XOR</strong> ，所以就想盡辦法用範測和XOR湊答案，也因此吃了好幾次WA、深信下一次交出去的肯定會AC（並不會好嗎.jpg）</p>
-<p>但到了後來卡關又把題目讀了幾次… 想到會不會是出題者故意寫錯字!?<br>從第一段的 “ftying rats” 感覺就應該是 “flying rats”，所以就想了幾個辦法測錯字。</p>
-<p>最後是用word內建的拼字檢查，還真的不少錯字wwwww</p>
-<p><img src="https://i.imgur.com/1PzScrI.png"></p>
-<p>英文超爛的我就開始慢慢對著把拼錯的字母抓出來… 然後競賽就結束了(幹</p>
-<p>賽後解出來看到神奇的…單字？</p>
-<p><em>twoplusxorofthirdandminelements</em></p>
-<p>簡單分析一下</p>
-<p>Two plus XOR of third and min elements</p>
-<p>咦咦咦 這句子怎麼看起來有點正常ㄚ<br>可雖然好像每個字都看得懂，但合起來又不曉得在工三小www</p>
-<p>最後謎底是…<br>(輸入的第三個數字) XOR (序列中最小值) + 2。</p>
-<p>意外地前面有猜到XOR，只是這解法真的想不到XDDD<br>如果有早點發現題目內的錯字Bug，說不定就有機會即時解出來了qq</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>差不多就這樣、思考的過程真的蠻有趣的<br>畢竟沒給其他線索真的只能無厘頭隨便猜、看到丟100次才AC都不會感到驚訝<br>反而覺得「居然猜到AC實在太神laaaaaaaaa」 www</p>
-]]></content>
-      <categories>
-        <category>Algorithm</category>
-      </categories>
-      <tags>
-        <tag>Programming Contest</tag>
-        <tag>Codeforces</tag>
-        <tag>April Fools&#39; Day</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【活動】maimai愚人節解謎 &lt;怒槌～光吉猛修一部謎～&gt;</title>
     <url>/2019/190402-maimai-april-fools-day/</url>
     <content><![CDATA[<p><img src="https://i.imgur.com/Q8LRvq8.jpg"></p>
@@ -304,323 +249,6 @@
       <tags>
         <tag>音Game</tag>
         <tag>April Fools&#39; Day</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【閒聊】2019日本行... 難產QQ</title>
-    <url>/2019/190519-japan-travel-preface/</url>
-    <content><![CDATA[<p>什麼？你又跑去日本了！？</p>
-<p><img src="https://i.imgur.com/7atqCfF.png"></p>
-<p>嗯、對。</p>
-<p>2018年初時有被朋友揪去關西玩，而這回莫名其妙跑得特別遠XD</p>
- <a id="more"></a>
-
-<p>&nbsp;</p>
-<p>說是這樣說啦… 但這一去就將近兩週。</p>
-<p>雖然現在是大四下，但畢竟還是有學分壓力不能輕易鬆懈QQ</p>
-<p>結果，請假的這兩週很多作業… 很多考試… （暈</p>
-<p>&nbsp;</p>
-<p>嘛、既然出國玩就必須付出代價。</p>
-<p>所以回國後過了一週我依然還在還債（默</p>
-<p>&nbsp;</p>
-<p>原以為日本遊記會因為本人的懶癌發作拖很久</p>
-<p>結果反而是考試作業太多補到沒時間碰QQ</p>
-<p>估計下週才能慢慢騰出時間敲敲鍵盤打草稿~</p>
-<p>順帶一提… 這次大約拍了2000多張照片（眼神死</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>不過這部落格好像也沒多少人看，慢慢來w（你等等</p>
-]]></content>
-      <categories>
-        <category>旅遊日誌</category>
-      </categories>
-      <tags>
-        <tag>日本行</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【活動】畢業典禮兼...橋頭遊記!?</title>
-    <url>/2019/190602-commencement/</url>
-    <content><![CDATA[<p><img src="https://imgur.com/1wvOaDF.jpg"></p>
-<p>不知不覺又到了畢業的時節。</p>
-<p>但看過行程表的我實在不是很想去躺著聽演說，所以… 出去玩啦ヾ(〃^∇^)ﾉ</p>
-<a id="more"></a>
-
-<p>&nbsp;</p>
-<p>事情是這樣的。</p>
-<p>大約在畢業典禮前幾天我才上網看了所謂的<strong>畢業典禮公告</strong>，對於校方（系方？）沒特別宣傳感到擔憂。</p>
-<p>說不定真的有哪位天兵同學沒看到公告就直接錯過畢典 wwwww</p>
-<p>&nbsp;</p>
-<p>我們校總共分三個梯次舉行，而我們CS是在最後一梯，開始時間… 17點，講真的還挺晚的～</p>
-<p>直到當天我都還在猶豫該不該出席畢業典禮，但問題是入場必須穿著畢業袍。</p>
-<p>關於畢業袍這東西… 事前租一年$450、當天租$200（有錯麻煩提醒我）</p>
-<p>總之就是不太親民的價格 QQ</p>
-<p>&nbsp;</p>
-<p>那如果不去畢典的話，翹掉我該在宿舍廢嗎？</p>
-<p>嗯… 所以我就去Google搜尋<strong>「高雄 閒晃」</strong>，找到了橋頭糖廠。</p>
-<p>想想自己待在高雄三年好像都沒機會往北邊探索，所以算了一下公車時間，帶著手機、鑰匙、錢包就出門了！</p>
-<p><img src="https://imgur.com/N5IQU10.jpg"></p>
-<p>時間大約是15點，從高捷**”橋頭糖廠站”**出站隔壁就是園區，交通上蠻方便呢。</p>
-<p>原本想秉持純晃晃的心態不拿手機… 但事實證明很困難，拍照魂總是在這時候特別不受控（笑</p>
-<p><img src="https://imgur.com/b4sw7GI.jpg">10摳的黑糖饅頭，拿來解嘴饞還算是不錯的選項～</p>
-<p>&nbsp;</p>
-<p><img src="https://imgur.com/d34HnN5.jpg">45摳紅豆牛奶冰，配上當時悶熱的天氣吃下去感覺真棒！<br>這張我有放在其他地方打卡，總之就是非常悠閒的… 吃貨之旅（你給我等等</p>
-<p>&nbsp;</p>
-<p>剩下的就是在附近閒晃，然後看到不錯view就停下來拍照#</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/TTmKf9b.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/5v85UO7.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/y0dB5V0.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/CbYwEsb.jpg"></div></div></div></div>
-
-<p>因為本身對糖廠歷史… 並沒有很大興趣w</p>
-<p>所以就真的只是來散步，就這樣一路走到**”橋頭站”**準備搭捷運回家～</p>
-<p>&nbsp;</p>
-<p>回到楠梓加工區的時間大約17:50，看看畢典也差不多要結束了</p>
-<p>… 好像姑且可以到會場去看看情況。</p>
-<p>我就抱著這樣的心態查了公車時間 嗯…沒救</p>
-<p>只好騎City Bike慢慢回學校（15分鐘）wwwww</p>
-<p><img src="https://imgur.com/weq1ALc.jpg"></p>
-<p>到達會場後遇到了也是翹掉畢典的玨兄，稍微聊了一下發現都是因為畢業袍放棄參加（真糟糕</p>
-<p>等到畢典結束、人潮漸漸出現後，上面這面看板根本就是要搶位子拍照wwwww</p>
-<p>混亂中拍了不少張，我甚至還把友人的畢業袍搶過來（抹臉</p>
-<p><img src="https://imgur.com/oSTZmR4.jpg"></p>
-<p>最後拿了一張惡搞性質的當作FB的打卡，感謝友人贊助優秀畢業生獎XD</p>
-<p>證明我並沒有翹掉畢業典禮唷（心虛</p>
-<p>&nbsp;</p>
-<p>晚餐閒聊才知道我們系似乎是出席率最低的，連教授群也只有系主任義務出席，該說很有CS的風格嗎www</p>
-<p>總之這一趟下來我也不後悔自己的決定，算是給自己的一種勉勵吧。</p>
-<p>接下來進入六月才是真正的難關，要期末LAAAAAA</p>
-]]></content>
-      <categories>
-        <category>旅遊日誌</category>
-      </categories>
-      <tags>
-        <tag>畢業典禮</tag>
-        <tag>橋頭</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【遊記】2019 橫跨平成&amp;令和的日本行（九州篇 下）</title>
-    <url>/2019/190725-japan-travel-kyushu-part2/</url>
-    <content><![CDATA[<p><img src=""></p>
-<a id="more"></a>
-
-
-
-
-
-<h3 id="Day-3-原爆｜長崎県"><a href="#Day-3-原爆｜長崎県" class="headerlink" title="Day 3 - 原爆｜長崎県"></a>Day 3 - 原爆｜長崎県</h3><ul>
-<li>遺址</li>
-</ul>
-<h3 id="Day-4-勘災｜熊本県"><a href="#Day-4-勘災｜熊本県" class="headerlink" title="Day 4 - 勘災｜熊本県"></a>Day 4 - 勘災｜熊本県</h3><ul>
-<li>熊本城</li>
-<li>水前寺公園</li>
-<li>阿蘇火山…山腳</li>
-<li>大分…找晚餐？</li>
-</ul>
-]]></content>
-      <categories>
-        <category>旅遊日誌</category>
-      </categories>
-      <tags>
-        <tag>日本行</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【遊記】2019 橫跨平成&amp;令和的日本行（關西篇）</title>
-    <url>/2019/190727-japan-travel-kansai/</url>
-    <content><![CDATA[<p><img src=""></p>
-<a id="more"></a>
-
-
-
-
-
-<h3 id="Day-9-姬路城、神戶牛｜兵庫県"><a href="#Day-9-姬路城、神戶牛｜兵庫県" class="headerlink" title="Day 9 - 姬路城、神戶牛｜兵庫県"></a>Day 9 - 姬路城、神戶牛｜兵庫県</h3><ul>
-<li>姬路</li>
-<li>神戶</li>
-</ul>
-<h3 id="Day-10-和歌山城｜和歌山県"><a href="#Day-10-和歌山城｜和歌山県" class="headerlink" title="Day 10 - 和歌山城｜和歌山県"></a>Day 10 - 和歌山城｜和歌山県</h3><ul>
-<li><h3 id="Day-11-嵐山｜京都府"><a href="#Day-11-嵐山｜京都府" class="headerlink" title="Day 11 - 嵐山｜京都府"></a>Day 11 - 嵐山｜京都府</h3></li>
-<li></li>
-</ul>
-<h3 id="Day-12-賦歸｜関西空港｜大阪府"><a href="#Day-12-賦歸｜関西空港｜大阪府" class="headerlink" title="Day 12 - 賦歸｜関西空港｜大阪府"></a>Day 12 - 賦歸｜関西空港｜大阪府</h3><ul>
-<li></li>
-</ul>
-]]></content>
-      <categories>
-        <category>旅遊日誌</category>
-      </categories>
-      <tags>
-        <tag>日本行</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【遊記】2019 橫跨平成&amp;令和的日本行（九州篇 上）</title>
-    <url>/2019/190724-japan-travel-kyushu-part1/</url>
-    <content><![CDATA[<p><img src="https://i.imgur.com/INuM3i1.jpg"></p>
-<p>擔心拍不出好照片嗎？ … 那就拍別人的照片啊（喂</p>
-<a id="more"></a>
-
-<p>&nbsp;</p>
-<p>這趟本來應該是畢業旅行 … 結果途中發生各種不可避的意外，到最後七人只剩下兩名倖存者<del>（Fate梗</del><br>不過既然飛機票已經訂了，當然要好好規劃一下難得的旅行!!</p>
-<p>所幸同行友人相當凱瑞，在日文對話方面幾乎沒有障礙，整趟下來我大概只有點頭和搖頭的份，頂多再喊聲ありがとうwwwww，另外加上他的電車迷屬性，交通方面我也沒擔心太多，雖然他本人相當低調<del>(害羞?)</del>，但在這邊還是必須好好感謝他😆</p>
-<p>這次日本行適逢當地的黃金週，所以在機票上只能盡量錯開時間省點摳摳QQ<br>訂回程機票時猜測五月的<strong>ITSA桂冠賽</strong>大概在5/11，所以我們抓前一天(5/11)回國。<br>從4/29出發共12天，但最後一天睡機場搭早班飛機，我通常都回答11天～</p>
-<h3 id="Day-1-啟程｜旅油｜福岡県"><a href="#Day-1-啟程｜旅油｜福岡県" class="headerlink" title="Day 1 - 啟程｜旅油｜福岡県"></a>Day 1 - 啟程｜旅油｜福岡県</h3><p>時間點來到4/29的… 凌晨0點，地點在臺北車站。</p>
-<p>深夜的空氣帶著些許涼意，在稍早和家人互道晚安後，我便拖著行李箱搭上最後一班公車出發。<br>這麼早就和友人約在北車不是沒有道理… 因為我們搭的是6:15 AM的飛機（眼神死<br>想說別把時間壓得這麼緊，所以我們見面後就直接搭上1819客運直奔<strong>桃園機場</strong>。</p>
-<p>到機場後發現現場人還不少 =u=<br>下圖是傳說中的黑松女神，算是PTT日旅版鄉民們的一種默契吧。<br>只要有鄉民回國後網路沒用完就會默默地把SIM留在這裡，結果這一找還真的有www</p>
-<p><img src="https://i.imgur.com/fgDxlbm.jpg"></p>
-<p>等到3:30AM<em>台灣虎航</em> 開櫃，就準備報到出境（畢竟大半夜沒什麼免稅店可以晃）<br>早早就進了大廳… 當然沒人www 爽躺沙發椅～</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/eKMPKTD.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/VeskCgB.jpg"></div></div></div></div>
-
-
-
-<p>雖然說有小睡一會兒，但說實在精神上還是有點倦怠。<br>等到早上五點人潮陸陸續續出現後，我們就準時登機囉～</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<img src="http://cms-bucket.nosdn.127.net/69e62014ead8401894c3d7de2efc114e20180124105900.gif" class="" width="400">
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>從 <strong>桃園機場 → 福岡空港</strong> 約莫兩小時左右<br>除了寫入境卡之外，我自己因為坐飛機中間所以幾乎都在睡（#<br>剛到日本能夠感受到些許涼意，畢竟緯度相對台灣高了一點，遺憾的是這裡同時也在下雨QQ<br>（也因為雨天只好拿Wikipedia的圖來放一下XD）</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/UekrCXB.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/21qngHa.jpg"></div></div></div></div>
-
-<p>&nbsp;</p>
-<p>在福岡空港我們並沒有待很久，只有購入<strong>福岡地鐵一日乘車券</strong>後，就開始了我們第一天的行程…<br>啊 並沒有、咱還是先去<strong>博多車站</strong>找一下飯店放個行李XD</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://subway.city.fukuoka.lg.jp/eki/img/routemap_Symbol.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/tyq75zO.jpg"></div></div></div></div>
-
-
-
-<p>在九州住宿部分我們選的是<strong>東橫INN博多站前2號店</strong>，距離博多車站步行約5分鐘相當便利。<br>（不瞞說為了省旅費，往後的行程幾乎都挑東橫INN系列，但住過之後發現品質真的不差!!）</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/MzqVFMy.png"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/383NJK9.jpg"></div></div></div></div>
-
-
-
-<p>再來就開始跑行程了。<br>說是這麼說啦… 但我們第一天的行程表是空的XD<br>畢竟前一晚沒睡又剛下飛機，所以沒有排特別重要的景點，就單純在福岡市區亂晃！</p>
-<p>因為下雨天的緣故，我們先去博多車站內的購物中心，而作為動漫迷會逛的… 應該不用我多說AwA</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/sSyO85i.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/DveF8mL.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/Tm36kCV.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/0haULCf.jpg"></div></div></div></div>
-
-<p>不得不說日本不愧是動畫產業的把拔，連書店內的擺設都很猛<br>左上圖是2019冬番討論度很高的**”五等份的花嫁”** … 3939得第一!!<br>右上圖是2019春番當前常和**”五等份的花嫁”<strong>拿來比較的</strong>“我們真的學不來”**… 直接放在附近打對臺XDDDD</p>
-<p>左下圖是小說區，自從上了大學後就真的很少在啃輕小說了 = w =<br>左下圖是 … 呃 職業病？畢竟是相關科系還是來看看日文書長怎樣~  <del>C++ 從入門到放棄</del></p>
-<p>&nbsp;</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/bgrG7kr.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/UmElOEm.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/JkTYbw3.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/VB2aZIV.jpg"></div></div></div></div>
-
-<p>再來是娛樂方面，日本的夾娃娃機真的爆幹多，台灣目前也有逐漸飽和的趨勢（嘆<a href="www.google.com" target="_blank" style="text-decoration:none;">😏</a><br>不過我說那個右下角… 連樹莓派(Raspberry Pi)都有實在太潮啦wwwww</p>
-<p>&nbsp;</p>
-<p>之後我們就轉移到<strong>天神車站</strong>、繼續閒晃（超廢<br>值得一提的是<strong>天神地下街</strong>，全長600公尺是那種一不小心就會迷路的大。<br>這邊大多以美食、藥妝、服飾為主，是個避雨逛街的好選擇… 我不這麼認為，因為人潮爆多###</p>
-<p><img src="https://i.imgur.com/QQWbOd0.jpg"></p>
-<p>我們在人潮中穿梭一陣子，繼續找地方油泳 … 第一站<strong>虎之穴</strong> GO!!!</p>
-<p><img src="https://i.imgur.com/e2f27gG.jpg"></p>
-<p>虎之穴主要是以同人誌為中心並售賣漫畫和關連商品的 … 聖地!!<br>比起台北近幾年新開的虎之穴，這裡的規模真的大很多，好孩子沒事千萬別常來(笑)</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/6BCCrNo.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/EN8SwMS.jpg"></div></div></div></div>
-
-<p>還有像這種專區真的看幾次都覺得很狂，圖中分別是<strong>BanG Dream</strong>和<strong>佐賀偶像是傳奇</strong>，真香（吸<br>前者是當前很夯的樂團偶像番(?)，動畫甚至要出第三季了～ 期待!!<br>後者則是佐賀的地區宣傳動畫… 不對、我覺得應該要歸類在吸毒片，原本有打算來個<strong>佐賀唐津</strong>聖地巡禮，可是… 真的太偏僻了QQ 怪不得還要出動畫來宣傳，對佐賀有興趣的不妨可以看看這部（推坑</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/OH2YAQG.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/emcBtL5.jpg"></div></div></div></div>
-
-<p>還有公主連結… 這應該也不用我多說了吧w 香！</p>
-<p>原本逛完已經下樓要準備離開… 結果看到超大橫幅的廣告 ↓</p>
-<p><img src="https://i.imgur.com/Hw6yoC4.jpg"></p>
-<p>居然是三嶋老師的和カントク老師的作品展欸 GOGO~</p>
-<p>第二站 <strong>軸中心派</strong>，電梯到了四樓開門的瞬間滿溢的香味噴鼻而來（幻覺）</p>
-<p><img src="https://i.imgur.com/50n8KEZ.jpg"></p>
-<p>這裡不單純是作品展，包含其他各路大神的作品都有出現，像是珈琲貴族、Karory、てぃんくる、アカバネ…都有。</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/GyCUDD2.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/qw3IQgG.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/Z7wZItb.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/33v8jGJ.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/jHjnHmX.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/Bo26g6j.jpg"></div></div></div></div>
-
-<p>對於常在看油圖的我而言這些作品都不陌生就是了wwwww</p>
-<p>下一站，<strong>Animate</strong>！GO！</p>
-<p><img src="https://i.imgur.com/MQy4YnP.jpg"></p>
-<p>這裡相對於虎之穴的同人本，幾乎都是以官方商品為主。<br>在臺灣有晃過的朋友應該都知道，只不過日本的規模硬是大了許多QQ<br>而這次日本行我們其實路過很多間Animate… 逛爆（抹臉</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/K9Xg4AN.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/40e6e3D.jpg"></div></div></div></div>
-
-<p>圖中呈現各種偶像番的宗教戰爭XDDD 官方真的很喜歡放在一起打對臺wwwww 懂玩#</p>
-<p>&nbsp;</p>
-<p>傍晚我們去一趟天神的唐吉軻德補充零食後，就搭地下鐵準備回博多吃晚餐啦！<br>… 嗯？你問我怎麼好像沒看到午餐文？  因為預算都拿去晚餐吃燒肉了wwwww</p>
-<p><a href="https://apoarea.tw/yakinikunogyutahonjinhakata/">焼肉の牛太 本陣（ヨドバシ博多店）</a><br>這家是特別規劃好的行程，因為每個月29號的ニクの日會折價¥500，吃到<del>爆</del>飽!!!</p>
-<img src="https://i.imgur.com/Z9If4fK.jpg" class="" width="400">
-
-<p>而且他們點餐機制是用平板電腦，還挺方便的~ （還有中文選單）</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 100%;"><img src="https://i.imgur.com/tETZMfs.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/H8WBgII.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/QOQ52st.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/YMFsCex.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/Ef5S5Ci.jpg"></div></div></div></div>
-
-<p>總之，在這裡就是各種吃肉、吃肉、還有吃肉，回飯店的路上真的肚子超撐=w=<br>好在吃下去的這些肉都在之後的大量走路行程中消耗掉了 … 應該吧XD</p>
-<p>&nbsp;</p>
-<h3 id="Day-2-紫藤花｜福岡県"><a href="#Day-2-紫藤花｜福岡県" class="headerlink" title="Day 2 - 紫藤花｜福岡県"></a>Day 2 - 紫藤花｜福岡県</h3><p>東橫INN有提供自助式的早餐吧，基本配置都是兩種飯糰+<a href="https://www.toyoko-inn.com/feature/breakfast.html?lcl_id=zh_TW">其他小菜</a>。<br>雖然個人覺得還不錯吃（尤其是煎蛋），但每天差不多的菜色就… 見仁見智啦XD </p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/xgmRpX1.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/s3zxdWO.jpg"></div></div></div></div>
-
-<p>&nbsp;</p>
-<p><strong>太宰府-柳川</strong>在觀光套票中是綁在一起的行程。<br>在出發前一週我們上網發現紫藤花的花季預估在4/29結束，一度想規劃成日本Day1下飛機就直衝柳川，後來想想這行程真的會出人命，所以就半放棄地排在Day2，結果似乎花況比預期中還要好，因此花季延長啦，賺！</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/DYG2SbH.png"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/Gt0YoCn.jpg"></div></div></div></div>
-
-<p>&nbsp;</p>
-<p>搭西鐵 從<strong>博多→柳川</strong> 大約一小時，比預想還要快一些。<br>另外我也從這天開始利用==Google timeline==紀錄移動路線，雖然在沒有訊號的路線追縱會出問題，像是高速行駛、過山洞、海底隧道(咦?)，然後… 這天依舊是陰雨綿綿的天氣（嘆），一樣借網路圖片放w</p>
-<p><img src="https://i.imgur.com/FMJ3FGc.jpg"></p>
-<p>&nbsp;</p>
-<ul>
-<li>中山大藤（紫藤花✿）</li>
-</ul>
-<p>從柳川車站下車後轉接駁車，大約15分鐘抵達會場。<br>可能是花季延長又下雨的緣故吧，現場人並不算多，不過附近疑似有台灣的旅行團，有種新鮮感（？）</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 100%;"><img src="https://i.imgur.com/tEVrZi5.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/UMbGSqa.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/mtodfyT.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/PFNIwDO.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/VsH2olJ.jpg"></div></div></div></div>
-
-
-
-<ul>
-<li>川下乘船</li>
-</ul>
-<p>拉回柳川車站，這回要用套票中的川下乘船漫遊柳川～<br>沿途風景實在美不勝收，拍了很多張讓我打遊記當下很難挑照片XDDD<br>船夫阿伯會邊划船邊講故事，偶爾哼些日本歌謠，最神奇的是他還會用一點中文和我們介紹。</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/YZsvtqe.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/kcA2b7U.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/HWuBHXm.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/kVoSk11.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/5OcAa96.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/fuFlk7P.jpg"></div></div></div></div>
-
-<p>雖然下了點小雨，但絲毫不影響大家聽故事的興致。<br>另外還有水上攤商，很可惜我們這艘船沒有人要請船夫停下來的意思XD</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/JMxE5DX.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/KQwmP3J.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/J2r8OSU.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/IvOxcVH.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/bMSgqLm.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/z0Jxeth.jpg"></div></div></div></div>
-
-<p>&nbsp;</p>
-<p>下船後就是觀光的土產店可以晃。<br>可以看到對於令和迎新年已經有很多相關的商品～</p>
-<p><img src="https://i.imgur.com/uVaQSjV.jpg"></p>
-<ul>
-<li><p>一蘭拉麵</p>
-<p>雖然說各位對一蘭拉麵應該都不陌生，畢竟在台北也有分店。</p>
-<p>不過太宰府分店的特色就是<strong>五角碗</strong>，在日文有<strong>合格</strong>的雙關意義！</p>
-</li>
-</ul>
-<ul>
-<li>天滿宮</li>
-</ul>
-]]></content>
-      <categories>
-        <category>旅遊日誌</category>
-      </categories>
-      <tags>
-        <tag>日本行</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【遊記】2019 橫跨平成&amp;令和的日本行（中國篇）</title>
-    <url>/2019/190726-japan-travel-chugoku/</url>
-    <content><![CDATA[<p><img src=""></p>
-<a id="more"></a>
-
-
-
-
-
-<h3 id="Day-5-相望｜山口県"><a href="#Day-5-相望｜山口県" class="headerlink" title="Day 5 - 相望｜山口県"></a>Day 5 - 相望｜山口県</h3><ul>
-<li>小倉</li>
-<li>下關</li>
-<li>廣島</li>
-</ul>
-<h3 id="Day-6-迷鹿｜広島県"><a href="#Day-6-迷鹿｜広島県" class="headerlink" title="Day 6 - 迷鹿｜広島県"></a>Day 6 - 迷鹿｜広島県</h3><ul>
-<li>吳市</li>
-<li>宮島</li>
-</ul>
-<h3 id="Day-7-｜岡山県"><a href="#Day-7-｜岡山県" class="headerlink" title="Day 7 - ｜岡山県"></a>Day 7 - ｜岡山県</h3><ul>
-<li></li>
-<li></li>
-</ul>
-<h3 id="Day-8-丹寧聖地｜香川県"><a href="#Day-8-丹寧聖地｜香川県" class="headerlink" title="Day 8 - 丹寧聖地｜香川県"></a>Day 8 - 丹寧聖地｜香川県</h3><ul>
-<li>兒島（岡山）</li>
-<li>高松</li>
-</ul>
-]]></content>
-      <categories>
-        <category>旅遊日誌</category>
-      </categories>
-      <tags>
-        <tag>日本行</tag>
       </tags>
   </entry>
   <entry>
@@ -818,6 +446,378 @@
       </tags>
   </entry>
   <entry>
+    <title>【活動】Codeforces April Fools Day Contest 2019</title>
+    <url>/2019/190402-codeforces-april-fools-day/</url>
+    <content><![CDATA[<p>聽說是Codeforces每年都會辦的愚人節活動，今次算是體驗到何謂無厘頭解謎XD</p>
+<p>除了Problem A還算正常，其他都在玩猜猜樂。<br>賽後透過一些線索才把pB, pC, pD搞定，這邊來分享一下~<br>（如果有任何錯誤也歡迎來信指教&gt; &lt;）</p>
+<a id="more"></a>
+
+<p>&nbsp;</p>
+<p><a href="https://codeforces.com/problemset/problem/1145/A">Problem A - Thanos Sort</a></p>
+<p>一種有趣的排序法，透過多次對半刪減直到剩下的序列是OK的才停止。<br>這題看計分板相當和平，我自己也是用遞迴慢慢跑就AC了w</p>
+<p>應該算是出題者給大家牛刀小試用的吧~</p>
+<p>&nbsp;</p>
+<p><a href="https://codeforces.com/problemset/problem/1145/B">Problem B - Kanban Numbers</a></p>
+<p>題目短到可以不用點開連結XD<br>輸入 $a (1≤a≤99)$ ，輸出”Yes” or “No”。</p>
+<p>計分板上各種猜，提交100餘次的不在話下，可惜我看到pD比較多人AC就沒花時間猜這題了。</p>
+<p>而謎底就藏在題目… “kanban”，拿去估狗翻譯會得到”看板”的解釋，但實際上應該要拆成kan、ban…<br>kan本身無意，而ban有禁止的意味，答案就是「禁止kan」。</p>
+<p>嗯？？？你在公三小？</p>
+<p>嗯對、就這樣。 其實在數字的英文拼音中並沒有出現 <strong>k</strong> 或是 <strong>a</strong> 的字母。<br>因此，你只要檢查輸入的數字在拼寫中是否出現 <strong>n</strong> 就行了XD</p>
+<p>真的是不能用正常的思路解謎呢…</p>
+<p>&nbsp;</p>
+<p><a href="https://codeforces.com/problemset/problem/1145/C">Problem C - Mystery Circuit</a></p>
+<p>題目給了很神秘的電路…然後要你輸入 $a (0≤a≤15)$ 、輸出整數，沒了。</p>
+<p>老實說這題摸半天還是沒有頭緒，倒是友人在 <a href="https://algassert.com/quirk">Quirk</a> 把電路拼起來丟0101測一測就發現答案了，莫名其妙XD</p>
+<p>附上code，若非該領域的玩家應該都想不到吧…</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n; <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">int</span> arr[] = &#123;<span class="number">15</span>, <span class="number">14</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>&#125;;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; arr[n] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<p><a href="https://codeforces.com/contest/1145/problem/D">Problem D - Pigeon d’Or</a></p>
+<p>讓我花最久的題目，老實說真的差一步就解出來了QQ</p>
+<p>原本第一眼看題目還真的看不太懂，所以拿去餵狗翻譯… 嗯、還是看不懂呢。<br>甚至還在懷疑是哪一國的語言，但大部分明明就是看得懂的英文啊QQ</p>
+<p>後來從測資開始猜：<br>範測是給了五個數字、得到一個數字，而且輸入數字範圍還在32內，用往年經驗有可能是邏輯運算，而這種題目最常用的就是 <strong>XOR</strong> ，所以就想盡辦法用範測和XOR湊答案，也因此吃了好幾次WA、深信下一次交出去的肯定會AC（並不會好嗎.jpg）</p>
+<p>但到了後來卡關又把題目讀了幾次… 想到會不會是出題者故意寫錯字!?<br>從第一段的 “ftying rats” 感覺就應該是 “flying rats”，所以就想了幾個辦法測錯字。</p>
+<p>最後是用word內建的拼字檢查，還真的不少錯字wwwww</p>
+<p><img src="https://i.imgur.com/1PzScrI.png"></p>
+<p>英文超爛的我就開始慢慢對著把拼錯的字母抓出來… 然後競賽就結束了(幹</p>
+<p>賽後解出來看到神奇的…單字？</p>
+<p><em>twoplusxorofthirdandminelements</em></p>
+<p>簡單分析一下</p>
+<p>Two plus XOR of third and min elements</p>
+<p>咦咦咦 這句子怎麼看起來有點正常ㄚ<br>可雖然好像每個字都看得懂，但合起來又不曉得在工三小www</p>
+<p>最後謎底是…<br>(輸入的第三個數字) XOR (序列中最小值) + 2。</p>
+<p>意外地前面有猜到XOR，只是這解法真的想不到XDDD<br>如果有早點發現題目內的錯字Bug，說不定就有機會即時解出來了qq</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>差不多就這樣、思考的過程真的蠻有趣的<br>畢竟沒給其他線索真的只能無厘頭隨便猜、看到丟100次才AC都不會感到驚訝<br>反而覺得「居然猜到AC實在太神laaaaaaaaa」 www</p>
+]]></content>
+      <categories>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>Programming Contest</tag>
+        <tag>April Fools&#39; Day</tag>
+        <tag>Codeforces</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【閒聊】2019日本行... 難產QQ</title>
+    <url>/2019/190519-japan-travel-preface/</url>
+    <content><![CDATA[<p>什麼？你又跑去日本了！？</p>
+<p><img src="https://i.imgur.com/7atqCfF.png"></p>
+<p>嗯、對。</p>
+<p>2018年初時有被朋友揪去關西玩，而這回莫名其妙跑得特別遠XD</p>
+ <a id="more"></a>
+
+<p>&nbsp;</p>
+<p>說是這樣說啦… 但這一去就將近兩週。</p>
+<p>雖然現在是大四下，但畢竟還是有學分壓力不能輕易鬆懈QQ</p>
+<p>結果，請假的這兩週很多作業… 很多考試… （暈</p>
+<p>&nbsp;</p>
+<p>嘛、既然出國玩就必須付出代價。</p>
+<p>所以回國後過了一週我依然還在還債（默</p>
+<p>&nbsp;</p>
+<p>原以為日本遊記會因為本人的懶癌發作拖很久</p>
+<p>結果反而是考試作業太多補到沒時間碰QQ</p>
+<p>估計下週才能慢慢騰出時間敲敲鍵盤打草稿~</p>
+<p>順帶一提… 這次大約拍了2000多張照片（眼神死</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>不過這部落格好像也沒多少人看，慢慢來w（你等等</p>
+]]></content>
+      <categories>
+        <category>旅遊日誌</category>
+      </categories>
+      <tags>
+        <tag>日本行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【活動】畢業典禮兼...橋頭遊記!?</title>
+    <url>/2019/190602-commencement/</url>
+    <content><![CDATA[<p><img src="https://imgur.com/1wvOaDF.jpg"></p>
+<p>不知不覺又到了畢業的時節。</p>
+<p>但看過行程表的我實在不是很想去躺著聽演說，所以… 出去玩啦ヾ(〃^∇^)ﾉ</p>
+<a id="more"></a>
+
+<p>&nbsp;</p>
+<p>事情是這樣的。</p>
+<p>大約在畢業典禮前幾天我才上網看了所謂的<strong>畢業典禮公告</strong>，對於校方（系方？）沒特別宣傳感到擔憂。</p>
+<p>說不定真的有哪位天兵同學沒看到公告就直接錯過畢典 wwwww</p>
+<p>&nbsp;</p>
+<p>我們校總共分三個梯次舉行，而我們CS是在最後一梯，開始時間… 17點，講真的還挺晚的～</p>
+<p>直到當天我都還在猶豫該不該出席畢業典禮，但問題是入場必須穿著畢業袍。</p>
+<p>關於畢業袍這東西… 事前租一年$450、當天租$200（有錯麻煩提醒我）</p>
+<p>總之就是不太親民的價格 QQ</p>
+<p>&nbsp;</p>
+<p>那如果不去畢典的話，翹掉我該在宿舍廢嗎？</p>
+<p>嗯… 所以我就去Google搜尋<strong>「高雄 閒晃」</strong>，找到了橋頭糖廠。</p>
+<p>想想自己待在高雄三年好像都沒機會往北邊探索，所以算了一下公車時間，帶著手機、鑰匙、錢包就出門了！</p>
+<p><img src="https://imgur.com/N5IQU10.jpg"></p>
+<p>時間大約是15點，從高捷**”橋頭糖廠站”**出站隔壁就是園區，交通上蠻方便呢。</p>
+<p>原本想秉持純晃晃的心態不拿手機… 但事實證明很困難，拍照魂總是在這時候特別不受控（笑</p>
+<p><img src="https://imgur.com/b4sw7GI.jpg">10摳的黑糖饅頭，拿來解嘴饞還算是不錯的選項～</p>
+<p>&nbsp;</p>
+<p><img src="https://imgur.com/d34HnN5.jpg">45摳紅豆牛奶冰，配上當時悶熱的天氣吃下去感覺真棒！<br>這張我有放在其他地方打卡，總之就是非常悠閒的… 吃貨之旅（你給我等等</p>
+<p>&nbsp;</p>
+<p>剩下的就是在附近閒晃，然後看到不錯view就停下來拍照#</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/TTmKf9b.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/5v85UO7.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/y0dB5V0.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://imgur.com/CbYwEsb.jpg"></div></div></div></div>
+
+<p>因為本身對糖廠歷史… 並沒有很大興趣w</p>
+<p>所以就真的只是來散步，就這樣一路走到**”橋頭站”**準備搭捷運回家～</p>
+<p>&nbsp;</p>
+<p>回到楠梓加工區的時間大約17:50，看看畢典也差不多要結束了</p>
+<p>… 好像姑且可以到會場去看看情況。</p>
+<p>我就抱著這樣的心態查了公車時間 嗯…沒救</p>
+<p>只好騎City Bike慢慢回學校（15分鐘）wwwww</p>
+<p><img src="https://imgur.com/weq1ALc.jpg"></p>
+<p>到達會場後遇到了也是翹掉畢典的玨兄，稍微聊了一下發現都是因為畢業袍放棄參加（真糟糕</p>
+<p>等到畢典結束、人潮漸漸出現後，上面這面看板根本就是要搶位子拍照wwwww</p>
+<p>混亂中拍了不少張，我甚至還把友人的畢業袍搶過來（抹臉</p>
+<p><img src="https://imgur.com/oSTZmR4.jpg"></p>
+<p>最後拿了一張惡搞性質的當作FB的打卡，感謝友人贊助優秀畢業生獎XD</p>
+<p>證明我並沒有翹掉畢業典禮唷（心虛</p>
+<p>&nbsp;</p>
+<p>晚餐閒聊才知道我們系似乎是出席率最低的，連教授群也只有系主任義務出席，該說很有CS的風格嗎www</p>
+<p>總之這一趟下來我也不後悔自己的決定，算是給自己的一種勉勵吧。</p>
+<p>接下來進入六月才是真正的難關，要期末LAAAAAA</p>
+]]></content>
+      <categories>
+        <category>旅遊日誌</category>
+      </categories>
+      <tags>
+        <tag>畢業典禮</tag>
+        <tag>橋頭</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【遊記】2019 橫跨平成&amp;令和的日本行（九州篇 下）</title>
+    <url>/2019/190725-japan-travel-kyushu-part2/</url>
+    <content><![CDATA[<p><img src=""></p>
+<a id="more"></a>
+
+
+
+
+
+<h3 id="Day-3-原爆｜長崎県"><a href="#Day-3-原爆｜長崎県" class="headerlink" title="Day 3 - 原爆｜長崎県"></a>Day 3 - 原爆｜長崎県</h3><ul>
+<li>遺址</li>
+</ul>
+<h3 id="Day-4-勘災｜熊本県"><a href="#Day-4-勘災｜熊本県" class="headerlink" title="Day 4 - 勘災｜熊本県"></a>Day 4 - 勘災｜熊本県</h3><ul>
+<li>熊本城</li>
+<li>水前寺公園</li>
+<li>阿蘇火山…山腳</li>
+<li>大分…找晚餐？</li>
+</ul>
+]]></content>
+      <categories>
+        <category>旅遊日誌</category>
+      </categories>
+      <tags>
+        <tag>日本行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【遊記】2019 橫跨平成&amp;令和的日本行（九州篇 上）</title>
+    <url>/2019/190724-japan-travel-kyushu-part1/</url>
+    <content><![CDATA[<p><img src="https://i.imgur.com/INuM3i1.jpg"></p>
+<p>擔心拍不出好照片嗎？ … 那就拍別人的照片啊（喂</p>
+<a id="more"></a>
+
+<p>&nbsp;</p>
+<p>這趟本來應該是畢業旅行 … 結果途中發生各種不可避的意外，到最後七人只剩下兩名倖存者<del>（Fate梗</del><br>不過既然飛機票已經訂了，當然要好好規劃一下難得的旅行!!</p>
+<p>所幸同行友人相當凱瑞，在日文對話方面幾乎沒有障礙，整趟下來我大概只有點頭和搖頭的份，頂多再喊聲ありがとうwwwww，另外加上他的電車迷屬性，交通方面我也沒擔心太多，雖然他本人相當低調<del>(害羞?)</del>，但在這邊還是必須好好感謝他😆</p>
+<p>這次日本行適逢當地的黃金週，所以在機票上只能盡量錯開時間省點摳摳QQ<br>訂回程機票時猜測五月的<strong>ITSA桂冠賽</strong>大概在5/11，所以我們抓前一天(5/11)回國。<br>從4/29出發共12天，但最後一天睡機場搭早班飛機，我通常都回答11天～</p>
+<h3 id="Day-1-啟程｜旅油｜福岡県"><a href="#Day-1-啟程｜旅油｜福岡県" class="headerlink" title="Day 1 - 啟程｜旅油｜福岡県"></a>Day 1 - 啟程｜旅油｜福岡県</h3><p>時間點來到4/29的… 凌晨0點，地點在臺北車站。</p>
+<p>深夜的空氣帶著些許涼意，在稍早和家人互道晚安後，我便拖著行李箱搭上最後一班公車出發。<br>這麼早就和友人約在北車不是沒有道理… 因為我們搭的是6:15 AM的飛機（眼神死<br>想說別把時間壓得這麼緊，所以我們見面後就直接搭上1819客運直奔<strong>桃園機場</strong>。</p>
+<p>到機場後發現現場人還不少 =u=<br>下圖是傳說中的黑松女神，算是PTT日旅版鄉民們的一種默契吧。<br>只要有鄉民回國後網路沒用完就會默默地把SIM留在這裡，結果這一找還真的有www</p>
+<p><img src="https://i.imgur.com/fgDxlbm.jpg"></p>
+<p>等到3:30AM<em>台灣虎航</em> 開櫃，就準備報到出境（畢竟大半夜沒什麼免稅店可以晃）<br>早早就進了大廳… 當然沒人www 爽躺沙發椅～</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/eKMPKTD.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/VeskCgB.jpg"></div></div></div></div>
+
+
+
+<p>雖然說有小睡一會兒，但說實在精神上還是有點倦怠。<br>等到早上五點人潮陸陸續續出現後，我們就準時登機囉～</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<img src="http://cms-bucket.nosdn.127.net/69e62014ead8401894c3d7de2efc114e20180124105900.gif" class="" width="400">
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>從 <strong>桃園機場 → 福岡空港</strong> 約莫兩小時左右<br>除了寫入境卡之外，我自己因為坐飛機中間所以幾乎都在睡（#<br>剛到日本能夠感受到些許涼意，畢竟緯度相對台灣高了一點，遺憾的是這裡同時也在下雨QQ<br>（也因為雨天只好拿Wikipedia的圖來放一下XD）</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/UekrCXB.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/21qngHa.jpg"></div></div></div></div>
+
+<p>&nbsp;</p>
+<p>在福岡空港我們並沒有待很久，只有購入<strong>福岡地鐵一日乘車券</strong>後，就開始了我們第一天的行程…<br>啊 並沒有、咱還是先去<strong>博多車站</strong>找一下飯店放個行李XD</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://subway.city.fukuoka.lg.jp/eki/img/routemap_Symbol.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/tyq75zO.jpg"></div></div></div></div>
+
+
+
+<p>在九州住宿部分我們選的是<strong>東橫INN博多站前2號店</strong>，距離博多車站步行約5分鐘相當便利。<br>（不瞞說為了省旅費，往後的行程幾乎都挑東橫INN系列，但住過之後發現品質真的不差!!）</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/MzqVFMy.png"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/383NJK9.jpg"></div></div></div></div>
+
+
+
+<p>再來就開始跑行程了。<br>說是這麼說啦… 但我們第一天的行程表是空的XD<br>畢竟前一晚沒睡又剛下飛機，所以沒有排特別重要的景點，就單純在福岡市區亂晃！</p>
+<p>因為下雨天的緣故，我們先去博多車站內的購物中心，而作為動漫迷會逛的… 應該不用我多說AwA</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/sSyO85i.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/DveF8mL.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/Tm36kCV.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/0haULCf.jpg"></div></div></div></div>
+
+<p>不得不說日本不愧是動畫產業的把拔，連書店內的擺設都很猛<br>左上圖是2019冬番討論度很高的**”五等份的花嫁”** … 3939得第一!!<br>右上圖是2019春番當前常和**”五等份的花嫁”<strong>拿來比較的</strong>“我們真的學不來”**… 直接放在附近打對臺XDDDD</p>
+<p>左下圖是小說區，自從上了大學後就真的很少在啃輕小說了 = w =<br>左下圖是 … 呃 職業病？畢竟是相關科系還是來看看日文書長怎樣~  <del>C++ 從入門到放棄</del></p>
+<p>&nbsp;</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/bgrG7kr.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/UmElOEm.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/JkTYbw3.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/VB2aZIV.jpg"></div></div></div></div>
+
+<p>再來是娛樂方面，日本的夾娃娃機真的爆幹多，台灣目前也有逐漸飽和的趨勢（嘆<a href="www.google.com" target="_blank" style="text-decoration:none;">😏</a><br>不過我說那個右下角… 連樹莓派(Raspberry Pi)都有實在太潮啦wwwww</p>
+<p>&nbsp;</p>
+<p>之後我們就轉移到<strong>天神車站</strong>、繼續閒晃（超廢<br>值得一提的是<strong>天神地下街</strong>，全長600公尺是那種一不小心就會迷路的大。<br>這邊大多以美食、藥妝、服飾為主，是個避雨逛街的好選擇… 我不這麼認為，因為人潮爆多###</p>
+<p><img src="https://i.imgur.com/QQWbOd0.jpg"></p>
+<p>我們在人潮中穿梭一陣子，繼續找地方油泳 … 第一站<strong>虎之穴</strong> GO!!!</p>
+<p><img src="https://i.imgur.com/e2f27gG.jpg"></p>
+<p>虎之穴主要是以同人誌為中心並售賣漫畫和關連商品的 … 聖地!!<br>比起台北近幾年新開的虎之穴，這裡的規模真的大很多，好孩子沒事千萬別常來(笑)</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/6BCCrNo.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/EN8SwMS.jpg"></div></div></div></div>
+
+<p>還有像這種專區真的看幾次都覺得很狂，圖中分別是<strong>BanG Dream</strong>和<strong>佐賀偶像是傳奇</strong>，真香（吸<br>前者是當前很夯的樂團偶像番(?)，動畫甚至要出第三季了～ 期待!!<br>後者則是佐賀的地區宣傳動畫… 不對、我覺得應該要歸類在吸毒片，原本有打算來個<strong>佐賀唐津</strong>聖地巡禮，可是… 真的太偏僻了QQ 怪不得還要出動畫來宣傳，對佐賀有興趣的不妨可以看看這部（推坑</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/OH2YAQG.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/emcBtL5.jpg"></div></div></div></div>
+
+<p>還有公主連結… 這應該也不用我多說了吧w 香！</p>
+<p>原本逛完已經下樓要準備離開… 結果看到超大橫幅的廣告 ↓</p>
+<p><img src="https://i.imgur.com/Hw6yoC4.jpg"></p>
+<p>居然是三嶋老師的和カントク老師的作品展欸 GOGO~</p>
+<p>第二站 <strong>軸中心派</strong>，電梯到了四樓開門的瞬間滿溢的香味噴鼻而來（幻覺）</p>
+<p><img src="https://i.imgur.com/50n8KEZ.jpg"></p>
+<p>這裡不單純是作品展，包含其他各路大神的作品都有出現，像是珈琲貴族、Karory、てぃんくる、アカバネ…都有。</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/GyCUDD2.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/qw3IQgG.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/Z7wZItb.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/33v8jGJ.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/jHjnHmX.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/Bo26g6j.jpg"></div></div></div></div>
+
+<p>對於常在看油圖的我而言這些作品都不陌生就是了wwwww</p>
+<p>下一站，<strong>Animate</strong>！GO！</p>
+<p><img src="https://i.imgur.com/MQy4YnP.jpg"></p>
+<p>這裡相對於虎之穴的同人本，幾乎都是以官方商品為主。<br>在臺灣有晃過的朋友應該都知道，只不過日本的規模硬是大了許多QQ<br>而這次日本行我們其實路過很多間Animate… 逛爆（抹臉</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/K9Xg4AN.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/40e6e3D.jpg"></div></div></div></div>
+
+<p>圖中呈現各種偶像番的宗教戰爭XDDD 官方真的很喜歡放在一起打對臺wwwww 懂玩#</p>
+<p>&nbsp;</p>
+<p>傍晚我們去一趟天神的唐吉軻德補充零食後，就搭地下鐵準備回博多吃晚餐啦！<br>… 嗯？你問我怎麼好像沒看到午餐文？  因為預算都拿去晚餐吃燒肉了wwwww</p>
+<p><a href="https://apoarea.tw/yakinikunogyutahonjinhakata/">焼肉の牛太 本陣（ヨドバシ博多店）</a><br>這家是特別規劃好的行程，因為每個月29號的ニクの日會折價¥500，吃到<del>爆</del>飽!!!</p>
+<img src="https://i.imgur.com/Z9If4fK.jpg" class="" width="400">
+
+<p>而且他們點餐機制是用平板電腦，還挺方便的~ （還有中文選單）</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 100%;"><img src="https://i.imgur.com/tETZMfs.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/H8WBgII.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/QOQ52st.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/YMFsCex.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/Ef5S5Ci.jpg"></div></div></div></div>
+
+<p>總之，在這裡就是各種吃肉、吃肉、還有吃肉，回飯店的路上真的肚子超撐=w=<br>好在吃下去的這些肉都在之後的大量走路行程中消耗掉了 … 應該吧XD</p>
+<p>&nbsp;</p>
+<h3 id="Day-2-紫藤花｜福岡県"><a href="#Day-2-紫藤花｜福岡県" class="headerlink" title="Day 2 - 紫藤花｜福岡県"></a>Day 2 - 紫藤花｜福岡県</h3><p>東橫INN有提供自助式的早餐吧，基本配置都是兩種飯糰+<a href="https://www.toyoko-inn.com/feature/breakfast.html?lcl_id=zh_TW">其他小菜</a>。<br>雖然個人覺得還不錯吃（尤其是煎蛋），但每天差不多的菜色就… 見仁見智啦XD </p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/xgmRpX1.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/s3zxdWO.jpg"></div></div></div></div>
+
+<p>&nbsp;</p>
+<p><strong>太宰府-柳川</strong>在觀光套票中是綁在一起的行程。<br>在出發前一週我們上網發現紫藤花的花季預估在4/29結束，一度想規劃成日本Day1下飛機就直衝柳川，後來想想這行程真的會出人命，所以就半放棄地排在Day2，結果似乎花況比預期中還要好，因此花季延長啦，賺！</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/DYG2SbH.png"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/Gt0YoCn.jpg"></div></div></div></div>
+
+<p>&nbsp;</p>
+<p>搭西鐵 從<strong>博多→柳川</strong> 大約一小時，比預想還要快一些。<br>另外我也從這天開始利用==Google timeline==紀錄移動路線，雖然在沒有訊號的路線追縱會出問題，像是高速行駛、過山洞、海底隧道(咦?)，然後… 這天依舊是陰雨綿綿的天氣（嘆），一樣借網路圖片放w</p>
+<p><img src="https://i.imgur.com/FMJ3FGc.jpg"></p>
+<p>&nbsp;</p>
+<ul>
+<li>中山大藤（紫藤花✿）</li>
+</ul>
+<p>從柳川車站下車後轉接駁車，大約15分鐘抵達會場。<br>可能是花季延長又下雨的緣故吧，現場人並不算多，不過附近疑似有台灣的旅行團，有種新鮮感（？）</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 100%;"><img src="https://i.imgur.com/tEVrZi5.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/UMbGSqa.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/mtodfyT.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/PFNIwDO.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/VsH2olJ.jpg"></div></div></div></div>
+
+
+
+<ul>
+<li>川下乘船</li>
+</ul>
+<p>拉回柳川車站，這回要用套票中的川下乘船漫遊柳川～<br>沿途風景實在美不勝收，拍了很多張讓我打遊記當下很難挑照片XDDD<br>船夫阿伯會邊划船邊講故事，偶爾哼些日本歌謠，最神奇的是他還會用一點中文和我們介紹。</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/YZsvtqe.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/kcA2b7U.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/HWuBHXm.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/kVoSk11.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/5OcAa96.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/fuFlk7P.jpg"></div></div></div></div>
+
+<p>雖然下了點小雨，但絲毫不影響大家聽故事的興致。<br>另外還有水上攤商，很可惜我們這艘船沒有人要請船夫停下來的意思XD</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/JMxE5DX.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/KQwmP3J.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/J2r8OSU.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/IvOxcVH.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/bMSgqLm.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/z0Jxeth.jpg"></div></div></div></div>
+
+<p>&nbsp;</p>
+<p>下船後就是觀光的土產店可以晃。<br>可以看到對於令和迎新年已經有很多相關的商品～</p>
+<p><img src="https://i.imgur.com/uVaQSjV.jpg"></p>
+<ul>
+<li><p>一蘭拉麵</p>
+<p>雖然說各位對一蘭拉麵應該都不陌生，畢竟在台北也有分店。</p>
+<p>不過太宰府分店的特色就是<strong>五角碗</strong>，在日文有<strong>合格</strong>的雙關意義！</p>
+</li>
+</ul>
+<ul>
+<li>天滿宮</li>
+</ul>
+]]></content>
+      <categories>
+        <category>旅遊日誌</category>
+      </categories>
+      <tags>
+        <tag>日本行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【遊記】2019 橫跨平成&amp;令和的日本行（中國篇）</title>
+    <url>/2019/190726-japan-travel-chugoku/</url>
+    <content><![CDATA[<p><img src=""></p>
+<a id="more"></a>
+
+
+
+
+
+<h3 id="Day-5-相望｜山口県"><a href="#Day-5-相望｜山口県" class="headerlink" title="Day 5 - 相望｜山口県"></a>Day 5 - 相望｜山口県</h3><ul>
+<li>小倉</li>
+<li>下關</li>
+<li>廣島</li>
+</ul>
+<h3 id="Day-6-迷鹿｜広島県"><a href="#Day-6-迷鹿｜広島県" class="headerlink" title="Day 6 - 迷鹿｜広島県"></a>Day 6 - 迷鹿｜広島県</h3><ul>
+<li>吳市</li>
+<li>宮島</li>
+</ul>
+<h3 id="Day-7-｜岡山県"><a href="#Day-7-｜岡山県" class="headerlink" title="Day 7 - ｜岡山県"></a>Day 7 - ｜岡山県</h3><ul>
+<li></li>
+<li></li>
+</ul>
+<h3 id="Day-8-丹寧聖地｜香川県"><a href="#Day-8-丹寧聖地｜香川県" class="headerlink" title="Day 8 - 丹寧聖地｜香川県"></a>Day 8 - 丹寧聖地｜香川県</h3><ul>
+<li>兒島（岡山）</li>
+<li>高松</li>
+</ul>
+]]></content>
+      <categories>
+        <category>旅遊日誌</category>
+      </categories>
+      <tags>
+        <tag>日本行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【遊記】2019 橫跨平成&amp;令和的日本行（關西篇）</title>
+    <url>/2019/190727-japan-travel-kansai/</url>
+    <content><![CDATA[<p><img src=""></p>
+<a id="more"></a>
+
+
+
+
+
+<h3 id="Day-9-姬路城、神戶牛｜兵庫県"><a href="#Day-9-姬路城、神戶牛｜兵庫県" class="headerlink" title="Day 9 - 姬路城、神戶牛｜兵庫県"></a>Day 9 - 姬路城、神戶牛｜兵庫県</h3><ul>
+<li>姬路</li>
+<li>神戶</li>
+</ul>
+<h3 id="Day-10-和歌山城｜和歌山県"><a href="#Day-10-和歌山城｜和歌山県" class="headerlink" title="Day 10 - 和歌山城｜和歌山県"></a>Day 10 - 和歌山城｜和歌山県</h3><ul>
+<li><h3 id="Day-11-嵐山｜京都府"><a href="#Day-11-嵐山｜京都府" class="headerlink" title="Day 11 - 嵐山｜京都府"></a>Day 11 - 嵐山｜京都府</h3></li>
+<li></li>
+</ul>
+<h3 id="Day-12-賦歸｜関西空港｜大阪府"><a href="#Day-12-賦歸｜関西空港｜大阪府" class="headerlink" title="Day 12 - 賦歸｜関西空港｜大阪府"></a>Day 12 - 賦歸｜関西空港｜大阪府</h3><ul>
+<li></li>
+</ul>
+]]></content>
+      <categories>
+        <category>旅遊日誌</category>
+      </categories>
+      <tags>
+        <tag>日本行</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>音ゲー雑談 Track1 - 聊聊我跳的那些坑</title>
     <url>/2019/190817-music-game-talk1/</url>
     <content><![CDATA[<p><img src="https://i.imgur.com/FX5yItC.jpg"></p>
@@ -893,6 +893,55 @@
       </categories>
       <tags>
         <tag>音Game</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【開箱】MegaHouse 伊布家族... 啊~ 真香❤</title>
+    <url>/2019/191005-eevee-friends-figures-unboxing/</url>
+    <content><![CDATA[<p><img src="https://i.imgur.com/KJCVMxF.jpg"></p>
+<p>身為伊布控，Pokemon本傳遊戲只要能練伊布當然都給牠練爆</p>
+<p>不過收模型倒是第一次… 老實說也沒收過就是，所以模型初開箱就獻給伊布家族了</p>
+<p>真的百看不膩，敲讚derrrrrr (⁎⁍̴̛ᴗ⁍̴̛⁎)‼</p>
+<a id="more"></a>
+
+
+
+<p>今年二月中旬，MegaHouse釋出這樣的消息… </p>
+<p>大約四月底左右開放預購，手指頭不聽使喚就訂下去了XD</p>
+<img width="400px" src="https://i.imgur.com/vMV9wyI.png" />
+
+
+
+<p>等到現在過了半年，都已經大學畢業換地方住了才收到<br>（日本八月發售，算是在意料之內…吧）</p>
+<p>因為本身並不是多專業的玩家，所以就簡單發個開箱文來聞香香w<br>不囉唆，直接看圖啦！！也可以右鍵點開大圖！！</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/LIQf7oJh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/fpO4jpdh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/cbI5AE8h.jpg"></div></div></div></div>
+
+<p>包裝的箱子真的是剛剛好，而且從外觀就能聞到香氣了（？？</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/nVd4TKRh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/DFIKySXh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/lUnFrY5h.jpg"></div></div></div></div>
+
+<p>拆拆拆～</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/pTVVxjuh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/rfL5q24h.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/Ib9CDfjh.jpg"></div></div></div></div>
+
+<p>拆拆拆～</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/HrgBn11h.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/wu7J8nCh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/3uq6os1h.jpg"></div></div></div></div>
+
+<p>拆拆拆～</p>
+<p>&nbsp;<br>下面這個小吊飾是限定特典，摸起來軟軟的捨不得掛包包QwQ<br><img src="https://i.imgur.com/IpSlLXWh.jpg"></p>
+<p>最後，來個旋轉四連拍~</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/FvzpHfjh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/xF5WlF9h.jpg"></div></div></div></div>
+
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/JPpkxIlh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/D5Bsxg7h.jpg"></div></div></div></div>
+
+<p>&nbsp;<br>&nbsp;<br>之後應該會找個時間買展示箱，希望可以保存好一點XD</p>
+<p><img src="https://i.imgur.com/QER6l2uh.jpg"></p>
+]]></content>
+      <categories>
+        <category>敗家開箱</category>
+      </categories>
+      <tags>
+        <tag>ACGN</tag>
+        <tag>Pokemon</tag>
+        <tag>MegaHouse G.E.M.EX Series</tag>
       </tags>
   </entry>
   <entry>
@@ -1069,55 +1118,6 @@
       <tags>
         <tag>ACGN</tag>
         <tag>Fate</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【開箱】MegaHouse 伊布家族... 啊~ 真香❤</title>
-    <url>/2019/191005-eevee-friends-figures-unboxing/</url>
-    <content><![CDATA[<p><img src="https://i.imgur.com/KJCVMxF.jpg"></p>
-<p>身為伊布控，Pokemon本傳遊戲只要能練伊布當然都給牠練爆</p>
-<p>不過收模型倒是第一次… 老實說也沒收過就是，所以模型初開箱就獻給伊布家族了</p>
-<p>真的百看不膩，敲讚derrrrrr (⁎⁍̴̛ᴗ⁍̴̛⁎)‼</p>
-<a id="more"></a>
-
-
-
-<p>今年二月中旬，MegaHouse釋出這樣的消息… </p>
-<p>大約四月底左右開放預購，手指頭不聽使喚就訂下去了XD</p>
-<img width="400px" src="https://i.imgur.com/vMV9wyI.png" />
-
-
-
-<p>等到現在過了半年，都已經大學畢業換地方住了才收到<br>（日本八月發售，算是在意料之內…吧）</p>
-<p>因為本身並不是多專業的玩家，所以就簡單發個開箱文來聞香香w<br>不囉唆，直接看圖啦！！也可以右鍵點開大圖！！</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/LIQf7oJh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/fpO4jpdh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/cbI5AE8h.jpg"></div></div></div></div>
-
-<p>包裝的箱子真的是剛剛好，而且從外觀就能聞到香氣了（？？</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/nVd4TKRh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/DFIKySXh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/lUnFrY5h.jpg"></div></div></div></div>
-
-<p>拆拆拆～</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/pTVVxjuh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/rfL5q24h.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/Ib9CDfjh.jpg"></div></div></div></div>
-
-<p>拆拆拆～</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/HrgBn11h.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/wu7J8nCh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/3uq6os1h.jpg"></div></div></div></div>
-
-<p>拆拆拆～</p>
-<p>&nbsp;<br>下面這個小吊飾是限定特典，摸起來軟軟的捨不得掛包包QwQ<br><img src="https://i.imgur.com/IpSlLXWh.jpg"></p>
-<p>最後，來個旋轉四連拍~</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/FvzpHfjh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/xF5WlF9h.jpg"></div></div></div></div>
-
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/JPpkxIlh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/D5Bsxg7h.jpg"></div></div></div></div>
-
-<p>&nbsp;<br>&nbsp;<br>之後應該會找個時間買展示箱，希望可以保存好一點XD</p>
-<p><img src="https://i.imgur.com/QER6l2uh.jpg"></p>
-]]></content>
-      <categories>
-        <category>敗家開箱</category>
-      </categories>
-      <tags>
-        <tag>ACGN</tag>
-        <tag>Pokemon</tag>
-        <tag>MegaHouse G.E.M.EX Series</tag>
       </tags>
   </entry>
   <entry>
@@ -1860,9 +1860,9 @@ Pwn大概就是這麼一回事了~
 <p>上一篇提到咱們老闆外務很忙，這學期總算是上了軌道，meeting穩定許多，我也終於在九月把大咪論文報完（原本預計七月初），沒意外之後就是輪到碩一新生接手報告，而我們升碩二的就要開始忙論文了。說到 Lab 碩一新生，雖然每一屆的狀況都不盡相同，但感覺這屆似乎沒有像我們這麼團結 (當、當然也可能我們才是例外)。我們這屆從暑假有自己的群組，約吃飯、打CTF、跑Conf. 也算是蠻常揪出門，而這屆看起來有幾位已經是中山老屁股會各自行動，打 CTF 的也只有一位 <del>（這樣 <strong>MacacaHub</strong> 會很難傳下去）</del>，其他的雖然不在圈內不清楚，但從旁觀者角度來看就是蠻… 蠻多小圈圈（？） 而且也正逢 Lab 的低潮期，看起來之後會辛苦一點&gt;_&lt;</p>
 <p>平常會和我們在 Lab 打屁待到 21、22點、週末也會出現的學長們已經畢業了，不免有些空虛，Lab 碩一新生看起來都蠻準時回家（笑），這才是比較健康的生活方式，我都認為自己是因為奴性太重才會天天 Lab 簽到，有點怕之後出社會很快適應加班生活(X)，曾經有想過需不需要調整待在 Lab 的時間，不過有雙螢幕實在很方便吶，何況我的研究進度應該也不算快，多待一點說不定還能加一些同情分 (？)，有時候會在 Lab 發懶忙一些不務正業的事… 像是現在的這篇實驗室日誌 ㄏ。</p>
 <p>這學期除了 Seminar，我另外修了<strong>駭客攻防</strong> 和 <strong>英文寫作</strong>，前者是個人在資工系底下最有興趣的課，後者反過來是最沒興趣的課Zzzz ，不過因為英文寫作有額外的撒必蘇，所以咱 Lab 大部分都被推(ㄓㄨㄚ)薦(ㄑㄩˋ)修課，目前期中考結束hmmmmmm … 看起來不怎麼樂觀就是，畢竟英文還是我的硬傷RRR；駭客攻防部分就上課蠻開心的，算是在學習打 CTF 會用到的技能，尤其還是展哥擔任助教，藉此多了蠻多練實作題的機會，不得不說他真的很會出題呢，不愧是有經驗的 CTF 玩家。</p>
-<p>話說回來，自暑假以來摸 CTF 的頻率下降許多，何況 10月的金盾獎初賽居然還沒有通過 <del>(沒辦法北上麥當當吃到飽了嗚嗚)</del>，前幾天的 Balsn CTF 也只有摸到 Welcome，雖然也沒有花太多時間在打，但我覺得至少 PoW 那題應該解的出來啊QwQ 真心認為大學就該開始摸 CTF，很羨慕北部好多把競技程式和CTF都兼顧的玩家，不然我到研究所大概只有不到一年的時間可以玩，重點我還有其他業務不得不做，說實話玩得不是很過癮ㄚ &gt;___&lt;</p>
+<p>話說回來，自暑假以來摸 CTF 的頻率下降許多，何況 10月的金盾獎初賽居然還沒有通過 <del>(沒辦法北上麥當當吃到飽了嗚嗚)</del>，前幾天的 Balsn CTF 也只有摸到 Welcome，雖然也沒有花太多時間在打，但我覺得至少 PoW 那題應該解的出來啊QwQ 真心認為大學就該開始摸 CTF，很羨慕北部好多把競技程式和 CTF 都兼顧的玩家，不然我到研究所大概只有不到一年的時間可以玩，重點我還有其他業務不得不做，說實話玩得不是很過癮ㄚ &gt;___&lt;</p>
 <br>
-雖然有點唐突，但我的冬天似乎提早結束了。
+最後雖然有點唐突，但我的冬天似乎提早結束了 <3
 
 ]]></content>
       <categories>
