@@ -22,7 +22,7 @@
 
   <meta name="description" content="Writeups 搬自 MacacaHub HTCF HW 0x02 Auther: stavhaygnWriteup By: yctseng1227">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NSYSU 駭客攻防 HW 0x02 Writeup">
+<meta property="og:title" content="NSYSU 駭客攻防 HW 0x02 Writeups">
 <meta property="og:url" content="blog.eevee.tw/2020/201209-htcf-hw2-writeups/index.html">
 <meta property="og:site_name" content="yctseng&#39;s Blog">
 <meta property="og:description" content="Writeups 搬自 MacacaHub HTCF HW 0x02 Auther: stavhaygnWriteup By: yctseng1227">
@@ -47,7 +47,7 @@
 <meta property="og:image" content="https://github.com/MacacaHub/CTF-writeups/raw/master/HTCF%20CTF/hw2/pic/2-5.png">
 <meta property="og:image" content="https://github.com/MacacaHub/CTF-writeups/raw/master/HTCF%20CTF/hw2/pic/2-6.png">
 <meta property="article:published_time" content="2020-12-08T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-09T07:40:54.439Z">
+<meta property="article:modified_time" content="2020-12-09T09:44:38.442Z">
 <meta property="article:author" content="yctseng">
 <meta property="article:tag" content="HTCF">
 <meta name="twitter:card" content="summary">
@@ -66,7 +66,7 @@
   };
 </script>
 
-  <title>NSYSU 駭客攻防 HW 0x02 Writeup | yctseng's Blog</title>
+  <title>NSYSU 駭客攻防 HW 0x02 Writeups | yctseng's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137531005-1"></script>
     <script data-pjax>
@@ -233,7 +233,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          NSYSU 駭客攻防 HW 0x02 Writeup
+          NSYSU 駭客攻防 HW 0x02 Writeups
         </h1>
 
         <div class="post-meta">
@@ -291,7 +291,7 @@
 <h2 id="news-160-points"><a href="#news-160-points" class="headerlink" title="news (160 points)"></a>news (160 points)</h2><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>我都唸 SQL 。<br>不對，應該要唸 SQL ！<br>雖然我朋友都唸 SQL ，但我覺得應該要唸 SQL 。<br>可是我都唸 SQL。</p>
 <p><a target="_blank" rel="noopener" href="https://news.macacahub.tw/">https://news.macacahub.tw/</a></p>
 <h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>乍看之下是個普通的公告欄，隨意點進其中一則可以發現網址列帶 id 參數，題目已經提示是 SQL injection，因此可以直接從網址的 id 參數下手作為注入點。其中，這種查詢資料庫類型的 SQL injection，我們可以搭配 <code>UNION SELECT</code> 針對可顯示資訊的頁面進行查詢。</p>
-<p>第一步，起手式用 <code>ORDER BY</code> 來推測表格欄位的數目。</p>
+<p>第一步，起手式用 <code>ORDER BY</code> 來推測查詢表格欄位的數目。</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">https://news.macacahub.tw/new.php?id=1 ORDER BY 3       # success</span><br><span class="line">https://news.macacahub.tw/new.php?id=1 ORDER BY 4       # fail</span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -301,7 +301,7 @@
 <blockquote>
 <p>注意，通常網址送出去都會被轉換成 URL encode（ e.g. (空格) = ‘%20’ ）</p>
 </blockquote>
-<p>經過測試可以知道 id 的資料型態為整數，且測到 <code>ORDER BY 4</code> 網頁就沒有顯示顯示畫面，判斷表格的欄位數為 3，如此一來我們就可以用 <code>UNION SELECT</code> 串接其他 SQL 的查詢語句。</p>
+<p>經過測試可以知道 id 的資料型態為整數，且測到 <code>ORDER BY 4</code> 網頁就沒有顯示畫面，表示查詢表格的欄位數為 3，如此一來我們就可以用 <code>UNION SELECT</code> 串接其他 SQL 的查詢語句（注意 <code>UNION SELECT</code> 後面接的查詢欄位數目必須和前句相同）。</p>
 <p>再來，我們嘗試戳 id，先找到一個無法正常查詢到的頁面（ e.g. id=6 ），拿來當作我們進行 SQL injection 要顯示結果的畫面，配合剛剛摸索到的欄位數，先來塞個 1, 2, 3 看看會怎麼樣 XD</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">https://news.macacahub.tw/new.php?id=6 UNION SELECT 1,2,3</span><br></pre></td></tr></table></figure>
 
@@ -414,7 +414,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="/blog.eevee.tw/2020/201209-htcf-hw2-writeups/" title="NSYSU 駭客攻防 HW 0x02 Writeup">blog.eevee.tw/2020/201209-htcf-hw2-writeups/</a>
+    <a href="/blog.eevee.tw/2020/201209-htcf-hw2-writeups/" title="NSYSU 駭客攻防 HW 0x02 Writeups">blog.eevee.tw/2020/201209-htcf-hw2-writeups/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-TW" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
