@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="yctseng&#39;s Blog">
 <meta property="og:description" content="Writeups 搬自 MacacaHub HTCF HW 0x02 Auther: stavhaygnWriteup By: yctseng1227">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/hw2/pic/CISC2020_practice_web.jpg">
+<meta property="og:image" content="https://github.com/stavhaygn/CISC-Frontend/blob/master/public/CISC2020_practice_web.jpg?raw=true">
 <meta property="og:image" content="https://github.com/MacacaHub/CTF-writeups/raw/master/HTCF%20CTF/hw2/pic/0-1.png">
 <meta property="og:image" content="https://github.com/MacacaHub/CTF-writeups/raw/master/HTCF%20CTF/hw2/pic/0-2.png">
 <meta property="og:image" content="https://github.com/MacacaHub/CTF-writeups/raw/master/HTCF%20CTF/hw2/pic/0-3.png">
@@ -47,11 +47,11 @@
 <meta property="og:image" content="https://github.com/MacacaHub/CTF-writeups/raw/master/HTCF%20CTF/hw2/pic/2-5.png">
 <meta property="og:image" content="https://github.com/MacacaHub/CTF-writeups/raw/master/HTCF%20CTF/hw2/pic/2-6.png">
 <meta property="article:published_time" content="2020-12-08T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-09T09:44:38.442Z">
+<meta property="article:modified_time" content="2020-12-09T10:09:14.046Z">
 <meta property="article:author" content="yctseng">
 <meta property="article:tag" content="HTCF">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/hw2/pic/CISC2020_practice_web.jpg">
+<meta name="twitter:image" content="https://github.com/stavhaygn/CISC-Frontend/blob/master/public/CISC2020_practice_web.jpg?raw=true">
 
 <link rel="canonical" href="blog.eevee.tw/2020/201209-htcf-hw2-writeups/">
 
@@ -286,8 +286,9 @@
 
 <br>
 
-<p>這兩題都出自今年 <a target="_blank" rel="noopener" href="https://cisc2020.ccisa.org.tw/">CISC2020 - Day 1</a>，由我們 <strong>MacacaHub</strong> 團隊負責的網路攻防安全演練，當時 3 小時的時間沒辦法帶完課程實在有點可惜，身為 MacacaHub 助教的我當然不能洩氣，這次遇到相似ㄉ題目速速在最短時間解決 &gt;w&lt;!!</p>
-<p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/hw2/pic/CISC2020_practice_web.jpg" alt=" "></p>
+<p>這兩題都出自今年 <a target="_blank" rel="noopener" href="https://cisc2020.ccisa.org.tw/">CISC2020 - Day 1</a>，由我們 <strong>MacacaHub</strong> 團隊負責的基礎網頁安全演練，當時 3 小時的時間沒辦法帶完課程實在有點可惜，身為 MacacaHub 助教的我當然不能洩氣，這次遇到相似ㄉ題目速速在最短時間解決 &gt;w&lt;!!</p>
+<img src="https://github.com/stavhaygn/CISC-Frontend/blob/master/public/CISC2020_practice_web.jpg?raw=true" width=400>
+
 <h2 id="news-160-points"><a href="#news-160-points" class="headerlink" title="news (160 points)"></a>news (160 points)</h2><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>我都唸 SQL 。<br>不對，應該要唸 SQL ！<br>雖然我朋友都唸 SQL ，但我覺得應該要唸 SQL 。<br>可是我都唸 SQL。</p>
 <p><a target="_blank" rel="noopener" href="https://news.macacahub.tw/">https://news.macacahub.tw/</a></p>
 <h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>乍看之下是個普通的公告欄，隨意點進其中一則可以發現網址列帶 id 參數，題目已經提示是 SQL injection，因此可以直接從網址的 id 參數下手作為注入點。其中，這種查詢資料庫類型的 SQL injection，我們可以搭配 <code>UNION SELECT</code> 針對可顯示資訊的頁面進行查詢。</p>
