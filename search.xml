@@ -82,34 +82,6 @@
       </categories>
   </entry>
   <entry>
-    <title>【週記】咦？好像踢到奇怪的盒子...</title>
-    <url>/2019/190311-asus5z-unboxing/</url>
-    <content><![CDATA[<p><img src="https://imgur.com/ODLyNTq.jpg"></p>
-<p>好像很久沒更新部落格www （跪<br>一方面是沒什麼趣事可以分享，另一方面是懶癌發作 XD<br>只好浮上來換口氣說說最近的事囉~</p>
-<p>另外用hexo框架更新網站偶爾會遇到<code>command not found: hexo</code><br>不得不說有點頭痛呢… 最近終於查清是<strong>Node.js</strong>的更新問題。<br>果然對於自己不熟悉的環境要找問題就不太容易呢~</p>
-<p>請容許我把解決方法放在這裡（其實就只是更新node版本<br><code>sudo npm install hexo-cli -g</code></p>
-<a id="more"></a>
-
-<p>首先。</p>
-<p>好像還是不少朋友很關心我未來研究所的去向www<br>但我只能說… 現在手上握著兩間的名額，沒辦法把話說死啊。</p>
-<p>總之，明天(3/11)正好是A研究所的二次報到（第一次是去年剛錄取要報到）。<br>至於B研究所呢～ 嗯看起來已經快被我放生Play呢 QQ</p>
-<hr>
-<p>再來就是！ 我換手機惹（撒花<br>不過換機的理由很薄弱… 就是家母用的Sony Z1(2013)要淘汰了。<br>我就見縫插針跟著提想換手機，現在想想真的是不知道哪來的勇氣www<br>（恰好我玩手遊常常過熱到閃退，當然我沒講出來 XD）</p>
-<p>至於挑手機呢… 嗯 我這人真的是平常不太關心手機動態。<br>等到要換了才開始每天追PTT的MobileComm的推文 (#</p>
-<p>在預算10k~15k(我自己有貼小錢ww) 的情況下。<br>最後是挑了高通845的 <strong>Zenfone 5Z 6G/128G (ZS620KL)</strong><br>個人自認需求不算高，平常也就滑滑fb、line、ptt，甚至連手遊都玩的很休閒www<br>（之前吃晚餐被抓包上次登入遊戲是13hr前，意思是早上滑完就沒開過= =+）</p>
-<p>沒想過身為索粉的我會有脫離SONY的一天 XD<br>畢竟前幾隻手機都是直接從SONY的機種挑… 但這次X1真的好長。<br>甚至還被戲稱遙控器www 真的怕口袋不夠深塞不下（Ｏ</p>
-<p>以往換手機我都還會在巴哈小屋po開箱文<br>至於5Z的開箱嘛，看起來好像沒什麼好開，反倒是Android 9要適應一陣子。<br>（之前的XZ只能更新到Android 8.0.0）</p>
-<p>就醬子吧，雖然很想把研究所心得貼出來。<br>無奈到現在我仍然還在猶豫，很討厭自己選擇障礙的個性QQ<br>可能會拆成兩篇，下週先放個&lt;上篇&gt;好了~~ （希望懶癌不要發作</p>
-]]></content>
-      <categories>
-        <category>敗家開箱</category>
-      </categories>
-      <tags>
-        <tag>手機</tag>
-        <tag>Asus 5Z</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【週記】開學週漫談</title>
     <url>/2019/190224-semester-begin-talk/</url>
     <content><![CDATA[<p><img src="https://imgur.com/Jqz1atE.jpg"></p>
@@ -138,6 +110,34 @@
       <categories>
         <category>生活札記</category>
       </categories>
+  </entry>
+  <entry>
+    <title>【週記】咦？好像踢到奇怪的盒子...</title>
+    <url>/2019/190311-asus5z-unboxing/</url>
+    <content><![CDATA[<p><img src="https://imgur.com/ODLyNTq.jpg"></p>
+<p>好像很久沒更新部落格www （跪<br>一方面是沒什麼趣事可以分享，另一方面是懶癌發作 XD<br>只好浮上來換口氣說說最近的事囉~</p>
+<p>另外用hexo框架更新網站偶爾會遇到<code>command not found: hexo</code><br>不得不說有點頭痛呢… 最近終於查清是<strong>Node.js</strong>的更新問題。<br>果然對於自己不熟悉的環境要找問題就不太容易呢~</p>
+<p>請容許我把解決方法放在這裡（其實就只是更新node版本<br><code>sudo npm install hexo-cli -g</code></p>
+<a id="more"></a>
+
+<p>首先。</p>
+<p>好像還是不少朋友很關心我未來研究所的去向www<br>但我只能說… 現在手上握著兩間的名額，沒辦法把話說死啊。</p>
+<p>總之，明天(3/11)正好是A研究所的二次報到（第一次是去年剛錄取要報到）。<br>至於B研究所呢～ 嗯看起來已經快被我放生Play呢 QQ</p>
+<hr>
+<p>再來就是！ 我換手機惹（撒花<br>不過換機的理由很薄弱… 就是家母用的Sony Z1(2013)要淘汰了。<br>我就見縫插針跟著提想換手機，現在想想真的是不知道哪來的勇氣www<br>（恰好我玩手遊常常過熱到閃退，當然我沒講出來 XD）</p>
+<p>至於挑手機呢… 嗯 我這人真的是平常不太關心手機動態。<br>等到要換了才開始每天追PTT的MobileComm的推文 (#</p>
+<p>在預算10k~15k(我自己有貼小錢ww) 的情況下。<br>最後是挑了高通845的 <strong>Zenfone 5Z 6G/128G (ZS620KL)</strong><br>個人自認需求不算高，平常也就滑滑fb、line、ptt，甚至連手遊都玩的很休閒www<br>（之前吃晚餐被抓包上次登入遊戲是13hr前，意思是早上滑完就沒開過= =+）</p>
+<p>沒想過身為索粉的我會有脫離SONY的一天 XD<br>畢竟前幾隻手機都是直接從SONY的機種挑… 但這次X1真的好長。<br>甚至還被戲稱遙控器www 真的怕口袋不夠深塞不下（Ｏ</p>
+<p>以往換手機我都還會在巴哈小屋po開箱文<br>至於5Z的開箱嘛，看起來好像沒什麼好開，反倒是Android 9要適應一陣子。<br>（之前的XZ只能更新到Android 8.0.0）</p>
+<p>就醬子吧，雖然很想把研究所心得貼出來。<br>無奈到現在我仍然還在猶豫，很討厭自己選擇障礙的個性QQ<br>可能會拆成兩篇，下週先放個&lt;上篇&gt;好了~~ （希望懶癌不要發作</p>
+]]></content>
+      <categories>
+        <category>敗家開箱</category>
+      </categories>
+      <tags>
+        <tag>手機</tag>
+        <tag>Asus 5Z</tag>
+      </tags>
   </entry>
   <entry>
     <title>【週記】ITSA桂冠賽 居...居然收掉了QQQ</title>
@@ -602,9 +602,9 @@
       </tags>
   </entry>
   <entry>
-    <title>【遊記】2019 橫跨平成&amp;令和的日本行（九州篇 下）</title>
-    <url>/2019/190725-japan-travel-kyushu-part2/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="Oh, these decrypted content cannot be verified, but you can still have a look."><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="Welcome to my blog, enter password to read." /><label>Welcome to my blog, enter password to read.</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="75f71dfdc997db7960bb61adedc95f637b0452f5ed8a9ec0124c9e6a9e7b6a32">89607a19ce2dcdbdbf020a4df0a50d8ad6b6e93e99e8785ee71ce1e26f71ca17d7c3156f3482f0056d647ebfe71341454c5c0ceb5eb97157ec7f4a273474e1509c2cd53e7a30d4f38be1286c6dbae86aba2dd082a92d59f4d6a717b7ca092c516bee3a3ca25911039e5cdfca92dcb58221badfc9f14e0f96099a9bd6fe82fa8175521b0fc29a30169d0a69ca74b1581fa30aa6e570e1bfb74aeb4a597875d26b6583a2a2041a17c0a6f7f11eee632b6c8bb9d7dec6c969faa94e3b962d82498d0ed4be7282997a2c11ee61f830252785ce7731030a6a463bb8f5ebeea6562dc1c1ba9ad262165a14fcd287881ce9e0ca980dad276e820ddca78f463bef70e762bc145ec152d6950f57b684dde20a446eb6c0c93191a3d2c90bef174c9b8209e0c8261932c6dcdf8d2895dab3d57b76713b80bdea8a08a1810de6388fa1e8f8eb80c1f0c64e4ccf7913436ba7968ec321601cf0539fc0ecb1793e2590bf6779fba4afee402220849fa038affa468ff76223d627ae10cdf428a52bcc83ba606e0a0e2fa7c621340869b9973179fc2c172de87dcc5f054c15a62e0104a786b46e0421b804a601651a7d91af20b5119ed28cd541add1083b589b3a057bfcbd5179cd8b50abbc493ece5d29ec77ce551bad0ecc98835c02ea204299f2cddb30b7b6329304323c873a8481d14a24d31288107756e774fa4945fe754eae250d862fea37</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <title>【遊記】2019 橫跨平成&amp;令和的日本行（中國篇）</title>
+    <url>/2019/190726-japan-travel-chugoku/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="Oh, these decrypted content cannot be verified, but you can still have a look."><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="Welcome to my blog, enter password to read." /><label>Welcome to my blog, enter password to read.</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="fabe348236105af01d2af70f132143740e3f1b98c255b45edce884cac87a56fa">89607a19ce2dcdbdbf020a4df0a50d8ad6b6e93e99e8785ee71ce1e26f71ca17d7c3156f3482f0056d647ebfe71341459f78f351316862a82399709bc3f1b3a623750d8cd0b095f41429407a9b62fcb9ac438f644246614cfc64ab5d3b0851de2777d5b68ae46265c89b8e3bae9da632ec0be7fb6148512639ffa98d514c47226a7d73f29030fdff58a78b647e5f20f0b52e4da0ce2031a8e7f73e2f500822bdba1f5914f354f1fb8ba46adef7a0e198c3e895201dcb783ff55dd934bacc8c3a284b1ea714f1da1f64371133821b5d758eeeb11fdd698898e827de2e62516ebe075e46e9a7f61fffff2d0f3f71b5fb9fe3daccb4fe056c45878899408dd5874cdbe11aed8bda1f629b97d0f149cc9199ef3d4a710bb65af36131a85ca65900bc4f4e2fc8b3f6f91e86a546fe30dc8f11460fcee460e54f80bcf537e5f0c3127e7f9277c12d5ceaa7240a2414572cb12c38f188ec8797f7bb539b37c2ccebca35de2758ef72242d77af9646d65a5f9f1abe5f39e894af14c087bd04a45d8297533c8038923d8453b5570b3e9dab977a7f87b230391a9f1a168485e3dc899211813b7604e50388a59845c23be79a5d077b3831dace5d21c70b9be076d179777f569e891474fad717f52da15848311e15c1c7389b45796db60651bb209793f2a6a8fc533d8397c9f2466afadb45b1d84cfff00941b47fabb550482d6525406c59eaf3eec930ef4abb872dd52ad4a7743248c45d93e582ae2cb0924911d6b3736e28e13867be39e90d26bb9bb67b79c8e89668d350b6899a263c9cc8597e27b84cf27308d8252ebdf2aa281c212dd779b8ef4d79ddecd7db19eb9bd7431c19de74a8875af75a35afb51bf164b10bd9080b258853fa61a23c78d9a486e4194bc8cfeff02d7acd82f73e11e1791f00df55a64031fb36d8a8416d3d6a176dd52ef6f9e6da54885b2d6e617db269158d0da6330c29cce761f60bdb95624a488d11f801fd36a0195dd45b1a86a4205fec26964d138ff0a481a10bf4b67a0bc890071d51cfe2d922bf0822dab7fd3d9722eb84450f119fe1264d0f43ccc6ecd22cfeb3e61dd460fe4431808d15b4eaacad419976d5c44411c575ddf7733c84b797cdc0428d4be7ff5c85a28640d59b84377a3c1c18040efd60cfdaa8e00860ce9ba1c221bbf89afb5f573bc11740c664c79609c52dbb6adbde5954f994f5f473258d00e706df2c48ef3158076e05315c6a5df119d3</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
         <category>旅遊日誌</category>
       </categories>
@@ -613,9 +613,9 @@
       </tags>
   </entry>
   <entry>
-    <title>【遊記】2019 橫跨平成&amp;令和的日本行（中國篇）</title>
-    <url>/2019/190726-japan-travel-chugoku/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="Oh, these decrypted content cannot be verified, but you can still have a look."><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="Welcome to my blog, enter password to read." /><label>Welcome to my blog, enter password to read.</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="fabe348236105af01d2af70f132143740e3f1b98c255b45edce884cac87a56fa">89607a19ce2dcdbdbf020a4df0a50d8ad6b6e93e99e8785ee71ce1e26f71ca17d7c3156f3482f0056d647ebfe71341459f78f351316862a82399709bc3f1b3a623750d8cd0b095f41429407a9b62fcb9ac438f644246614cfc64ab5d3b0851de2777d5b68ae46265c89b8e3bae9da632ec0be7fb6148512639ffa98d514c47226a7d73f29030fdff58a78b647e5f20f0b52e4da0ce2031a8e7f73e2f500822bdba1f5914f354f1fb8ba46adef7a0e198c3e895201dcb783ff55dd934bacc8c3a284b1ea714f1da1f64371133821b5d758eeeb11fdd698898e827de2e62516ebe075e46e9a7f61fffff2d0f3f71b5fb9fe3daccb4fe056c45878899408dd5874cdbe11aed8bda1f629b97d0f149cc9199ef3d4a710bb65af36131a85ca65900bc4f4e2fc8b3f6f91e86a546fe30dc8f11460fcee460e54f80bcf537e5f0c3127e7f9277c12d5ceaa7240a2414572cb12c38f188ec8797f7bb539b37c2ccebca35de2758ef72242d77af9646d65a5f9f1abe5f39e894af14c087bd04a45d8297533c8038923d8453b5570b3e9dab977a7f87b230391a9f1a168485e3dc899211813b7604e50388a59845c23be79a5d077b3831dace5d21c70b9be076d179777f569e891474fad717f52da15848311e15c1c7389b45796db60651bb209793f2a6a8fc533d8397c9f2466afadb45b1d84cfff00941b47fabb550482d6525406c59eaf3eec930ef4abb872dd52ad4a7743248c45d93e582ae2cb0924911d6b3736e28e13867be39e90d26bb9bb67b79c8e89668d350b6899a263c9cc8597e27b84cf27308d8252ebdf2aa281c212dd779b8ef4d79ddecd7db19eb9bd7431c19de74a8875af75a35afb51bf164b10bd9080b258853fa61a23c78d9a486e4194bc8cfeff02d7acd82f73e11e1791f00df55a64031fb36d8a8416d3d6a176dd52ef6f9e6da54885b2d6e617db269158d0da6330c29cce761f60bdb95624a488d11f801fd36a0195dd45b1a86a4205fec26964d138ff0a481a10bf4b67a0bc890071d51cfe2d922bf0822dab7fd3d9722eb84450f119fe1264d0f43ccc6ecd22cfeb3e61dd460fe4431808d15b4eaacad419976d5c44411c575ddf7733c84b797cdc0428d4be7ff5c85a28640d59b84377a3c1c18040efd60cfdaa8e00860ce9ba1c221bbf89afb5f573bc11740c664c79609c52dbb6adbde5954f994f5f473258d00e706df2c48ef3158076e05315c6a5df119d3</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <title>【遊記】2019 橫跨平成&amp;令和的日本行（九州篇 下）</title>
+    <url>/2019/190725-japan-travel-kyushu-part2/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="Oh, these decrypted content cannot be verified, but you can still have a look."><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="Welcome to my blog, enter password to read." /><label>Welcome to my blog, enter password to read.</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="75f71dfdc997db7960bb61adedc95f637b0452f5ed8a9ec0124c9e6a9e7b6a32">89607a19ce2dcdbdbf020a4df0a50d8ad6b6e93e99e8785ee71ce1e26f71ca17d7c3156f3482f0056d647ebfe71341454c5c0ceb5eb97157ec7f4a273474e1509c2cd53e7a30d4f38be1286c6dbae86aba2dd082a92d59f4d6a717b7ca092c516bee3a3ca25911039e5cdfca92dcb58221badfc9f14e0f96099a9bd6fe82fa8175521b0fc29a30169d0a69ca74b1581fa30aa6e570e1bfb74aeb4a597875d26b6583a2a2041a17c0a6f7f11eee632b6c8bb9d7dec6c969faa94e3b962d82498d0ed4be7282997a2c11ee61f830252785ce7731030a6a463bb8f5ebeea6562dc1c1ba9ad262165a14fcd287881ce9e0ca980dad276e820ddca78f463bef70e762bc145ec152d6950f57b684dde20a446eb6c0c93191a3d2c90bef174c9b8209e0c8261932c6dcdf8d2895dab3d57b76713b80bdea8a08a1810de6388fa1e8f8eb80c1f0c64e4ccf7913436ba7968ec321601cf0539fc0ecb1793e2590bf6779fba4afee402220849fa038affa468ff76223d627ae10cdf428a52bcc83ba606e0a0e2fa7c621340869b9973179fc2c172de87dcc5f054c15a62e0104a786b46e0421b804a601651a7d91af20b5119ed28cd541add1083b589b3a057bfcbd5179cd8b50abbc493ece5d29ec77ce551bad0ecc98835c02ea204299f2cddb30b7b6329304323c873a8481d14a24d31288107756e774fa4945fe754eae250d862fea37</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
         <category>旅遊日誌</category>
       </categories>
@@ -710,55 +710,6 @@
       </categories>
       <tags>
         <tag>音Game</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【開箱】MegaHouse 伊布家族... 啊~ 真香❤</title>
-    <url>/2019/191005-eevee-friends-figures-unboxing/</url>
-    <content><![CDATA[<p><img src="https://i.imgur.com/KJCVMxF.jpg"></p>
-<p>身為伊布控，Pokemon本傳遊戲只要能練伊布當然都給牠練爆</p>
-<p>不過收模型倒是第一次… 老實說也沒收過就是，所以模型初開箱就獻給伊布家族了</p>
-<p>真的百看不膩，敲讚derrrrrr (⁎⁍̴̛ᴗ⁍̴̛⁎)‼</p>
-<a id="more"></a>
-
-
-
-<p>今年二月中旬，MegaHouse釋出這樣的消息… </p>
-<p>大約四月底左右開放預購，手指頭不聽使喚就訂下去了XD</p>
-<img width="400px" src="https://i.imgur.com/vMV9wyI.png" />
-
-
-
-<p>等到現在過了半年，都已經大學畢業換地方住了才收到<br>（日本八月發售，算是在意料之內…吧）</p>
-<p>因為本身並不是多專業的玩家，所以就簡單發個開箱文來聞香香w<br>不囉唆，直接看圖啦！！也可以右鍵點開大圖！！</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/LIQf7oJh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/fpO4jpdh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/cbI5AE8h.jpg"></div></div></div></div>
-
-<p>包裝的箱子真的是剛剛好，而且從外觀就能聞到香氣了（？？</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/nVd4TKRh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/DFIKySXh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/lUnFrY5h.jpg"></div></div></div></div>
-
-<p>拆拆拆～</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/pTVVxjuh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/rfL5q24h.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/Ib9CDfjh.jpg"></div></div></div></div>
-
-<p>拆拆拆～</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/HrgBn11h.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/wu7J8nCh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/3uq6os1h.jpg"></div></div></div></div>
-
-<p>拆拆拆～</p>
-<p>&nbsp;<br>下面這個小吊飾是限定特典，摸起來軟軟的捨不得掛包包QwQ<br><img src="https://i.imgur.com/IpSlLXWh.jpg"></p>
-<p>最後，來個旋轉四連拍~</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/FvzpHfjh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/xF5WlF9h.jpg"></div></div></div></div>
-
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/JPpkxIlh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/D5Bsxg7h.jpg"></div></div></div></div>
-
-<p>&nbsp;<br>&nbsp;<br>之後應該會找個時間買展示箱，希望可以保存好一點XD</p>
-<p><img src="https://i.imgur.com/QER6l2uh.jpg"></p>
-]]></content>
-      <categories>
-        <category>敗家開箱</category>
-      </categories>
-      <tags>
-        <tag>ACGN</tag>
-        <tag>Pokemon</tag>
-        <tag>MegaHouse G.E.M.EX Series</tag>
       </tags>
   </entry>
   <entry>
@@ -938,6 +889,90 @@
       </tags>
   </entry>
   <entry>
+    <title>【開箱】MegaHouse 伊布家族... 啊~ 真香❤</title>
+    <url>/2019/191005-eevee-friends-figures-unboxing/</url>
+    <content><![CDATA[<p><img src="https://i.imgur.com/KJCVMxF.jpg"></p>
+<p>身為伊布控，Pokemon本傳遊戲只要能練伊布當然都給牠練爆</p>
+<p>不過收模型倒是第一次… 老實說也沒收過就是，所以模型初開箱就獻給伊布家族了</p>
+<p>真的百看不膩，敲讚derrrrrr (⁎⁍̴̛ᴗ⁍̴̛⁎)‼</p>
+<a id="more"></a>
+
+
+
+<p>今年二月中旬，MegaHouse釋出這樣的消息… </p>
+<p>大約四月底左右開放預購，手指頭不聽使喚就訂下去了XD</p>
+<img width="400px" src="https://i.imgur.com/vMV9wyI.png" />
+
+
+
+<p>等到現在過了半年，都已經大學畢業換地方住了才收到<br>（日本八月發售，算是在意料之內…吧）</p>
+<p>因為本身並不是多專業的玩家，所以就簡單發個開箱文來聞香香w<br>不囉唆，直接看圖啦！！也可以右鍵點開大圖！！</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/LIQf7oJh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/fpO4jpdh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/cbI5AE8h.jpg"></div></div></div></div>
+
+<p>包裝的箱子真的是剛剛好，而且從外觀就能聞到香氣了（？？</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/nVd4TKRh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/DFIKySXh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/lUnFrY5h.jpg"></div></div></div></div>
+
+<p>拆拆拆～</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/pTVVxjuh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/rfL5q24h.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/Ib9CDfjh.jpg"></div></div></div></div>
+
+<p>拆拆拆～</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/HrgBn11h.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/wu7J8nCh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/3uq6os1h.jpg"></div></div></div></div>
+
+<p>拆拆拆～</p>
+<p>&nbsp;<br>下面這個小吊飾是限定特典，摸起來軟軟的捨不得掛包包QwQ<br><img src="https://i.imgur.com/IpSlLXWh.jpg"></p>
+<p>最後，來個旋轉四連拍~</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/FvzpHfjh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/xF5WlF9h.jpg"></div></div></div></div>
+
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/JPpkxIlh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/D5Bsxg7h.jpg"></div></div></div></div>
+
+<p>&nbsp;<br>&nbsp;<br>之後應該會找個時間買展示箱，希望可以保存好一點XD</p>
+<p><img src="https://i.imgur.com/QER6l2uh.jpg"></p>
+]]></content>
+      <categories>
+        <category>敗家開箱</category>
+      </categories>
+      <tags>
+        <tag>ACGN</tag>
+        <tag>Pokemon</tag>
+        <tag>MegaHouse G.E.M.EX Series</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>實驗室日誌 0x01</title>
+    <url>/2019/191020-Lab-Log-0x01/</url>
+    <content><![CDATA[<p><img src="https://i.imgur.com/dmo2ZOk.jpg"></p>
+<p>圖片是我在實驗室的個人座位，讚讚！</p>
+<p>我在今年九月正式加入了西子灣大學的資安實驗室，姑且先來篇近況分享一下。</p>
+<p>會有這篇還有個原因… 那就是我的電腦終於可以用啦！雙螢幕初體驗 ヾ(〃^∇^)ﾉ</p>
+<a id="more"></a>
+
+
+
+<p>目前我在實驗室主要的除了基本課業以外，還有一些被指派計畫要協助處理</p>
+<p>再來是每週小咪、大咪，以及兩週一次TWISC開會，真的蠻充實的QQ</p>
+<p>在老闆的支持下這學期成立了資安社，雖然主要面向是大學生，但我跑去當吃瓜助教</p>
+<p>畢竟在資安競賽這方面還是個新手，和競程相比又更多更複雜…</p>
+<p>然後我和實驗室夥伴stavhaygn成立了MacacaHub，暫時應該是拿來當CTF隊名XD</p>
+<hr>
+<p>由於剛進實驗室的時候發生一點小差錯，所以我的電腦要重新採購</p>
+<p>大概從九月中開始算吧，過了半個月後主機才送來了（</p>
+<p>但還是沒有螢幕可用… 因此剛配置完主機只好先借了一台螢幕灌OS</p>
+<p>然後用手邊的筆電連實驗室主機XDDDD 反正現階段也只有找IEEE論文需要用學校IP</p>
+<p><img src="https://i.imgur.com/6cvFjPf.jpg"></p>
+<p>直到最近才終於收到雙螢幕，真的方便許多~</p>
+<p>不過不知道為何用Windows 10沒辦法讓兩邊的螢幕維持相同的解析度…</p>
+<p>雖然是一邊是HDMI、另一邊是D-SUB(VGA)，但無論是更新drivers還是重灌都無解QQ</p>
+<p>最後掙扎了一段時間才決定改灌Ubuntu，反正之後CTF應該也會用到（？</p>
+<p>嗯總而言之 這篇應該就是雙螢幕初體驗 兼開箱文（笑）</p>
+<p>-</p>
+<p>附上剛剛下載的screenfetch，好潮www</p>
+<p><img src="https://i.imgur.com/8eOWjhT.png"></p>
+]]></content>
+      <categories>
+        <category>實驗室日誌</category>
+      </categories>
+  </entry>
+  <entry>
     <title>【CTF】108年金盾獎決賽 麥當勞吃到飽 ฅ&#39;ω&#39;ฅ</title>
     <url>/2019/191116-108-cyber-security-competition/</url>
     <content><![CDATA[<p><img src="https://i.imgur.com/7cuYWZm.jpg"></p>
@@ -1025,41 +1060,6 @@
         <tag>CTF</tag>
         <tag>108金盾獎</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>實驗室日誌 0x01</title>
-    <url>/2019/191020-Lab-Log-0x01/</url>
-    <content><![CDATA[<p><img src="https://i.imgur.com/dmo2ZOk.jpg"></p>
-<p>圖片是我在實驗室的個人座位，讚讚！</p>
-<p>我在今年九月正式加入了西子灣大學的資安實驗室，姑且先來篇近況分享一下。</p>
-<p>會有這篇還有個原因… 那就是我的電腦終於可以用啦！雙螢幕初體驗 ヾ(〃^∇^)ﾉ</p>
-<a id="more"></a>
-
-
-
-<p>目前我在實驗室主要的除了基本課業以外，還有一些被指派計畫要協助處理</p>
-<p>再來是每週小咪、大咪，以及兩週一次TWISC開會，真的蠻充實的QQ</p>
-<p>在老闆的支持下這學期成立了資安社，雖然主要面向是大學生，但我跑去當吃瓜助教</p>
-<p>畢竟在資安競賽這方面還是個新手，和競程相比又更多更複雜…</p>
-<p>然後我和實驗室夥伴stavhaygn成立了MacacaHub，暫時應該是拿來當CTF隊名XD</p>
-<hr>
-<p>由於剛進實驗室的時候發生一點小差錯，所以我的電腦要重新採購</p>
-<p>大概從九月中開始算吧，過了半個月後主機才送來了（</p>
-<p>但還是沒有螢幕可用… 因此剛配置完主機只好先借了一台螢幕灌OS</p>
-<p>然後用手邊的筆電連實驗室主機XDDDD 反正現階段也只有找IEEE論文需要用學校IP</p>
-<p><img src="https://i.imgur.com/6cvFjPf.jpg"></p>
-<p>直到最近才終於收到雙螢幕，真的方便許多~</p>
-<p>不過不知道為何用Windows 10沒辦法讓兩邊的螢幕維持相同的解析度…</p>
-<p>雖然是一邊是HDMI、另一邊是D-SUB(VGA)，但無論是更新drivers還是重灌都無解QQ</p>
-<p>最後掙扎了一段時間才決定改灌Ubuntu，反正之後CTF應該也會用到（？</p>
-<p>嗯總而言之 這篇應該就是雙螢幕初體驗 兼開箱文（笑）</p>
-<p>-</p>
-<p>附上剛剛下載的screenfetch，好潮www</p>
-<p><img src="https://i.imgur.com/8eOWjhT.png"></p>
-]]></content>
-      <categories>
-        <category>實驗室日誌</category>
-      </categories>
   </entry>
   <entry>
     <title>【Project】Voronoi Diagram</title>
@@ -1161,74 +1161,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【開箱】Ducky One 2 海灘假期機械式鍵盤（80%茶軸）</title>
-    <url>/2020/200228-keyboard-unboxing/</url>
-    <content><![CDATA[<p><img src="https://i.imgur.com/0JfKNvJ.jpg"></p>
-<p>妖精伊布的的配色好香喔&gt; &lt;<br>雖然我念的是資訊相關科系，但手上擁有的電腦都是用筆電居多<br>所以研究鍵盤這方面還真的完全沒接觸過，實實在在的初體驗www</p>
-<a id="more"></a>
-
-<br>
-
-<p>最初想換鍵盤的念頭是因為實驗室配的原廠薄鍵盤不太好用<br>常常讓我切輸入法按到崩潰，雖然MAC PRO也是薄鍵盤但至少沒這問題<br>加上有次和朋友閒聊突然聊到鍵盤這方面，只能說這坑真的很深呢XDD</p>
-<br>
-
-<p>以前多少有聽過機械鍵盤有所謂 黑青紅茶顏色軸<br>實際上做了一些功課後才發現種類還不少，甚至看到所謂的光軸，恐怕又是另一個領域了 w</p>
-<p>後來在朋友們的推薦下抽了時間跑去建國路上的PC Party摸鍵盤，實際按過才真的感受到每個軸的細微差別<br>最明顯的應該就是青軸，那個脆聲hmmm… 拿進實驗室應該算蠻高調的XDD<br>而且長久打字不確定有沒有問題（指耳朵的部分</p>
-<p>我最後按起來比較喜歡紅茶軸，雖說銀軸鍵程短也不錯，不過非大眾主流可能也不好找<br>總之這一趟雖然空手而回，但和店員聊蠻開心，算是收穫還不少吧：）</p>
-<p>在聊的過程中也才知道原來這款海灘假期這款在去年發售後兩周就已經完售了嗚嗚，<br>難怪一開始看到海灘假期是在Inpad網站看到，當時只有青軸還讓我以為只有一種顏色軸，原來是賣到剩下一種Zzzz</p>
-<br>
-
-<p>原本還想找一天跑PC Party，不過回家找了很多拍賣網站才發現還蠻多賣場都有掛這把，但… 都是假象XDDD</p>
-<p>以某露O網站為例，一開使搜尋結果大概有七間賣場還有這把（青軸居多，紅茶軸好像各一間）<br>在我努力提（ㄙㄠ）問（ㄖㄠˇ）後，大部分賣家在表示缺貨後就紛紛下架了，最後剩<font color='FF0000'>三間</font>（笑</p>
-<p>總而言之，言而總之，還是讓我買到這把：）</p>
-<p>噢對了，除了軸色要選，另外還有大小規格100%/80%，不過在各大賣場都已經缺貨的情況下好像也沒什麼選擇<br>最後我買到的是80%/茶軸。</p>
-<p>廢話好像不小心聊太久了，來開箱囉 ouoy</p>
-<hr>
-<p>這款還有另外送一個超~<del>大\</del>滑鼠墊~~<br>真的hen大，我拍完就默默收起來了wwwwww</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/kjhVhlLh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/rNMyqORh.jpg"></div></div></div></div>
-
-<br>
-一些外盒的規格：）
-
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/lzru4Ohh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/GpXzh3Rh.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/IM033RDh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/hjaYkEPh.jpg"></div></div></div></div>
-
-<br>
-配件一~~懶~~覽
-
-<p>因為是豬年，所以鍵帽有送一隻”豬”www<br>不過有點可惜的是，想換Windows鍵卻沒有對應的鍵帽，可能之後還要上網找QQ</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/wI0d2imh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/otV5jpch.jpg"></div></div></div></div>
-
-<br>
-莫名其妙很厚的說明書XD
-雖然是中英文各半，但在設定上真的... （闔上
-
-<p>有時間再慢慢研究~</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/NOW43Fch.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/LXogHREh.jpg"></div></div></div></div>
-
-<br>
-剩下就是一些細節特寫照：）
-
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/2vaT0i5h.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/9FX1b9Oh.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/HtHGLAUh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/BJE5bC7h.jpg"></div></div></div></div>
-
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/YtoY7cZh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/TRhWcjZh.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/KyGnMDvh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/TNsKp9kh.jpg"></div></div></div></div>
-
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/xNu5lfbh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/aWem7Glh.jpg"></div></div></div></div>
-
-
-<br>
-
-<p>現在這篇文是用新鍵盤打的，不得不說手感真的很棒<br>也許是薄鍵盤也久了，換成機械鍵盤真的是有感提升。<br>不過目前用了兩天的心得，除了鍵位還不太熟悉，英式鍵帽少了注音符號也讓我打字速度慢了許多。<br>甚至換成80%鍵盤少了數字鍵區後才發現我其實好像還蠻依賴最右邊那顆Enter鍵呢www</p>
-<p>當初和朋友聊完還想找無刻鍵盤試試盲打，看來我實在是太天真了：）</p>
-<p><img src="https://i.imgur.com/5mpAlVHh.jpg"></p>
-]]></content>
-      <categories>
-        <category>敗家開箱</category>
-      </categories>
-      <tags>
-        <tag>Keyboard</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>實驗室日誌 0x02</title>
     <url>/2020/200311-lab-log-0x02/</url>
     <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-hLgVtG8/0/61e17a31/M/i-hLgVtG8-L.png?70%25"><br>先偷渡個咱們MacacaHub隊徽，感謝翔君大力幫忙QwQ</p>
@@ -1275,108 +1207,6 @@
       <categories>
         <category>實驗室日誌</category>
       </categories>
-  </entry>
-  <entry>
-    <title>實驗室日誌 0x03</title>
-    <url>/2020/200413-lab-log-0x03/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-JVQBdT9/0/d70facc6/L/i-JVQBdT9-M.png?70%25"></p>
-<p>剛好看完Pokemon新無印篇ep21，皮卡丘豪可愛哦 &gt;w&lt;</p>
-<p>這張圖不僅適用現在的碩一(看論文)，明年碩二還能再用一次~讚讚（幹</p>
-<a id="more"></a>
-<p>-</p>
-<p>前陣子好不容易花了點時間寫完Pwn1，結果連假完就被抓回去審計畫、看論文了Zzzz<br>看來Pwn2要生出來可能還需要一點時間 嗚嗚</p>
-<p>這篇其實也沒什麼重點，只是最近和學長們聊過後很有感觸。<br>畢竟我在甄試時恰逢蔡總統提出的「資安即國安」，讓資安碩剛成立就很有焦點(?)<br>2019這一年就有四間資安碩成立，分別是中山資工、台大電機、交大資工、中央資工（硬要排序</p>
-<p>但身為第一屆說穿了就跟白老鼠差不多 : (<br>很多全新制度沒有前例可以借鑑，有些資安課程也沒有考古題這種東西能夠參考QwQ<br>再來是咱們老闆剛好也開始忙其他單位無暇顧及我們，以上學期的每週咪挺來說就停了好幾次。</p>
-<p>這學期感覺咪挺有恢復常態(?) 結果反而讓我們措手不及XD<br>停咪停到被養壞的我們，只能說太怠惰了qq<br>從碩二學長的說詞來看我們這屆現在論文報告還沒一輪不是很妙…</p>
-<p>我們實驗室的慣例都是博士班學長帶領碩士生。<br>但現在可以說是<strong>剛過</strong>全盛時期，因為在我們入學的同時走了兩位實驗室台柱。<br>其中一位我在甄試期間時見過，聽聞這兩位博士生都是把論文當雜誌翻的強者wwwww<br>現在雖然博士班學長也會給建議，但可能相比之下沒有之前學長這麼嚴厲，不曉得該不該高興…<br>講這個好像有點不負責任，應該是我們本來就該主動精進自己的才對 ._.</p>
-<p>再來前面提到咱們老闆很忙，所以對於課程上也有些異動。<br>原本這學期由老闆親自授課的課程改為一位印度籍老師上課，我本來的爛英文加上不適應口音，還記得第一堂真的是爆炸www<br>根本不曉得自己聽了三小，第二堂才稍微習慣相對好一些，希望能平安PASS（跪）</p>
-<p>最後就是眾所皆知的「好的 中國武漢肺炎」，雖然臺灣在疫情上控制的不錯，但多少還是會有些影響。<br>像是會議被延期、課程遠距教學 還有… 老師被隔離，嘛 畢竟老師也是出國參加Conference<br>然後回國就被隔離14天關起來也是很無奈，但也因為這樣停了將近一個月的課 ˊ_&gt;ˋ</p>
-<p>只能說我們這一屆實在很不樂觀呀…<br>雖然我很喜歡實驗室的氛圍，但並沒有很想待到延畢，更沒有考慮簽博XD<br>現在看著碩二學長們忙著生論文，想到一年後自己究竟有沒有辦法寫出像樣的東西。</p>
-<br>
-抖了一下、有點害怕面對未來的日子。
-]]></content>
-      <categories>
-        <category>實驗室日誌</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>さようなら、大江戶。</title>
-    <url>/2020/200426-goodbye-dajianhu/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-BLcP568/1/b2866b7d/L/i-BLcP568-L.jpg?70%25"><br>大江戶要消失了了了嗚嗚不要啦啦啦啦啦，這個陪我度過大學時期無數打ㄐ夜晚的家。<br>消息實在是來得突然，前陣子知道美奇萊大概會撐到年底… 結果大江戶過幾天直接公告週末要撤QwQ<br>不過這也讓很多許久不見的老朋友回來踩最後一次ㄋ ~ 宛如一場小型告別式!!</p>
-<a id="more"></a>
-<br>
-
-<h3 id="一些回憶"><a href="#一些回憶" class="headerlink" title="一些回憶"></a>一些回憶</h3><p><strong>#2016.12.3</strong><br>這天是我初見大江戶的日子，那時剛透過轉學考搬到高雄還不到半年<br>同時也是個maimai剛入坑、太鼓只能勉強摸到鬼9星的<font color=#ff0000>真∙萌新</font><br>在這裡常駐到現在大概也三年半了，雖然和那些五年、十年的資深玩家比起來可能還算小咖<br>但… 我才不管辣 w</p>
-<p>永遠還記得我第一次要踩大江戶找不到入口，從Google Maps看起來明明位置沒錯<br>招牌卻寫著寫著集娃娃，約了網友見面還以為集娃娃=大江戶真ㄉ超糗（幹<br>（Google Maps 麻煩請出來好好解釋一下）<br>題外話、集娃娃根據消息也只會撐到六月底<br>我雖然不常踩，但好歹也是摸過那邊的太鼓、IIDX、ju、還有… 夾娃娃機（？？？）</p>
-<p><img src="https://photos.smugmug.com/photos/i-GHdSQkv/0/3791e2f3/M/i-GHdSQkv-M.jpg?300x"></p>
-<p>剛來到高雄時，只有入坑太鼓的我還規劃要踩遍南部所有的點，現在想想當時的我真的還蠻閒der ㄏㄏ<br>而從上圖可以注意到南部踩點已經來到Part10才輪到大江戶，會這麼晚踩的原因就是交通真ㄉhen不方便= =<br>大學時我住在北高雄楠梓靠近蚵仔寮一帶，熟人都知道我沒房沒車沒朋友(欸不是)，全靠捷運公車雙腳跑天下<br>就連夢時代我都能夠搭捷運轉輕軌一路睡過去，大江戶則是搭完捷運還要走一段路/轉公車<br>因此打ㄐ前期玩太鼓&amp;maimai主要還是常駐最近的新左營Happy100（公車25min），沒事不會想特地跑到大江戶Zzz<br><br><br>在我搬到高雄的這三年來，經歷了尚美保齡球館的太鼓撤機、新堀江集娃娃衰退、新左營Happy100閉店<br>結果下一個撤點居然是大江戶，或許這大概是做夢也想不到的事 ._.</p>
-<p>回想當時還在新左營Happy100成團定居的我，隨著大部分高中團員們畢業北上深耕、以及大江戶的代幣優惠誘惑(?)<br>讓我開始從一週 1 次、到最後每週跑大江戶 2,3 次，其中還不小心拉了友人A入坑讓我換代幣不再邊緣www<br>每次待在大江戶都是3hr起跳，畢竟前面提到的交通不便，也因為友人A這位公車通的規劃，<br>讓我們從楠梓搭公車到大江戶來回轉車要2hr/20摳，窮學生(?)用時間換取金錢…<br>很懷念當時在大江戶每次只要到22:30，就一定要把東西收拾好準備趕末班公車，成了一種日常風景。</p>
-<p>附圖的貼文是某次在新左營準備轉車時拍的新衣服，覺得好看：）<br>看看那個時間就知道我們到家都快跨日了 ㄏㄏ</p>
-<p><img src="https://photos.smugmug.com/photos/i-J4ZsCdM/0/d45d8e04/L/i-J4ZsCdM-L.jpg?300x"></p>
-<p>而在大江戶認識了許多來自不同背景的朋友，但共同點都是喜歡打音Game!!<br>雖然在過程中總是會有人來來去去，但每一次的揪團、每一次的聯機都是那麼地令人開心。</p>
-<p>而我不僅從太鼓轉坑到maimai，在這裡也開始慢慢接觸到不同的機台<br>換個在地人的說法就是… 「逐漸從大江戶外面玩到裡面」XD</p>
-<br>
-
-<p>就在去年、我從某地名大學順利畢業，並且登入西子灣研究所繼續下一個階段。<br>老實說當初推甄時在學校的選擇上，真的有一部分考量是捨不得高雄的朋友們QQ<br>我知道這種攸關未來的決定，這想法有點荒謬… 但就是 &gt;///&lt;</p>
-<p>因此大江戶的消失或許某方面也意味著，明年我能夠不留遺憾地離開高雄吧。<br>（當然前提是我能畢業 = v =）</p>
-<p>同樣是去年的暑假，應該是我跑大江戶最勤奮的時候。<br>一方面是住所搬到西子灣距離近了很多，另一方面也是剛畢業很閒（小聲）<br>平均一週可以跑4, 5天，而且都待整個下午/晚上。<br>另外總算不用坐來回2hr的公車、這距離我能騎單車(單程約30min)，自然就能待到閉店w 爽辣<br>那時也意外入坑IIDX、GITADORA，認識了一些完全不同年齡層的大叔們(笑)</p>
-<p>但隨著開學，實驗室行程逐漸填滿我的行事曆，去大江戶的頻率也少了許多。<br>一旦忙起來一週更是剩下 1 次、甚至…なし<br>雖然偶爾有空還是會努力撥抽時間跑大江戶，但目的就變成打機為主，而非交流。<br>因此偶爾遇到貝貝國的各位邀約打牌我都只能推託，現在想來真的很抱歉QQ</p>
-<p>到後面IIDX隨著打機頻率降低慢慢地淡出、GITADORA靠著桿子的片還算有動力投幣<br>至於maimai在DX大改版後實在很難再回到過去的全盛期，畢竟高雄地區廣設maiDX到處都有點可以踩<br>因此雖然我主修maimai，但也已經不太會特地在大江戶摸：/</p>
-<p><img src="https://photos.smugmug.com/photos/i-jR34htJ/0/ae38aaca/X2/i-jR34htJ-X2.jpg?300x"></p>
-<p>大江戶畫下休止符，給人一種從這裡畢業的感覺。<br>不管是拿了段位成就、認識偶像大佬、揪團吃飯等半天、參加趣味賽互相陷害(?)、廚歌為了繳出漂亮的成績單<br>在明天過後，大家都注定很難聚在一塊了QwQ<br>畢竟高雄市區內很難找到機台種類如此完整的音Game機廳QQ</p>
-<p>先不說早在幾個月前被撤掉的DRS<br>GITADORA、Nostalgia頂多搬到樓上集娃娃撐到六月底，之後都還是會分散在其他地方<br>甚至高雄唯一的DDR會不會就此絕跡 …</p>
-<p><br><br></p>
-<h3 id="回到現在"><a href="#回到現在" class="headerlink" title="回到現在"></a>回到現在</h3><p>大江戶閉店最後三天，剛好我的期中考也告(ㄓㄚˋ)一個段落<br>想當然爾… 我就去爆www</p>
-<p><strong>#2020.4.24(Fri.)</strong></p>
-<p>事情忙完跑了趟大江戶，原以為應該會有很多朋友來消耗代幣，結果意外不多<br>然後外面打牌熟悉的桌椅被收掉了，一時間變得很難找地方發慌QQ<br>有趣的是後面兩天，貝貝國的各位還是拿了張塑膠椅子當桌子打牌…<br>正所謂來大江戶不一定要花錢打機，但打牌是一定要的XDDD</p>
-<p>和幾位朋友寒暄後就開始找DM熱血開敲!!!<br>因為從四月初的連假回高雄就被實驗室的事務沒空出門QQ<br>沒想到等到期中考結束再回到大江戶就已經準備要閉店了 嗚嗚</p>
-<p>趁沒什麼人的這一天拍了幾張照：）</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 100%;"><img src="https://photos.smugmug.com/photos/i-Rmc47ZS/0/fa8a2b1d/X2/i-Rmc47ZS-X2.jpg?400x"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-xzGwkZq/0/35ed559c/X2/i-xzGwkZq-X2.jpg?400x"></div><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-tV6LPBF/0/195cf25f/X2/i-tV6LPBF-X2.jpg?400x"></div></div></div></div>
-
-<br>
-**#2020.4.25(Sat.)**
-
-<p>從粉專先前公告今天午後會開始出清店內海報，可想而知人不會太少。<br>只是時間比我想像中的還要早，還以為至少要到14點才開始XD<br><img src="https://photos.smugmug.com/photos/i-nWjV7q5/0/1e771bc2/X2/i-nWjV7q5-X2.jpg?300x"></p>
-<p>不過我住宿舍本來就不好收這些東西，所以也沒有很難過… 嗎？<br>有想過收來留念，只是收了也不見得會貼，還是給其他有緣人吧。</p>
-<p>這天真的超～級～多～人～  無疑大江戶是最熱鬧的時刻。<br>撤點消息吸引了很多許久不見老朋友回來踩點探最後一眼，也認識了一些沒講過話但早已習慣對方存在的新朋友。<br>大家互相寒暄的場面真的很像一場小型告別式… 噢不是很像、是真的qq<br>現場人多到我原本想替朋友花代幣還找不到空機台可以摸XDDDD</p>
-<p>除了海報之外，櫃檯出清了不少東西老玩具(?) 想必大家都滿載而歸吧<br>對我來說不只是那些周邊，留在這裡的回憶才是最無價der（官腔模式）</p>
-<p>↓↓↓ 從大江戶粉專抓下來的大合照 偉哉FB專業壓畫質 ↓↓↓<br><img src="https://photos.smugmug.com/photos/i-3Jp8RJw/0/cd4db09c/L/i-3Jp8RJw-L.jpg"></p>
-<br>
-**#2020.4.26(Sun)**
-
-<p>大江戶營業最後一天。<br>雖然昨日老板娘送出了不少周邊，但還是有留一些…卡片？總之就是繼續出清周邊XD<br>不過這天我下午依舊窩在實驗室，同時也花了點時間開始寫這篇心得文~</p>
-<p>晚上和貝貝國的各位找到了附近一間牛排店踩雷，結果意外地很好ㄘ，而且免費加麵、免費濃湯、好ㄏ的奶茶！<br>可是大江戶消失應該也不太會路過這裡了 嗚嗚桑心<br><img src="https://photos.smugmug.com/photos/i-zSMTQZC/0/9e9b1b2c/X2/i-zSMTQZC-X2.jpg?400x"></p>
-<p>這一天雖然人也不少，但就沒有昨天那麼熱鬧（也有可能是下午人爆多我不知道w）<br>感覺就和平常一樣，打打牌、敲敲DM、還有… 被抓去摸IIDX !!<br>嗯對w 突然被小洁揪了兩道，雖然手感還沒抓到，但感覺一直敲GTDR的準度有出來了www<br>而且在閉店的最後一道，我不怕死地摸了段位，驚險過初段了 \ 撒花 /<br>還記得去年入坑26代IIDX在集娃娃才第二首就炸惹，這次撐到第四首壓12%血好斗好抖((((<br>聽說初段才是這遊戲的開始… 那我算是及格了吧:3</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-DBsrh3t/0/6c2d7f92/X2/i-DBsrh3t-X2.jpg?400x"></div><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-bSGLtk4/0/694ff899/X2/i-bSGLtk4-X2.jpg?400x"></div></div></div></div>
-
-<br>
-**#2020.4.27(Mon.) midnight**
-閉店過了十分鐘還是很多人w 大家都捨不得離開，到處找大江戶角落合照。
-同時老闆娘又...又把周邊拿出來送了，看起來東西真的很多www
-有一張大家伸手搶maimai側錄板的照片，爛手機沒存到QQQ
-反正現場就跟競標戰場一樣，只是東西都是免費der
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-gLkdwRx/1/80c701ba/X2/i-gLkdwRx-X2.jpg?400x"></div><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-z3ZwjQJ/0/45dea4bf/X2/i-z3ZwjQJ-X2.jpg?400x"></div></div></div></div>
-吃完宵夜約2:30再度回到大江戶，燈已經暗了、人也都離開了。
-我雖然沒有經歷更早的美嘉時期、但至少見證了大江戶時期的閉幕...
-
-
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>由衷感謝大江戶，把來自不同背景的我們聚集起來<br>讓我苦悶的大學生活不再只有考試讀書，希望幾十年後講出「我曾經待過大江戶哦」<br>還能喚起身邊朋友的共鳴，以及現在的種種回憶：）</p>
-<p>未來大家應該很難再聚在一起，畢竟主修的機台種類不太一樣。<br>即便目前大江戶的機台都會上移到集娃娃，但應該也只能撐到六月底。<br>我會待的點應該就剩下六合湯(maiDX、DRS)，為了摸GTDR或許一個月抽個幾次跑鳳湯ㄅ</p>
-<p>最後就是感謝名單了，其中不乏一些退坑的朋友…</p>
-<p>感謝過去擔任我的ㄙ機們：砲砲、國王、粉大、塗大、偷尼、ㄓㄩ、洋哥、89珍奶、菇菇<br>算起來真的還蠻多人的(笑) 謝謝你們讓我在大江戶還能順利回家&gt;w&lt;</p>
-<p>感謝帶我入坑IIDX的小洁、GITADORA的鳥巢（雖然你帶我打IIDX比較多ㄏ）。<br>感謝GITADORA的情侶黨，姊姊常常教我不同活動的訣竅，雖然最後一次遇到還是不曉得怎麼稱呼XD<br>感謝貝貝國大江戶州的各位住民們，沒想到我也能自稱是開國元老了呢 XDDDD<br>沒有你們，就…就沒人揪我ㄘ宵夜了（咦</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-ZS6X7D8/0/456cfa2e/X2/i-ZS6X7D8-X2.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-pMwSf7x/0/570fa55d/X2/i-pMwSf7x-X2.jpg"></div></div></div></div>
-
-<p>希望之後巧遇各位還能夠找我打ㄐ唷&lt;3<br>另外砲砲和菇菇(ㄉ女友?)有發一顆草莓吊飾的信物，有拿到的朋友記得明年這個時候要回來唷(笑)</p>
-<h3 id="後記2"><a href="#後記2" class="headerlink" title="後記2"></a>後記2</h3><p>從主修maimai開始入駐大江戶，到最後是主修GITADORA迎來閉店。<br>四月春假在台北摸過天台的鼓之後，才發現自己習慣了大江戶的鼓，回不去了w<br>目前收到消息會搬上集娃娃，但之後不曉得這組機台最後會何去何從呢 ~</p>
-<p><img src="https://photos.smugmug.com/photos/i-QVLHHVB/1/4bf512e9/X3/i-QVLHHVB-X3.jpg?600x"></p>
-]]></content>
-      <categories>
-        <category>休閒娛樂</category>
-      </categories>
-      <tags>
-        <tag>音Game</tag>
-      </tags>
   </entry>
   <entry>
     <title>資安社課 Pwn basic(1)</title>
@@ -1500,6 +1330,108 @@ Pwn大概就是這麼一回事了~
         <tag>CTF</tag>
         <tag>Pwn Challenge</tag>
         <tag>NSYSUISC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>實驗室日誌 0x03</title>
+    <url>/2020/200413-lab-log-0x03/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-JVQBdT9/0/d70facc6/L/i-JVQBdT9-M.png?70%25"></p>
+<p>剛好看完Pokemon新無印篇ep21，皮卡丘豪可愛哦 &gt;w&lt;</p>
+<p>這張圖不僅適用現在的碩一(看論文)，明年碩二還能再用一次~讚讚（幹</p>
+<a id="more"></a>
+<p>-</p>
+<p>前陣子好不容易花了點時間寫完Pwn1，結果連假完就被抓回去審計畫、看論文了Zzzz<br>看來Pwn2要生出來可能還需要一點時間 嗚嗚</p>
+<p>這篇其實也沒什麼重點，只是最近和學長們聊過後很有感觸。<br>畢竟我在甄試時恰逢蔡總統提出的「資安即國安」，讓資安碩剛成立就很有焦點(?)<br>2019這一年就有四間資安碩成立，分別是中山資工、台大電機、交大資工、中央資工（硬要排序</p>
+<p>但身為第一屆說穿了就跟白老鼠差不多 : (<br>很多全新制度沒有前例可以借鑑，有些資安課程也沒有考古題這種東西能夠參考QwQ<br>再來是咱們老闆剛好也開始忙其他單位無暇顧及我們，以上學期的每週咪挺來說就停了好幾次。</p>
+<p>這學期感覺咪挺有恢復常態(?) 結果反而讓我們措手不及XD<br>停咪停到被養壞的我們，只能說太怠惰了qq<br>從碩二學長的說詞來看我們這屆現在論文報告還沒一輪不是很妙…</p>
+<p>我們實驗室的慣例都是博士班學長帶領碩士生。<br>但現在可以說是<strong>剛過</strong>全盛時期，因為在我們入學的同時走了兩位實驗室台柱。<br>其中一位我在甄試期間時見過，聽聞這兩位博士生都是把論文當雜誌翻的強者wwwww<br>現在雖然博士班學長也會給建議，但可能相比之下沒有之前學長這麼嚴厲，不曉得該不該高興…<br>講這個好像有點不負責任，應該是我們本來就該主動精進自己的才對 ._.</p>
+<p>再來前面提到咱們老闆很忙，所以對於課程上也有些異動。<br>原本這學期由老闆親自授課的課程改為一位印度籍老師上課，我本來的爛英文加上不適應口音，還記得第一堂真的是爆炸www<br>根本不曉得自己聽了三小，第二堂才稍微習慣相對好一些，希望能平安PASS（跪）</p>
+<p>最後就是眾所皆知的「好的 中國武漢肺炎」，雖然臺灣在疫情上控制的不錯，但多少還是會有些影響。<br>像是會議被延期、課程遠距教學 還有… 老師被隔離，嘛 畢竟老師也是出國參加Conference<br>然後回國就被隔離14天關起來也是很無奈，但也因為這樣停了將近一個月的課 ˊ_&gt;ˋ</p>
+<p>只能說我們這一屆實在很不樂觀呀…<br>雖然我很喜歡實驗室的氛圍，但並沒有很想待到延畢，更沒有考慮簽博XD<br>現在看著碩二學長們忙著生論文，想到一年後自己究竟有沒有辦法寫出像樣的東西。</p>
+<br>
+抖了一下、有點害怕面對未來的日子。
+]]></content>
+      <categories>
+        <category>實驗室日誌</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>さようなら、大江戶。</title>
+    <url>/2020/200426-goodbye-dajianhu/</url>
+    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-BLcP568/1/b2866b7d/L/i-BLcP568-L.jpg?70%25"><br>大江戶要消失了了了嗚嗚不要啦啦啦啦啦，這個陪我度過大學時期無數打ㄐ夜晚的家。<br>消息實在是來得突然，前陣子知道美奇萊大概會撐到年底… 結果大江戶過幾天直接公告週末要撤QwQ<br>不過這也讓很多許久不見的老朋友回來踩最後一次ㄋ ~ 宛如一場小型告別式!!</p>
+<a id="more"></a>
+<br>
+
+<h3 id="一些回憶"><a href="#一些回憶" class="headerlink" title="一些回憶"></a>一些回憶</h3><p><strong>#2016.12.3</strong><br>這天是我初見大江戶的日子，那時剛透過轉學考搬到高雄還不到半年<br>同時也是個maimai剛入坑、太鼓只能勉強摸到鬼9星的<font color=#ff0000>真∙萌新</font><br>在這裡常駐到現在大概也三年半了，雖然和那些五年、十年的資深玩家比起來可能還算小咖<br>但… 我才不管辣 w</p>
+<p>永遠還記得我第一次要踩大江戶找不到入口，從Google Maps看起來明明位置沒錯<br>招牌卻寫著寫著集娃娃，約了網友見面還以為集娃娃=大江戶真ㄉ超糗（幹<br>（Google Maps 麻煩請出來好好解釋一下）<br>題外話、集娃娃根據消息也只會撐到六月底<br>我雖然不常踩，但好歹也是摸過那邊的太鼓、IIDX、ju、還有… 夾娃娃機（？？？）</p>
+<p><img src="https://photos.smugmug.com/photos/i-GHdSQkv/0/3791e2f3/M/i-GHdSQkv-M.jpg?300x"></p>
+<p>剛來到高雄時，只有入坑太鼓的我還規劃要踩遍南部所有的點，現在想想當時的我真的還蠻閒der ㄏㄏ<br>而從上圖可以注意到南部踩點已經來到Part10才輪到大江戶，會這麼晚踩的原因就是交通真ㄉhen不方便= =<br>大學時我住在北高雄楠梓靠近蚵仔寮一帶，熟人都知道我沒房沒車沒朋友(欸不是)，全靠捷運公車雙腳跑天下<br>就連夢時代我都能夠搭捷運轉輕軌一路睡過去，大江戶則是搭完捷運還要走一段路/轉公車<br>因此打ㄐ前期玩太鼓&amp;maimai主要還是常駐最近的新左營Happy100（公車25min），沒事不會想特地跑到大江戶Zzz<br><br><br>在我搬到高雄的這三年來，經歷了尚美保齡球館的太鼓撤機、新堀江集娃娃衰退、新左營Happy100閉店<br>結果下一個撤點居然是大江戶，或許這大概是做夢也想不到的事 ._.</p>
+<p>回想當時還在新左營Happy100成團定居的我，隨著大部分高中團員們畢業北上深耕、以及大江戶的代幣優惠誘惑(?)<br>讓我開始從一週 1 次、到最後每週跑大江戶 2,3 次，其中還不小心拉了友人A入坑讓我換代幣不再邊緣www<br>每次待在大江戶都是3hr起跳，畢竟前面提到的交通不便，也因為友人A這位公車通的規劃，<br>讓我們從楠梓搭公車到大江戶來回轉車要2hr/20摳，窮學生(?)用時間換取金錢…<br>很懷念當時在大江戶每次只要到22:30，就一定要把東西收拾好準備趕末班公車，成了一種日常風景。</p>
+<p>附圖的貼文是某次在新左營準備轉車時拍的新衣服，覺得好看：）<br>看看那個時間就知道我們到家都快跨日了 ㄏㄏ</p>
+<p><img src="https://photos.smugmug.com/photos/i-J4ZsCdM/0/d45d8e04/L/i-J4ZsCdM-L.jpg?300x"></p>
+<p>而在大江戶認識了許多來自不同背景的朋友，但共同點都是喜歡打音Game!!<br>雖然在過程中總是會有人來來去去，但每一次的揪團、每一次的聯機都是那麼地令人開心。</p>
+<p>而我不僅從太鼓轉坑到maimai，在這裡也開始慢慢接觸到不同的機台<br>換個在地人的說法就是… 「逐漸從大江戶外面玩到裡面」XD</p>
+<br>
+
+<p>就在去年、我從某地名大學順利畢業，並且登入西子灣研究所繼續下一個階段。<br>老實說當初推甄時在學校的選擇上，真的有一部分考量是捨不得高雄的朋友們QQ<br>我知道這種攸關未來的決定，這想法有點荒謬… 但就是 &gt;///&lt;</p>
+<p>因此大江戶的消失或許某方面也意味著，明年我能夠不留遺憾地離開高雄吧。<br>（當然前提是我能畢業 = v =）</p>
+<p>同樣是去年的暑假，應該是我跑大江戶最勤奮的時候。<br>一方面是住所搬到西子灣距離近了很多，另一方面也是剛畢業很閒（小聲）<br>平均一週可以跑4, 5天，而且都待整個下午/晚上。<br>另外總算不用坐來回2hr的公車、這距離我能騎單車(單程約30min)，自然就能待到閉店w 爽辣<br>那時也意外入坑IIDX、GITADORA，認識了一些完全不同年齡層的大叔們(笑)</p>
+<p>但隨著開學，實驗室行程逐漸填滿我的行事曆，去大江戶的頻率也少了許多。<br>一旦忙起來一週更是剩下 1 次、甚至…なし<br>雖然偶爾有空還是會努力撥抽時間跑大江戶，但目的就變成打機為主，而非交流。<br>因此偶爾遇到貝貝國的各位邀約打牌我都只能推託，現在想來真的很抱歉QQ</p>
+<p>到後面IIDX隨著打機頻率降低慢慢地淡出、GITADORA靠著桿子的片還算有動力投幣<br>至於maimai在DX大改版後實在很難再回到過去的全盛期，畢竟高雄地區廣設maiDX到處都有點可以踩<br>因此雖然我主修maimai，但也已經不太會特地在大江戶摸：/</p>
+<p><img src="https://photos.smugmug.com/photos/i-jR34htJ/0/ae38aaca/X2/i-jR34htJ-X2.jpg?300x"></p>
+<p>大江戶畫下休止符，給人一種從這裡畢業的感覺。<br>不管是拿了段位成就、認識偶像大佬、揪團吃飯等半天、參加趣味賽互相陷害(?)、廚歌為了繳出漂亮的成績單<br>在明天過後，大家都注定很難聚在一塊了QwQ<br>畢竟高雄市區內很難找到機台種類如此完整的音Game機廳QQ</p>
+<p>先不說早在幾個月前被撤掉的DRS<br>GITADORA、Nostalgia頂多搬到樓上集娃娃撐到六月底，之後都還是會分散在其他地方<br>甚至高雄唯一的DDR會不會就此絕跡 …</p>
+<p><br><br></p>
+<h3 id="回到現在"><a href="#回到現在" class="headerlink" title="回到現在"></a>回到現在</h3><p>大江戶閉店最後三天，剛好我的期中考也告(ㄓㄚˋ)一個段落<br>想當然爾… 我就去爆www</p>
+<p><strong>#2020.4.24(Fri.)</strong></p>
+<p>事情忙完跑了趟大江戶，原以為應該會有很多朋友來消耗代幣，結果意外不多<br>然後外面打牌熟悉的桌椅被收掉了，一時間變得很難找地方發慌QQ<br>有趣的是後面兩天，貝貝國的各位還是拿了張塑膠椅子當桌子打牌…<br>正所謂來大江戶不一定要花錢打機，但打牌是一定要的XDDD</p>
+<p>和幾位朋友寒暄後就開始找DM熱血開敲!!!<br>因為從四月初的連假回高雄就被實驗室的事務沒空出門QQ<br>沒想到等到期中考結束再回到大江戶就已經準備要閉店了 嗚嗚</p>
+<p>趁沒什麼人的這一天拍了幾張照：）</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 100%;"><img src="https://photos.smugmug.com/photos/i-Rmc47ZS/0/fa8a2b1d/X2/i-Rmc47ZS-X2.jpg?400x"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-xzGwkZq/0/35ed559c/X2/i-xzGwkZq-X2.jpg?400x"></div><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-tV6LPBF/0/195cf25f/X2/i-tV6LPBF-X2.jpg?400x"></div></div></div></div>
+
+<br>
+**#2020.4.25(Sat.)**
+
+<p>從粉專先前公告今天午後會開始出清店內海報，可想而知人不會太少。<br>只是時間比我想像中的還要早，還以為至少要到14點才開始XD<br><img src="https://photos.smugmug.com/photos/i-nWjV7q5/0/1e771bc2/X2/i-nWjV7q5-X2.jpg?300x"></p>
+<p>不過我住宿舍本來就不好收這些東西，所以也沒有很難過… 嗎？<br>有想過收來留念，只是收了也不見得會貼，還是給其他有緣人吧。</p>
+<p>這天真的超～級～多～人～  無疑大江戶是最熱鬧的時刻。<br>撤點消息吸引了很多許久不見老朋友回來踩點探最後一眼，也認識了一些沒講過話但早已習慣對方存在的新朋友。<br>大家互相寒暄的場面真的很像一場小型告別式… 噢不是很像、是真的qq<br>現場人多到我原本想替朋友花代幣還找不到空機台可以摸XDDDD</p>
+<p>除了海報之外，櫃檯出清了不少東西老玩具(?) 想必大家都滿載而歸吧<br>對我來說不只是那些周邊，留在這裡的回憶才是最無價der（官腔模式）</p>
+<p>↓↓↓ 從大江戶粉專抓下來的大合照 偉哉FB專業壓畫質 ↓↓↓<br><img src="https://photos.smugmug.com/photos/i-3Jp8RJw/0/cd4db09c/L/i-3Jp8RJw-L.jpg"></p>
+<br>
+**#2020.4.26(Sun)**
+
+<p>大江戶營業最後一天。<br>雖然昨日老板娘送出了不少周邊，但還是有留一些…卡片？總之就是繼續出清周邊XD<br>不過這天我下午依舊窩在實驗室，同時也花了點時間開始寫這篇心得文~</p>
+<p>晚上和貝貝國的各位找到了附近一間牛排店踩雷，結果意外地很好ㄘ，而且免費加麵、免費濃湯、好ㄏ的奶茶！<br>可是大江戶消失應該也不太會路過這裡了 嗚嗚桑心<br><img src="https://photos.smugmug.com/photos/i-zSMTQZC/0/9e9b1b2c/X2/i-zSMTQZC-X2.jpg?400x"></p>
+<p>這一天雖然人也不少，但就沒有昨天那麼熱鬧（也有可能是下午人爆多我不知道w）<br>感覺就和平常一樣，打打牌、敲敲DM、還有… 被抓去摸IIDX !!<br>嗯對w 突然被小洁揪了兩道，雖然手感還沒抓到，但感覺一直敲GTDR的準度有出來了www<br>而且在閉店的最後一道，我不怕死地摸了段位，驚險過初段了 \ 撒花 /<br>還記得去年入坑26代IIDX在集娃娃才第二首就炸惹，這次撐到第四首壓12%血好斗好抖((((<br>聽說初段才是這遊戲的開始… 那我算是及格了吧:3</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-DBsrh3t/0/6c2d7f92/X2/i-DBsrh3t-X2.jpg?400x"></div><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-bSGLtk4/0/694ff899/X2/i-bSGLtk4-X2.jpg?400x"></div></div></div></div>
+
+<br>
+**#2020.4.27(Mon.) midnight**
+閉店過了十分鐘還是很多人w 大家都捨不得離開，到處找大江戶角落合照。
+同時老闆娘又...又把周邊拿出來送了，看起來東西真的很多www
+有一張大家伸手搶maimai側錄板的照片，爛手機沒存到QQQ
+反正現場就跟競標戰場一樣，只是東西都是免費der
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-gLkdwRx/1/80c701ba/X2/i-gLkdwRx-X2.jpg?400x"></div><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-z3ZwjQJ/0/45dea4bf/X2/i-z3ZwjQJ-X2.jpg?400x"></div></div></div></div>
+吃完宵夜約2:30再度回到大江戶，燈已經暗了、人也都離開了。
+我雖然沒有經歷更早的美嘉時期、但至少見證了大江戶時期的閉幕...
+
+
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>由衷感謝大江戶，把來自不同背景的我們聚集起來<br>讓我苦悶的大學生活不再只有考試讀書，希望幾十年後講出「我曾經待過大江戶哦」<br>還能喚起身邊朋友的共鳴，以及現在的種種回憶：）</p>
+<p>未來大家應該很難再聚在一起，畢竟主修的機台種類不太一樣。<br>即便目前大江戶的機台都會上移到集娃娃，但應該也只能撐到六月底。<br>我會待的點應該就剩下六合湯(maiDX、DRS)，為了摸GTDR或許一個月抽個幾次跑鳳湯ㄅ</p>
+<p>最後就是感謝名單了，其中不乏一些退坑的朋友…</p>
+<p>感謝過去擔任我的ㄙ機們：砲砲、國王、粉大、塗大、偷尼、ㄓㄩ、洋哥、89珍奶、菇菇<br>算起來真的還蠻多人的(笑) 謝謝你們讓我在大江戶還能順利回家&gt;w&lt;</p>
+<p>感謝帶我入坑IIDX的小洁、GITADORA的鳥巢（雖然你帶我打IIDX比較多ㄏ）。<br>感謝GITADORA的情侶黨，姊姊常常教我不同活動的訣竅，雖然最後一次遇到還是不曉得怎麼稱呼XD<br>感謝貝貝國大江戶州的各位住民們，沒想到我也能自稱是開國元老了呢 XDDDD<br>沒有你們，就…就沒人揪我ㄘ宵夜了（咦</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-ZS6X7D8/0/456cfa2e/X2/i-ZS6X7D8-X2.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-pMwSf7x/0/570fa55d/X2/i-pMwSf7x-X2.jpg"></div></div></div></div>
+
+<p>希望之後巧遇各位還能夠找我打ㄐ唷&lt;3<br>另外砲砲和菇菇(ㄉ女友?)有發一顆草莓吊飾的信物，有拿到的朋友記得明年這個時候要回來唷(笑)</p>
+<h3 id="後記2"><a href="#後記2" class="headerlink" title="後記2"></a>後記2</h3><p>從主修maimai開始入駐大江戶，到最後是主修GITADORA迎來閉店。<br>四月春假在台北摸過天台的鼓之後，才發現自己習慣了大江戶的鼓，回不去了w<br>目前收到消息會搬上集娃娃，但之後不曉得這組機台最後會何去何從呢 ~</p>
+<p><img src="https://photos.smugmug.com/photos/i-QVLHHVB/1/4bf512e9/X3/i-QVLHHVB-X3.jpg?600x"></p>
+]]></content>
+      <categories>
+        <category>休閒娛樂</category>
+      </categories>
+      <tags>
+        <tag>音Game</tag>
       </tags>
   </entry>
   <entry>
