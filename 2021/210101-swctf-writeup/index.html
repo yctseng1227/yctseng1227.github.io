@@ -32,11 +32,17 @@
 <meta property="og:image" content="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/vscode_search.png?raw=true">
 <meta property="og:image" content="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/TryToFixIt_recover.png?raw=true">
 <meta property="og:image" content="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/notifications.png?raw=true">
+<meta property="og:image" content="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/password.png?raw=true">
+<meta property="og:image" content="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/func.png?raw=true">
 <meta property="og:image" content="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/Released%20file/question.jpg?raw=true">
 <meta property="og:image" content="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/dancing_men_code.png?raw=true">
+<meta property="og:image" content="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/Released%20file/Historic_Site_Tour.jpg?raw=true">
 <meta property="og:image" content="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/Released%20file/screenshot.gif?raw=true">
+<meta property="og:image" content="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/C_Minor-1.png?raw=true">
+<meta property="og:image" content="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/C_Minor-2.png?raw=true">
+<meta property="og:image" content="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/C_Minor-3.png?raw=true">
 <meta property="article:published_time" content="2020-12-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-02T09:54:24.265Z">
+<meta property="article:modified_time" content="2021-01-03T09:11:34.174Z">
 <meta property="article:author" content="yctseng">
 <meta property="article:tag" content="SWCTF">
 <meta name="twitter:card" content="summary">
@@ -257,7 +263,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>8.4k</span>
+              <span>12k</span>
             </span>
 
         </div>
@@ -284,7 +290,57 @@
 <p>SWCTF{NOKIAISASPECIALMYTHTHATYOUKNOW}</p>
 </blockquote>
 <p>（結果被大小寫雷了一次WA ==）</p>
-<h2 id="N-pq-逢甲-Crypto-Score-200"><a href="#N-pq-逢甲-Crypto-Score-200" class="headerlink" title="N=pq (逢甲-Crypto, Score: 200)"></a>N=pq (逢甲-Crypto, Score: 200)</h2><p>RSA 是世界著名的加密演算法，沒記錯的話用很大的 N 當作加密參數好像就很安全？算了反正應該沒人能破解我加密過的 flag : )</p>
+<h2 id="A-letter-靜宜-crypto-Score-200"><a href="#A-letter-靜宜-crypto-Score-200" class="headerlink" title="A letter (靜宜-crypto, Score: 200)"></a>A letter (靜宜-crypto, Score: 200)</h2><p>嘿!你還記得我們第一次見面你告訴我的「不可破譯的密碼」嗎？這次我把關鍵內容放在這首詩裡，或許你能夠解讀出我想告訴你的話。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/Released%20file/A_letter.pdf">Released file (pdf)</a></p>
+<p>-</p>
+<p>打開 PDF 就看到一串密文，我人很好直接幫你打在下面 ^_^</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Kzwrsomklpp_Evfvtukb_ju_mj_hyvqevjxq_rqe_rdfipwzu_dt_Etzqfuq</span><br></pre></td></tr></table></figure>
+
+<p>題目說到「不可破譯的密碼」，拿去 Google 就會得到 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher">Vigenère cipher</a> ，那有了密文之後… key勒？</p>
+<p>其實整個 PDF 的線索就那幾個，像是把左上角的 CMRDB 拿去當 key 丟到 <a target="_blank" rel="noopener" href="https://cryptii.com/pipes/vigenere-cipher">Cryptii</a> 就會有 Flag 了XD</p>
+<blockquote>
+<p>SWCTF{Information_Security_is_as_extensive_and_profound_as_Chinese}</p>
+</blockquote>
+<h2 id="MOS-靜宜-crypto-Score-275"><a href="#MOS-靜宜-crypto-Score-275" class="headerlink" title="MOS (靜宜-crypto, Score: 275)"></a>MOS (靜宜-crypto, Score: 275)</h2><p>你工作上的前輩要離職了 前輩在把工作交接給你的時候把有加密的USB和兩串摩斯密碼給你 「這裡面有我們珍藏的片子，去解開它，然後傳承下去!!」</p>
+<ol>
+<li>請轉成大寫</li>
+<li>第二行為key</li>
+<li>%u7b為”{“</li>
+<li>%u7d為”}”</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.-.. ...- . --.. -.-- ----.-- .--- .---- .- --- -..- --- --. ----- -.- -.... -.-- .-.. -.-. .--- .--.-. --... -.-- .. -..- .-.. -----.-</span><br><span class="line">--.- .-- . .-. - -.-- ..- .. --- .--. .- ... -.. ..-. --. .... .--- -.- .-.. --.. -..- -.-. ...- -... -. --</span><br></pre></td></tr></table></figure>
+
+<p>-</p>
+<p>題目很好心的跟你說是 Morse code，還給一堆提示，那就找個<a target="_blank" rel="noopener" href="https://morsedecoder.com/">線上工具</a>還原ㄅ，會得到下面兩串。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LVEZY#J1AOXOG0K6YLCJ@7YIXL#</span><br><span class="line">QWERTYUIOPASDFGHJKLZXCVBNM</span><br></pre></td></tr></table></figure>
+
+
+<p>一開始還以為第二行的 key 是指 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher">Vigenère cipher</a> ，結果不是… 是對應英文字母XD</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z </span><br><span class="line">↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓</span><br><span class="line">Q W E R T Y U I O P A S D F G H J K L Z X C V B N M</span><br></pre></td></tr></table></figure>
+
+<p>保留數字和特殊符號，還原後整理成 Flag 就能送出去了( Flag 居然是無意義的字串) = w =</p>
+<blockquote>
+<p>SWCTF{Q1KIUIO0R6FSVQ@7FHUS}</p>
+</blockquote>
+<h2 id="Base-X-逢甲-Crypto-Score-200"><a href="#Base-X-逢甲-Crypto-Score-200" class="headerlink" title="Base-X (逢甲-Crypto, Score: 200)"></a>Base-X (逢甲-Crypto, Score: 200)</h2><p>聽說駭客聊天時，動不動就要把訊息編碼</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wpZTV0NURntCYXNlNjRfdEhlX0xhTkdVNDZlX09mX2g0Q2szcnN9Cg&#x3D;&#x3D;</span><br></pre></td></tr></table></figure>
+
+<p>-</p>
+<p>不囉唆，Base64。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">&quot;wpZTV0NURntCYXNlNjRfdEhlX0xhTkdVNDZlX09mX2g0Q2szcnN9Cg==&quot;</span> | base64 --decode</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>SWCTF{Base64_tHe_LaNGU46e_Of_h4Ck3rs}</p>
+</blockquote>
+<h2 id="左右分不清-逢甲-Crypto-Score-200"><a href="#左右分不清-逢甲-Crypto-Score-200" class="headerlink" title="左右分不清 (逢甲-Crypto, Score: 200)"></a>左右分不清 (逢甲-Crypto, Score: 200)</h2><p>有個都市傳說：<br>凌晨 3 點沿著操場跑 1600 公尺會回到起點 ~(&gt;_&lt;。)＼</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">RVBSE&#123;QNS_5TooNQsr_tOO3q_KNvdQbzRd&#125;</span><br></pre></td></tr></table></figure>
+
+<p>-</p>
+<p>Caesar cipher，推薦ㄍ好用的網站 <a target="_blank" rel="noopener" href="https://planetcalc.com/1434/">https://planetcalc.com/1434/</a></p>
+<blockquote>
+<p>SWCTF{ROT_5UppORts_uPP3r_LOweRcaSe}</p>
+</blockquote>
+<h2 id="N-pq-逢甲-Crypto-Score-200"><a href="#N-pq-逢甲-Crypto-Score-200" class="headerlink" title="N=pq (逢甲-Crypto, Score: 200)"></a>N=pq (逢甲-Crypto, Score: 200)</h2><p>RSA 是世界著名的加密演算法，沒記錯的話用很大的 N 當作加密參數好像就很安全？<br>算了反正應該沒人能破解我加密過的 flag : )</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">N &#x3D; pq &#x3D; 16857159784242147958930006036274524315067659003347665436247836447121615960042560515473548747696129683</span><br><span class="line">e &#x3D; 65537</span><br><span class="line">encrypted_flag &#x3D; 4133875657690452080396474983972067706781976275589651694439550567678165824984290994659861724649235686</span><br></pre></td></tr></table></figure>
 <p>-</p>
 <p>隨意找個 <a target="_blank" rel="noopener" href="https://www.cryptool.org/en/cto/highlights/rsa-step-by-step">RSA 線上工具</a>即可，當然能自己刻個 code 工具會更好www</p>
@@ -293,11 +349,14 @@
 
 <p>最後解出來的 Decimal 送了很多次 WA，問了學弟才知道還要先轉 Hex 才能轉 ASCII，其實沒有很了解為何需要多這一層 = w =</p>
 <p>平常 RSA 的題目不是都直接把 Decimal 外面套 Flag 格式就行了嗎QQ</p>
+<blockquote>
+<p>SWCTF{i_d0n7_know_how_RSA_Works}</p>
+</blockquote>
 <h2 id="Advanced-SQL-Injection-靜宜-Web-Score-200"><a href="#Advanced-SQL-Injection-靜宜-Web-Score-200" class="headerlink" title="Advanced SQL Injection (靜宜-Web, Score: 200)"></a>Advanced SQL Injection (靜宜-Web, Score: 200)</h2><p>為了跟上 TIM 哥的腳步，小明持續深入研究 SQL Injection，聽說有種手法是利用 Union 作攻擊<br><a target="_blank" rel="noopener" href="http://swctf.hackersir.org:20000/">http://swctf.hackersir.org:20000/</a></p>
 <p>-</p>
 <p>一開始隨意用 admin : admin 弱密碼不小心成功登入，頁面顯示</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Hi, admin</span><br><span class="line">The flag is in the database.</span><br></pre></td></tr></table></figure>
-<p>（事後翻到前端 F12 的 source code 也有給這組帳密XD）</p>
+<p>（賽後翻到前端 F12 的 source code 也有給這組帳密XD）</p>
 <p>關於 UNION 剛好近期才練習過類似的題目 <a href="https://blog.eevee.tw/2020/201209-htcf-hw2-writeup/">NSYSU 駭客攻防 HW 0x02 Writeups</a>，套路上差不多。</p>
 <p>先用 <code>&#39; ORDER BY 1 --</code> 確認到 5 的時候會噴 ERROR，而且資料庫是 SQLite3。<br>再來就是想辦法用 <code>UNION SELECT</code> 搭配 <a target="_blank" rel="noopener" href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/SQLite%20Injection.md">SQLite Injection</a> 把 Flag 從資料庫中撈出來。</p>
 <p>對了，可以注意到登進去的頁面只會顯示第二欄的訊息，也就是下手目標。</p>
@@ -385,6 +444,32 @@
 <blockquote>
 <p>SWCTF{MY_CaMeRa_1s_Bet7er_tH4n_yOur5}</p>
 </blockquote>
+<h2 id="CoolMD-逢甲-Web-Score-200"><a href="#CoolMD-逢甲-Web-Score-200" class="headerlink" title="CoolMD (逢甲-Web, Score: 200)"></a>CoolMD (逢甲-Web, Score: 200)</h2><p>作筆記再也不用煩惱太單調了<br><a target="_blank" rel="noopener" href="https://hackmd.io/@swctf/CoolMD/">https://hackmd.io/@swctf/CoolMD/</a></p>
+<ul>
+<li><p>第一次遇到用 HackMD 出題，直接 F12 摸一下就有 Flag 了。</p>
+</li>
+</ul>
+<blockquote>
+<p>SWCTF{coOL_CSsY_Cha7_r0om}</p>
+</blockquote>
+<h2 id="Evil-Robots-逢甲-Web-Score-200"><a href="#Evil-Robots-逢甲-Web-Score-200" class="headerlink" title="Evil Robots (逢甲-Web, Score: 200)"></a>Evil Robots (逢甲-Web, Score: 200)</h2><p>機器人什麼都拿，要是連 flag 都被拿走那怎麼辦？<br><a target="_blank" rel="noopener" href="http://swctf.hackersir.org:20200/">http://swctf.hackersir.org:20200/</a></p>
+<p>-</p>
+<p>簡單 Web，直接從 robots.txt 找到目錄 /nguinwiuniueniuw/hawuohudsoihfifiofs.php，結束。</p>
+<blockquote>
+<p>SWCTF{d0nt_iNDex_7HE_Fl46}</p>
+</blockquote>
+<h2 id="Stupid-Session-逢甲-Web-Score-200"><a href="#Stupid-Session-逢甲-Web-Score-200" class="headerlink" title="Stupid Session (逢甲-Web, Score: 200)"></a>Stupid Session (逢甲-Web, Score: 200)</h2><p>好想當管理員，但只有測試帳號能用 …<br><a target="_blank" rel="noopener" href="http://swctf.hackersir.org:20203/">http://swctf.hackersir.org:20203/</a><br>測試帳密：test : test</p>
+<p>-</p>
+<p>用題目給的帳號登入後，可以看到「您收到了來自FBI的一封私訊，請登入管理員 (admin) 帳號查看！」。<br>所以我們直接從 cookie 下手，這裡推薦 Chrome 套件 <a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg">EditThisCookie</a>，從網站 cookie 可以看到在 login_info 用 URL decode 後是一串 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Serialization">序列化(serialization)</a> 結構，如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a:1:&#123;s:8:&quot;username&quot;;s:4:&quot;test&quot;;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>那我們就把 test 改成 admin ㄅ！</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a:1:&#123;s:8:&quot;username&quot;;s:5:&quot;admin&quot;;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>記得 URL encode 再拿去改 cookie，按下綠色勾勾後 F5 重新整理，拿 Flag 。</p>
+<blockquote>
+<p>SWCTF{C00K1eS_aR3_very_u53FuL}</p>
+</blockquote>
 <h2 id="Notifications-逢甲-Web-Score-200"><a href="#Notifications-逢甲-Web-Score-200" class="headerlink" title="Notifications (逢甲-Web, Score: 200)"></a>Notifications (逢甲-Web, Score: 200)</h2><p>出題者喜歡吃什麼? 猜對了就給 flag<br><a target="_blank" rel="noopener" href="https://swctf.hackersir.org:20202/">https://swctf.hackersir.org:20202/</a><br>本題請允許網站顯示通知，以獲得完整體驗</p>
 <p>-</p>
 <p>一開始就沒打算猜www 果不其然兩個選項都拿不到 Flag ㄏ</p>
@@ -392,12 +477,49 @@
 <blockquote>
 <p>SWCTF{SeRVICE_woRker_n3w_SubsCRiber}</p>
 </blockquote>
+<h2 id="Popping-Meow-逢甲-Reverse-Score-200"><a href="#Popping-Meow-逢甲-Reverse-Score-200" class="headerlink" title="Popping Meow (逢甲-Reverse, Score: 200)"></a>Popping Meow (逢甲-Reverse, Score: 200)</h2><p>喔不，Pop Cat 想找你/妳聊天，結果一不小心擋住 flag 了 :/</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/Released%20file/popping_meow.apk">Released file (apk)</a></p>
+<p>-</p>
+<p>原本想說難得遇到 apk 逆向題，無聊<code>strings</code>一下 … 欸？</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ strings popping_meow.apk | grep <span class="string">&quot;CTF&quot;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>SWCTF{Ju1cY_Apk_resouRcES}</p>
+</blockquote>
 <h2 id="Python2Exe-逢甲-Reverse-Score-239"><a href="#Python2Exe-逢甲-Reverse-Score-239" class="headerlink" title="Python2Exe (逢甲-Reverse, Score: 239)"></a>Python2Exe (逢甲-Reverse, Score: 239)</h2><p>曹操心機很重，想取得旗幟必須喊出友軍口號！</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/Released%20file/Python2Exe.exe">Released file (exe)</a></p>
 <p>-</p>
 <p>工具題，用 <a target="_blank" rel="noopener" href="https://github.com/extremecoders-re/pyinstxtractor">pyinstxtractor</a> 再從提取出來的檔案直接 grep Flag。</p>
 <blockquote>
 <p>SWCTF{PyThon_Scr1PT_kiddiES}</p>
+</blockquote>
+<h2 id="password-中科-Reverse-Score-200"><a href="#password-中科-Reverse-Score-200" class="headerlink" title="password (中科-Reverse, Score: 200)"></a>password (中科-Reverse, Score: 200)</h2><p>Find the password if you can!</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/Released%20file/password.exe">Released file (exe)</a></p>
+<p>-</p>
+<p>exe 跑起來會要求輸入密碼，直接用 IDA 拆就會看到 password 了。</p>
+<p><img src="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/password.png?raw=true" alt=" "></p>
+<p>BTW，IDA 拆看到輸出的部分是 <code>SWCTF&#123;%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c&#125;</code>，實在沒看懂怎麼撈 Flag 字串出來的==</p>
+<blockquote>
+<p>SWCTF{W33K_P455W0RD_XD}</p>
+</blockquote>
+<h2 id="func-中科-Reverse-Score-275"><a href="#func-中科-Reverse-Score-275" class="headerlink" title="func (中科-Reverse, Score: 275)"></a>func (中科-Reverse, Score: 275)</h2><p>Jump or not jump?</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/Released%20file/func.exe">Released file (exe)</a></p>
+<p>-</p>
+<p>用 IDA 拆一拆發現加密規則。</p>
+<p><img src="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/func.png?raw=true" alt=" "></p>
+<p>簡單摳一下還原，結束w</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">arr = [<span class="number">0</span>, <span class="number">3</span>, <span class="number">17</span>, <span class="number">29</span>, <span class="number">8</span>, <span class="number">60</span>, <span class="number">114</span>, <span class="number">60</span>, <span class="number">116</span>, <span class="number">13</span>, <span class="number">125</span>, <span class="number">17</span>, <span class="number">32</span>, <span class="number">52</span>, <span class="number">120</span>, <span class="number">122</span>, <span class="number">41</span>, <span class="number">11</span>, <span class="number">34</span>, <span class="number">58</span>, <span class="number">59</span>, <span class="number">33</span>, <span class="number">49</span>]</span><br><span class="line">key = <span class="string">&quot;STRINGCHARINTFLOATDOUBLE&quot;</span></span><br><span class="line">flag = <span class="string">&quot;&quot;</span>.join([ chr((arr[i]) ^ ord(key[i])) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">23</span>) ])</span><br><span class="line">print(flag)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>SWCTF{1t5_4_tr45h_func}</p>
+</blockquote>
+<h2 id="easy-reverse-靜宜-Reverse-Score-200"><a href="#easy-reverse-靜宜-Reverse-Score-200" class="headerlink" title="easy reverse (靜宜-Reverse, Score: 200)"></a>easy reverse (靜宜-Reverse, Score: 200)</h2><p><a target="_blank" rel="noopener" href="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/Released%20file/easy_reverse.exe">Released file (exe)</a></p>
+<p>-</p>
+<p>起手式 <code>strings</code>，結束。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ strings easy_reverse.exe | grep <span class="string">&quot;CTF&quot;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>SWCTF{fm42kb1.gvf}</p>
 </blockquote>
 <h2 id="Let’s-Dance-靜宜-Crypto-Score-200-Unsolved"><a href="#Let’s-Dance-靜宜-Crypto-Score-200-Unsolved" class="headerlink" title="Let’s Dance (靜宜-Crypto, Score: 200, Unsolved)"></a>Let’s Dance (靜宜-Crypto, Score: 200, Unsolved)</h2><p>福爾摩斯將訊息進行字母替換並使用某次案件的暗號，將其與助手共享。在此次案件中福爾摩斯的助手在一張紙上留下訊息暗號。</p>
 <p><img src="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/Released%20file/question.jpg?raw=true" alt=" "></p>
@@ -420,7 +542,13 @@
 <h2 id="天雨粟-鬼夜哭-靜宜-Crypto-Score-488-Unsolved"><a href="#天雨粟-鬼夜哭-靜宜-Crypto-Score-488-Unsolved" class="headerlink" title="天雨粟 鬼夜哭 (靜宜-Crypto, Score: 488, Unsolved)"></a>天雨粟 鬼夜哭 (靜宜-Crypto, Score: 488, Unsolved)</h2><p>小邪手中握著三叔留給他的訊息，看著爺爺書櫃裡的《淮南子》、《說文解字》、《呂氏春秋》、《荀子》、《韓非子》、《大正藏》被擺放的十分整齊，回想著三叔說過的話：「這些書裡紀錄了一位你爺爺的非常尊敬的人，他和文昌帝君有所關聯。這張紙上除了我們現代的編譯還用了因那位人物所衍伸出的智慧，我相信小邪一定可以破解。」 紙條內容：<br>BJ4X06T/65K3DK3QU/6VUP45J/U6FU,4U6C04</p>
 <p>提示1: flag 中的英文字母皆為大寫</p>
 <p>-</p>
-<p>（待補）</p>
+<p>只知道用注音的方式拼出來應該是「入雷城者可平心中一切遺憾」，然後… 就沒有然後了</p>
+<p>（救命）</p>
+<h2 id="Historic-Site-Tour-靜宜-Crypto-Score-499-Unsolved"><a href="#Historic-Site-Tour-靜宜-Crypto-Score-499-Unsolved" class="headerlink" title="Historic Site Tour (靜宜-Crypto, Score: 499, Unsolved)"></a>Historic Site Tour (靜宜-Crypto, Score: 499, Unsolved)</h2><p>還記得曾經說過要介紹家鄉的古蹟給你，但一直沒機會，不如就用這次機會讓你自己走一遭吧！我把他們的座標給你，期待你把這些重要的古蹟找出來！（若是英文則皆為小寫）</p>
+<p>提示1: flag 是小寫英文串連而成<br>提示2: flag 中無空白</p>
+<p><img src="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/Released%20file/Historic_Site_Tour.jpg?raw=true" alt=" "></p>
+<p>-</p>
+<p>（救命）</p>
 <h2 id="GIForever-逢甲-Misc-Score-200-Unsolved"><a href="#GIForever-逢甲-Misc-Score-200-Unsolved" class="headerlink" title="GIForever (逢甲-Misc, Score: 200, Unsolved)"></a>GIForever (逢甲-Misc, Score: 200, Unsolved)</h2><p>QR-Code 裡似乎藏著什麼訊息</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/Released%20file/GIForever.gif?raw=true">Released file (gif)</a></p>
 <p>-</p>
@@ -445,22 +573,41 @@
 <blockquote>
 <p>SWCTF{BzIP_1n_7z_1n_GiF_bu_jiang_wu_de}</p>
 </blockquote>
+<h2 id="Real-Google-逢甲-Misc-Score-488-Unsolved"><a href="#Real-Google-逢甲-Misc-Score-488-Unsolved" class="headerlink" title="Real Google (逢甲-Misc, Score: 488, Unsolved)"></a>Real Google (逢甲-Misc, Score: 488, Unsolved)</h2><p>這個網域應該是真的 Google，在上面輸入帳號密碼應該沒問題。可惜似乎連不上 …<br><a href="thisisrealgoogle.tw">thisisrealgoogle.tw</a></p>
+<p>-</p>
+<p>（救命）</p>
 <h2 id="Base-XX-逢甲-Crypto-Score-467-Unsolved"><a href="#Base-XX-逢甲-Crypto-Score-467-Unsolved" class="headerlink" title="Base-XX (逢甲-Crypto, Score: 467, Unsolved)"></a>Base-XX (逢甲-Crypto, Score: 467, Unsolved)</h2><p>這訊息看起來似曾相似，但好像又哪裡怪怪的 …</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ZIpR1J2NvPqtgSJxbO4xnJ1JTGotDRpxoO4ZnLoJiMqxYAIt5TE++</span><br></pre></td></tr></table></figure>
 
+<p>-</p>
+<p>我拿 CyberChef 戳半天還是沒想法 Zzzz</p>
+<p>（救命）</p>
 <h2 id="babyCPP-逢甲-Reverse-Score-392-Unsolved"><a href="#babyCPP-逢甲-Reverse-Score-392-Unsolved" class="headerlink" title="babyCPP (逢甲-Reverse, Score: 392, Unsolved)"></a>babyCPP (逢甲-Reverse, Score: 392, Unsolved)</h2><p>同學是個 FPS 職業選手，他做了一個訓練反應速度的小遊戲，只有職業選手的眼睛才跟得上！</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/Released%20file/babyCPP.exe">Released file (exe)</a></p>
 <p>-</p>
+<p>我的 Windows 虛擬機把 .dll 補上還是跑不起來 Orz</p>
 <p>（待補）</p>
 <h2 id="C-Minor-逢甲-Reverse-Score-435-Unsolved"><a href="#C-Minor-逢甲-Reverse-Score-435-Unsolved" class="headerlink" title="C Minor (逢甲-Reverse, Score: 435, Unsolved)"></a>C Minor (逢甲-Reverse, Score: 435, Unsolved)</h2><p>如果想拿到 flag，請先購買專業版授權碼！</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/Released%20file/C_Minor.exe">Released file (exe)</a></p>
 <p>-</p>
-<p>（補圖）</p>
-<p>工具: <a target="_blank" rel="noopener" href="https://github.com/dnSpy/dnSpy">dnSpy</a></p>
+<p>起手式先 <code>file</code> 查看檔案類型，發現是用 .NET 寫的，用 Windows 執行起來會要求輸入字串進行驗證。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">C_Minor.exe: PE32 executable (GUI) Intel 80386 Mono/.Net assembly, <span class="keyword">for</span> MS Windows</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="keyword">byte</span>[] &#123;</span><br><span class="line">	<span class="number">0x20</span>, <span class="number">0x17</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x32</span>, <span class="number">0x09</span>, <span class="number">0x05</span>, <span class="number">0x2E</span>, <span class="number">0x27</span>, <span class="number">0xF8</span>, <span class="number">0xE8</span>, <span class="number">0x19</span>, <span class="number">0x14</span>, <span class="number">0x0F</span>, <span class="number">0x1A</span>,</span><br><span class="line">	<span class="number">0x14</span>, <span class="number">0x0E</span>, <span class="number">0x05</span>, <span class="number">0x08</span>, <span class="number">0x03</span>, <span class="number">0xF9</span>, <span class="number">0x30</span>, <span class="number">0xFB</span>, <span class="number">0x09</span>, <span class="number">0xF8</span>, <span class="number">0x0C</span>, <span class="number">0x08</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
+<p>感謝 MuMu 介紹好用的 .NET 反編譯工具 <a target="_blank" rel="noopener" href="https://github.com/dnSpy/dnSpy">dnSpy</a>。</p>
+<p>簡單翻一翻會看到加密相關的函式，可以知道程式會將輸入字串進行加密後進行比對，所以我說那個要比對的對象勒？</p>
+<p><img src="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/C_Minor-1.png?raw=true" alt=" "></p>
+<p>翻了一陣子發現是被藏在一個類似資源庫(Resource)的地方。</p>
+<p><img src="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/C_Minor-2.png?raw=true" alt=" "></p>
+<p>沿路點進 address 就會看到一串 Hex 了，我們可以簡單寫個扣還原。</p>
+<p><img src="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/C_Minor-3.png?raw=true" alt=" "></p>
+<blockquote>
+<p>感謝展哥提醒可以直接右鍵以 C# array 格式複製，會比較好處理一點XD </p>
+</blockquote>
+<figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="keyword">byte</span>[] &#123;</span><br><span class="line">    <span class="number">0x20</span>, <span class="number">0x17</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x32</span>, <span class="number">0x09</span>, <span class="number">0x05</span>, <span class="number">0x2E</span>, <span class="number">0x27</span>, <span class="number">0xF8</span>, <span class="number">0xE8</span>, <span class="number">0x19</span>, <span class="number">0x14</span>, </span><br><span class="line">    <span class="number">0x0F</span>, <span class="number">0x1A</span>, <span class="number">0x14</span>, <span class="number">0x0E</span>, <span class="number">0x05</span>, <span class="number">0x08</span>, <span class="number">0x03</span>, <span class="number">0xF9</span>, <span class="number">0x30</span>, <span class="number">0xFB</span>, <span class="number">0x09</span>, <span class="number">0xF8</span>, <span class="number">0x0C</span>, <span class="number">0x08</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+<p>個人是用 Python 直接偷懶一波，還原的部分看圖一應該不需要解釋吧 w</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cipher = [<span class="number">0x20</span>, <span class="number">0x17</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x32</span>, <span class="number">0x09</span>, <span class="number">0x05</span>, <span class="number">0x2E</span>, <span class="number">0x27</span>, <span class="number">0xF8</span>, <span class="number">0xE8</span>, <span class="number">0x19</span>, <span class="number">0x14</span>, <span class="number">0x0F</span>, <span class="number">0x1A</span>, <span class="number">0x14</span>, <span class="number">0x0E</span>, <span class="number">0x05</span>, <span class="number">0x08</span>, <span class="number">0x03</span>, <span class="number">0xF9</span>, <span class="number">0x30</span>, <span class="number">0xFB</span>, <span class="number">0x09</span>, <span class="number">0xF8</span>, <span class="number">0x0C</span>, <span class="number">0x08</span>]</span><br><span class="line"></span><br><span class="line">ans = <span class="string">&quot;&quot;</span>.join([ chr((i+<span class="number">75</span>) &amp; <span class="number">0xff</span>) <span class="keyword">for</span> i <span class="keyword">in</span> cipher ])</span><br><span class="line">print(ans[::<span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -469,7 +616,8 @@
 <h2 id="disseminate-中科-Misc-Score-367-Unsolved"><a href="#disseminate-中科-Misc-Score-367-Unsolved" class="headerlink" title="disseminate (中科-Misc, Score: 367, Unsolved)"></a>disseminate (中科-Misc, Score: 367, Unsolved)</h2><p>Can you find different flag in the article?</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/yctseng1227/yctseng-ctf/blob/main/swctf/Released%20file/article.txt">Released file (txt)</a></p>
 <p>-</p>
-<p>（待補）</p>
+<p>用 MS word 打開可以發現自動校正的部分有很多錯字，挑出來研究還是沒結果。</p>
+<p>（救命）</p>
 <h2 id="My-first-SQL-Injection-靜宜-Web-Score-308-Unsolved"><a href="#My-first-SQL-Injection-靜宜-Web-Score-308-Unsolved" class="headerlink" title="My first SQL Injection (靜宜-Web, Score: 308, Unsolved)"></a>My first SQL Injection (靜宜-Web, Score: 308, Unsolved)</h2><p>小明想成為跟 TIM 哥一樣厲害的駭客，正在自學資訊安全，研究完 SQL Injection 後想要小試身手<br><a target="_blank" rel="noopener" href="http://swctf.hackersir.org:20002/">http://swctf.hackersir.org:20002/</a></p>
 <p>-</p>
 <p>（待補）</p>
@@ -487,6 +635,9 @@
 <h2 id="Stupid-Session-Revenge-逢甲-Web-Score-200-Unsolved"><a href="#Stupid-Session-Revenge-逢甲-Web-Score-200-Unsolved" class="headerlink" title="Stupid Session Revenge (逢甲-Web, Score: 200, Unsolved)"></a>Stupid Session Revenge (逢甲-Web, Score: 200, Unsolved)</h2><p>管理員學聰明了，改用了先進的技術來保護他的網站<br><a target="_blank" rel="noopener" href="http://swctf.hackersir.org:20204/">http://swctf.hackersir.org:20204/</a><br>測試帳密：test : test</p>
 <p>-</p>
 <p>（待補）</p>
+<h2 id="admin-中科-Web-Score-499-Unsolved"><a href="#admin-中科-Web-Score-499-Unsolved" class="headerlink" title="admin (中科-Web, Score: 499, Unsolved)"></a>admin (中科-Web, Score: 499, Unsolved)</h2><p>Only admin can visit this page.<br><a target="_blank" rel="noopener" href="http://swctf.hackersir.org:20100/">http://swctf.hackersir.org:20100/</a></p>
+<p>-</p>
+<p>（救命）</p>
 
     </div>
 
@@ -588,7 +739,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NOKIA-3310-%E9%9D%9C%E5%AE%9C-Crypto-Score-200"><span class="nav-number">1.</span> <span class="nav-text">NOKIA 3310 (靜宜-Crypto, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#N-pq-%E9%80%A2%E7%94%B2-Crypto-Score-200"><span class="nav-number">2.</span> <span class="nav-text">N&#x3D;pq (逢甲-Crypto, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Advanced-SQL-Injection-%E9%9D%9C%E5%AE%9C-Web-Score-200"><span class="nav-number">3.</span> <span class="nav-text">Advanced SQL Injection (靜宜-Web, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%90%98-%E9%9D%9C%E5%AE%9C-Web-Score-200"><span class="nav-number">4.</span> <span class="nav-text">🐘 (靜宜-Web, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-%E9%9D%9C%E5%AE%9C-Web-Score-200"><span class="nav-number">5.</span> <span class="nav-text">Git (靜宜-Web, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%D0%BC%D0%B0%D1%82%D1%80%D1%91%D1%88%D0%BA%D0%B0-1-%E4%B8%AD%E7%A7%91-Misc-Score-200"><span class="nav-number">6.</span> <span class="nav-text">матрёшка_1 (中科-Misc, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%D0%BC%D0%B0%D1%82%D1%80%D1%91%D1%88%D0%BA%D0%B0-2-%E4%B8%AD%E7%A7%91-Misc-Score-200"><span class="nav-number">7.</span> <span class="nav-text">матрёшка_2 (中科-Misc, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#code-%E4%B8%AD%E7%A7%91-Crypto-Score-200"><span class="nav-number">8.</span> <span class="nav-text">code (中科-Crypto, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PNG-%E9%9D%9C%E5%AE%9C-Misc-Score-200"><span class="nav-number">9.</span> <span class="nav-text">PNG (靜宜-Misc, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Loseless-Flowers-%E9%80%A2%E7%94%B2-Misc-Score-367"><span class="nav-number">10.</span> <span class="nav-text">Loseless Flowers (逢甲-Misc, Score: 367)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Notifications-%E9%80%A2%E7%94%B2-Web-Score-200"><span class="nav-number">11.</span> <span class="nav-text">Notifications (逢甲-Web, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python2Exe-%E9%80%A2%E7%94%B2-Reverse-Score-239"><span class="nav-number">12.</span> <span class="nav-text">Python2Exe (逢甲-Reverse, Score: 239)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Let%E2%80%99s-Dance-%E9%9D%9C%E5%AE%9C-Crypto-Score-200-Unsolved"><span class="nav-number">13.</span> <span class="nav-text">Let’s Dance (靜宜-Crypto, Score: 200, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Prison-life-%E9%9D%9C%E5%AE%9C-Crypto-Score-392-Unsolved"><span class="nav-number">14.</span> <span class="nav-text">Prison life (靜宜-Crypto, Score: 392, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A9%E9%9B%A8%E7%B2%9F-%E9%AC%BC%E5%A4%9C%E5%93%AD-%E9%9D%9C%E5%AE%9C-Crypto-Score-488-Unsolved"><span class="nav-number">15.</span> <span class="nav-text">天雨粟 鬼夜哭 (靜宜-Crypto, Score: 488, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GIForever-%E9%80%A2%E7%94%B2-Misc-Score-200-Unsolved"><span class="nav-number">16.</span> <span class="nav-text">GIForever (逢甲-Misc, Score: 200, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Special-RAR-%E9%80%A2%E7%94%B2-Misc-Score-200-Unsolved"><span class="nav-number">17.</span> <span class="nav-text">Special RAR (逢甲-Misc, Score: 200, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-Does-the-Wolf-Say-%E9%80%A2%E7%94%B2-Misc-Score-200-Unsolved"><span class="nav-number">18.</span> <span class="nav-text">What Does the Wolf Say (逢甲-Misc, Score: 200, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%80%97%E5%AD%90%E5%B0%BE%E6%B1%81-%E9%80%A2%E7%94%B2-Misc-Score-200-Unsolved"><span class="nav-number">19.</span> <span class="nav-text">耗子尾汁 (逢甲-Misc, Score: 200, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Base-XX-%E9%80%A2%E7%94%B2-Crypto-Score-467-Unsolved"><span class="nav-number">20.</span> <span class="nav-text">Base-XX (逢甲-Crypto, Score: 467, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#babyCPP-%E9%80%A2%E7%94%B2-Reverse-Score-392-Unsolved"><span class="nav-number">21.</span> <span class="nav-text">babyCPP (逢甲-Reverse, Score: 392, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-Minor-%E9%80%A2%E7%94%B2-Reverse-Score-435-Unsolved"><span class="nav-number">22.</span> <span class="nav-text">C Minor (逢甲-Reverse, Score: 435, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#disseminate-%E4%B8%AD%E7%A7%91-Misc-Score-367-Unsolved"><span class="nav-number">23.</span> <span class="nav-text">disseminate (中科-Misc, Score: 367, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#My-first-SQL-Injection-%E9%9D%9C%E5%AE%9C-Web-Score-308-Unsolved"><span class="nav-number">24.</span> <span class="nav-text">My first SQL Injection (靜宜-Web, Score: 308, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-It-Yourself-%E9%80%A2%E7%94%B2-Web-Score-200-Unsolved"><span class="nav-number">25.</span> <span class="nav-text">Google It Yourself (逢甲-Web, Score: 200, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stupid-Session-Revenge-%E9%80%A2%E7%94%B2-Web-Score-200-Unsolved"><span class="nav-number">26.</span> <span class="nav-text">Stupid Session Revenge (逢甲-Web, Score: 200, Unsolved)</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NOKIA-3310-%E9%9D%9C%E5%AE%9C-Crypto-Score-200"><span class="nav-number">1.</span> <span class="nav-text">NOKIA 3310 (靜宜-Crypto, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A-letter-%E9%9D%9C%E5%AE%9C-crypto-Score-200"><span class="nav-number">2.</span> <span class="nav-text">A letter (靜宜-crypto, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MOS-%E9%9D%9C%E5%AE%9C-crypto-Score-275"><span class="nav-number">3.</span> <span class="nav-text">MOS (靜宜-crypto, Score: 275)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Base-X-%E9%80%A2%E7%94%B2-Crypto-Score-200"><span class="nav-number">4.</span> <span class="nav-text">Base-X (逢甲-Crypto, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A6%E5%8F%B3%E5%88%86%E4%B8%8D%E6%B8%85-%E9%80%A2%E7%94%B2-Crypto-Score-200"><span class="nav-number">5.</span> <span class="nav-text">左右分不清 (逢甲-Crypto, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#N-pq-%E9%80%A2%E7%94%B2-Crypto-Score-200"><span class="nav-number">6.</span> <span class="nav-text">N&#x3D;pq (逢甲-Crypto, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Advanced-SQL-Injection-%E9%9D%9C%E5%AE%9C-Web-Score-200"><span class="nav-number">7.</span> <span class="nav-text">Advanced SQL Injection (靜宜-Web, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%90%98-%E9%9D%9C%E5%AE%9C-Web-Score-200"><span class="nav-number">8.</span> <span class="nav-text">🐘 (靜宜-Web, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-%E9%9D%9C%E5%AE%9C-Web-Score-200"><span class="nav-number">9.</span> <span class="nav-text">Git (靜宜-Web, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%D0%BC%D0%B0%D1%82%D1%80%D1%91%D1%88%D0%BA%D0%B0-1-%E4%B8%AD%E7%A7%91-Misc-Score-200"><span class="nav-number">10.</span> <span class="nav-text">матрёшка_1 (中科-Misc, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%D0%BC%D0%B0%D1%82%D1%80%D1%91%D1%88%D0%BA%D0%B0-2-%E4%B8%AD%E7%A7%91-Misc-Score-200"><span class="nav-number">11.</span> <span class="nav-text">матрёшка_2 (中科-Misc, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#code-%E4%B8%AD%E7%A7%91-Crypto-Score-200"><span class="nav-number">12.</span> <span class="nav-text">code (中科-Crypto, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PNG-%E9%9D%9C%E5%AE%9C-Misc-Score-200"><span class="nav-number">13.</span> <span class="nav-text">PNG (靜宜-Misc, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Loseless-Flowers-%E9%80%A2%E7%94%B2-Misc-Score-367"><span class="nav-number">14.</span> <span class="nav-text">Loseless Flowers (逢甲-Misc, Score: 367)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CoolMD-%E9%80%A2%E7%94%B2-Web-Score-200"><span class="nav-number">15.</span> <span class="nav-text">CoolMD (逢甲-Web, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Evil-Robots-%E9%80%A2%E7%94%B2-Web-Score-200"><span class="nav-number">16.</span> <span class="nav-text">Evil Robots (逢甲-Web, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stupid-Session-%E9%80%A2%E7%94%B2-Web-Score-200"><span class="nav-number">17.</span> <span class="nav-text">Stupid Session (逢甲-Web, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Notifications-%E9%80%A2%E7%94%B2-Web-Score-200"><span class="nav-number">18.</span> <span class="nav-text">Notifications (逢甲-Web, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Popping-Meow-%E9%80%A2%E7%94%B2-Reverse-Score-200"><span class="nav-number">19.</span> <span class="nav-text">Popping Meow (逢甲-Reverse, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python2Exe-%E9%80%A2%E7%94%B2-Reverse-Score-239"><span class="nav-number">20.</span> <span class="nav-text">Python2Exe (逢甲-Reverse, Score: 239)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#password-%E4%B8%AD%E7%A7%91-Reverse-Score-200"><span class="nav-number">21.</span> <span class="nav-text">password (中科-Reverse, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#func-%E4%B8%AD%E7%A7%91-Reverse-Score-275"><span class="nav-number">22.</span> <span class="nav-text">func (中科-Reverse, Score: 275)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#easy-reverse-%E9%9D%9C%E5%AE%9C-Reverse-Score-200"><span class="nav-number">23.</span> <span class="nav-text">easy reverse (靜宜-Reverse, Score: 200)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Let%E2%80%99s-Dance-%E9%9D%9C%E5%AE%9C-Crypto-Score-200-Unsolved"><span class="nav-number">24.</span> <span class="nav-text">Let’s Dance (靜宜-Crypto, Score: 200, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Prison-life-%E9%9D%9C%E5%AE%9C-Crypto-Score-392-Unsolved"><span class="nav-number">25.</span> <span class="nav-text">Prison life (靜宜-Crypto, Score: 392, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A9%E9%9B%A8%E7%B2%9F-%E9%AC%BC%E5%A4%9C%E5%93%AD-%E9%9D%9C%E5%AE%9C-Crypto-Score-488-Unsolved"><span class="nav-number">26.</span> <span class="nav-text">天雨粟 鬼夜哭 (靜宜-Crypto, Score: 488, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Historic-Site-Tour-%E9%9D%9C%E5%AE%9C-Crypto-Score-499-Unsolved"><span class="nav-number">27.</span> <span class="nav-text">Historic Site Tour (靜宜-Crypto, Score: 499, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GIForever-%E9%80%A2%E7%94%B2-Misc-Score-200-Unsolved"><span class="nav-number">28.</span> <span class="nav-text">GIForever (逢甲-Misc, Score: 200, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Special-RAR-%E9%80%A2%E7%94%B2-Misc-Score-200-Unsolved"><span class="nav-number">29.</span> <span class="nav-text">Special RAR (逢甲-Misc, Score: 200, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-Does-the-Wolf-Say-%E9%80%A2%E7%94%B2-Misc-Score-200-Unsolved"><span class="nav-number">30.</span> <span class="nav-text">What Does the Wolf Say (逢甲-Misc, Score: 200, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%80%97%E5%AD%90%E5%B0%BE%E6%B1%81-%E9%80%A2%E7%94%B2-Misc-Score-200-Unsolved"><span class="nav-number">31.</span> <span class="nav-text">耗子尾汁 (逢甲-Misc, Score: 200, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Real-Google-%E9%80%A2%E7%94%B2-Misc-Score-488-Unsolved"><span class="nav-number">32.</span> <span class="nav-text">Real Google (逢甲-Misc, Score: 488, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Base-XX-%E9%80%A2%E7%94%B2-Crypto-Score-467-Unsolved"><span class="nav-number">33.</span> <span class="nav-text">Base-XX (逢甲-Crypto, Score: 467, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#babyCPP-%E9%80%A2%E7%94%B2-Reverse-Score-392-Unsolved"><span class="nav-number">34.</span> <span class="nav-text">babyCPP (逢甲-Reverse, Score: 392, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-Minor-%E9%80%A2%E7%94%B2-Reverse-Score-435-Unsolved"><span class="nav-number">35.</span> <span class="nav-text">C Minor (逢甲-Reverse, Score: 435, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#disseminate-%E4%B8%AD%E7%A7%91-Misc-Score-367-Unsolved"><span class="nav-number">36.</span> <span class="nav-text">disseminate (中科-Misc, Score: 367, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#My-first-SQL-Injection-%E9%9D%9C%E5%AE%9C-Web-Score-308-Unsolved"><span class="nav-number">37.</span> <span class="nav-text">My first SQL Injection (靜宜-Web, Score: 308, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-It-Yourself-%E9%80%A2%E7%94%B2-Web-Score-200-Unsolved"><span class="nav-number">38.</span> <span class="nav-text">Google It Yourself (逢甲-Web, Score: 200, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stupid-Session-Revenge-%E9%80%A2%E7%94%B2-Web-Score-200-Unsolved"><span class="nav-number">39.</span> <span class="nav-text">Stupid Session Revenge (逢甲-Web, Score: 200, Unsolved)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#admin-%E4%B8%AD%E7%A7%91-Web-Score-499-Unsolved"><span class="nav-number">40.</span> <span class="nav-text">admin (中科-Web, Score: 499, Unsolved)</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -673,12 +824,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">111k</span>
+    <span title="Symbols count total">115k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">3:22</span>
+    <span title="Reading time total">3:29</span>
 </div>
 
         
