@@ -492,13 +492,6 @@
 
           </div>
           
-    
-  <div class="comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-    </div>
-  </div>
-  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -775,27 +768,6 @@ window.addEventListener('pjax:success', () => {
   
 
   
-
-<script>
-  var disqus_config = function() {
-    this.page.url = "blog.eevee.tw/2020/200819-first-year-graduate-summary/";
-    this.page.identifier = "2020/200819-first-year-graduate-summary/";
-    this.page.title = "碩一生活總結 & Summer Conf. 跑起來";
-    };
-  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
-    if (window.DISQUS) {
-      DISQUS.reset({
-        reload: true,
-        config: disqus_config
-      });
-    } else {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://yctseng1227-blog.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', '' + +new Date());
-      (d.head || d.body).appendChild(s);
-    }
-  });
-</script>
 
     </div>
 </body>
