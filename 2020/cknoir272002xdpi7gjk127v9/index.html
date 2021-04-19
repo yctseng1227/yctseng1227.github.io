@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-tail.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-tail.png">
+  <link rel="mask-icon" href="/images/tail.svg" color="#222">
+  <meta name="google-site-verification" content="5POakq1iR3soBgSPJX__DRW6QXkfxgZV9yNcnWQ95j0">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.eevee.tw","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":260,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Source: Twitter @esasi8794  睽違半年的 Lab 日誌，總之平安地度過忙忙的碩一人生，迎來茫茫的碩二生活。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="實驗室日誌 0x04">
+<meta property="og:url" content="blog.eevee.tw/2020/cknoir272002xdpi7gjk127v9/index.html">
+<meta property="og:site_name" content="yctseng&#39;s Blog">
+<meta property="og:description" content="Source: Twitter @esasi8794  睽違半年的 Lab 日誌，總之平安地度過忙忙的碩一人生，迎來茫茫的碩二生活。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pbs.twimg.com/media/EmiQNw_VoAE_k5j?format=jpg&name=large">
+<meta property="article:published_time" content="2020-11-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-11-25T04:10:29.903Z">
+<meta property="article:author" content="yctseng">
+<meta property="article:tag" content="yctseng, security, algorithm, acm, ctf">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pbs.twimg.com/media/EmiQNw_VoAE_k5j?format=jpg&name=large">
+
+<link rel="canonical" href="blog.eevee.tw/2020/cknoir272002xdpi7gjk127v9/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>實驗室日誌 0x04 | yctseng's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137531005-1"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-137531005-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">yctseng's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">課金一瞬、嫁一生 <span style="font-size:1em;color:yellow;"><i class="fas fa-comment-dollar" ></i></span></p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">8</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">33</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">36</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="blog.eevee.tw/2020/cknoir272002xdpi7gjk127v9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yctseng.png">
+      <meta itemprop="name" content="yctseng">
+      <meta itemprop="description" content="競程廢物、資安菜鳥 >_<">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yctseng's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          實驗室日誌 0x04
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-11-16 2020-11-16T00:00:00+08:00" itemprop="dateCreated datePublished" datetime="2020-11-16T00:00:00+08:00">2020-11-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AF%A6%E9%A9%97%E5%AE%A4%E6%97%A5%E8%AA%8C/" itemprop="url" rel="index"><span itemprop="name">實驗室日誌</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.3k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="https://pbs.twimg.com/media/EmiQNw_VoAE_k5j?format=jpg&name=large"> </p>
+<blockquote>
+<p>Source: <a target="_blank" rel="noopener" href="https://twitter.com/esasi8794/status/1326469119672082432">Twitter @esasi8794</a></p>
+</blockquote>
+<p>睽違半年的 Lab 日誌，總之平安地度過忙忙的碩一人生，迎來茫茫的碩二生活。</p>
+<a id="more"></a>
+
+<p>以往的暑假生活我大多是在暑輔(國/高中)、打工、研究所備考、還有 … 耍廢(O) 中度過。今年的七月初期陸續接了三篇 CISC 審稿，其他時間幾乎都在跑南北到處跑活動，各種 Conference、AIS3 集訓，有種不同於以往暑假的充實感，想當然爾，我家荷包君也是各種被壓榨 QQ 有興趣可以看看 <a href="https://blog.eevee.tw/2020/200819-first-year-graduate-summary/">碩一生活總結 &amp; Summer Conf. 跑起來</a>，說實話這篇心得文寫到後面差點富奸化wwww 果然人多少都會有一點拖稿癌呢==</p>
+<p>上一篇提到咱們老闆外務很忙，這學期總算是上了軌道，meeting穩定許多，我也終於在九月把大咪論文報完（原本預計七月初），沒意外之後就是輪到碩一新生接手報告，而我們升碩二的就要開始忙論文了。說到 Lab 碩一新生，雖然每一屆的狀況都不盡相同，但感覺這屆似乎沒有像我們這麼團結 (當、當然也可能我們才是例外)。我們這屆從暑假有自己的群組，約吃飯、打CTF、跑Conf. 也算是蠻常揪出門，而這屆看起來有幾位已經是中山老屁股會各自行動，打 CTF 的也只有一位 <del>（這樣 <strong>MacacaHub</strong> 會很難傳下去）</del>，其他的雖然不在圈內不清楚，但從旁觀者角度來看就是蠻… 蠻多小圈圈（？） 而且也正逢 Lab 的低潮期，看起來之後會辛苦一點&gt;_&lt;</p>
+<p>平常會和我們在 Lab 打屁待到 21、22點、週末也會出現的學長們已經畢業了，不免有些空虛，Lab 碩一新生看起來都蠻準時回家（笑），這才是比較健康的生活方式，我都認為自己是因為奴性太重才會天天 Lab 簽到，有點怕之後出社會很快適應加班生活(X)，曾經有想過需不需要調整待在 Lab 的時間，不過有雙螢幕實在很方便吶，何況我的研究進度應該也不算快，多待一點說不定還能加一些同情分 (？)，有時候會在 Lab 發懶忙一些不務正業的事… 像是現在的這篇實驗室日誌 ㄏ。</p>
+<p>這學期除了 Seminar，我另外修了<strong>駭客攻防</strong> 和 <strong>英文寫作</strong>，前者是個人在資工系底下最有興趣的課，後者反過來是最沒興趣的課Zzzz ，不過因為英文寫作有額外的撒必蘇，所以咱 Lab 大部分都被推(ㄓㄨㄚ)薦(ㄑㄩˋ)修課，目前期中考結束hmmmmmm … 看起來不怎麼樂觀就是，畢竟英文還是我的硬傷RRR；駭客攻防部分就上課蠻開心的，算是在學習打 CTF 會用到的技能，尤其還是展哥擔任助教，藉此多了蠻多練實作題的機會，不得不說他真的很會出題呢，不愧是有經驗的 CTF 玩家。</p>
+<p>話說回來，自暑假以來摸 CTF 的頻率下降許多，何況 10月的金盾獎初賽居然還沒有通過 <del>(沒辦法北上麥當當吃到飽了嗚嗚)</del>，前幾天的 Balsn CTF 也只有摸到 Welcome，雖然也沒有花太多時間在打，但我覺得至少 PoW 那題應該解的出來啊QwQ 真心認為大學就該開始摸 CTF，很羨慕北部好多把競技程式和 CTF 都兼顧的玩家，不然我到研究所大概只有不到一年的時間可以玩，重點我還有其他業務不得不做，說實話玩得不是很過癮ㄚ &gt;___&lt;</p>
+<br>
+最後雖然有點唐突，但我的冬天似乎提早結束了 <3
+
+
+    </div>
+
+    
+    
+    <div>
+    
+        <div style="width: 168px; margin: auto"><img src="/imges/end.png"></div>
+    
+</div>
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>yctseng
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="/blog.eevee.tw/2020/cknoir272002xdpi7gjk127v9/" title="實驗室日誌 0x04">blog.eevee.tw/2020/cknoir272002xdpi7gjk127v9/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-TW" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/cknoir271002udpi7bpte5yf2/" rel="prev" title="NSYSU 駭客攻防 Midterm Writeups">
+      <i class="fa fa-chevron-left"></i> NSYSU 駭客攻防 Midterm Writeups
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/cknoir2730031dpi7cnffhvbl/" rel="next" title="NSYSU 駭客攻防 HW 0x02 Writeups">
+      NSYSU 駭客攻防 HW 0x02 Writeups <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="yctseng"
+      src="/images/yctseng.png">
+  <p class="site-author-name" itemprop="name">yctseng</p>
+  <div class="site-description" itemprop="description">競程廢物、資安菜鳥 >_<</div>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yctseng1227" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yctseng1227" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/yctseng1227/" title="Facebook → https:&#x2F;&#x2F;www.facebook.com&#x2F;yctseng1227&#x2F;" rel="noopener" target="_blank"><i class="fab fa-facebook fa-fw"></i>Facebook</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.instagram.com/yctseng1227/" title="Instagram → https:&#x2F;&#x2F;www.instagram.com&#x2F;yctseng1227&#x2F;" rel="noopener" target="_blank"><i class="fab fa-instagram fa-fw"></i>Instagram</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://codeforces.com/profile/yctseng/" title="Codeforces → http:&#x2F;&#x2F;codeforces.com&#x2F;profile&#x2F;yctseng&#x2F;" rel="noopener" target="_blank"><i class="fas fa-poll fa-fw"></i>Codeforces</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://ctftime.org/user/65888" title="CTFtime → https:&#x2F;&#x2F;ctftime.org&#x2F;user&#x2F;65888" rel="noopener" target="_blank"><i class="fas fa-flag-checkered fa-fw"></i>CTFtime</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/MacacaHub-107811803945876/" title="MacacaHub → https:&#x2F;&#x2F;www.facebook.com&#x2F;MacacaHub-107811803945876&#x2F;" rel="noopener" target="_blank"><i class="fas fa-chess-queen fa-fw"></i>MacacaHub</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友站Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.tinytsunami.info/" title="https:&#x2F;&#x2F;www.tinytsunami.info" rel="noopener" target="_blank">羊羽手札</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://meetonfriday.com/" title="https:&#x2F;&#x2F;meetonfriday.com" rel="noopener" target="_blank">星期五。見面</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.laiyelling.com/" title="https:&#x2F;&#x2F;www.laiyelling.com" rel="noopener" target="_blank">LaiYelling 的地下室</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://sophiexin9636.github.io/" title="https:&#x2F;&#x2F;sophiexin9636.github.io" rel="noopener" target="_blank">Shin's Blog</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-bong"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yctseng</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">117k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">3:32</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+    </div>
+</body>
+</html>
