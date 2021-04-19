@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>【週記】一些日常生活漫談</title>
-    <url>/2019/190122-daily-talk/</url>
-    <content><![CDATA[<p><img src="https://pbs.twimg.com/media/Dw8dzwQUwAA5vZv.jpg:large"></p>
-<p>原定這週應該要發研所推甄心得的…不過出了一些事只能暫緩 QwQ<br>先放張最近19冬的熱門話題角色”三玖”，雖然聽說不少人追完漫畫就倒戈追二乃了www  </p>
-<a id="more"></a>
-<p>我自己只有追完動畫ep1，有點太閒魚了…不過單論人設來看，三玖給我的感覺：耳機、黑絲、歐派、無口(?)屬性加分不少，個性之類的細節等看看有沒有時間追漫畫吧(嘆)。</p>
-<p>咳咳、好像有點太油了。<br>來說說最近的生活吧，目前結束了大四上姑且算是平安活下來了XD<br>不過途中收到某間學校的一通臨時備取通知搞得我人仰馬翻，當時甚至還在FB小小地崩潰一下，事後想想其實也還好，頂多就不去嘛QQ 誰叫我有選擇、性障礙…  咳咳、我是說選擇性、障礙，嗯。<br>只是原本已經放下找教授的這件事，現在不得不又拿出來忙了(跪)。</p>
-<p>也因為這臨時的通知，很多行程都必須配合著提前規劃，導致我回到台北家的時間有點早…<br>嗯、待在家真的反而不太想去動電腦，偏偏剛回家又有點喉嚨發炎，所以都在睡覺 嘖</p>
-<p>下週會去參加台大辦的IOI camp，雖然感覺是去當砲灰der<br>（想想最近打Codeforces的Rating又在綠字 和 灰字之間遊走…有點擔心呢）<br>不過算算能好好玩競程的時間也不多了，希望可以吸收點新知識。<br>然而、第一天要教DP，呃啊真的是硬傷 QQ </p>
-]]></content>
-      <categories>
-        <category>生活札記</category>
-      </categories>
-  </entry>
-  <entry>
     <title>【閒聊】2019 新年新希望</title>
     <url>/2019/190112-new-year-new-hope/</url>
     <content><![CDATA[<p><img src="https://imgur.com/GLsFn3X.png"></p>
@@ -76,6 +61,21 @@
 <li>NUKCPC: 一篇關於高大競程的文章，原定是IOI camp前要丟出來，結果就是因為某研所害我行程全部都卡住 嗚嗚QQ  </li>
 </ol>
 <p>大概就醬。<br>我還在摸索寫文章的風格，畢竟用Facebook久了在段落的排版上還是習慣一句話直接換行，看來要想個方法調整一下~ 努力還債囉ww</p>
+]]></content>
+      <categories>
+        <category>生活札記</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【週記】一些日常生活漫談</title>
+    <url>/2019/190122-daily-talk/</url>
+    <content><![CDATA[<p><img src="https://pbs.twimg.com/media/Dw8dzwQUwAA5vZv.jpg:large"></p>
+<p>原定這週應該要發研所推甄心得的…不過出了一些事只能暫緩 QwQ<br>先放張最近19冬的熱門話題角色”三玖”，雖然聽說不少人追完漫畫就倒戈追二乃了www  </p>
+<a id="more"></a>
+<p>我自己只有追完動畫ep1，有點太閒魚了…不過單論人設來看，三玖給我的感覺：耳機、黑絲、歐派、無口(?)屬性加分不少，個性之類的細節等看看有沒有時間追漫畫吧(嘆)。</p>
+<p>咳咳、好像有點太油了。<br>來說說最近的生活吧，目前結束了大四上姑且算是平安活下來了XD<br>不過途中收到某間學校的一通臨時備取通知搞得我人仰馬翻，當時甚至還在FB小小地崩潰一下，事後想想其實也還好，頂多就不去嘛QQ 誰叫我有選擇、性障礙…  咳咳、我是說選擇性、障礙，嗯。<br>只是原本已經放下找教授的這件事，現在不得不又拿出來忙了(跪)。</p>
+<p>也因為這臨時的通知，很多行程都必須配合著提前規劃，導致我回到台北家的時間有點早…<br>嗯、待在家真的反而不太想去動電腦，偏偏剛回家又有點喉嚨發炎，所以都在睡覺 嘖</p>
+<p>下週會去參加台大辦的IOI camp，雖然感覺是去當砲灰der<br>（想想最近打Codeforces的Rating又在綠字 和 灰字之間遊走…有點擔心呢）<br>不過算算能好好玩競程的時間也不多了，希望可以吸收點新知識。<br>然而、第一天要教DP，呃啊真的是硬傷 QQ </p>
 ]]></content>
       <categories>
         <category>生活札記</category>
@@ -1983,7 +1983,7 @@ Pwn大概就是這麼一回事了~
     <title>ASIS CTF Quals 2020 Experience</title>
     <url>/2020/200714-asisctf2020-experience/</url>
     <content><![CDATA[<p>暑假第一場CTF online!!! 同時也是我們<strong>MacacaHub</strong>的今年第三戰~<br>不過同時也被隊長告知有一定的難度要有心理準備，嗯、真滴難QwQ<br>題組全部共31題，雖然只解 4 題還有 Rank 151 / 815 … 太可怕了==</p>
-<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/f_auto,q_auto/v1618818959/blog/200714-asisctf2020-experience/01.png.png" alt=" "></p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618818959/blog/200714-asisctf2020-experience/01.png.png" alt=" "></p>
 <a id="more"></a>
 
 <p><a href="https://ctftime.org/event/964">CTFtime link</a></p>
