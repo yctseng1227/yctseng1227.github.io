@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-tail.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-tail.png">
+  <link rel="mask-icon" href="/images/tail.svg" color="#222">
+  <meta name="google-site-verification" content="5POakq1iR3soBgSPJX__DRW6QXkfxgZV9yNcnWQ95j0">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.eevee.tw","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":260,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="TODO  SITCON 2020 &amp; CYBERSEC 2020">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Summer Conf. に行きましょう！ PART 2">
+<meta property="og:url" content="blog.eevee.tw/2020/fc546b52265a/index.html">
+<meta property="og:site_name" content="yctseng&#39;s Blog">
+<meta property="og:description" content="TODO  SITCON 2020 &amp; CYBERSEC 2020">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-1.webp">
+<meta property="og:image" content="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-2.webp">
+<meta property="og:image" content="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-3.webp.jpg">
+<meta property="og:image" content="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-4.webp">
+<meta property="og:image" content="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-5.webp">
+<meta property="og:image" content="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-1.webp">
+<meta property="og:image" content="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-2.webp">
+<meta property="og:image" content="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-3.webp">
+<meta property="og:image" content="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-4.webp">
+<meta property="article:published_time" content="2020-08-18T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-05-01T10:05:41.503Z">
+<meta property="article:author" content="yctseng">
+<meta property="article:tag" content="SITCON">
+<meta property="article:tag" content="CYBERSEC">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-1.webp">
+
+<link rel="canonical" href="blog.eevee.tw/2020/fc546b52265a/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Summer Conf. に行きましょう！ PART 2 | yctseng's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137531005-1"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-137531005-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">yctseng's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">課金一瞬、嫁一生 <span style="font-size:1em;color:yellow;"><i class="fas fa-comment-dollar" ></i></span></p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">8</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">33</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">39</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="blog.eevee.tw/2020/fc546b52265a/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yctseng.png">
+      <meta itemprop="name" content="yctseng">
+      <meta itemprop="description" content="競程廢物、資安菜鳥 >_<">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yctseng's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Summer Conf. に行きましょう！ PART 2
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-08-19 2020-08-19T00:00:00+08:00" itemprop="dateCreated datePublished" datetime="2020-08-19T00:00:00+08:00">2020-08-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/" itemprop="url" rel="index"><span itemprop="name">心得分享</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>2.7k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<p>TODO</p>
+</blockquote>
+<p>SITCON 2020 &amp; CYBERSEC 2020</p>
+<a id="more"></a>
+
+<h3 id="SITCON-學生計算機年會-8-8-中研院人文社科館"><a href="#SITCON-學生計算機年會-8-8-中研院人文社科館" class="headerlink" title="SITCON 學生計算機年會 (8/8) @中研院人文社科館"></a>SITCON 學生計算機年會 (8/8) @中研院人文社科館</h3><p><strong>AIS3</strong> 結束隔天馬上就回高雄開會，隔了一週再度回到台北，有夠忙#<br><strong>SITCON</strong> 是我在大學期間蠻常聽到的Conf. ，無奈我大二轉學跑到NUK後比較沒有契機北上參加，今年由於疫情延到暑假（歷年都辦在三月），配合下一個<strong>CYBERSEC</strong>活動，當然是參加啦！ 也感謝社群朋友的讓票，原本沒搶到票想說到時候再用小額贊助$1000的方式拿票，還順便幫<strong>翔君</strong>撿了一張（笑）</p>
+<p><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/sitcon/50258126176/in/album-72157715603590802/?fbclid=IwAR05p6AZvcP_lJV2bbibBLXEqtbycMxuH4p5cOg6wJ3qTCMQz9nWEKsdqe4"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-1.webp"></a></p>
+<p>然後，8/8 當天我睡過頭了XDDDD<br>因為前一天深夜才到台北，家人早上又是6點出門，所以我5:30起床和他們討論晚上的父親節行程，然後睡回籠覺Zzzz 後來發現遲到直接搭小黃花了$350有夠散財，還錯過開幕式 可惡qq 不過事後補看開場動畫真的用心，感覺很適合拿來搭音Game的PV XD<br>不得不說很佩服這種全部由學生自發起扛起的Conf. ，場面上也看到很多在資訊圈的熟面孔。</p>
+<p>活動主要分兩個部分，分別是大地遊戲 &amp; 議程。<br>先說說大地遊戲好了，簡單講就是透過他們的app和攤位互動，達成賓果連線可以換指定小物。但是由於議程之間的休息時間很短，所以我有放掉幾場花時間和攤位交流，像是<strong>AMD</strong>飲料店 (??) 還有<strong>奧義</strong>冰淇淋公司 (???) XDDDDD  </p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-2.webp" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-3.webp.jpg" alt=" "></div></div></div></div>
+
+<p>題外話 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/sitcon/50258130671/in/album-72157715603590802/?fbclid=IwAR2JXBNnVeNYmWfefPT5jJJZcBnw_jA8byXbESAwLPStVCKRDklF5sxTbUw">奧義冰淇淋</a> 這張構圖我很喜歡，官方攝影組好強w</p>
+<p>不過下午全部連線才發現獎品都發完了，嗚嗚花太多時間聽議程了(雖然也不是壞事)，所以只有拿<strong>愛情彩</strong>的彩券(但最後也沒中獎)，另外由於大家都連會場的Wi-Fi，結果有些攤位需要Facebook按讚分享的活動很容易被ban掉，我猜是Session不夠用爆掉了嘖嘖。</p>
+<p>再來說說議程，既然是以學生為本的，原本以為應該不會太難懂… 不 我錯了，雖然沒有到完全聽不懂的慘，但也足夠讓我感受到同樣身為學生但技術上的距離感。 簡單介紹幾個有趣的議題：</p>
+<ul>
+<li>「<a target="_blank" rel="noopener" href="https://www.youtu.be/1gFBx16AlMc">第一次做密室逃脫就上手</a>」結合IoT、AI、AR架起來的密室逃脫，整場描述如何用從0開始把每個機關慢慢做起來，其中有一項是很有科技感的儀式台然後用雷射造型掃描進行比對，背後原理是RFID辨識，然後講師說對外行人可以騙說是AI辨識真的快笑死。</li>
+<li>「<a target="_blank" rel="noopener" href="https://youtu.be/TkC19ukBBxk">Playing Win32 Like a K!NG ;)</a>」小馬adr1講的是<code>UAC Bypass</code>，讓駭客能夠騙過系統拿到高權限，還有系統程式的<code>DLL Hijacking</code>、<code>Path Normalization</code>，附帶幾個小Demo… 說真的能這麼容易被繞過聽起來也蠻可怕的= w =</li>
+<li>「<a target="_blank" rel="noopener" href="https://youtu.be/C94DAdAlUZ8">自己的機房自己蓋！</a>」整理機房的心得，看得出不只是硬體上的採購，系統方面的佈局也需要時間下功夫，另外就是人脈很重要XDDD 有免費的資源可以拿最棒惹嘻嘻。</li>
+<li>「<a target="_blank" rel="noopener" href="https://youtu.be/NGqXSCFvZ3M">我只是個學生，架個網站不想花錢</a>」原本是衝著Github Page的其他玩法，不過這場講的是架個縮網址網站並透過各種免費資源搭建，像是拿Google App Script作為資料庫進行轉址，一路聽下來感覺我好像不太會用到XD</li>
+<li>「<a target="_blank" rel="noopener" href="https://youtu.be/49N0uO86oX0">就算是新手，有愛就沒把專案做出來，對吧</a>」記得是談學生用業界的分工方式實作專案，包含工程師、設計師、產品經理等等的經驗，不過老實說這場只是被我在R0休息順便聽的（抹臉）</li>
+<li>「<a target="_blank" rel="noopener" href="https://youtu.be/aomXTCTlIW4">CDN 網站攻擊 - 這次換駭客當鬼來抓你了</a>」<br>由Mico介紹，備受好評的一場，也是因為這場讓我對<code>CDN</code>有新的認識，原來駭客還能利用CDN繞過WAF，或是間接撈到一些本來應該藏起來的資訊，如果有時間的朋友蠻推薦去看ㄉ，整場聽完發現一堆domain knowledge要補QQ</li>
+</ul>
+<p>噢對了，還有Lighting Talk，老實說聽了三年MOPCON的經驗，五分鐘好像不太容易被拔線XD 大家都很會抓時間，這次有場真的吸引到我… 嗯更正，是吸引到全場目光，在R0廳的大銀幕玩雲端遊戲真的有夠狂XDDDD</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-4.webp" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-5.webp" alt=" "></div></div></div></div>
+
+<p>最後還偷偷在塗鴉牆上幫MacacaHub留名ww<br>總之，整體下來玩得很開心，第一次參加也趁機認識些大神，希望有機會自己能練到和他們差不多的水平&gt;&lt;</p>
+<h3 id="CYBERSEC-臺灣資安大會-8-11-8-12-南港展覽館二館"><a href="#CYBERSEC-臺灣資安大會-8-11-8-12-南港展覽館二館" class="headerlink" title="CYBERSEC 臺灣資安大會 (8/11 - 8/12) @南港展覽館二館"></a>CYBERSEC 臺灣資安大會 (8/11 - 8/12) @南港展覽館二館</h3><p>同樣因疫情影響延到暑假為期兩天的 <strong>CYBERSEC</strong>，由於和 <strong>SITCON</strong> 事隔兩天。加上 Lab 有派人出差，所以我就把行程排在一起了~<br>這場相對前面幾次 Conference，定位上比較面<strong>企業向</strong>，因此從報名到問卷調查常常會問到公司營運相關事項，當然這方面我都拿 Lab 或是 MacacaHub 來填（笑）</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-1.webp" alt=" "></p>
+<p>整體活動分成 展覽 &amp; 議程 &amp; CyberLAB。</p>
+<p>先來談談 CyberLAB實戰攻防演練，不同於議程的人數，這個比較偏向單場 20 人的小班制教學（一天四場），Day 1 我經過看到那個報名排隊人潮直接打消念頭XDDD </p>
+<p>展覽方面和資訊博覽會很像，簡單講就是企業擺攤宣傳各種研發成果，其中不乏看得到一些眼熟的企業，像是趨勢科技、Microsoft、奧義智慧、Devcore、中華資安國際 之類ㄉ，而主辦官方加入了大地遊戲的要素，透過和攤位的互動完成對應的條件拿到不同的贈品，先不提光方的贈品很快就被搶完，反倒是每個攤位送的贈品也毫不手軟，看到不少人提的大包小包 …看來大家都是窮到來這裡搶資源 <del>絕對不是什麼議程蟑螂</del> 。</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-2.webp" alt=" "></p>
+<p>透過這場活動我也才意識到其實作純資安的公司還不少，雖然探聽了幾間好像大多都是以接case的形式居多，說真的資安這行真的出事才會重視蠻尷尬的QQ 不過從一些議程已經有些單位在推資安框架，整合一些SOP做事前防禦，看起來應該還是有蠻大的發展空間。</p>
+<p>攤位中印象最深的果然還是<strong>奧義智慧</strong>吧，不愧是新創的科技公司，攤位活動展示VR模擬滲透內網、「Cyber IQ數位帝國保衛戰」答題遊戲、資安小學堂問答遊戲、結合MITRE ATT&amp;CK知識的Cyber War卡牌類桌遊，何況他們還吸收了許多CTF圈的人才，能深得我們年輕資訊人的歡迎也是預期之中… 更不用說連衣服的設計上各種致敬新世紀福音戰士 太酷了啦XD</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-3.webp" alt=" "></p>
+<p>議程方面，原本想為碩論找些「雲端」議題的議程，可惜都沒聽到什麼有趣的技術分享，反而是圍繞在「人為疏失」如何管理權限這一類偏企業向基本觀念的話題，或是各種工商，有點可惜Orz。另外也照慣例跑去聽了小馬的場，只能說那個場地配置…有點酷？聽說是上一場議程時主投影機出問題，所以直接整個會場座位轉90度用副投影幕，導致講者台在觀眾後面，然後小馬跟觀眾同台XDDDDD</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-4.webp" alt=" "></p>
+<p>在 Day 1 結束我還帶著 Lab 同學跑去<strong>天瓏書店</strong>朝聖，資訊方面藏書多到很好混時間的好地方：）<br>整體下來CYBERSEC算是個內容蠻豐富的場次，主要是投入的廠商夠多所呈現的場面夠大，而且也是這個暑假拿最多免費周邊的一次（笑）</p>
+
+    </div>
+
+    
+    
+    <div>
+    
+        <div style="width: 168px; margin: auto"><img src="/imges/end.png"></div>
+    
+</div>
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>yctseng
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="/blog.eevee.tw/2020/fc546b52265a/" title="Summer Conf. に行きましょう！ PART 2">blog.eevee.tw/2020/fc546b52265a/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-TW" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/SITCON/" rel="tag"># SITCON</a>
+              <a href="/tags/CYBERSEC/" rel="tag"># CYBERSEC</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/389e2f1fea7e/" rel="prev" title="Summer Conf. に行きましょう！ PART 1">
+      <i class="fa fa-chevron-left"></i> Summer Conf. に行きましょう！ PART 1
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/83de7c48f8c7/" rel="next" title="碩一生活總結">
+      碩一生活總結 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#SITCON-%E5%AD%B8%E7%94%9F%E8%A8%88%E7%AE%97%E6%A9%9F%E5%B9%B4%E6%9C%83-8-8-%E4%B8%AD%E7%A0%94%E9%99%A2%E4%BA%BA%E6%96%87%E7%A4%BE%E7%A7%91%E9%A4%A8"><span class="nav-number">1.</span> <span class="nav-text">SITCON 學生計算機年會 (8&#x2F;8) @中研院人文社科館</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CYBERSEC-%E8%87%BA%E7%81%A3%E8%B3%87%E5%AE%89%E5%A4%A7%E6%9C%83-8-11-8-12-%E5%8D%97%E6%B8%AF%E5%B1%95%E8%A6%BD%E9%A4%A8%E4%BA%8C%E9%A4%A8"><span class="nav-number">2.</span> <span class="nav-text">CYBERSEC 臺灣資安大會 (8&#x2F;11 - 8&#x2F;12) @南港展覽館二館</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="yctseng"
+      src="/images/yctseng.png">
+  <p class="site-author-name" itemprop="name">yctseng</p>
+  <div class="site-description" itemprop="description">競程廢物、資安菜鳥 >_<</div>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yctseng1227" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yctseng1227" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/yctseng1227/" title="Facebook → https:&#x2F;&#x2F;www.facebook.com&#x2F;yctseng1227&#x2F;" rel="noopener" target="_blank"><i class="fab fa-facebook fa-fw"></i>Facebook</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.instagram.com/yctseng1227/" title="Instagram → https:&#x2F;&#x2F;www.instagram.com&#x2F;yctseng1227&#x2F;" rel="noopener" target="_blank"><i class="fab fa-instagram fa-fw"></i>Instagram</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://codeforces.com/profile/yctseng/" title="Codeforces → http:&#x2F;&#x2F;codeforces.com&#x2F;profile&#x2F;yctseng&#x2F;" rel="noopener" target="_blank"><i class="fas fa-poll fa-fw"></i>Codeforces</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://ctftime.org/user/65888" title="CTFtime → https:&#x2F;&#x2F;ctftime.org&#x2F;user&#x2F;65888" rel="noopener" target="_blank"><i class="fas fa-flag-checkered fa-fw"></i>CTFtime</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/MacacaHub-107811803945876/" title="MacacaHub → https:&#x2F;&#x2F;www.facebook.com&#x2F;MacacaHub-107811803945876&#x2F;" rel="noopener" target="_blank"><i class="fas fa-chess-queen fa-fw"></i>MacacaHub</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友站Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.tinytsunami.info/" title="https:&#x2F;&#x2F;www.tinytsunami.info" rel="noopener" target="_blank">羊羽手札</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://meetonfriday.com/" title="https:&#x2F;&#x2F;meetonfriday.com" rel="noopener" target="_blank">星期五。見面</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.laiyelling.com/" title="https:&#x2F;&#x2F;www.laiyelling.com" rel="noopener" target="_blank">LaiYelling 的地下室</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://sophiexin9636.github.io/" title="https:&#x2F;&#x2F;sophiexin9636.github.io" rel="noopener" target="_blank">Shin's Blog</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-bong"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yctseng</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">117k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">3:33</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+    </div>
+</body>
+</html>

