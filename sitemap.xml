@@ -424,6 +424,13 @@
   </url>
   
   <url>
+    <loc>blog.eevee.tw/tags/Fate/</loc>
+    <lastmod>2021-05-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>blog.eevee.tw/tags/Pokemon/</loc>
     <lastmod>2021-05-01</lastmod>
     <changefreq>daily</changefreq>
@@ -438,7 +445,7 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/Fate/</loc>
+    <loc>blog.eevee.tw/tags/108%E9%87%91%E7%9B%BE%E7%8D%8E/</loc>
     <lastmod>2021-05-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -515,13 +522,6 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/tags/108%E9%87%91%E7%9B%BE%E7%8D%8E/</loc>
-    <lastmod>2021-05-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>blog.eevee.tw/tags/ioicamp2019/</loc>
     <lastmod>2021-05-01</lastmod>
     <changefreq>daily</changefreq>
@@ -559,14 +559,14 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/categories/%E4%BC%91%E9%96%92%E5%A8%9B%E6%A8%82/</loc>
+    <loc>blog.eevee.tw/categories/%E6%95%97%E5%AE%B6%E9%96%8B%E7%AE%B1/</loc>
     <lastmod>2021-05-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>blog.eevee.tw/categories/%E6%95%97%E5%AE%B6%E9%96%8B%E7%AE%B1/</loc>
+    <loc>blog.eevee.tw/categories/%E4%BC%91%E9%96%92%E5%A8%9B%E6%A8%82/</loc>
     <lastmod>2021-05-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
