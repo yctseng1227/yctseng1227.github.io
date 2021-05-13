@@ -61,32 +61,25 @@
       </categories>
   </entry>
   <entry>
-    <title>【週記】咦？好像踢到奇怪的盒子...</title>
-    <url>/2019/139b13e41c3f/</url>
-    <content><![CDATA[<p><img src="https://imgur.com/ODLyNTq.jpg"></p>
-<p>好像很久沒更新部落格www （跪<br>一方面是沒什麼趣事可以分享，另一方面是懶癌發作 XD<br>只好浮上來換口氣說說最近的事囉~</p>
-<p>另外用hexo框架更新網站偶爾會遇到<code>command not found: hexo</code><br>不得不說有點頭痛呢… 最近終於查清是<strong>Node.js</strong>的更新問題。<br>果然對於自己不熟悉的環境要找問題就不太容易呢~</p>
-<p>請容許我把解決方法放在這裡（其實就只是更新node版本<br><code>sudo npm install hexo-cli -g</code></p>
+    <title>【週記】過新年就是要欠債對唄！</title>
+    <url>/2019/2297743e2376/</url>
+    <content><![CDATA[<p><img src="https://imgur.com/DbAEQEE.jpg"></p>
+<p>嗯對，才剛過年就欠債了。<br>不過我這裡指的是部落格文章 XD<br>雖然還在實驗階段啦，但原本說好一週一篇，結果沒多久跳票好像不太優=///=</p>
 <a id="more"></a>
 
-<p>首先。</p>
-<p>好像還是不少朋友很關心我未來研究所的去向www<br>但我只能說… 現在手上握著兩間的名額，沒辦法把話說死啊。</p>
-<p>總之，明天(3/11)正好是A研究所的二次報到（第一次是去年剛錄取要報到）。<br>至於B研究所呢～ 嗯看起來已經快被我放生Play呢 QQ</p>
-<hr>
-<p>再來就是！ 我換手機惹（撒花<br>不過換機的理由很薄弱… 就是家母用的Sony Z1(2013)要淘汰了。<br>我就見縫插針跟著提想換手機，現在想想真的是不知道哪來的勇氣www<br>（恰好我玩手遊常常過熱到閃退，當然我沒講出來 XD）</p>
-<p>至於挑手機呢… 嗯 我這人真的是平常不太關心手機動態。<br>等到要換了才開始每天追PTT的MobileComm的推文 (#</p>
-<p>在預算10k~15k(我自己有貼小錢ww) 的情況下。<br>最後是挑了高通845的 <strong>Zenfone 5Z 6G/128G (ZS620KL)</strong><br>個人自認需求不算高，平常也就滑滑fb、line、ptt，甚至連手遊都玩的很休閒www<br>（之前吃晚餐被抓包上次登入遊戲是13hr前，意思是早上滑完就沒開過= =+）</p>
-<p>沒想過身為索粉的我會有脫離SONY的一天 XD<br>畢竟前幾隻手機都是直接從SONY的機種挑… 但這次X1真的好長。<br>甚至還被戲稱遙控器www 真的怕口袋不夠深塞不下（Ｏ</p>
-<p>以往換手機我都還會在巴哈小屋po開箱文<br>至於5Z的開箱嘛，看起來好像沒什麼好開，反倒是Android 9要適應一陣子。<br>（之前的XZ只能更新到Android 8.0.0）</p>
-<p>就醬子吧，雖然很想把研究所心得貼出來。<br>無奈到現在我仍然還在猶豫，很討厭自己選擇障礙的個性QQ<br>可能會拆成兩篇，下週先放個&lt;上篇&gt;好了~~ （希望懶癌不要發作</p>
+<p>嘛最近我剛忙完IOI Camp，緊接著就是過年，所以實在很難找到寬裕的時間慢慢打文章，所以估計還會再拖一點時間才會生出來。<br>另外就是在美濃過年無法期待網路多好，自己手機能上網就該偷笑，0.21Mbps的網速有夠殘念QQ  </p>
+<p>總之這篇就是生存報告，順便推推預覽圖的動畫⟪輝夜姬想讓人告白⟫，看著會長和副會長鬥智真的閃(給你們錢拜託快點告白)，還有另外一位社會毒瘤的書記真的快笑死wwwwww</p>
+<p>剩下目前還在草稿階段的文章有…  </p>
+<ol>
+<li>研所推甄: 某些原因導致必須延後丟出來= =  </li>
+<li>IOI Camp 2019: 積了五天實在很多心得要濃縮一下#  </li>
+<li>NUKCPC: 一篇關於高大競程的文章，原定是IOI camp前要丟出來，結果就是因為某研所害我行程全部都卡住 嗚嗚QQ  </li>
+</ol>
+<p>大概就醬。<br>我還在摸索寫文章的風格，畢竟用Facebook久了在段落的排版上還是習慣一句話直接換行，看來要想個方法調整一下~ 努力還債囉ww</p>
 ]]></content>
       <categories>
-        <category>敗家開箱</category>
+        <category>生活札記</category>
       </categories>
-      <tags>
-        <tag>手機</tag>
-        <tag>Asus 5Z</tag>
-      </tags>
   </entry>
   <entry>
     <title>【週記】開學週漫談</title>
@@ -119,6 +112,34 @@
       </categories>
   </entry>
   <entry>
+    <title>【週記】咦？好像踢到奇怪的盒子...</title>
+    <url>/2019/139b13e41c3f/</url>
+    <content><![CDATA[<p><img src="https://imgur.com/ODLyNTq.jpg"></p>
+<p>好像很久沒更新部落格www （跪<br>一方面是沒什麼趣事可以分享，另一方面是懶癌發作 XD<br>只好浮上來換口氣說說最近的事囉~</p>
+<p>另外用hexo框架更新網站偶爾會遇到<code>command not found: hexo</code><br>不得不說有點頭痛呢… 最近終於查清是<strong>Node.js</strong>的更新問題。<br>果然對於自己不熟悉的環境要找問題就不太容易呢~</p>
+<p>請容許我把解決方法放在這裡（其實就只是更新node版本<br><code>sudo npm install hexo-cli -g</code></p>
+<a id="more"></a>
+
+<p>首先。</p>
+<p>好像還是不少朋友很關心我未來研究所的去向www<br>但我只能說… 現在手上握著兩間的名額，沒辦法把話說死啊。</p>
+<p>總之，明天(3/11)正好是A研究所的二次報到（第一次是去年剛錄取要報到）。<br>至於B研究所呢～ 嗯看起來已經快被我放生Play呢 QQ</p>
+<hr>
+<p>再來就是！ 我換手機惹（撒花<br>不過換機的理由很薄弱… 就是家母用的Sony Z1(2013)要淘汰了。<br>我就見縫插針跟著提想換手機，現在想想真的是不知道哪來的勇氣www<br>（恰好我玩手遊常常過熱到閃退，當然我沒講出來 XD）</p>
+<p>至於挑手機呢… 嗯 我這人真的是平常不太關心手機動態。<br>等到要換了才開始每天追PTT的MobileComm的推文 (#</p>
+<p>在預算10k~15k(我自己有貼小錢ww) 的情況下。<br>最後是挑了高通845的 <strong>Zenfone 5Z 6G/128G (ZS620KL)</strong><br>個人自認需求不算高，平常也就滑滑fb、line、ptt，甚至連手遊都玩的很休閒www<br>（之前吃晚餐被抓包上次登入遊戲是13hr前，意思是早上滑完就沒開過= =+）</p>
+<p>沒想過身為索粉的我會有脫離SONY的一天 XD<br>畢竟前幾隻手機都是直接從SONY的機種挑… 但這次X1真的好長。<br>甚至還被戲稱遙控器www 真的怕口袋不夠深塞不下（Ｏ</p>
+<p>以往換手機我都還會在巴哈小屋po開箱文<br>至於5Z的開箱嘛，看起來好像沒什麼好開，反倒是Android 9要適應一陣子。<br>（之前的XZ只能更新到Android 8.0.0）</p>
+<p>就醬子吧，雖然很想把研究所心得貼出來。<br>無奈到現在我仍然還在猶豫，很討厭自己選擇障礙的個性QQ<br>可能會拆成兩篇，下週先放個&lt;上篇&gt;好了~~ （希望懶癌不要發作</p>
+]]></content>
+      <categories>
+        <category>敗家開箱</category>
+      </categories>
+      <tags>
+        <tag>手機</tag>
+        <tag>Asus 5Z</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【週記】ITSA桂冠賽 居...居然收掉了QQQ</title>
     <url>/2019/afe31856848d/</url>
     <content><![CDATA[<p><img src="https://imgur.com/jk3yUSX.jpg"></p>
@@ -140,27 +161,6 @@
         <tag>ITSA桂冠賽</tag>
         <tag>Programming Contest</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>【週記】過新年就是要欠債對唄！</title>
-    <url>/2019/2297743e2376/</url>
-    <content><![CDATA[<p><img src="https://imgur.com/DbAEQEE.jpg"></p>
-<p>嗯對，才剛過年就欠債了。<br>不過我這裡指的是部落格文章 XD<br>雖然還在實驗階段啦，但原本說好一週一篇，結果沒多久跳票好像不太優=///=</p>
-<a id="more"></a>
-
-<p>嘛最近我剛忙完IOI Camp，緊接著就是過年，所以實在很難找到寬裕的時間慢慢打文章，所以估計還會再拖一點時間才會生出來。<br>另外就是在美濃過年無法期待網路多好，自己手機能上網就該偷笑，0.21Mbps的網速有夠殘念QQ  </p>
-<p>總之這篇就是生存報告，順便推推預覽圖的動畫⟪輝夜姬想讓人告白⟫，看著會長和副會長鬥智真的閃(給你們錢拜託快點告白)，還有另外一位社會毒瘤的書記真的快笑死wwwwww</p>
-<p>剩下目前還在草稿階段的文章有…  </p>
-<ol>
-<li>研所推甄: 某些原因導致必須延後丟出來= =  </li>
-<li>IOI Camp 2019: 積了五天實在很多心得要濃縮一下#  </li>
-<li>NUKCPC: 一篇關於高大競程的文章，原定是IOI camp前要丟出來，結果就是因為某研所害我行程全部都卡住 嗚嗚QQ  </li>
-</ol>
-<p>大概就醬。<br>我還在摸索寫文章的風格，畢竟用Facebook久了在段落的排版上還是習慣一句話直接換行，看來要想個方法調整一下~ 努力還債囉ww</p>
-]]></content>
-      <categories>
-        <category>生活札記</category>
-      </categories>
   </entry>
   <entry>
     <title>【活動】Codeforces April Fools Day Contest 2019</title>
@@ -501,38 +501,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【閒聊】2019日本行... 難產QQ</title>
-    <url>/2019/bedc4d60dfb0/</url>
-    <content><![CDATA[<p>什麼？你又跑去日本了！？</p>
-<p><img src="https://i.imgur.com/7atqCfF.png"></p>
-<p>嗯、對。</p>
-<p>2018年初時有被朋友揪去關西玩，而這回莫名其妙跑得特別遠XD</p>
- <a id="more"></a>
-
-<p>&nbsp;</p>
-<p>說是這樣說啦… 但這一去就將近兩週。</p>
-<p>雖然現在是大四下，但畢竟還是有學分壓力不能輕易鬆懈QQ</p>
-<p>結果，請假的這兩週很多作業… 很多考試… （暈</p>
-<p>&nbsp;</p>
-<p>嘛、既然出國玩就必須付出代價。</p>
-<p>所以回國後過了一週我依然還在還債（默</p>
-<p>&nbsp;</p>
-<p>原以為日本遊記會因為本人的懶癌發作拖很久</p>
-<p>結果反而是考試作業太多補到沒時間碰QQ</p>
-<p>估計下週才能慢慢騰出時間敲敲鍵盤打草稿~</p>
-<p>順帶一提… 這次大約拍了2000多張照片（眼神死</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>不過這部落格好像也沒多少人看，慢慢來w（你等等</p>
-]]></content>
-      <categories>
-        <category>旅遊日誌</category>
-      </categories>
-      <tags>
-        <tag>日本行</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【活動】畢業典禮兼...橋頭遊記!?</title>
     <url>/2019/293a0aba02af/</url>
     <content><![CDATA[<p><img src="https://imgur.com/1wvOaDF.jpg"></p>
@@ -588,6 +556,38 @@
       <tags>
         <tag>畢業典禮</tag>
         <tag>橋頭</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【閒聊】2019日本行... 難產QQ</title>
+    <url>/2019/bedc4d60dfb0/</url>
+    <content><![CDATA[<p>什麼？你又跑去日本了！？</p>
+<p><img src="https://i.imgur.com/7atqCfF.png"></p>
+<p>嗯、對。</p>
+<p>2018年初時有被朋友揪去關西玩，而這回莫名其妙跑得特別遠XD</p>
+ <a id="more"></a>
+
+<p>&nbsp;</p>
+<p>說是這樣說啦… 但這一去就將近兩週。</p>
+<p>雖然現在是大四下，但畢竟還是有學分壓力不能輕易鬆懈QQ</p>
+<p>結果，請假的這兩週很多作業… 很多考試… （暈</p>
+<p>&nbsp;</p>
+<p>嘛、既然出國玩就必須付出代價。</p>
+<p>所以回國後過了一週我依然還在還債（默</p>
+<p>&nbsp;</p>
+<p>原以為日本遊記會因為本人的懶癌發作拖很久</p>
+<p>結果反而是考試作業太多補到沒時間碰QQ</p>
+<p>估計下週才能慢慢騰出時間敲敲鍵盤打草稿~</p>
+<p>順帶一提… 這次大約拍了2000多張照片（眼神死</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>不過這部落格好像也沒多少人看，慢慢來w（你等等</p>
+]]></content>
+      <categories>
+        <category>旅遊日誌</category>
+      </categories>
+      <tags>
+        <tag>日本行</tag>
       </tags>
   </entry>
   <entry>
@@ -1476,6 +1476,123 @@ Pwn大概就是這麼一回事了~
       </tags>
   </entry>
   <entry>
+    <title>Summer Conf. に行きましょう！ PART 2</title>
+    <url>/2020/fc546b52265a/</url>
+    <content><![CDATA[<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1619887682/blog-posts/2020-08/19-cover2.webp" alt=" "></p>
+<a id="more"></a>
+
+<h3 id="SITCON-學生計算機年會-8-8-中研院人文社科館"><a href="#SITCON-學生計算機年會-8-8-中研院人文社科館" class="headerlink" title="SITCON 學生計算機年會 (8/8) @中研院人文社科館"></a>SITCON 學生計算機年會 (8/8) @中研院人文社科館</h3><p><strong>AIS3</strong> 結束隔天馬上就回高雄開會，隔了一週再度回到台北，有夠忙#<br><strong>SITCON</strong> 是我在大學期間蠻常聽到的Conf. ，無奈我大二轉學跑到NUK後比較沒有契機北上參加，今年由於疫情延到暑假（歷年都辦在三月），配合下一個<strong>CYBERSEC</strong>活動，當然是參加啦！ 也感謝社群朋友的讓票，原本沒搶到票想說到時候再用小額贊助$1000的方式拿票，還順便幫<strong>翔君</strong>撿了一張（笑）</p>
+<p><a href="https://www.flickr.com/photos/sitcon/50258126176/in/album-72157715603590802/?fbclid=IwAR05p6AZvcP_lJV2bbibBLXEqtbycMxuH4p5cOg6wJ3qTCMQz9nWEKsdqe4"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-1.webp"></a></p>
+<p>然後，8/8 當天我睡過頭了XDDDD<br>因為前一天深夜才到台北，家人早上又是6點出門，所以我5:30起床和他們討論晚上的父親節行程，然後睡回籠覺Zzzz 後來發現遲到直接搭小黃花了$350有夠散財，還錯過開幕式 可惡qq 不過事後補看開場動畫真的用心，感覺很適合拿來搭音Game的PV XD<br>不得不說很佩服這種全部由學生自發起扛起的Conf. ，場面上也看到很多在資訊圈的熟面孔。</p>
+<p>活動主要分兩個部分，分別是大地遊戲 &amp; 議程。<br>先說說大地遊戲好了，簡單講就是透過他們的app和攤位互動，達成賓果連線可以換指定小物。但是由於議程之間的休息時間很短，所以我有放掉幾場花時間和攤位交流，像是<strong>AMD</strong>飲料店 (??) 還有<strong>奧義</strong>冰淇淋公司 (???) XDDDDD  </p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-2.webp" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-3.webp" alt=" "></div></div></div></div>
+
+<p>題外話 <a href="https://www.flickr.com/photos/sitcon/50258130671/in/album-72157715603590802/?fbclid=IwAR2JXBNnVeNYmWfefPT5jJJZcBnw_jA8byXbESAwLPStVCKRDklF5sxTbUw">奧義冰淇淋</a> 這張構圖我很喜歡，官方攝影組好強w</p>
+<p>不過下午全部連線才發現獎品都發完了，嗚嗚花太多時間聽議程了(雖然也不是壞事)，所以只有拿<strong>愛情彩</strong>的彩券(但最後也沒中獎)，另外由於大家都連會場的Wi-Fi，結果有些攤位需要Facebook按讚分享的活動很容易被ban掉，我猜是Session不夠用爆掉了嘖嘖。</p>
+<p>再來說說議程，既然是以學生為本的，原本以為應該不會太難懂… 不 我錯了，雖然沒有到完全聽不懂的慘，但也足夠讓我感受到同樣身為學生但技術上的距離感。 簡單介紹幾個有趣的議題：</p>
+<ul>
+<li>「<a href="https://www.youtu.be/1gFBx16AlMc">第一次做密室逃脫就上手</a>」結合IoT、AI、AR架起來的密室逃脫，整場描述如何用從0開始把每個機關慢慢做起來，其中有一項是很有科技感的儀式台然後用雷射造型掃描進行比對，背後原理是RFID辨識，然後講師說對外行人可以騙說是AI辨識真的快笑死。</li>
+<li>「<a href="https://youtu.be/TkC19ukBBxk">Playing Win32 Like a K!NG ;)</a>」小馬adr1講的是<code>UAC Bypass</code>，讓駭客能夠騙過系統拿到高權限，還有系統程式的<code>DLL Hijacking</code>、<code>Path Normalization</code>，附帶幾個小Demo… 說真的能這麼容易被繞過聽起來也蠻可怕的= w =</li>
+<li>「<a href="https://youtu.be/C94DAdAlUZ8">自己的機房自己蓋！</a>」整理機房的心得，看得出不只是硬體上的採購，系統方面的佈局也需要時間下功夫，另外就是人脈很重要XDDD 有免費的資源可以拿最棒惹嘻嘻。</li>
+<li>「<a href="https://youtu.be/NGqXSCFvZ3M">我只是個學生，架個網站不想花錢</a>」原本是衝著Github Page的其他玩法，不過這場講的是架個縮網址網站並透過各種免費資源搭建，像是拿Google App Script作為資料庫進行轉址，一路聽下來感覺我好像不太會用到XD</li>
+<li>「<a href="https://youtu.be/49N0uO86oX0">就算是新手，有愛就沒把專案做出來，對吧</a>」記得是談學生用業界的分工方式實作專案，包含工程師、設計師、產品經理等等的經驗，不過老實說這場只是被我在R0休息順便聽的（抹臉）</li>
+<li>「<a href="https://youtu.be/aomXTCTlIW4">CDN 網站攻擊 - 這次換駭客當鬼來抓你了</a>」<br>由Mico介紹，備受好評的一場，也是因為這場讓我對<code>CDN</code>有新的認識，原來駭客還能利用CDN繞過WAF，或是間接撈到一些本來應該藏起來的資訊，如果有時間的朋友蠻推薦去看ㄉ，整場聽完發現一堆domain knowledge要補QQ</li>
+</ul>
+<p>噢對了，還有Lighting Talk，老實說聽了三年MOPCON的經驗，五分鐘好像不太容易被拔線XD 大家都很會抓時間，這次有場真的吸引到我… 嗯更正，是吸引到全場目光，在R0廳的大銀幕玩雲端遊戲真的有夠狂XDDDD</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-4.webp" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-5.webp" alt=" "></div></div></div></div>
+
+<p>最後還偷偷在塗鴉牆上幫MacacaHub留名ww<br>總之，整體下來玩得很開心，第一次參加也趁機認識些大神，希望有機會自己能練到和他們差不多的水平&gt;&lt;</p>
+<h3 id="CYBERSEC-臺灣資安大會-8-11-8-12-南港展覽館二館"><a href="#CYBERSEC-臺灣資安大會-8-11-8-12-南港展覽館二館" class="headerlink" title="CYBERSEC 臺灣資安大會 (8/11 - 8/12) @南港展覽館二館"></a>CYBERSEC 臺灣資安大會 (8/11 - 8/12) @南港展覽館二館</h3><p>同樣因疫情影響延到暑假為期兩天的 <strong>CYBERSEC</strong>，由於和 <strong>SITCON</strong> 事隔兩天。加上 Lab 有派人出差，所以我就把行程排在一起了~<br>這場相對前面幾次 Conference，定位上比較面<strong>企業向</strong>，因此從報名到問卷調查常常會問到公司營運相關事項，當然這方面我都拿 Lab 或是 MacacaHub 來填（笑）</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-1.webp" alt=" "></p>
+<p>整體活動分成 展覽 &amp; 議程 &amp; CyberLAB。</p>
+<p>先來談談 CyberLAB實戰攻防演練，不同於議程的人數，這個比較偏向單場 20 人的小班制教學（一天四場），Day 1 我經過看到那個報名排隊人潮直接打消念頭XDDD </p>
+<p>展覽方面和資訊博覽會很像，簡單講就是企業擺攤宣傳各種研發成果，其中不乏看得到一些眼熟的企業，像是趨勢科技、Microsoft、奧義智慧、Devcore、中華資安國際 之類ㄉ，而主辦官方加入了大地遊戲的要素，透過和攤位的互動完成對應的條件拿到不同的贈品，先不提光方的贈品很快就被搶完，反倒是每個攤位送的贈品也毫不手軟，看到不少人提的大包小包 …看來大家都是窮到來這裡搶資源 <del>絕對不是什麼議程蟑螂</del> 。</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-2.webp" alt=" "></p>
+<p>透過這場活動我也才意識到其實作純資安的公司還不少，雖然探聽了幾間好像大多都是以接case的形式居多，說真的資安這行真的出事才會重視蠻尷尬的QQ 不過從一些議程已經有些單位在推資安框架，整合一些SOP做事前防禦，看起來應該還是有蠻大的發展空間。</p>
+<p>攤位中印象最深的果然還是<strong>奧義智慧</strong>吧，不愧是新創的科技公司，攤位活動展示VR模擬滲透內網、「Cyber IQ數位帝國保衛戰」答題遊戲、資安小學堂問答遊戲、結合MITRE ATT&amp;CK知識的Cyber War卡牌類桌遊，何況他們還吸收了許多CTF圈的人才，能深得我們年輕資訊人的歡迎也是預期之中… 更不用說連衣服的設計上各種致敬新世紀福音戰士 太酷了啦XD</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-3.webp" alt=" "></p>
+<p>議程方面，原本想為碩論找些「雲端」議題的議程，可惜都沒聽到什麼有趣的技術分享，反而是圍繞在「人為疏失」如何管理權限這一類偏企業向基本觀念的話題，或是各種工商，有點可惜Orz。另外也照慣例跑去聽了小馬的場，只能說那個場地配置…有點酷？聽說是上一場議程時主投影機出問題，所以直接整個會場座位轉90度用副投影幕，導致講者台在觀眾後面，然後小馬跟觀眾同台XDDDDD</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-4.webp" alt=" "></p>
+<p>在 Day 1 結束我還帶著 Lab 同學跑去<strong>天瓏書店</strong>朝聖，資訊方面藏書多到很好混時間的好地方：）<br>整體下來CYBERSEC算是個內容蠻豐富的場次，主要是投入的廠商夠多所呈現的場面夠大，而且也是這個暑假拿最多免費周邊的一次（笑）</p>
+]]></content>
+      <categories>
+        <category>心得分享</category>
+      </categories>
+      <tags>
+        <tag>SITCON</tag>
+        <tag>CYBERSEC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blog Note 0x01</title>
+    <url>/2020/906e3d1c7e85/</url>
+    <content><![CDATA[<p>啊勒，這系列怎麼會到現在才是第一篇呢 ovo??</p>
+<a id="more"></a>
+
+<p>有鑒於 Github Page 的設計是在主機端撰文，完成後推送到 Github 託管，因此部落格本體是以主機端的版本為主。</p>
+<p>剛好在 2020 這一年的暑假我換上了 MBP2020，因此也要把整個 Hexo 進行搬家，考慮到過去太多小實驗導致部落格的後端(?)其實有很多沒有在使用的功能(俗稱 <strong>環境髒亂</strong>)，想藉著這次的搬家，順便把大部分的套件甚至是 Hexo 和 NexT 主題進行更新，也因此發現了不少有趣且便民的功能。</p>
+<p>更新後的 Hexo 相關套件版本:</p>
+<figure class="highlight bash"><figcaption><span>$ hexo -v</span></figcaption><table><tr><td class="code"><pre><span class="line">hexo: 5.0.2</span><br><span class="line">hexo-cli: 4.2.0</span><br><span class="line">os: Darwin 19.6.0 darwin x64</span><br><span class="line">node: 12.18.3</span><br><span class="line">v8: 7.8.279.23-node.39</span><br><span class="line">uv: 1.38.0</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">brotli: 1.0.7</span><br><span class="line">ares: 1.16.0</span><br><span class="line">modules: 72</span><br><span class="line">nghttp2: 1.41.0</span><br><span class="line">napi: 6</span><br><span class="line">llhttp: 2.0.4</span><br><span class="line">http_parser: 2.9.3</span><br><span class="line">openssl: 1.1.1g</span><br><span class="line">cldr: 37.0</span><br><span class="line">icu: 67.1</span><br><span class="line">tz: 2019c</span><br><span class="line">unicode: 13.0</span><br></pre></td></tr></table></figure>
+
+
+<p>更新後的 npm 相關套件版本:</p>
+<figure class="highlight bash"><figcaption><span>$ npm version</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&#x27;hexo-site&#x27;</span>: <span class="string">&#x27;0.0.0&#x27;</span>,</span><br><span class="line">  npm: <span class="string">&#x27;6.14.6&#x27;</span>,</span><br><span class="line">  ares: <span class="string">&#x27;1.16.0&#x27;</span>,</span><br><span class="line">  brotli: <span class="string">&#x27;1.0.7&#x27;</span>,</span><br><span class="line">  cldr: <span class="string">&#x27;37.0&#x27;</span>,</span><br><span class="line">  http_parser: <span class="string">&#x27;2.9.3&#x27;</span>,</span><br><span class="line">  icu: <span class="string">&#x27;67.1&#x27;</span>,</span><br><span class="line">  llhttp: <span class="string">&#x27;2.0.4&#x27;</span>,</span><br><span class="line">  modules: <span class="string">&#x27;72&#x27;</span>,</span><br><span class="line">  napi: <span class="string">&#x27;6&#x27;</span>,</span><br><span class="line">  nghttp2: <span class="string">&#x27;1.41.0&#x27;</span>,</span><br><span class="line">  node: <span class="string">&#x27;12.18.3&#x27;</span>,</span><br><span class="line">  openssl: <span class="string">&#x27;1.1.1g&#x27;</span>,</span><br><span class="line">  tz: <span class="string">&#x27;2019c&#x27;</span>,</span><br><span class="line">  unicode: <span class="string">&#x27;13.0&#x27;</span>,</span><br><span class="line">  uv: <span class="string">&#x27;1.38.0&#x27;</span>,</span><br><span class="line">  v8: <span class="string">&#x27;7.8.279.23-node.39&#x27;</span>,</span><br><span class="line">  zlib: <span class="string">&#x27;1.2.11&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<!--(TODO: 用舊MBP查一下原本的hexo和next版本)-->
+<ul>
+<li>hexo NexT themes version: 7.8.0<br><a href="https://github.com/theme-next/hexo-theme-next/releases/tag/v7.8.0">https://github.com/theme-next/hexo-theme-next/releases/tag/v7.8.0</a></li>
+</ul>
+<ul>
+<li>解決 Node.js v14 版本會遇到相依套件跳警告的問題，這部分我直接降版處理 =a=<figure class="highlight bash"><figcaption><span>$ node -v</span></figcaption><table><tr><td class="code"><pre><span class="line">v12.18.3</span><br></pre></td></tr></table></figure>
+如果不想降版可以參考這篇 <a href="https://www.haoyizebo.com/posts/710984d0/">https://www.haoyizebo.com/posts/710984d0/</a></li>
+</ul>
+<ul>
+<li>NexT 主題升到 v6 有很多網站配置要改QQ<br><a href="https://sevencho.github.io/archives/14534beb.html">https://sevencho.github.io/archives/14534beb.html</a></li>
+</ul>
+<ul>
+<li><p>NexT 內建 Mathjax，可以直接從<code>_config.yml</code>設定啟用</p>
+</li>
+<li><p>NexT 解決 #more 從頭開始閱讀(scroll_to_more)<br><a href="https://blog.csdn.net/weizhixiang/article/details/105112467">https://blog.csdn.net/weizhixiang/article/details/105112467</a></p>
+</li>
+<li><p>NexT 的 note 標籤設定 (深色模式下字體顏色不太明顯QQ)</p>
+<div class="note default">
+            <p>default note</p>
+          </div>
+<div class="note primary">
+            <p>primary note</p>
+          </div>
+<div class="note success">
+            <p>success note</p>
+          </div>
+<div class="note info">
+            <p>info note</p>
+          </div>
+<div class="note warning">
+            <p>warning note</p>
+          </div>
+<div class="note danger">
+            <p>danger note</p>
+          </div>
+<figure class="highlight text"><figcaption><span>code</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% note default %&#125;</span><br><span class="line">default note</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line">primary note</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line">success note</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line">info note</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line">warning note</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line">danger note</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>source目錄多了一項<code>_data</code>可以塞自定義的code</p>
+<ul>
+<li>例如這個部落格每篇文章結尾的自定義圖片可以參考<br><a href="https://www.sunhong.vip/2019/03/08/Hexo-Next-%E5%9C%A8%E6%96%87%E7%AB%A0%E6%9C%AB%E5%B0%BE%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%87%E5%AD%97/">https://www.sunhong.vip/2019/03/08/Hexo-Next-在文章末尾添加自定义文字/</a><figure class="highlight text"><figcaption><span>_data/post-body-end.swig</span></figcaption><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        &lt;div style=&quot;width: 168px; margin: auto&quot;&gt;&lt;img src=&quot;/imges/end.png&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;%</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>最後就是一些雜項設定，我參考了很多內容<br><a href="https://ed521.github.io/2020/05/hexo-next-upgrade/">[教學] Hexo 部落格升級、Next 主題升級、客製功能及樣板編輯全記錄</a></p>
+</li>
+</ul>
+<p>–</p>
+<h3 id="一些後記"><a href="#一些後記" class="headerlink" title="一些後記"></a>一些後記</h3><p>把 Hexo 換新環境後用 NexT v7.8 發現很多功能被包含在設定檔中，因此那個 <code>_config.xml</code> 似乎又比之前更好用…但也更肥了XDDD 而且不用再安裝很多 npm 套件，想到在上一台電腦很多功能的起手式都是 npm install，感覺後台從空間的使用上應該少了許多，但是網站載入的速度印象中會被 Node.js 拖慢，可能就要等之後有空再研究了QQ</p>
+]]></content>
+      <categories>
+        <category>部落格筆記</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Summer Conf. に行きましょう！ PART 1</title>
     <url>/2020/389e2f1fea7e/</url>
     <content><![CDATA[<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1619884192/blog-posts/2020-08/19-cover1.webp" alt=" "></p>
@@ -1533,52 +1650,92 @@ Pwn大概就是這麼一回事了~
       </tags>
   </entry>
   <entry>
-    <title>Summer Conf. に行きましょう！ PART 2</title>
-    <url>/2020/fc546b52265a/</url>
-    <content><![CDATA[<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1619887682/blog-posts/2020-08/19-cover2.webp" alt=" "></p>
+    <title>Summer Conf. に行きましょう！ PART 3</title>
+    <url>/2020/b9e09cdc1485/</url>
+    <content><![CDATA[<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1620004322/blog-posts/2020-08/19-cover3.webp" alt=" "></p>
 <a id="more"></a>
 
-<h3 id="SITCON-學生計算機年會-8-8-中研院人文社科館"><a href="#SITCON-學生計算機年會-8-8-中研院人文社科館" class="headerlink" title="SITCON 學生計算機年會 (8/8) @中研院人文社科館"></a>SITCON 學生計算機年會 (8/8) @中研院人文社科館</h3><p><strong>AIS3</strong> 結束隔天馬上就回高雄開會，隔了一週再度回到台北，有夠忙#<br><strong>SITCON</strong> 是我在大學期間蠻常聽到的Conf. ，無奈我大二轉學跑到NUK後比較沒有契機北上參加，今年由於疫情延到暑假（歷年都辦在三月），配合下一個<strong>CYBERSEC</strong>活動，當然是參加啦！ 也感謝社群朋友的讓票，原本沒搶到票想說到時候再用小額贊助$1000的方式拿票，還順便幫<strong>翔君</strong>撿了一張（笑）</p>
-<p><a href="https://www.flickr.com/photos/sitcon/50258126176/in/album-72157715603590802/?fbclid=IwAR05p6AZvcP_lJV2bbibBLXEqtbycMxuH4p5cOg6wJ3qTCMQz9nWEKsdqe4"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-1.webp"></a></p>
-<p>然後，8/8 當天我睡過頭了XDDDD<br>因為前一天深夜才到台北，家人早上又是6點出門，所以我5:30起床和他們討論晚上的父親節行程，然後睡回籠覺Zzzz 後來發現遲到直接搭小黃花了$350有夠散財，還錯過開幕式 可惡qq 不過事後補看開場動畫真的用心，感覺很適合拿來搭音Game的PV XD<br>不得不說很佩服這種全部由學生自發起扛起的Conf. ，場面上也看到很多在資訊圈的熟面孔。</p>
-<p>活動主要分兩個部分，分別是大地遊戲 &amp; 議程。<br>先說說大地遊戲好了，簡單講就是透過他們的app和攤位互動，達成賓果連線可以換指定小物。但是由於議程之間的休息時間很短，所以我有放掉幾場花時間和攤位交流，像是<strong>AMD</strong>飲料店 (??) 還有<strong>奧義</strong>冰淇淋公司 (???) XDDDDD  </p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-2.webp" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-3.webp" alt=" "></div></div></div></div>
+<p>事隔一個月後還有另外兩場資安相關的Conference，雖然時間上不算是<strong>Summer Conf</strong>.，但我也沒打算再開新一篇介紹，所以就繼續在這篇往下更新了 XD</p>
+<h3 id="CISC-全國資訊安全會議-9-1-9-4-NSYSU"><a href="#CISC-全國資訊安全會議-9-1-9-4-NSYSU" class="headerlink" title="CISC 全國資訊安全會議 (9/1 - 9/4) @NSYSU"></a>CISC 全國資訊安全會議 (9/1 - 9/4) @NSYSU</h3><p>原本也是預計辦在五月的會議，偉哉武漢肺炎各種大延期，這場的定位對我來說比較特別，身在主辦方校又是以工人的身份下場幫忙。<br>和規模上和前幾場相比贊助商少了許多，整體會議稍稍陽春一些，今年是第卅屆雖然我不確定之前是否都差不多，但各位工人們都很認真幫忙這倒是真的 :3</p>
+<p>會議時間上長達四天，但實際上議程只有中間 Day 2, Day 3 兩天。<br>Day 1 上午場佈、下午由我們<strong>MacacaHub</strong>以「基礎網頁安全演練」作為CISC開場打頭陣（現在想想我還是不解為何要開 Day 1 的行程 …）<br>Day 4 是活動參訪，分別為爬柴山<del>給猴子看</del>，還有海域純玩水，但由於當時已經有下雨預告的消息，所以取消了0人報名的爬山活動（!）。</p>
+<p>由於 Day 1 的資安演練是額外活動讓會眾自由報名參加，因此原本展哥設定的目標學生是以大學生/碩士生為主，強調<font color=red>基礎</font>網頁安全演練，結果從後台的表單上看到報名會眾都至少都是碩士生，甚至還有幾位是主管等級讓我們大感意外XD 不過最後證實參與的會眾確實都不是這方面專業的，讓我們連原本預期的進度(<code>XSS</code>)都沒時間細講只能匆匆帶過，就這樣<del>抱著展哥的腿</del>平安度過 Day 1。</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-1.webp" alt=" "></p>
+<blockquote>
+<p><del>發現野生的奧義間諜</del></p>
+</blockquote>
+<p>Day 2 / Day 3 我的主要工作是和Lab學弟搭擋負責 Session A 論文發表的場控/計時/拍照 以及協助主持人和A1場評審，所以很難花心思認真聽報告QQ 何況我被分配到的 Session 比其他場次的組別硬是多了一組，加上台下Q&amp;A實在不受控，想當然爾時間上爆炸不可避ㄏㄏ，工人群組內幾乎只有我回報會晚結束，只能說當個時間管理大師真不容易(X) 老實說要用10分鐘講完一篇研究真的很不夠用，何況包含QA又要把時間壓得更緊，辛苦各位講者了。</p>
+<p>值得一提的還有 Day 2 晚宴在西子灣沙灘會館，雖然從學長的反應看得出應該是已經吃到習以為常了，不過我們也是喝了不少酒（笑）</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1618836340/blog-posts/2020-08/19-cisc-2.webp" alt=" "></p>
+<p>另外，Day 3 上午有資管系主辦的 CISC CTF，所以我們<strong>MacacaHub</strong>就挽起袖子下場一起玩XDDD 整體難度中間偏易，主要有幾題Pwn直接被我忽略XD 其中一題原本要考 <a href="https://www.ithome.com.tw/news/135665">CVE-2019-18634</a>，結果因為所有參賽者共用主機，所以當我Google完CVE後就直接在主機內下<code>history</code>指令看到前一位參賽者 git pull 下來的 PoC，直接被我拿來提權拿Flag XDDDDD<br>還有連續兩題的SQLi，結果同樣<code>--</code>的註解在 SQLi-1 可繞過，但在 SQLi-2 居然沒辦法 = =<br>原本以為是 SQLi-2 的空白繞過沒成功（用<code>/**/</code>），結果賽後討論才發現把註解改成<code>//</code>就拿到flag了…</p>
+<p>原本我一直都穩定位居第四名，最後40多分鐘我集中在分析 Windows 的 event log，雖然用事件分析工具花了不少時間把 Powershell 的 command 還原出來但沒有成功執行QQ 賽後聽到展哥用 strings 就把 command dump 出來也沒成功（但至少不用像我還要慢慢還原XD），等回過神結束時才發現掉到第五名，和前一名差不到 50 分… <strong>唔嗯，我沒有寫Welcome(50)</strong> 笑死XD 反正最後 4,5,6 名都並列<strong>展露頭角獎</strong>也還好就是~</p>
+<blockquote>
+<p>順帶一提前三名: CSY、展哥、Mumu，全部都是南部資安圈熟面孔自己人 ㄏㄏ</p>
+</blockquote>
+<p>Day 4 本來應該是安排爬山和海域玩水，由於 Day 2 取消了爬山的部分，海域的部分礙於不能取消(?)，所以我們很多工人都被抓下海(??)強制玩水，甚至我明明沒填表單卻還是被秘書姊姊從後台報名XDDD 剛好拿CTF撿到的500摳家樂福禮券去買了件泳褲:/</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-3.webp" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-4.webp" alt=" "></div></div></div></div>
 
-<p>題外話 <a href="https://www.flickr.com/photos/sitcon/50258130671/in/album-72157715603590802/?fbclid=IwAR2JXBNnVeNYmWfefPT5jJJZcBnw_jA8byXbESAwLPStVCKRDklF5sxTbUw">奧義冰淇淋</a> 這張構圖我很喜歡，官方攝影組好強w</p>
-<p>不過下午全部連線才發現獎品都發完了，嗚嗚花太多時間聽議程了(雖然也不是壞事)，所以只有拿<strong>愛情彩</strong>的彩券(但最後也沒中獎)，另外由於大家都連會場的Wi-Fi，結果有些攤位需要Facebook按讚分享的活動很容易被ban掉，我猜是Session不夠用爆掉了嘖嘖。</p>
-<p>再來說說議程，既然是以學生為本的，原本以為應該不會太難懂… 不 我錯了，雖然沒有到完全聽不懂的慘，但也足夠讓我感受到同樣身為學生但技術上的距離感。 簡單介紹幾個有趣的議題：</p>
-<ul>
-<li>「<a href="https://www.youtu.be/1gFBx16AlMc">第一次做密室逃脫就上手</a>」結合IoT、AI、AR架起來的密室逃脫，整場描述如何用從0開始把每個機關慢慢做起來，其中有一項是很有科技感的儀式台然後用雷射造型掃描進行比對，背後原理是RFID辨識，然後講師說對外行人可以騙說是AI辨識真的快笑死。</li>
-<li>「<a href="https://youtu.be/TkC19ukBBxk">Playing Win32 Like a K!NG ;)</a>」小馬adr1講的是<code>UAC Bypass</code>，讓駭客能夠騙過系統拿到高權限，還有系統程式的<code>DLL Hijacking</code>、<code>Path Normalization</code>，附帶幾個小Demo… 說真的能這麼容易被繞過聽起來也蠻可怕的= w =</li>
-<li>「<a href="https://youtu.be/C94DAdAlUZ8">自己的機房自己蓋！</a>」整理機房的心得，看得出不只是硬體上的採購，系統方面的佈局也需要時間下功夫，另外就是人脈很重要XDDD 有免費的資源可以拿最棒惹嘻嘻。</li>
-<li>「<a href="https://youtu.be/NGqXSCFvZ3M">我只是個學生，架個網站不想花錢</a>」原本是衝著Github Page的其他玩法，不過這場講的是架個縮網址網站並透過各種免費資源搭建，像是拿Google App Script作為資料庫進行轉址，一路聽下來感覺我好像不太會用到XD</li>
-<li>「<a href="https://youtu.be/49N0uO86oX0">就算是新手，有愛就沒把專案做出來，對吧</a>」記得是談學生用業界的分工方式實作專案，包含工程師、設計師、產品經理等等的經驗，不過老實說這場只是被我在R0休息順便聽的（抹臉）</li>
-<li>「<a href="https://youtu.be/aomXTCTlIW4">CDN 網站攻擊 - 這次換駭客當鬼來抓你了</a>」<br>由Mico介紹，備受好評的一場，也是因為這場讓我對<code>CDN</code>有新的認識，原來駭客還能利用CDN繞過WAF，或是間接撈到一些本來應該藏起來的資訊，如果有時間的朋友蠻推薦去看ㄉ，整場聽完發現一堆domain knowledge要補QQ</li>
-</ul>
-<p>噢對了，還有Lighting Talk，老實說聽了三年MOPCON的經驗，五分鐘好像不太容易被拔線XD 大家都很會抓時間，這次有場真的吸引到我… 嗯更正，是吸引到全場目光，在R0廳的大銀幕玩雲端遊戲真的有夠狂XDDDD</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-4.webp" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-sitcon-5.webp" alt=" "></div></div></div></div>
+<p>當天集合時有幾位會眾出現，可能是誤會有爬山活動、又或是以為只有踩踩海灘，總之最後都回家了:))))<br>剩下我們10來位被迫參加的工人各種玩風帆、獨木舟、趴板其實也蠻愉快的，而且岸邊似乎還有其他旅行團的遊客有點害羞XD<br>最後我真的菜逼八沒做好防曬整個曬到爆XD</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-5.webp" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-6.webp" alt=" "></div></div></div></div>
 
-<p>最後還偷偷在塗鴉牆上幫MacacaHub留名ww<br>總之，整體下來玩得很開心，第一次參加也趁機認識些大神，希望有機會自己能練到和他們差不多的水平&gt;&lt;</p>
-<h3 id="CYBERSEC-臺灣資安大會-8-11-8-12-南港展覽館二館"><a href="#CYBERSEC-臺灣資安大會-8-11-8-12-南港展覽館二館" class="headerlink" title="CYBERSEC 臺灣資安大會 (8/11 - 8/12) @南港展覽館二館"></a>CYBERSEC 臺灣資安大會 (8/11 - 8/12) @南港展覽館二館</h3><p>同樣因疫情影響延到暑假為期兩天的 <strong>CYBERSEC</strong>，由於和 <strong>SITCON</strong> 事隔兩天。加上 Lab 有派人出差，所以我就把行程排在一起了~<br>這場相對前面幾次 Conference，定位上比較面<strong>企業向</strong>，因此從報名到問卷調查常常會問到公司營運相關事項，當然這方面我都拿 Lab 或是 MacacaHub 來填（笑）</p>
-<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-1.webp" alt=" "></p>
-<p>整體活動分成 展覽 &amp; 議程 &amp; CyberLAB。</p>
-<p>先來談談 CyberLAB實戰攻防演練，不同於議程的人數，這個比較偏向單場 20 人的小班制教學（一天四場），Day 1 我經過看到那個報名排隊人潮直接打消念頭XDDD </p>
-<p>展覽方面和資訊博覽會很像，簡單講就是企業擺攤宣傳各種研發成果，其中不乏看得到一些眼熟的企業，像是趨勢科技、Microsoft、奧義智慧、Devcore、中華資安國際 之類ㄉ，而主辦官方加入了大地遊戲的要素，透過和攤位的互動完成對應的條件拿到不同的贈品，先不提光方的贈品很快就被搶完，反倒是每個攤位送的贈品也毫不手軟，看到不少人提的大包小包 …看來大家都是窮到來這裡搶資源 <del>絕對不是什麼議程蟑螂</del> 。</p>
-<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-2.webp" alt=" "></p>
-<p>透過這場活動我也才意識到其實作純資安的公司還不少，雖然探聽了幾間好像大多都是以接case的形式居多，說真的資安這行真的出事才會重視蠻尷尬的QQ 不過從一些議程已經有些單位在推資安框架，整合一些SOP做事前防禦，看起來應該還是有蠻大的發展空間。</p>
-<p>攤位中印象最深的果然還是<strong>奧義智慧</strong>吧，不愧是新創的科技公司，攤位活動展示VR模擬滲透內網、「Cyber IQ數位帝國保衛戰」答題遊戲、資安小學堂問答遊戲、結合MITRE ATT&amp;CK知識的Cyber War卡牌類桌遊，何況他們還吸收了許多CTF圈的人才，能深得我們年輕資訊人的歡迎也是預期之中… 更不用說連衣服的設計上各種致敬新世紀福音戰士 太酷了啦XD</p>
-<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-3.webp" alt=" "></p>
-<p>議程方面，原本想為碩論找些「雲端」議題的議程，可惜都沒聽到什麼有趣的技術分享，反而是圍繞在「人為疏失」如何管理權限這一類偏企業向基本觀念的話題，或是各種工商，有點可惜Orz。另外也照慣例跑去聽了小馬的場，只能說那個場地配置…有點酷？聽說是上一場議程時主投影機出問題，所以直接整個會場座位轉90度用副投影幕，導致講者台在觀眾後面，然後小馬跟觀眾同台XDDDDD</p>
-<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cybersec-4.webp" alt=" "></p>
-<p>在 Day 1 結束我還帶著 Lab 同學跑去<strong>天瓏書店</strong>朝聖，資訊方面藏書多到很好混時間的好地方：）<br>整體下來CYBERSEC算是個內容蠻豐富的場次，主要是投入的廠商夠多所呈現的場面夠大，而且也是這個暑假拿最多免費周邊的一次（笑）</p>
+
+<h3 id="HITCON-臺灣駭客協會-9-11-9-12-中研院人文社科館"><a href="#HITCON-臺灣駭客協會-9-11-9-12-中研院人文社科館" class="headerlink" title="HITCON 臺灣駭客協會 (9/11 - 9/12) @中研院人文社科館"></a>HITCON 臺灣駭客協會 (9/11 - 9/12) @中研院人文社科館</h3><p>終於輪到最後一場 <strong>Summer Conf</strong>.，同時是首次和 Lab 各位一起北上參加活動，某方面來說有點像畢業旅行(?)</p>
+<p>這次同樣因為疫情影響，在票種上分成線上 &amp; 實體。<br>線上的部分是用開源遊戲引擎 minetest 架設的虛擬會場，一整個 minecraft 風格，可惜我這方面並沒有涉獵太深。實體方面就和之前的 Conf. 形式上同樣是以議程為主，只是這場雖然有廠商但沒有大地遊戲，算是省了到處跑的力氣w</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_400/v1618836340/blog-posts/2020-08/19-hitcon-1.webp" alt=" 南港高鐵票 "></p>
+<p>第一次做高鐵到南港終點站還蠻新鮮的… 雖然這裡看起來有點荒涼ㄏ<br>飯店的部分我們統一住洛基大飯店<a href="https://goo.gl/maps/xK7EwTqwyWZ6LsAt9">(Google map)</a>個人覺得蠻舒適的，說實在身為台北人實在很難得住台北飯店 XDDD<br><br>Day 0 我們在 check in 後晚餐吃<strong>YAYOI．やよい軒</strong>，雖然價格上有點小貴但我吃得很開心www 尤其我點的餐點還有附說明書(??)<br>交通方面我傻傻地帶著幾位同學坐捷運一站到南港展覽館等免費接駁車，然後比我們晚出發的同學比我們早到才知道原來飯店前就有公車可以直接到工研院，算是我沒算到的失誤 wwww 可惡</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-2.webp" alt=" YAYOI "></p>
+<p>議程部分的講師已經可以認出很多熟面孔了www<br>寬寬、birdman、小馬、Alan Lee、Orange Tsai、木棍Inndy、Allen Own、ddaa、yuawn、Angelboy、Lays、Jeffxx，幾乎都是駭客圈的紅人XD<br>這些大神們場子人都不會太少，尤其 Orange 再次打穿 Facebook 的主題在 R0 快被塞爆==</p>
+<p>在廠商攤位方面，照往例就是到處認親、認識朋友，只是同學把我當許願機拿贈品還稱讚我議程蟑螂… 嗚嗚幹，另外咱們 stavhaygn 在 UCCU 的主題是數位安全＆實體安全，蠻有趣的挑戰，讓我想起自己小時候筆電袋被父母上鎖時也是用迴紋針之類的工具慢慢解鎖ㄏ</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-3.webp" alt=" UCCU 實體解鎖挑戰"></p>
+<p>其他像是 DEVCORE、BambooFox、TeamT5、中華資安 都有各自的 CTF challenge，所以少了大地遊戲也不怕沒事做。另外 HITCON GIRLS 辦的 “Who is Lily?” OSINT 挑戰也很酷，還需要在 HITCON 現場找人、寄釣魚信件才算完成任務！</p>
+<p>在官方的活動中還有線上密室逃脫，很感謝 AIS3 室友的邀請，找齊四人就在會場的角落玩，甚至還被 iThome 記者拍到寫進<a href="https://www.ithome.com.tw/news/139967">新聞</a>裡wwwwww 至於玩法大致上都寫在文章內，比較障礙是我和揪來的學妹都沒有接觸過 minecraft，所以在操作上備受關愛ww</p>
+<p>至於有沒有拿到 Flag 呢… 我忘記了w 不過有挖到一題 pwn 但不確定隊友有沒有解出來，我自己是在不同房間到處亂晃找線索，還有玩 minetest 裡的電腦的踩地雷XD 活動結束後還有無差別槍戰不知道在幹嘛，我只記得我一直掉出場外領便當 : (</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-4.webp" alt=" minetest 踩地雷"></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-5.webp" alt=" minetest 風景?"></div></div></div></div>
+
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-6.webp" alt=" 槍戰 "></p>
+<p>印象中往年都有 HITCON token，今年也不例外。不過由於是用虛擬貨幣，所以對沒有再接觸的朋友很多都懶得操作，所以我<del>社工</del>借用身邊同學把官方送的錢包(300 HITCON token)轉到我手上，然後拿去HITCON線上商城買了幾塊電路板，到 Day2 甚至還開放可以購買現場的特色貼紙<br>… 當然是給他買爆 嘻嘻!!</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1618836340/blog-posts/2020-08/19-hitcon-8.webp" alt=" hitcon token "></p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1618836340/blog-posts/2020-08/19-hitcon-7.webp" alt=" hitcon 貼紙 "></p>
+<p>沒有比較沒有傷害，雖然我是第一次參加 HITCON，但和其他場次相比感覺就是有點…掉漆，先不論少了往年慣例的電路板challenge、煉蠱大會開天窗。 Day1 報到的時候發了一個黑盒子沒有給提袋，看到大家都當寶貝到處抱著，結果那個黑盒子不僅是一次性的拆了就壞，而且裡頭都是廠商的DM … 怪不得 Day2 還能疊成塔拜託大家領走 = w =</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-9.webp" alt=" 黑盒子 "></p>
+<p>總之，還是多少在 HITCON 聽到一些有趣的議題/關鍵字，只差在有沒有時間回去翻QwQ<br>接下來應該就是 10月的 MOPCON，已經要參加第四年應該寫不出心得了吧XDDDDDD</p>
+<p>就醬。</p>
 ]]></content>
       <categories>
         <category>心得分享</category>
       </categories>
       <tags>
-        <tag>SITCON</tag>
-        <tag>CYBERSEC</tag>
+        <tag>CISC</tag>
+        <tag>HITCON</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>碩一生活總結</title>
+    <url>/2020/83de7c48f8c7/</url>
+    <content><![CDATA[<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1618836340/blog-posts/2020-08/19-cover.webp" alt=" "></p>
+<blockquote>
+<p>八月的某天大雨後，回家路上隨手一拍。</p>
+</blockquote>
+<p>隨著時間邁入八月，頭銜也要換成二字頭了，時間真的過好快…<br>希望明年這個時候也能這麼愜意地拍照 😭</p>
+<a id="more"></a>
+
+<p>原本有預計暑假要生一些文章出來，結果暑假行程一不小心排滿了XD<br>再加上原本Lab的例行事務 &amp; 學長姐口試支援，弄到現在好不容易才告個段落<br>…只好拿找論文的時間寫文章（抹臉</p>
+<br>
+
+<h2 id="碩一甘苦談？"><a href="#碩一甘苦談？" class="headerlink" title="碩一甘苦談？"></a>碩一甘苦談？</h2><p>不確定各位的碩一時期是怎麼度過，但我現在回憶起來感覺還蠻愜意的（?）<br>在 <a href="../200413-lab-log-0x03/">實驗室日誌 0x03</a> 這篇其實也提的差不多了w</p>
+<p>咱實驗室的碩一生活重點放在修學分 &amp; 審稿 &amp; 看論文，而我自己還會跑 CTF之類的活動。<br>礙於我們老闆實在太忙了，所以開會的頻率越來越低… 在 <a href="../200413-lab-log-0x03/">實驗室日誌 0x03</a> 才說過有恢復常態，結果因為<font color=orange>好的武漢肺炎</font>疫情關係，以及六月開始各種活動停咪到現在Zzzzz 不曉得到底該不該慶幸 😅</p>
+<p>同時也是因為老闆忙，所以到現在我們還沒修過老闆的課，其中授課教授換人的部分有印度籍老師讓爛英文的我很頭疼QQ 所幸在Lab夥伴們的各種 CARRY 下平安度過，感謝各位嗚嗚。</p>
+<p>若要挑一門最有心得的課，那應該就是<strong>網路安全</strong>吧，資管系老師開的資安碩必修。很妙 XD<br>可想而知大部分都是資管學生居多，老師開學就講明密碼學的部分不會講太深，資安碩的可以不用來聽超酷，雖然我們還是乖乖到教室自修(???) 然後期中考全部申論題，印象中咱Lab只有我的分數炸掉 …果然學店生到哪都是學店生。<br>不過後半學期的 hands-on 和 project 主題都能用網路相關自由發揮蠻有趣的，尤其是還有CTF可以打!!<br>然後我們 <strong>MacacaHub</strong> 一個衝勁除了拿下第一，還差兩題破臺。 <font color=navy>\ 展哥教我 /</font><br>每次上臺報告都被我們當社課塞很多奇怪的梗圖 XD 能這樣玩的課真的不多，推推~</p>
+<p>學分的部分一年下來修了 23 學分… 距離畢業門檻差 5 學分算蠻拚的 😤</p>
+<p>審稿部分聽說不是每個Lab都會有(?) 但個人認為算是不錯的修煉，透過審查(X)找碴(O)他人論文來勉勵自己別犯相同的謬誤，只是偶爾時限太短只能匆匆用 Google translate 啃真的有點可惜。另外有時候是審計畫，而且是頁數hen多的那種，那才真的是直接睡Lab… 沒 我開玩笑ㄉ，通常也不會到很難審，只是會多一件事要忙 XD</p>
+<p>剩下時間<del>除了打機之外</del>就是不停找論文看了，說真的到現在也只有個大方向，議題還沒辦法確定。<br>尤其個人看論文的速度真的頗慢<del>（還會分心寫部落格）</del>，而且必須一段段拿去 Google translate 翻完慢慢啃，曾經試過直接咬原文但成效不彰… 真的是有看沒有懂，最後認命回頭翻成中文，有點擔心會不會因為英文太差無法畢業、嘖。</p>
+<br>
+
+<h2 id="暑假南北趴趴走"><a href="#暑假南北趴趴走" class="headerlink" title="暑假南北趴趴走"></a>暑假南北趴趴走</h2><p>這部分本來想開新的一篇介紹，不過金魚腦如我，很多活動內容已經需要用力回想，更不用說技術細節還沒看完嗚嗚<br>所以就拿來當碩一生活總結的一部分放在這裡當遊記分享 wwwww</p>
+<p>總之，拜疫情所賜，延到暑假的活動真的有夠多，讓我幾乎是以週為單為在台北高雄奔波QwQ<br>同時，這些活動真的都是第一次參加，大學時期真的完全沒有契機讓我這樣一直北上跑活動…</p>
+]]></content>
+      <categories>
+        <category>實驗室日誌</category>
+      </categories>
   </entry>
   <entry>
     <title>NSYSU 駭客攻防 HW 0x01 Writeup</title>
@@ -1696,163 +1853,6 @@ Pwn大概就是這麼一回事了~
       </tags>
   </entry>
   <entry>
-    <title>Blog Note 0x01</title>
-    <url>/2020/906e3d1c7e85/</url>
-    <content><![CDATA[<p>啊勒，這系列怎麼會到現在才是第一篇呢 ovo??</p>
-<a id="more"></a>
-
-<p>有鑒於 Github Page 的設計是在主機端撰文，完成後推送到 Github 託管，因此部落格本體是以主機端的版本為主。</p>
-<p>剛好在 2020 這一年的暑假我換上了 MBP2020，因此也要把整個 Hexo 進行搬家，考慮到過去太多小實驗導致部落格的後端(?)其實有很多沒有在使用的功能(俗稱 <strong>環境髒亂</strong>)，想藉著這次的搬家，順便把大部分的套件甚至是 Hexo 和 NexT 主題進行更新，也因此發現了不少有趣且便民的功能。</p>
-<p>更新後的 Hexo 相關套件版本:</p>
-<figure class="highlight bash"><figcaption><span>$ hexo -v</span></figcaption><table><tr><td class="code"><pre><span class="line">hexo: 5.0.2</span><br><span class="line">hexo-cli: 4.2.0</span><br><span class="line">os: Darwin 19.6.0 darwin x64</span><br><span class="line">node: 12.18.3</span><br><span class="line">v8: 7.8.279.23-node.39</span><br><span class="line">uv: 1.38.0</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">brotli: 1.0.7</span><br><span class="line">ares: 1.16.0</span><br><span class="line">modules: 72</span><br><span class="line">nghttp2: 1.41.0</span><br><span class="line">napi: 6</span><br><span class="line">llhttp: 2.0.4</span><br><span class="line">http_parser: 2.9.3</span><br><span class="line">openssl: 1.1.1g</span><br><span class="line">cldr: 37.0</span><br><span class="line">icu: 67.1</span><br><span class="line">tz: 2019c</span><br><span class="line">unicode: 13.0</span><br></pre></td></tr></table></figure>
-
-
-<p>更新後的 npm 相關套件版本:</p>
-<figure class="highlight bash"><figcaption><span>$ npm version</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&#x27;hexo-site&#x27;</span>: <span class="string">&#x27;0.0.0&#x27;</span>,</span><br><span class="line">  npm: <span class="string">&#x27;6.14.6&#x27;</span>,</span><br><span class="line">  ares: <span class="string">&#x27;1.16.0&#x27;</span>,</span><br><span class="line">  brotli: <span class="string">&#x27;1.0.7&#x27;</span>,</span><br><span class="line">  cldr: <span class="string">&#x27;37.0&#x27;</span>,</span><br><span class="line">  http_parser: <span class="string">&#x27;2.9.3&#x27;</span>,</span><br><span class="line">  icu: <span class="string">&#x27;67.1&#x27;</span>,</span><br><span class="line">  llhttp: <span class="string">&#x27;2.0.4&#x27;</span>,</span><br><span class="line">  modules: <span class="string">&#x27;72&#x27;</span>,</span><br><span class="line">  napi: <span class="string">&#x27;6&#x27;</span>,</span><br><span class="line">  nghttp2: <span class="string">&#x27;1.41.0&#x27;</span>,</span><br><span class="line">  node: <span class="string">&#x27;12.18.3&#x27;</span>,</span><br><span class="line">  openssl: <span class="string">&#x27;1.1.1g&#x27;</span>,</span><br><span class="line">  tz: <span class="string">&#x27;2019c&#x27;</span>,</span><br><span class="line">  unicode: <span class="string">&#x27;13.0&#x27;</span>,</span><br><span class="line">  uv: <span class="string">&#x27;1.38.0&#x27;</span>,</span><br><span class="line">  v8: <span class="string">&#x27;7.8.279.23-node.39&#x27;</span>,</span><br><span class="line">  zlib: <span class="string">&#x27;1.2.11&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<!--(TODO: 用舊MBP查一下原本的hexo和next版本)-->
-<ul>
-<li>hexo NexT themes version: 7.8.0<br><a href="https://github.com/theme-next/hexo-theme-next/releases/tag/v7.8.0">https://github.com/theme-next/hexo-theme-next/releases/tag/v7.8.0</a></li>
-</ul>
-<ul>
-<li>解決 Node.js v14 版本會遇到相依套件跳警告的問題，這部分我直接降版處理 =a=<figure class="highlight bash"><figcaption><span>$ node -v</span></figcaption><table><tr><td class="code"><pre><span class="line">v12.18.3</span><br></pre></td></tr></table></figure>
-如果不想降版可以參考這篇 <a href="https://www.haoyizebo.com/posts/710984d0/">https://www.haoyizebo.com/posts/710984d0/</a></li>
-</ul>
-<ul>
-<li>NexT 主題升到 v6 有很多網站配置要改QQ<br><a href="https://sevencho.github.io/archives/14534beb.html">https://sevencho.github.io/archives/14534beb.html</a></li>
-</ul>
-<ul>
-<li><p>NexT 內建 Mathjax，可以直接從<code>_config.yml</code>設定啟用</p>
-</li>
-<li><p>NexT 解決 #more 從頭開始閱讀(scroll_to_more)<br><a href="https://blog.csdn.net/weizhixiang/article/details/105112467">https://blog.csdn.net/weizhixiang/article/details/105112467</a></p>
-</li>
-<li><p>NexT 的 note 標籤設定 (深色模式下字體顏色不太明顯QQ)</p>
-<div class="note default">
-            <p>default note</p>
-          </div>
-<div class="note primary">
-            <p>primary note</p>
-          </div>
-<div class="note success">
-            <p>success note</p>
-          </div>
-<div class="note info">
-            <p>info note</p>
-          </div>
-<div class="note warning">
-            <p>warning note</p>
-          </div>
-<div class="note danger">
-            <p>danger note</p>
-          </div>
-<figure class="highlight text"><figcaption><span>code</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% note default %&#125;</span><br><span class="line">default note</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line">primary note</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line">success note</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line">info note</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line">warning note</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line">danger note</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>source目錄多了一項<code>_data</code>可以塞自定義的code</p>
-<ul>
-<li>例如這個部落格每篇文章結尾的自定義圖片可以參考<br><a href="https://www.sunhong.vip/2019/03/08/Hexo-Next-%E5%9C%A8%E6%96%87%E7%AB%A0%E6%9C%AB%E5%B0%BE%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%87%E5%AD%97/">https://www.sunhong.vip/2019/03/08/Hexo-Next-在文章末尾添加自定义文字/</a><figure class="highlight text"><figcaption><span>_data/post-body-end.swig</span></figcaption><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        &lt;div style=&quot;width: 168px; margin: auto&quot;&gt;&lt;img src=&quot;/imges/end.png&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;%</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>最後就是一些雜項設定，我參考了很多內容<br><a href="https://ed521.github.io/2020/05/hexo-next-upgrade/">[教學] Hexo 部落格升級、Next 主題升級、客製功能及樣板編輯全記錄</a></p>
-</li>
-</ul>
-<p>–</p>
-<h3 id="一些後記"><a href="#一些後記" class="headerlink" title="一些後記"></a>一些後記</h3><p>把 Hexo 換新環境後用 NexT v7.8 發現很多功能被包含在設定檔中，因此那個 <code>_config.xml</code> 似乎又比之前更好用…但也更肥了XDDD 而且不用再安裝很多 npm 套件，想到在上一台電腦很多功能的起手式都是 npm install，感覺後台從空間的使用上應該少了許多，但是網站載入的速度印象中會被 Node.js 拖慢，可能就要等之後有空再研究了QQ</p>
-]]></content>
-      <categories>
-        <category>部落格筆記</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Summer Conf. に行きましょう！ PART 3</title>
-    <url>/2020/b9e09cdc1485/</url>
-    <content><![CDATA[<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1620004322/blog-posts/2020-08/19-cover3.webp" alt=" "></p>
-<a id="more"></a>
-
-<p>事隔一個月後還有另外兩場資安相關的Conference，雖然時間上不算是<strong>Summer Conf</strong>.，但我也沒打算再開新一篇介紹，所以就繼續在這篇往下更新了 XD</p>
-<h3 id="CISC-全國資訊安全會議-9-1-9-4-NSYSU"><a href="#CISC-全國資訊安全會議-9-1-9-4-NSYSU" class="headerlink" title="CISC 全國資訊安全會議 (9/1 - 9/4) @NSYSU"></a>CISC 全國資訊安全會議 (9/1 - 9/4) @NSYSU</h3><p>原本也是預計辦在五月的會議，偉哉武漢肺炎各種大延期，這場的定位對我來說比較特別，身在主辦方校又是以工人的身份下場幫忙。<br>和規模上和前幾場相比贊助商少了許多，整體會議稍稍陽春一些，今年是第卅屆雖然我不確定之前是否都差不多，但各位工人們都很認真幫忙這倒是真的 :3</p>
-<p>會議時間上長達四天，但實際上議程只有中間 Day 2, Day 3 兩天。<br>Day 1 上午場佈、下午由我們<strong>MacacaHub</strong>以「基礎網頁安全演練」作為CISC開場打頭陣（現在想想我還是不解為何要開 Day 1 的行程 …）<br>Day 4 是活動參訪，分別為爬柴山<del>給猴子看</del>，還有海域純玩水，但由於當時已經有下雨預告的消息，所以取消了0人報名的爬山活動（!）。</p>
-<p>由於 Day 1 的資安演練是額外活動讓會眾自由報名參加，因此原本展哥設定的目標學生是以大學生/碩士生為主，強調<font color=red>基礎</font>網頁安全演練，結果從後台的表單上看到報名會眾都至少都是碩士生，甚至還有幾位是主管等級讓我們大感意外XD 不過最後證實參與的會眾確實都不是這方面專業的，讓我們連原本預期的進度(<code>XSS</code>)都沒時間細講只能匆匆帶過，就這樣<del>抱著展哥的腿</del>平安度過 Day 1。</p>
-<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-1.webp" alt=" "></p>
-<blockquote>
-<p><del>發現野生的奧義間諜</del></p>
-</blockquote>
-<p>Day 2 / Day 3 我的主要工作是和Lab學弟搭擋負責 Session A 論文發表的場控/計時/拍照 以及協助主持人和A1場評審，所以很難花心思認真聽報告QQ 何況我被分配到的 Session 比其他場次的組別硬是多了一組，加上台下Q&amp;A實在不受控，想當然爾時間上爆炸不可避ㄏㄏ，工人群組內幾乎只有我回報會晚結束，只能說當個時間管理大師真不容易(X) 老實說要用10分鐘講完一篇研究真的很不夠用，何況包含QA又要把時間壓得更緊，辛苦各位講者了。</p>
-<p>值得一提的還有 Day 2 晚宴在西子灣沙灘會館，雖然從學長的反應看得出應該是已經吃到習以為常了，不過我們也是喝了不少酒（笑）</p>
-<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1618836340/blog-posts/2020-08/19-cisc-2.webp" alt=" "></p>
-<p>另外，Day 3 上午有資管系主辦的 CISC CTF，所以我們<strong>MacacaHub</strong>就挽起袖子下場一起玩XDDD 整體難度中間偏易，主要有幾題Pwn直接被我忽略XD 其中一題原本要考 <a href="https://www.ithome.com.tw/news/135665">CVE-2019-18634</a>，結果因為所有參賽者共用主機，所以當我Google完CVE後就直接在主機內下<code>history</code>指令看到前一位參賽者 git pull 下來的 PoC，直接被我拿來提權拿Flag XDDDDD<br>還有連續兩題的SQLi，結果同樣<code>--</code>的註解在 SQLi-1 可繞過，但在 SQLi-2 居然沒辦法 = =<br>原本以為是 SQLi-2 的空白繞過沒成功（用<code>/**/</code>），結果賽後討論才發現把註解改成<code>//</code>就拿到flag了…</p>
-<p>原本我一直都穩定位居第四名，最後40多分鐘我集中在分析 Windows 的 event log，雖然用事件分析工具花了不少時間把 Powershell 的 command 還原出來但沒有成功執行QQ 賽後聽到展哥用 strings 就把 command dump 出來也沒成功（但至少不用像我還要慢慢還原XD），等回過神結束時才發現掉到第五名，和前一名差不到 50 分… <strong>唔嗯，我沒有寫Welcome(50)</strong> 笑死XD 反正最後 4,5,6 名都並列<strong>展露頭角獎</strong>也還好就是~</p>
-<blockquote>
-<p>順帶一提前三名: CSY、展哥、Mumu，全部都是南部資安圈熟面孔自己人 ㄏㄏ</p>
-</blockquote>
-<p>Day 4 本來應該是安排爬山和海域玩水，由於 Day 2 取消了爬山的部分，海域的部分礙於不能取消(?)，所以我們很多工人都被抓下海(??)強制玩水，甚至我明明沒填表單卻還是被秘書姊姊從後台報名XDDD 剛好拿CTF撿到的500摳家樂福禮券去買了件泳褲:/</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-3.webp" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-4.webp" alt=" "></div></div></div></div>
-
-<p>當天集合時有幾位會眾出現，可能是誤會有爬山活動、又或是以為只有踩踩海灘，總之最後都回家了:))))<br>剩下我們10來位被迫參加的工人各種玩風帆、獨木舟、趴板其實也蠻愉快的，而且岸邊似乎還有其他旅行團的遊客有點害羞XD<br>最後我真的菜逼八沒做好防曬整個曬到爆XD</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-5.webp" alt=" "></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-6.webp" alt=" "></div></div></div></div>
-
-
-<h3 id="HITCON-臺灣駭客協會-9-11-9-12-中研院人文社科館"><a href="#HITCON-臺灣駭客協會-9-11-9-12-中研院人文社科館" class="headerlink" title="HITCON 臺灣駭客協會 (9/11 - 9/12) @中研院人文社科館"></a>HITCON 臺灣駭客協會 (9/11 - 9/12) @中研院人文社科館</h3><p>終於輪到最後一場 <strong>Summer Conf</strong>.，同時是首次和 Lab 各位一起北上參加活動，某方面來說有點像畢業旅行(?)</p>
-<p>這次同樣因為疫情影響，在票種上分成線上 &amp; 實體。<br>線上的部分是用開源遊戲引擎 minetest 架設的虛擬會場，一整個 minecraft 風格，可惜我這方面並沒有涉獵太深。實體方面就和之前的 Conf. 形式上同樣是以議程為主，只是這場雖然有廠商但沒有大地遊戲，算是省了到處跑的力氣w</p>
-<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_400/v1618836340/blog-posts/2020-08/19-hitcon-1.webp" alt=" 南港高鐵票 "></p>
-<p>第一次做高鐵到南港終點站還蠻新鮮的… 雖然這裡看起來有點荒涼ㄏ<br>飯店的部分我們統一住洛基大飯店<a href="https://goo.gl/maps/xK7EwTqwyWZ6LsAt9">(Google map)</a>個人覺得蠻舒適的，說實在身為台北人實在很難得住台北飯店 XDDD<br><br>Day 0 我們在 check in 後晚餐吃<strong>YAYOI．やよい軒</strong>，雖然價格上有點小貴但我吃得很開心www 尤其我點的餐點還有附說明書(??)<br>交通方面我傻傻地帶著幾位同學坐捷運一站到南港展覽館等免費接駁車，然後比我們晚出發的同學比我們早到才知道原來飯店前就有公車可以直接到工研院，算是我沒算到的失誤 wwww 可惡</p>
-<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-2.webp" alt=" YAYOI "></p>
-<p>議程部分的講師已經可以認出很多熟面孔了www<br>寬寬、birdman、小馬、Alan Lee、Orange Tsai、木棍Inndy、Allen Own、ddaa、yuawn、Angelboy、Lays、Jeffxx，幾乎都是駭客圈的紅人XD<br>這些大神們場子人都不會太少，尤其 Orange 再次打穿 Facebook 的主題在 R0 快被塞爆==</p>
-<p>在廠商攤位方面，照往例就是到處認親、認識朋友，只是同學把我當許願機拿贈品還稱讚我議程蟑螂… 嗚嗚幹，另外咱們 stavhaygn 在 UCCU 的主題是數位安全＆實體安全，蠻有趣的挑戰，讓我想起自己小時候筆電袋被父母上鎖時也是用迴紋針之類的工具慢慢解鎖ㄏ</p>
-<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-3.webp" alt=" UCCU 實體解鎖挑戰"></p>
-<p>其他像是 DEVCORE、BambooFox、TeamT5、中華資安 都有各自的 CTF challenge，所以少了大地遊戲也不怕沒事做。另外 HITCON GIRLS 辦的 “Who is Lily?” OSINT 挑戰也很酷，還需要在 HITCON 現場找人、寄釣魚信件才算完成任務！</p>
-<p>在官方的活動中還有線上密室逃脫，很感謝 AIS3 室友的邀請，找齊四人就在會場的角落玩，甚至還被 iThome 記者拍到寫進<a href="https://www.ithome.com.tw/news/139967">新聞</a>裡wwwwww 至於玩法大致上都寫在文章內，比較障礙是我和揪來的學妹都沒有接觸過 minecraft，所以在操作上備受關愛ww</p>
-<p>至於有沒有拿到 Flag 呢… 我忘記了w 不過有挖到一題 pwn 但不確定隊友有沒有解出來，我自己是在不同房間到處亂晃找線索，還有玩 minetest 裡的電腦的踩地雷XD 活動結束後還有無差別槍戰不知道在幹嘛，我只記得我一直掉出場外領便當 : (</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-4.webp" alt=" minetest 踩地雷"></div><div class="group-picture-column" style="width: 50%;"><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-5.webp" alt=" minetest 風景?"></div></div></div></div>
-
-<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-6.webp" alt=" 槍戰 "></p>
-<p>印象中往年都有 HITCON token，今年也不例外。不過由於是用虛擬貨幣，所以對沒有再接觸的朋友很多都懶得操作，所以我<del>社工</del>借用身邊同學把官方送的錢包(300 HITCON token)轉到我手上，然後拿去HITCON線上商城買了幾塊電路板，到 Day2 甚至還開放可以購買現場的特色貼紙<br>… 當然是給他買爆 嘻嘻!!</p>
-<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1618836340/blog-posts/2020-08/19-hitcon-8.webp" alt=" hitcon token "></p>
-<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1618836340/blog-posts/2020-08/19-hitcon-7.webp" alt=" hitcon 貼紙 "></p>
-<p>沒有比較沒有傷害，雖然我是第一次參加 HITCON，但和其他場次相比感覺就是有點…掉漆，先不論少了往年慣例的電路板challenge、煉蠱大會開天窗。 Day1 報到的時候發了一個黑盒子沒有給提袋，看到大家都當寶貝到處抱著，結果那個黑盒子不僅是一次性的拆了就壞，而且裡頭都是廠商的DM … 怪不得 Day2 還能疊成塔拜託大家領走 = w =</p>
-<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-9.webp" alt=" 黑盒子 "></p>
-<p>總之，還是多少在 HITCON 聽到一些有趣的議題/關鍵字，只差在有沒有時間回去翻QwQ<br>接下來應該就是 10月的 MOPCON，已經要參加第四年應該寫不出心得了吧XDDDDDD</p>
-<p>就醬。</p>
-]]></content>
-      <categories>
-        <category>心得分享</category>
-      </categories>
-      <tags>
-        <tag>CISC</tag>
-        <tag>HITCON</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>碩一生活總結</title>
-    <url>/2020/83de7c48f8c7/</url>
-    <content><![CDATA[<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1618836340/blog-posts/2020-08/19-cover.webp" alt=" "></p>
-<blockquote>
-<p>八月的某天大雨後，回家路上隨手一拍。</p>
-</blockquote>
-<p>隨著時間邁入八月，頭銜也要換成二字頭了，時間真的過好快…<br>希望明年這個時候也能這麼愜意地拍照 😭</p>
-<a id="more"></a>
-
-<p>原本有預計暑假要生一些文章出來，結果暑假行程一不小心排滿了XD<br>再加上原本Lab的例行事務 &amp; 學長姐口試支援，弄到現在好不容易才告個段落<br>…只好拿找論文的時間寫文章（抹臉</p>
-<br>
-
-<h2 id="碩一甘苦談？"><a href="#碩一甘苦談？" class="headerlink" title="碩一甘苦談？"></a>碩一甘苦談？</h2><p>不確定各位的碩一時期是怎麼度過，但我現在回憶起來感覺還蠻愜意的（?）<br>在 <a href="../200413-lab-log-0x03/">實驗室日誌 0x03</a> 這篇其實也提的差不多了w</p>
-<p>咱實驗室的碩一生活重點放在修學分 &amp; 審稿 &amp; 看論文，而我自己還會跑 CTF之類的活動。<br>礙於我們老闆實在太忙了，所以開會的頻率越來越低… 在 <a href="../200413-lab-log-0x03/">實驗室日誌 0x03</a> 才說過有恢復常態，結果因為<font color=orange>好的武漢肺炎</font>疫情關係，以及六月開始各種活動停咪到現在Zzzzz 不曉得到底該不該慶幸 😅</p>
-<p>同時也是因為老闆忙，所以到現在我們還沒修過老闆的課，其中授課教授換人的部分有印度籍老師讓爛英文的我很頭疼QQ 所幸在Lab夥伴們的各種 CARRY 下平安度過，感謝各位嗚嗚。</p>
-<p>若要挑一門最有心得的課，那應該就是<strong>網路安全</strong>吧，資管系老師開的資安碩必修。很妙 XD<br>可想而知大部分都是資管學生居多，老師開學就講明密碼學的部分不會講太深，資安碩的可以不用來聽超酷，雖然我們還是乖乖到教室自修(???) 然後期中考全部申論題，印象中咱Lab只有我的分數炸掉 …果然學店生到哪都是學店生。<br>不過後半學期的 hands-on 和 project 主題都能用網路相關自由發揮蠻有趣的，尤其是還有CTF可以打!!<br>然後我們 <strong>MacacaHub</strong> 一個衝勁除了拿下第一，還差兩題破臺。 <font color=navy>\ 展哥教我 /</font><br>每次上臺報告都被我們當社課塞很多奇怪的梗圖 XD 能這樣玩的課真的不多，推推~</p>
-<p>學分的部分一年下來修了 23 學分… 距離畢業門檻差 5 學分算蠻拚的 😤</p>
-<p>審稿部分聽說不是每個Lab都會有(?) 但個人認為算是不錯的修煉，透過審查(X)找碴(O)他人論文來勉勵自己別犯相同的謬誤，只是偶爾時限太短只能匆匆用 Google translate 啃真的有點可惜。另外有時候是審計畫，而且是頁數hen多的那種，那才真的是直接睡Lab… 沒 我開玩笑ㄉ，通常也不會到很難審，只是會多一件事要忙 XD</p>
-<p>剩下時間<del>除了打機之外</del>就是不停找論文看了，說真的到現在也只有個大方向，議題還沒辦法確定。<br>尤其個人看論文的速度真的頗慢<del>（還會分心寫部落格）</del>，而且必須一段段拿去 Google translate 翻完慢慢啃，曾經試過直接咬原文但成效不彰… 真的是有看沒有懂，最後認命回頭翻成中文，有點擔心會不會因為英文太差無法畢業、嘖。</p>
-<br>
-
-<h2 id="暑假南北趴趴走"><a href="#暑假南北趴趴走" class="headerlink" title="暑假南北趴趴走"></a>暑假南北趴趴走</h2><p>這部分本來想開新的一篇介紹，不過金魚腦如我，很多活動內容已經需要用力回想，更不用說技術細節還沒看完嗚嗚<br>所以就拿來當碩一生活總結的一部分放在這裡當遊記分享 wwwww</p>
-<p>總之，拜疫情所賜，延到暑假的活動真的有夠多，讓我幾乎是以週為單為在台北高雄奔波QwQ<br>同時，這些活動真的都是第一次參加，大學時期真的完全沒有契機讓我這樣一直北上跑活動…</p>
-]]></content>
-      <categories>
-        <category>實驗室日誌</category>
-      </categories>
-  </entry>
-  <entry>
     <title>NSYSU 駭客攻防 Midterm Writeups</title>
     <url>/2020/b5b674d24aef/</url>
     <content><![CDATA[<p><img src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF%20CTF/midterm/monkey_flag.png" alt=" "></p>
@@ -1946,22 +1946,23 @@ Pwn大概就是這麼一回事了~
       </tags>
   </entry>
   <entry>
-    <title>實驗室日誌 0x05</title>
-    <url>/2021/1f552e985125/</url>
-    <content><![CDATA[<p><img src="https://pbs.twimg.com/media/EvtbzcKUcAIsfQn?format=jpg&name=large"> </p>
+    <title>實驗室日誌 0x04</title>
+    <url>/2020/6a67b52db922/</url>
+    <content><![CDATA[<p><img src="https://pbs.twimg.com/media/EmiQNw_VoAE_k5j?format=jpg&name=large"> </p>
 <blockquote>
-<p>Source: <a href="https://twitter.com/chorefuji/status/1367788017939664904">Twitter @chorefuji</a></p>
+<p>Source: <a href="https://twitter.com/esasi8794/status/1326469119672082432">Twitter @esasi8794</a></p>
 </blockquote>
-<p>二月底 N 社終於宣佈 Pokemon 珍珠鑽石重製的消息，我好興奮RRRRR<br>同時公布了 2022 年會推出的傳說阿爾宙斯，真香 &gt;&lt;</p>
+<p>睽違半年的 Lab 日誌，總之平安地度過忙忙的碩一人生，迎來茫茫的碩二生活。</p>
 <a id="more"></a>
 
+<p>以往的暑假生活我大多是在暑輔(國/高中)、打工、研究所備考、還有 … 耍廢(O) 中度過。今年的七月初期陸續接了三篇 CISC 審稿，其他時間幾乎都在跑南北到處跑活動，各種 Conference、AIS3 集訓，有種不同於以往暑假的充實感，想當然爾，我家荷包君也是各種被壓榨 QQ 有興趣可以看看 <a href="https://blog.eevee.tw/2020/200819-first-year-graduate-summary/">碩一生活總結 &amp; Summer Conf. 跑起來</a>，說實話這篇心得文寫到後面差點富奸化wwww 果然人多少都會有一點拖稿癌呢==</p>
+<p>上一篇提到咱們老闆外務很忙，這學期總算是上了軌道，meeting穩定許多，我也終於在九月把大咪論文報完（原本預計七月初），沒意外之後就是輪到碩一新生接手報告，而我們升碩二的就要開始忙論文了。說到 Lab 碩一新生，雖然每一屆的狀況都不盡相同，但感覺這屆似乎沒有像我們這麼團結 (當、當然也可能我們才是例外)。我們這屆從暑假有自己的群組，約吃飯、打CTF、跑Conf. 也算是蠻常揪出門，而這屆看起來有幾位已經是中山老屁股會各自行動，打 CTF 的也只有一位 <del>（這樣 <strong>MacacaHub</strong> 會很難傳下去）</del>，其他的雖然不在圈內不清楚，但從旁觀者角度來看就是蠻… 蠻多小圈圈（？） 而且也正逢 Lab 的低潮期，看起來之後會辛苦一點&gt;_&lt;</p>
+<p>平常會和我們在 Lab 打屁待到 21、22點、週末也會出現的學長們已經畢業了，不免有些空虛，Lab 碩一新生看起來都蠻準時回家（笑），這才是比較健康的生活方式，我都認為自己是因為奴性太重才會天天 Lab 簽到，有點怕之後出社會很快適應加班生活(X)，曾經有想過需不需要調整待在 Lab 的時間，不過有雙螢幕實在很方便吶，何況我的研究進度應該也不算快，多待一點說不定還能加一些同情分 (？)，有時候會在 Lab 發懶忙一些不務正業的事… 像是現在的這篇實驗室日誌 ㄏ。</p>
+<p>這學期除了 Seminar，我另外修了<strong>駭客攻防</strong> 和 <strong>英文寫作</strong>，前者是個人在資工系底下最有興趣的課，後者反過來是最沒興趣的課Zzzz ，不過因為英文寫作有額外的撒必蘇，所以咱 Lab 大部分都被推(ㄓㄨㄚ)薦(ㄑㄩˋ)修課，目前期中考結束hmmmmmm … 看起來不怎麼樂觀就是，畢竟英文還是我的硬傷RRR；駭客攻防部分就上課蠻開心的，算是在學習打 CTF 會用到的技能，尤其還是展哥擔任助教，藉此多了蠻多練實作題的機會，不得不說他真的很會出題呢，不愧是有經驗的 CTF 玩家。</p>
+<p>話說回來，自暑假以來摸 CTF 的頻率下降許多，何況 10月的金盾獎初賽居然還沒有通過 <del>(沒辦法北上麥當當吃到飽了嗚嗚)</del>，前幾天的 Balsn CTF 也只有摸到 Welcome，雖然也沒有花太多時間在打，但我覺得至少 PoW 那題應該解的出來啊QwQ 真心認為大學就該開始摸 CTF，很羨慕北部好多把競技程式和 CTF 都兼顧的玩家，不然我到研究所大概只有不到一年的時間可以玩，重點我還有其他業務不得不做，說實話玩得不是很過癮ㄚ &gt;___&lt;</p>
 <br>
+最後雖然有點唐突，但我的冬天似乎提早結束了 <3
 
-<p>最近適逢提審階段，真的忙到爆炸QQ</p>
-<p>不過真要說忙，倒也只是要生出一份初稿，確定論文的題目和方法，但尷尬點在身為實作派的我這方面還沒有個很明確的結果，實在很難動筆寫出什麼很具體的想法，也可能試出來結果不理想還要再換，這大概是實作麻煩的點。反過來說，一旦實驗成功或是有成果可以拿出來講，那後面寫起論文就相對輕鬆很多了。</p>
-<p>上次寫這系列的日誌已經是去年 11 月了，這期間在 Lab 已經能明顯感受到審稿工作量減少（0），大部分時間都在翻論文想題目。原本我想研究的 CDN 領域找不到什麼可以拿來發揮，在二月初硬是換到了 DNS 相關的議題，雖然說在網路工程上只是前後順序的關係，但是相關論文等於是要重新翻起，頭實在有點痛Zzz</p>
-<p>雖然不確定其他同儕怎麼安排寫論文的時間，但我自認是挺混的（笑） 雖然堪稱是實驗室地縛靈沒事就常駐 Lab，但回宿舍後基本上就不會想做事，原本想說我公私分明蠻清楚的，沒想到連”寫論文”這件事也不例外XD 何況有另一半很喜歡陪我到處跑，所以假日不太會待太晚，能夠脫離社畜生活應該是件讓人高興的事… 吧？ 嘿嘿</p>
-<p>就這樣吧，雖然這個部落格平常不太會有人路過，但還是要偶爾浮出來換口氣w<br>最近也沒時間碰 CTF，有點擔心 MacacaHub 交接給下一屆後還能不能繼續撐住QQQ</p>
 ]]></content>
       <categories>
         <category>實驗室日誌</category>
@@ -2095,26 +2096,75 @@ Pwn大概就是這麼一回事了~
       </tags>
   </entry>
   <entry>
-    <title>實驗室日誌 0x04</title>
-    <url>/2020/6a67b52db922/</url>
-    <content><![CDATA[<p><img src="https://pbs.twimg.com/media/EmiQNw_VoAE_k5j?format=jpg&name=large"> </p>
+    <title>實驗室日誌 0x05</title>
+    <url>/2021/1f552e985125/</url>
+    <content><![CDATA[<p><img src="https://pbs.twimg.com/media/EvtbzcKUcAIsfQn?format=jpg&name=large"> </p>
 <blockquote>
-<p>Source: <a href="https://twitter.com/esasi8794/status/1326469119672082432">Twitter @esasi8794</a></p>
+<p>Source: <a href="https://twitter.com/chorefuji/status/1367788017939664904">Twitter @chorefuji</a></p>
 </blockquote>
-<p>睽違半年的 Lab 日誌，總之平安地度過忙忙的碩一人生，迎來茫茫的碩二生活。</p>
+<p>二月底 N 社終於宣佈 Pokemon 珍珠鑽石重製的消息，我好興奮RRRRR<br>同時公布了 2022 年會推出的傳說阿爾宙斯，真香 &gt;&lt;</p>
 <a id="more"></a>
 
-<p>以往的暑假生活我大多是在暑輔(國/高中)、打工、研究所備考、還有 … 耍廢(O) 中度過。今年的七月初期陸續接了三篇 CISC 審稿，其他時間幾乎都在跑南北到處跑活動，各種 Conference、AIS3 集訓，有種不同於以往暑假的充實感，想當然爾，我家荷包君也是各種被壓榨 QQ 有興趣可以看看 <a href="https://blog.eevee.tw/2020/200819-first-year-graduate-summary/">碩一生活總結 &amp; Summer Conf. 跑起來</a>，說實話這篇心得文寫到後面差點富奸化wwww 果然人多少都會有一點拖稿癌呢==</p>
-<p>上一篇提到咱們老闆外務很忙，這學期總算是上了軌道，meeting穩定許多，我也終於在九月把大咪論文報完（原本預計七月初），沒意外之後就是輪到碩一新生接手報告，而我們升碩二的就要開始忙論文了。說到 Lab 碩一新生，雖然每一屆的狀況都不盡相同，但感覺這屆似乎沒有像我們這麼團結 (當、當然也可能我們才是例外)。我們這屆從暑假有自己的群組，約吃飯、打CTF、跑Conf. 也算是蠻常揪出門，而這屆看起來有幾位已經是中山老屁股會各自行動，打 CTF 的也只有一位 <del>（這樣 <strong>MacacaHub</strong> 會很難傳下去）</del>，其他的雖然不在圈內不清楚，但從旁觀者角度來看就是蠻… 蠻多小圈圈（？） 而且也正逢 Lab 的低潮期，看起來之後會辛苦一點&gt;_&lt;</p>
-<p>平常會和我們在 Lab 打屁待到 21、22點、週末也會出現的學長們已經畢業了，不免有些空虛，Lab 碩一新生看起來都蠻準時回家（笑），這才是比較健康的生活方式，我都認為自己是因為奴性太重才會天天 Lab 簽到，有點怕之後出社會很快適應加班生活(X)，曾經有想過需不需要調整待在 Lab 的時間，不過有雙螢幕實在很方便吶，何況我的研究進度應該也不算快，多待一點說不定還能加一些同情分 (？)，有時候會在 Lab 發懶忙一些不務正業的事… 像是現在的這篇實驗室日誌 ㄏ。</p>
-<p>這學期除了 Seminar，我另外修了<strong>駭客攻防</strong> 和 <strong>英文寫作</strong>，前者是個人在資工系底下最有興趣的課，後者反過來是最沒興趣的課Zzzz ，不過因為英文寫作有額外的撒必蘇，所以咱 Lab 大部分都被推(ㄓㄨㄚ)薦(ㄑㄩˋ)修課，目前期中考結束hmmmmmm … 看起來不怎麼樂觀就是，畢竟英文還是我的硬傷RRR；駭客攻防部分就上課蠻開心的，算是在學習打 CTF 會用到的技能，尤其還是展哥擔任助教，藉此多了蠻多練實作題的機會，不得不說他真的很會出題呢，不愧是有經驗的 CTF 玩家。</p>
-<p>話說回來，自暑假以來摸 CTF 的頻率下降許多，何況 10月的金盾獎初賽居然還沒有通過 <del>(沒辦法北上麥當當吃到飽了嗚嗚)</del>，前幾天的 Balsn CTF 也只有摸到 Welcome，雖然也沒有花太多時間在打，但我覺得至少 PoW 那題應該解的出來啊QwQ 真心認為大學就該開始摸 CTF，很羨慕北部好多把競技程式和 CTF 都兼顧的玩家，不然我到研究所大概只有不到一年的時間可以玩，重點我還有其他業務不得不做，說實話玩得不是很過癮ㄚ &gt;___&lt;</p>
 <br>
-最後雖然有點唐突，但我的冬天似乎提早結束了 <3
 
+<p>最近適逢提審階段，真的忙到爆炸QQ</p>
+<p>不過真要說忙，倒也只是要生出一份初稿，確定論文的題目和方法，但尷尬點在身為實作派的我這方面還沒有個很明確的結果，實在很難動筆寫出什麼很具體的想法，也可能試出來結果不理想還要再換，這大概是實作麻煩的點。反過來說，一旦實驗成功或是有成果可以拿出來講，那後面寫起論文就相對輕鬆很多了。</p>
+<p>上次寫這系列的日誌已經是去年 11 月了，這期間在 Lab 已經能明顯感受到審稿工作量減少（0），大部分時間都在翻論文想題目。原本我想研究的 CDN 領域找不到什麼可以拿來發揮，在二月初硬是換到了 DNS 相關的議題，雖然說在網路工程上只是前後順序的關係，但是相關論文等於是要重新翻起，頭實在有點痛Zzz</p>
+<p>雖然不確定其他同儕怎麼安排寫論文的時間，但我自認是挺混的（笑） 雖然堪稱是實驗室地縛靈沒事就常駐 Lab，但回宿舍後基本上就不會想做事，原本想說我公私分明蠻清楚的，沒想到連”寫論文”這件事也不例外XD 何況有另一半很喜歡陪我到處跑，所以假日不太會待太晚，能夠脫離社畜生活應該是件讓人高興的事… 吧？ 嘿嘿</p>
+<p>就這樣吧，雖然這個部落格平常不太會有人路過，但還是要偶爾浮出來換口氣w<br>最近也沒時間碰 CTF，有點擔心 MacacaHub 交接給下一屆後還能不能繼續撐住QQQ</p>
 ]]></content>
       <categories>
         <category>實驗室日誌</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Blog Note 0x02</title>
+    <url>/2021/90c9078c684e/</url>
+    <content><![CDATA[<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1620897238/blog-posts/2021-05/01-cover.webp" alt=" "></p>
+<p>給大家看我們的中山鴨霸 嘻嘻。</p>
+<a id="more"></a>
+
+<br>
+
+<p>一年前，我用的圖片空間是 imgur (free)，後來為了因應 2019 日本行拍的一堆照片，所以在做了功課後轉換到 Smugmug（現為 Flickr 的母公司），該站主打使用者可以販售個人的攝影作品。Ummm… 雖然我用不到，不過我個人很喜歡該站的階層式管理介面，當時的想法是用相簿的形式來放日本行的照片，省得文章內塞了一堆高畫質照片影響載入QQ</p>
+<p>最近由於付費圖片空間 Smugmug 過了一年開始跳通知提醒我付$$，可是已經 2021 年我的 2019 日本行文章還是沒生出來XDD 一年約 50 美的方案也不算便宜，因此又開始思考自己所需要圖片空間的定位，在 <a href="https://www.facebook.com/yctseng1227/posts/1614517822077491">FB</a> 問了身邊朋友的想法，決定試著將圖片空間搬到 cloudinary。</p>
+<p>（目前 cloudinary 使用狀況還不錯，在管理介面方面不比 Smugmug 差，甚至在存取的流暢度比 Smugmug 好很多）</p>
+<br>
+-
+
+<p>除了圖片空間，<del>在趕論文耍廢之餘</del>也順便針對部落格做了一點小更新</p>
+<ol>
+<li><p>網址<br> 原本文章網址後綴會掛檔名，但我自己寫的檔名都落落長（日期+英文標題的概念 <del>而且還不知道拼寫文法對不對</del>），後來想了想也不會有人真的把網址整串打出來，因此我從 hexo 的設定檔把 <code>permalink</code> 換成 hash 的形式，至少在觀感上會好看一些(?)</p>
+<p> 不過在 SEO 上可能會有不小的影響，那就再說了XD</p>
+</li>
+<li><p>網站載入速度<br> 常常在向朋友工商我的部落格發現都跑很久有點小尷尬，以 <a href="https://blog.eevee.tw/2020/2fd4e7c6cebb/">ASIS CTF Quals 2020 Experience</a> 這篇為例，用 <a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=zh-TW">Lighthouse</a> 算出來發現 Performance Score 只有 1x 分 （忘了截圖==）</p>
+<p> 問題之一是 Smugmug 載入過高畫質的圖片，這部分可以透過 cloudinary 內建的參數設定改善。<br> 另一個問題就是文章最底下的 Disqus 留言版，在 Lighthouse 評分的改善建議中有很高的延遲比例，所以在拔掉 Disqus 留言板後分數可以提升到  3x 分，<del>運氣好</del>有時候可以拉到 4x 分，還有很多待改進的問題。</p>
+<blockquote>
+<p>下圖用同一篇文章進行評分，因為在幫這篇圖片搬家的途中剛好想到這個問題ｗ</p>
+</blockquote>
+<p> <img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1620028635/blog-posts/2021-05/01-lighthouse-test.webp" alt=" "></p>
+<p> 與此同時，在 FB <a href="https://www.facebook.com/CodingNeutrino/posts/1140931723055262">微中子 tigercosmos</a> 的貼文也發表針對 Disqus 相似的看法，留言提出 <a href="https://krasimirtsonev.com/blog/article/octomments-github-issues-as-comment-plugin">Based on Github issue</a> 的方式，我應該也會拿來參考。</p>
+<p> <del>不曉得該不該慶幸，啟用 Disqus 至今沒多少人留言，可以直接拔掉</del></p>
+</li>
+</ol>
+<ol start="3">
+<li><p>把文章、拆了<br>原文章 「<strong>碩一生活總結 &amp; Summer Conf. 跑起來</strong>」 其中除了碩一小結，還另外塞了 6 場活動的遊記(?)心得，現在想來真的是個愚蠢的決定XDDD 所以把小結獨立出來，再把 Conference 拆成 3 篇 <del>順便洗文章數</del>。</p>
+<p> 雖然應該不太會有人點進去看，但還是列一下各篇的 Conference : )</p>
+<ul>
+<li><a href="https://blog.eevee.tw/2020/83de7c48f8c7/">碩一生活總結</a></li>
+<li><a href="https://blog.eevee.tw/2020/b9e09cdc1485/">Summer Conf. に行きましょう！ PART 1</a>: <strong>AIS3 2020 Summer Camp</strong> &amp; <strong>COSCUP 2020</strong></li>
+<li><a href="https://blog.eevee.tw/2020/fc546b52265a/">Summer Conf. に行きましょう！ PART 2</a>: <strong>SITCON 2020</strong> &amp; <strong>CYBERSEC 2020</strong></li>
+<li><a href="https://blog.eevee.tw/2020/389e2f1fea7e/">Summer Conf. に行きましょう！ PART 3</a>: <strong>CISC 2020</strong> &amp; <strong>HITCON 2020</strong></li>
+</ul>
+</li>
+</ol>
+<ol start="4">
+<li>日本行<br> 天R 這件事好像已經講了很久，根本富堅化==<br> 我很想找機會補完，但目前來看至少要等到碩畢才有機會。至於要如何補完我會在想想，畢竟已經是兩年前的舊聞要回憶起來有點困難，而且那 2000 多張的相片如果不找個時間整理就會繼續拖下去 QQ</li>
+</ol>
+<p>就這樣吧 : )<br>久違的更新好像也沒辦法玩太多花樣，還是寫論文重要 XD</p>
+]]></content>
+      <categories>
+        <category>部落格筆記</category>
       </categories>
   </entry>
   <entry>
