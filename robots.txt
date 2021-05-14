@@ -3,7 +3,6 @@ User-agent: *
 Allow: /
 Allow: /archives/
 
-Disallow: /404/
 Disallow: /js/
 Disallow: /css/
 Disallow: /fonts/
