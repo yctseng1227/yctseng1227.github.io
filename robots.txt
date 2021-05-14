@@ -1,3 +1,12 @@
+# hexo robots.txt
 User-agent: *
-Disallow: 
-Sitemap: /sitemap.xml
+Allow: /
+Allow: /archives/
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
+
+Sitemap: https://blog.eevee.tw/sitemap.xml
