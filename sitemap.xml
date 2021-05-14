@@ -156,13 +156,6 @@
   </url>
   
   <url>
-    <loc>blog.eevee.tw/200228-keyboard-unboxing.html</loc>
-    
-    <lastmod>2020-12-10</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>blog.eevee.tw/tags/index.html</loc>
     
     <lastmod>2020-11-19</lastmod>
@@ -522,6 +515,13 @@
   </url>
   
   <url>
+    <loc>blog.eevee.tw/tags/HTCF/</loc>
+    <lastmod>2021-05-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>blog.eevee.tw/tags/CISC/</loc>
     <lastmod>2021-05-14</lastmod>
     <changefreq>daily</changefreq>
@@ -530,13 +530,6 @@
   
   <url>
     <loc>blog.eevee.tw/tags/HITCON/</loc>
-    <lastmod>2021-05-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>blog.eevee.tw/tags/HTCF/</loc>
     <lastmod>2021-05-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -573,14 +566,14 @@
 
   
   <url>
-    <loc>blog.eevee.tw/categories/Security/</loc>
+    <loc>blog.eevee.tw/categories/%E6%95%97%E5%AE%B6%E9%96%8B%E7%AE%B1/</loc>
     <lastmod>2021-05-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>blog.eevee.tw/categories/%E6%95%97%E5%AE%B6%E9%96%8B%E7%AE%B1/</loc>
+    <loc>blog.eevee.tw/categories/Security/</loc>
     <lastmod>2021-05-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
