@@ -8,6 +8,6 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
-Disallow: /resume.html
+Disallow: /resume
 
 Sitemap: https://blog.eevee.tw/sitemap.xml
