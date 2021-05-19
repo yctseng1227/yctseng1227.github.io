@@ -375,20 +375,6 @@
   </url>
   
   <url>
-    <loc>https://blog.eevee.tw/tags/ITSA%E6%A1%82%E5%86%A0%E8%B3%BD/</loc>
-    <lastmod>2021-05-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.eevee.tw/tags/Programming-Contest/</loc>
-    <lastmod>2021-05-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.eevee.tw/tags/Codeforces/</loc>
     <lastmod>2021-05-19</lastmod>
     <changefreq>daily</changefreq>
@@ -403,6 +389,13 @@
   </url>
   
   <url>
+    <loc>https://blog.eevee.tw/tags/Programming-Contest/</loc>
+    <lastmod>2021-05-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.eevee.tw/tags/%E7%A0%94%E7%A9%B6%E6%89%80%E6%8E%A8%E7%94%84/</loc>
     <lastmod>2021-05-19</lastmod>
     <changefreq>daily</changefreq>
@@ -411,6 +404,13 @@
   
   <url>
     <loc>https://blog.eevee.tw/tags/%E6%97%A5%E6%9C%AC%E8%A1%8C/</loc>
+    <lastmod>2021-05-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.eevee.tw/tags/ITSA%E6%A1%82%E5%86%A0%E8%B3%BD/</loc>
     <lastmod>2021-05-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -487,20 +487,6 @@
   </url>
   
   <url>
-    <loc>https://blog.eevee.tw/tags/AIS3/</loc>
-    <lastmod>2021-05-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.eevee.tw/tags/COSCUP/</loc>
-    <lastmod>2021-05-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.eevee.tw/tags/SITCON/</loc>
     <lastmod>2021-05-19</lastmod>
     <changefreq>daily</changefreq>
@@ -515,7 +501,14 @@
   </url>
   
   <url>
-    <loc>https://blog.eevee.tw/tags/HTCF/</loc>
+    <loc>https://blog.eevee.tw/tags/AIS3/</loc>
+    <lastmod>2021-05-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.eevee.tw/tags/COSCUP/</loc>
     <lastmod>2021-05-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -530,6 +523,13 @@
   
   <url>
     <loc>https://blog.eevee.tw/tags/HITCON/</loc>
+    <lastmod>2021-05-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.eevee.tw/tags/HTCF/</loc>
     <lastmod>2021-05-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
