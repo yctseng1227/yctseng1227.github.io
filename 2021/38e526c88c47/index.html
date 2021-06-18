@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624042176/blog-posts/2021-06/19-ngrok.webp">
 <meta property="og:image" content="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624042177/blog-posts/2021-06/19-github-webhook.webp">
 <meta property="article:published_time" content="2021-06-18T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-06-18T19:57:27.790Z">
+<meta property="article:modified_time" content="2021-06-18T20:14:13.966Z">
 <meta property="article:author" content="yctseng">
 <meta property="article:tag" content="CI&#x2F;CD">
 <meta property="article:tag" content="Jenkins">
@@ -222,7 +222,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>2.8k</span>
+              <span>3.1k</span>
             </span>
 
         </div>
@@ -288,20 +288,22 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ./ngrok http 9000</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624042176/blog-posts/2021-06/19-ngrok.webp" alt=" "></p>
+<p>在欲進行的 repo &gt; Settings &gt; Webhooks &gt; Add webhook，找到下圖畫面。</p>
 <p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624042177/blog-posts/2021-06/19-github-webhook.webp" alt=" "></p>
-<p>新增完 Webhook 如果點進去拉到最底下的 Recent Deliveries 有成功出現綠勾勾就是設定完成，要注意若把 ngrok 關閉，下次透過 Github 使用 Jenkins 就必須重新設定 Webhook <del>(所以我都直接綁實驗室 IP)</del>。</p>
-<p>除了 Webhook 以外，再來就是認證的部分。<br>也因為我們的專題是建立在 private repository 進行，而認證的方法很多種。</p>
-<p>這部分可參考這篇 <a target="_blank" rel="noopener" href="https://dev.to/jmprobst/jenkins-build-a-private-github-repo-5489">Jenkins - Build a Private GitHub Repo</a> ，非常之詳細。</p>
-<p>而公私鑰產生的部分個人是用 ed25519 相對短很多，至於下指令 <code>ssh-keygen</code> 地方還未確定，個人是在 Jenkins Docker 中進行，但原則是只是要產生公私鑰而已，頂多就是會多出 /.ssh/ 的目錄(?)。</p>
+<p>新增完 Webhook 如果點進去拉到最底下的 Recent Deliveries 有成功出現綠勾勾就是設定完成，要注意若把 ngrok 關閉，下次透過 Github 使用 Jenkins 就必須重新設定 Webhook <del>(所以我都直接綁實驗室電腦 IP)</del>。</p>
+<p>除了 Webhook 以外，再來就是認證的部分。<br>也因為我們的專題是建立在 private repository 進行，而認證的方法很多種，這部分可參考這篇 <a target="_blank" rel="noopener" href="https://dev.to/jmprobst/jenkins-build-a-private-github-repo-5489">Jenkins - Build a Private GitHub Repo</a> ，非常之詳細。</p>
+<p>在公私鑰產生的部分個人是用 ed25519，產生的 KEY 相對短很多，至於下指令 <code>ssh-keygen</code> 地方還未確定，個人是在 Jenkins Docker 中進行，但重點只是要產生公私鑰而已，頂多就是會多出 /.ssh/ 的目錄(?)。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash<span class="comment"># ssh-keygen -t ed25519 -C &lt;e-mail&gt;</span></span><br><span class="line">bash<span class="comment"># cat /root/.ssh/id_ed25519.pub</span></span><br><span class="line">ssh-ed25519 blahblahblahblahblahblahblahblahblahblahblahblahblah</span><br><span class="line">bash<span class="comment"># cat /root/.ssh/id_ed25519</span></span><br><span class="line">-----BEGIN OPENSSH PRIVATE KEY-----</span><br><span class="line">blahblahblahblahblahblahblahblahblahblahblahblah</span><br><span class="line">blahblahblahblahblahblahblahblahblahblahblahblah</span><br><span class="line">blahblahblahblahblahblahblahblahblahblahblahblah</span><br><span class="line">blahblahblahblahblahblahblahblahblahblahblahblah</span><br><span class="line">blahblahblahblahblahblahblahblahblahblahblahblah</span><br><span class="line">-----END OPENSSH PRIVATE KEY-----</span><br></pre></td></tr></table></figure>
 
+<p>Jenkins 端填 private key，Github 端填 public key。</p>
 <h3 id="Jenkins-Theme-optional"><a href="#Jenkins-Theme-optional" class="headerlink" title="Jenkins Theme (optional)"></a>Jenkins Theme (optional)</h3><p>這部分可參考 <a target="_blank" rel="noopener" href="https://github.com/afonsof/jenkins-material-theme/">jenkins-material-theme</a></p>
 <h3 id="Jenkins-Language-optional"><a href="#Jenkins-Language-optional" class="headerlink" title="Jenkins Language (optional)"></a>Jenkins Language (optional)</h3><p>透過 Browser 打開 Jenkins 很意外的是中文介面，查了一下發現是跟著 Browser 的語言設定，但可惜是半殘的中文化，俗稱晶晶體(?)，這種中英交雜的情況要對照網路上的教學文非常痛苦，所以稍微查了一下更改語言的方式。</p>
-<p><a target="_blank" rel="noopener" href="https://plugins.jenkins.io/locale/">locale (jenkins plugin)</a></p>
+<p>Dashboard &gt; (左側)管理 Jenkins &gt; 管理外掛程式 &gt; (可用的) 搜尋 <a target="_blank" rel="noopener" href="https://plugins.jenkins.io/locale/">locale</a> 進行安裝。</p>
+<p>重啟 Jenkins 後，<br>Dashboard &gt; (左側)管理 Jenkins &gt; 設定系統 &gt; 直接找到 Locale 的預設語言，填 <code>ENGLISH</code> 或 <code>us</code> 都可，並且勾選下方的選項「Ignore browser preference and force this language to all users」。</p>
 <h2 id="Jenkins-Freestyle-Project"><a href="#Jenkins-Freestyle-Project" class="headerlink" title="Jenkins Freestyle Project"></a>Jenkins Freestyle Project</h2><p>(待補)</p>
 <h2 id="Jenkins-Pipeline"><a href="#Jenkins-Pipeline" class="headerlink" title="Jenkins Pipeline"></a>Jenkins Pipeline</h2><p>(待補)</p>
 <p><a target="_blank" rel="noopener" href="https://medium.com/getamis/%E7%B2%BE%E9%80%9A-jenkins-pipeline-part1-e8ef48d3543e">精通 Jenkins Pipeline — part1 (Groovy 以及 Jenkinsfile)</a></p>
-<h3 id="Syntax-Error-in-Jenkinsfile"><a href="#Syntax-Error-in-Jenkinsfile" class="headerlink" title="Syntax Error in Jenkinsfile ?"></a>Syntax Error in Jenkinsfile ?</h3><p>VSC Extension<br>Jenkins Pipeline Linter Connector</p>
+<h3 id="Syntax-Error-in-Jenkinsfile"><a href="#Syntax-Error-in-Jenkinsfile" class="headerlink" title="Syntax Error in Jenkinsfile ?"></a>Syntax Error in Jenkinsfile ?</h3><p>推薦 VSC Extension <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=janjoerke.jenkins-pipeline-linter-connector">Jenkins Pipeline Linter Connector</a></p>
 
     </div>
 
@@ -491,12 +493,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">89k</span>
+    <span title="Symbols count total">90k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">2:42</span>
+    <span title="Reading time total">2:43</span>
 </div>
 
         
