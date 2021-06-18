@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-tail.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-tail.png">
+  <link rel="mask-icon" href="/images/tail.svg" color="#222">
+  <meta name="google-site-verification" content="5POakq1iR3soBgSPJX__DRW6QXkfxgZV9yNcnWQ95j0">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-flash.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.eevee.tw","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":260,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="什麼事都不會發生。由於專題需求，緊急上線的文章（大部分章節都還在施工階段）。先拿張 jenkins meme 當封面圖，之後再說w">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【筆記】Jenkins 🛠 Github 當服務生遇到章魚貓">
+<meta property="og:url" content="https://blog.eevee.tw/2021/38e526c88c47/index.html">
+<meta property="og:site_name" content="yctseng&#39;s Blog">
+<meta property="og:description" content="什麼事都不會發生。由於專題需求，緊急上線的文章（大部分章節都還在施工階段）。先拿張 jenkins meme 當封面圖，之後再說w">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://devops.com/wp-content/uploads/2014/12/breaking-builds-done-when-i-say.jpg">
+<meta property="og:image" content="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624041590/blog-posts/2021-06/19-jenkins-unlock.webp">
+<meta property="og:image" content="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624041590/blog-posts/2021-06/19-jenkins-setup.webp">
+<meta property="og:image" content="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624042176/blog-posts/2021-06/19-ngrok.webp">
+<meta property="og:image" content="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624042177/blog-posts/2021-06/19-github-webhook.webp">
+<meta property="article:published_time" content="2021-06-18T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-06-18T19:57:27.790Z">
+<meta property="article:author" content="yctseng">
+<meta property="article:tag" content="CI&#x2F;CD">
+<meta property="article:tag" content="Jenkins">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://devops.com/wp-content/uploads/2014/12/breaking-builds-done-when-i-say.jpg">
+
+<link rel="canonical" href="https://blog.eevee.tw/2021/38e526c88c47/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>【筆記】Jenkins 🛠 Github 當服務生遇到章魚貓 | yctseng's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137531005-1"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-137531005-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">yctseng's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">課金一瞬、嫁一生 <span style="font-size:1em;color:yellow;"><i class="fas fa-comment-dollar" ></i></span></p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">10</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">35</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">42</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.eevee.tw/2021/38e526c88c47/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/yctseng.png">
+      <meta itemprop="name" content="yctseng">
+      <meta itemprop="description" content="競程廢物、資安菜鳥 >_<">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yctseng's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【筆記】Jenkins 🛠 Github 當服務生遇到章魚貓
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-06-19 2021-06-19T00:00:00+08:00" itemprop="dateCreated datePublished" datetime="2021-06-19T00:00:00+08:00">2021-06-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DevOps/" itemprop="url" rel="index"><span itemprop="name">DevOps</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>2.8k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="https://devops.com/wp-content/uploads/2014/12/breaking-builds-done-when-i-say.jpg" alt="cover"></p>
+<p>什麼事都不會發生。<br><strong>由於專題需求，緊急上線的文章（大部分章節都還在施工階段）。</strong><br>先拿張 <a target="_blank" rel="noopener" href="https://devops.com/wp-content/uploads/2014/12/breaking-builds-done-when-i-say.jpg">jenkins meme</a> 當封面圖，之後再說w</p>
+<a id="more"></a>
+
+<h2 id="一些-murmur"><a href="#一些-murmur" class="headerlink" title="一些 murmur"></a>一些 murmur</h2><p>這學期修了一門「雲端大數據基礎建設實務」，真的是完全不在畢業學分的規劃內。<br>課名不重要，亮點是學校和<strong>台GG</strong>合開的新課程(資工/資管限修)，所以內容以台GG合作的大廠輪流分享技術為主，包含 Cisco、Aruba、VMware、Red Hat、Splunk、Oracle 和 SAS，還記得第一堂旁聽的人多到爆炸，我們 Lab 也有不少人修。</p>
+<p>期中期末的分組報告主題為「<strong>如何以最低建置與營運成本建置一個高穩定，高效率的雲端服務</strong>」，原本應該是只要腦補一個系統報告就好，不過在討論題目的時候 <em>stavhaygn</em> 一句<font color='red'>「蛤 我比較想要可以實作的」</font>，注定這條路勢必不好走（笑）</p>
+<div class="note info">
+            <p>💡 專案有放在 <a target="_blank" rel="noopener" href="https://github.com/MacacaHub">MacacaHub Github</a>，名稱呼應當時「<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/2021_Suez_Canal_obstruction">大排長榮</a>」事件時事取名為「EVERCTF」，不知道之後還有沒有時間繼續開發就是了QQ</p>
+          </div>
+
+<p>-<br>結果就是，小組拆成書報組和實作組，分別由我和 <em>stavhaygn</em> 帶頭，<br>題目為「<strong>以基礎架構即程式碼原則實作高穩定之自動化部署 CTF 競賽平台</strong>」。<br>在這個半數成員都在趕碩論的組合，我一開始就不指望實作可以完成，只能走多少算多少XD</p>
+<p>現在，由於實作組的夥伴正在碩論超絕趕進度中，而且我對專案中 DevOps 的環節蠻有興趣，所以在準備期末報告之餘也<del>下海</del>摸 Jenkins 這塊。<del>什麼，你問我的碩論呢？傷心事就別提了。</del></p>
+<br>
+<center>總之</center>
+<center>以下為透過 Github 和 Jenkins Pipeline 進行 CI/CD 的一些筆記</center>
+<center>研究時間不長若有用字上的任何 Bug 都歡迎各位指正!!!</center>
+
+<h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>「CI/CD」中文譯作「持續性整合 / 持續部署or交付」，<br>其原文為 (Continuous Integration / Continuous Deployment 或是 Continuous Delivery) ，個人認為這種把程式從<strong>建構</strong>、<strong>測試</strong>、<strong>部署</strong>，開發流程全部<font color='red'>自動化</font>的技術真是資訊圈的重要突破，雖然繁複的事做久了大家會想寫成 script，但對於整套都自動化做起來又是另一回事 XD</p>
+<p>Jenkins 是基於 Java 在 CI/CD 這個領域中老牌的服務，網路上的介紹文數不勝數，尤其 iThome 鐵人賽有不少優文，我想這裡就不花時間介紹了，另外這篇主要是針對 EVERCTF 系統設計上 CI/CD 的筆記，因此在其他的工具使用上不會有太多著墨 (不然扯到 Git、Docker 等等的不知道要花幾篇介紹XDDDDD)。</p>
+<h3 id="System-overview"><a href="#System-overview" class="headerlink" title="System overview"></a>System overview</h3><p>簡單說明一下 EVERCTF 在 CI/CD 這塊的運作吧 : 3<br>下面是預期中的資料結構，不過畢竟還沒實作完還有很多改善空間。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(workspace)</span><br><span class="line">+- .root</span><br><span class="line">+- jenkinsfile</span><br><span class="line">    +- pwn</span><br><span class="line">        +- pwn1</span><br><span class="line">            +- config.yml</span><br><span class="line">            +- Dockerfile</span><br><span class="line">            +- blahblahblah...</span><br><span class="line">        +- pwn2</span><br><span class="line">    +-web</span><br><span class="line">        +- web1</span><br><span class="line">        +- web2</span><br></pre></td></tr></table></figure>
+
+<p><img src="" alt="系統架構(待補)"></p>
+<p><strong>目前的規劃</strong><br>總之，流程上是希望由出題者主動上傳至 Github (先不論是同 Organization 進行 PUSH 還是以協作者 PR)，然後觸發 Jenkins 進行檢查後將 docker image 推到 Docker registry，再由 K8s 進行 deploy，最後 Jenkins 針對題目進行測試。</p>
+<h2 id="Config"><a href="#Config" class="headerlink" title="Config"></a>Config</h2><p>由於我平常不太會接觸到自帶 UI 的開源工具，所以在設定上摸了蠻久的 XD</p>
+<h3 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h3><div class="note info">
+            <p>該篇文章的測試環境分別在 Ubuntu 18.04 和 MacOS 10.15，只要是 Unix 體系的應該都不太會有問題…吧 (Jenkins 版本以及 Docker 版本待補)</p>
+          </div>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ docker run \</span><br><span class="line">  --name jenkins-blueocean \</span><br><span class="line">  -d \</span><br><span class="line">  -u root \</span><br><span class="line">  -p 9000:8080 \</span><br><span class="line">  -v jenkins-data:/var/jenkins_home \</span><br><span class="line">  -v /var/run/docker.sock:/var/run/docker.sock \</span><br><span class="line">  jenkinsci/blueocean</span><br></pre></td></tr></table></figure>
+
+<p>簡單說明 parameter 用途</p>
+<ul>
+<li>line 2: 為 images 命名</li>
+<li>line 3: 背景執行 Container</li>
+<li>line 4: 以 root 身份使用</li>
+<li>line 5: 將 Container 內的 Port 8080 對應到 Host 端的 9000</li>
+<li>line 6: 將 Host 端的 jenkins-data Volume 掛載到 Container 內的 /var/jenkins_home</li>
+<li>line 7: (待補) 應該是讓容器化 Jenkins 可以操作 Host 端的其他 Container</li>
+<li>line 8: Docker image from DockerHub <a target="_blank" rel="noopener" href="https://hub.docker.com/r/jenkinsci/blueocean/">jenkinsci/blueocean</a></li>
+</ul>
+<p>關於 line 8 所使用的 Image，雖然 Jenkins 官方有另一個 <a target="_blank" rel="noopener" href="https://hub.docker.com/r/jenkinsci/jenkins">jenkinsci/jenkins</a> 比較像正版的 image (?)，不過從 <a target="_blank" rel="noopener" href="https://www.jenkins.io/doc/book/installing/docker/">User Handbook</a> 來看官方比較推 jenkinsci/blueocean，該版本加入了 <a target="_blank" rel="noopener" href="https://www.jenkins.io/doc/book/blueocean/">Blue Ocean</a> 的使用介面，簡單講就是官方 UI <del>太醜</del> 太傳統，所以加入了新的 UI（笑）。</p>
+<p>-<br>若成功執行上述的 <code>docker run</code>，可以從 <code>docker ps -a</code> 確認到正在運行的 Container。<br>從 <code>127.0.0.1:9000</code> 會發現需要 Unlock Jenkins，用下方指令直接從 Jenkins Container 內抓 password。</p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624041590/blog-posts/2021-06/19-jenkins-unlock.webp" alt=" "> </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ docker <span class="built_in">exec</span> -it jenkins-blueocean cat /var/jenkins_home/secrets/initialAdminPassword</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624041590/blog-posts/2021-06/19-jenkins-setup.webp" alt=" "></p>
+<p>選左邊的安裝套件，裡面也包含之後會用到的 <a target="_blank" rel="noopener" href="https://plugins.jenkins.io/github/">Github plugin</a>，將剩下的設定點一點就算是完成了！</p>
+<h3 id="Github-Webhook"><a href="#Github-Webhook" class="headerlink" title="Github Webhook"></a>Github Webhook</h3><p><img src="" alt=" Github 觸發 Jenkins 示意圖(待補)"></p>
+<p>這部分可參考這篇 <a target="_blank" rel="noopener" href="https://zoejoyuliao.medium.com/%E9%80%8F%E9%81%8E-github-webhook-%E8%A7%B8%E7%99%BC%E6%9C%AC%E5%9C%B0-jenkins-pipeline-%E8%AE%93%E4%BD%A0-push-code-%E5%88%B0-github-%E5%B0%B1%E6%9C%83%E8%87%AA%E5%8B%95%E8%B7%91-ci-cd-7c4bd7a22446">透過 GitHub Webhook 讓你 push code 到 Github 就會自動觸發本地 Jenkins Pipeline</a></p>
+<p>為了要讓 Github 能夠主動觸發 Jenkins 進行 CI/CD，需要讓 Jenkins 有個對外的 Domain/IP，若沒有實體 IP 可以使用 ngrok 來產生 Domain，要注意 Port 是剛剛 <code>Docekr run</code> 設定的 9000，反之如果有實體 IP 就可以跳過 ngrok。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ./ngrok http 9000</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624042176/blog-posts/2021-06/19-ngrok.webp" alt=" "></p>
+<p><img src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624042177/blog-posts/2021-06/19-github-webhook.webp" alt=" "></p>
+<p>新增完 Webhook 如果點進去拉到最底下的 Recent Deliveries 有成功出現綠勾勾就是設定完成，要注意若把 ngrok 關閉，下次透過 Github 使用 Jenkins 就必須重新設定 Webhook <del>(所以我都直接綁實驗室 IP)</del>。</p>
+<p>除了 Webhook 以外，再來就是認證的部分。<br>也因為我們的專題是建立在 private repository 進行，而認證的方法很多種。</p>
+<p>這部分可參考這篇 <a target="_blank" rel="noopener" href="https://dev.to/jmprobst/jenkins-build-a-private-github-repo-5489">Jenkins - Build a Private GitHub Repo</a> ，非常之詳細。</p>
+<p>而公私鑰產生的部分個人是用 ed25519 相對短很多，至於下指令 <code>ssh-keygen</code> 地方還未確定，個人是在 Jenkins Docker 中進行，但原則是只是要產生公私鑰而已，頂多就是會多出 /.ssh/ 的目錄(?)。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash<span class="comment"># ssh-keygen -t ed25519 -C &lt;e-mail&gt;</span></span><br><span class="line">bash<span class="comment"># cat /root/.ssh/id_ed25519.pub</span></span><br><span class="line">ssh-ed25519 blahblahblahblahblahblahblahblahblahblahblahblahblah</span><br><span class="line">bash<span class="comment"># cat /root/.ssh/id_ed25519</span></span><br><span class="line">-----BEGIN OPENSSH PRIVATE KEY-----</span><br><span class="line">blahblahblahblahblahblahblahblahblahblahblahblah</span><br><span class="line">blahblahblahblahblahblahblahblahblahblahblahblah</span><br><span class="line">blahblahblahblahblahblahblahblahblahblahblahblah</span><br><span class="line">blahblahblahblahblahblahblahblahblahblahblahblah</span><br><span class="line">blahblahblahblahblahblahblahblahblahblahblahblah</span><br><span class="line">-----END OPENSSH PRIVATE KEY-----</span><br></pre></td></tr></table></figure>
+
+<h3 id="Jenkins-Theme-optional"><a href="#Jenkins-Theme-optional" class="headerlink" title="Jenkins Theme (optional)"></a>Jenkins Theme (optional)</h3><p>這部分可參考 <a target="_blank" rel="noopener" href="https://github.com/afonsof/jenkins-material-theme/">jenkins-material-theme</a></p>
+<h3 id="Jenkins-Language-optional"><a href="#Jenkins-Language-optional" class="headerlink" title="Jenkins Language (optional)"></a>Jenkins Language (optional)</h3><p>透過 Browser 打開 Jenkins 很意外的是中文介面，查了一下發現是跟著 Browser 的語言設定，但可惜是半殘的中文化，俗稱晶晶體(?)，這種中英交雜的情況要對照網路上的教學文非常痛苦，所以稍微查了一下更改語言的方式。</p>
+<p><a target="_blank" rel="noopener" href="https://plugins.jenkins.io/locale/">locale (jenkins plugin)</a></p>
+<h2 id="Jenkins-Freestyle-Project"><a href="#Jenkins-Freestyle-Project" class="headerlink" title="Jenkins Freestyle Project"></a>Jenkins Freestyle Project</h2><p>(待補)</p>
+<h2 id="Jenkins-Pipeline"><a href="#Jenkins-Pipeline" class="headerlink" title="Jenkins Pipeline"></a>Jenkins Pipeline</h2><p>(待補)</p>
+<p><a target="_blank" rel="noopener" href="https://medium.com/getamis/%E7%B2%BE%E9%80%9A-jenkins-pipeline-part1-e8ef48d3543e">精通 Jenkins Pipeline — part1 (Groovy 以及 Jenkinsfile)</a></p>
+<h3 id="Syntax-Error-in-Jenkinsfile"><a href="#Syntax-Error-in-Jenkinsfile" class="headerlink" title="Syntax Error in Jenkinsfile ?"></a>Syntax Error in Jenkinsfile ?</h3><p>VSC Extension<br>Jenkins Pipeline Linter Connector</p>
+
+    </div>
+
+    
+    
+    <div>
+    
+        <div style="width: 168px; margin: auto"><img src="/imges/end.png"></div>
+    
+</div>
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>yctseng
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://blog.eevee.tw/2021/38e526c88c47/" title="【筆記】Jenkins 🛠 Github 當服務生遇到章魚貓">https://blog.eevee.tw/2021/38e526c88c47/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-TW" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/CI-CD/" rel="tag"><i class="fa fa-tag"></i> CI/CD</a>
+              <a href="/tags/Jenkins/" rel="tag"><i class="fa fa-tag"></i> Jenkins</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/90c9078c684e/" rel="prev" title="Blog Note 0x02">
+      <i class="fa fa-chevron-left"></i> Blog Note 0x02
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B-murmur"><span class="nav-number">1.</span> <span class="nav-text">一些 murmur</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Intro"><span class="nav-number">2.</span> <span class="nav-text">Intro</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#System-overview"><span class="nav-number">2.1.</span> <span class="nav-text">System overview</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Config"><span class="nav-number">3.</span> <span class="nav-text">Config</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Environment"><span class="nav-number">3.1.</span> <span class="nav-text">Environment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Github-Webhook"><span class="nav-number">3.2.</span> <span class="nav-text">Github Webhook</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jenkins-Theme-optional"><span class="nav-number">3.3.</span> <span class="nav-text">Jenkins Theme (optional)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jenkins-Language-optional"><span class="nav-number">3.4.</span> <span class="nav-text">Jenkins Language (optional)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jenkins-Freestyle-Project"><span class="nav-number">4.</span> <span class="nav-text">Jenkins Freestyle Project</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jenkins-Pipeline"><span class="nav-number">5.</span> <span class="nav-text">Jenkins Pipeline</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Syntax-Error-in-Jenkinsfile"><span class="nav-number">5.1.</span> <span class="nav-text">Syntax Error in Jenkinsfile ?</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="yctseng"
+      src="/images/yctseng.png">
+  <p class="site-author-name" itemprop="name">yctseng</p>
+  <div class="site-description" itemprop="description">競程廢物、資安菜鳥 >_<</div>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yctseng1227" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yctseng1227" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/yctseng1227/" title="Facebook → https:&#x2F;&#x2F;www.facebook.com&#x2F;yctseng1227&#x2F;" rel="noopener" target="_blank"><i class="fab fa-facebook fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.instagram.com/yctseng1227/" title="Instagram → https:&#x2F;&#x2F;www.instagram.com&#x2F;yctseng1227&#x2F;" rel="noopener" target="_blank"><i class="fab fa-instagram fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://codeforces.com/profile/yctseng/" title="Codeforces → http:&#x2F;&#x2F;codeforces.com&#x2F;profile&#x2F;yctseng&#x2F;" rel="noopener" target="_blank"><i class="fas fa-poll fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://ctftime.org/user/65888" title="CTFtime → https:&#x2F;&#x2F;ctftime.org&#x2F;user&#x2F;65888" rel="noopener" target="_blank"><i class="fas fa-flag-checkered fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/MacacaHub-107811803945876/" title="MacacaHub → https:&#x2F;&#x2F;www.facebook.com&#x2F;MacacaHub-107811803945876&#x2F;" rel="noopener" target="_blank"><i class="fas fa-chess-queen fa-fw"></i></a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友站Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.tinytsunami.info/" title="https:&#x2F;&#x2F;www.tinytsunami.info" rel="noopener" target="_blank">羊羽手札</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://meetonfriday.com/" title="https:&#x2F;&#x2F;meetonfriday.com" rel="noopener" target="_blank">星期五。見面</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.laiyelling.com/" title="https:&#x2F;&#x2F;www.laiyelling.com" rel="noopener" target="_blank">LaiYelling 的地下室</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://sophiexin9636.github.io/" title="https:&#x2F;&#x2F;sophiexin9636.github.io" rel="noopener" target="_blank">Shin's Blog</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-bong"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yctseng</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">89k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">2:42</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '99355febe0e87ac5d2e5',
+      clientSecret: '55b786b598dd7e9aae4e803d2c97bb059dc164fc',
+      repo        : 'yctseng1227.github.io',
+      owner       : 'yctseng1227',
+      admin       : ['yctseng1227'],
+      id          : '578bcabcedaa77b12755c0c597461c32',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+    </div>
+</body>
+</html>
