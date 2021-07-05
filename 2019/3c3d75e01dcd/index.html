@@ -702,10 +702,11 @@ darkmode.showWidget();
 
 <script>
 NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+  NexT.utils.getScript('/lib/gitalk/gitalk.min.js', () => {
     var gitalk = new Gitalk({
       clientID    : '99355febe0e87ac5d2e5',
       clientSecret: '55b786b598dd7e9aae4e803d2c97bb059dc164fc',
+      accessToken: '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',
       repo        : 'yctseng1227.github.io',
       owner       : 'yctseng1227',
       admin       : ['yctseng1227'],
