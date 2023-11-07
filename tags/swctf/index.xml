@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>SWCTF - Tag - Cyris&#39;s Blog</title>
+        <link>https://blog.cyris.tw/tags/swctf/</link>
+        <description>SWCTF - Tag - Cyris&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://blog.cyris.tw/tags/swctf/" rel="self" type="application/rss+xml" /><item>
+    <title>[Writeup] SWCTF 0x7e4</title>
+    <link>https://blog.cyris.tw/posts/2021/swctf-0x7e4-writeups/</link>
+    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author>Cyris Tseng</author>
+    <guid>https://blog.cyris.tw/posts/2021/swctf-0x7e4-writeups/</guid>
+    <description><![CDATA[<p>2021 首篇!! 新年快樂~</p>
+<p>這場 SWCTF 由 <strong>逢甲大學黑客社</strong>、<strong>靜宜大學行雲者研發基地</strong> 及 <strong>台中科技大學資訊研究社</strong> 聯合設計的 CTF 競賽。</p>]]></description>
+</item>
+</channel>
+</rss>

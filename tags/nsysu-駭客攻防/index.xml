@@ -1,0 +1,38 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>NSYSU 駭客攻防 - Tag - Cyris&#39;s Blog</title>
+        <link>https://blog.cyris.tw/tags/nsysu-%E9%A7%AD%E5%AE%A2%E6%94%BB%E9%98%B2/</link>
+        <description>NSYSU 駭客攻防 - Tag - Cyris&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 09 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://blog.cyris.tw/tags/nsysu-%E9%A7%AD%E5%AE%A2%E6%94%BB%E9%98%B2/" rel="self" type="application/rss+xml" /><item>
+    <title>[NSYSU 駭客攻防] HW 0x02 Writeups</title>
+    <link>https://blog.cyris.tw/posts/2020/nsysu-htcf-hw2/</link>
+    <pubDate>Wed, 09 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>Cyris Tseng</author>
+    <guid>https://blog.cyris.tw/posts/2020/nsysu-htcf-hw2/</guid>
+    <description><![CDATA[<p>Writeups 搬自 <a href="https://github.com/MacacaHub/CTF-writeups/blob/master/HTCF-CTF-2020/hw2/readme.md" target="_blank" rel="noopener noreffer ">MacacaHub HTCF HW 0x02</a></p>
+<p>Author: <strong>@stavhaygn</strong><br>
+Writeup By: <strong>@yctseng1227</strong></p>]]></description>
+</item>
+<item>
+    <title>[NSYSU 駭客攻防] Midterm Writeups</title>
+    <link>https://blog.cyris.tw/posts/2020/nsysu-htcf-midterm-writeups/</link>
+    <pubDate>Mon, 09 Nov 2020 00:00:00 &#43;0000</pubDate>
+    <author>Cyris Tseng</author>
+    <guid>https://blog.cyris.tw/posts/2020/nsysu-htcf-midterm-writeups/</guid>
+    <description><![CDATA[<p></p>
+<p>Writeups 搬自 <a href="https://github.com/MacacaHub/CTF-writeups/blob/master/HTCF-CTF-2020/midterm/readme.md" target="_blank" rel="noopener noreffer ">MacacaHub HTCF Midterm writeups</a></p>
+<p>Author: <strong>@stavhaygn</strong><br>
+Writeup By: <strong>@yctseng1227</strong></p>]]></description>
+</item>
+<item>
+    <title>[NSYSU 駭客攻防] HW 0x01 Writeup</title>
+    <link>https://blog.cyris.tw/posts/2020/nsysu-htcf-hw1/</link>
+    <pubDate>Tue, 03 Nov 2020 00:00:00 &#43;0000</pubDate>
+    <author>Cyris Tseng</author>
+    <guid>https://blog.cyris.tw/posts/2020/nsysu-htcf-hw1/</guid>
+    <description><![CDATA[<p>Writeups 搬自 <a href="https://github.com/MacacaHub/CTF-writeups/blob/master/HTCF-CTF-2020/hw1/readme.md" target="_blank" rel="noopener noreffer ">MacacaHub HTCF HW 0x01 - Reverse Shell</a></p>
+<p>Author: <strong>@stavhaygn</strong><br>
+Writeup By: <strong>@yctseng1227</strong></p>]]></description>
+</item>
+</channel>
+</rss>

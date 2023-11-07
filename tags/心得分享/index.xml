@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>心得分享 - Tag - Cyris&#39;s Blog</title>
+        <link>https://blog.cyris.tw/tags/%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</link>
+        <description>心得分享 - Tag - Cyris&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 14 Jul 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://blog.cyris.tw/tags/%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+    <title>[Sharing] ASIS CTF Quals 2020</title>
+    <link>https://blog.cyris.tw/posts/2020/asisctf-qual-2020/</link>
+    <pubDate>Tue, 14 Jul 2020 00:00:00 &#43;0000</pubDate>
+    <author>Cyris Tseng</author>
+    <guid>https://blog.cyris.tw/posts/2020/asisctf-qual-2020/</guid>
+    <description><![CDATA[<p></p>
+<p>暑假第一場 CTF online，同時也是我們 <strong>MacacaHub</strong> 的今年第三戰~<br>
+不過同時也被隊長告知有一定的難度要有心理準備，嗯、真滴難QwQ<br>
+題組全部共 31 題，雖然只解 4 題還有 Rank 151 / 815 &hellip; 太可怕了==</p>
+<p><a href="https://ctftime.org/event/964" target="_blank" rel="noopener noreffer ">CTFtime link</a></p>]]></description>
+</item>
+</channel>
+</rss>

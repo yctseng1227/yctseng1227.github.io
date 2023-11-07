@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>DevOps - Tag - Cyris&#39;s Blog</title>
+        <link>https://blog.cyris.tw/tags/devops/</link>
+        <description>DevOps - Tag - Cyris&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Jun 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://blog.cyris.tw/tags/devops/" rel="self" type="application/rss+xml" /><item>
+    <title>[Sharing] Jenkins 🛠 Github 當服務生遇到章魚貓</title>
+    <link>https://blog.cyris.tw/posts/2021/cicd-jenkins-with-github-note/</link>
+    <pubDate>Sat, 19 Jun 2021 00:00:00 &#43;0000</pubDate>
+    <author>Cyris Tseng</author>
+    <guid>https://blog.cyris.tw/posts/2021/cicd-jenkins-with-github-note/</guid>
+    <description><![CDATA[<p></p>
+<p>Nice question.</p>]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>[Sharing] 2020 Summer Conf. PART 1 - Cyris&#39;s Blog</title><meta name="Description" content="This is Cyris&#39;s blog, recording life and sharing security learning."><meta property="og:title" content="[Sharing] 2020 Summer Conf. PART 1" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.cyris.tw/posts/2020/2020-summer-conf-p1/" /><meta property="og:image" content="https://blog.cyris.tw/img/cyris.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-08-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-08-05T00:00:00+00:00" /><meta property="og:site_name" content="Cyris&#39;s Blog" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://blog.cyris.tw/img/cyris.png"/>
+
+<meta name="twitter:title" content="[Sharing] 2020 Summer Conf. PART 1"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@yctseng1227"/>
+<meta name="application-name" content="Cyris&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Cyris&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://blog.cyris.tw/posts/2020/2020-summer-conf-p1/" /><link rel="prev" href="https://blog.cyris.tw/posts/2020/asisctf-qual-2020/" /><link rel="next" href="https://blog.cyris.tw/posts/2020/2020-summer-conf-p2/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Sharing] 2020 Summer Conf. PART 1",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/blog.cyris.tw\/posts\/2020\/2020-summer-conf-p1\/"
+        },"image": ["https:\/\/blog.cyris.tw\/img\/cyris.png"],"genre": "posts","keywords": "AIS3, COSCUP","wordcount":  182 ,
+        "url": "https:\/\/blog.cyris.tw\/posts\/2020\/2020-summer-conf-p1\/","datePublished": "2020-08-05T00:00:00+00:00","dateModified": "2020-08-05T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Cyris","logo": "https:\/\/blog.cyris.tw\/img\/cyris.png"},"author": {
+                "@type": "Person",
+                "name": "Cyris Tseng"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[Sharing] 2020 Summer Conf. PART 1</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://blog.cyris.tw" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Cyris Tseng</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E7%94%9F%E6%B4%BB%E6%9C%AD%E8%A8%98-free-writing/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活札記 Free Writing</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2020-08-05">2020-08-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;182 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ais3-新型態資安食物實務課程-727---82-ntust">AIS3 新型態資安食物實務課程 (7/27 - 8/2) @NTUST</a></li>
+        <li><a href="#coscup-開源人年會-81---82-ntust">COSCUP 開源人年會 (8/1 - 8/2) @NTUST</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_800/v1619884192/blog-posts/2020-08/19-cover1.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1619884192/blog-posts/2020-08/19-cover1.webp, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1619884192/blog-posts/2020-08/19-cover1.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1619884192/blog-posts/2020-08/19-cover1.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_800/v1619884192/blog-posts/2020-08/19-cover1.webp"
+        title=" " /></p>
+<h3 id="ais3-新型態資安食物實務課程-727---82-ntust">AIS3 新型態資安<del>食物</del>實務課程 (7/27 - 8/2) @NTUST</h3>
+<p>必須通過 <a href="../ais3-2020-preexam-writeups/" rel="">AIS3 Pre-exam</a> 才能參加的資安課程，今年印象中最後錄取 186 名，換句話說就算來自非資安領域的同學，能來參加代表也有一定的實力。課程一共七天，採五天上課＋兩天分組專題報告，而今年的分組類別有 <strong>關鍵基礎設施</strong>、<strong>國家安全</strong>、<strong>數位鑑識</strong>、<strong>網頁安全</strong>、<strong>軟體安全開發</strong>，分組的題目會和專題有關，而且要在課餘時間生出來，也因為事前打聽到常常會弄到半夜，所以我在地人還特地申請台科大的宿舍 = w =</p>
+<p>然後&hellip; 可以從官方的安排感受到 <code>關鍵基礎設施</code> &amp; <code>國家安全</code> 投注特別多的心力 XD</p>
+<br>
+<p>當時在 pre-exam 的聊天室聽到 <strong>關鍵基礎設施</strong> 課程會教內網滲透覺得很有趣，所以我填志願放在第一順位，結果課程主要是以工控系統（ICS）為主的資安議題，<a href="https://ithelp.ithome.com.tw/articles/10186904" target="_blank" rel="noopener noreffer ">伊朗核電廠病毒 Stuxnet</a> 和 <a href="https://www.ithome.com.tw/news/125098" target="_blank" rel="noopener noreffer ">2018 台積電產線中毒事件</a> 常常被拿出來鞭(X) 警惕(O)，焦點多圍繞在<code>Modbus 工業領域通訊協定</code>、<code>OPC UA 自動化技術的傳輸協定</code>、<code>SCADA 系統</code>，導致在思考專題題目時相當頭疼，畢竟每個真要做起來規模都不小（或是只用模擬的方式），這裡也感謝組員用力 CARRY，臨時生出針對 Operator 和 PLC 之間的明文傳送，用 <code>訊息識別碼(MAC)</code> 上簽章防 <code>中間人攻擊（Man-in-the-middle attack）</code>，也讓我幾乎在旁邊當廢人 QwQ</p>
+<p>其他比較有趣的課像是<strong>數位鑑識</strong>由 @CK 主講的「Chimera APT 攻擊調查：案例及調查手法分享」，印象中為了讓我們聽懂前面補很多 Domain knowledge，結果最後重點反而講得很匆忙稍嫌可惜，不過內容有趣到 @stavhaygn 一度想跳槽到數位鑑識組XD 。Lab 方面教 <code>moloch</code> 分析 <code>.pcap</code> 封包，看來以後除了 Wireshark 又多了一套工具&hellip;<del>如果我還記得怎麼用的話</del>。</p>
+<p><strong>軟體開發安全</strong>由 @Ysc 主講的「開發安全與資安測試」，重點放在<strong>自動化</strong>、<strong>自動化</strong> 還有&hellip; <strong>自動化!!</strong>（正色），真的是講師開頭結尾都在強調的東西XDDD 這門重點放在DevOps的<code>CI/CD</code>（即自動化整合及部署），並加入資安各種自動化檢查測試，形成 <strong>DevSecOps</strong> 讓整個流程能夠更完善，這也讓我發現身邊有很多常用工具有這方面的應用，包括 GitHub、GitLab、Docker、Jenkins、Docker，真的算是開了眼界，<del>應該是我自己太少接觸哭了</del>。 另外 鄭欣明教授 帶來的實作 4G 偽基地站提取手機<code>IMSI</code>也蠻有趣，只是我們自己用手機找不到<code>IMSI</code>沒辦法驗證（只能挖到<code>IMEI</code>）有點好笑，最後做完我還幫官方提供的電腦裝ASCII水族箱 嘻嘻</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-ais3-1.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-ais3-1.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-ais3-1.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-ais3-1.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-ais3-1.webp"
+        title=" " /></p>
+<p>所以我說那個內網滲透呢？嗯、他被放在<strong>網頁安全</strong>由楊鈞皓 How 主講的「紅人演練」，是個很精實的 AD 滲透實作，包含一些提權及橫向滲透，跟我之前的<strong>網路安全</strong>專題有 87% 像，只是滲透等級又更高了許多，甚至到有點跟不上的程度 XD  最後<strong>國家安全</strong>唔嗯&hellip; 只能說很尷尬，大方向都是都是對網路言論或是資訊進行分析，感覺和這方面有關的台下都&hellip; Zzzz 都在念舊上午的紅人演練，看來大家都比較喜歡偏實務演練的課 = w =</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-ais3-2.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-ais3-2.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-ais3-2.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-ais3-2.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-ais3-2.webp"
+        title=" " /></p>
+<p>結果在無聊之餘在報復性聊天室還出現很多CSS攻擊XDDDD<br>
+最後群組就出現這張圖&hellip;. 笑死 <del>CSY明明沒參加還是會被信徒拿出來喊</del></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-ais3-meme.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-ais3-meme.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-ais3-meme.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-ais3-meme.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-ais3-meme.webp"
+        title=" " /></p>
+<p><br><br></p>
+<p>噢對 Day 1 &amp; 2 晚上都由額外的活動，所以晚餐是由<strong>奧義</strong>贊助&hellip;嗯？你問我他們不是賣冰淇淋的嗎，不僅如此，他們還有出過桌遊哩XD</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-ais3-3.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-ais3-3.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-ais3-3.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-ais3-3.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-ais3-3.webp"
+        title=" " />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-ais3-4.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-ais3-4.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-ais3-4.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-ais3-4.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-ais3-4.webp"
+        title=" " /></p>
+<p>課程共筆的部分可以參考 <a href="https://hackmd.io/@AIS3-official/AIS3-2020/" target="_blank" rel="noopener noreffer ">https://hackmd.io/@AIS3-official/AIS3-2020/</a>，也可以去朝聖一下報復性聊天室，只是現在回去看已經沒那麼精采，當時真的是有些高頻率閃動是看了眼睛會痛 wwwww</p>
+<p>大概就是這樣，最後兩天的專題感覺很微妙。還沒報告的組別忙著報告，報告完的多半也無心繼續聽(?) 聽說是從去年改成專題形式，感覺得出來很多人比較想玩 Final CTF，不過值得一提的是，我&hellip; 不小心發現<strong>網路安全</strong>組的釣魚實驗，而且我還是第一個在官方群組反應的，因此對話被節錄放在他們的報告上，某方面也是一種成就達成吧（抹臉</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1690000796/blog-posts/2020-08/19-ais3-expose-phishing-website.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1690000796/blog-posts/2020-08/19-ais3-expose-phishing-website.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1690000796/blog-posts/2020-08/19-ais3-expose-phishing-website.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1690000796/blog-posts/2020-08/19-ais3-expose-phishing-website.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1690000796/blog-posts/2020-08/19-ais3-expose-phishing-website.webp"
+        title=" " /></p>
+<p>簡言之就是</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">Official</th>
+<th style="text-align:center">Fake</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Website domain</td>
+<td style="text-align:center">ais3.org</td>
+<td style="text-align:center">ais3.tw</td>
+</tr>
+<tr>
+<td style="text-align:center">Instagram</td>
+<td style="text-align:center">@ais3tw</td>
+<td style="text-align:center">@ais3org</td>
+</tr>
+</tbody>
+</table>
+<p>他們巧妙的把官方的命名不統一對調，並把問卷 QR code 貼在會場各個角落，有種破壞了我們和官方之間的信任感，<del>但也因此有幸認識到游桑和 Tina 兩位大大 www</del></p>
+<p><br><br></p>
+<h3 id="coscup-開源人年會-81---82-ntust">COSCUP 開源人年會 (8/1 - 8/2) @NTUST</h3>
+<p>有沒有覺得 COSCUP 的時間有點眼熟 &hellip; 嗯沒錯，剛好就是 AIS3 的最後兩天專題報告！而且還同樣都在台科大（大概走路 5 分鐘的距離）XD
+所以當我<strong>關鍵基礎設施</strong>在專題報告 Day 1 上午報完，就開始規劃想聽的議程（下午是<strong>國家安全</strong>專題），然後偷偷溜出去（笑</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-coscup-1.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-coscup-1.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-coscup-1.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-coscup-1.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-coscup-1.webp"
+        title=" " /></p>
+<p>攤位的部分，因為 @stavhaygn 在前幾天在 <strong>MOPCON</strong> 的粉絲頁底下 tag 我開玩笑地説想拿貼紙，結果我翹課過去馬上就被官方認出來，還破例讓我多拿幾張，笑死www 到現在還是不太敢貼在筆電上&gt;///&lt;</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-coscup-2.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-coscup-2.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-coscup-2.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-coscup-2.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-coscup-2.webp"
+        title=" " /></p>
+<p>除了到處晃晃拿貼紙，我還在官方攤買了酒杯和線材包，被同行友人笑每次翹課都會有收穫（幹w</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-coscup-3.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-coscup-3.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-coscup-3.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-coscup-3.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-coscup-3.webp"
+        title=" " /></p>
+<p>議程部分都大概平均 30 min，Day 1 主要都在逛攤、Day 2 由於很想聽<strong>網路安全</strong>的釣魚專題 還有 @stavhaygn 的專題，所以偷溜出去的頻率少了一些，印象中聽的議程有<code>GCP</code>、<code>SDN x Cloud</code>、<code>Golang</code>、<code>Vault 私鑰管理</code>，還有個<code>Open Source 推廣分享</code>是去朝聖常常在 FB 和小馬拌嘴的蝦蝦姊（笑）。我在開源界的時間不算長，平常也只是偶爾摳來用，所以跑的主題幾乎都是聽過但沒機會摸，算是去增廣見聞，另外、還有認親 XDDDD</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-coscup-4.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-coscup-4.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-coscup-4.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-coscup-4.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-coscup-4.webp"
+        title=" " /></p>
+<p>噢對了，另外我還拿到了神奇序號，主要是右邊的<code>.tw</code>免費註冊域名，只是想 domain name 是個令人頭疼的事QQ 另外左邊的<code>.GAY</code>工商真的頗炫wwww <del>還一直被朋友鼓吹去買個，真是謝了</del></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-coscup-5.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-coscup-5.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-coscup-5.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-coscup-5.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-coscup-5.webp"
+        title=" " /></p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-08-05</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/2020/2020-summer-conf-p1/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/ais3/">AIS3</a>,&nbsp;<a href="/tags/coscup/">COSCUP</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2020/asisctf-qual-2020/" class="prev" rel="prev" title="[Sharing] ASIS CTF Quals 2020"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>[Sharing] ASIS CTF Quals 2020</a>
+            <a href="/posts/2020/2020-summer-conf-p2/" class="next" rel="next" title="[Sharing] 2020 Summer Conf. PART 2">[Sharing] 2020 Summer Conf. PART 2<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.120.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://blog.cyris.tw" target="_blank">Cyris Tseng</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":20},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment 💬","lightTheme":"github-light","repo":"yctseng1227/blog-comments"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>[Sharing] HITCON Education Defense 2021 - Cyris&#39;s Blog</title><meta name="Description" content="This is Cyris&#39;s blog, recording life and sharing security learning."><meta property="og:title" content="[Sharing] HITCON Education Defense 2021" />
+<meta property="og:description" content="住手！
+不要再把我們的機器關機 LAAAAAAAAAAAAAAAA" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.cyris.tw/posts/2021/hitcon-education-defense-2021/" /><meta property="og:image" content="https://blog.cyris.tw/img/cyris.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-11-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-11-01T00:00:00+00:00" /><meta property="og:site_name" content="Cyris&#39;s Blog" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://blog.cyris.tw/img/cyris.png"/>
+
+<meta name="twitter:title" content="[Sharing] HITCON Education Defense 2021"/>
+<meta name="twitter:description" content="住手！
+不要再把我們的機器關機 LAAAAAAAAAAAAAAAA"/>
+<meta name="twitter:site" content="@yctseng1227"/>
+<meta name="application-name" content="Cyris&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Cyris&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://blog.cyris.tw/posts/2021/hitcon-education-defense-2021/" /><link rel="prev" href="https://blog.cyris.tw/posts/2021/my-first-malware-study/" /><link rel="next" href="https://blog.cyris.tw/posts/2021/hitcon2021-devcore-web-challenge/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Sharing] HITCON Education Defense 2021",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/blog.cyris.tw\/posts\/2021\/hitcon-education-defense-2021\/"
+        },"image": ["https:\/\/blog.cyris.tw\/img\/cyris.png"],"genre": "posts","keywords": "HITCON Defense, AIS3","wordcount":  490 ,
+        "url": "https:\/\/blog.cyris.tw\/posts\/2021\/hitcon-education-defense-2021\/","datePublished": "2021-11-01T00:00:00+00:00","dateModified": "2021-11-01T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Cyris","logo": "https:\/\/blog.cyris.tw\/img\/cyris.png"},"author": {
+                "@type": "Person",
+                "name": "Cyris Tseng"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[Sharing] HITCON Education Defense 2021</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://blog.cyris.tw" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Cyris Tseng</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8-cyber-security/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>資訊安全 Cyber Security</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2021-11-01">2021-11-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;490 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#教育訓練">教育訓練</a></li>
+    <li><a href="#競賽前夜">競賽前夜</a></li>
+    <li><a href="#競賽當日">競賽當日</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#1-盤點設備">1. 盤點設備</a></li>
+            <li><a href="#2-基本檢查漏洞檢測弱點掃描">2. 基本檢查/漏洞檢測/弱點掃描</a></li>
+            <li><a href="#3-更新前備份">3. 更新前備份</a></li>
+            <li><a href="#4-帳號管理">4. 帳號管理</a></li>
+            <li><a href="#5-windows-ad">5. Windows AD</a></li>
+            <li><a href="#6-擅用工具">6. 擅用工具</a></li>
+            <li><a href="#7-log-的正確使用">7. Log 的正確使用</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#寫在最後">寫在最後</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>住手！
+不要再把我們的機器關機 LAAAAAAAAAAAAAAAA</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635831862/blog-posts/2021-11/01-cover.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831862/blog-posts/2021-11/01-cover.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831862/blog-posts/2021-11/01-cover.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831862/blog-posts/2021-11/01-cover.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635831862/blog-posts/2021-11/01-cover.webp"
+        title="Services all down" /></p>
+<br>
+<div class="details admonition info open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw" aria-hidden="true"></i>TL;DR<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">這篇的出現除了是我們被打得慘兮兮需要檢討，也是因為賽前幾乎找不到什麼資訊，想想那就寫點心得。<br>
+如果你希望能從這篇瞭解我們的藍隊策略，很抱歉沒有 : (</div>
+        </div>
+    </div>
+<p>整體活動的時程規劃相當緊湊，從 10/01 收到活動消息，轉眼不到一個月就結束了。
+HITCON Defense 至今已經是第三屆了，但給學生的 Education（教育場）是首屆舉辦，因此我很慶幸能在所剩不多的學生時間參加這場活動，平常都是以 CTF 練習居多，鮮少有機會可以擔任藍隊角色，但也因此幾乎是 0 防禦經驗的菜鳥，所知道的防禦都從教科書或是課堂聽過，沒有實際實踐的機會。</p>
+<h2 id="教育訓練">教育訓練</h2>
+<p>主辦單位還為活動舉辦賽前教育訓練 workshop，收到議程內容感覺就是滿滿的工商時間，結果到現場聽課還真的是教你使用資安產品，而且到場的學生並不多，大部分都是金融業資安人員和企業主管，報到的時候看到各種頭銜都有（怕.jpg），報名活動前還以為防禦只要寫些 iptable 規則實在是太天真了。</p>
+<p>DAY 1，主要教 <code>Palo Alto Network</code> 的 3220防火牆（簡稱 PA）和 Cortex XDR 兩種產品，老實說孤陋寡聞的我沒什麼聽過，賽後交流才知道在業界算是常見的資安企業，或是臺灣比較常聽到&hellip; ZYXEL？ 而整天的課程都是以 Lab 為主，雖然能照著 Guide 操作，但是要短時間內上手真的困難，何況平常習慣用 CLI 打打指令使用工具，突然間要用滿滿功能的產品老實說有些不知所措XDDD</p>
+<p>DAY 2，下午場講 <code>Citrix</code> WAF，原本看議程寫 OWASP 想說大概又是老生常談，結果課程意外精實，講師從紅隊的攻擊思路開始介紹，還給了很多有趣的業界題外話，甚至是要我們（學生）看看在座其他企業的藍隊苦主，再好好思考要不要入資安產業。而且也聽講師說往年的藍隊都很淒慘，到後面都在比&quot;看誰比較沒那麼慘&quot;，不過當年各隊還能交換情報互相協助，今年似乎因應疫情各隊要關在小房間不能交流，可能會更慘QQ</p>
+<p>讓我意外的是，這場教育訓練掛著 HITCON 頭銜卻沒看到任何熟面孔，結果競賽當天不意外大神們全都在對面擔任紅隊 / Infra。另外教育場並沒有安排&quot;採購部門&quot;讓我們花點數採買額外的資安產品，因此教育訓練介紹的三項資安產品只剩下 PA 可以用，但我摸不到三小時實在是上手困難，當下連要把流量存成 PCAP 檔的選項都找不到XDDDD</p>
+<h2 id="競賽前夜">競賽前夜</h2>
+<div class="details admonition quote open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-quote-right fa-fw" aria-hidden="true"></i>Cyris Tseng, 南部某狀況外ㄉ藍隊苦主<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">我們藍隊連自家所要負責保護的服務都不了解，說不定問隔壁紅隊還比我們清楚(/ =ω=)/<br>
+<del>結論：與其熬夜惡補，不如早點睡還比較有用</del></div>
+        </div>
+    </div>
+<br>
+<p>仔細想想，藍隊競賽真的是<font color=red>&ldquo;團體戰&rdquo;</font>，不像平常打 CTF 都是各自挑題目的獨立行動，何況事前完全沒有任何資訊，所以想想還是開會討論一下戰術。</p>
+<p>這部分我們開了共筆列出前期需要收集的系統資訊，以及基本的更改帳密、檢查對外 PORT、是否被建排程、更新服務等。聽說有 web server 那就要考慮 IDOR、XSS 等漏洞怎麼防禦，甚至擔心會不會被近期的 Apache CVE 打穿。另外，AD 本來就是預期的考點，因此也聊了像是檢查 DC 設定、 GPO 怎麼操作、SMB 該不該關掉 &hellip; 嗯對，這次有 service checker 的安排，所以服務並不能說關就關，我們討論一些可能 check 的方式，像如果 BAN 掉紅隊 IP，可能所有服務都沒辦法 checked，那就很頭疼了 XD</p>
+<p>回頭想想，其實一些思路在競賽時方向都正確，只是我們找不到 / 不會用 / 不懂看 / 判斷錯誤，最後現場手忙腳亂後都沒辦法進入狀況，有些可惜。</p>
+<h2 id="競賽當日">競賽當日</h2>
+<p>活動總共有三天，分別是 競賽暖身(Day 1)、教育場(Day 2)、企業場(Day 3)，我們只出席 Day 2 的部分。而我們負責防禦的服務一共六項，並且每分鐘根據 service check 進行加分：</p>
+<ul>
+<li>[30 pts] WordPress</li>
+<li>[25 pts] DNS</li>
+<li>[15 pts] VPN Server (OpenVPN)</li>
+<li>[15 pts] BugNet (IIS) (via VPN)</li>
+<li>[10 pts] Nagios (Dashboard)</li>
+<li>[05 pts] Windows 10 VDI (accessed via VPN)</li>
+</ul>
+<p>蠻意外居然有故事設定，不得不少很用心，而且還真的是空降的藍隊苦主哭啊wwwww
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635831490/blog-posts/2021-11/01-story.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831490/blog-posts/2021-11/01-story.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831490/blog-posts/2021-11/01-story.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831490/blog-posts/2021-11/01-story.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635831490/blog-posts/2021-11/01-story.webp"
+        title="Story" /></p>
+<br>
+<p>下圖是各隊伍的 Service Status Dashboard，後期有發生 VPN Down 會讓連帶 VDI 跟 IIS 一起 Down 的問題，即便如此還可以發現我們 Team 2 的服務狀況到後面幾乎是一振不起，除了不熟環境找不到問題解決，重點<strong>我們不會開機</strong>（等等會提）。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635831491/blog-posts/2021-11/01-service-board-all.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831491/blog-posts/2021-11/01-service-board-all.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831491/blog-posts/2021-11/01-service-board-all.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831491/blog-posts/2021-11/01-service-board-all.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635831491/blog-posts/2021-11/01-service-board-all.webp"
+        title="All team dashboard" /></p>
+<p>另外，主辦單位還提供 CTFd 以問答的方式來定時提示各服務的狀況，不得不說真的是非常棒的引導方式，有幾個洞還真的是看題目才知道有被埋後門，但能不能找到又是另一回事（默），題目如下，僅供參考：</p>
+<ul>
+<li>[0] 公開網段在哪？ <code>AC</code></li>
+<li>[0] 機器盤點</li>
+<li>[0] 清點開啟的Port <code>AC</code></li>
+<li>[60] WordPress 使用者清點 <code>WA</code></li>
+<li>[60] IIS Local Admin <code>AC</code></li>
+<li>[60] VPN 用什麼架的 <code>AC</code></li>
+<li>[120] AD-Domain 使用者盤點 <code>AC</code></li>
+<li>[120] 找出 Domain Admin <code>AC</code></li>
+<li>[180] 前員工遺留的不明 SSH Key <code>AC</code></li>
+<li>[180] T1550.002 Pass the Hah</li>
+<li>[180] IIS Module Backdoor</li>
+<li>[180] Windows 後門服務</li>
+<li>[240] .NET Machine Key</li>
+<li>[240] IIS Webshell</li>
+<li>[240] 請找出攻擊者所用之 C2 Domain</li>
+<li>[240] AD CS 找出後門憑證</li>
+<li>[300] check_load 後門</li>
+<li>[300] C2 in blogspot</li>
+<li>[300] NGINX 後門</li>
+</ul>
+<p>計分板 ; w ;
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635832309/blog-posts/2021-11/01-ctfd-scoreboard.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635832309/blog-posts/2021-11/01-ctfd-scoreboard.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635832309/blog-posts/2021-11/01-ctfd-scoreboard.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635832309/blog-posts/2021-11/01-ctfd-scoreboard.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635832309/blog-posts/2021-11/01-ctfd-scoreboard.webp"
+        title=" " /></p>
+<br>
+<p>總之，我們還是整個被打歪，服務到後面全掛QwQ<br>
+那下面就邊檢討邊聊聊我們發生的事吧 : )</p>
+<h4 id="1-盤點設備">1. 盤點設備</h4>
+<p>隊伍成員一致認為失分的最大問題，雖然前夜還在說要收集資訊，但開場忙著改機器密碼就忽略了設備盤點。作為空降的藍隊苦主，<strong>應該要先檢查 infra 和服務環境</strong>，然後 11:00 前跟 IT 部門確認，因為在那之後 &hellip; XD</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635831490/blog-posts/2021-11/01-it-byebye.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831490/blog-posts/2021-11/01-it-byebye.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831490/blog-posts/2021-11/01-it-byebye.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831490/blog-posts/2021-11/01-it-byebye.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635831490/blog-posts/2021-11/01-it-byebye.webp"
+        title=" " /></p>
+<p>主辦單位準備的 infra 雖然有提供 vSphere 和 ESXi，但由於有基礎建設回復的選項，所以我們下意識認為沒辦法摸到那六台機器（可能只能管理 infra），但後期看到其他隊伍在 Services Status Dashboard 居然能反覆在 Down 和 Up 閃現，賽後交流才知道是重開大法，因為我們其實不僅能操作六台機器，還能直接 snapshot 備份虛擬機，想到賽中討論還很掙扎地花 1000 分請 IT 人員 rollback，真的差點哭出來QwQ</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635831930/blog-posts/2021-11/01-vsphere.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831930/blog-posts/2021-11/01-vsphere.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831930/blog-posts/2021-11/01-vsphere.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831930/blog-posts/2021-11/01-vsphere.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635831930/blog-posts/2021-11/01-vsphere.webp"
+        title=" " />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635831927/blog-posts/2021-11/01-esxi.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831927/blog-posts/2021-11/01-esxi.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831927/blog-posts/2021-11/01-esxi.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831927/blog-posts/2021-11/01-esxi.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635831927/blog-posts/2021-11/01-esxi.webp"
+        title=" " /></p>
+<h4 id="2-基本檢查漏洞檢測弱點掃描">2. 基本檢查/漏洞檢測/弱點掃描</h4>
+<ul>
+<li>一些系統檔案如 <code>.bashrc</code>、<code>.history</code>、排程等是否有可能被駭客利用，賽後交流也有聽到系統內的 iptable 是假的w</li>
+<li>不應該存在的目錄，本次事件似乎有後門放在 <code>/test/</code>。<br>
+（其實上述兩點我也不太確定有什麼系統檔案是非檢查不可，太多了QQ）</li>
+<li>非必要的服務 / Port 關閉，雖然是這麼說，不過隊友所負責的 WordPress 前期設定完成後就把 plugin 全砍了，賽後交流才發現真是梁O茹給的勇氣，因為沒辦法被 service checker 確認，所以服務一直是維持 Down，<strong>正確做法應該是先停用（disable），或是用資安工具下 policy 保護</strong>。</li>
+</ul>
+<h4 id="3-更新前備份">3. 更新前備份</h4>
+<p>雖然知道許多企業不敢 更新(update) / 升級(upgrade) 就是怕服務掛掉，這次就是因為升級 WordPress 的套件導致資料庫爛去，真的是血淋淋的案例XD 因此在更新前備份是相當重要的事，而且還必須確認是&quot;有效&quot;的備份，備份也因為空間問題有不同形式，這部分可以去翻翻 <a href="https://en.wikipedia.org/wiki/Backup" target="_blank" rel="noopener noreffer ">Wikipedia</a>。</p>
+<p>題外話，賽後交流才意識到，如果是 APT 攻擊，駭客會潛伏好一陣子做資訊收集，同時會事先確認企業所有的備份的方式、路徑，等發動攻擊時再一併刪除或加密。一般隨意投放的勒索軟體或惡意程式，只會走固定的模式，針對特定檔案操作而已。此外，若駭客有意破壞，除了刪除和備份，更狠的放爛掉的備份，讓你以為有正常無缺的備份。</p>
+<h4 id="4-帳號管理">4. 帳號管理</h4>
+<p>這次有幾題是以離職員工作為場景，可以預想駭客會從離職員工的帳號進入，甚至離職員工=駭客。除了直接移除帳號，修改密碼這部分我們倒是做得很勤奮，但後來賽後交流有聽到案例是駭客在改密碼前就在系統內了，哭啊。此外檢查憑證是否過期，在本次事件 @stavhaygn 有找到離職員工的 SSH 公鑰，幸好有備份下來，因為後來 CTFd 還真的有題目問XD 我也是這次才注意到原來每個家目錄底下都有屬於自己的 <code>.ssh/.authorized_key</code>，若要全面盤查可能要寫 script 會比較方便。</p>
+<h4 id="5-windows-ad">5. Windows AD</h4>
+<p>主要的考點，同時是許多企業的網路架構，也是本次紅隊大部分的入侵點。
+這次要負責防禦的服務幾乎都在 AD 底下，不過我對 AD 真的不熟，只從網路上知道要檢查權限、GPO 設定。不過隊友原本要設定防火牆擋 SMB，結果駭客有埋 script 會自動關防火牆，所以最後根本沒開到==<br>
+（其他細項我還在啃資料QQ 有想法會再補充）</p>
+<p>而紅隊的其中一項攻擊是讓服務倒數時間後關機，而 DC 被關就相當於 AD 陣亡，原本我們還在抱怨關機太狠，殊不知根本可以從 vSphere 和 ESXi 開機，聽其他隊伍還會直接硬幹用 script <code>shutdown -a</code> 無限迴圈來取消關機ww 而且紅隊似乎放水很多，聽企業場甚至會直接砍資料庫有夠可怕，相比之下我們學生場真的很友善(?)。</p>
+<p>在 AD 第一次被關機後，我們討論了很久決定電話打專線求助紅隊，試圖打聽一點可用資訊，結果什麼都沒有嗚嗚，畫面很卡不用你們說我也知道被駭客打了QQ。最後花 1000 點把 AD rollback，想說雖然可能會被相同的套路打到關機，但至少要開機摸點什麼回去。</p>
+<p>有趣的是現場有準備一台 PC 用來模擬辦公室電腦，同樣也是在 AD 底下，因此聽到許多紅隊都從 PC 滲透，還擅自安裝了一些如 Anydesk、Steam、楓之谷、原神等等的軟體笑死，隔壁組還被拿來播瑞克搖。賽後交流紅隊表示他們透過 PC 甚至可以進隊伍的 infra 修改防火牆設定，太可怕了吧。</p>
+<p>賽後和其他藍隊聊了一下，大多是從實習時期接觸 AD 和 PA，不然學生平常要遇到還真不容易（汗）。</p>
+<h4 id="6-擅用工具">6. 擅用工具</h4>
+<p>以往我對防毒軟體的印象大概就是 Windows Defender 這種一鍵開關，防火牆功能也是列黑/白名單，所以在教育訓練的時候真的是大開眼界www 真的有介面但我還是不會操作。賽中我也算是蠻中期才開始碰 PA，原本還想一則則看懂裡頭預設的規則，後面才想到教育訓練第一步教要去 Network 把 interface &ldquo;Bring up&rdquo;，然後就&hellip; 下去了（時間 12:50 左右），後來是 @stavhaygn 注意到不對勁我才關掉，總之看起來不熟的軟體還是不要亂用 Orz 賽後才曉得被 infra 偷埋 uncommit 的炸彈，不少隊都有踩到XDDDD 對面還特地做梗圖，笑死。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635843212/blog-posts/2021-11/01-pa-memes.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635843212/blog-posts/2021-11/01-pa-memes.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635843212/blog-posts/2021-11/01-pa-memes.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635843212/blog-posts/2021-11/01-pa-memes.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635843212/blog-posts/2021-11/01-pa-memes.webp"
+        title=" " /></p>
+<p>最後在交流的時候，話題大部分也都圍繞在 PA，畢竟 AD 一開始就是暴露在外網，若沒辦法在將 AD 拉進 PA 底下幾乎就是只有被打的份。</p>
+<p>其他工具要說填坑也怪怪的，畢竟平常碰不到，除了是付費的專門工具，手邊也沒有 online side project 的規模大到需要靠資安工具保護，只能簡單列出來等哪天會用到吧 : 3</p>
+<ul>
+<li>Palo Alto Network (PA-3220)</li>
+<li>Cortex XDR</li>
+<li>Citrix MPX-5900</li>
+<li>vSphere</li>
+<li>ESXi</li>
+<li>PowerEdge R630</li>
+<li>Juniper EX2300</li>
+</ul>
+<h4 id="7-log-的正確使用">7. Log 的正確使用</h4>
+<p>Log 感覺很吃經驗，能夠快速在 filter 下 keyword 可以省很多時間，而且 Windows 內建的 Event Viewer 很難用（賽後有聽說推薦用 code::blocks），隊友當下在看 Log 被程式執行的速度搞到很頭疼，或許剛好有駭客在裡頭產生 event log 吧 XD 再來 Windows 有些服務預設也不會紀錄 log，例如 <a href="https://docs.microsoft.com/zh-tw/windows-server/identity/ad-ds/manage/component-updates/command-line-process-auditing" target="_blank" rel="noopener noreffer ">Event ID 4688</a> 就需要手動開啟，因此最好能根據目的決定怎麼使用 Log，盲目翻找感覺時間會不夠用&hellip;。</p>
+<p><br><br></p>
+<p>下圖是討論出來在正確部署 PA 前提下理想中的系統架構，感謝紅隊替我們解惑一些細節&gt;&lt;</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1636186756/blog-posts/2021-11/01-system-arch.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1636186756/blog-posts/2021-11/01-system-arch.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1636186756/blog-posts/2021-11/01-system-arch.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1636186756/blog-posts/2021-11/01-system-arch.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1636186756/blog-posts/2021-11/01-system-arch.webp"
+        title=" " /></p>
+<p>大概就這樣吧，工具都不熟實在很難產出有用的心得，如果上述有任何錯誤歡迎幫忙指正，附上終局的結果，後面真的躺好躺滿QQ</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635831491/blog-posts/2021-11/01-service-scoreboard.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831491/blog-posts/2021-11/01-service-scoreboard.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831491/blog-posts/2021-11/01-service-scoreboard.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831491/blog-posts/2021-11/01-service-scoreboard.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635831491/blog-posts/2021-11/01-service-scoreboard.webp"
+        title=" " /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635831490/blog-posts/2021-11/01-service-board-final.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831490/blog-posts/2021-11/01-service-board-final.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831490/blog-posts/2021-11/01-service-board-final.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1635831490/blog-posts/2021-11/01-service-board-final.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1635831490/blog-posts/2021-11/01-service-board-final.webp"
+        title=" " /></p>
+<br>
+<div class="details admonition quote open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-quote-right fa-fw" aria-hidden="true"></i>Cyris Tseng, 賽後依舊狀況外ㄉ藍隊苦主<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">賽後交流時，大家都不知道攻擊怎麼來的，但我們跟別人差在，
+<code>我們不會開機</code>。</div>
+        </div>
+    </div>
+<br>
+<h2 id="寫在最後">寫在最後</h2>
+<p>確實以企業的角度，寧願短暫的下線進行修補，也不要冒險邊維運邊補洞。但實際上我們是&hellip; 下線後就不會上線了 QwQ 原本頒獎完就要直接解散，但我不想就這樣被打得莫名其妙回去，因此攔了幾位紅隊求幫忙，結果就是整個紅隊來幫忙解惑，有幾位還是平常就在 FB 追蹤的大神，實在很感謝各位願意留下來提點，還分享一些過程的小趣聞www</p>
+<p>最後也感謝隊友們願意陪我北上當砲灰（<del>M屬性確定</del>），也感謝 AIS3 主辦單位提供的優質環境和滿滿的零食，雖然競賽那天我真的都沒食慾吃QQ 最後只帶了一杯飲料回高雄。雖然是六隊的最後一名，但起碼還是被打的很有感（？</p>
+<p>我校雖然過去有學生自治的<code>CDPA（校園宿舍網路推廣協會）</code>，也有開設 &ldquo;網路安全&rdquo;、&ldquo;駭客攻防&rdquo; 等資安課程，但前者因為人力不足還給學校，後者也都不是系上教授，因此修課難度沒有很高，最近又看到北部三校（台大&amp;台科大&amp;交大）合開的&quot;<a href="https://people.cs.nctu.edu.tw/~chuang/courses/swsec/" target="_blank" rel="noopener noreffer ">程式安全</a>&quot;，聽朋友描述作業其難度相當高，而且慣例的期末考 EOF CTF，我前年參加幾乎寫不出幾題&hellip;，只能說南北在資安這塊的資源還是有差，但可以的話我也不想嘴巴講講想變強，因此這趟藍隊攻防真的是給我相當大的動力，雖然很想立刻寫點什麼 side project，但無奈時間不夠用QQ</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-11-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/2021/hitcon-education-defense-2021/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/hitcon-defense/">HITCON Defense</a>,&nbsp;<a href="/tags/ais3/">AIS3</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2021/my-first-malware-study/" class="prev" rel="prev" title="[Malware Analysis] 出現了！是野生的貓味"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>[Malware Analysis] 出現了！是野生的貓味</a>
+            <a href="/posts/2021/hitcon2021-devcore-web-challenge/" class="next" rel="next" title="[DEVCORE @HITCON2021] Wargame Web Challenge">[DEVCORE @HITCON2021] Wargame Web Challenge<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.120.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://blog.cyris.tw" target="_blank">Cyris Tseng</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":20},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment 💬","lightTheme":"github-light","repo":"yctseng1227/blog-comments"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

