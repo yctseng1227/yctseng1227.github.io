@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>[Sharing] 2020 Summer Conf. PART 3 - Cyris&#39;s Blog</title><meta name="Description" content="This is Cyris&#39;s blog, recording life and sharing security learning."><meta property="og:url" content="https://blog.cyris.tw/posts/2020/2020-summer-conf-p3/">
+  <meta property="og:site_name" content="Cyris&#39;s Blog">
+  <meta property="og:title" content="[Sharing] 2020 Summer Conf. PART 3">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-09-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-09-27T00:00:00+00:00">
+    <meta property="article:tag" content="CISC">
+    <meta property="article:tag" content="HITCON">
+    <meta property="og:image" content="https://blog.cyris.tw/img/cyris.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://blog.cyris.tw/img/cyris.png">
+  <meta name="twitter:title" content="[Sharing] 2020 Summer Conf. PART 3">
+      <meta name="twitter:site" content="@yctseng1227">
+<meta name="application-name" content="Cyris&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Cyris&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://blog.cyris.tw/posts/2020/2020-summer-conf-p3/" /><link rel="prev" href="https://blog.cyris.tw/posts/2020/first-graduate-summary/" /><link rel="next" href="https://blog.cyris.tw/posts/2020/nsysu-htcf-hw1/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Sharing] 2020 Summer Conf. PART 3",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/blog.cyris.tw\/posts\/2020\/2020-summer-conf-p3\/"
+        },"image": ["https:\/\/blog.cyris.tw\/img\/cyris.png"],"genre": "posts","keywords": "CISC, HITCON","wordcount":  256 ,
+        "url": "https:\/\/blog.cyris.tw\/posts\/2020\/2020-summer-conf-p3\/","datePublished": "2020-09-27T00:00:00+00:00","dateModified": "2020-09-27T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Cyris","logo": "https:\/\/blog.cyris.tw\/img\/cyris.png"},"author": {
+                "@type": "Person",
+                "name": "Cyris"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="#" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[Sharing] 2020 Summer Conf. PART 3</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://blog.cyris.tw" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Cyris</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E7%94%9F%E6%B4%BB%E6%9C%AD%E8%A8%98-free-writing/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活札記 Free Writing</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2020-09-27">2020-09-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;256 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cisc-全國資訊安全會議-91---94-nsysu">CISC 全國資訊安全會議 (9/1 - 9/4) @NSYSU</a></li>
+        <li><a href="#hitcon-臺灣駭客協會-911---912-中研院人文社科館">HITCON 臺灣駭客協會 (9/11 - 9/12) @中研院人文社科館</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_800/v1620004322/blog-posts/2020-08/19-cover3.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1620004322/blog-posts/2020-08/19-cover3.webp, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1620004322/blog-posts/2020-08/19-cover3.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1620004322/blog-posts/2020-08/19-cover3.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_800/v1620004322/blog-posts/2020-08/19-cover3.webp"
+        title=" " /></p>
+<p>事隔一個月後還有另外兩場資安相關的 Conference，雖然時間上不算是 Summer Conf.，但我也沒打算再開新系列介紹，所以就繼續在這篇往下更新了 XD</p>
+<h3 id="cisc-全國資訊安全會議-91---94-nsysu">CISC 全國資訊安全會議 (9/1 - 9/4) @NSYSU</h3>
+<p>原本也是預計辦在五月的會議，偉哉武漢肺炎各種大延期，這場的定位對我來說比較特別，身在主辦方校又是以工人的身份下場幫忙。和規模上和前幾場相比贊助商少了許多，整體會議稍微陽春一些，今年是第卅屆雖然我不確定之前是否都差不多，但各位工人們都很認真幫忙這倒是真的 :3</p>
+<p>會議時間上長達四天，但實際上議程只有中間 Day 2, Day 3 兩天。<br>
+Day 1 上午場佈、下午由我們 <strong>MacacaHub</strong> 以「基礎網頁安全演練」作為 CISC 開場打頭陣（現在想想我還是不解為何要開 Day 1 的行程 &hellip;），Day 4 則是活動參訪，分別為爬柴山<del>給猴子看</del>，還有海域純玩水，但由於當時已經有下雨預告的消息，所以取消了 0 人報名的爬山活動（!）。</p>
+<p><br><br></p>
+<p>由於 Day 1 的資安演練是額外活動讓會眾自由報名參加，因此原本 @stavhaygn 設定的目標學生是以大學生/碩士生為主，強調<font color=red>基礎</font>網頁安全演練，結果從後台的表單上看到報名會眾都至少都是碩士生，甚至還有幾位是主管等級讓我們大感意外XD 不過最後證實參與的會眾確實都不是這方面專業的，讓我們連原本預期的進度(<code>XSS</code>)都沒時間細講只能匆匆帶過，就這樣<del>抱著 @stavhaygn 的腿</del>平安度過 Day 1。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-1.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-cisc-1.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-cisc-1.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-cisc-1.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-1.webp"
+        title=" " /></p>
+<blockquote>
+<p><del>發現野生的奧義間諜</del></p>
+</blockquote>
+<p>Day 2 / Day 3 我的主要工作是和 Lab 學弟搭擋負責 Session A 論文發表的場控/計時/拍照以及協助主持人和 A1 場評審，所以很難花心思認真聽報告QQ 何況我被分配到的 Session 比其他場次的組別硬是多了一組，加上台下 Q&amp;A 實在不受控，想當然爾時間上爆炸不可避ㄏㄏ，工人群組內幾乎只有我回報會晚結束，只能說當個時間管理大師真不容易，老實說只有 10 分鐘要講完一篇研究真的很不夠用，何況包含 Q&amp;A 又要把時間壓得更緊，辛苦各位講者了。</p>
+<p>值得一提的還有 Day 2 晚宴在西子灣沙灘會館，雖然從學長的反應看得出應該是已經吃到習以為常了，不過我們也是喝了不少酒（笑）</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1618836340/blog-posts/2020-08/19-cisc-2.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_600/v1618836340/blog-posts/2020-08/19-cisc-2.webp, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_600/v1618836340/blog-posts/2020-08/19-cisc-2.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_600/v1618836340/blog-posts/2020-08/19-cisc-2.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1618836340/blog-posts/2020-08/19-cisc-2.webp"
+        title=" " /></p>
+<p>另外，Day 3 上午有資管系主辦的 CISC CTF，所以我們 <strong>MacacaHub</strong> 就挽起袖子下場一起玩XDDD 整體難度中間偏易，主要有幾題 Pwn 直接被我忽略XD 其中一題原本要考 <a href="https://www.ithome.com.tw/news/135665" target="_blank" rel="noopener noreffer ">CVE-2019-18634</a>，結果因為所有參賽者共用主機，所以當我 Google 完 CVE 後就直接在主機內下<code>history</code> 指令看到前一位參賽者 git pull 下來的 PoC，直接被我拿來提權拿 Flag XDDDDD</p>
+<p>還有連續兩題的SQLi，結果同樣<code>--</code>的註解在 SQLi-1 可繞過，但在 SQLi-2 不可行，原本以為是空白繞過沒成功（<code>/**/</code>），結果賽後討論才發現把註解改成<code>//</code>就拿到 flag 了&hellip;</p>
+<p>原本我一直都穩定位居第四名，最後 40 多分鐘我集中在分析 Windows 的 event log，雖然用事件分析工具花了不少時間把 Powershell 的 command 還原出來但沒有成功執行QQ 賽後聽到 @stavhaygn 用 strings 就把 command dump 出來也沒成功（但至少不用像我還要慢慢還原XD），等回過神結束時才發現掉到第五名，和前一名差不到 50 分&hellip; <strong>唔嗯，因為我沒有寫Welcome(50)</strong> 笑死XD 反正最後拿了 <strong>展露頭角獎</strong> 回家~</p>
+<blockquote>
+<p>順帶一提前三名: @CSY54、@stavhaygn、@MuMu，全部都是南部資安圈熟面孔自己人 ㄏㄏ</p>
+</blockquote>
+<p>Day 4 本來應該是安排爬山和海域玩水，由於 Day 2 取消了爬山的部分，但因為海域的部分礙於不能取消，所以我們很多工人都被抓下海(??)強制玩水，甚至我明明沒填表單卻還是被秘書姊姊從後台偷偷報名XDDD 剛好拿CTF撿到的500摳家樂福禮券去買了件泳褲 : /</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-3.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-cisc-3.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-cisc-3.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-cisc-3.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-3.webp"
+        title=" " />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-4.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-cisc-4.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-cisc-4.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-cisc-4.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-4.webp"
+        title=" " /></p>
+<p>當天集合時有幾位會眾出現，可能是誤會有爬山活動、又或是以為只有踩踩海灘，總之他們最後都回頭了:))))<br>
+剩下我們 10 來位被迫參加的工人各種玩風帆、獨木舟、趴板其實也蠻愉快的，而且岸邊似乎還有其他旅行團的遊客有點害羞XD</p>
+<p>最後我真的菜逼八沒做好防曬整個曬到爆XD</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-5.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-cisc-5.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-cisc-5.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-cisc-5.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-5.webp"
+        title=" " />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-6.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-cisc-6.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-cisc-6.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-cisc-6.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-cisc-6.webp"
+        title=" " /></p>
+<h3 id="hitcon-臺灣駭客協會-911---912-中研院人文社科館">HITCON 臺灣駭客協會 (9/11 - 9/12) @中研院人文社科館</h3>
+<p>終於輪到我今年預定的最後一場 Conf.，同時是首次和 Lab 各位一起北上參加活動，某方面來說有點像畢業旅行(?)</p>
+<p>這次同樣因為偉哉武漢肺炎的影響，在票種上分成線上 &amp; 實體。<br>
+線上的部分是用開源遊戲引擎 minetest 架設的虛擬會場，一整個 minecraft 風格，可惜我這方面並沒有涉獵太深。實體方面就和之前的 Conf. 形式上同樣是以議程為主，只是這場雖然有廠商但沒有大地遊戲，算是省了到處跑的力氣w</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_400/v1618836340/blog-posts/2020-08/19-hitcon-1.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_400/v1618836340/blog-posts/2020-08/19-hitcon-1.webp, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_400/v1618836340/blog-posts/2020-08/19-hitcon-1.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_400/v1618836340/blog-posts/2020-08/19-hitcon-1.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_400/v1618836340/blog-posts/2020-08/19-hitcon-1.webp"
+        title=" 南港高鐵票 " /></p>
+<p>第一次做高鐵到南港終點站還蠻新鮮的&hellip; 雖然這裡看起來有點荒涼ㄏ<br>
+飯店的部分我們住洛基大飯店，個人覺得蠻舒適的，說實在身為台北人實在很難得住到在地飯店 XDDD</p>
+<p>Day 0 我們在 check in 後晚餐吃 YAYOI，雖然價格上有點小貴但我吃得很開心www 尤其我點的餐點還有附說明書(??)</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-2.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-2.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-2.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-2.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-2.webp"
+        title=" YAYOI " /></p>
+<p>議程部分的講師已經可以認出很多熟面孔了：@CK、@Birdman、@Adr、@大Alan、@小Alan、@Orange、@Inndy、@ddaa、@yuawn、@Angelboy、@Lays、@Jeffxx，幾乎都是駭客圈的紅人XD 這些大神們場子人都不會太少，尤其 @Orange 再次打穿 Facebook 的主題在 R0 快被塞爆==</p>
+<p>在廠商攤位方面，照往例就是到處認親、認識朋友，只是同學把我當許願機拿贈品還稱讚我議程蟑螂&hellip; 嗚嗚幹，另外咱們 @stavhaygn 在 UCCU 的主題是數位安全＆實體安全，蠻有趣的挑戰，讓我想起自己小時候筆電袋被父母上鎖時，也是用迴紋針慢慢解鎖ㄏ</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-3.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-3.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-3.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-3.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-3.webp"
+        title=" UCCU 實體解鎖挑戰" /></p>
+<p>其他像是 DEVCORE、BambooFox、TeamT5、中華資安 都有各自的 CTF challenge，所以少了大地遊戲也不怕沒事做。另外 HITCON GIRLS 辦的 &ldquo;Who is Lily?&rdquo; OSINT 挑戰也很酷，還需要在 HITCON 現場找人、寄釣魚信件才算完成任務！</p>
+<p>在官方的活動中還有線上密室逃脫，很感謝 AIS3 室友的邀請，找齊四人就在會場的角落玩，甚至還被 iThome 記者拍到寫進<a href="https://www.ithome.com.tw/news/139967" target="_blank" rel="noopener noreffer ">新聞</a>裡wwwwww 至於玩法大致上都寫在文章內，比較障礙是我和揪來的學妹都沒有接觸過 minecraft，所以在操作移動上備受關懷ww</p>
+<p>至於有沒有拿到 Flag 呢&hellip; 我忘記了w 不過有挖到一題 pwn 交給隊友處理，我自己是在不同房間到處亂晃找線索，還有玩 minetest 裡的電腦的踩地雷XD 活動結束後還有無差別槍戰不知道在幹嘛，我只記得我一直掉出場外領便當 : (</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-4.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-4.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-4.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-4.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-4.webp"
+        title=" minetest 踩地雷" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-5.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-5.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-5.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-5.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-5.webp"
+        title=" minetest 風景?" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-6.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-6.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-6.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-6.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-6.webp"
+        title=" 槍戰 " /></p>
+<br>
+<p>印象中往年都有 HITCON token，今年也不例外。不過由於是用虛擬貨幣，所以對沒有再接觸的朋友很多都懶得操作，所以我<del>社交工程</del>借用身邊同學把官方送的錢包(300 HITCON token)轉到我手上，然後拿去HITCON線上商城買了幾塊電路板，到 Day2 甚至還開放可以購買現場的特色貼紙
+&hellip; 當然是給他買爆 嘻嘻!!</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_800/v1618836340/blog-posts/2020-08/19-hitcon-8.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1618836340/blog-posts/2020-08/19-hitcon-8.webp, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1618836340/blog-posts/2020-08/19-hitcon-8.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1618836340/blog-posts/2020-08/19-hitcon-8.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_800/v1618836340/blog-posts/2020-08/19-hitcon-8.webp"
+        title=" hitcon token " /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_800/v1618836340/blog-posts/2020-08/19-hitcon-7.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1618836340/blog-posts/2020-08/19-hitcon-7.webp, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1618836340/blog-posts/2020-08/19-hitcon-7.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1618836340/blog-posts/2020-08/19-hitcon-7.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_800/v1618836340/blog-posts/2020-08/19-hitcon-7.webp"
+        title=" hitcon 貼紙 " /></p>
+<p>沒有比較沒有傷害，雖然我是第一次參加 HITCON，但和其他場次相比感覺就是有點&hellip;掉漆，先不論少了往年慣例的電路板 challenge、煉蠱大會還開天窗。 Day1 報到的時候發了一個黑盒子沒有給提袋，看到大家都當寶貝到處抱著，結果那個黑盒子不僅是一次性的拆了就壞，而且裡頭都是廠商的 DM &hellip; 怪不得 Day2 還能疊成塔拜託大家領走 = w =</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-9.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-9.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-9.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1618836340/blog-posts/2020-08/19-hitcon-9.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1618836340/blog-posts/2020-08/19-hitcon-9.webp"
+        title=" 黑盒子 " /></p>
+<p>總之，還是多少在 HITCON 聽到一些有趣的議題/關鍵字，只差在有沒有時間回去翻QwQ<br>
+接下來就是 10 月的 MOPCON，只是已經參加第四年應該寫不出心得了吧XDDDDDD</p>
+<p>就醬。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-09-27</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/cisc/">CISC</a>,&nbsp;<a href="/tags/hitcon/">HITCON</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2020/first-graduate-summary/" class="prev" rel="prev" title="[實驗室雜談 EX] 碩一生活總結"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>[實驗室雜談 EX] 碩一生活總結</a>
+            <a href="/posts/2020/nsysu-htcf-hw1/" class="next" rel="next" title="[NSYSU 駭客攻防] HW 0x01 Writeup">[NSYSU 駭客攻防] HW 0x01 Writeup<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.126.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://blog.cyris.tw" target="_blank">Cyris Tseng</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":20},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment 💬","lightTheme":"github-light","repo":"yctseng1227/blog-comments"}}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

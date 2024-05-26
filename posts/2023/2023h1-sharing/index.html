@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>[2023H1 雜談] 嘿！我回來了 - Cyris&#39;s Blog</title><meta name="Description" content="This is Cyris&#39;s blog, recording life and sharing security learning."><meta property="og:url" content="https://blog.cyris.tw/posts/2023/2023h1-sharing/">
+  <meta property="og:site_name" content="Cyris&#39;s Blog">
+  <meta property="og:title" content="[2023H1 雜談] 嘿！我回來了">
+  <meta property="og:description" content="畢業後開始社畜生活，然後被抓去剃光頭為國效勞四個月，回公司後不久又接著受訓一個月。
+一年真的轉眼就過去了。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-07-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-07-07T00:00:00+00:00">
+    <meta property="article:tag" content="日常閒聊">
+    <meta property="article:tag" content="Malware Analysis">
+    <meta property="article:tag" content="FFXIV">
+    <meta property="og:image" content="https://blog.cyris.tw/img/cyris.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://blog.cyris.tw/img/cyris.png">
+  <meta name="twitter:title" content="[2023H1 雜談] 嘿！我回來了">
+  <meta name="twitter:description" content="畢業後開始社畜生活，然後被抓去剃光頭為國效勞四個月，回公司後不久又接著受訓一個月。
+一年真的轉眼就過去了。">
+      <meta name="twitter:site" content="@yctseng1227">
+<meta name="application-name" content="Cyris&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Cyris&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://blog.cyris.tw/posts/2023/2023h1-sharing/" /><link rel="prev" href="https://blog.cyris.tw/posts/2022/nsysuisc-intranet-penetration/" /><link rel="next" href="https://blog.cyris.tw/posts/2023/redline-infostealer-analysis/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[2023H1 雜談] 嘿！我回來了",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/blog.cyris.tw\/posts\/2023\/2023h1-sharing\/"
+        },"image": ["https:\/\/blog.cyris.tw\/img\/cyris.png"],"genre": "posts","keywords": "日常閒聊, Malware Analysis, FFXIV","wordcount":  153 ,
+        "url": "https:\/\/blog.cyris.tw\/posts\/2023\/2023h1-sharing\/","datePublished": "2023-07-07T00:00:00+00:00","dateModified": "2023-07-07T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Cyris","logo": "https:\/\/blog.cyris.tw\/img\/cyris.png"},"author": {
+                "@type": "Person",
+                "name": "Cyris"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="#" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[2023H1 雜談] 嘿！我回來了</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://blog.cyris.tw" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Cyris</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E7%94%9F%E6%B4%BB%E6%9C%AD%E8%A8%98-free-writing/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>生活札記 Free Writing</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-07-07">2023-07-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;153 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#162t">162T</a></li>
+    <li><a href="#back2office">Back2Office</a></li>
+    <li><a href="#malware-analysis-training">Malware Analysis Training</a></li>
+    <li><a href="#tech-industry-downturn">Tech Industry Downturn</a></li>
+    <li><a href="#final-fantasy-xiv">FINAL FANTASY XIV</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>畢業後開始社畜生活，然後被抓去剃光頭為國效勞四個月，回公司後不久又接著受訓一個月。<br>
+一年真的轉眼就過去了。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_800/v1688655425/blog-posts/2023-07/07-cover.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1688655425/blog-posts/2023-07/07-cover.webp, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1688655425/blog-posts/2023-07/07-cover.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1688655425/blog-posts/2023-07/07-cover.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_800/v1688655425/blog-posts/2023-07/07-cover.webp"
+        title=" " /></p>
+<h2 id="162t">162T</h2>
+<p>我新訓的單位在成功嶺 101R4BFC，下部隊則在桃園 269R3B1C。<br>
+如果在關注新聞的話，會看到在我當兵這段期間連上有出大事，而且是那種會出現幾位梅花等級的那種。<br>
+<del>簡單講就是有鄰兵睡一睡就離世，當時還適逢鑑測週，搞得大家人仰馬翻QQ</del></p>
+<p>說起來算算距離退伍也過了 4 個月，有些事想起來開始會懷念了，尤其每次的休假時間總是特別珍貴XD<br>
+總之如各位學長們所言，軍裡什麼鬼故事都有，而且我還在 1/3 弟兄都確診的環境下完美迴避 COVID-19，平安地結束役期！</p>
+<h2 id="back2office">Back2Office</h2>
+<p>據說在我當兵期間，公司對 WFH 的政策朝令夕改，我回來參加的第一次 all-hands 就聽到上級各種道歉，不過對於過去在實驗室人稱地伏靈的我，如果要每天到公司也沒什麼難度就是了。<br>
+<del>回公司的前一晚剛好是公司春酒晚會，感謝同事讓我能夠當點心小偷</del></p>
+<p>在熟悉一陣子 team 上的業務後，接著就是 virus training 了。</p>
+<h2 id="malware-analysis-training">Malware Analysis Training</h2>
+<p>由於工作業務上會接觸到大量病毒樣本，所以在正式上工前必須通過公司安排的 Malware analysis training。想當然爾，通過 final exam 也就是我們 team 的其中一個適用期條件，沒錯！我從當兵前入職，到回公司參加 training 都還在適用期間，其實某方面也蠻感謝公司肯花錢花時間讓我學習一些惡意程式分析的基礎，甚至還讓我 LOA 去當兵再回來。</p>
+<p>咳、扯遠了。<br>
+總之，為期一個月的 Training 主要是學習各種 Malware 種類的分析，以及一些工具的使用。回想起過去打 CTF 的日子，我總是把 Pwn 和 Reverse 交給 @stavhaygn，幾乎很少有機會學習使用 IDA 神器，<del>不然就是 F5 秒解</del>。總之，從前輩們打聽到課程內容非常扎實，甚至去年參加的同事還說老師教課進度飛快，對新手不太友善QQ</p>
+<p>所幸，這次老師不但有換人，而且還一次換成三位菲律賓籍老師（聽說是去年很缺授課老師XDDD），而且感覺得出來老師們很用心備課，雖然作業量看起來跟往年一樣多到寫不完，每次檢討還會隨機抽學生分享畫面講解（in English），真的壓力山大XDDDD</p>
+<p>另外一個幸運的是， team 裡今年報到的新人是 senior 等級，實力從第一週上課就高下立判，明顯感受我跟他的經驗差距之大，有時候我看很久的 disassembled code，他只看一眼就說是某種加解密不用看這麼細，也因此讓我漸漸可以抓到分析的節奏，畢竟在有限的時間真的不可能每個函式都點進去看。</p>
+<p>感謝這位同事，帶著我和其他 team 一起來上課的同事平安度過 training，而且 final exam 在週五（後天是公司的運動會活動），老師最後把交卷時間拉長到整個週末，考試當天我坐一整天好不容易交卷聽到延長都傻眼，太 NICE 了吧XDDD</p>
+<h2 id="tech-industry-downturn">Tech Industry Downturn</h2>
+<p>每個人對於畢業後的規劃不同，但從 2022H2 到今年從許多新聞可以看到科技業寒冬的影響，一些 Big Tech 裁員的消息讓人很是擔心，有點慶幸自己在畢業前就找到工作，雖然沒找到研替還是有點小遺憾，畢竟走四個月正常役還是有被教召的可能，想想就頭疼。</p>
+<p>我在入職的這段期間也透過 referral program 內推了幾位朋友，但目前都因為人事凍結或只招 senior 等級的即戰力，想想也是替朋友們感到可惜，這段期間要找自己理想的工作不容易啊。</p>
+<h2 id="final-fantasy-xiv">FINAL FANTASY XIV</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1688654873/blog-posts/2023-07/07-ffxiv-endwalker-cg.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1688654873/blog-posts/2023-07/07-ffxiv-endwalker-cg.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1688654873/blog-posts/2023-07/07-ffxiv-endwalker-cg.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1688654873/blog-posts/2023-07/07-ffxiv-endwalker-cg.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1688654873/blog-posts/2023-07/07-ffxiv-endwalker-cg.webp"
+        title=" " />
+<del>（會看我的文章的人應該都玩完 6.0 不會介意我暴雷吧）</del></p>
+<p>FFXIV 主線的劇情大概從去年當兵前的 5.0 (ING) 到今年五月才終於把 6.0 走完，真的是很讚的故事。<br>
+尤其在補了一些關於過去被消滅的 1.0 (2010-2012) 歷史事蹟，看著曾經要收掉的遊戲在吉田桑的接手救援下砍掉重練，推出了全新的 2.0 並持續優化改善，到現在 6.4 幾乎是一致的好評，真的很不容易，尤其是用 1.0 的故事設定（衛月事件）鋪陳 2.0 的這段真心覺得厲害。</p>
+<p>如果有興趣的玩家，我非常建議可以了解這款遊戲的前因後果 <a href="https://youtube.com/playlist?list=PLL5QTV3Hk60ag1MsSoox4HT5oBemN23vr" target="_blank" rel="noopener noreffer ">The Fall and Rise of Final Fantasy XIV - Youtube</a> ，Bilibili 也有授權翻譯的版本可以看 <a href="https://space.bilibili.com/143319/channel/seriesdetail?sid=904312&amp;ctype=0" target="_blank" rel="noopener noreffer ">FF14衰落与重生(Fall&amp;Rise) - bilibili</a>，如果跑完主線再回頭看應該會很有感觸。</p>
+<p>另外，每個版本的故事其實也都還有一些官方的讀物（<a href="https://eu.finalfantasyxiv.com/lodestone/playguide/#side_storyes" target="_blank" rel="noopener noreffer ">FINAL FANTASY XIV Side Stories</a> / <a href="https://ff.web.sdo.com/web8/index.html#/guide?maoid=gbanner2" target="_blank" rel="noopener noreffer ">最终幻想14 游戏设定特别读物</a>）可以看，當兵的期間我還印出來在裡面把 2.0 - 4.0 的番外篇讀完，一些角色之間的互動和小設定真的很有趣XD</p>
+<p>雖然現在話題正夯的是 PS5 的 FFXVI，但 FFXIV 也讓我夠繼續玩好一陣子了～</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-07-07</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%97%A5%E5%B8%B8%E9%96%92%E8%81%8A/">日常閒聊</a>,&nbsp;<a href="/tags/malware-analysis/">Malware Analysis</a>,&nbsp;<a href="/tags/ffxiv/">FFXIV</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2022/nsysuisc-intranet-penetration/" class="prev" rel="prev" title="[NSYSU 資安社課] Intranet Penetration"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>[NSYSU 資安社課] Intranet Penetration</a>
+            <a href="/posts/2023/redline-infostealer-analysis/" class="next" rel="next" title="[Malware Analysis] 難道這是免費可以看的嗎？ RedLine InfoStealer">[Malware Analysis] 難道這是免費可以看的嗎？ RedLine InfoStealer<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.126.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://blog.cyris.tw" target="_blank">Cyris Tseng</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":20},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment 💬","lightTheme":"github-light","repo":"yctseng1227/blog-comments"}}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
