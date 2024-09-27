@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Worm - Tag - Cyris&#39;s Blog</title>
+        <link>https://blog.cyris.tw/tags/worm/</link>
+        <description>Worm - Tag - Cyris&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 21 Jul 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://blog.cyris.tw/tags/worm/" rel="self" type="application/rss+xml" /><item>
+    <title>[Malware Analysis] 出現了！是野生的貓味</title>
+    <link>https://blog.cyris.tw/posts/2021/my-first-malware-study/</link>
+    <pubDate>Wed, 21 Jul 2021 00:00:00 &#43;0000</pubDate>
+    <author>Cyris</author>
+    <guid>https://blog.cyris.tw/posts/2021/my-first-malware-study/</guid>
+    <description><![CDATA[<p>第一次撿到野生的 Malware。</p>]]></description>
+</item>
+</channel>
+</rss>

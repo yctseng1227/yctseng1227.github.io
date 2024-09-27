@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>[Malware Analysis] 難道這是免費可以看的嗎？ RedLine InfoStealer - Cyris&#39;s Blog</title><meta name="Description" content="This is Cyris&#39;s blog, recording life and sharing security learning."><meta property="og:url" content="https://blog.cyris.tw/posts/2023/redline-infostealer-analysis/">
+  <meta property="og:site_name" content="Cyris&#39;s Blog">
+  <meta property="og:title" content="[Malware Analysis] 難道這是免費可以看的嗎？ RedLine InfoStealer">
+  <meta property="og:description" content="你已成為盜版的受害者。
+雖然 GitHub 提倡的開源文化是可受大眾公開檢視，但不代表就是 100% 安全。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-08-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-08-26T00:00:00+00:00">
+    <meta property="article:tag" content="Malware Analysis">
+    <meta property="article:tag" content="RedLine InfoStealer">
+    <meta property="article:tag" content="Cybercrime">
+    <meta property="og:image" content="https://blog.cyris.tw/img/cyris.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://blog.cyris.tw/img/cyris.png">
+  <meta name="twitter:title" content="[Malware Analysis] 難道這是免費可以看的嗎？ RedLine InfoStealer">
+  <meta name="twitter:description" content="你已成為盜版的受害者。
+雖然 GitHub 提倡的開源文化是可受大眾公開檢視，但不代表就是 100% 安全。">
+      <meta name="twitter:site" content="@yctseng1227">
+<meta name="application-name" content="Cyris&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Cyris&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://blog.cyris.tw/posts/2023/redline-infostealer-analysis/" /><link rel="prev" href="https://blog.cyris.tw/posts/2023/2023h1-sharing/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Malware Analysis] 難道這是免費可以看的嗎？ RedLine InfoStealer",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/blog.cyris.tw\/posts\/2023\/redline-infostealer-analysis\/"
+        },"image": ["https:\/\/blog.cyris.tw\/img\/cyris.png"],"genre": "posts","keywords": "Malware Analysis, RedLine InfoStealer, Cybercrime","wordcount":  1172 ,
+        "url": "https:\/\/blog.cyris.tw\/posts\/2023\/redline-infostealer-analysis\/","datePublished": "2023-08-26T00:00:00+00:00","dateModified": "2023-08-26T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Cyris","logo": "https:\/\/blog.cyris.tw\/img\/cyris.png"},"author": {
+                "@type": "Person",
+                "name": "Cyris"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="#" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Cyris&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/favicon.ico"
+        data-srcset="/img/favicon.ico, /img/favicon.ico 1.5x, /img/favicon.ico 2x"
+        data-sizes="auto"
+        alt="/img/favicon.ico"
+        title="/img/favicon.ico" />Cyris&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a href="#" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[Malware Analysis] 難道這是免費可以看的嗎？ RedLine InfoStealer</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://blog.cyris.tw" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Cyris</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8-cyber-security/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>資訊安全 Cyber Security</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-08-26">2023-08-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1172 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#whats-happen">What&rsquo;s Happen</a></li>
+    <li><a href="#malware-analysis">Malware Analysis</a></li>
+    <li><a href="#in-closing">In Closing</a></li>
+    <li><a href="#reference">Reference</a></li>
+    <li><a href="#iocs">IOCs</a>
+      <ul>
+        <li><a href="#suspicious-github-users">Suspicious GitHub Users</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><u style="color:red;">你已成為盜版的受害者。</u><br>
+雖然 GitHub 提倡的開源文化是可受大眾公開檢視，但不代表就是 100% 安全。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-google-search-free-download.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-google-search-free-download.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-google-search-free-download.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-google-search-free-download.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-google-search-free-download.webp"
+        title=" " /></p>
+<p>以上截圖是用 Google Search <code>Free-Download-2023 site:github.com</code> 找到的一小部分 repo，沒意外裡面都埋藏惡意軟體，這些可疑 repo 的特色是出現時間很短，大概兩三天就會消失，一旦下載後執行就會有資料外洩的疑慮，雖然客家人都不太喜歡買正版，但找盜版也要注意安全R</p>
+<h2 id="whats-happen">What&rsquo;s Happen</h2>
+<p>OK，事情的發生就是身邊朋友在 8/18 從類似上述的 repo 下載到惡意軟體，結果沒幾天信箱開始收到異常登入的通知，原本的惡意 GitHub repo (<code>https://github[.]com/Munganyende/MOVAVI-VIDEO-EDITOR-PLUS-CRACK-2023-14737</code>) 在我接到消息時，發現 Owner 已經關帳號了，可見有多可疑==</p>
+<p>之後我用相同的關鍵字找到類似的 repo（但寫文當下這 Owner 也關閉了），截圖如下。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-screenshot-1.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-screenshot-1.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-screenshot-1.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-screenshot-1.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-screenshot-1.webp"
+        title=" " /></p>
+<p>除了 README 看起來就很可疑，另外注意到右上的 Star 居然有 54 顆 （<del>我好羨慕</del>），仔細看裡面每個點星星的帳號也都是做類似的散播惡意程式，只是換個不同的商業軟體名稱，內容大同小異。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-screenshot-2.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-screenshot-2.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-screenshot-2.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-screenshot-2.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-screenshot-2.webp"
+        title=" " /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-stargazers.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-stargazers.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-stargazers.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-stargazers.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-stargazers.webp"
+        title=" " /></p>
+<p>點下 Download 後會連去 Godaddy 的網址，然後轉址到 discordapp 的連結，攻擊者似乎是統一放在 Discord 再拿連結出來散播，而這兩者都是合法的網路平台，實在防不勝防。</p>
+<ul>
+<li>hxxps[:]//launchersoftware.godaddysites[.]com/</li>
+<li>hxxps[:]//cdn.discordapp[.]com/attachments/1042051714754289756/1143174795983343656/Setup.zip</li>
+</ul>
+<h2 id="malware-analysis">Malware Analysis</h2>
+<p>把壓縮檔 unzip (password: 8848) 後可以看到不少檔案，雖然事隔多日當事人對檔案表示沒什麼印象，就姑且拿來看看吧 : 3</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_800/v1693063779/blog-posts/2023-08/26-malware-directory.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1693063779/blog-posts/2023-08/26-malware-directory.webp, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1693063779/blog-posts/2023-08/26-malware-directory.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/c_scale%2cf_auto%2cq_auto%2cw_800/v1693063779/blog-posts/2023-08/26-malware-directory.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_800/v1693063779/blog-posts/2023-08/26-malware-directory.webp"
+        title=" " /></p>
+<p>入口點不意外就是那個 Setup.exe，但是用 IDA 追了一陣子沒看出甚麼端倪，倒是注意到 Exports 那邊都是以 go 為開頭的函式，拿去 Google 後可以找到 <a href="https://github.com/go-gl/glfw" target="_blank" rel="noopener noreffer ">GLFW</a> 這個專案，所以可以知道這隻 .exe 是用 Golang 編譯的，但是在 function list 中並沒有看到 main.main 這類的 Golang 特徵，同時用 Mandiant 的 <a href="https://github.com/mandiant/GoReSym" target="_blank" rel="noopener noreffer ">GoReSym</a> 也沒有還原出其他東西 （error message: <code>Failed to parse file: failed to read pclntab: failed to locate pclntab</code>），用 <a href="https://github.com/0xjiayu/go_parser" target="_blank" rel="noopener noreffer ">go_parser</a> 拆也得到 Exception: <code>Failed to find firstmoduledata address!</code>，感覺該找個時間研究怎麼拆 Golang-based program（沉默）</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-malware-ida-export.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-malware-ida-export.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-malware-ida-export.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-malware-ida-export.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-malware-ida-export.webp"
+        title=" " /></p>
+<p>既然靜態看不懂，那就直接開 Debugger 跑動態，發現他會 drop 出一隻 .NET 後門 <code>%AppData%\Local\Temp\dfb5cc44a3e2a1762bc0f637ae29ffb43353755425</code>，並且在執行結束後自刪。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-debugger-backdoor-entry.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-debugger-backdoor-entry.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-debugger-backdoor-entry.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-debugger-backdoor-entry.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-debugger-backdoor-entry.webp"
+        title=" " /></p>
+<p>用 <a href="https://ntcore.com/?page_id=388" target="_blank" rel="noopener noreffer ">CFF Explorer</a> 打開注意到該檔案 internal name 為 <code>Radiogram.exe</code> ，在 VirusTotal 上搜尋 <code>name:Radiogram.exe</code> 發現樣本還不少，而且大部分的 engine 的 detection name 為 <strong>RedLine Stealer</strong>。</p>
+<p>簡單用 <a href="https://github.com/dnSpy/dnSpy" target="_blank" rel="noopener noreffer ">dnSpy</a> 瞄了一下，有些奇怪的 function name 居然是用<strong>哈薩克文</strong>寫的（by Google Translate），像是下面這個 function name 意思是 &ldquo;check bot&rdquo;，可以知道在以下條件會觸發 sleep 並結束程式。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063778/blog-posts/2023-08/26-check-bot-algorithm.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063778/blog-posts/2023-08/26-check-bot-algorithm.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063778/blog-posts/2023-08/26-check-bot-algorithm.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063778/blog-posts/2023-08/26-check-bot-algorithm.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063778/blog-posts/2023-08/26-check-bot-algorithm.webp"
+        title=" " /></p>
+<p>另外就是從網路上取得後續的 payload ，正好該有的資訊都寫在裡面，照著走會得到一個網址 hxxps[:]//pastebin[.]com/raw/tnW31tPp ，並且可以把裡面的 payload 抓下來。</p>
+<ul>
+<li>Config</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063778/blog-posts/2023-08/26-backdoor-config.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063778/blog-posts/2023-08/26-backdoor-config.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063778/blog-posts/2023-08/26-backdoor-config.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063778/blog-posts/2023-08/26-backdoor-config.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063778/blog-posts/2023-08/26-backdoor-config.webp"
+        title=" " /></p>
+<ul>
+<li>Decryption algorithm</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063780/blog-posts/2023-08/26-payload-decrypt-algorithm.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063780/blog-posts/2023-08/26-payload-decrypt-algorithm.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063780/blog-posts/2023-08/26-payload-decrypt-algorithm.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063780/blog-posts/2023-08/26-payload-decrypt-algorithm.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063780/blog-posts/2023-08/26-payload-decrypt-algorithm.webp"
+        title=" " /></p>
+<ul>
+<li>CyberChef</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-decrypt-pastebin-link.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-decrypt-pastebin-link.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-decrypt-pastebin-link.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063779/blog-posts/2023-08/26-decrypt-pastebin-link.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-decrypt-pastebin-link.webp"
+        title=" " /></p>
+<p>pastebin.com 是個公開程式碼分享平台，毫不意外地被攻擊者拿來當作後續攻擊的媒介。<br>
+而目前該網址 /tnW31tPp 已被通報，所以下架了。</p>
+<blockquote>
+<p>Not Found (#404)<br>
+This paste has been deemed potentially harmful. Pastebin took the necessary steps to prevent access on August 25, 2023, 12:55 am CDT. If you feel this is an incorrect assessment, please contact us within 14 days to avoid any permanent loss of content.</p>
+</blockquote>
+<p>而我們拿到的 payload  <code>Nj9QUisHPA83L1AfKwc8ETcsBh4oLQ1TGg9UWg==</code> 可以用同一組 XOR Key 得到最後的 C2 server =&gt; moy.tapoq[.]top:28786 (IP: 95.216.180[.]12)。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693067852/blog-posts/2023-08/26-decrypt-c2-server.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693067852/blog-posts/2023-08/26-decrypt-c2-server.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693067852/blog-posts/2023-08/26-decrypt-c2-server.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693067852/blog-posts/2023-08/26-decrypt-c2-server.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693067852/blog-posts/2023-08/26-decrypt-c2-server.webp"
+        title=" " /></p>
+<p>不過有趣的是，同一個 /tnW31tPp 網址從 VirusTotal 可以找到不同的 payload ，表示攻擊者一直都是用相同網址去更新 C2 server 的位址，從收集來的 payload 可以再找到幾台 C2 server。</p>
+<ul>
+<li>ley.domest[.]top:28786 (IP: 95.216.180[.]12)</li>
+<li>gog.shopapi[.]top:28786 (IP: 95.216.180[.]12)</li>
+<li>m6o.braavaw[.]top:28786 (IP: 185.229.64[.]67)</li>
+</ul>
+<p>共通點除了都是使用 Port 28786，以及註冊便宜的 .top TLD ，其中還有兩台跟本案的 C2 server 是同一組 IP。</p>
+<p><br><br></p>
+<p>其他一些功能從 function name 就能略知一二的了，並且大部分的 command 都有簡易混淆。</p>
+<ul>
+<li>
+<p>CryptoHelper</p>
+<ul>
+<li>觀察到有疑似摳解密的 API ，猜測可能是在機器上把撿到的 credential 解完再傳回 C2 server，圖中的各種 <code>MSValue*</code> 可以對應到下方網路流量的使用，總之就是各種偷 <code>login data</code>, <code>cookies</code>, <code>Web Data</code>, <code>localprefs.json</code>, &hellip;etc.。</li>
+<li><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693240586/blog-posts/2023-08/26-possible-decrypt-credential-function.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693240586/blog-posts/2023-08/26-possible-decrypt-credential-function.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693240586/blog-posts/2023-08/26-possible-decrypt-credential-function.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693240586/blog-posts/2023-08/26-possible-decrypt-credential-function.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693240586/blog-posts/2023-08/26-possible-decrypt-credential-function.webp"
+        title=" " /></li>
+</ul>
+</li>
+<li>
+<p>SystemInfoHelper</p>
+<ul>
+<li>GetProcessors (<code>SELECT * FROM Win32_Processor</code>)</li>
+<li>GetGraphicCards (<code>SELECT * FROM Win32_VideoController</code>)</li>
+<li>GetBrowsers (check <code>SOFTWARE\\WOW6432Node\\Clients\\StartMenuInternet</code>, <code>SOFTWARE\\Clients\\StartMenuInternet</code>)</li>
+<li>GetSerialNumber (<code>SELECT * FROM Win32_DiskDrive</code>)</li>
+<li>ListOfProcesses (<code>SELECT * FROM Win32_Process Where SessionId=</code>)</li>
+<li>GetVs (check <code>AntivirusProduct</code>, <code>AntiSpyWareProduct</code>, <code>FirewallProduct</code>)</li>
+<li>GetProcessesByName (<code>SELECT * FROM Win32_Process Where SessionId='</code>)</li>
+<li>ListOfPrograms (check <code>SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall</code>)</li>
+<li>AvailableLanguages</li>
+<li>CollectMemory (<code>SELECT * FROM Win32_OperatingSystem</code>)</li>
+<li>GetWindowsVersion (check <code>SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion</code>)</li>
+</ul>
+</li>
+</ul>
+<p>最後，從網路流量來看&hellip; 嗯 應該也不太需要多做解釋了。</p>
+<p>紅字是電腦發出去的 request，藍字則是對方下達的指令，可以看到基本上裝置裡所有文字檔、錢包位址等等都會被傳回去，其他一些存在各式瀏覽器的資訊，還有針對加密貨幣的 plugin，這些被拿走就真的很麻煩呢QQ</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063780/blog-posts/2023-08/26-wireshark-screenshot-1.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063780/blog-posts/2023-08/26-wireshark-screenshot-1.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063780/blog-posts/2023-08/26-wireshark-screenshot-1.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063780/blog-posts/2023-08/26-wireshark-screenshot-1.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063780/blog-posts/2023-08/26-wireshark-screenshot-1.webp"
+        title=" " /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063780/blog-posts/2023-08/26-wireshark-screenshot-2.webp"
+        data-srcset="https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063780/blog-posts/2023-08/26-wireshark-screenshot-2.webp, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063780/blog-posts/2023-08/26-wireshark-screenshot-2.webp 1.5x, https://res.cloudinary.com/eevee-blog/image/upload/f_auto%2cq_auto/v1693063780/blog-posts/2023-08/26-wireshark-screenshot-2.webp 2x"
+        data-sizes="auto"
+        alt="https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063780/blog-posts/2023-08/26-wireshark-screenshot-2.webp"
+        title=" " /></p>
+<p>↓↓↓ 簡單整理如下 ↓↓↓</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">%USERPROFILE%\Desktop|*.txt,*.doc*,*.rdp,*.key*,*wallet*,*seed*|0
+</span></span><span class="line"><span class="cl">%USERPROFILE%\Documents|*.txt,*.doc*,*.rdp,*key*,*wallet*,*seed*|0
+</span></span><span class="line"><span class="cl">%appdata%\binance|*.fp*|0.E...c.
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Battle.net
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Chromium\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Google\Chrome\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Google(x86)\Chrome\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Roaming\Opera Software\
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\MapleStudio\ChromePlus\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Iridium\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\7Star\7Star\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\CentBrowser\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Chedot\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Vivaldi\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Kometa\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Elements Browser\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Epic Privacy Browser\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\uCozMedia\Uran\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Fenrir Inc\Sleipnir5\setting\modules\ChromiumViewer
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\CatalinaGroup\Citrio\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Coowon\Coowon\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\liebao\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\QIP Surf\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Orbitum\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Comodo\Dragon\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Amigo\User\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Torch\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Yandex\YandexBrowser\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Comodo\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\360Browser\Browser\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Maxthon3\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\K-Melon\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Sputnik\Sputnik\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Nichrome\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\CocCoc\Browser\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Uran\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Chromodo\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Mail.Ru\Atom\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\BraveSoftware\Brave-Browser\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Microsoft\Edge\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\NVIDIA Corporation\NVIDIA GeForce Experience
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\Steam
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Local\CryptoTab Browser\User Data
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Roaming\Mozilla\Firefox
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Roaming\Waterfox
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Roaming\K-Meleon
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Roaming\Thunderbird
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Roaming\Comodo\IceDragon
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Roaming\8pecxstudios\Cyberfox
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Roaming\NETGATE Technologies\BlackHaw
+</span></span><span class="line"><span class="cl">%USERPROFILE%\AppData\Roaming\Moonchild Productions\Pale Moon
+</span></span><span class="line"><span class="cl">%appdata%E%E&#39;E...ArmoryE#..*.walletE%....E!E...AtomicE#.
+</span></span><span class="line"><span class="cl">%appdata%E%E&#39;E...atomicE#..*E%....E!E...BinanceE#.
+</span></span><span class="line"><span class="cl">%appdata%E%E&#39;E...BinanceE#..*app-store*E%....E!E...CoinomiE#..%localappdata%E%E&#39;E...Coinomi\Coinomi\CacheE#..*E%..E&#39;E...Coinomi\Coinomi\dbE#..*E%..E&#39;E...Coinomi\Coinomi\walletsE#..*E%....E!E...ElectrumE#.
+</span></span><span class="line"><span class="cl">%appdata%E%E&#39;E...Electrum\walletsE#..*E%....E!E...EthereumE#.
+</span></span><span class="line"><span class="cl">%appdata%E%E&#39;E...Ethereum\walletsE#..*E%....E!E...ExodusE#.
+</span></span><span class="line"><span class="cl">%appdata%E%E&#39;E...Exodus\exodus.walletE#..*E%..E&#39;E...ExodusE#..*.jsonE%....E!E...GuardaE#.
+</span></span><span class="line"><span class="cl">%appdata%E%E&#39;E...GuardaE#..*E%....E!E...JaxxE#.
+</span></span><span class="line"><span class="cl">%appdata%E%E&#39;E...com.liberty.jaxxE#..*E%....E!E...MoneroE#..
+</span></span><span class="line"><span class="cl">%USERPROFILE%\DocumentsE%E&#39;E...Monero\walletsE#..*E%.....E)...
+</span></span><span class="line"><span class="cl">ffnbelfdoeiohenkjibnmadjiehjhajb|YoroiWallet
+</span></span><span class="line"><span class="cl">ibnejdfjmmkpcnlpebklmnkoeoihofec|Tronlink
+</span></span><span class="line"><span class="cl">jbdaocneiiinmjbjlgalhcelgbejmnid|NiftyWallet
+</span></span><span class="line"><span class="cl">nkbihfbeogaeaoehlefnkodbefgpgknn|Metamask
+</span></span><span class="line"><span class="cl">afbcbjpbpfadlkmhmclhkeeodmamcflc|MathWallet
+</span></span><span class="line"><span class="cl">hnfanknocfeofbddgcijnmhnfnkdnaad|Coinbase
+</span></span><span class="line"><span class="cl">fhbohimaelbohpjbbldcngcnapndodjp|BinanceChain
+</span></span><span class="line"><span class="cl">odbfpeeihdkbihmopkbjmoonfanlbfcl|BraveWallet
+</span></span><span class="line"><span class="cl">hpglfhgfnhbgpjdenjgmdgoeiappafln|GuardaWallet
+</span></span><span class="line"><span class="cl">blnieiiffboillknjnepogjhkgnoapac|EqualWallet
+</span></span><span class="line"><span class="cl">cjelfplplebdjjenllpjcblmjkfcffne|JaxxxLiberty
+</span></span><span class="line"><span class="cl">fihkakfobkmkjojpchpfgcmhfjnmnfpi|BitAppWallet
+</span></span><span class="line"><span class="cl">kncchdigobghenbbaddojjnnaogfppfj|iWallet
+</span></span><span class="line"><span class="cl">amkmjjmmflddogmhpjloimipbofnfjih|Wombat
+</span></span><span class="line"><span class="cl">fhilaheimglignddkjgofkcbgekhenbh|AtomicWallet
+</span></span><span class="line"><span class="cl">nlbmnnijcnlegkjjpcfjclmcfggfefdm|MewCx
+</span></span><span class="line"><span class="cl">nanjmdknhkinifnkgdcggcfnhdaammmj|GuildWallet
+</span></span><span class="line"><span class="cl">nkddgncdjgjfcddamfgcmfnlhccnimig|SaturnWallet
+</span></span><span class="line"><span class="cl">fnjhmkhhmkbjkkabndcnnogagogbneec|RoninWallet
+</span></span><span class="line"><span class="cl">aiifbnbfobpmeekipheeijimdpnlpgpp|TerraStation
+</span></span><span class="line"><span class="cl">fnnegphlobjdpkhecapkijjdkgcjhkib|HarmonyWallet
+</span></span><span class="line"><span class="cl">aeachknmefphepccionboohckonoeemg|Coin98Wallet
+</span></span><span class="line"><span class="cl">cgeeodpfagjceefieflmdfphplkenlfk|TonCrystal
+</span></span><span class="line"><span class="cl">pdadjkfkgcafgbceimcpbkalnfnepbnk|KardiaChain
+</span></span><span class="line"><span class="cl">bfnaelmomeimhlpmgjnjophhpkkoljpa|Phantom
+</span></span><span class="line"><span class="cl">fhilaheimglignddkjgofkcbgekhenbh|Oxygen
+</span></span><span class="line"><span class="cl">mgffkfbidihjpoaomajlbgchddlicgpn|PaliWallet
+</span></span><span class="line"><span class="cl">aodkkagnadcbobfpggfnjeongemjbjca|BoltX
+</span></span><span class="line"><span class="cl">kpfopkelmapcoipemfendmdcghnegimn|LiqualityWallet
+</span></span><span class="line"><span class="cl">hmeobnfnfcmdkdcmlblgagmfpfboieaf|XdefiWallet
+</span></span><span class="line"><span class="cl">lpfcbjknijpeeillifnkikgncikgfhdo|NamiWallet
+</span></span><span class="line"><span class="cl">dngmlblcodfobpdpecaadgfbcggfjfnm|MaiarDeFiWallet
+</span></span><span class="line"><span class="cl">AWS_ACCESS_KEY_ID
+</span></span><span class="line"><span class="cl">AWS_SECRET_ACCESS_KEY
+</span></span><span class="line"><span class="cl">AMAZON_AWS_ACCESS_KEY_ID
+</span></span><span class="line"><span class="cl">AMAZON_AWS_SECRET_ACCESS_KEY
+</span></span><span class="line"><span class="cl">ALGOLIA_API_KEY
+</span></span><span class="line"><span class="cl">AZURE_CLIENT_ID
+</span></span><span class="line"><span class="cl">AZURE_CLIENT_SECRET
+</span></span><span class="line"><span class="cl">AZURE_USERNAME
+</span></span><span class="line"><span class="cl">AZURE_PASSWORD
+</span></span><span class="line"><span class="cl">MSI_ENDPOINT
+</span></span><span class="line"><span class="cl">MSI_SECRET
+</span></span><span class="line"><span class="cl">binance_api
+</span></span><span class="line"><span class="cl">binance_secret
+</span></span><span class="line"><span class="cl">BITTREX_API_KEY
+</span></span><span class="line"><span class="cl">BITTREX_API_SECRET
+</span></span><span class="line"><span class="cl">CF_PASSWORD
+</span></span><span class="line"><span class="cl">CF_USERNAME
+</span></span><span class="line"><span class="cl">CODECLIMATE_REPO_TOKEN
+</span></span><span class="line"><span class="cl">COVERALLS_REPO_TOKEN
+</span></span><span class="line"><span class="cl">CIRCLE_TOKEN
+</span></span><span class="line"><span class="cl">DIGITALOCEAN_ACCESS_TOKEN
+</span></span><span class="line"><span class="cl">DOCKER_EMAIL
+</span></span><span class="line"><span class="cl">DOCKER_PASSWORD
+</span></span><span class="line"><span class="cl">DOCKER_USERNAME
+</span></span><span class="line"><span class="cl">DOCKERHUB_PASSWORD
+</span></span><span class="line"><span class="cl">FACEBOOK_APP_ID
+</span></span><span class="line"><span class="cl">FACEBOOK_APP_SECRET
+</span></span><span class="line"><span class="cl">FACEBOOK_ACCESS_TOKEN
+</span></span><span class="line"><span class="cl">FIREBASE_TOKEN
+</span></span><span class="line"><span class="cl">FOSSA_API_KEY
+</span></span><span class="line"><span class="cl">GH_TOKEN
+</span></span><span class="line"><span class="cl">GH_ENTERPRISE_TOKEN
+</span></span><span class="line"><span class="cl">CI_DEPLOY_PASSWORD
+</span></span><span class="line"><span class="cl">CI_DEPLOY_USER
+</span></span><span class="line"><span class="cl">GOOGLE_APPLICATION_CREDENTIALS
+</span></span><span class="line"><span class="cl">GOOGLE_API_KEY
+</span></span><span class="line"><span class="cl">CI_DEPLOY_USER
+</span></span><span class="line"><span class="cl">CI_DEPLOY_PASSWORD
+</span></span><span class="line"><span class="cl">GITLAB_USER_LOGIN
+</span></span><span class="line"><span class="cl">CI_JOB_JWT
+</span></span><span class="line"><span class="cl">CI_JOB_JWT_V2
+</span></span><span class="line"><span class="cl">CI_JOB_TOKEN
+</span></span><span class="line"><span class="cl">HEROKU_API_KEY
+</span></span><span class="line"><span class="cl">HEROKU_API_USER
+</span></span><span class="line"><span class="cl">MAILGUN_API_KEY
+</span></span><span class="line"><span class="cl">MCLI_PRIVATE_API_KEY
+</span></span><span class="line"><span class="cl">MCLI_PUBLIC_API_KEY
+</span></span><span class="line"><span class="cl">NGROK_TOKEN
+</span></span><span class="line"><span class="cl">NGROK_AUTH_TOKEN
+</span></span><span class="line"><span class="cl">NPM_AUTH_TOKEN
+</span></span><span class="line"><span class="cl">OKTA_CLIENT_ORGURL
+</span></span><span class="line"><span class="cl">OKTA_CLIENT_TOKEN
+</span></span><span class="line"><span class="cl">OKTA_OAUTH2_CLIENTSECRET
+</span></span><span class="line"><span class="cl">OKTA_OAUTH2_CLIENTID
+</span></span><span class="line"><span class="cl">OKTA_AUTHN_GROUPID
+</span></span><span class="line"><span class="cl">OS_USERNAME
+</span></span><span class="line"><span class="cl">OS_PASSWORD
+</span></span><span class="line"><span class="cl">PERCY_TOKEN
+</span></span><span class="line"><span class="cl">SAUCE_ACCESS_KEY
+</span></span><span class="line"><span class="cl">SAUCE_USERNAME
+</span></span><span class="line"><span class="cl">SENTRY_AUTH_TOKEN
+</span></span><span class="line"><span class="cl">SLACK_TOKEN
+</span></span><span class="line"><span class="cl">square_access_token
+</span></span><span class="line"><span class="cl">square_oauth_secret
+</span></span><span class="line"><span class="cl">STRIPE_API_KEY
+</span></span><span class="line"><span class="cl">STRIPE_DEVICE_NAME
+</span></span><span class="line"><span class="cl">SURGE_TOKEN
+</span></span><span class="line"><span class="cl">SURGE_LOGIN
+</span></span><span class="line"><span class="cl">TWILIO_ACCOUNT_SID
+</span></span><span class="line"><span class="cl">CONSUMER_KEY
+</span></span><span class="line"><span class="cl">CONSUMER_SECRET
+</span></span><span class="line"><span class="cl">TRAVIS_SUDO
+</span></span><span class="line"><span class="cl">TRAVIS_OS_NAME
+</span></span><span class="line"><span class="cl">TRAVIS_SECURE_ENV_VARS
+</span></span><span class="line"><span class="cl">VAULT_TOKEN
+</span></span><span class="line"><span class="cl">VAULT_CLIENT_KEY
+</span></span><span class="line"><span class="cl">TOKEN
+</span></span><span class="line"><span class="cl">VULTR_ACCESS
+</span></span><span class="line"><span class="cl">VULTR_SECRET
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="in-closing">In Closing</h2>
+<p>根據一些在網路上的資料，沒意外這隻就是 <strong>RedLine Stealer</strong> 了，原本想說哪可能這麼容易就撿到惡意程式，沒想到這查下去就是一串粽子XDDD</p>
+<p>不過根據中獎的那位朋友表示，這陣子除了一直收到可疑的登入通知，在 Steam 方面即便之前就綁 Steam Guard ，但關鍵時刻卻還是沒有跳出來 2FA ，帳號就這樣直接被拿去亂傳訊息，在猜想是否因為存在瀏覽器的資訊被拿走，讓攻擊者可以直接用 session 做登入嗎，嗯 &hellip; 好微妙。</p>
+<p>至於事發兩天後我用同樣的 free-download 關鍵字在 Google Search 看到其他 GitHub repo 以不同的壓縮密碼散播 CPP-based 的惡意程式，那又是另一個故事了&hellip;</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://www.securityweek.com/" target="_blank" rel="noopener noreffer ">Takedown of GitHub Repositories Disrupts RedLine Malware Operations</a>takedown-of-github-repositories-disrupts-redline-malware-operations/</li>
+<li><a href="https://c3rb3ru5d3d53c.github.io/2022/11/redline-stealer/" target="_blank" rel="noopener noreffer ">Destroying Redline Stealer and CypherIT</a></li>
+<li><a href="https://www.esentire.com/blog/esentire-threat-intelligence-malware-analysis-redline-stealer" target="_blank" rel="noopener noreffer ">eSentire Threat Intelligence Malware Analysis: Redline Stealer</a></li>
+<li><a href="https://blog.eclecticiq.com/redline-stealer-variants-demonstrate-a-low-barrier-to-entry-threat" target="_blank" rel="noopener noreffer ">Malware-as-a-Service: Redline Stealer Variants Demonstrate a Low-Barrier-to-Entry Threat</a></li>
+<li><a href="https://web.archive.org/web/20230606224056/https://apophis133.medium.com/redline-technical-analysis-report-5034e16ad152" target="_blank" rel="noopener noreffer ">RedLine Technical Analysis Report (web archive)</a></li>
+<li><a href="https://www.trendmicro.com/en_us/research/23/e/malicious-ai-tool-ads-used-to-deliver-redline-stealer.html" target="_blank" rel="noopener noreffer ">Malicious AI Tool Ads Used to Deliver Redline Stealer</a></li>
+<li><a href="https://www.ithome.com.tw/news/149295" target="_blank" rel="noopener noreffer ">駭客將可竊取機密資訊的RedLine Stealer偽裝成Windows 11更新程式</a></li>
+<li><a href="https://technews.tw/2022/01/04/chrome-edge-password/" target="_blank" rel="noopener noreffer ">習慣用 Chrome 記住密碼，遠端工作恐成駭客破口</a></li>
+</ul>
+<h2 id="iocs">IOCs</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Indicator</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">f9186767c98490db03a70f511cb24a84eb906c94</td>
+          <td style="text-align: left">Setup.zip</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">ab741ccd807f6645c15aa9d69666b04ea8e6d408</td>
+          <td style="text-align: left">Setup.exe</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">73ceacde9d7b7ede1c4b7615c1bd5ae2ace45b97</td>
+          <td style="text-align: left">Radiogram.exe (filename: dfb5cc44a3e2a1762bc0f637ae29ffb43353755425)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">hxxps[:]//launchersoftware.godaddysites[.]com/</td>
+          <td style="text-align: left">The link redirect to discord link</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">hxxps[:]//cdn.discordapp[.]com/attachments/<br>1042051714754289756/1143174795983343656/Setup.zip</td>
+          <td style="text-align: left">Download link</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">hxxps[:]//pastebin[.]com/raw/tnW31tPp</td>
+          <td style="text-align: left">The site to store subsequent payload</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">moy.tapoq[.]top:28786</td>
+          <td style="text-align: left">C2 Server</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">95.216.180[.]12</td>
+          <td style="text-align: left">C2 Server</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="suspicious-github-users">Suspicious GitHub Users</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">@hiinoo01aiiu, Joined on Aug 29, 2021
+</span></span><span class="line"><span class="cl">@MinhGachaCoder, Joined on Mar 12, 2023
+</span></span><span class="line"><span class="cl">@elvisEam, Joined on Jun 8, 2022
+</span></span><span class="line"><span class="cl">@MarkRoi, Uganda - Kampala
+</span></span><span class="line"><span class="cl">@Mr-krostopbey1903, Joined on Jan 29, 2021
+</span></span><span class="line"><span class="cl">@tccpro, Freelance @Shopify
+</span></span><span class="line"><span class="cl">@qarixaeed1, Joined on Aug 1, 2022
+</span></span><span class="line"><span class="cl">@Kashif818Mehmood, Joined on Jun 28, 2020
+</span></span><span class="line"><span class="cl">@TGRedDragon, Joined on Mar 19, 2023
+</span></span><span class="line"><span class="cl">@llstevenll, Joined on Oct 17, 2022
+</span></span><span class="line"><span class="cl">@RobinHuaman, Joined on Sep 4, 2021
+</span></span><span class="line"><span class="cl">@Masterkent11, Joined on Jul 9, 2019
+</span></span><span class="line"><span class="cl">@laoluibitoye, Joined on Jul 25, 2019
+</span></span><span class="line"><span class="cl">@gl0nDbeatz, Joined on Jul 28, 2023
+</span></span><span class="line"><span class="cl">@Issoufouiha, Niamey
+</span></span><span class="line"><span class="cl">@nazadam, Joined on Sep 27, 2022
+</span></span><span class="line"><span class="cl">@A-mal, Joined on Jun 6, 2021
+</span></span><span class="line"><span class="cl">@X-vinjin, Joined on Dec 6, 2022
+</span></span><span class="line"><span class="cl">@theillumina, Joined on Mar 26, 2023
+</span></span><span class="line"><span class="cl">@Sazzadur1991, Joined on Aug 4, 2023
+</span></span><span class="line"><span class="cl">@GitTrio3, Joined on Jun 7, 2023
+</span></span><span class="line"><span class="cl">@UnknownKingsy, Joined on Jan 25, 2021
+</span></span><span class="line"><span class="cl">@Kyori4k, Joined on Oct 28, 2022
+</span></span><span class="line"><span class="cl">@Developwithjaspreet, wpcodekit
+</span></span><span class="line"><span class="cl">@ajivijay, Joined on Jul 1, 2023
+</span></span><span class="line"><span class="cl">@soporteint2023, Joined on Apr 27, 2023
+</span></span><span class="line"><span class="cl">@KojoClinton, Joined on Jul 10, 2023
+</span></span><span class="line"><span class="cl">@intel1337, Selfish
+</span></span><span class="line"><span class="cl">@Kirarik21, Joined on Jun 10, 2023
+</span></span><span class="line"><span class="cl">@Emrx29y, Joined on Feb 26, 2023
+</span></span><span class="line"><span class="cl">@Clemens17, Joined on Nov 15, 2022
+</span></span><span class="line"><span class="cl">@Elissonamarodasilva, Joined on Feb 11, 2023
+</span></span><span class="line"><span class="cl">@Mcbrightyves, Joined on Oct 17, 2022
+</span></span><span class="line"><span class="cl">@wxmcode, Joined on Sep 3, 2019
+</span></span><span class="line"><span class="cl">@Aramayis1996, Joined on Nov 27, 2022
+</span></span><span class="line"><span class="cl">@yuanxiangliu, Joined on Aug 18, 2022
+</span></span><span class="line"><span class="cl">@ohTraveler, Joined on Aug 15, 2023
+</span></span><span class="line"><span class="cl">@Ladicor, Joined on Mar 1, 2022
+</span></span><span class="line"><span class="cl">@alexanderutmn, Joined on Apr 1, 2017
+</span></span><span class="line"><span class="cl">@guru9999, Joined on Aug 6, 2017
+</span></span><span class="line"><span class="cl">@MakareB, Joined on May 12, 2021
+</span></span><span class="line"><span class="cl">@olikke, Joined on Dec 11, 2018
+</span></span><span class="line"><span class="cl">@twirus7, Joined on Apr 13, 2023
+</span></span><span class="line"><span class="cl">@BabyNelo, Joined on Mar 21, 2023
+</span></span><span class="line"><span class="cl">@saintsblack, Joined on Mar 4, 2023
+</span></span><span class="line"><span class="cl">@un243alexxx, Joined on Nov 29, 2020
+</span></span><span class="line"><span class="cl">@gingazov2010, Joined on Nov 9, 2019
+</span></span><span class="line"><span class="cl">@dasdeutchguy, Joined on May 28, 2023
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-08-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/malware-analysis/">Malware Analysis</a>,&nbsp;<a href="/tags/redline-infostealer/">RedLine InfoStealer</a>,&nbsp;<a href="/tags/cybercrime/">Cybercrime</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2023/2023h1-sharing/" class="prev" rel="prev" title="[2023H1 雜談] 嘿！我回來了"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>[2023H1 雜談] 嘿！我回來了</a></div>
+</div>
+<div id="comments"><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.134.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://blog.cyris.tw" target="_blank">Cyris Tseng</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":20},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment 💬","lightTheme":"github-light","repo":"yctseng1227/blog-comments"}}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

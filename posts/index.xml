@@ -1,0 +1,99 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>All Posts - Cyris&#39;s Blog</title>
+        <link>https://blog.cyris.tw/posts/</link>
+        <description>All Posts | Cyris&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 26 Aug 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://blog.cyris.tw/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>[Malware Analysis] 難道這是免費可以看的嗎？ RedLine InfoStealer</title>
+    <link>https://blog.cyris.tw/posts/2023/redline-infostealer-analysis/</link>
+    <pubDate>Sat, 26 Aug 2023 00:00:00 &#43;0000</pubDate>
+    <author>Cyris</author>
+    <guid>https://blog.cyris.tw/posts/2023/redline-infostealer-analysis/</guid>
+    <description><![CDATA[<p><u style="color:red;">你已成為盜版的受害者。</u><br>
+雖然 GitHub 提倡的開源文化是可受大眾公開檢視，但不代表就是 100% 安全。</p>]]></description>
+</item>
+<item>
+    <title>[2023H1 雜談] 嘿！我回來了</title>
+    <link>https://blog.cyris.tw/posts/2023/2023h1-sharing/</link>
+    <pubDate>Fri, 07 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>Cyris</author>
+    <guid>https://blog.cyris.tw/posts/2023/2023h1-sharing/</guid>
+    <description><![CDATA[<p>畢業後開始社畜生活，然後被抓去剃光頭為國效勞四個月，回公司後不久又接著受訓一個月。<br>
+一年真的轉眼就過去了。</p>]]></description>
+</item>
+<item>
+    <title>[NSYSU 資安社課] Intranet Penetration</title>
+    <link>https://blog.cyris.tw/posts/2022/nsysuisc-intranet-penetration/</link>
+    <pubDate>Thu, 21 Apr 2022 00:00:00 &#43;0000</pubDate>
+    <author>Cyris</author>
+    <guid>https://blog.cyris.tw/posts/2022/nsysuisc-intranet-penetration/</guid>
+    <description><![CDATA[<p>久違的社課，這次是 <strong>MacacaHub</strong> 現役成員 @Arikoi 談內網滲透。<br>
+整場聽下來發現自己太多觀念不熟，所以盡可能將過程整理，有任何錯誤還請不吝指教！</p>]]></description>
+</item>
+<item>
+    <title>[DEVCORE @HITCON2021] Wargame Web Challenge</title>
+    <link>https://blog.cyris.tw/posts/2021/hitcon2021-devcore-web-challenge/</link>
+    <pubDate>Wed, 01 Dec 2021 00:00:00 &#43;0000</pubDate>
+    <author>Cyris</author>
+    <guid>https://blog.cyris.tw/posts/2021/hitcon2021-devcore-web-challenge/</guid>
+    <description><![CDATA[<p>嗚嗚 好想拿 <font color="#46D62D"><b>MASTER OF WEBSEC</b></font>，但實力不允許我挑戰這個頭銜QQ<br>
+今年是我第二次參加 HITCON，現場活動真的是多到很難全部都摸過一遍 : D</p>]]></description>
+</item>
+<item>
+    <title>[Sharing] HITCON Education Defense 2021</title>
+    <link>https://blog.cyris.tw/posts/2021/hitcon-education-defense-2021/</link>
+    <pubDate>Mon, 01 Nov 2021 00:00:00 &#43;0000</pubDate>
+    <author>Cyris</author>
+    <guid>https://blog.cyris.tw/posts/2021/hitcon-education-defense-2021/</guid>
+    <description><![CDATA[<p>住手！
+不要再把我們的機器關機 LAAAAAAAAAAAAAAAA</p>]]></description>
+</item>
+<item>
+    <title>[Malware Analysis] 出現了！是野生的貓味</title>
+    <link>https://blog.cyris.tw/posts/2021/my-first-malware-study/</link>
+    <pubDate>Wed, 21 Jul 2021 00:00:00 &#43;0000</pubDate>
+    <author>Cyris</author>
+    <guid>https://blog.cyris.tw/posts/2021/my-first-malware-study/</guid>
+    <description><![CDATA[<p>第一次撿到野生的 Malware。</p>]]></description>
+</item>
+<item>
+    <title>[Sharing] Jenkins 🛠 Github 當服務生遇到章魚貓</title>
+    <link>https://blog.cyris.tw/posts/2021/cicd-jenkins-with-github-note/</link>
+    <pubDate>Sat, 19 Jun 2021 00:00:00 &#43;0000</pubDate>
+    <author>Cyris</author>
+    <guid>https://blog.cyris.tw/posts/2021/cicd-jenkins-with-github-note/</guid>
+    <description><![CDATA[<p></p>
+<p>Nice question.</p>]]></description>
+</item>
+<item>
+    <title>[Writeup] SWCTF 0x7e4</title>
+    <link>https://blog.cyris.tw/posts/2021/swctf-0x7e4-writeups/</link>
+    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author>Cyris</author>
+    <guid>https://blog.cyris.tw/posts/2021/swctf-0x7e4-writeups/</guid>
+    <description><![CDATA[<p>2021 首篇!! 新年快樂~</p>
+<p>這場 SWCTF 由 <strong>逢甲大學黑客社</strong>、<strong>靜宜大學行雲者研發基地</strong> 及 <strong>台中科技大學資訊研究社</strong> 聯合設計的 CTF 競賽。</p>]]></description>
+</item>
+<item>
+    <title>[NSYSU 駭客攻防] HW 0x02 Writeups</title>
+    <link>https://blog.cyris.tw/posts/2020/nsysu-htcf-hw2/</link>
+    <pubDate>Wed, 09 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>Cyris</author>
+    <guid>https://blog.cyris.tw/posts/2020/nsysu-htcf-hw2/</guid>
+    <description><![CDATA[<p>Writeups 搬自 <a href="https://github.com/MacacaHub/CTF-writeups/blob/master/HTCF-CTF-2020/hw2/readme.md" target="_blank" rel="noopener noreffer ">MacacaHub HTCF HW 0x02</a></p>
+<p>Author: <strong>@stavhaygn</strong><br>
+Writeup By: <strong>@yctseng1227</strong></p>]]></description>
+</item>
+<item>
+    <title>[NSYSU 駭客攻防] Midterm Writeups</title>
+    <link>https://blog.cyris.tw/posts/2020/nsysu-htcf-midterm-writeups/</link>
+    <pubDate>Mon, 09 Nov 2020 00:00:00 &#43;0000</pubDate>
+    <author>Cyris</author>
+    <guid>https://blog.cyris.tw/posts/2020/nsysu-htcf-midterm-writeups/</guid>
+    <description><![CDATA[<p></p>
+<p>Writeups 搬自 <a href="https://github.com/MacacaHub/CTF-writeups/blob/master/HTCF-CTF-2020/midterm/readme.md" target="_blank" rel="noopener noreffer ">MacacaHub HTCF Midterm writeups</a></p>
+<p>Author: <strong>@stavhaygn</strong><br>
+Writeup By: <strong>@yctseng1227</strong></p>]]></description>
+</item>
+</channel>
+</rss>
