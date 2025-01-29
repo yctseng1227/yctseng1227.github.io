@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Intranet Penetration - Tag - Cyris&#39;s Blog</title>
+        <link>https://blog.cyris.tw/tags/intranet-penetration/</link>
+        <description>Intranet Penetration - Tag - Cyris&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 21 Apr 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://blog.cyris.tw/tags/intranet-penetration/" rel="self" type="application/rss+xml" /><item>
+    <title>[NSYSU 資安社課] Intranet Penetration</title>
+    <link>https://blog.cyris.tw/posts/2022/nsysuisc-intranet-penetration/</link>
+    <pubDate>Thu, 21 Apr 2022 00:00:00 &#43;0000</pubDate>
+    <author>Cyris</author>
+    <guid>https://blog.cyris.tw/posts/2022/nsysuisc-intranet-penetration/</guid>
+    <description><![CDATA[<p>久違的社課，這次是 <strong>MacacaHub</strong> 現役成員 @Arikoi 談內網滲透。<br>
+整場聽下來發現自己太多觀念不熟，所以盡可能將過程整理，有任何錯誤還請不吝指教！</p>]]></description>
+</item>
+</channel>
+</rss>

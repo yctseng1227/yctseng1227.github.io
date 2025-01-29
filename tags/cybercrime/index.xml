@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Cybercrime - Tag - Cyris&#39;s Blog</title>
+        <link>https://blog.cyris.tw/tags/cybercrime/</link>
+        <description>Cybercrime - Tag - Cyris&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 26 Aug 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://blog.cyris.tw/tags/cybercrime/" rel="self" type="application/rss+xml" /><item>
+    <title>[Malware Analysis] 難道這是免費可以看的嗎？ RedLine InfoStealer</title>
+    <link>https://blog.cyris.tw/posts/2023/redline-infostealer-analysis/</link>
+    <pubDate>Sat, 26 Aug 2023 00:00:00 &#43;0000</pubDate>
+    <author>Cyris</author>
+    <guid>https://blog.cyris.tw/posts/2023/redline-infostealer-analysis/</guid>
+    <description><![CDATA[<p><u style="color:red;">你已成為盜版的受害者。</u><br>
+雖然 GitHub 提倡的開源文化是可受大眾公開檢視，但不代表就是 100% 安全。</p>]]></description>
+</item>
+</channel>
+</rss>
