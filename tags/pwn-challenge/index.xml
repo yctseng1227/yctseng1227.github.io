@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Pwn Challenge - Tag - Cyris&#39;s Blog</title>
+        <link>https://blog.cyris.tw/tags/pwn-challenge/</link>
+        <description>Pwn Challenge - Tag - Cyris&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 22 Mar 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://blog.cyris.tw/tags/pwn-challenge/" rel="self" type="application/rss+xml" /><item>
+    <title>[NSYSU 資安社課] Pwn Basic #1</title>
+    <link>https://blog.cyris.tw/posts/2020/nsysuisc-pwn-01/</link>
+    <pubDate>Sun, 22 Mar 2020 00:00:00 &#43;0000</pubDate>
+    <author>Cyris</author>
+    <guid>https://blog.cyris.tw/posts/2020/nsysuisc-pwn-01/</guid>
+    <description><![CDATA[<p>經歷大約一學期的 CTF 洗禮，總算是對這分面稍微有些概念 : D<br>
+原本已經這個部落格的定位應該要是技術向，殊不知都被我拿來發廢文&hellip;</p>]]></description>
+</item>
+</channel>
+</rss>

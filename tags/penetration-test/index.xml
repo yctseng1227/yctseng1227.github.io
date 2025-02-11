@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Penetration Test - Tag - Cyris&#39;s Blog</title>
+        <link>https://blog.cyris.tw/tags/penetration-test/</link>
+        <description>Penetration Test - Tag - Cyris&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 Dec 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://blog.cyris.tw/tags/penetration-test/" rel="self" type="application/rss+xml" /><item>
+    <title>[DEVCORE @HITCON2021] Wargame Web Challenge</title>
+    <link>https://blog.cyris.tw/posts/2021/hitcon2021-devcore-web-challenge/</link>
+    <pubDate>Wed, 01 Dec 2021 00:00:00 &#43;0000</pubDate>
+    <author>Cyris</author>
+    <guid>https://blog.cyris.tw/posts/2021/hitcon2021-devcore-web-challenge/</guid>
+    <description><![CDATA[<p>嗚嗚 好想拿 <font color="#46D62D"><b>MASTER OF WEBSEC</b></font>，但實力不允許我挑戰這個頭銜QQ<br>
+今年是我第二次參加 HITCON，現場活動真的是多到很難全部都摸過一遍 : D</p>]]></description>
+</item>
+</channel>
+</rss>
