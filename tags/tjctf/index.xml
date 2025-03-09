@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>TJCTF - Tag - Cyris&#39;s Blog</title>
+        <link>https://blog.cyris.tw/tags/tjctf/</link>
+        <description>TJCTF - Tag - Cyris&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 29 May 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://blog.cyris.tw/tags/tjctf/" rel="self" type="application/rss+xml" /><item>
+    <title>[Writeup] TJCTF 2020 - Weak Password (Blind SQL injection)</title>
+    <link>https://blog.cyris.tw/posts/2020/tjctf-2020-weakpassword/</link>
+    <pubDate>Fri, 29 May 2020 00:00:00 &#43;0000</pubDate>
+    <author>Cyris</author>
+    <guid>https://blog.cyris.tw/posts/2020/tjctf-2020-weakpassword/</guid>
+    <description><![CDATA[<p>Writeups 搬自 <a href="https://github.com/MacacaHub/CTF-writeups/blob/master/TJCTF-2020/Weak%20Password/readme.md" target="_blank" rel="noopener noreffer ">MacacaHub TJCTF 2020 Writeups</a></p>
+<p>這題雖然叫 Weak Password ，但我當時遇到真的戳不出來呢 ; w ;</p>
+<p>最後賽後隊友提點才知道原來是 <strong>Blind SQL injection</strong> ，平常我只拿<code>' or 1=1 -- </code>戳戳根本是小兒科ww</p>]]></description>
+</item>
+</channel>
+</rss>
