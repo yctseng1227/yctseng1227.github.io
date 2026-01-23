@@ -1,0 +1,493 @@
+<!doctype html><html lang=zh-TW><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>[Sharing] Jenkins 🛠 Github 當服務生遇到章魚貓 - Cyris | Limit Break</title><meta name=Description content="Jenkins 與 GitHub 整合 CI/CD 自動化部署教學筆記"><meta property="og:url" content="https://blog.cyris.tw/posts/2021/cicd-jenkins-with-github-note/"><meta property="og:site_name" content="Cyris | Limit Break"><meta property="og:title" content="[Sharing] Jenkins 🛠 Github 當服務生遇到章魚貓"><meta property="og:description" content="Jenkins 與 GitHub 整合 CI/CD 自動化部署教學筆記"><meta property="og:locale" content="zh_TW"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2021-06-19T00:00:00+00:00"><meta property="article:modified_time" content="2021-06-19T00:00:00+00:00"><meta property="article:tag" content="DevOps"><meta property="article:tag" content="Jenkins CI/CD"><meta property="og:image" content="https://blog.cyris.tw/img/cyris.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://blog.cyris.tw/img/cyris.png"><meta name=twitter:title content="[Sharing] Jenkins 🛠 Github 當服務生遇到章魚貓"><meta name=twitter:description content="Jenkins 與 GitHub 整合 CI/CD 自動化部署教學筆記"><meta name=application-name content="Cyris | Limit Break"><meta name=apple-mobile-web-app-title content="Cyris | Limit Break"><meta name=theme-color content="#f8f8f8"><meta name=msapplication-TileColor content="#da532c"><link rel=icon href=/img/favicon.ico><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=canonical href=https://blog.cyris.tw/posts/2021/cicd-jenkins-with-github-note/><link rel=prev href=https://blog.cyris.tw/posts/2021/swctf-0x7e4-writeups/><link rel=next href=https://blog.cyris.tw/posts/2021/my-first-malware-study/><link rel=stylesheet href=/css/main.min.css><link rel=stylesheet href=/css/style.min.css><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"[Sharing] Jenkins 🛠 Github 當服務生遇到章魚貓","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.cyris.tw/posts/2021/cicd-jenkins-with-github-note/"},"image":["https://blog.cyris.tw/img/cyris.png"],"genre":"posts","keywords":["DevOps","Jenkins CI/CD"],"wordcount":4135,"url":"https://blog.cyris.tw/posts/2021/cicd-jenkins-with-github-note/","datePublished":"2021-06-19T00:00:00+00:00","dateModified":"2021-06-19T00:00:00+00:00","license":"本著作係採用創用 CC 姓名標示-非商業性 4.0 國際授權條款授權.","publisher":{"@type":"Organization","name":"Cyris","logo":"https://blog.cyris.tw/img/cyris.png"},"author":{"@type":"Person","name":"Cyris","url":"https://blog.cyris.tw"},"description":"Jenkins 與 GitHub 整合 CI/CD 自動化部署教學筆記"}</script></head><body data-instant-intensity=viewport class="tw-flex tw-min-h-screen tw-flex-col"><script type=text/javascript>function setTheme(e){document.body.setAttribute("theme",e),document.documentElement.className=e,document.documentElement.style.setProperty("color-scheme",e==="light"?"light":"dark"),e==="light"?document.documentElement.classList.remove("tw-dark"):document.documentElement.classList.add("tw-dark"),window.theme=e,window.isDark=window.theme!=="light"}function saveTheme(e){window.localStorage&&localStorage.setItem("theme",e)}function getMeta(e){const t=document.getElementsByTagName("meta");for(let n=0;n<t.length;n++)if(t[n].getAttribute("name")===e)return t[n];return""}if(window.localStorage&&localStorage.getItem("theme")){let e=localStorage.getItem("theme");e==="light"||e==="dark"?setTheme(e):setTheme(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}else"auto"==="light"||"auto"==="dark"?(setTheme("auto"),saveTheme("auto")):(saveTheme("auto"),setTheme(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"));let metaColors={light:"#f8f8f8",dark:"#161b22"};getMeta("theme-color").content=metaColors[document.body.getAttribute("theme")],window.switchThemeEventSet=new Set</script><div id=back-to-top></div><div id=mask></div><header class="desktop print:!tw-hidden" id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Cyris | Limit Break"><img class="tw-inline tw-align-text-bottom tw-mr-1" src=/img/favicon.ico alt="Cyris | Limit Break" height=32 width=32>Cyris | Limit Break</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>Posts </a><a class=menu-item href=/tags/>Tags </a><a class=menu-item href=/categories/>Categories </a><a class=menu-item href=/about/>About </a><span class="menu-item delimiter"></span><span class="menu-item language-switcher" title=選擇語言><a href=/en/posts/2021/cicd-jenkins-with-github-note/ class=lang-option>EN</a><a href=/posts/2021/cicd-jenkins-with-github-note/ class="lang-option active">中文</a></span><button class="menu-item theme-switch" aria-label=切換主題>
+<svg class="icon" viewBox="0 0 512 512"><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705.0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg></button></div></div></div></header><header class="mobile print:!tw-hidden" id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Cyris | Limit Break"><img class="tw-inline tw-align-text-bottom tw-mr-1" src=/img/favicon.ico alt="Cyris | Limit Break" height=32 width=32>Cyris | Limit Break</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><a class=menu-item href=/posts/ title>Posts</a><a class=menu-item href=/tags/ title>Tags</a><a class=menu-item href=/categories/ title>Categories</a><a class=menu-item href=/about/ title>About</a><button class="menu-item theme-switch tw-w-full" aria-label=切換主題>
+<svg class="icon" viewBox="0 0 512 512"><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705.0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg></button><div class="menu-item language-switcher-mobile tw-w-full"><a href=/en/posts/2021/cicd-jenkins-with-github-note/ class=lang-option>EN</a><a href=/posts/2021/cicd-jenkins-with-github-note/ class="lang-option active">中文</a></div></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class="tw-mx-4 tw-flex-1"><div class="toc print:!tw-hidden" id=toc-auto><h2 class=toc-title>目錄</h2><div class=toc-content id=toc-content-auto><nav id=TableOfContents><ul><li><a href=#一些-murmur>一些 murmur</a></li><li><a href=#introduction>Introduction</a><ul><li><a href=#system-overview>System overview</a></li></ul></li><li><a href=#configure>Configure</a><ul><li><a href=#environment>Environment</a></li><li><a href=#github-webhook>Github Webhook</a></li><li><a href=#jenkins-theme-optional>Jenkins Theme (optional)</a></li><li><a href=#jenkins-language-optional>Jenkins Language (optional)</a></li></ul></li><li><a href=#jenkins-freestyle-project>Jenkins Freestyle Project</a></li><li><a href=#jenkins-pipeline>Jenkins Pipeline</a><ul><li><a href=#syntax-error-in-jenkinsfile->Syntax Error in Jenkinsfile ?</a></li></ul></li></ul></nav></div></div><dialog id=toc-dialog class="tw-max-w-full tw-w-full tw-max-h-full tw-h-full tw-ml-16"><div class="toc tw-mx-4 tw-max-w-full"><h2 class="tw-mx-0 tw-my-6 tw-uppercase tw-text-2xl">目錄</h2><div class=toc-content><nav id=TableOfContents><ul><li><a href=#一些-murmur>一些 murmur</a></li><li><a href=#introduction>Introduction</a><ul><li><a href=#system-overview>System overview</a></li></ul></li><li><a href=#configure>Configure</a><ul><li><a href=#environment>Environment</a></li><li><a href=#github-webhook>Github Webhook</a></li><li><a href=#jenkins-theme-optional>Jenkins Theme (optional)</a></li><li><a href=#jenkins-language-optional>Jenkins Language (optional)</a></li></ul></li><li><a href=#jenkins-freestyle-project>Jenkins Freestyle Project</a></li><li><a href=#jenkins-pipeline>Jenkins Pipeline</a><ul><li><a href=#syntax-error-in-jenkinsfile->Syntax Error in Jenkinsfile ?</a></li></ul></li></ul></nav></div></div></dialog><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC","true")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class=single-title data-pagefind-meta=date:2021-06-19 data-pagefind-body>[Sharing] Jenkins 🛠 Github 當服務生遇到章魚貓</h1><div class=post-meta><div class=post-meta-line><span class=post-author><svg class="icon" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6.0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7.0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4.0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9s28-2.7 40.9-6.9c2.3-.7 4.7-1.1 7.1-1.1 42.9.0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><a href=https://blog.cyris.tw title=Author target=_blank rel="noopener noreferrer author" class=author>Cyris</a>
+</span>&nbsp;<span class=post-category></span>&nbsp;<span class=post-category>收錄於 <a href=/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88-programming/><svg class="icon" viewBox="0 0 512 512"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49.0 112v288c0 26.51 21.49 48 48 48h416c26.51.0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>程式設計 Programming</a></span></div><div class=post-meta-line><svg class="icon" viewBox="0 0 448 512"><path d="M148 288h-40c-6.6.0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6.0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6.0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6.0 12 5.4 12 12v52h48c26.5.0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3.0 6-2.7 6-6z"/></svg>&nbsp;<time datetime=2021-06-19>2021-06-19</time>&nbsp;<svg class="icon" viewBox="0 0 576 512"><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1.0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7.0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174 402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7-43.2-43.2c-4.1-4.1-10.8-4.1-14.8.0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>&nbsp;<time datetime=2021-06-19>2021-06-19</time>&nbsp;<svg class="icon" viewBox="0 0 512 512"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3.0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9.0l60.1 60.1c18.8 18.7 18.8 49.1.0 67.9zM284.2 99.8 21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3.0-17l-111-111c-4.8-4.7-12.4-4.7-17.1.0zM124.1 339.9c-5.5-5.5-5.5-14.3.0-19.8l154-154c5.5-5.5 14.3-5.5 19.8.0s5.5 14.3.0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8.0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;約 4135 字&nbsp;
+<svg class="icon" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5.0-2e2-89.5-2e2-2e2S145.5 56 256 56s2e2 89.5 2e2 2e2-89.5 2e2-2e2 2e2zm61.8-104.4-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6.0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;預計閱讀 19 分鐘&nbsp;</div></div><div class="details toc print:!tw-block" id=toc-static kept><div class="details-summary toc-title"><span>目錄</span>
+<span class=details-icon><svg class="icon" viewBox="0 0 256 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9.0l-22.6-22.6c-9.4-9.4-9.4-24.6.0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6.0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9.0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#一些-murmur>一些 murmur</a></li><li><a href=#introduction>Introduction</a><ul><li><a href=#system-overview>System overview</a></li></ul></li><li><a href=#configure>Configure</a><ul><li><a href=#environment>Environment</a></li><li><a href=#github-webhook>Github Webhook</a></li><li><a href=#jenkins-theme-optional>Jenkins Theme (optional)</a></li><li><a href=#jenkins-language-optional>Jenkins Language (optional)</a></li></ul></li><li><a href=#jenkins-freestyle-project>Jenkins Freestyle Project</a></li><li><a href=#jenkins-pipeline>Jenkins Pipeline</a><ul><li><a href=#syntax-error-in-jenkinsfile->Syntax Error in Jenkinsfile ?</a></li></ul></li></ul></nav></div></div><div class=content id=content data-pagefind-body><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1633253123/blog-posts/2021-06/19-cover.webp alt=https://memegenerator.net/instance/27413392/philosoraptor-if-jenkins-is-used-for-ci-does-the-jenkins-team-use-jenkins-to-build-jenkins></p><p>Nice question.</p><h2 id=一些-murmur class=headerLink><a href=#%e4%b8%80%e4%ba%9b-murmur class=header-mark></a>一些 murmur</h2><p>這學期修了一門「雲端大數據基礎建設實務」，真的是完全不在畢業學分的規劃內。
+課名不重要，亮點是學校和<strong>台GG</strong>合開的新課程（資工/資管限修），所以內容以台GG合作的大廠輪流分享技術為主，包含 Cisco、Aruba、VMware、Red Hat、Splunk、Oracle 和 SAS，還記得第一堂旁聽的人多到爆炸，我們 Lab 也有不少人修。</p><p>期中期末的分組報告主題為「<strong>如何以最低建置與營運成本建置一個高穩定，高效率的雲端服務</strong>」，原本應該是只要腦補一個系統報告就好，不過在討論題目的時候 @stavhaygn 一句<font color=red>「蛤 我比較想要可以實作的」</font>，注定這條路勢必不好走（笑）</p><div class="details admonition note open"><div class="details-summary admonition-title"><span class=icon><svg class="icon" viewBox="0 0 512 512"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3.0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9.0l60.1 60.1c18.8 18.7 18.8 49.1.0 67.9zM284.2 99.8 21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3.0-17l-111-111c-4.8-4.7-12.4-4.7-17.1.0zM124.1 339.9c-5.5-5.5-5.5-14.3.0-19.8l154-154c5.5-5.5 14.3-5.5 19.8.0s5.5 14.3.0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8.0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>注意<span class=details-icon><svg class="icon" viewBox="0 0 256 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9.0l-22.6-22.6c-9.4-9.4-9.4-24.6.0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6.0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9.0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span></div><div class=details-content><div class=admonition-content>💡 專案有放在 <a href=https://github.com/MacacaHub target=_blank rel="noopener noreferrer">MacacaHub Github</a>，名稱呼應當時「<a href=https://en.wikipedia.org/wiki/2021_Suez_Canal_obstruction target=_blank rel="noopener noreferrer">大排長榮</a>」事件時事取名為「EVERCTF」，不知道之後還有沒有時間繼續開發就是了QQ</div></div></div><p>結果就是，小組拆成書報組和實作組，分別由我和 @stavhaygn 帶頭，題目為「<strong>以基礎架構即程式碼原則實作高穩定之自動化部署 CTF 競賽平台</strong>」。在這個半數成員都在趕碩論的組合，我一開始就不指望實作可以完成，只能走多少算多少XD</p><p>現在，由於實作組的夥伴正在碩論超絕趕進度中，而我對專案中 DevOps 的環節蠻有興趣，所以在準備期末報告之餘也摸 Jenkins 這塊。<del>什麼，你問我的碩論呢？傷心事就別提了。</del></p><p>總之，以下為透過 Github 和 Jenkins Pipeline 進行 CI/CD 的一些筆記。研究時間有限若有用字上的任何 Bug 都歡迎各位來信指正!!!</p><h2 id=introduction class=headerLink><a href=#introduction class=header-mark></a>Introduction</h2><p>「CI/CD」中文譯作「持續性整合 / 持續部署or交付」，<br>其原文為 (Continuous Integration / Continuous Deployment 或是 Continuous Delivery) ，個人認為這種把程式從<strong>建構</strong>、<strong>測試</strong>、<strong>部署</strong>，開發流程全部<font color=red>自動化</font>的技術真是資訊圈的重要突破，雖然繁複的事做久了大家會想寫成 script，但對於整套都自動化做起來又是另一回事 XD</p><p>Jenkins 是基於 Java 在 CI/CD 這個領域中老牌的服務，網路上的介紹文數不勝數，尤其 iThome 鐵人賽有不少優文，我想這裡就不花時間介紹了，另外這篇主要是針對 EVERCTF 系統設計上 CI/CD 的筆記，因此在其他的工具使用上不會有太多著墨 (不然扯到 Git、Docker 等等的不知道要花幾篇介紹XDDDDD)。</p><h3 id=system-overview class=headerLink><a href=#system-overview class=header-mark></a>System overview</h3><p>簡單說明一下 EVERCTF 在 CI/CD 這塊的運作吧 : 3<br>下圖是我們規劃的 Jenkins Pipeline，流程上由出題者主動推到 Github (Push/PR)，然後觸發 Jenkins 進行檢查後將 Docker image 推到 Docker registry，最後透過 K8s 進行測試及部署。</p><p><img class=tw-inline loading=lazy src=https://raw.githubusercontent.com/MacacaHub/EVERCTF-Deployment/main/pic/jenkins-pipeline.png alt=" "></p><p>下面是預期中的資料結構，不過畢竟根據題目的需求還有很多改善空間。</p><div class="code-block highlight is-closed tw-group tw-my-2"><div class="tw-flex
+tw-flex-row
+tw-flex-1
+tw-justify-between
+tw-w-full tw-bg-bgColor-secondary"><button class="code-block-button
+tw-mx-2
+tw-flex
+tw-flex-row
+tw-flex-1" aria-hidden=true><div class="group-[.is-open]:tw-rotate-90 tw-transition-[transform] tw-duration-500 tw-ease-in-out print:!tw-hidden tw-w-min tw-h-min tw-my-1 tw-mx-1"><svg class="icon" viewBox="0 0 320 512"><path d="M285.476 272.971 91.132 467.314c-9.373 9.373-24.569 9.373-33.941.0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941.0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></div><p class="tw-select-none !tw-my-1">bash</p></button><div class=tw-flex><button class="line-number-button
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.show-line-numbers]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle line numbers"><svg class="icon" viewBox="0 0 512 512"><path d="M61.77 401l17.5-20.15a19.92 19.92.0 005.07-14.19v-3.31C84.34 356 80.5 352 73 352H16a8 8 0 00-8 8v16a8 8 0 008 8h22.83a157.41 157.41.0 00-11 12.31l-5.61 7c-4 5.07-5.25 10.13-2.8 14.88l1.05 1.93c3 5.76 6.29 7.88 12.25 7.88h4.73c10.33.0 15.94 2.44 15.94 9.09.0 4.72-4.2 8.22-14.36 8.22a41.54 41.54.0 01-15.47-3.12c-6.49-3.88-11.74-3.5-15.6 3.12l-5.59 9.31c-3.72 6.13-3.19 11.72 2.63 15.94 7.71 4.69 20.38 9.44 37 9.44 34.16.0 48.5-22.75 48.5-44.12-.03-14.38-9.12-29.76-28.73-34.88zM496 224H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zm0-160H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16V80a16 16 0 00-16-16zm0 320H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zM16 160h64a8 8 0 008-8v-16a8 8 0 00-8-8H64V40a8 8 0 00-8-8H32a8 8 0 00-7.14 4.42l-8 16A8 8 0 0024 64h8v64H16a8 8 0 00-8 8v16a8 8 0 008 8zm-3.91 160H80a8 8 0 008-8v-16a8 8 0 00-8-8H41.32c3.29-10.29 48.34-18.68 48.34-56.44.0-29.06-25-39.56-44.47-39.56-21.36.0-33.8 10-40.46 18.75-4.37 5.59-3 10.84 2.8 15.37l8.58 6.88c5.61 4.56 11 2.47 16.12-2.44a13.44 13.44.0 019.46-3.84c3.33.0 9.28 1.56 9.28 8.75C51 248.19.0 257.31.0 304.59v4C0 316 5.08 320 12.09 320z"/></svg></button>
+<button class="wrap-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.is-wrap]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle code wrap"><svg class="icon" viewBox="0 0 448 512"><path d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></button>
+<button class="copy-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+hover:tw-text-fgColor-link
+print:!tw-hidden" title="Copy code">
+<span class="copy-icon tw-block"><svg class="icon" viewBox="0 0 448 512"><path d="M433.941 65.941l-51.882-51.882A48 48 0 00348.118.0H176c-26.51.0-48 21.49-48 48v48H48c-26.51.0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51.0 48-21.49 48-48v-48h80c26.51.0 48-21.49 48-48V99.882a48 48 0 00-14.059-33.941zM266 464H54a6 6 0 01-6-6V150a6 6 0 016-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 01-6 6zm128-96H182a6 6 0 01-6-6V54a6 6 0 016-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 01-6 6zm6-256h-64V48h9.632c1.591.0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 011.757 4.243V112z"/></svg></span>
+<span class="check-icon tw-hidden"><svg class="icon" viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206.0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204.0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204.0l36.203 36.204c9.997 9.997 9.997 26.206.0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
+</button>
+<button class="tw-select-none
+tw-mx-2
+tw-block
+group-[.is-open]:tw-hidden
+print:!tw-hidden" disabled aria-hidden=true><svg class="icon" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"/></svg></button></div></div><pre style=counter-reset:codeblock class="tw-block tw-m-0 tw-p-0"><code id=codeblock-id-1 class="chroma
+!tw-block
+tw-p-0
+tw-m-0
+tw-transition-[max-height]
+tw-duration-500
+tw-ease-in-out
+group-[.is-closed]:!tw-max-h-0
+group-[.is-wrap]:tw-text-wrap
+tw-overflow-y-hidden
+tw-overflow-x-auto
+tw-scrollbar-thin"><span class=line><span class=cl>. <span class=o>(</span>workspace<span class=o>)</span> 
+</span></span><span class=line><span class=cl>+- jenkinsfile
+</span></span><span class=line><span class=cl>+- challenges
+</span></span><span class=line><span class=cl>    +- pwn
+</span></span><span class=line><span class=cl>        +- pwn1
+</span></span><span class=line><span class=cl>            +- config.yaml
+</span></span><span class=line><span class=cl>            +- Dockerfile
+</span></span><span class=line><span class=cl>            +- exploit.py
+</span></span><span class=line><span class=cl>            +- blahblahblah...
+</span></span><span class=line><span class=cl>        +- pwn2
+</span></span><span class=line><span class=cl>    +-web
+</span></span><span class=line><span class=cl>        +- web1
+</span></span><span class=line><span class=cl>            +- config.yaml
+</span></span><span class=line><span class=cl>            +- Dockerfile
+</span></span><span class=line><span class=cl>            +- html
+</span></span><span class=line><span class=cl>                +- index.html
+</span></span><span class=line><span class=cl>                +- blahblahblah...
+</span></span><span class=line><span class=cl>            +- exploit
+</span></span><span class=line><span class=cl>                +- Dockerfile
+</span></span><span class=line><span class=cl>                +- exploit.py
+</span></span><span class=line><span class=cl>        +- web2</span></span></code></pre></div><h2 id=configure class=headerLink><a href=#configure class=header-mark></a>Configure</h2><p>由於我平常只摸過小工具(?)，對於這種需要設定/認證的工具真的是很不上手，花了很多時間看 tutorial。</p><h3 id=environment class=headerLink><a href=#environment class=header-mark></a>Environment</h3><div class="details admonition note open"><div class="details-summary admonition-title"><span class=icon><svg class="icon" viewBox="0 0 512 512"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3.0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9.0l60.1 60.1c18.8 18.7 18.8 49.1.0 67.9zM284.2 99.8 21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3.0-17l-111-111c-4.8-4.7-12.4-4.7-17.1.0zM124.1 339.9c-5.5-5.5-5.5-14.3.0-19.8l154-154c5.5-5.5 14.3-5.5 19.8.0s5.5 14.3.0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8.0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>注意<span class=details-icon><svg class="icon" viewBox="0 0 256 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9.0l-22.6-22.6c-9.4-9.4-9.4-24.6.0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6.0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9.0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span></div><div class=details-content><div class=admonition-content>該篇文章的測試環境分別在 Ubuntu 18.04 和 MacOS 10.15（Jenkins 版本為 jenkinsci/blueocean :1.24.7）</div></div></div><p>Jenkins 的 Docker 安裝如下！</p><div class="code-block highlight is-open show-line-numbers tw-group tw-my-2"><div class="tw-flex
+tw-flex-row
+tw-flex-1
+tw-justify-between
+tw-w-full tw-bg-bgColor-secondary"><button class="code-block-button
+tw-mx-2
+tw-flex
+tw-flex-row
+tw-flex-1" aria-hidden=true><div class="group-[.is-open]:tw-rotate-90 tw-transition-[transform] tw-duration-500 tw-ease-in-out print:!tw-hidden tw-w-min tw-h-min tw-my-1 tw-mx-1"><svg class="icon" viewBox="0 0 320 512"><path d="M285.476 272.971 91.132 467.314c-9.373 9.373-24.569 9.373-33.941.0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941.0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></div><p class="tw-select-none !tw-my-1">bash</p></button><div class=tw-flex><button class="line-number-button
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.show-line-numbers]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle line numbers"><svg class="icon" viewBox="0 0 512 512"><path d="M61.77 401l17.5-20.15a19.92 19.92.0 005.07-14.19v-3.31C84.34 356 80.5 352 73 352H16a8 8 0 00-8 8v16a8 8 0 008 8h22.83a157.41 157.41.0 00-11 12.31l-5.61 7c-4 5.07-5.25 10.13-2.8 14.88l1.05 1.93c3 5.76 6.29 7.88 12.25 7.88h4.73c10.33.0 15.94 2.44 15.94 9.09.0 4.72-4.2 8.22-14.36 8.22a41.54 41.54.0 01-15.47-3.12c-6.49-3.88-11.74-3.5-15.6 3.12l-5.59 9.31c-3.72 6.13-3.19 11.72 2.63 15.94 7.71 4.69 20.38 9.44 37 9.44 34.16.0 48.5-22.75 48.5-44.12-.03-14.38-9.12-29.76-28.73-34.88zM496 224H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zm0-160H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16V80a16 16 0 00-16-16zm0 320H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zM16 160h64a8 8 0 008-8v-16a8 8 0 00-8-8H64V40a8 8 0 00-8-8H32a8 8 0 00-7.14 4.42l-8 16A8 8 0 0024 64h8v64H16a8 8 0 00-8 8v16a8 8 0 008 8zm-3.91 160H80a8 8 0 008-8v-16a8 8 0 00-8-8H41.32c3.29-10.29 48.34-18.68 48.34-56.44.0-29.06-25-39.56-44.47-39.56-21.36.0-33.8 10-40.46 18.75-4.37 5.59-3 10.84 2.8 15.37l8.58 6.88c5.61 4.56 11 2.47 16.12-2.44a13.44 13.44.0 019.46-3.84c3.33.0 9.28 1.56 9.28 8.75C51 248.19.0 257.31.0 304.59v4C0 316 5.08 320 12.09 320z"/></svg></button>
+<button class="wrap-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.is-wrap]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle code wrap"><svg class="icon" viewBox="0 0 448 512"><path d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></button>
+<button class="copy-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+hover:tw-text-fgColor-link
+print:!tw-hidden" title="Copy code">
+<span class="copy-icon tw-block"><svg class="icon" viewBox="0 0 448 512"><path d="M433.941 65.941l-51.882-51.882A48 48 0 00348.118.0H176c-26.51.0-48 21.49-48 48v48H48c-26.51.0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51.0 48-21.49 48-48v-48h80c26.51.0 48-21.49 48-48V99.882a48 48 0 00-14.059-33.941zM266 464H54a6 6 0 01-6-6V150a6 6 0 016-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 01-6 6zm128-96H182a6 6 0 01-6-6V54a6 6 0 016-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 01-6 6zm6-256h-64V48h9.632c1.591.0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 011.757 4.243V112z"/></svg></span>
+<span class="check-icon tw-hidden"><svg class="icon" viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206.0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204.0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204.0l36.203 36.204c9.997 9.997 9.997 26.206.0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
+</button>
+<button class="tw-select-none
+tw-mx-2
+tw-block
+group-[.is-open]:tw-hidden
+print:!tw-hidden" disabled aria-hidden=true><svg class="icon" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"/></svg></button></div></div><pre style=counter-reset:codeblock class="tw-block tw-m-0 tw-p-0"><code id=codeblock-id-2 class="chroma
+!tw-block
+tw-p-0
+tw-m-0
+tw-transition-[max-height]
+tw-duration-500
+tw-ease-in-out
+group-[.is-closed]:!tw-max-h-0
+group-[.is-wrap]:tw-text-wrap
+tw-overflow-y-hidden
+tw-overflow-x-auto
+tw-scrollbar-thin"><span class=line><span class=cl>$ docker run <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  --name jenkins-blueocean <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  -d <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  -u root <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  -p 9000:8080 <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  -v jenkins-data:/var/jenkins_home <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  -v /var/run/docker.sock:/var/run/docker.sock <span class=se>\
+</span></span></span><span class=line><span class=cl><span class=se></span>  jenkinsci/blueocean</span></span></code></pre></div><p>簡單說明 parameter 用途</p><ul><li>line 2: 自訂 images name</li><li>line 3: 背景執行 container</li><li>line 4: 以 root 身份登入</li><li>line 5: 將 container 端的 Port 8080 對應到 host 端的 9000</li><li>line 6: 將 host 端的 jenkins-data(volume) 掛載到 container 端的 /var/jenkins_home</li><li>line 7: 讓 Jenkins 可以操作 host 端的其他 container，避免 docker in docker 現象</li><li>line 8: Docker image from DockerHub <a href=https://hub.docker.com/r/jenkinsci/blueocean/ target=_blank rel="noopener noreferrer">jenkinsci/blueocean</a></li></ul><p>關於 line 8 所使用的 image，雖然 Jenkins 官方有另一個 <a href=https://hub.docker.com/r/jenkinsci/jenkins target=_blank rel="noopener noreferrer">jenkinsci/jenkins</a> 比較像正版的 image (?)，不過從 <a href=https://www.jenkins.io/doc/book/installing/docker/ target=_blank rel="noopener noreferrer">User Handbook</a> 來看官方比較推 jenkinsci/blueocean，該版本加入了 <a href=https://www.jenkins.io/doc/book/blueocean/ target=_blank rel="noopener noreferrer">Blue Ocean</a> 的使用介面，簡單講就是官方 UI <del>太醜</del> 太傳統，所以加入了新的 UI（笑）。</p><p>若成功執行上述的 <code>docker run</code>，可以從 <code>docker ps -a</code> 確認到正在運行的 Container。<br>從 <code>127.0.0.1:9000</code> 會發現需要 Unlock Jenkins，用下方指令直接從 Jenkins Container 內抓 password。</p><div class="code-block highlight is-open tw-group tw-my-2"><div class="tw-flex
+tw-flex-row
+tw-flex-1
+tw-justify-between
+tw-w-full tw-bg-bgColor-secondary"><button class="code-block-button
+tw-mx-2
+tw-flex
+tw-flex-row
+tw-flex-1" aria-hidden=true><div class="group-[.is-open]:tw-rotate-90 tw-transition-[transform] tw-duration-500 tw-ease-in-out print:!tw-hidden tw-w-min tw-h-min tw-my-1 tw-mx-1"><svg class="icon" viewBox="0 0 320 512"><path d="M285.476 272.971 91.132 467.314c-9.373 9.373-24.569 9.373-33.941.0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941.0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></div><p class="tw-select-none !tw-my-1">bash</p></button><div class=tw-flex><button class="line-number-button
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.show-line-numbers]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle line numbers"><svg class="icon" viewBox="0 0 512 512"><path d="M61.77 401l17.5-20.15a19.92 19.92.0 005.07-14.19v-3.31C84.34 356 80.5 352 73 352H16a8 8 0 00-8 8v16a8 8 0 008 8h22.83a157.41 157.41.0 00-11 12.31l-5.61 7c-4 5.07-5.25 10.13-2.8 14.88l1.05 1.93c3 5.76 6.29 7.88 12.25 7.88h4.73c10.33.0 15.94 2.44 15.94 9.09.0 4.72-4.2 8.22-14.36 8.22a41.54 41.54.0 01-15.47-3.12c-6.49-3.88-11.74-3.5-15.6 3.12l-5.59 9.31c-3.72 6.13-3.19 11.72 2.63 15.94 7.71 4.69 20.38 9.44 37 9.44 34.16.0 48.5-22.75 48.5-44.12-.03-14.38-9.12-29.76-28.73-34.88zM496 224H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zm0-160H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16V80a16 16 0 00-16-16zm0 320H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zM16 160h64a8 8 0 008-8v-16a8 8 0 00-8-8H64V40a8 8 0 00-8-8H32a8 8 0 00-7.14 4.42l-8 16A8 8 0 0024 64h8v64H16a8 8 0 00-8 8v16a8 8 0 008 8zm-3.91 160H80a8 8 0 008-8v-16a8 8 0 00-8-8H41.32c3.29-10.29 48.34-18.68 48.34-56.44.0-29.06-25-39.56-44.47-39.56-21.36.0-33.8 10-40.46 18.75-4.37 5.59-3 10.84 2.8 15.37l8.58 6.88c5.61 4.56 11 2.47 16.12-2.44a13.44 13.44.0 019.46-3.84c3.33.0 9.28 1.56 9.28 8.75C51 248.19.0 257.31.0 304.59v4C0 316 5.08 320 12.09 320z"/></svg></button>
+<button class="wrap-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.is-wrap]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle code wrap"><svg class="icon" viewBox="0 0 448 512"><path d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></button>
+<button class="copy-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+hover:tw-text-fgColor-link
+print:!tw-hidden" title="Copy code">
+<span class="copy-icon tw-block"><svg class="icon" viewBox="0 0 448 512"><path d="M433.941 65.941l-51.882-51.882A48 48 0 00348.118.0H176c-26.51.0-48 21.49-48 48v48H48c-26.51.0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51.0 48-21.49 48-48v-48h80c26.51.0 48-21.49 48-48V99.882a48 48 0 00-14.059-33.941zM266 464H54a6 6 0 01-6-6V150a6 6 0 016-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 01-6 6zm128-96H182a6 6 0 01-6-6V54a6 6 0 016-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 01-6 6zm6-256h-64V48h9.632c1.591.0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 011.757 4.243V112z"/></svg></span>
+<span class="check-icon tw-hidden"><svg class="icon" viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206.0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204.0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204.0l36.203 36.204c9.997 9.997 9.997 26.206.0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
+</button>
+<button class="tw-select-none
+tw-mx-2
+tw-block
+group-[.is-open]:tw-hidden
+print:!tw-hidden" disabled aria-hidden=true><svg class="icon" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"/></svg></button></div></div><pre style=counter-reset:codeblock class="tw-block tw-m-0 tw-p-0"><code id=codeblock-id-3 class="chroma
+!tw-block
+tw-p-0
+tw-m-0
+tw-transition-[max-height]
+tw-duration-500
+tw-ease-in-out
+group-[.is-closed]:!tw-max-h-0
+group-[.is-wrap]:tw-text-wrap
+tw-overflow-y-hidden
+tw-overflow-x-auto
+tw-scrollbar-thin"><span class=line><span class=cl>$ docker <span class=nb>exec</span> -it jenkins-blueocean cat /var/jenkins_home/secrets/initialAdminPassword</span></span></code></pre></div><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624041590/blog-posts/2021-06/19-jenkins-unlock.webp alt=" "></p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624041590/blog-posts/2021-06/19-jenkins-setup.webp alt=" "></p><p>選左邊的安裝套件，裡面也包含之後會用到的 <a href=https://plugins.jenkins.io/github/ target=_blank rel="noopener noreferrer">Github plugin</a>，將剩下的設定點一點就算是完成了！</p><h3 id=github-webhook class=headerLink><a href=#github-webhook class=header-mark></a>Github Webhook</h3><p>這部分可參考這篇 <a href=https://zoejoyuliao.medium.com/%e9%80%8f%e9%81%8e-github-webhook-%e8%a7%b8%e7%99%bc%e6%9c%ac%e5%9c%b0-jenkins-pipeline-%e8%ae%93%e4%bd%a0-push-code-%e5%88%b0-github-%e5%b0%b1%e6%9c%83%e8%87%aa%e5%8b%95%e8%b7%91-ci-cd-7c4bd7a22446 target=_blank rel="noopener noreferrer">透過 GitHub Webhook 讓你 push code 到 Github 就會自動觸發本地 Jenkins Pipeline</a></p><p>為了要讓 Github 能夠主動觸發 Jenkins 進行 CI/CD，需要讓 Jenkins 有個對外的 Domain/IP，若沒有實體 IP 可以使用 ngrok 來產生 Domain，要注意 Port 是剛剛 <code>Docekr run</code> 設定的 9000，反之如果有實體 IP 就可以跳過 ngrok。</p><div class="code-block highlight is-open tw-group tw-my-2"><div class="tw-flex
+tw-flex-row
+tw-flex-1
+tw-justify-between
+tw-w-full tw-bg-bgColor-secondary"><button class="code-block-button
+tw-mx-2
+tw-flex
+tw-flex-row
+tw-flex-1" aria-hidden=true><div class="group-[.is-open]:tw-rotate-90 tw-transition-[transform] tw-duration-500 tw-ease-in-out print:!tw-hidden tw-w-min tw-h-min tw-my-1 tw-mx-1"><svg class="icon" viewBox="0 0 320 512"><path d="M285.476 272.971 91.132 467.314c-9.373 9.373-24.569 9.373-33.941.0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941.0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></div><p class="tw-select-none !tw-my-1">bash</p></button><div class=tw-flex><button class="line-number-button
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.show-line-numbers]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle line numbers"><svg class="icon" viewBox="0 0 512 512"><path d="M61.77 401l17.5-20.15a19.92 19.92.0 005.07-14.19v-3.31C84.34 356 80.5 352 73 352H16a8 8 0 00-8 8v16a8 8 0 008 8h22.83a157.41 157.41.0 00-11 12.31l-5.61 7c-4 5.07-5.25 10.13-2.8 14.88l1.05 1.93c3 5.76 6.29 7.88 12.25 7.88h4.73c10.33.0 15.94 2.44 15.94 9.09.0 4.72-4.2 8.22-14.36 8.22a41.54 41.54.0 01-15.47-3.12c-6.49-3.88-11.74-3.5-15.6 3.12l-5.59 9.31c-3.72 6.13-3.19 11.72 2.63 15.94 7.71 4.69 20.38 9.44 37 9.44 34.16.0 48.5-22.75 48.5-44.12-.03-14.38-9.12-29.76-28.73-34.88zM496 224H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zm0-160H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16V80a16 16 0 00-16-16zm0 320H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zM16 160h64a8 8 0 008-8v-16a8 8 0 00-8-8H64V40a8 8 0 00-8-8H32a8 8 0 00-7.14 4.42l-8 16A8 8 0 0024 64h8v64H16a8 8 0 00-8 8v16a8 8 0 008 8zm-3.91 160H80a8 8 0 008-8v-16a8 8 0 00-8-8H41.32c3.29-10.29 48.34-18.68 48.34-56.44.0-29.06-25-39.56-44.47-39.56-21.36.0-33.8 10-40.46 18.75-4.37 5.59-3 10.84 2.8 15.37l8.58 6.88c5.61 4.56 11 2.47 16.12-2.44a13.44 13.44.0 019.46-3.84c3.33.0 9.28 1.56 9.28 8.75C51 248.19.0 257.31.0 304.59v4C0 316 5.08 320 12.09 320z"/></svg></button>
+<button class="wrap-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.is-wrap]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle code wrap"><svg class="icon" viewBox="0 0 448 512"><path d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></button>
+<button class="copy-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+hover:tw-text-fgColor-link
+print:!tw-hidden" title="Copy code">
+<span class="copy-icon tw-block"><svg class="icon" viewBox="0 0 448 512"><path d="M433.941 65.941l-51.882-51.882A48 48 0 00348.118.0H176c-26.51.0-48 21.49-48 48v48H48c-26.51.0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51.0 48-21.49 48-48v-48h80c26.51.0 48-21.49 48-48V99.882a48 48 0 00-14.059-33.941zM266 464H54a6 6 0 01-6-6V150a6 6 0 016-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 01-6 6zm128-96H182a6 6 0 01-6-6V54a6 6 0 016-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 01-6 6zm6-256h-64V48h9.632c1.591.0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 011.757 4.243V112z"/></svg></span>
+<span class="check-icon tw-hidden"><svg class="icon" viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206.0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204.0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204.0l36.203 36.204c9.997 9.997 9.997 26.206.0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
+</button>
+<button class="tw-select-none
+tw-mx-2
+tw-block
+group-[.is-open]:tw-hidden
+print:!tw-hidden" disabled aria-hidden=true><svg class="icon" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"/></svg></button></div></div><pre style=counter-reset:codeblock class="tw-block tw-m-0 tw-p-0"><code id=codeblock-id-4 class="chroma
+!tw-block
+tw-p-0
+tw-m-0
+tw-transition-[max-height]
+tw-duration-500
+tw-ease-in-out
+group-[.is-closed]:!tw-max-h-0
+group-[.is-wrap]:tw-text-wrap
+tw-overflow-y-hidden
+tw-overflow-x-auto
+tw-scrollbar-thin"><span class=line><span class=cl>$ ./ngrok http <span class=m>9000</span></span></span></code></pre></div><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624042176/blog-posts/2021-06/19-ngrok.webp alt=" "></p><p>在欲進行的 repo > Settings > Webhooks > Add webhook，找到下圖畫面。</p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624042177/blog-posts/2021-06/19-github-webhook.webp alt=" "></p><p>新增完 Webhook 如果點進去拉到最底下的 &ldquo;Recent Deliveries&rdquo; 有成功出現綠勾勾就是設定完成，要注意若把 ngrok 關閉，下次透過 Github 使用 Jenkins 就必須重新設定 Webhook <del>(所以我都直接綁實驗室的固網 IP)</del>。</p><p>除了 Webhook 以外，再來就是認證的部分。<br>也因為我們的專題是建立在 Private Repository 進行，而認證的方法很多種，這部分可參考這篇 <a href=https://dev.to/jmprobst/jenkins-build-a-private-github-repo-5489 target=_blank rel="noopener noreferrer">Jenkins - Build a Private GitHub Repo</a> ，非常之詳細。</p><p>在公私鑰產生的部分個人是用 ed25519，產生的 KEY 相對短很多，至於下指令 <code>ssh-keygen</code> 地方還未確定，個人是在 Jenkins Docker 中進行，但重點只是要產生公私鑰而已，頂多就是會多出 <code>/.ssh/</code> 的目錄(?)。</p><div class="code-block highlight is-open tw-group tw-my-2"><div class="tw-flex
+tw-flex-row
+tw-flex-1
+tw-justify-between
+tw-w-full tw-bg-bgColor-secondary"><button class="code-block-button
+tw-mx-2
+tw-flex
+tw-flex-row
+tw-flex-1" aria-hidden=true><div class="group-[.is-open]:tw-rotate-90 tw-transition-[transform] tw-duration-500 tw-ease-in-out print:!tw-hidden tw-w-min tw-h-min tw-my-1 tw-mx-1"><svg class="icon" viewBox="0 0 320 512"><path d="M285.476 272.971 91.132 467.314c-9.373 9.373-24.569 9.373-33.941.0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941.0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></div><p class="tw-select-none !tw-my-1">bash</p></button><div class=tw-flex><button class="line-number-button
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.show-line-numbers]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle line numbers"><svg class="icon" viewBox="0 0 512 512"><path d="M61.77 401l17.5-20.15a19.92 19.92.0 005.07-14.19v-3.31C84.34 356 80.5 352 73 352H16a8 8 0 00-8 8v16a8 8 0 008 8h22.83a157.41 157.41.0 00-11 12.31l-5.61 7c-4 5.07-5.25 10.13-2.8 14.88l1.05 1.93c3 5.76 6.29 7.88 12.25 7.88h4.73c10.33.0 15.94 2.44 15.94 9.09.0 4.72-4.2 8.22-14.36 8.22a41.54 41.54.0 01-15.47-3.12c-6.49-3.88-11.74-3.5-15.6 3.12l-5.59 9.31c-3.72 6.13-3.19 11.72 2.63 15.94 7.71 4.69 20.38 9.44 37 9.44 34.16.0 48.5-22.75 48.5-44.12-.03-14.38-9.12-29.76-28.73-34.88zM496 224H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zm0-160H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16V80a16 16 0 00-16-16zm0 320H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zM16 160h64a8 8 0 008-8v-16a8 8 0 00-8-8H64V40a8 8 0 00-8-8H32a8 8 0 00-7.14 4.42l-8 16A8 8 0 0024 64h8v64H16a8 8 0 00-8 8v16a8 8 0 008 8zm-3.91 160H80a8 8 0 008-8v-16a8 8 0 00-8-8H41.32c3.29-10.29 48.34-18.68 48.34-56.44.0-29.06-25-39.56-44.47-39.56-21.36.0-33.8 10-40.46 18.75-4.37 5.59-3 10.84 2.8 15.37l8.58 6.88c5.61 4.56 11 2.47 16.12-2.44a13.44 13.44.0 019.46-3.84c3.33.0 9.28 1.56 9.28 8.75C51 248.19.0 257.31.0 304.59v4C0 316 5.08 320 12.09 320z"/></svg></button>
+<button class="wrap-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.is-wrap]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle code wrap"><svg class="icon" viewBox="0 0 448 512"><path d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></button>
+<button class="copy-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+hover:tw-text-fgColor-link
+print:!tw-hidden" title="Copy code">
+<span class="copy-icon tw-block"><svg class="icon" viewBox="0 0 448 512"><path d="M433.941 65.941l-51.882-51.882A48 48 0 00348.118.0H176c-26.51.0-48 21.49-48 48v48H48c-26.51.0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51.0 48-21.49 48-48v-48h80c26.51.0 48-21.49 48-48V99.882a48 48 0 00-14.059-33.941zM266 464H54a6 6 0 01-6-6V150a6 6 0 016-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 01-6 6zm128-96H182a6 6 0 01-6-6V54a6 6 0 016-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 01-6 6zm6-256h-64V48h9.632c1.591.0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 011.757 4.243V112z"/></svg></span>
+<span class="check-icon tw-hidden"><svg class="icon" viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206.0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204.0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204.0l36.203 36.204c9.997 9.997 9.997 26.206.0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
+</button>
+<button class="tw-select-none
+tw-mx-2
+tw-block
+group-[.is-open]:tw-hidden
+print:!tw-hidden" disabled aria-hidden=true><svg class="icon" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"/></svg></button></div></div><pre style=counter-reset:codeblock class="tw-block tw-m-0 tw-p-0"><code id=codeblock-id-5 class="chroma
+!tw-block
+tw-p-0
+tw-m-0
+tw-transition-[max-height]
+tw-duration-500
+tw-ease-in-out
+group-[.is-closed]:!tw-max-h-0
+group-[.is-wrap]:tw-text-wrap
+tw-overflow-y-hidden
+tw-overflow-x-auto
+tw-scrollbar-thin"><span class=line><span class=cl>$ docker ps -a
+</span></span><span class=line><span class=cl>$ docker <span class=nb>exec</span> -it jenkins-blueocean bash
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>bash# ssh-keygen -t ed25519 -C &lt;e-mail&gt;
+</span></span><span class=line><span class=cl>Generating public/private ed25519 key pair.
+</span></span><span class=line><span class=cl>Enter file in which to save the key <span class=o>(</span>/root/.ssh/id_ed25519<span class=o>)</span>: <span class=c1>#直接Enter</span>
+</span></span><span class=line><span class=cl>Enter passphrase <span class=o>(</span>empty <span class=k>for</span> no passphrase<span class=o>)</span>: <span class=c1>#直接Enter</span>
+</span></span><span class=line><span class=cl>Enter same passphrase again: <span class=c1>#直接Enter</span>
+</span></span><span class=line><span class=cl>bash# cat /root/.ssh/id_ed25519.pub
+</span></span><span class=line><span class=cl>ssh-ed25519 blahblahblahblahblahblahblahblahblahblahblahblahblah
+</span></span><span class=line><span class=cl>bash# cat /root/.ssh/id_ed25519
+</span></span><span class=line><span class=cl>-----BEGIN OPENSSH PRIVATE KEY-----
+</span></span><span class=line><span class=cl>blahblahblahblahblahblahblahblahblahblahblahblah
+</span></span><span class=line><span class=cl>blahblahblahblahblahblahblahblahblahblahblahblah
+</span></span><span class=line><span class=cl>blahblahblahblahblahblahblahblahblahblahblahblah
+</span></span><span class=line><span class=cl>blahblahblahblahblahblahblahblahblahblahblahblah
+</span></span><span class=line><span class=cl>blahblahblahblahblahblahblahblahblahblahblahblah
+</span></span><span class=line><span class=cl>-----END OPENSSH PRIVATE KEY-----</span></span></code></pre></div><p>Github 端填 public key（左圖），Jenkins 端填 private key（右圖）。<br><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624688960/blog-posts/2021-06/19-credentials-setting1.webp alt=" "></p><div class="details admonition warning open"><div class="details-summary admonition-title"><span class=icon><svg class="icon" viewBox="0 0 576 512"><path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937.0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154.0l239.94 416.028zM288 354c-25.405.0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373.0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884.0-12.356 5.78-11.981 12.654z"/></svg></span>警告<span class=details-icon><svg class="icon" viewBox="0 0 256 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9.0l-22.6-22.6c-9.4-9.4-9.4-24.6.0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6.0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9.0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span></div><div class=details-content><div class=admonition-content>上述情境都是在 Private Repository 且自推(Push)的情境，若今次是團隊合作共用 Private Repository 且採 pull request (PR) 的狀況，那 credential 就要從該 repo 擁有者的帳號 &ldquo;Settings > Developer settings > Personal access tokens&rdquo; 設定。</div></div></div><h3 id=jenkins-theme-optional class=headerLink><a href=#jenkins-theme-optional class=header-mark></a>Jenkins Theme (optional)</h3><p>這部分可參考 <a href=https://github.com/afonsof/jenkins-material-theme/ target=_blank rel="noopener noreferrer">jenkins-material-theme</a>，就只是換個順眼的主題。</p><h3 id=jenkins-language-optional class=headerLink><a href=#jenkins-language-optional class=header-mark></a>Jenkins Language (optional)</h3><p>透過 Browser 打開 Jenkins 很意外的是中文介面，查了一下發現是跟著 Browser 的語言設定，但可惜是半殘的中文化，俗稱晶晶體(?)，這種中英交雜的情況要對照網路上的教學文非常痛苦，所以稍微查了一下更改語言的方式。</p><p>Dashboard > (左側)管理 Jenkins > 管理外掛程式 > (可用的) 搜尋 <a href=https://plugins.jenkins.io/locale/ target=_blank rel="noopener noreferrer">locale</a> 進行安裝。</p><p>重啟 Jenkins 後，<br>Dashboard > (左側)管理 Jenkins > 設定系統 > 直接找到 Locale 的預設語言，填 <code>ENGLISH</code> 或 <code>us</code> 都可，並且勾選下方的選項「Ignore browser preference and force this language to all users」。</p><h2 id=jenkins-freestyle-project class=headerLink><a href=#jenkins-freestyle-project class=header-mark></a>Jenkins Freestyle Project</h2><div class="details admonition success open"><div class="details-summary admonition-title"><span class=icon><svg class="icon" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379.0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628.0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628.0l-22.627 22.627c-6.248 6.248-6.248 16.379.0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg></span>🏆GOAL<span class=details-icon><svg class="icon" viewBox="0 0 256 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9.0l-22.6-22.6c-9.4-9.4-9.4-24.6.0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6.0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9.0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span></div><div class=details-content><div class=admonition-content>透過 push 到 Github private repository，觸發 Jenkins 編譯 cpp 並執行。</div></div></div><p>先來個簡單的小專案，從 &ldquo;New Item > Freestyle project&rdquo; 進入專案設定。<br>在 <strong>Source Code Management(SCM)</strong> 部分選 &ldquo;Git&rdquo;，並注意 &ldquo;Repository URL&rdquo; 的部分因為是 Private Repository 要貼 SSH 格式。貼完之後系統會立即存取測試（即出現 ERROR），這時只要下方 &ldquo;Credentials&rdquo; 選擇我們稍早設定的 credential 即可。</p><p>另外要注意的是圖中箭頭所指的 &ldquo;Branch Specifier&rdquo;（預設是 */master），由於 2020 年黑人平權的議題 Github 將以 main 取代 master 做為預設 branch，詳細可參考<a href=https://www.ithome.com.tw/news/140094 target=_blank rel="noopener noreferrer">這篇 iThome新聞</a>。</p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624690601/blog-posts/2021-06/19-job-sample-setting.webp alt=" "></p><p>在 <strong>Build Triggers</strong> 部分要勾選的是 &ldquo;GitHub hook trigger for GITScm polling&rdquo;，表示在接收到 Github Push 後會觸發 Jenkins。附上 <a href=https://plugins.jenkins.io/github/ target=_blank rel="noopener noreferrer">Github plugin</a> 的說明 &ldquo;If Jenkins will receive PUSH GitHub hook from repo defined in Git SCM section it will trigger Git SCM polling logic. So polling logic in fact belongs to Git SCM.&rdquo;</p><p>最後，我們在 <strong>Build</strong> 部分選 Execute shell 嘗試讓 Jenkins 幫我們編譯 .cpp 並執行，Command 參考如下。</p><div class="code-block highlight is-open tw-group tw-my-2"><div class="tw-flex
+tw-flex-row
+tw-flex-1
+tw-justify-between
+tw-w-full tw-bg-bgColor-secondary"><button class="code-block-button
+tw-mx-2
+tw-flex
+tw-flex-row
+tw-flex-1" aria-hidden=true><div class="group-[.is-open]:tw-rotate-90 tw-transition-[transform] tw-duration-500 tw-ease-in-out print:!tw-hidden tw-w-min tw-h-min tw-my-1 tw-mx-1"><svg class="icon" viewBox="0 0 320 512"><path d="M285.476 272.971 91.132 467.314c-9.373 9.373-24.569 9.373-33.941.0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941.0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></div><p class="tw-select-none !tw-my-1">bash</p></button><div class=tw-flex><button class="line-number-button
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.show-line-numbers]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle line numbers"><svg class="icon" viewBox="0 0 512 512"><path d="M61.77 401l17.5-20.15a19.92 19.92.0 005.07-14.19v-3.31C84.34 356 80.5 352 73 352H16a8 8 0 00-8 8v16a8 8 0 008 8h22.83a157.41 157.41.0 00-11 12.31l-5.61 7c-4 5.07-5.25 10.13-2.8 14.88l1.05 1.93c3 5.76 6.29 7.88 12.25 7.88h4.73c10.33.0 15.94 2.44 15.94 9.09.0 4.72-4.2 8.22-14.36 8.22a41.54 41.54.0 01-15.47-3.12c-6.49-3.88-11.74-3.5-15.6 3.12l-5.59 9.31c-3.72 6.13-3.19 11.72 2.63 15.94 7.71 4.69 20.38 9.44 37 9.44 34.16.0 48.5-22.75 48.5-44.12-.03-14.38-9.12-29.76-28.73-34.88zM496 224H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zm0-160H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16V80a16 16 0 00-16-16zm0 320H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zM16 160h64a8 8 0 008-8v-16a8 8 0 00-8-8H64V40a8 8 0 00-8-8H32a8 8 0 00-7.14 4.42l-8 16A8 8 0 0024 64h8v64H16a8 8 0 00-8 8v16a8 8 0 008 8zm-3.91 160H80a8 8 0 008-8v-16a8 8 0 00-8-8H41.32c3.29-10.29 48.34-18.68 48.34-56.44.0-29.06-25-39.56-44.47-39.56-21.36.0-33.8 10-40.46 18.75-4.37 5.59-3 10.84 2.8 15.37l8.58 6.88c5.61 4.56 11 2.47 16.12-2.44a13.44 13.44.0 019.46-3.84c3.33.0 9.28 1.56 9.28 8.75C51 248.19.0 257.31.0 304.59v4C0 316 5.08 320 12.09 320z"/></svg></button>
+<button class="wrap-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.is-wrap]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle code wrap"><svg class="icon" viewBox="0 0 448 512"><path d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></button>
+<button class="copy-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+hover:tw-text-fgColor-link
+print:!tw-hidden" title="Copy code">
+<span class="copy-icon tw-block"><svg class="icon" viewBox="0 0 448 512"><path d="M433.941 65.941l-51.882-51.882A48 48 0 00348.118.0H176c-26.51.0-48 21.49-48 48v48H48c-26.51.0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51.0 48-21.49 48-48v-48h80c26.51.0 48-21.49 48-48V99.882a48 48 0 00-14.059-33.941zM266 464H54a6 6 0 01-6-6V150a6 6 0 016-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 01-6 6zm128-96H182a6 6 0 01-6-6V54a6 6 0 016-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 01-6 6zm6-256h-64V48h9.632c1.591.0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 011.757 4.243V112z"/></svg></span>
+<span class="check-icon tw-hidden"><svg class="icon" viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206.0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204.0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204.0l36.203 36.204c9.997 9.997 9.997 26.206.0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
+</button>
+<button class="tw-select-none
+tw-mx-2
+tw-block
+group-[.is-open]:tw-hidden
+print:!tw-hidden" disabled aria-hidden=true><svg class="icon" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"/></svg></button></div></div><pre style=counter-reset:codeblock class="tw-block tw-m-0 tw-p-0"><code id=codeblock-id-6 class="chroma
+!tw-block
+tw-p-0
+tw-m-0
+tw-transition-[max-height]
+tw-duration-500
+tw-ease-in-out
+group-[.is-closed]:!tw-max-h-0
+group-[.is-wrap]:tw-text-wrap
+tw-overflow-y-hidden
+tw-overflow-x-auto
+tw-scrollbar-thin"><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;Oh, It works!!!&#34;</span>
+</span></span><span class=line><span class=cl>ls -a
+</span></span><span class=line><span class=cl><span class=nb>cd</span> <span class=nv>$WORKSPACE</span>/job-sample
+</span></span><span class=line><span class=cl>g++ -std<span class=o>=</span>c++17 main.cpp -o main.out
+</span></span><span class=line><span class=cl>./main.out</span></span></code></pre></div><p>試著在本機端上傳 <a href=https://github.com/yctseng1227/jenkins-sample/blob/main/job/main.cpp target=_blank rel="noopener noreferrer">job-sample/main.cpp</a> 看看 Jenkins 會不會動吧！<br>沒意外的話會在左側欄的 Build History 出現紀錄，然後&mldr; 失敗 w</p><p>查看 Jenkins Build 的方法有兩種，一是使用當前的原生 GUI 左側 Build History，二是使用我們在 Docker Run 使用 jenkinsci/blueocean 所提供 Blue Ocean GUI，看起來是有稍微好看一點 XD</p><p>總之為什麼會失敗呢？<br>從 error logs 可以發現是 <code>g++: not found</code>，也就是專案所需的套件是要在 Jenkins 安裝（由於 jenkinsci/blueocean 是基於 Apache Maven，因此安裝指令為 <code>apk</code>）。</p><div class="code-block highlight is-open tw-group tw-my-2"><div class="tw-flex
+tw-flex-row
+tw-flex-1
+tw-justify-between
+tw-w-full tw-bg-bgColor-secondary"><button class="code-block-button
+tw-mx-2
+tw-flex
+tw-flex-row
+tw-flex-1" aria-hidden=true><div class="group-[.is-open]:tw-rotate-90 tw-transition-[transform] tw-duration-500 tw-ease-in-out print:!tw-hidden tw-w-min tw-h-min tw-my-1 tw-mx-1"><svg class="icon" viewBox="0 0 320 512"><path d="M285.476 272.971 91.132 467.314c-9.373 9.373-24.569 9.373-33.941.0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941.0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></div><p class="tw-select-none !tw-my-1">bash</p></button><div class=tw-flex><button class="line-number-button
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.show-line-numbers]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle line numbers"><svg class="icon" viewBox="0 0 512 512"><path d="M61.77 401l17.5-20.15a19.92 19.92.0 005.07-14.19v-3.31C84.34 356 80.5 352 73 352H16a8 8 0 00-8 8v16a8 8 0 008 8h22.83a157.41 157.41.0 00-11 12.31l-5.61 7c-4 5.07-5.25 10.13-2.8 14.88l1.05 1.93c3 5.76 6.29 7.88 12.25 7.88h4.73c10.33.0 15.94 2.44 15.94 9.09.0 4.72-4.2 8.22-14.36 8.22a41.54 41.54.0 01-15.47-3.12c-6.49-3.88-11.74-3.5-15.6 3.12l-5.59 9.31c-3.72 6.13-3.19 11.72 2.63 15.94 7.71 4.69 20.38 9.44 37 9.44 34.16.0 48.5-22.75 48.5-44.12-.03-14.38-9.12-29.76-28.73-34.88zM496 224H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zm0-160H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16V80a16 16 0 00-16-16zm0 320H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zM16 160h64a8 8 0 008-8v-16a8 8 0 00-8-8H64V40a8 8 0 00-8-8H32a8 8 0 00-7.14 4.42l-8 16A8 8 0 0024 64h8v64H16a8 8 0 00-8 8v16a8 8 0 008 8zm-3.91 160H80a8 8 0 008-8v-16a8 8 0 00-8-8H41.32c3.29-10.29 48.34-18.68 48.34-56.44.0-29.06-25-39.56-44.47-39.56-21.36.0-33.8 10-40.46 18.75-4.37 5.59-3 10.84 2.8 15.37l8.58 6.88c5.61 4.56 11 2.47 16.12-2.44a13.44 13.44.0 019.46-3.84c3.33.0 9.28 1.56 9.28 8.75C51 248.19.0 257.31.0 304.59v4C0 316 5.08 320 12.09 320z"/></svg></button>
+<button class="wrap-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.is-wrap]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle code wrap"><svg class="icon" viewBox="0 0 448 512"><path d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></button>
+<button class="copy-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+hover:tw-text-fgColor-link
+print:!tw-hidden" title="Copy code">
+<span class="copy-icon tw-block"><svg class="icon" viewBox="0 0 448 512"><path d="M433.941 65.941l-51.882-51.882A48 48 0 00348.118.0H176c-26.51.0-48 21.49-48 48v48H48c-26.51.0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51.0 48-21.49 48-48v-48h80c26.51.0 48-21.49 48-48V99.882a48 48 0 00-14.059-33.941zM266 464H54a6 6 0 01-6-6V150a6 6 0 016-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 01-6 6zm128-96H182a6 6 0 01-6-6V54a6 6 0 016-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 01-6 6zm6-256h-64V48h9.632c1.591.0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 011.757 4.243V112z"/></svg></span>
+<span class="check-icon tw-hidden"><svg class="icon" viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206.0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204.0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204.0l36.203 36.204c9.997 9.997 9.997 26.206.0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
+</button>
+<button class="tw-select-none
+tw-mx-2
+tw-block
+group-[.is-open]:tw-hidden
+print:!tw-hidden" disabled aria-hidden=true><svg class="icon" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"/></svg></button></div></div><pre style=counter-reset:codeblock class="tw-block tw-m-0 tw-p-0"><code id=codeblock-id-7 class="chroma
+!tw-block
+tw-p-0
+tw-m-0
+tw-transition-[max-height]
+tw-duration-500
+tw-ease-in-out
+group-[.is-closed]:!tw-max-h-0
+group-[.is-wrap]:tw-text-wrap
+tw-overflow-y-hidden
+tw-overflow-x-auto
+tw-scrollbar-thin"><span class=line><span class=cl>$ docker ps -a
+</span></span><span class=line><span class=cl>$ docker <span class=nb>exec</span> -it jenkins-blueocean bash
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>bash-5.1# apk add g++
+</span></span><span class=line><span class=cl>bash-5.1# g++ -v</span></span></code></pre></div><p>安裝完 g++ 就回到 Jenkins 透過 &ldquo;Build Now&rdquo;（原生GUI）或 &ldquo;Run&rdquo;（Blue Ocean GUI）重新執行看看，成功！（下圖為 Blue Ocean GUI）</p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624698423/blog-posts/2021-06/19-job-sample-result.webp alt=" "></p><h2 id=jenkins-pipeline class=headerLink><a href=#jenkins-pipeline class=header-mark></a>Jenkins Pipeline</h2><p>從上面 Freestyle project 的範例比較適合單一工作的小專案，對於我們的專題可能不敷使用，因此接下來要介紹的是透過 Jenkinsfile 執行的 Jenkins pipeline !!</p><div class="details admonition success open"><div class="details-summary admonition-title"><span class=icon><svg class="icon" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379.0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628.0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628.0l-22.627 22.627c-6.248 6.248-6.248 16.379.0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg></span>🏆GOAL<span class=details-icon><svg class="icon" viewBox="0 0 256 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9.0l-22.6-22.6c-9.4-9.4-9.4-24.6.0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6.0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9.0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span></div><div class=details-content><div class=admonition-content>透過 push 到 Github private repository，觸發 Jenkins pipeline 建立 Docker image 後 push image 到 Harbor registry。</div></div></div><p>首先，專題需求要安裝 <a href=https://plugins.jenkins.io/docker-workflow/ target=_blank rel="noopener noreferrer">Docker Pipeline Plugins</a>。
+再來，同樣從 &ldquo;New Item > Freestyle project&rdquo; 進入專案設定，要注意的點大致相同。</p><ul><li><strong>Build Triggers</strong> 選擇 &ldquo;GitHub hook trigger for GITScm polling&rdquo;</li><li><strong>Pipeline</strong> 的部分:<ul><li>選擇 <code>Pipeline script from SCM</code> > <code>Git</code></li><li>貼上 SSH 格式的 Repository URL</li><li><code>Branch</code> 注意是 */main</li><li><code>Script Path</code> 在專案根目錄，預設為 Jenkinsfile</li></ul></li></ul><p>再來我們需要可以上傳的 Docker registry，大部分想到的應該都是 <a href=https://hub.docker.com/ target=_blank rel="noopener noreferrer">DockerHub</a>，不過考慮到我們的題目都必須在 private registry，所以這邊使用 Harbor registry 比較符合我們的需求，設定上可參考<a href=https://ithelp.ithome.com.tw/articles/10249640 target=_blank rel="noopener noreferrer">這篇iThome文章</a>。</p><div class="details admonition note open"><div class="details-summary admonition-title"><span class=icon><svg class="icon" viewBox="0 0 512 512"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3.0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9.0l60.1 60.1c18.8 18.7 18.8 49.1.0 67.9zM284.2 99.8 21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3.0-17l-111-111c-4.8-4.7-12.4-4.7-17.1.0zM124.1 339.9c-5.5-5.5-5.5-14.3.0-19.8l154-154c5.5-5.5 14.3-5.5 19.8.0s5.5 14.3.0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8.0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>注意<span class=details-icon><svg class="icon" viewBox="0 0 256 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9.0l-22.6-22.6c-9.4-9.4-9.4-24.6.0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6.0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9.0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span></div><div class=details-content><div class=admonition-content>在實驗的過程發現在執行 Harbor 沒辦法只走 HTTP，所以又花了點時間學習怎麼用 Let&rsquo;s Encrypt 自簽憑證走 HTTPS，認真覺得自己在網頁開發方面真的很新手XD</div></div></div><p>確認將 Harbor 成功 run 起來後，下一步就是要設定 Jenkins 的 Credentials，讓 Jenkins 能夠把 Docker image 推到 Harbor。新增 credentials 的部分和設定 webhook 一樣，這次我們透過 &ldquo;Username with password&rdquo;，而非 SSH，注意 ID 欄位就是之後放在 Jenkinsfile 做為環境變數，讓觸發 Jenkins 時才能順便 push image 到 Harbor。</p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_600/v1624704318/blog-posts/2021-06/19-credentials-setting2.webp alt=" "></p><br><p>最後就是重頭戲 Jenkinsfile 了！
+說實在這部分個人覺得不是很好寫，何況 Jenkins pipeline 還分成兩種語法，分別是 Scripted pipeline 和 Declarative pipeline，沒有統一的寫法根本就是奇美拉QQ 對第一次接觸的我來說光是要找範例code就花費不少時間，關於語法的細節可以參考這篇 <a href=https://medium.com/getamis/%E7%B2%BE%E9%80%9A-jenkins-pipeline-part1-e8ef48d3543e target=_blank rel="noopener noreferrer">精通 Jenkins Pipeline — part1 (Groovy 以及 Jenkinsfile)</a>，整個系列我認為寫得相當完整。</p><p><img class=tw-inline loading=lazy src=https://i.redd.it/a24ek2gvmjc41.png alt=" "></p><p>這裡的 Sample code 為<a href=https://github.com/yctseng1227/jenkins-sample/tree/main/simple-flask target=_blank rel="noopener noreferrer">simple-flask</a>，簡單生出一個網頁，並且透過測試檢查網頁內容是否正確。</p><p>測試失敗的案例如下，多了 Meow~ (喵喵喵)</p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624786706/blog-posts/2021-06/19-jenkins-pipeline-test1.png alt=" "></p><p>測試成功的話最終就能把 Docker image 推去 Harbor 了~</p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624785155/blog-posts/2021-06/19-jenkins-pipeline-test2.webp alt=" "></p><p>注意 push 的位置為 <code>&lt; harbor domain >/&lt; harbor projects></code>，至於 Docker image 可以直接寫 <code>&lt; image name >/&lt; your name ></code>，不會被視為新目錄（會拿出來講是因為我以為會這樣XD）。</p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1624790826/blog-posts/2021-06/19-harbor.webp alt=" "></p><br><p>最後就附個 Jenkinsfile ，應該是不太需要註解&mldr; 吧</p><div class="code-block highlight is-closed show-line-numbers tw-group tw-my-2"><div class="tw-flex
+tw-flex-row
+tw-flex-1
+tw-justify-between
+tw-w-full tw-bg-bgColor-secondary"><button class="code-block-button
+tw-mx-2
+tw-flex
+tw-flex-row
+tw-flex-1" aria-hidden=true><div class="group-[.is-open]:tw-rotate-90 tw-transition-[transform] tw-duration-500 tw-ease-in-out print:!tw-hidden tw-w-min tw-h-min tw-my-1 tw-mx-1"><svg class="icon" viewBox="0 0 320 512"><path d="M285.476 272.971 91.132 467.314c-9.373 9.373-24.569 9.373-33.941.0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941.0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></div><p class="tw-select-none !tw-my-1">groovy</p></button><div class=tw-flex><button class="line-number-button
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.show-line-numbers]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle line numbers"><svg class="icon" viewBox="0 0 512 512"><path d="M61.77 401l17.5-20.15a19.92 19.92.0 005.07-14.19v-3.31C84.34 356 80.5 352 73 352H16a8 8 0 00-8 8v16a8 8 0 008 8h22.83a157.41 157.41.0 00-11 12.31l-5.61 7c-4 5.07-5.25 10.13-2.8 14.88l1.05 1.93c3 5.76 6.29 7.88 12.25 7.88h4.73c10.33.0 15.94 2.44 15.94 9.09.0 4.72-4.2 8.22-14.36 8.22a41.54 41.54.0 01-15.47-3.12c-6.49-3.88-11.74-3.5-15.6 3.12l-5.59 9.31c-3.72 6.13-3.19 11.72 2.63 15.94 7.71 4.69 20.38 9.44 37 9.44 34.16.0 48.5-22.75 48.5-44.12-.03-14.38-9.12-29.76-28.73-34.88zM496 224H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zm0-160H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16V80a16 16 0 00-16-16zm0 320H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zM16 160h64a8 8 0 008-8v-16a8 8 0 00-8-8H64V40a8 8 0 00-8-8H32a8 8 0 00-7.14 4.42l-8 16A8 8 0 0024 64h8v64H16a8 8 0 00-8 8v16a8 8 0 008 8zm-3.91 160H80a8 8 0 008-8v-16a8 8 0 00-8-8H41.32c3.29-10.29 48.34-18.68 48.34-56.44.0-29.06-25-39.56-44.47-39.56-21.36.0-33.8 10-40.46 18.75-4.37 5.59-3 10.84 2.8 15.37l8.58 6.88c5.61 4.56 11 2.47 16.12-2.44a13.44 13.44.0 019.46-3.84c3.33.0 9.28 1.56 9.28 8.75C51 248.19.0 257.31.0 304.59v4C0 316 5.08 320 12.09 320z"/></svg></button>
+<button class="wrap-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.is-wrap]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle code wrap"><svg class="icon" viewBox="0 0 448 512"><path d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></button>
+<button class="copy-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+hover:tw-text-fgColor-link
+print:!tw-hidden" title="Copy code">
+<span class="copy-icon tw-block"><svg class="icon" viewBox="0 0 448 512"><path d="M433.941 65.941l-51.882-51.882A48 48 0 00348.118.0H176c-26.51.0-48 21.49-48 48v48H48c-26.51.0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51.0 48-21.49 48-48v-48h80c26.51.0 48-21.49 48-48V99.882a48 48 0 00-14.059-33.941zM266 464H54a6 6 0 01-6-6V150a6 6 0 016-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 01-6 6zm128-96H182a6 6 0 01-6-6V54a6 6 0 016-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 01-6 6zm6-256h-64V48h9.632c1.591.0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 011.757 4.243V112z"/></svg></span>
+<span class="check-icon tw-hidden"><svg class="icon" viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206.0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204.0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204.0l36.203 36.204c9.997 9.997 9.997 26.206.0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
+</button>
+<button class="tw-select-none
+tw-mx-2
+tw-block
+group-[.is-open]:tw-hidden
+print:!tw-hidden" disabled aria-hidden=true><svg class="icon" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"/></svg></button></div></div><pre style=counter-reset:codeblock class="tw-block tw-m-0 tw-p-0"><code id=codeblock-id-8 class="chroma
+!tw-block
+tw-p-0
+tw-m-0
+tw-transition-[max-height]
+tw-duration-500
+tw-ease-in-out
+group-[.is-closed]:!tw-max-h-0
+group-[.is-wrap]:tw-text-wrap
+tw-overflow-y-hidden
+tw-overflow-x-auto
+tw-scrollbar-thin"><span class=line><span class=cl><span class=n>pipeline</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>environment</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// setting in Jenkins credential
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=n>REGISTRY_CREDENTIAL</span> <span class=o>=</span> <span class=s2>&#34;harbor-credential&#34;</span> 
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=cm>/* I&#39;m not sure about the variable scoping rules in the Groovy language,
+</span></span></span><span class=line><span class=cl><span class=cm>   so I write in setup stage as coded below.
+</span></span></span><span class=line><span class=cl><span class=cm>    parameters {
+</span></span></span><span class=line><span class=cl><span class=cm>        string (name: &#39;DOCKER_REG&#39;, defaultValue: &#34;registry.eevee.tw/lab&#34;,  description: &#39;Docker registry&#39;)
+</span></span></span><span class=line><span class=cl><span class=cm>        string (name: &#39;IMAGE_NAME&#39;, defaultValue: &#34;app/yctseng&#34;,  description: &#39;Docker image name&#39;)
+</span></span></span><span class=line><span class=cl><span class=cm>    }
+</span></span></span><span class=line><span class=cl><span class=cm>*/</span>
+</span></span><span class=line><span class=cl>    <span class=n>agent</span> <span class=n>any</span>
+</span></span><span class=line><span class=cl>    <span class=n>stages</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>stage</span><span class=o>(</span><span class=s2>&#34;Setup&#34;</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>steps</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>sh</span> <span class=s2>&#34;docker version&#34;</span>
+</span></span><span class=line><span class=cl>                <span class=n>script</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>                    <span class=n>DOCKER_REG</span> <span class=o>=</span> <span class=s2>&#34;registry.eevee.tw/lab&#34;</span>
+</span></span><span class=line><span class=cl>                    <span class=n>IMAGE_NAME</span> <span class=o>=</span> <span class=s2>&#34;app/yctseng&#34;</span>
+</span></span><span class=line><span class=cl>                <span class=o>}</span>
+</span></span><span class=line><span class=cl>            <span class=o>}</span>   
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>        <span class=n>stage</span><span class=o>(</span><span class=s2>&#34;Build Docker Image&#34;</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>steps</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>dir</span><span class=o>(</span><span class=s2>&#34;simple-flask&#34;</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>                    <span class=n>script</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>                        <span class=n>ImageName</span> <span class=o>=</span> <span class=s2>&#34;${DOCKER_REG}/${IMAGE_NAME}&#34;</span>
+</span></span><span class=line><span class=cl>                        <span class=n>DockerImage</span> <span class=o>=</span> <span class=n>docker</span><span class=o>.</span><span class=na>build</span><span class=o>(</span><span class=n>ImageName</span><span class=o>)</span>
+</span></span><span class=line><span class=cl>                    <span class=o>}</span>
+</span></span><span class=line><span class=cl>                <span class=o>}</span>
+</span></span><span class=line><span class=cl>            <span class=o>}</span>   
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>        <span class=n>stage</span><span class=o>(</span><span class=s2>&#34;Test Docker Image&#34;</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>steps</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>sh</span> <span class=s2>&#34;docker run --rm ${DOCKER_REG}/${IMAGE_NAME} flask test&#34;</span>
+</span></span><span class=line><span class=cl>            <span class=o>}</span>   
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>        <span class=n>stage</span><span class=o>(</span><span class=s2>&#34;Push Docker Image&#34;</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>steps</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>script</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>                    <span class=n>docker</span><span class=o>.</span><span class=na>withRegistry</span><span class=o>(</span><span class=s2>&#34;https://${DOCKER_REG}&#34;</span><span class=o>,</span> <span class=n>REGISTRY_CREDENTIAL</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>                        <span class=n>DockerImage</span><span class=o>.</span><span class=na>push</span><span class=o>(</span><span class=s2>&#34;latest&#34;</span><span class=o>)</span>
+</span></span><span class=line><span class=cl>                    <span class=o>}</span>
+</span></span><span class=line><span class=cl>                <span class=o>}</span>
+</span></span><span class=line><span class=cl>                <span class=n>echo</span> <span class=s2>&#34;Remove unused images&#34;</span>
+</span></span><span class=line><span class=cl>                <span class=n>sh</span> <span class=s2>&#34;docker rmi ${DOCKER_REG}/${IMAGE_NAME}&#34;</span>
+</span></span><span class=line><span class=cl>            <span class=o>}</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span></span></span></code></pre></div><br><p>我負責的範圍大概就到這裡，剩下就是由 @stavhaygn 接手透過 Kubernetes(K8s) 做 CI/CD，他最後寫出來的 Jenkins 比我的還要複雜XD 但最後我們的評價一致認為下次 CI/CD 的工具應該不會再用 Jenkins，雖說是老牌資源相對多，但也因為長久以來沒有統一的格式造成許多寫法上的混亂，也難怪有些文章的做法是 Jenkins 搭配 ansible 省得麻煩，現在想想還蠻聰明的 XD</p><h3 id=syntax-error-in-jenkinsfile- class=headerLink><a href=#syntax-error-in-jenkinsfile- class=header-mark></a>Syntax Error in Jenkinsfile ?</h3><p>推薦 VSC Extension <a href="https://marketplace.visualstudio.com/items?itemName=janjoerke.jenkins-pipeline-linter-connector" target=_blank rel="noopener noreferrer">Jenkins Pipeline Linter Connector</a>，可以不用 push 到 Github 才從 Jenkins 發現 compiler error，安裝完記得在 VSC settings 設定 Jenkins 的 username / password / url，使用 ctrl/cmd+shift+p 或是預設 shift+alt/option+v 進行檢查。</p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>更新於 2021-06-19</span></div><div class=post-info-license></div></div><div class="post-info-line print:!tw-hidden"><div class=post-info-md></div><div class=post-info-share></div></div></div><div class=post-info-more><section class=post-tags><svg class="icon" viewBox="0 0 640 512"><path d="M497.941 225.941 286.059 14.059A48 48 0 00252.118.0H48C21.49.0.0 21.49.0 48v204.118a48 48 0 0014.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882.0l204.118-204.118c18.745-18.745 18.745-49.137.0-67.882zM112 160c-26.51.0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882.0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397.0h48.721a48 48 0 0133.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137.0 67.882z"/></svg>&nbsp;<a href=/tags/devops/>DevOps</a>,&nbsp;<a href=/tags/jenkins-ci/cd/>Jenkins CI/CD</a></section><section class=print:!tw-hidden><span><button class="tw-text-fgColor-link-muted hover:tw-text-fgColor-link-muted-hover" onclick=window.history.back()>返回</button></span>&nbsp;|&nbsp;<span><a href=/>主頁</a></span></section></div><div class="post-nav print:tw-hidden"><a href=/posts/2021/swctf-0x7e4-writeups/ class=prev rel=prev title="[Writeup] SWCTF 0x7e4"><svg class="icon" viewBox="0 0 256 512"><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9.0l22.6 22.6c9.4 9.4 9.4 24.6.0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6.0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9.0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>[Writeup] SWCTF 0x7e4</a>
+<a href=/posts/2021/my-first-malware-study/ class=next rel=next title="[Malware Analysis] 出現了！是野生的貓味">[Malware Analysis] 出現了！是野生的貓味<svg class="icon" viewBox="0 0 256 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9.0l-22.6-22.6c-9.4-9.4-9.4-24.6.0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6.0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9.0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div></div><div id=comments class="print:!tw-hidden tw-pt-32 tw-pb-8"><div id=utterances></div><noscript>Please enable JavaScript to view the comments powered by <a href=https://utteranc.es/>Utterances</a>.</noscript></div></article></main><footer class=footer><div class=footer-container><div class=footer-line>Powered by <a href=https://gohugo.io/ target=_blank rel="noopener noreferrer" title="Hugo 0.150.0">Hugo</a>&nbsp;|&nbsp;Theme - <a href=https://github.com/HEIGE-PCloud/DoIt target=_blank rel="noopener noreferrer" title="DoIt 0.4.2"><svg class="icon" viewBox="0 0 576 512"><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1.0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7.0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174 402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7-43.2-43.2c-4.1-4.1-10.8-4.1-14.8.0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg> DoIt</a></div><div class=footer-line><svg class="icon" viewBox="0 0 512 512"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532.0-2e2-89.451-2e2-2e2.0-110.531 89.451-2e2 2e2-2e2 110.532.0 2e2 89.451 2e2 2e2.0 110.532-89.451 2e2-2e2 2e2zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43.0-140.484-61.425-140.484-141.567.0-79.152 60.275-139.401 139.762-139.401 55.531.0 88.738 26.62 97.593 34.779a11.965 11.965.0 011.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303.0-77.916 35.33-77.916 80.082.0 41.589 26.888 83.692 78.277 83.692 32.657.0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947.0 01-1.152 15.518z"/></svg>2019 - 2026<span class=author>&nbsp;<a href=https://blog.cyris.tw target=_blank rel="noopener noreferrer">Cyris Tseng</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div><div class=footer-line></div><div class=footer-line></div></div></footer><div class="print:!tw-hidden tw-flex tw-flex-col tw-fixed tw-right-4 tw-bottom-4 tw-gap-2"><a href=#back-to-top id=back-to-top-button class="tw-transition-opacity tw-opacity-0 tw-block tw-bg-bgColor-secondary tw-rounded-full" style=padding:.6rem;line-height:1.3rem;font-size:1rem title=回到頂部><svg class="icon" viewBox="0 0 448 512"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6.0-33.9L207 39c9.4-9.4 24.6-9.4 33.9.0l194.3 194.3c9.4 9.4 9.4 24.6.0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3.0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
+</a><button id=toc-drawer-button class="tw-block tw-bg-bgColor-secondary tw-rounded-full md:tw-hidden" style=padding:.6rem;line-height:1.3rem;font-size:1rem>
+<svg class="icon" viewBox="0 0 448 512"><path d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+</button><a href=#comments id=view-comments class="tw-block tw-bg-bgColor-secondary tw-rounded-full" style=padding:.6rem;line-height:1.3rem;font-size:1rem title=查看留言>
+<svg class="icon" viewBox="0 0 512 512"><path d="M256 32C114.6 32 0 125.1.0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3.0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4.0 256-93.1 256-208S397.4 32 256 32z"/></svg></a></div><script>window.config={comment:{utterances:{darkTheme:"github-dark",issueTerm:"pathname",label:"Comment 💬",lightTheme:"github-light",repo:"yctseng1227/blog-comments"}}}</script><script src=/js/theme.min.js defer></script><script src=/js/utterances.min.js defer></script><script type=speculationrules>
+  {
+    "prerender": [
+      {
+        "where": { "href_matches": "/*" },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+</script></body></html>
