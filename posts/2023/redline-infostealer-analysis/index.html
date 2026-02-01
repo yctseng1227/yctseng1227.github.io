@@ -1,0 +1,328 @@
+<!doctype html><html lang=zh-TW><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>[Malware Analysis] 難道這是免費可以看的嗎？ RedLine InfoStealer - Cyris | Limit Break</title><meta name=Description content="RedLine InfoStealer 惡意程式深度分析與逆向工程"><meta property="og:url" content="https://blog.cyris.tw/posts/2023/redline-infostealer-analysis/"><meta property="og:site_name" content="Cyris | Limit Break"><meta property="og:title" content="[Malware Analysis] 難道這是免費可以看的嗎？ RedLine InfoStealer"><meta property="og:description" content="RedLine InfoStealer 惡意程式深度分析與逆向工程"><meta property="og:locale" content="zh_TW"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-08-26T00:00:00+00:00"><meta property="article:modified_time" content="2023-08-26T00:00:00+00:00"><meta property="article:tag" content="Malware Analysis"><meta property="article:tag" content="RedLine InfoStealer"><meta property="article:tag" content="Cybercrime"><meta property="og:image" content="https://blog.cyris.tw/img/cyris.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://blog.cyris.tw/img/cyris.png"><meta name=twitter:title content="[Malware Analysis] 難道這是免費可以看的嗎？ RedLine InfoStealer"><meta name=twitter:description content="RedLine InfoStealer 惡意程式深度分析與逆向工程"><meta name=application-name content="Cyris | Limit Break"><meta name=apple-mobile-web-app-title content="Cyris | Limit Break"><meta name=theme-color content="#f8f8f8"><meta name=msapplication-TileColor content="#da532c"><link rel=icon href=/img/favicon.ico><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=canonical href=https://blog.cyris.tw/posts/2023/redline-infostealer-analysis/><link rel=prev href=https://blog.cyris.tw/posts/2023/2023h1-sharing/><link rel=stylesheet href=/css/main.min.css><link rel=stylesheet href=/css/style.min.css><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"[Malware Analysis] 難道這是免費可以看的嗎？ RedLine InfoStealer","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.cyris.tw/posts/2023/redline-infostealer-analysis/"},"image":["https://blog.cyris.tw/img/cyris.png"],"genre":"posts","keywords":["Malware Analysis","RedLine InfoStealer","Cybercrime"],"wordcount":2416,"url":"https://blog.cyris.tw/posts/2023/redline-infostealer-analysis/","datePublished":"2023-08-26T00:00:00+00:00","dateModified":"2023-08-26T00:00:00+00:00","license":"本著作係採用創用 CC 姓名標示-非商業性 4.0 國際授權條款授權.","publisher":{"@type":"Organization","name":"Cyris","logo":"https://blog.cyris.tw/img/cyris.png"},"author":{"@type":"Person","name":"Cyris","url":"https://blog.cyris.tw"},"description":"RedLine InfoStealer 惡意程式深度分析與逆向工程"}</script></head><body data-instant-intensity=viewport class="tw-flex tw-min-h-screen tw-flex-col"><script type=text/javascript>function setTheme(e){document.body.setAttribute("theme",e),document.documentElement.className=e,document.documentElement.style.setProperty("color-scheme",e==="light"?"light":"dark"),e==="light"?document.documentElement.classList.remove("tw-dark"):document.documentElement.classList.add("tw-dark"),window.theme=e,window.isDark=window.theme!=="light"}function saveTheme(e){window.localStorage&&localStorage.setItem("theme",e)}function getMeta(e){const t=document.getElementsByTagName("meta");for(let n=0;n<t.length;n++)if(t[n].getAttribute("name")===e)return t[n];return""}if(window.localStorage&&localStorage.getItem("theme")){let e=localStorage.getItem("theme");e==="light"||e==="dark"?setTheme(e):setTheme(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}else"auto"==="light"||"auto"==="dark"?(setTheme("auto"),saveTheme("auto")):(saveTheme("auto"),setTheme(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"));let metaColors={light:"#f8f8f8",dark:"#161b22"};getMeta("theme-color").content=metaColors[document.body.getAttribute("theme")],window.switchThemeEventSet=new Set</script><div id=back-to-top></div><div id=mask></div><header class="desktop print:!tw-hidden" id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Cyris | Limit Break"><img class="tw-inline tw-align-text-bottom tw-mr-1" src=/img/favicon.ico alt="Cyris | Limit Break" height=32 width=32>Cyris | Limit Break</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>Posts </a><a class=menu-item href=/tags/>Tags </a><a class=menu-item href=/categories/>Categories </a><a class=menu-item href=/about/>About </a><span class="menu-item delimiter"></span><span class="menu-item language-switcher" title=選擇語言><a href=/en/posts/2023/redline-infostealer-analysis/ class=lang-option>EN</a><a href=/posts/2023/redline-infostealer-analysis/ class="lang-option active">中文</a></span><button class="menu-item theme-switch" aria-label=切換主題>
+<svg class="icon" viewBox="0 0 512 512"><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705.0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg></button></div></div></div></header><header class="mobile print:!tw-hidden" id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Cyris | Limit Break"><img class="tw-inline tw-align-text-bottom tw-mr-1" src=/img/favicon.ico alt="Cyris | Limit Break" height=32 width=32>Cyris | Limit Break</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><a class=menu-item href=/posts/ title>Posts</a><a class=menu-item href=/tags/ title>Tags</a><a class=menu-item href=/categories/ title>Categories</a><a class=menu-item href=/about/ title>About</a><button class="menu-item theme-switch tw-w-full" aria-label=切換主題>
+<svg class="icon" viewBox="0 0 512 512"><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705.0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg></button><div class="menu-item language-switcher-mobile tw-w-full"><a href=/en/posts/2023/redline-infostealer-analysis/ class=lang-option>EN</a><a href=/posts/2023/redline-infostealer-analysis/ class="lang-option active">中文</a></div></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class="tw-mx-4 tw-flex-1"><div class="toc print:!tw-hidden" id=toc-auto><h2 class=toc-title>目錄</h2><div class=toc-content id=toc-content-auto><nav id=TableOfContents><ul><li><a href=#whats-happen>What&rsquo;s Happen</a></li><li><a href=#malware-analysis>Malware Analysis</a></li><li><a href=#in-closing>In Closing</a></li><li><a href=#reference>Reference</a></li><li><a href=#iocs>IOCs</a><ul><li><a href=#suspicious-github-users>Suspicious GitHub Users</a></li></ul></li></ul></nav></div></div><dialog id=toc-dialog class="tw-max-w-full tw-w-full tw-max-h-full tw-h-full tw-ml-16"><div class="toc tw-mx-4 tw-max-w-full"><h2 class="tw-mx-0 tw-my-6 tw-uppercase tw-text-2xl">目錄</h2><div class=toc-content><nav id=TableOfContents><ul><li><a href=#whats-happen>What&rsquo;s Happen</a></li><li><a href=#malware-analysis>Malware Analysis</a></li><li><a href=#in-closing>In Closing</a></li><li><a href=#reference>Reference</a></li><li><a href=#iocs>IOCs</a><ul><li><a href=#suspicious-github-users>Suspicious GitHub Users</a></li></ul></li></ul></nav></div></div></dialog><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC","true")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class=single-title data-pagefind-meta=date:2023-08-26 data-pagefind-body>[Malware Analysis] 難道這是免費可以看的嗎？ RedLine InfoStealer</h1><div class=post-meta><div class=post-meta-line><span class=post-author><svg class="icon" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6.0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7.0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4.0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9s28-2.7 40.9-6.9c2.3-.7 4.7-1.1 7.1-1.1 42.9.0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><a href=https://blog.cyris.tw title=Author target=_blank rel="noopener noreferrer author" class=author>Cyris</a>
+</span>&nbsp;<span class=post-category></span>&nbsp;<span class=post-category>收錄於 <a href=/categories/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8-cyber-security/><svg class="icon" viewBox="0 0 512 512"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49.0 112v288c0 26.51 21.49 48 48 48h416c26.51.0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>資訊安全 Cyber Security</a></span></div><div class=post-meta-line><svg class="icon" viewBox="0 0 448 512"><path d="M148 288h-40c-6.6.0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6.0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6.0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6.0 12 5.4 12 12v52h48c26.5.0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3.0 6-2.7 6-6z"/></svg>&nbsp;<time datetime=2023-08-26>2023-08-26</time>&nbsp;<svg class="icon" viewBox="0 0 576 512"><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1.0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7.0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174 402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7-43.2-43.2c-4.1-4.1-10.8-4.1-14.8.0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>&nbsp;<time datetime=2023-08-26>2023-08-26</time>&nbsp;<svg class="icon" viewBox="0 0 512 512"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3.0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9.0l60.1 60.1c18.8 18.7 18.8 49.1.0 67.9zM284.2 99.8 21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3.0-17l-111-111c-4.8-4.7-12.4-4.7-17.1.0zM124.1 339.9c-5.5-5.5-5.5-14.3.0-19.8l154-154c5.5-5.5 14.3-5.5 19.8.0s5.5 14.3.0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8.0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;約 2416 字&nbsp;
+<svg class="icon" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5.0-2e2-89.5-2e2-2e2S145.5 56 256 56s2e2 89.5 2e2 2e2-89.5 2e2-2e2 2e2zm61.8-104.4-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6.0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;預計閱讀 11 分鐘&nbsp;</div></div><div class="details toc print:!tw-block" id=toc-static kept><div class="details-summary toc-title"><span>目錄</span>
+<span class=details-icon><svg class="icon" viewBox="0 0 256 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9.0l-22.6-22.6c-9.4-9.4-9.4-24.6.0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6.0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9.0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#whats-happen>What&rsquo;s Happen</a></li><li><a href=#malware-analysis>Malware Analysis</a></li><li><a href=#in-closing>In Closing</a></li><li><a href=#reference>Reference</a></li><li><a href=#iocs>IOCs</a><ul><li><a href=#suspicious-github-users>Suspicious GitHub Users</a></li></ul></li></ul></nav></div></div><div class=content id=content data-pagefind-body><p><u style=color:red>你已成為盜版的受害者。</u><br>雖然 GitHub 提倡的開源文化是可受大眾公開檢視，但不代表就是 100% 安全。</p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-google-search-free-download.webp alt=" "></p><p>以上截圖是用 Google Search <code>Free-Download-2023 site:github.com</code> 找到的一小部分 repo，沒意外裡面都埋藏惡意軟體，這些可疑 repo 的特色是出現時間很短，大概兩三天就會消失，一旦下載後執行就會有資料外洩的疑慮，雖然客家人都不太喜歡買正版，但找盜版也要注意安全R</p><h2 id=whats-happen class=headerLink><a href=#whats-happen class=header-mark></a>What&rsquo;s Happen</h2><p>OK，事情的發生就是身邊朋友在 8/18 從類似上述的 repo 下載到惡意軟體，結果沒幾天信箱開始收到異常登入的通知，原本的惡意 GitHub repo (<code>https://github[.]com/Munganyende/MOVAVI-VIDEO-EDITOR-PLUS-CRACK-2023-14737</code>) 在我接到消息時，發現 Owner 已經關帳號了，可見有多可疑==</p><p>之後我用相同的關鍵字找到類似的 repo（但寫文當下這 Owner 也關閉了），截圖如下。</p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-screenshot-1.webp alt=" "></p><p>除了 README 看起來就很可疑，另外注意到右上的 Star 居然有 54 顆 （<del>我好羨慕</del>），仔細看裡面每個點星星的帳號也都是做類似的散播惡意程式，只是換個不同的商業軟體名稱，內容大同小異。</p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-screenshot-2.webp alt=" "></p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-malicious-repo-stargazers.webp alt=" "></p><p>點下 Download 後會連去 Godaddy 的網址，然後轉址到 discordapp 的連結，攻擊者似乎是統一放在 Discord 再拿連結出來散播，而這兩者都是合法的網路平台，實在防不勝防。</p><ul><li>hxxps[:]//launchersoftware.godaddysites[.]com/</li><li>hxxps[:]//cdn.discordapp[.]com/attachments/1042051714754289756/1143174795983343656/Setup.zip</li></ul><h2 id=malware-analysis class=headerLink><a href=#malware-analysis class=header-mark></a>Malware Analysis</h2><p>把壓縮檔 unzip (password: 8848) 後可以看到不少檔案，雖然事隔多日當事人對檔案表示沒什麼印象，就姑且拿來看看吧 : 3</p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/c_scale,f_auto,q_auto,w_800/v1693063779/blog-posts/2023-08/26-malware-directory.webp alt=" "></p><p>入口點不意外就是那個 Setup.exe，但是用 IDA 追了一陣子沒看出甚麼端倪，倒是注意到 Exports 那邊都是以 go 為開頭的函式，拿去 Google 後可以找到 <a href=https://github.com/go-gl/glfw target=_blank rel="noopener noreferrer">GLFW</a> 這個專案，所以可以知道這隻 .exe 是用 Golang 編譯的，但是在 function list 中並沒有看到 main.main 這類的 Golang 特徵，同時用 Mandiant 的 <a href=https://github.com/mandiant/GoReSym target=_blank rel="noopener noreferrer">GoReSym</a> 也沒有還原出其他東西 （error message: <code>Failed to parse file: failed to read pclntab: failed to locate pclntab</code>），用 <a href=https://github.com/0xjiayu/go_parser target=_blank rel="noopener noreferrer">go_parser</a> 拆也得到 Exception: <code>Failed to find firstmoduledata address!</code>，感覺該找個時間研究怎麼拆 Golang-based program（沉默）</p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-malware-ida-export.webp alt=" "></p><p>既然靜態看不懂，那就直接開 Debugger 跑動態，發現他會 drop 出一隻 .NET 後門 <code>%AppData%\Local\Temp\dfb5cc44a3e2a1762bc0f637ae29ffb43353755425</code>，並且在執行結束後自刪。</p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-debugger-backdoor-entry.webp alt=" "></p><p>用 <a href="https://ntcore.com/?page_id=388" target=_blank rel="noopener noreferrer">CFF Explorer</a> 打開注意到該檔案 internal name 為 <code>Radiogram.exe</code> ，在 VirusTotal 上搜尋 <code>name:Radiogram.exe</code> 發現樣本還不少，而且大部分的 engine 的 detection name 為 <strong>RedLine Stealer</strong>。</p><p>簡單用 <a href=https://github.com/dnSpy/dnSpy target=_blank rel="noopener noreferrer">dnSpy</a> 瞄了一下，有些奇怪的 function name 居然是用<strong>哈薩克文</strong>寫的（by Google Translate），像是下面這個 function name 意思是 &ldquo;check bot&rdquo;，可以知道在以下條件會觸發 sleep 並結束程式。</p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063778/blog-posts/2023-08/26-check-bot-algorithm.webp alt=" "></p><p>另外就是從網路上取得後續的 payload ，正好該有的資訊都寫在裡面，照著走會得到一個網址 hxxps[:]//pastebin[.]com/raw/tnW31tPp ，並且可以把裡面的 payload 抓下來。</p><ul><li>Config</li></ul><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063778/blog-posts/2023-08/26-backdoor-config.webp alt=" "></p><ul><li>Decryption algorithm</li></ul><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063780/blog-posts/2023-08/26-payload-decrypt-algorithm.webp alt=" "></p><ul><li>CyberChef</li></ul><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063779/blog-posts/2023-08/26-decrypt-pastebin-link.webp alt=" "></p><p>pastebin.com 是個公開程式碼分享平台，毫不意外地被攻擊者拿來當作後續攻擊的媒介。<br>而目前該網址 /tnW31tPp 已被通報，所以下架了。</p><blockquote><p>Not Found (#404)<br>This paste has been deemed potentially harmful. Pastebin took the necessary steps to prevent access on August 25, 2023, 12:55 am CDT. If you feel this is an incorrect assessment, please contact us within 14 days to avoid any permanent loss of content.</p></blockquote><p>而我們拿到的 payload <code>Nj9QUisHPA83L1AfKwc8ETcsBh4oLQ1TGg9UWg==</code> 可以用同一組 XOR Key 得到最後的 C2 server => moy.tapoq[.]top:28786 (IP: 95.216.180[.]12)。</p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693067852/blog-posts/2023-08/26-decrypt-c2-server.webp alt=" "></p><p>不過有趣的是，同一個 /tnW31tPp 網址從 VirusTotal 可以找到不同的 payload ，表示攻擊者一直都是用相同網址去更新 C2 server 的位址，從收集來的 payload 可以再找到幾台 C2 server。</p><ul><li>ley.domest[.]top:28786 (IP: 95.216.180[.]12)</li><li>gog.shopapi[.]top:28786 (IP: 95.216.180[.]12)</li><li>m6o.braavaw[.]top:28786 (IP: 185.229.64[.]67)</li></ul><p>共通點除了都是使用 Port 28786，以及註冊便宜的 .top TLD ，其中還有兩台跟本案的 C2 server 是同一組 IP。</p><p><br><br></p><p>其他一些功能從 function name 就能略知一二的了，並且大部分的 command 都有簡易混淆。</p><ul><li><p>CryptoHelper</p><ul><li>觀察到有疑似摳解密的 API ，猜測可能是在機器上把撿到的 credential 解完再傳回 C2 server，圖中的各種 <code>MSValue*</code> 可以對應到下方網路流量的使用，總之就是各種偷 <code>login data</code>, <code>cookies</code>, <code>Web Data</code>, <code>localprefs.json</code>, &mldr;etc.。</li><li><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693240586/blog-posts/2023-08/26-possible-decrypt-credential-function.webp alt=" "></li></ul></li><li><p>SystemInfoHelper</p><ul><li>GetProcessors (<code>SELECT * FROM Win32_Processor</code>)</li><li>GetGraphicCards (<code>SELECT * FROM Win32_VideoController</code>)</li><li>GetBrowsers (check <code>SOFTWARE\\WOW6432Node\\Clients\\StartMenuInternet</code>, <code>SOFTWARE\\Clients\\StartMenuInternet</code>)</li><li>GetSerialNumber (<code>SELECT * FROM Win32_DiskDrive</code>)</li><li>ListOfProcesses (<code>SELECT * FROM Win32_Process Where SessionId=</code>)</li><li>GetVs (check <code>AntivirusProduct</code>, <code>AntiSpyWareProduct</code>, <code>FirewallProduct</code>)</li><li>GetProcessesByName (<code>SELECT * FROM Win32_Process Where SessionId='</code>)</li><li>ListOfPrograms (check <code>SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall</code>)</li><li>AvailableLanguages</li><li>CollectMemory (<code>SELECT * FROM Win32_OperatingSystem</code>)</li><li>GetWindowsVersion (check <code>SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion</code>)</li></ul></li></ul><p>最後，從網路流量來看&mldr; 嗯 應該也不太需要多做解釋了。</p><p>紅字是電腦發出去的 request，藍字則是對方下達的指令，可以看到基本上裝置裡所有文字檔、錢包位址等等都會被傳回去，其他一些存在各式瀏覽器的資訊，還有針對加密貨幣的 plugin，這些被拿走就真的很麻煩呢QQ</p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063780/blog-posts/2023-08/26-wireshark-screenshot-1.webp alt=" "></p><p><img class=tw-inline loading=lazy src=https://res.cloudinary.com/eevee-blog/image/upload/f_auto,q_auto/v1693063780/blog-posts/2023-08/26-wireshark-screenshot-2.webp alt=" "></p><p>↓↓↓ 簡單整理如下 ↓↓↓</p><div class="code-block highlight is-closed show-line-numbers tw-group tw-my-2"><div class="tw-flex
+tw-flex-row
+tw-flex-1
+tw-justify-between
+tw-w-full tw-bg-bgColor-secondary"><button class="code-block-button
+tw-mx-2
+tw-flex
+tw-flex-row
+tw-flex-1" aria-hidden=true><div class="group-[.is-open]:tw-rotate-90 tw-transition-[transform] tw-duration-500 tw-ease-in-out print:!tw-hidden tw-w-min tw-h-min tw-my-1 tw-mx-1"><svg class="icon" viewBox="0 0 320 512"><path d="M285.476 272.971 91.132 467.314c-9.373 9.373-24.569 9.373-33.941.0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941.0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></div><p class="tw-select-none !tw-my-1">text</p></button><div class=tw-flex><button class="line-number-button
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.show-line-numbers]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle line numbers"><svg class="icon" viewBox="0 0 512 512"><path d="M61.77 401l17.5-20.15a19.92 19.92.0 005.07-14.19v-3.31C84.34 356 80.5 352 73 352H16a8 8 0 00-8 8v16a8 8 0 008 8h22.83a157.41 157.41.0 00-11 12.31l-5.61 7c-4 5.07-5.25 10.13-2.8 14.88l1.05 1.93c3 5.76 6.29 7.88 12.25 7.88h4.73c10.33.0 15.94 2.44 15.94 9.09.0 4.72-4.2 8.22-14.36 8.22a41.54 41.54.0 01-15.47-3.12c-6.49-3.88-11.74-3.5-15.6 3.12l-5.59 9.31c-3.72 6.13-3.19 11.72 2.63 15.94 7.71 4.69 20.38 9.44 37 9.44 34.16.0 48.5-22.75 48.5-44.12-.03-14.38-9.12-29.76-28.73-34.88zM496 224H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zm0-160H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16V80a16 16 0 00-16-16zm0 320H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zM16 160h64a8 8 0 008-8v-16a8 8 0 00-8-8H64V40a8 8 0 00-8-8H32a8 8 0 00-7.14 4.42l-8 16A8 8 0 0024 64h8v64H16a8 8 0 00-8 8v16a8 8 0 008 8zm-3.91 160H80a8 8 0 008-8v-16a8 8 0 00-8-8H41.32c3.29-10.29 48.34-18.68 48.34-56.44.0-29.06-25-39.56-44.47-39.56-21.36.0-33.8 10-40.46 18.75-4.37 5.59-3 10.84 2.8 15.37l8.58 6.88c5.61 4.56 11 2.47 16.12-2.44a13.44 13.44.0 019.46-3.84c3.33.0 9.28 1.56 9.28 8.75C51 248.19.0 257.31.0 304.59v4C0 316 5.08 320 12.09 320z"/></svg></button>
+<button class="wrap-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.is-wrap]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle code wrap"><svg class="icon" viewBox="0 0 448 512"><path d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></button>
+<button class="copy-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+hover:tw-text-fgColor-link
+print:!tw-hidden" title="Copy code">
+<span class="copy-icon tw-block"><svg class="icon" viewBox="0 0 448 512"><path d="M433.941 65.941l-51.882-51.882A48 48 0 00348.118.0H176c-26.51.0-48 21.49-48 48v48H48c-26.51.0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51.0 48-21.49 48-48v-48h80c26.51.0 48-21.49 48-48V99.882a48 48 0 00-14.059-33.941zM266 464H54a6 6 0 01-6-6V150a6 6 0 016-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 01-6 6zm128-96H182a6 6 0 01-6-6V54a6 6 0 016-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 01-6 6zm6-256h-64V48h9.632c1.591.0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 011.757 4.243V112z"/></svg></span>
+<span class="check-icon tw-hidden"><svg class="icon" viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206.0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204.0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204.0l36.203 36.204c9.997 9.997 9.997 26.206.0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
+</button>
+<button class="tw-select-none
+tw-mx-2
+tw-block
+group-[.is-open]:tw-hidden
+print:!tw-hidden" disabled aria-hidden=true><svg class="icon" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"/></svg></button></div></div><pre style=counter-reset:codeblock class="tw-block tw-m-0 tw-p-0"><code id=codeblock-id-1 class="chroma
+!tw-block
+tw-p-0
+tw-m-0
+tw-transition-[max-height]
+tw-duration-500
+tw-ease-in-out
+group-[.is-closed]:!tw-max-h-0
+group-[.is-wrap]:tw-text-wrap
+tw-overflow-y-hidden
+tw-overflow-x-auto
+tw-scrollbar-thin"><span class=line><span class=cl>%USERPROFILE%\Desktop|*.txt,*.doc*,*.rdp,*.key*,*wallet*,*seed*|0
+</span></span><span class=line><span class=cl>%USERPROFILE%\Documents|*.txt,*.doc*,*.rdp,*key*,*wallet*,*seed*|0
+</span></span><span class=line><span class=cl>%appdata%\binance|*.fp*|0.E...c.
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Battle.net
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Chromium\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Google\Chrome\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Google(x86)\Chrome\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Roaming\Opera Software\
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\MapleStudio\ChromePlus\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Iridium\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\7Star\7Star\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\CentBrowser\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Chedot\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Vivaldi\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Kometa\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Elements Browser\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Epic Privacy Browser\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\uCozMedia\Uran\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Fenrir Inc\Sleipnir5\setting\modules\ChromiumViewer
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\CatalinaGroup\Citrio\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Coowon\Coowon\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\liebao\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\QIP Surf\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Orbitum\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Comodo\Dragon\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Amigo\User\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Torch\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Yandex\YandexBrowser\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Comodo\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\360Browser\Browser\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Maxthon3\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\K-Melon\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Sputnik\Sputnik\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Nichrome\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\CocCoc\Browser\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Uran\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Chromodo\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Mail.Ru\Atom\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\BraveSoftware\Brave-Browser\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Microsoft\Edge\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\NVIDIA Corporation\NVIDIA GeForce Experience
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\Steam
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Local\CryptoTab Browser\User Data
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Roaming\Mozilla\Firefox
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Roaming\Waterfox
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Roaming\K-Meleon
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Roaming\Thunderbird
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Roaming\Comodo\IceDragon
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Roaming\8pecxstudios\Cyberfox
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Roaming\NETGATE Technologies\BlackHaw
+</span></span><span class=line><span class=cl>%USERPROFILE%\AppData\Roaming\Moonchild Productions\Pale Moon
+</span></span><span class=line><span class=cl>%appdata%E%E&#39;E...ArmoryE#..*.walletE%....E!E...AtomicE#.
+</span></span><span class=line><span class=cl>%appdata%E%E&#39;E...atomicE#..*E%....E!E...BinanceE#.
+</span></span><span class=line><span class=cl>%appdata%E%E&#39;E...BinanceE#..*app-store*E%....E!E...CoinomiE#..%localappdata%E%E&#39;E...Coinomi\Coinomi\CacheE#..*E%..E&#39;E...Coinomi\Coinomi\dbE#..*E%..E&#39;E...Coinomi\Coinomi\walletsE#..*E%....E!E...ElectrumE#.
+</span></span><span class=line><span class=cl>%appdata%E%E&#39;E...Electrum\walletsE#..*E%....E!E...EthereumE#.
+</span></span><span class=line><span class=cl>%appdata%E%E&#39;E...Ethereum\walletsE#..*E%....E!E...ExodusE#.
+</span></span><span class=line><span class=cl>%appdata%E%E&#39;E...Exodus\exodus.walletE#..*E%..E&#39;E...ExodusE#..*.jsonE%....E!E...GuardaE#.
+</span></span><span class=line><span class=cl>%appdata%E%E&#39;E...GuardaE#..*E%....E!E...JaxxE#.
+</span></span><span class=line><span class=cl>%appdata%E%E&#39;E...com.liberty.jaxxE#..*E%....E!E...MoneroE#..
+</span></span><span class=line><span class=cl>%USERPROFILE%\DocumentsE%E&#39;E...Monero\walletsE#..*E%.....E)...
+</span></span><span class=line><span class=cl>ffnbelfdoeiohenkjibnmadjiehjhajb|YoroiWallet
+</span></span><span class=line><span class=cl>ibnejdfjmmkpcnlpebklmnkoeoihofec|Tronlink
+</span></span><span class=line><span class=cl>jbdaocneiiinmjbjlgalhcelgbejmnid|NiftyWallet
+</span></span><span class=line><span class=cl>nkbihfbeogaeaoehlefnkodbefgpgknn|Metamask
+</span></span><span class=line><span class=cl>afbcbjpbpfadlkmhmclhkeeodmamcflc|MathWallet
+</span></span><span class=line><span class=cl>hnfanknocfeofbddgcijnmhnfnkdnaad|Coinbase
+</span></span><span class=line><span class=cl>fhbohimaelbohpjbbldcngcnapndodjp|BinanceChain
+</span></span><span class=line><span class=cl>odbfpeeihdkbihmopkbjmoonfanlbfcl|BraveWallet
+</span></span><span class=line><span class=cl>hpglfhgfnhbgpjdenjgmdgoeiappafln|GuardaWallet
+</span></span><span class=line><span class=cl>blnieiiffboillknjnepogjhkgnoapac|EqualWallet
+</span></span><span class=line><span class=cl>cjelfplplebdjjenllpjcblmjkfcffne|JaxxxLiberty
+</span></span><span class=line><span class=cl>fihkakfobkmkjojpchpfgcmhfjnmnfpi|BitAppWallet
+</span></span><span class=line><span class=cl>kncchdigobghenbbaddojjnnaogfppfj|iWallet
+</span></span><span class=line><span class=cl>amkmjjmmflddogmhpjloimipbofnfjih|Wombat
+</span></span><span class=line><span class=cl>fhilaheimglignddkjgofkcbgekhenbh|AtomicWallet
+</span></span><span class=line><span class=cl>nlbmnnijcnlegkjjpcfjclmcfggfefdm|MewCx
+</span></span><span class=line><span class=cl>nanjmdknhkinifnkgdcggcfnhdaammmj|GuildWallet
+</span></span><span class=line><span class=cl>nkddgncdjgjfcddamfgcmfnlhccnimig|SaturnWallet
+</span></span><span class=line><span class=cl>fnjhmkhhmkbjkkabndcnnogagogbneec|RoninWallet
+</span></span><span class=line><span class=cl>aiifbnbfobpmeekipheeijimdpnlpgpp|TerraStation
+</span></span><span class=line><span class=cl>fnnegphlobjdpkhecapkijjdkgcjhkib|HarmonyWallet
+</span></span><span class=line><span class=cl>aeachknmefphepccionboohckonoeemg|Coin98Wallet
+</span></span><span class=line><span class=cl>cgeeodpfagjceefieflmdfphplkenlfk|TonCrystal
+</span></span><span class=line><span class=cl>pdadjkfkgcafgbceimcpbkalnfnepbnk|KardiaChain
+</span></span><span class=line><span class=cl>bfnaelmomeimhlpmgjnjophhpkkoljpa|Phantom
+</span></span><span class=line><span class=cl>fhilaheimglignddkjgofkcbgekhenbh|Oxygen
+</span></span><span class=line><span class=cl>mgffkfbidihjpoaomajlbgchddlicgpn|PaliWallet
+</span></span><span class=line><span class=cl>aodkkagnadcbobfpggfnjeongemjbjca|BoltX
+</span></span><span class=line><span class=cl>kpfopkelmapcoipemfendmdcghnegimn|LiqualityWallet
+</span></span><span class=line><span class=cl>hmeobnfnfcmdkdcmlblgagmfpfboieaf|XdefiWallet
+</span></span><span class=line><span class=cl>lpfcbjknijpeeillifnkikgncikgfhdo|NamiWallet
+</span></span><span class=line><span class=cl>dngmlblcodfobpdpecaadgfbcggfjfnm|MaiarDeFiWallet
+</span></span><span class=line><span class=cl>AWS_ACCESS_KEY_ID
+</span></span><span class=line><span class=cl>AWS_SECRET_ACCESS_KEY
+</span></span><span class=line><span class=cl>AMAZON_AWS_ACCESS_KEY_ID
+</span></span><span class=line><span class=cl>AMAZON_AWS_SECRET_ACCESS_KEY
+</span></span><span class=line><span class=cl>ALGOLIA_API_KEY
+</span></span><span class=line><span class=cl>AZURE_CLIENT_ID
+</span></span><span class=line><span class=cl>AZURE_CLIENT_SECRET
+</span></span><span class=line><span class=cl>AZURE_USERNAME
+</span></span><span class=line><span class=cl>AZURE_PASSWORD
+</span></span><span class=line><span class=cl>MSI_ENDPOINT
+</span></span><span class=line><span class=cl>MSI_SECRET
+</span></span><span class=line><span class=cl>binance_api
+</span></span><span class=line><span class=cl>binance_secret
+</span></span><span class=line><span class=cl>BITTREX_API_KEY
+</span></span><span class=line><span class=cl>BITTREX_API_SECRET
+</span></span><span class=line><span class=cl>CF_PASSWORD
+</span></span><span class=line><span class=cl>CF_USERNAME
+</span></span><span class=line><span class=cl>CODECLIMATE_REPO_TOKEN
+</span></span><span class=line><span class=cl>COVERALLS_REPO_TOKEN
+</span></span><span class=line><span class=cl>CIRCLE_TOKEN
+</span></span><span class=line><span class=cl>DIGITALOCEAN_ACCESS_TOKEN
+</span></span><span class=line><span class=cl>DOCKER_EMAIL
+</span></span><span class=line><span class=cl>DOCKER_PASSWORD
+</span></span><span class=line><span class=cl>DOCKER_USERNAME
+</span></span><span class=line><span class=cl>DOCKERHUB_PASSWORD
+</span></span><span class=line><span class=cl>FACEBOOK_APP_ID
+</span></span><span class=line><span class=cl>FACEBOOK_APP_SECRET
+</span></span><span class=line><span class=cl>FACEBOOK_ACCESS_TOKEN
+</span></span><span class=line><span class=cl>FIREBASE_TOKEN
+</span></span><span class=line><span class=cl>FOSSA_API_KEY
+</span></span><span class=line><span class=cl>GH_TOKEN
+</span></span><span class=line><span class=cl>GH_ENTERPRISE_TOKEN
+</span></span><span class=line><span class=cl>CI_DEPLOY_PASSWORD
+</span></span><span class=line><span class=cl>CI_DEPLOY_USER
+</span></span><span class=line><span class=cl>GOOGLE_APPLICATION_CREDENTIALS
+</span></span><span class=line><span class=cl>GOOGLE_API_KEY
+</span></span><span class=line><span class=cl>CI_DEPLOY_USER
+</span></span><span class=line><span class=cl>CI_DEPLOY_PASSWORD
+</span></span><span class=line><span class=cl>GITLAB_USER_LOGIN
+</span></span><span class=line><span class=cl>CI_JOB_JWT
+</span></span><span class=line><span class=cl>CI_JOB_JWT_V2
+</span></span><span class=line><span class=cl>CI_JOB_TOKEN
+</span></span><span class=line><span class=cl>HEROKU_API_KEY
+</span></span><span class=line><span class=cl>HEROKU_API_USER
+</span></span><span class=line><span class=cl>MAILGUN_API_KEY
+</span></span><span class=line><span class=cl>MCLI_PRIVATE_API_KEY
+</span></span><span class=line><span class=cl>MCLI_PUBLIC_API_KEY
+</span></span><span class=line><span class=cl>NGROK_TOKEN
+</span></span><span class=line><span class=cl>NGROK_AUTH_TOKEN
+</span></span><span class=line><span class=cl>NPM_AUTH_TOKEN
+</span></span><span class=line><span class=cl>OKTA_CLIENT_ORGURL
+</span></span><span class=line><span class=cl>OKTA_CLIENT_TOKEN
+</span></span><span class=line><span class=cl>OKTA_OAUTH2_CLIENTSECRET
+</span></span><span class=line><span class=cl>OKTA_OAUTH2_CLIENTID
+</span></span><span class=line><span class=cl>OKTA_AUTHN_GROUPID
+</span></span><span class=line><span class=cl>OS_USERNAME
+</span></span><span class=line><span class=cl>OS_PASSWORD
+</span></span><span class=line><span class=cl>PERCY_TOKEN
+</span></span><span class=line><span class=cl>SAUCE_ACCESS_KEY
+</span></span><span class=line><span class=cl>SAUCE_USERNAME
+</span></span><span class=line><span class=cl>SENTRY_AUTH_TOKEN
+</span></span><span class=line><span class=cl>SLACK_TOKEN
+</span></span><span class=line><span class=cl>square_access_token
+</span></span><span class=line><span class=cl>square_oauth_secret
+</span></span><span class=line><span class=cl>STRIPE_API_KEY
+</span></span><span class=line><span class=cl>STRIPE_DEVICE_NAME
+</span></span><span class=line><span class=cl>SURGE_TOKEN
+</span></span><span class=line><span class=cl>SURGE_LOGIN
+</span></span><span class=line><span class=cl>TWILIO_ACCOUNT_SID
+</span></span><span class=line><span class=cl>CONSUMER_KEY
+</span></span><span class=line><span class=cl>CONSUMER_SECRET
+</span></span><span class=line><span class=cl>TRAVIS_SUDO
+</span></span><span class=line><span class=cl>TRAVIS_OS_NAME
+</span></span><span class=line><span class=cl>TRAVIS_SECURE_ENV_VARS
+</span></span><span class=line><span class=cl>VAULT_TOKEN
+</span></span><span class=line><span class=cl>VAULT_CLIENT_KEY
+</span></span><span class=line><span class=cl>TOKEN
+</span></span><span class=line><span class=cl>VULTR_ACCESS
+</span></span><span class=line><span class=cl>VULTR_SECRET</span></span></code></pre></div><h2 id=in-closing class=headerLink><a href=#in-closing class=header-mark></a>In Closing</h2><p>根據一些在網路上的資料，沒意外這隻就是 <strong>RedLine Stealer</strong> 了，原本想說哪可能這麼容易就撿到惡意程式，沒想到這查下去就是一串粽子XDDD</p><p>不過根據中獎的那位朋友表示，這陣子除了一直收到可疑的登入通知，在 Steam 方面即便之前就綁 Steam Guard ，但關鍵時刻卻還是沒有跳出來 2FA ，帳號就這樣直接被拿去亂傳訊息，在猜想是否因為存在瀏覽器的資訊被拿走，讓攻擊者可以直接用 session 做登入嗎，嗯 &mldr; 好微妙。</p><p>至於事發兩天後我用同樣的 free-download 關鍵字在 Google Search 看到其他 GitHub repo 以不同的壓縮密碼散播 CPP-based 的惡意程式，那又是另一個故事了&mldr;</p><h2 id=reference class=headerLink><a href=#reference class=header-mark></a>Reference</h2><ul><li><a href=https://www.securityweek.com/takedown-of-github-repositories-disrupts-redline-malware-operations/ target=_blank rel="noopener noreferrer">Takedown of GitHub Repositories Disrupts RedLine Malware Operations</a></li><li><a href=https://c3rb3ru5d3d53c.github.io/2022/11/redline-stealer/ target=_blank rel="noopener noreferrer">Destroying Redline Stealer and CypherIT</a></li><li><a href=https://www.esentire.com/blog/esentire-threat-intelligence-malware-analysis-redline-stealer target=_blank rel="noopener noreferrer">eSentire Threat Intelligence Malware Analysis: Redline Stealer</a></li><li><a href=https://blog.eclecticiq.com/redline-stealer-variants-demonstrate-a-low-barrier-to-entry-threat target=_blank rel="noopener noreferrer">Malware-as-a-Service: Redline Stealer Variants Demonstrate a Low-Barrier-to-Entry Threat</a></li><li><a href=https://web.archive.org/web/20230606224056/https://apophis133.medium.com/redline-technical-analysis-report-5034e16ad152 target=_blank rel="noopener noreferrer">RedLine Technical Analysis Report (web archive)</a></li><li><a href=https://www.trendmicro.com/en_us/research/23/e/malicious-ai-tool-ads-used-to-deliver-redline-stealer.html target=_blank rel="noopener noreferrer">Malicious AI Tool Ads Used to Deliver Redline Stealer</a></li><li><a href=https://www.ithome.com.tw/news/149295 target=_blank rel="noopener noreferrer">駭客將可竊取機密資訊的RedLine Stealer偽裝成Windows 11更新程式</a></li><li><a href=https://technews.tw/2022/01/04/chrome-edge-password/ target=_blank rel="noopener noreferrer">習慣用 Chrome 記住密碼，遠端工作恐成駭客破口</a></li></ul><h2 id=iocs class=headerLink><a href=#iocs class=header-mark></a>IOCs</h2><div class=table-wrapper><table><thead><tr><th style=text-align:left>Indicator</th><th style=text-align:left>Description</th></tr></thead><tbody><tr><td style=text-align:left>f9186767c98490db03a70f511cb24a84eb906c94</td><td style=text-align:left>Setup.zip</td></tr><tr><td style=text-align:left>ab741ccd807f6645c15aa9d69666b04ea8e6d408</td><td style=text-align:left>Setup.exe</td></tr><tr><td style=text-align:left>73ceacde9d7b7ede1c4b7615c1bd5ae2ace45b97</td><td style=text-align:left>Radiogram.exe (filename: dfb5cc44a3e2a1762bc0f637ae29ffb43353755425)</td></tr><tr><td style=text-align:left>hxxps[:]//launchersoftware.godaddysites[.]com/</td><td style=text-align:left>The link redirect to discord link</td></tr><tr><td style=text-align:left>hxxps[:]//cdn.discordapp[.]com/attachments/<br>1042051714754289756/1143174795983343656/Setup.zip</td><td style=text-align:left>Download link</td></tr><tr><td style=text-align:left>hxxps[:]//pastebin[.]com/raw/tnW31tPp</td><td style=text-align:left>The site to store subsequent payload</td></tr><tr><td style=text-align:left>moy.tapoq[.]top:28786</td><td style=text-align:left>C2 Server</td></tr><tr><td style=text-align:left>95.216.180[.]12</td><td style=text-align:left>C2 Server</td></tr></tbody></table></div><h3 id=suspicious-github-users class=headerLink><a href=#suspicious-github-users class=header-mark></a>Suspicious GitHub Users</h3><div class="code-block highlight is-closed show-line-numbers tw-group tw-my-2"><div class="tw-flex
+tw-flex-row
+tw-flex-1
+tw-justify-between
+tw-w-full tw-bg-bgColor-secondary"><button class="code-block-button
+tw-mx-2
+tw-flex
+tw-flex-row
+tw-flex-1" aria-hidden=true><div class="group-[.is-open]:tw-rotate-90 tw-transition-[transform] tw-duration-500 tw-ease-in-out print:!tw-hidden tw-w-min tw-h-min tw-my-1 tw-mx-1"><svg class="icon" viewBox="0 0 320 512"><path d="M285.476 272.971 91.132 467.314c-9.373 9.373-24.569 9.373-33.941.0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941.0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></div><p class="tw-select-none !tw-my-1">text</p></button><div class=tw-flex><button class="line-number-button
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.show-line-numbers]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle line numbers"><svg class="icon" viewBox="0 0 512 512"><path d="M61.77 401l17.5-20.15a19.92 19.92.0 005.07-14.19v-3.31C84.34 356 80.5 352 73 352H16a8 8 0 00-8 8v16a8 8 0 008 8h22.83a157.41 157.41.0 00-11 12.31l-5.61 7c-4 5.07-5.25 10.13-2.8 14.88l1.05 1.93c3 5.76 6.29 7.88 12.25 7.88h4.73c10.33.0 15.94 2.44 15.94 9.09.0 4.72-4.2 8.22-14.36 8.22a41.54 41.54.0 01-15.47-3.12c-6.49-3.88-11.74-3.5-15.6 3.12l-5.59 9.31c-3.72 6.13-3.19 11.72 2.63 15.94 7.71 4.69 20.38 9.44 37 9.44 34.16.0 48.5-22.75 48.5-44.12-.03-14.38-9.12-29.76-28.73-34.88zM496 224H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zm0-160H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16V80a16 16 0 00-16-16zm0 320H176a16 16 0 00-16 16v32a16 16 0 0016 16h320a16 16 0 0016-16v-32a16 16 0 00-16-16zM16 160h64a8 8 0 008-8v-16a8 8 0 00-8-8H64V40a8 8 0 00-8-8H32a8 8 0 00-7.14 4.42l-8 16A8 8 0 0024 64h8v64H16a8 8 0 00-8 8v16a8 8 0 008 8zm-3.91 160H80a8 8 0 008-8v-16a8 8 0 00-8-8H41.32c3.29-10.29 48.34-18.68 48.34-56.44.0-29.06-25-39.56-44.47-39.56-21.36.0-33.8 10-40.46 18.75-4.37 5.59-3 10.84 2.8 15.37l8.58 6.88c5.61 4.56 11 2.47 16.12-2.44a13.44 13.44.0 019.46-3.84c3.33.0 9.28 1.56 9.28 8.75C51 248.19.0 257.31.0 304.59v4C0 316 5.08 320 12.09 320z"/></svg></button>
+<button class="wrap-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+group-[.is-wrap]:tw-text-fgColor-link
+print:!tw-hidden" title="Toggle code wrap"><svg class="icon" viewBox="0 0 448 512"><path d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></button>
+<button class="copy-code-button
+tw-select-none
+tw-mx-2
+tw-hidden
+group-[.is-open]:tw-block
+hover:tw-text-fgColor-link
+print:!tw-hidden" title="Copy code">
+<span class="copy-icon tw-block"><svg class="icon" viewBox="0 0 448 512"><path d="M433.941 65.941l-51.882-51.882A48 48 0 00348.118.0H176c-26.51.0-48 21.49-48 48v48H48c-26.51.0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51.0 48-21.49 48-48v-48h80c26.51.0 48-21.49 48-48V99.882a48 48 0 00-14.059-33.941zM266 464H54a6 6 0 01-6-6V150a6 6 0 016-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 01-6 6zm128-96H182a6 6 0 01-6-6V54a6 6 0 016-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 01-6 6zm6-256h-64V48h9.632c1.591.0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 011.757 4.243V112z"/></svg></span>
+<span class="check-icon tw-hidden"><svg class="icon" viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206.0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204.0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204.0l36.203 36.204c9.997 9.997 9.997 26.206.0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
+</button>
+<button class="tw-select-none
+tw-mx-2
+tw-block
+group-[.is-open]:tw-hidden
+print:!tw-hidden" disabled aria-hidden=true><svg class="icon" viewBox="0 0 512 512"><path d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8.0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"/></svg></button></div></div><pre style=counter-reset:codeblock class="tw-block tw-m-0 tw-p-0"><code id=codeblock-id-2 class="chroma
+!tw-block
+tw-p-0
+tw-m-0
+tw-transition-[max-height]
+tw-duration-500
+tw-ease-in-out
+group-[.is-closed]:!tw-max-h-0
+group-[.is-wrap]:tw-text-wrap
+tw-overflow-y-hidden
+tw-overflow-x-auto
+tw-scrollbar-thin"><span class=line><span class=cl>@hiinoo01aiiu, Joined on Aug 29, 2021
+</span></span><span class=line><span class=cl>@MinhGachaCoder, Joined on Mar 12, 2023
+</span></span><span class=line><span class=cl>@elvisEam, Joined on Jun 8, 2022
+</span></span><span class=line><span class=cl>@MarkRoi, Uganda - Kampala
+</span></span><span class=line><span class=cl>@Mr-krostopbey1903, Joined on Jan 29, 2021
+</span></span><span class=line><span class=cl>@tccpro, Freelance @Shopify
+</span></span><span class=line><span class=cl>@qarixaeed1, Joined on Aug 1, 2022
+</span></span><span class=line><span class=cl>@Kashif818Mehmood, Joined on Jun 28, 2020
+</span></span><span class=line><span class=cl>@TGRedDragon, Joined on Mar 19, 2023
+</span></span><span class=line><span class=cl>@llstevenll, Joined on Oct 17, 2022
+</span></span><span class=line><span class=cl>@RobinHuaman, Joined on Sep 4, 2021
+</span></span><span class=line><span class=cl>@Masterkent11, Joined on Jul 9, 2019
+</span></span><span class=line><span class=cl>@laoluibitoye, Joined on Jul 25, 2019
+</span></span><span class=line><span class=cl>@gl0nDbeatz, Joined on Jul 28, 2023
+</span></span><span class=line><span class=cl>@Issoufouiha, Niamey
+</span></span><span class=line><span class=cl>@nazadam, Joined on Sep 27, 2022
+</span></span><span class=line><span class=cl>@A-mal, Joined on Jun 6, 2021
+</span></span><span class=line><span class=cl>@X-vinjin, Joined on Dec 6, 2022
+</span></span><span class=line><span class=cl>@theillumina, Joined on Mar 26, 2023
+</span></span><span class=line><span class=cl>@Sazzadur1991, Joined on Aug 4, 2023
+</span></span><span class=line><span class=cl>@GitTrio3, Joined on Jun 7, 2023
+</span></span><span class=line><span class=cl>@UnknownKingsy, Joined on Jan 25, 2021
+</span></span><span class=line><span class=cl>@Kyori4k, Joined on Oct 28, 2022
+</span></span><span class=line><span class=cl>@Developwithjaspreet, wpcodekit
+</span></span><span class=line><span class=cl>@ajivijay, Joined on Jul 1, 2023
+</span></span><span class=line><span class=cl>@soporteint2023, Joined on Apr 27, 2023
+</span></span><span class=line><span class=cl>@KojoClinton, Joined on Jul 10, 2023
+</span></span><span class=line><span class=cl>@intel1337, Selfish
+</span></span><span class=line><span class=cl>@Kirarik21, Joined on Jun 10, 2023
+</span></span><span class=line><span class=cl>@Emrx29y, Joined on Feb 26, 2023
+</span></span><span class=line><span class=cl>@Clemens17, Joined on Nov 15, 2022
+</span></span><span class=line><span class=cl>@Elissonamarodasilva, Joined on Feb 11, 2023
+</span></span><span class=line><span class=cl>@Mcbrightyves, Joined on Oct 17, 2022
+</span></span><span class=line><span class=cl>@wxmcode, Joined on Sep 3, 2019
+</span></span><span class=line><span class=cl>@Aramayis1996, Joined on Nov 27, 2022
+</span></span><span class=line><span class=cl>@yuanxiangliu, Joined on Aug 18, 2022
+</span></span><span class=line><span class=cl>@ohTraveler, Joined on Aug 15, 2023
+</span></span><span class=line><span class=cl>@Ladicor, Joined on Mar 1, 2022
+</span></span><span class=line><span class=cl>@alexanderutmn, Joined on Apr 1, 2017
+</span></span><span class=line><span class=cl>@guru9999, Joined on Aug 6, 2017
+</span></span><span class=line><span class=cl>@MakareB, Joined on May 12, 2021
+</span></span><span class=line><span class=cl>@olikke, Joined on Dec 11, 2018
+</span></span><span class=line><span class=cl>@twirus7, Joined on Apr 13, 2023
+</span></span><span class=line><span class=cl>@BabyNelo, Joined on Mar 21, 2023
+</span></span><span class=line><span class=cl>@saintsblack, Joined on Mar 4, 2023
+</span></span><span class=line><span class=cl>@un243alexxx, Joined on Nov 29, 2020
+</span></span><span class=line><span class=cl>@gingazov2010, Joined on Nov 9, 2019
+</span></span><span class=line><span class=cl>@dasdeutchguy, Joined on May 28, 2023</span></span></code></pre></div></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>更新於 2023-08-26</span></div><div class=post-info-license></div></div><div class="post-info-line print:!tw-hidden"><div class=post-info-md></div><div class=post-info-share></div></div></div><div class=post-info-more><section class=post-tags><svg class="icon" viewBox="0 0 640 512"><path d="M497.941 225.941 286.059 14.059A48 48 0 00252.118.0H48C21.49.0.0 21.49.0 48v204.118a48 48 0 0014.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882.0l204.118-204.118c18.745-18.745 18.745-49.137.0-67.882zM112 160c-26.51.0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882.0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397.0h48.721a48 48 0 0133.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137.0 67.882z"/></svg>&nbsp;<a href=/tags/malware-analysis/>Malware Analysis</a>,&nbsp;<a href=/tags/redline-infostealer/>RedLine InfoStealer</a>,&nbsp;<a href=/tags/cybercrime/>Cybercrime</a></section><section class=print:!tw-hidden><span><button class="tw-text-fgColor-link-muted hover:tw-text-fgColor-link-muted-hover" onclick=window.history.back()>返回</button></span>&nbsp;|&nbsp;<span><a href=/>首頁</a></span></section></div><div class="post-nav print:tw-hidden"><a href=/posts/2023/2023h1-sharing/ class=prev rel=prev title="[2023H1 雜談] 嘿！我回來了"><svg class="icon" viewBox="0 0 256 512"><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9.0l22.6 22.6c9.4 9.4 9.4 24.6.0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6.0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9.0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>[2023H1 雜談] 嘿！我回來了</a></div></div><div id=comments class="print:!tw-hidden tw-pt-32 tw-pb-8"><div id=utterances></div><noscript>Please enable JavaScript to view the comments powered by <a href=https://utteranc.es/>Utterances</a>.</noscript></div></article></main><footer class=footer><div class=footer-container><div class=footer-line>Powered by <a href=https://gohugo.io/ target=_blank rel="noopener noreferrer" title="Hugo 0.150.0">Hugo</a>&nbsp;|&nbsp;Theme - <a href=https://github.com/HEIGE-PCloud/DoIt target=_blank rel="noopener noreferrer" title="DoIt 0.4.2"><svg class="icon" viewBox="0 0 576 512"><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1.0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7.0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174 402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7-43.2-43.2c-4.1-4.1-10.8-4.1-14.8.0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg> DoIt</a></div><div class=footer-line><svg class="icon" viewBox="0 0 512 512"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532.0-2e2-89.451-2e2-2e2.0-110.531 89.451-2e2 2e2-2e2 110.532.0 2e2 89.451 2e2 2e2.0 110.532-89.451 2e2-2e2 2e2zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43.0-140.484-61.425-140.484-141.567.0-79.152 60.275-139.401 139.762-139.401 55.531.0 88.738 26.62 97.593 34.779a11.965 11.965.0 011.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303.0-77.916 35.33-77.916 80.082.0 41.589 26.888 83.692 78.277 83.692 32.657.0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947.0 01-1.152 15.518z"/></svg>2019 - 2026<span class=author>&nbsp;<a href=https://blog.cyris.tw target=_blank rel="noopener noreferrer">Cyris Tseng</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div><div class=footer-line></div><div class=footer-line></div></div></footer><div class="print:!tw-hidden tw-flex tw-flex-col tw-fixed tw-right-4 tw-bottom-4 tw-gap-2"><a href=#back-to-top id=back-to-top-button class="tw-transition-opacity tw-opacity-0 tw-block tw-bg-bgColor-secondary tw-rounded-full" style=padding:.6rem;line-height:1.3rem;font-size:1rem title=回到頂部><svg class="icon" viewBox="0 0 448 512"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6.0-33.9L207 39c9.4-9.4 24.6-9.4 33.9.0l194.3 194.3c9.4 9.4 9.4 24.6.0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3.0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
+</a><button id=toc-drawer-button class="tw-block tw-bg-bgColor-secondary tw-rounded-full md:tw-hidden" style=padding:.6rem;line-height:1.3rem;font-size:1rem>
+<svg class="icon" viewBox="0 0 448 512"><path d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+</button><a href=#comments id=view-comments class="tw-block tw-bg-bgColor-secondary tw-rounded-full" style=padding:.6rem;line-height:1.3rem;font-size:1rem title=查看留言>
+<svg class="icon" viewBox="0 0 512 512"><path d="M256 32C114.6 32 0 125.1.0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3.0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4.0 256-93.1 256-208S397.4 32 256 32z"/></svg></a></div><script>window.config={comment:{utterances:{darkTheme:"github-dark",issueTerm:"pathname",label:"Comment 💬",lightTheme:"github-light",repo:"yctseng1227/blog-comments"}}}</script><script src=/js/theme.min.js defer></script><script src=/js/utterances.min.js defer></script><script type=speculationrules>
+  {
+    "prerender": [
+      {
+        "where": { "href_matches": "/*" },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+</script></body></html>
